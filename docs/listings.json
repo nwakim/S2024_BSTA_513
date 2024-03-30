@@ -1,53 +1,5 @@
 [
   {
-    "listing": "/schedule.html",
-    "items": [
-      "/weeks/week_01_sched.html",
-      "/weeks/week_02_sched.html",
-      "/weeks/week_03_sched.html",
-      "/weeks/week_04_sched.html",
-      "/weeks/week_05_sched.html",
-      "/weeks/week_06_sched.html",
-      "/weeks/week_07_sched.html",
-      "/weeks/week_08_sched.html",
-      "/weeks/week_09_sched.html",
-      "/weeks/week_10_sched.html",
-      "/weeks/week_11_sched.html"
-    ]
-  },
-  {
-    "listing": "/class_slides.html",
-    "items": [
-      "/slides/data/NHANES_EDA.html",
-      "/slides/00_Intro.html",
-      "/slides/01_Review.html",
-      "/slides/02_Data_Management.html",
-      "/slides/out_try.html",
-      "/slides/03_SLR.html",
-      "/slides/04_SLR_Inf_Pred.html",
-      "/slides/05_SLR_Eval.html",
-      "/slides/06_SLR_Diagnostics.html",
-      "/slides/07_SLR_Diagnostics_02.html",
-      "/slides/08_MLR_Intro.html",
-      "/slides/Quiz_1_Lab_1.html",
-      "/slides/09_MLR_Inference.html",
-      "/slides/10_Cat_covariates.html",
-      "/slides/11_Interactions.html",
-      "/slides/11_Interactions_2.html",
-      "/slides/12_In_class_activities.html",
-      "/slides/12_Model_selection.html",
-      "/slides/13_Model_selection.html",
-      "/slides/13_Purposeful_Selection.html",
-      "/slides/Quiz_2_Lab_2.html",
-      "/slides/Lab_3_feedback.html",
-      "/slides/14_MLR_Diagnostics.html",
-      "/slides/Slack_Pred_bands.html",
-      "/slides/Lab4_PR.html",
-      "/slides/07_SLR_Diagnostics_ex_rats.html",
-      "/slides/03_SLR_01/03_SLR_shiny_app.html"
-    ]
-  },
-  {
     "listing": "/homeworks.html",
     "items": [
       "/homework/HW0.html",
@@ -56,13 +8,6 @@
       "/homework/HW3.html",
       "/homework/HW4.html",
       "/homework/HW5.html"
-    ]
-  },
-  {
-    "listing": "/readings.html",
-    "items": [
-      "/readings/Calc_review.html",
-      "/readings/Chapter_01.html"
     ]
   }
 ]

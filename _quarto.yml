@@ -13,7 +13,7 @@ website:
     right:
       - href: syllabus.qmd
         text: Syllabus
-      - schedule1.qmd
+      - schedule.qmd
       - href: homeworks.qmd
         text: Homework
       - href: project.qmd
@@ -32,7 +32,7 @@ website:
             text: Instructors
           - href: syllabus.qmd
             text: Syllabus
-          - schedule1.qmd
+          - schedule.qmd
           - resources.qmd
           - quizzes.qmd
       - section: "Course Materials"

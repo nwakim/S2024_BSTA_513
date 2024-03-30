@@ -63,8 +63,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -92,10 +90,8 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../schedule1.html" rel="" target="">
- <span class="menu-text">Schedule</span></a>
-  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">schedule1.qmd</span></li>
   <li class="nav-item">
     <a class="nav-link" href="../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
@@ -163,15 +159,18 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../schedule1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schedule</span></a>
-  </div>
-</li>
+ <span class="menu-text">schedule1.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quizzes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quizzes</span></a>
   </div>
 </li>
       </ul>
@@ -189,6 +188,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Weekly Pages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lessons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,31 +226,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a>
-  <ul class="collapse">
-  <li><a href="#poll-everywhere-questions" id="toc-poll-everywhere-questions" class="nav-link" data-scroll-target="#poll-everywhere-questions">Poll Everywhere Questions</a></li>
-  <li><a href="#quiz-1-information" id="toc-quiz-1-information" class="nav-link" data-scroll-target="#quiz-1-information">Quiz 1 Information</a></li>
-  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the Horizon</a></li>
   <li><a href="#class-exit-tickets" id="toc-class-exit-tickets" class="nav-link" data-scroll-target="#class-exit-tickets">Class Exit Tickets</a></li>
-  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a>
-  <ul class="collapse">
-  <li><a href="#monday-122" id="toc-monday-122" class="nav-link" data-scroll-target="#monday-122">Monday 1/22</a></li>
-  <li><a href="#wednesday-124" id="toc-wednesday-124" class="nav-link" data-scroll-target="#wednesday-124">Wednesday 1/24</a></li>
-  </ul></li>
-  <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a>
-  <ul class="collapse">
-  <li><a href="#the-lecture-materials-dont-always-feel-like-they-apply-to-the-homework.-if-asked-to-state-the-linear-regression-models-are-we-just-running-lm" id="toc-the-lecture-materials-dont-always-feel-like-they-apply-to-the-homework.-if-asked-to-state-the-linear-regression-models-are-we-just-running-lm" class="nav-link" data-scroll-target="#the-lecture-materials-dont-always-feel-like-they-apply-to-the-homework.-if-asked-to-state-the-linear-regression-models-are-we-just-running-lm">1. The lecture materials don’t always feel like they apply to the homework. If asked to “state the linear regression models,” are we just running <code>lm()</code>?</a></li>
-  <li><a href="#all-of-the-different-manifestations-of-t" id="toc-all-of-the-different-manifestations-of-t" class="nav-link" data-scroll-target="#all-of-the-different-manifestations-of-t">2. “all of the different manifestations of t”</a></li>
-  <li><a href="#whats-the-difference-between-sd-and-variance" id="toc-whats-the-difference-between-sd-and-variance" class="nav-link" data-scroll-target="#whats-the-difference-between-sd-and-variance">3. What’s the difference between SD and variance?</a></li>
-  <li><a href="#why-is-it-important-to-test-if-beta_1-is-equal-to-zero-is-beta_10-the-same-as-the-x-and-y-variables-having-no-correlation" id="toc-why-is-it-important-to-test-if-beta_1-is-equal-to-zero-is-beta_10-the-same-as-the-x-and-y-variables-having-no-correlation" class="nav-link" data-scroll-target="#why-is-it-important-to-test-if-beta_1-is-equal-to-zero-is-beta_10-the-same-as-the-x-and-y-variables-having-no-correlation">4. Why is it important to test if <span class="math inline">\(\beta_1\)</span> is equal to zero? Is <span class="math inline">\(\beta_1=0\)</span> the same as the x and y variables having no correlation?</a></li>
-  <li><a href="#sse-and-sigma" id="toc-sse-and-sigma" class="nav-link" data-scroll-target="#sse-and-sigma">5. SSE and sigma</a></li>
-  <li><a href="#it-would-be-helpful-to-get-some-clarification-on-the-notations-that-we-need-to-use-in-this-class.-perhaps-a-chart-or-the-types-of-notations-for-this-class-could-be-helpful-to-organize-this" id="toc-it-would-be-helpful-to-get-some-clarification-on-the-notations-that-we-need-to-use-in-this-class.-perhaps-a-chart-or-the-types-of-notations-for-this-class-could-be-helpful-to-organize-this" class="nav-link" data-scroll-target="#it-would-be-helpful-to-get-some-clarification-on-the-notations-that-we-need-to-use-in-this-class.-perhaps-a-chart-or-the-types-of-notations-for-this-class-could-be-helpful-to-organize-this">6. It would be helpful to get some clarification on the notations that we need to use in this class. Perhaps, a chart or the types of notations for this class could be helpful to organize this?</a></li>
-  <li><a href="#what-is-the-relationship-between-the-anova-for-linear-regression-and-anova-for-group-differences" id="toc-what-is-the-relationship-between-the-anova-for-linear-regression-and-anova-for-group-differences" class="nav-link" data-scroll-target="#what-is-the-relationship-between-the-anova-for-linear-regression-and-anova-for-group-differences">7. What is the relationship between the ANOVA for linear regression and ANOVA for group differences?</a></li>
-  <li><a href="#the-limitations-of-the-different-tests-like-an-f-statistic-vs.-t-test" id="toc-the-limitations-of-the-different-tests-like-an-f-statistic-vs.-t-test" class="nav-link" data-scroll-target="#the-limitations-of-the-different-tests-like-an-f-statistic-vs.-t-test">8. The limitations of the different tests, like an F statistic vs.&nbsp;t-test</a></li>
-  <li><a href="#unexplained-vs-the-explained" id="toc-unexplained-vs-the-explained" class="nav-link" data-scroll-target="#unexplained-vs-the-explained">9. unexplained vs the explained</a></li>
-  <li><a href="#changing-the-confidence-level-in-tidy" id="toc-changing-the-confidence-level-in-tidy" class="nav-link" data-scroll-target="#changing-the-confidence-level-in-tidy">10. Changing the confidence level in <code>tidy()</code></a></li>
-  </ul></li>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a></li>
   </ul>
 </nav>
     </div>
@@ -303,22 +288,6 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Room Locations for the week
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>On Monday, 1/22, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we will be in <strong>RLSB 3A003 B</strong></li>
-<li>On Wednesday, 1/24, &nbsp;we will be in <strong>RLSB 3A003 A</strong></li>
-</ul>
-</div>
-</div>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <p>Below is a table with links to resources. Icons in <span style="color:#E25D3B;">orange</span> mean there is an available file link.</p>
@@ -337,7 +306,7 @@ Room Locations for the week
 <td>3</td>
 <td><p>Simple Linear Regression</p>
 <p>continued</p></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/03_SLR.html"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/03_SLR.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
 <td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/03_SLR_01.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
 <td style="text-align: center;"><p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F03%5FSLR%5F01%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p>
 <p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F03%5FSLR%5F01%5F2%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p></td>
@@ -345,7 +314,7 @@ Room Locations for the week
 <tr class="even">
 <td>4</td>
 <td>SLR: Inference and Prediction</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/04_SLR_Inf_Pred.html"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/04_SLR_Inf_Pred.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
 <td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/04_SLR_Inf_Pred.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
 <td style="text-align: center;"><p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F04%5FSLR%5FInf%5FPred%5F01%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p>
 <p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F04%5FSLR%5FInf%5FPred%5F02%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p>
@@ -354,67 +323,15 @@ Room Locations for the week
 <tr class="odd">
 <td>5</td>
 <td>SLR: More Inference</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/05_SLR_Eval.html"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/05_SLR_Eval.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
 <td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://github.com/nwakim/W2024_BSTA_512/blob/main/slides_annotated/05_SLR_Eval.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
 <td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F05%5FSLR%5FMore%5Finf%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
 </tr>
 </tbody>
 </table>
-<section id="poll-everywhere-questions" class="level3">
-<h3 class="anchored" data-anchor-id="poll-everywhere-questions">Poll Everywhere Questions</h3>
-</section>
-<section id="quiz-1-information" class="level3">
-<h3 class="anchored" data-anchor-id="quiz-1-information">Quiz 1 Information</h3>
-<ul>
-<li><p>We will be in RLSB 3A003 B!!!</p></li>
-<li><p>General structure</p>
-<ul>
-<li><p>It will be a maximum of 15 questions</p>
-<ul>
-<li>~ 10 multiple choice questions (including T/F)</li>
-<li>~ 3 free response questions</li>
-</ul></li>
-</ul></li>
-<li><p>What will it cover?</p>
-<ul>
-<li>Lesson 2 (Data Management) to Lesson 4 (<a href="../slides/04_SLR_Inf_Pred.html">SLR: Inference</a>, except the mean response)
-<ul>
-<li>So up to what we covered on Monday 1/22</li>
-</ul></li>
-<li>HW 0 - 1</li>
-</ul></li>
-<li><p>What can you expect?</p>
-<ul>
-<li>Mostly concept questions</li>
-<li>You may need to recognize what certain, important functions do</li>
-<li>You may need to recognize a number from R output (like the regression table on slide 4 in <a href="../slides/04_SLR_Inf_Pred.html">Lesson 4 slides</a>)</li>
-</ul></li>
-<li><p>Instructions that will be on the quiz:</p>
-<blockquote class="blockquote">
-<ol type="1">
-<li><p>I have written a “30 minute” quiz. However, you have 50 minutes from 2:00 - 2:50pm.</p></li>
-<li><p>The quiz is open book and open notes. You may use books other than the class textbook, you may use anything on our course webpage, and you may use reference websites (like Wikipedia, Googling expected value of specific distribution, etc.).</p></li>
-<li><p>No cheating will be tolerated. Cheating includes:</p>
-<ul>
-<li><p>Using ChatGPT</p></li>
-<li><p>Using question and answer threads typically seen on sites like StackExchange, WikiHow, Quora, Reddit, StackOverflow, Chegg, etc.</p></li>
-<li><p>Asking other students in the room or looking at other students’ quiz work.</p></li>
-</ul></li>
-</ol>
-</blockquote></li>
-</ul>
-</section>
 </section>
 <section id="on-the-horizon" class="level2">
 <h2 class="anchored" data-anchor-id="on-the-horizon">On the Horizon</h2>
-<ul>
-<li><p><a href="../homework/HW1.html">Homework 1 due 1/25</a></p></li>
-<li><p>Quiz 1 on 1/29!</p>
-<ul>
-<li>Will cover up through today and HW1</li>
-</ul></li>
-<li><p>Homework 2 due 2/1</p></li>
-</ul>
 </section>
 <section id="class-exit-tickets" class="level2">
 <h2 class="anchored" data-anchor-id="class-exit-tickets">Class Exit Tickets</h2>
@@ -423,121 +340,11 @@ Room Locations for the week
 </section>
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
-<section id="monday-122" class="level3">
-<h3 class="anchored" data-anchor-id="monday-122">Monday 1/22</h3>
-<ul>
-<li><p>Clarification on the homework</p>
-<ul>
-<li><p>You can always turn in homework late for credit</p></li>
-<li><p>The only way to secure feedback from the TAs is by turning it in on time (unless you and I have discussed something else)</p></li>
-<li><p>Not the same for the lab!</p></li>
-</ul></li>
-<li><p>HW 1: changes some wording in Question 6, Part f and g (less work to do! Yay!)</p></li>
-</ul>
-</section>
-<section id="wednesday-124" class="level3">
-<h3 class="anchored" data-anchor-id="wednesday-124">Wednesday 1/24</h3>
-<ul>
-<li>HW 1: You do not need to do Question 6f!!</li>
-<li>While grading Lab 1
-<ul>
-<li>I noticed some really good answers that might have sources attached to them</li>
-<li>It was not required that you cite resources in your lab, but it will be required in the project report</li>
-<li>Just wanted to let you know before some of your found sources leave your mind
-<ul>
-<li>They might by the end of the quarter</li>
-</ul></li>
-</ul></li>
-<li>Student Leadership Council has set this year’s OHSU-PSU SPH&nbsp;<strong>National Public Health Week Conference</strong> for <strong>Thursday, April 4th, 2024.</strong>
-<ul>
-<li><p>Present your research in a low pressure situation!</p></li>
-<li><p>You can even present on your project from this class!</p>
-<ul>
-<li>I can help you polish it up!</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
 </section>
 <section id="muddiest-points" class="level2">
 <h2 class="anchored" data-anchor-id="muddiest-points">Muddiest Points</h2>
-<section id="the-lecture-materials-dont-always-feel-like-they-apply-to-the-homework.-if-asked-to-state-the-linear-regression-models-are-we-just-running-lm" class="level3">
-<h3 class="anchored" data-anchor-id="the-lecture-materials-dont-always-feel-like-they-apply-to-the-homework.-if-asked-to-state-the-linear-regression-models-are-we-just-running-lm">1. The lecture materials don’t always feel like they apply to the homework. If asked to “state the linear regression models,” are we just running <code>lm()</code>?</h3>
-<p>Stating the linear regression model is asking us to show the population model that we are fitting. This is just to make sure we are aware of the model that we plan to fit. So the generic form of this is: <span class="math inline">\(Y = \beta_0 + \beta_1 X + \epsilon\)</span>.</p>
-<p>Running <code>lm()</code> is the equivalent of <em>fitting</em> the model.</p>
-<p>Keep letting me know what feels disconnected in the class! Sometimes I purposefully say things in different ways to build our understanding, but sometimes that fails!</p>
-</section>
-<section id="all-of-the-different-manifestations-of-t" class="level3">
-<h3 class="anchored" data-anchor-id="all-of-the-different-manifestations-of-t">2. “all of the different manifestations of t”</h3>
-<p>I love the way this person said it!</p>
-<p>So I’ve sorted this out:</p>
-<ul>
-<li><p>We say <span class="math inline">\(T\)</span> follows a t-distribution</p>
-<ul>
-<li><span class="math inline">\(T\)</span> is the general name for the variable (like <span class="math inline">\(X\)</span> or <span class="math inline">\(Y\)</span>)</li>
-</ul></li>
-<li><p>We calculate a given <span class="math inline">\(t\)</span>-value and call that <span class="math inline">\(t\)</span></p>
-<ul>
-<li>We also call this the test statistic</li>
-</ul></li>
-<li><p>The critical value that corresponds to a specific confidence interval and <span class="math inline">\(\alpha\)</span> is labelled <span class="math inline">\(t^*\)</span></p></li>
-</ul>
-</section>
-<section id="whats-the-difference-between-sd-and-variance" class="level3">
-<h3 class="anchored" data-anchor-id="whats-the-difference-between-sd-and-variance">3. What’s the difference between SD and variance?</h3>
-<p>SD (standard deviation) is the square root of the variance. That’s why I sometimes write <span class="math inline">\(\sigma\)</span> (standard deviation) or <span class="math inline">\(\sigma^2\)</span> (variance) when I’m talking about the distribution of residuals.</p>
-<p><span class="math display">\[
-\sigma = \sqrt{\sigma^2}
-\]</span></p>
-<p>Variance is usually easier to work with mathematically, but standard deviation is in the units that match a variable. For example, the variance of 10 height measurements are in square inches, but the standard deviation are in inches.</p>
-</section>
-<section id="why-is-it-important-to-test-if-beta_1-is-equal-to-zero-is-beta_10-the-same-as-the-x-and-y-variables-having-no-correlation" class="level3">
-<h3 class="anchored" data-anchor-id="why-is-it-important-to-test-if-beta_1-is-equal-to-zero-is-beta_10-the-same-as-the-x-and-y-variables-having-no-correlation">4. Why is it important to test if <span class="math inline">\(\beta_1\)</span> is equal to zero? Is <span class="math inline">\(\beta_1=0\)</span> the same as the x and y variables having no correlation?</h3>
-<p>Let’s answer the second question: Yes! It is the same in simple linear regression. When we get to multiple linear regression, and have several variables/coefficients in our model, testing <span class="math inline">\(\beta_1=0\)</span> won’t be the same as testing the correlation.</p>
-<p>In simple linear regression, it is important to test <span class="math inline">\(\beta_1\)</span> mostly for pedagogical reasons. It’s just helpful to establish the process in a simpler setting.</p>
-</section>
-<section id="sse-and-sigma" class="level3">
-<h3 class="anchored" data-anchor-id="sse-and-sigma">5. SSE and sigma</h3>
-<p>We were looking at the relationship between SSE and <span class="math inline">\(\widehat\sigma^2\)</span>:</p>
-<p><span class="math display">\[ \widehat{\sigma}^2 = \frac{1}{n-2}SSE \]</span></p>
-<p>The sum of square errors is <span class="math inline">\(SSE = \sum_{i=1}^n (Y_i - \widehat{Y}_i)^2 = \sum_{i=1}^n \epsilon_i^2\)</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-An aside on variance
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The definition of variance is the sum of the squared differences between values and their mean.</p>
-<p>So if I had a variable <span class="math inline">\(S\)</span>, with 100 observations, the mean of <span class="math inline">\(S\)</span>, which we call <span class="math inline">\(\overline{S}\)</span>, would be <span class="math inline">\(\frac{\sum_{i=1}^{100} S_i}{100}\)</span>. The variance of <span class="math inline">\(S\)</span> would be <span class="math inline">\(\sum_{i=1}^{100} (S_i - \overline{S})^2\)</span>.</p>
-</div>
-</div>
-<p>Now, let’s get back to the sum of square errors: <span class="math inline">\(SSE = \sum_{i=1}^n \epsilon_i^2\)</span></p>
-<p>The variance of the residuals would be <span class="math inline">\(\sum_{i=1}^n (\epsilon_i - \overline{\epsilon})^2\)</span>. The mean of <span class="math inline">\(\epsilon\)</span>, <span class="math inline">\(\overline\epsilon\)</span>, should be 0 by our assumptions. So the variance of the residuals is <span class="math inline">\(\sum_{i=1}^n \epsilon_i^2\)</span> which is our SSE!</p>
-<p>There is some more complicated math that goes into why our variance is divided by n-2 to get the estimated variance of the residuals, but that’s basically it!</p>
-</section>
-<section id="it-would-be-helpful-to-get-some-clarification-on-the-notations-that-we-need-to-use-in-this-class.-perhaps-a-chart-or-the-types-of-notations-for-this-class-could-be-helpful-to-organize-this" class="level3">
-<h3 class="anchored" data-anchor-id="it-would-be-helpful-to-get-some-clarification-on-the-notations-that-we-need-to-use-in-this-class.-perhaps-a-chart-or-the-types-of-notations-for-this-class-could-be-helpful-to-organize-this">6. It would be helpful to get some clarification on the notations that we need to use in this class. Perhaps, a chart or the types of notations for this class could be helpful to organize this?</h3>
-<p>I can certainly work on this! In all honesty, I am a little overwhelmed with work this week, so I don’t think this is something I can produce by the quiz. If you want to get one started, I can share it! I think would be a really good thing to help you study, too!</p>
-</section>
-<section id="what-is-the-relationship-between-the-anova-for-linear-regression-and-anova-for-group-differences" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-the-relationship-between-the-anova-for-linear-regression-and-anova-for-group-differences">7. What is the relationship between the ANOVA for linear regression and ANOVA for group differences?</h3>
-</section>
-<section id="the-limitations-of-the-different-tests-like-an-f-statistic-vs.-t-test" class="level3">
-<h3 class="anchored" data-anchor-id="the-limitations-of-the-different-tests-like-an-f-statistic-vs.-t-test">8. The limitations of the different tests, like an F statistic vs.&nbsp;t-test</h3>
-</section>
-<section id="unexplained-vs-the-explained" class="level3">
-<h3 class="anchored" data-anchor-id="unexplained-vs-the-explained">9. unexplained vs the explained</h3>
-</section>
-<section id="changing-the-confidence-level-in-tidy" class="level3">
-<h3 class="anchored" data-anchor-id="changing-the-confidence-level-in-tidy">10. Changing the confidence level in <code>tidy()</code></h3>
-<p>Here is a good site about the input! Looks like we would use <code>conf.level</code> to change 95% confidence interval to some other percent.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
