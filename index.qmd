@@ -9,17 +9,17 @@ link-external-newwindow: true
 ::: {style="color: #FFFFFF"}
 ::: grid
 ::: g-col-4
-![](images/bsta_512_hex.png){fig-align="center" width="337"}
+![](images/bsta_513_hex.png){fig-align="center" width="337"}
 :::
 
 ::: g-col-7
-# BSTA 512/612: Linear Models
+# BSTA 513/613: Categorical Data Analysis
 
-### Winter 2024
+### Spring 2024
 
  
 
-Welcome to BSTA 512/612! In this course, we will focus on linear models, and build our understanding of regression analysis. We will build some theoretical understanding in order to interpret and apply regression models appropriately. We will learn how to build a regression model, interpret the model, and diagnose potential issues with our model.
+Welcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.
  
 :::
 :::
@@ -42,15 +42,15 @@ Welcome to BSTA 512/612! In this course, we will focus on linear models, and bui
 
 [OH with Nicky](https://ohsu.webex.com/meet/wakim)
 
-{{< iconify icon-park-solid time size=24px >}} Thursdays, 11:30am - 1pm
+{{< iconify icon-park-solid time size=24px >}} TBD
 
 [OH with Antara](https://pdx.zoom.us/j/84711194675)
 
-{{< iconify icon-park-solid time size=24px >}} Wednesdays, 4:30 - 6 pm
+{{< iconify icon-park-solid time size=24px >}} TBD
 
 [OH with Ariel](https://ohsu.webex.com/meet/weingara)
 
-{{< iconify icon-park-solid time size=24px >}} Tuesdays, 2:30 - 4 pm
+{{< iconify icon-park-solid time size=24px >}} TBD
 
 :::
 
@@ -59,11 +59,11 @@ Welcome to BSTA 512/612! In this course, we will focus on linear models, and bui
 
 {{< iconify fa6-solid calendar-days size=24px >}} Mondays, Wednesdays
 
-{{< iconify fa6-solid calendar size=24px >}} Jan 8 - March 20
+{{< iconify fa6-solid calendar size=24px >}} April 1 - June 12
 
 {{< iconify icon-park-solid time size=24px >}} 1:00 PM - 2:50 PM
 
-{{< iconify fa6-solid person-chalkboard size=24px >}} In-person
+{{< iconify fa6-solid person-chalkboard size=24px >}} In-person, RPV Room B/C
 :::
 
 ::: g-col-3

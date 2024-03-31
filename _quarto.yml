@@ -32,7 +32,8 @@ website:
             text: Instructors
           - href: syllabus.qmd
             text: Syllabus
-          - schedule.qmd
+          - href: schedule.qmd
+            text: Schedule
           - resources.qmd
           - quizzes.qmd
       - section: "Course Materials"
