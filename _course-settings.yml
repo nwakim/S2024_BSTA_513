@@ -4,47 +4,47 @@ schedule:
     materials:
       - href: weeks/week_01_sched.qmd
         date: 04/01/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_02_sched.qmd
         date: 04/08/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_03_sched.qmd
         date: 04/15/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_04_sched.qmd
         date: 04/22/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_05_sched.qmd
         date: 04/29/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_06_sched.qmd
         date: 5/6/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_07_sched.qmd
         date: 5/13/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_08_sched.qmd
         date: 5/20/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_09_sched.qmd
         date: 5/29/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_10_sched.qmd
         date: 6/3/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_11_sched.qmd
         date: 6/10/24
-        calendar-color: "#F14124"
+        calendar-color: "#213c96"
         calendar-color2: "#FFFFFF"
         
       - href: homework/HW1.qmd
@@ -74,16 +74,16 @@ schedule:
         calendar-color2: "#FFFFFF" 
 
       - title: "Quiz 1"
-        date: 4/29/24        
-        calendar-color: "#FF8021"
+        date: 4/22/24        
+        calendar-color: "#E2534D"
         calendar-color2: "#FFFFFF" 
       - title: "Quiz 2"
-        date: 5/20/24        
-        calendar-color: "#FF8021"
+        date: 5/13/24        
+        calendar-color: "#E2534D"
         calendar-color2: "#FFFFFF" 
       - title: "Quiz 3"
-        date: 6/10/24        
-        calendar-color: "#FF8021"
+        date: 6/3/24        
+        calendar-color: "#E2534D"
         calendar-color2: "#FFFFFF" 
 
       - title: "Lab 1 due"
@@ -120,7 +120,7 @@ schedule:
       - title: "Midterm feedback due"
         href: https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURTVVRDNEMzhHVFRUQTRIVDdLSE1BNlFIWC4u
         date: 5/2/24
-        calendar-color: "#213c96"
+        calendar-color: "#C2352F"
         calendar-color2: "#FFFFFF" 
 
         

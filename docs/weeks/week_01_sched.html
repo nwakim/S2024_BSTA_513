@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-08">
+<meta name="dcterms.date" content="2024-04-01">
 <meta name="description" content="Introduction; Review; and Data Wrangling">
 
-<title>Linear Models - Week 1</title>
+<title>Categorical Data Analysis - Week 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="../images/bsta_512_hex.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Linear Models</span>
+    <span class="navbar-title">Categorical Data Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,8 +90,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="dropdown-header">
- <span class="menu-text">schedule1.qmd</span></li>
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
@@ -159,8 +161,11 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">schedule1.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly Pages</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
@@ -211,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../readings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">612 Readings</span></a>
+ <span class="menu-text">613 Readings</span></a>
   </div>
 </li>
       </ul>
@@ -230,7 +235,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
   <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the Horizon</a></li>
   <li><a href="#class-exit-tickets" id="toc-class-exit-tickets" class="nav-link" data-scroll-target="#class-exit-tickets">Class Exit Tickets</a></li>
-  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information">Additional Information</a></li>
   <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="week_01_sched.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -256,14 +260,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2024</p>
+      <p class="date">April 1, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 8, 2024</p>
+      <p class="date-modified">April 1, 2024</p>
     </div>
   </div>
     
@@ -272,12 +276,34 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>```{css, echo=FALSE} .title{ font-size: 40px; color: #213c96; background-color: #fff; padding: 0px; }</p>
-<p>.description{ font-size: 20px; color: #fff; background-color: #213c96; padding: 10px; } ```</p>
+<div class="cell">
+<style type="text/css">
+.title{
+  font-size: 40px;
+  color: #C2352F;
+  background-color: #fff;
+  padding: 0px;
+}
+
+.description{
+  font-size: 20px;
+  color: #fff;
+  background-color: #C2352F;
+  padding: 10px;
+}
+</style>
+</div>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <p>Below is a table with links to resources. Icons in <span style="color:#E89543;">orange</span> mean there is an available file link.</p>
 <table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 34%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Lesson</th>
@@ -297,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>1</td>
-<td>Review</td>
+<td>Introduction to Categorical Analysis</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -332,11 +358,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="class-exit-tickets" class="level2">
 <h2 class="anchored" data-anchor-id="class-exit-tickets">Class Exit Tickets</h2>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNEU3TkZQUjdEMElYQVpWRUc4UkVDSVBMNy4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Monday (1/8)</p>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUODlaWDJPNzQxRVhaOFVDVUhOU1oxRTlTUC4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Wednesday (1/10)</p>
-</section>
-<section id="additional-information" class="level2">
-<h2 class="anchored" data-anchor-id="additional-information">Additional Information</h2>
+<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNEU3TkZQUjdEMElYQVpWRUc4UkVDSVBMNy4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Monday (4/1)</p>
+<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUODlaWDJPNzQxRVhaOFVDVUhOU1oxRTlTUC4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Wednesday (4/3)</p>
 </section>
 <section id="muddiest-points" class="level2">
 <h2 class="anchored" data-anchor-id="muddiest-points">Muddiest Points</h2>

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Linear Models"
+  title: "Categorical Data Analysis"
   navbar:
     background: primary
     search: true
@@ -13,7 +13,8 @@ website:
     right:
       - href: syllabus.qmd
         text: Syllabus
-      - schedule.qmd
+      - href: schedule.qmd
+        text: Schedule
       - href: homeworks.qmd
         text: Homework
       - href: project.qmd
@@ -39,7 +40,7 @@ website:
       - section: "Course Materials"
         contents:
           - href: schedule.qmd
-            text: Weekly Pages
+            text: Schedule
           - href: lessons.qmd
           - href: homeworks.qmd
             text: Homework

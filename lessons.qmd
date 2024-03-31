@@ -24,7 +24,21 @@ format:
 }
 ```
 
-
+| Lesson | Topic                                             | Slides | Annotated Slides | Recording(s) |
+|--------------|--------------|:-------------:|:-------------:|:-------------:|
+| 1      | Introduction to Categorical Analysis              |        |                  |              |
+| 2      | Data Management                                   |        |                  |              |
+| 3      | Measurement of Association for Contingency Tables |        |                  |              |
+| 4      | Simple Logistic Regression                        |        |                  |              |
+| 5      | Interpretations of Simple Logistic Regression     |        |                  |              |
+| 6      | Multiple Logistic Regression                      |        |                  |              |
+| 7      | Interpretations of Multiple Logistic Regression   |        |                  |              |
+| 8      | Confounders and Interactions                      |        |                  |              |
+| 9      | Model Building Strategies                         |        |                  |              |
+| 10     | Numerical Problems                                |        |                  |              |
+| 11     | Assessing Model Fit                               |        |                  |              |
+| 12     | Revisit interpretations                           |        |                  |              |
+| 13     | Poisson Regression                                |        |                  |              |
 
 ```{r}
 #| echo: false

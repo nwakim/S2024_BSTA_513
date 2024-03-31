@@ -1,6 +1,6 @@
 ---
-title: "BSTA 512/612 Syllabus"
-date-modified: "1/7/2024"
+title: "BSTA 513/613 Syllabus"
+date-modified: "4/1/2024"
 categories: [""]
 format: 
   html:
@@ -14,7 +14,7 @@ editor_options:
 ```{css, echo=FALSE}
 .title{
   font-size: 40px;
-  color: #213c96;
+  color: #C2352F;
   background-color: #fff;
   padding: 0px;
 }
@@ -22,21 +22,23 @@ editor_options:
 
 ## Description
 
-Welcome to BSTA 512/612! In this course, we will focus on linear models, and build our understanding of regression analysis. We will build some theoretical understanding in order to interpret and apply regression models appropriately. We will learn how to build a regression model, interpret the model, and diagnose potential issues with our model.
+Welcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.
 
 ### Course Learning Objectives
 
 At the end of this course, students should be able to...
 
-1.  Analyze real-world data to answer questions about multivariable relationships for a continuous outcome
+1.  Apply and interpret a variety of hypothesis-testing procedures for two-way and three-way contingency tables
 
-2.  Build, fit, and evaluate linear regression models
+2.  Compute and interpret measures of association for binary and ordinal data.
 
-3.  Assess whether a proposed model is appropriate and describe its limitations
+3.  Calculate and correctly interpret odds ratios using logistic regression, make comparison across groups and examine relationship between binary outcome and predictor variables.
 
-4.  Use R and Quarto to write reproducible reports
+4.  Apply appropriate model-building strategies for logistic regression. Effectively use statistical computing packages for contingency table and logistic regression procedures.
 
-5.  Communicate results from statistical analyses to a general audience
+5.  Perform Poisson regression analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.
+
+6.  Coherently summarize methods and results of data analyses, and discuss in context of original health-related research questions to audiences with varied statistical background.
 
 These learning objectives were adapted from [Maria Tackett's Regression Analysis course](https://maria-tackett.netlify.app/project/02_sta210/).
 
@@ -46,19 +48,9 @@ These learning objectives were adapted from [Maria Tackett's Regression Analysis
 
 ## Meeting Times
 
-Mondays          1:00 PM -- 2:50 PM PST in RLSB 3A003 A/B
+Mondays          1:00 PM -- 2:50 PM PST in RPV Room A/B
 
-Wednesdays    1:00 PM -- 2:50 PM PST in RLSB 3A003 A/B
-
-Here is the full schedule:
-
-![](images/room_sched.png)
-
-### Known Exceptions
-
-Monday, February 26              1:00 PM -- 2:50 PM PST **on Webex OR pre-recorded**
-
-Wednesday, February 28        1:00 PM -- 2:50 PM PST **on Webex OR pre-recorded**
+Wednesdays    1:00 PM -- 2:50 PM PST in RPV Room A/B
 
 ```{r}
 #| echo: false
@@ -69,11 +61,13 @@ g=3
 
 ### Textbooks
 
-In lieu of a formally published textbook, we will be referencing the following two online textbooks. Similar to our class, the books integrate R into their lessons.
+-   [Applied Logistic Regression](https://ohsuitg-my.sharepoint.com/:b:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/Textbooks/Hosmer_Applied_Logistic_Regression.pdf?csf=1&web=1&e=Ur29qk) by David Hosmer, Stanley Lemeshow, and Rodney Sturdivant
 
--   [A Progressive Introduction to Linear Models](https://jfrench.github.io/LinearRegression/) by Joshua French
+-   [An Introduction to Categorical Data Analysis](https://ohsuitg-my.sharepoint.com/:b:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/Textbooks/Agresti_Introduction_to_Categorical_Data.pdf?csf=1&web=1&e=WBwuuW) by Alan Agresti
 
 -   [Introduction to Regression Methods for Public Health Using R](https://bookdown.org/rwnahhas/RMPH/) by Ramzi W. Nahhas
+
+    -   Specifically Chapter 6
 
 #### Supplemental Readings (Optional)
 
@@ -85,7 +79,7 @@ In lieu of a formally published textbook, we will be referencing the following t
 
 We will use Slack as our main form of communication for the class. If you are unsure how to do a homework problem or have other questions, please ask me by posting your question(s) on Slack. Please know that Slack is not guarded by the OSHU firewall, so if you have a question about accommodations or any sensitive topics, you may wish to message me via email. You can still message me regarding sensitive information on Slack, but I will not initiate those conversations on Slack.
 
-[\*\*Please use this invitation link for our Slack workspace!\*\*](https://join.slack.com/t/slack-xvk6383/shared_invite/zt-29g7biioz-XhPs~tj8xwL1GajEw9YlTg)
+[\*\*Please use this invitation link for our Slack workspace!\*\*](https://join.slack.com/t/slack-kp94638/shared_invite/zt-2fwl1ziz7-K98XEP_8qLEMzagVlzJWbQ)
 
 **Tips on asking questions:**
 
@@ -104,10 +98,6 @@ We will use Slack as our main form of communication for the class. If you are un
 
 While most course materials will be delivered online through this website, assignments will be turned in through [Sakai](https://sakai.ohsu.edu/), OHSU's course management system. I will include a link on this website to the Sakai assignment page. 
 
-#### Explain Everything
-
-I plan to use Explain Everything on my iPad to deliver lectures. This application allows me to take real-time notes, access Poll Everywhere, and record the lecture. I hope to use these features to allow you to follow me during lecture and have access to a recording for asynchronous viewing. While I will try to always make a recorded lecture available to you after class, I want you to try to attend class in person. I understand that life events get in the way of in-person attendance, but your attendance in-person brings me joy while I teach, and then further motivates me to be a great teacher. 
-
 #### Webex
 
 Webex software will be used for virtual office hours. To give everyone the best possible experience with Webex, I recommend the following best practices:
@@ -122,9 +112,9 @@ We will use the Poll Everywhere tool as an interactive feature of the course. Po
 
 During lectures I will pose questions to the class. These questions are designed to provide real-time feedback to both students and the instructor on how well students are grasping the material. This is meant to be an interactive, learning activity with NO contribution to your grade. Your identity will never be connected to your answers, so I encourage you to answer honestly.
 
-#### PennState STAT 501 Website
+#### PennState STAT 504 Website
 
-PennState has a class offered to online MS students that has some overlap with our class. They have all their [course notes posted on this page](https://online.stat.psu.edu/stat501/). This is a great source if you would like to see class notes with different phrasing.
+PennState has a class offered to online MS students that has some overlap with our class. They have all their [course notes posted on this page](https://online.stat.psu.edu/stat504/lesson/welcome-stat-504). This is a great source if you would like to see class notes with different phrasing.
 
 Not all of our topics are covered in their notes, but the most important ones are. If you are having trouble finding our course's concepts on their page, please make ask me at Office Hours, after class, or in a private meeting. I do not explicitly state corresponding sections under our schedule because I believe it is important for you to develop skills involving resources and learning key words that can help you find answers. 
 
@@ -147,55 +137,44 @@ Your learning and practicing of R will hopefully not be limited to this course. 
 ##### Useful online R resources
 
 -   [R for the rest of us](https://rfortherestofus.com/)
-
 -   Statistical tools for high-throughput data analysis. [ggplot2 essentials](http://www.sthda.com/english/wiki/ggplot2-essentials#google_vignette)
-
 -   [R-bloggers](http://www.r-bloggers.com/)
-
 -   Stack Overflow for troubleshooting
-
 -   [R Graphical Manual](https://www.imsbio.co.jp/RGM/R_image_list)
-
 -   [Quick-R](http://www.statmethods.net/). Accessing the power of R
-
 -   [R for SAS, STATA, and SPSS Users](http://r4stats.com/)
-
 -   [ggplot2](https://ggplot2.tidyverse.org/)
-
 -   [Learn R 4 free](https://www.learnr4free.com/en/index.html)
-
 -   [Join a local R user groups](https://www.r-consortium.org/blog/2019/09/09/r-community-explorer-r-user-groups)
-
 -   [Learning Machines](https://blog.ephorie.de/learning-r-the-ultimate-introduction-incl-machine-learning)
 
 #### Online R courses to complement or refresh material from class
 
 -   [R for the rest of us](https://rfortherestofus.com/)
-
 -   Coursera: [R programming](https://www.coursera.org/learn/r-programming)
-
 -   edX: [R basics](https://www.edx.org/course/data-science-r-basics)
-
 -   Data Carpentry: For Biologists
-
 -   Data Carpentry: [For Ecologists](https://datacarpentry.org/lessons/#ecology-workshop)
-
 -   [Psychiatric R](https://psyteachr.github.io/)
-
 -   [R coder](https://r-coder.com/)
 
 ## Assessment
 
 The course is structured around the following four components:
 
++:-------------------------:+:------------:+:----------------------:+:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Component**             | **Modality** | **Frequency**          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
++---------------------------+--------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Lecture                   | In person    | Twice, Weekly          | Course content is provided through in-person lectures. Lectures will consist of didactic lessons, interactive examples, and PollEverywhere questions. Sessions will be recorded through Explain Everything and posted to Sakai. **Attending or viewing the lecture within 7 days of the original lecture date is mandatory.** Class attendance will be taken through an Exit Ticket. If viewing the lecture asynchronously, you must take the Exit Ticket to verify your attendance.                                                                                                                                     |
++---------------------------+--------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Homework                  | Online       | Weekly                 | The course includes 7 homework assignments. They are an opportunity for you to engage with important concepts, practice coding, and apply calculating skills. Homework assignments should be submitted online, and will be graded by me. Students are encouraged to work in groups for homework assignments, but each person should do their own summary and hand in their work. **Homework assignments will be due on Thursday at 11 PM.**                                                                                                                                                                              |
++---------------------------+--------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Quizzes                   | In person    | Every 3 weeks          | The purpose of the quizzes is to assess how well you have achieved the learning objectives through questions covering important concepts, conducting statistical processes, and interpreting output. **We will have our quizzes in-class, and it will be open book.** Students must work on the quizzes independently.                                                                                                                                                                                                                                                                                                   |
++---------------------------+--------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Project (Labs and Report) | Online       | 4 labs, 1 final report | The project will be a combination of submitted labs that will span the quarter and one final report submitted at the end of the quarter. This is meant to translate the tools learned in the course to the work one may do in the workforce. This will help instill the procedure for shaping research goals, model selection, analyzing data, and interpreting meaningful results. Labs will guide you through the needed analysis and background for the project. The final report will summarize your work over the labs and more closely align with a journal article. Students will work independently on each lab. |
++---------------------------+--------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                           |              |                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|:-------------------------:|:------------:|:----------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       **Component**       | **Modality** |     **Frequency**      | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|          Lecture          |  In person   |     Twice, Weekly      | Course content is provided through in-person lectures. Lectures will consist of didactic lessons, interactive examples, and PollEverywhere questions. Sessions will be recorded through Explain Everything and posted to Sakai. **Attending or viewing the lecture within 7 days of the original lecture date is mandatory.** Class attendance will be taken through an Exit Ticket. If viewing the lecture asynchronously, you must take the Exit Ticket to verify your attendance.                                                                                                                                     |
-|         Homework          |    Online    |         Weekly         | The course includes 7 homework assignments. They are an opportunity for you to engage with important concepts, practice coding, and apply calculating skills. Homework assignments should be submitted online, and will be graded by me. Students are encouraged to work in groups for homework assignments, but each person should do their own summary and hand in their work. **Homework assignments will be due on Thursday at 11 PM.**                                                                                                                                                                              |
-|          Quizzes          |  In person   |     Every 3 weeks      | The purpose of the quizzes is to assess how well you have achieved the learning objectives through questions covering important concepts, conducting statistical processes, and interpreting output. **We will have our quizzes in-class, and it will be open book.** Students must work on the quizzes independently.                                                                                                                                                                                                                                                                                                   |
-| Project (Labs and Report) |    Online    | 4 labs, 1 final report | The project will be a combination of submitted labs that will span the quarter and one final report submitted at the end of the quarter. This is meant to translate the tools learned in the course to the work one may do in the workforce. This will help instill the procedure for shaping research goals, model selection, analyzing data, and interpreting meaningful results. Labs will guide you through the needed analysis and background for the project. The final report will summarize your work over the labs and more closely align with a journal article. Students will work independently on each lab. |
-|                           |              |                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
++---------------------------+--------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #### Types of assessments
 
@@ -213,22 +192,31 @@ Letter grades will be assigned roughly according to the following scheme: A (\>=
 
 Grades will be based on homework assignments, midterm exam, class "attendance", and final exam, as follows:
 
-|                           |                        |                          |                                          |                                          |
-|:-------------------------:|:----------------------:|:------------------------:|:----------------------------------------:|:----------------------------------------:|
-|    **Course activity**    | **Type of Assessment** |       **Due Date**       | **Percentage of final grade (BSTA 512)** | **Percentage of final grade (BSTA 612)** |
-|         Homework          |       Formative        |     Every 1-2 weeks      |                   33%                    |                   28%                    |
-|          Quizzes          |       Summative        |     1/29, 2/21, 3/11     |                   25%                    |                   25%                    |
-|       Project Labs        |       Formative        |     Every 2-3 weeks      |                   25%                    |                   25%                    |
-|      Project Report       |       Summative        |           3/21           |                   10%                    |                   10%                    |
-| Exit tickets (Attendance) |          N/A           |       Twice Weekly       |                    5%                    |                    5%                    |
-|   Mid-Quarter Feedback    |          N/A           |           TBD            |                    2%                    |                    2%                    |
-|       612 Readings        |       Formative        | Approx. every other week |                    0%                    |                    5%                    |
++:-------------------------:+:----------------------:+:------------------------:+:----------------------------------------:+:----------------------------------------:+
+| **Course activity**       | **Type of Assessment** | **Due Date**             | **Percentage of final grade (BSTA 512)** | **Percentage of final grade (BSTA 612)** |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| Homework                  | Formative              | Every 1-2 weeks          | 33%                                      | 28%                                      |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| Quizzes                   | Summative              | 4/22, 5/13, 6/3          | 25%                                      | 25%                                      |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| Project Labs              | Formative              | Every 2-3 weeks          | 25%                                      | 25%                                      |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| Project Report            | Summative              | 6/13                     | 10%                                      | 10%                                      |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| Exit tickets (Attendance) | N/A                    | Twice Weekly             | 5%                                       | 5%                                       |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| Mid-Quarter Feedback      | N/A                    | 5/2                      | 2%                                       | 2%                                       |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
+| 613 Readings              | Formative              | Approx. every other week | 0%                                       | 5%                                       |
++---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
 
 ### Homework grading
 
-No student has the same amount of time available to dedicate to homework. This class may not be a priority to you, you may be taking several other courses, or you may need to dedicate time to other activities. Homeworks are **formative assessments**, meaning its purpose is to help you learn and practice. To reduce the pressure on you to have perfect or complete homework, I have a very simple grading policy: **Your homework will be given a check mark if you turn something in (whether it is incomplete, complete, correct, or wrong).** I highly encourage you to stay up-to-date with the homeworks and put in as much effort as you can. This will be the most helpful work in this class!
+We are going to decide on this together!!
 
-After the due date, the TAs will give you feedback (on one or more complete problems) and post the solutions.
+### Lab grading
+
+While these are formative assignments, it is important to complete the whole lab and put in your best effort. Points will be deducted based on the rubric if it is clear that effort is not made or tasks are skipped.
 
 ### Viewing Grades in Sakai
 
@@ -238,7 +226,7 @@ Points you receive for graded activities will be posted to the Sakai Gradebook. 
 
 ### Ongoing Course Feedback
 
-Throughout the duration of the course, you are also welcome to informally and anonymously submit your feedback through [this Microsoft Form](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURDc2S1dGNTlTRVJVUFoyQUUzNFJMS0JXUi4u) or Class Exit Tickets. This form will be available on Sakai. Students can submit feedback at any time and this form will be reviewed regularly by me. Your responses will be anonymous unless you elect to leave your email address. If I have done anything to make you feel uncomfortable, please give me feedback so I can change my behavior. **Ultimately, this class is for you, and my individual social identity/behavior should not inhibit your learning.** Thank you for your help making BSTA 512/612 a more successful class! Examples of ongoing feedback are:
+Throughout the duration of the course, you are also welcome to informally and anonymously submit your feedback through this [Microsoft Form](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQlpLVUsyVUE3TU5ZNThJR0xCRDMyRjJOSC4u) or Class Exit Tickets. This form will be available on Sakai. Students can submit feedback at any time and this form will be reviewed regularly by me. Your responses will be anonymous unless you elect to leave your email address. If I have done anything to make you feel uncomfortable, please give me feedback so I can change my behavior. **Ultimately, this class is for you, and my individual social identity/behavior should not inhibit your learning.** Thank you for your help making BSTA 513/613 a more successful class! Examples of ongoing feedback are:
 
 -   Nicky talks a little fast during lecture time. May you speak slower?
 
@@ -266,14 +254,19 @@ Every professor has different expectations when assigning certain work or provid
 
 ### Resources
 
-|                                 |                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|:-------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|          **Resource**           | **What is it?**                                                                                                                                                                                                                                                                                                           | **How do I use it?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|          Office Hours           | Blocks of time a professor or TA dedicates for questions. The teaching staff will be located in a specific room. Several students may enter the space at a time and will ask specific or broad questions. If many students attend office hours, a queue will be created so that students can be served equally.           | The main use of office hours is to ask questions about an assignment or lecture notes. You are welcome to sit and do homework in office hours. OH are also an informal way of meeting fellow students to collaborate with.                                                                                                                                                                                                                                                                    |
++:-------------------------------:+:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Resource**                    | **What is it?**                                                                                                                                                                                                                                                                                                           | **How do I use it?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Office Hours                    | Blocks of time a professor or TA dedicates for questions. The teaching staff will be located in a specific room. Several students may enter the space at a time and will ask specific or broad questions. If many students attend office hours, a queue will be created so that students can be served equally.           | The main use of office hours is to ask questions about an assignment or lecture notes. You are welcome to sit and do homework in office hours. OH are also an informal way of meeting fellow students to collaborate with.                                                                                                                                                                                                                                                                    |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Lectures and lecture recordings | Time shared between the professor and students where the professor conveys important class material. Material discussed in lectures include concepts, calculations, code, and examples. Lectures are a mix of presentation of information, working through examples together, interactive activities, and in-class polls. | Students should attend lectures in person if possible. You should attempt to understand new material presented by following the presentation slides, taking notes on additional details that may conveyed verbally, and working through examples with the professor. Students are encouraged to ask questions when you don't understand the material at any point in the lecture.                                                                                                             |
-|            Textbooks            | Written and published material that explains concepts, steps through calculations, provides examples, and provides practice problems. The listed textbooks is the basis for this course. While I am to cover all topics in class, the textbook provides alternative explanations and additional examples.                 | While coming to class having read the accompanying textbook chapters helps understanding during class, I do not expect students to have read it. I see the textbook as a good resource if you are struggling with a specific topic after class, in need of an example while working on homework, or want additional practice when studying for the exam.                                                                                                                                      |
-|             Website             | The course website is designed by me so that you have access to all the course materials in a more organized and flexible way. All resources delivered from me to you will be available on the website. Any assignments turned in will be through Sakai.                                                                  | You can navigate through different course resources and information using the left-side tabs or top navigation bar. Course materials, like lecture notes, homework, data examples, and recordings, can be found under each week's page under the schedule tab. You can also find the individual resources under the "Course Materials" tab on the left. Links to turn in assignments through Sakai will be given on the website. Please explore the tabs and get a sense of the organization. |
-|              Sakai              | Sakai is a learning management system for higher ed. This is the university sanctioned LMS where we will submit assignments.                                                                                                                                                                                              | You will turn in assignments through Sakai under the "Submissions" tab. Generally, there will be a link to each assignment on the course website. You can also view your grades under "Gradebook" and links to Webex under "Webex."                                                                                                                                                                                                                                                           |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Textbooks                       | Written and published material that explains concepts, steps through calculations, provides examples, and provides practice problems. The listed textbooks is the basis for this course. While I am to cover all topics in class, the textbook provides alternative explanations and additional examples.                 | While coming to class having read the accompanying textbook chapters helps understanding during class, I do not expect students to have read it. I see the textbook as a good resource if you are struggling with a specific topic after class, in need of an example while working on homework, or want additional practice when studying for the exam.                                                                                                                                      |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Website                         | The course website is designed by me so that you have access to all the course materials in a more organized and flexible way. All resources delivered from me to you will be available on the website. Any assignments turned in will be through Sakai.                                                                  | You can navigate through different course resources and information using the left-side tabs or top navigation bar. Course materials, like lecture notes, homework, data examples, and recordings, can be found under each week's page under the schedule tab. You can also find the individual resources under the "Course Materials" tab on the left. Links to turn in assignments through Sakai will be given on the website. Please explore the tabs and get a sense of the organization. |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Sakai                           | Sakai is a learning management system for higher ed. This is the university sanctioned LMS where we will submit assignments.                                                                                                                                                                                              | You will turn in assignments through Sakai under the "Submissions" tab. Generally, there will be a link to each assignment on the course website. You can also view your grades under "Gradebook" and links to Webex under "Webex."                                                                                                                                                                                                                                                           |
++---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ### Assignments
 

@@ -6,6 +6,8 @@ toc: false
 ::: panel-tabset
 ## Schedule
 
+Labs and homeworks may be switched around depending on the material learned in class.
+
 ```{r}
 #| echo: false
 #| results: asis
@@ -185,10 +187,7 @@ Here is a tentative list of important, recurring times:
     -   So for Monday classes, they are due the following Monday at 11pm
     -   For Wednesday classes, they are due the following Wednesday at 11pm
 -   Office hours with Nicky: [Link to Webex](https://ohsu.webex.com/meet/wakim)
-    -   Thursdays, 11:30am - 1pm
-    -   Exceptions: 
-        -   January 25th: 10:30am - 12pm
-        -   February 22nd: 11am - 12pm
+    -   TBD
 -   Class meets on Mondays and Wednesdays at **1 - 2:50 pm**
 
 ## Credit to
