@@ -3,141 +3,123 @@ schedule:
   - unit: "Summarizing Data"
     materials:
       - href: weeks/week_01_sched.qmd
-        date: 01/08/24
+        date: 04/01/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_02_sched.qmd
-        date: 1/17/24
+        date: 04/08/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_03_sched.qmd
-        date: 1/22/24
+        date: 04/15/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_04_sched.qmd
-        date: 1/29/24
+        date: 04/22/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_05_sched.qmd
-        date: 2/5/24
+        date: 04/29/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_06_sched.qmd
-        date: 2/12/24
+        date: 5/6/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_07_sched.qmd
-        date: 2/21/24
+        date: 5/13/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_08_sched.qmd
-        date: 2/26/24
+        date: 5/20/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_09_sched.qmd
-        date: 3/4/24
+        date: 5/29/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_10_sched.qmd
-        date: 3/11/24
+        date: 6/3/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
       - href: weeks/week_11_sched.qmd
-        date: 3/18/24
+        date: 6/10/24
         calendar-color: "#F14124"
         calendar-color2: "#FFFFFF"
         
-      - href: homework/HW0.qmd
-        title: "HW 0 due"
-        date: 1/11/24
-        calendar-color: "#4FADF3"
-        calendar-color2: "#FFFFFF"
       - href: homework/HW1.qmd
         title: "HW 1 due"
-        date: 1/25/24
+        date: 4/11/24
         calendar-color: "#4FADF3"
         calendar-color2: "#FFFFFF"
       - title: "HW 2 due"
         href: homework/HW2.qmd
-        date: 2/1/24
+        date: 4/18/24
         calendar-color: "#4FADF3"
         calendar-color2: "#FFFFFF" 
       - title: "HW 3 due"
         href: homework/HW3.qmd
-        date: 2/15/24
+        date: 4/25/24
         calendar-color: "#4FADF3"
         calendar-color2: "#FFFFFF" 
-      - title: "HW 4 due 2/25"
+      - title: "HW 4 due"
         href: homework/HW4.qmd
-        date: 2/23/24
+        date: 5/2/24
         calendar-color: "#4FADF3"
         calendar-color2: "#FFFFFF" 
       - title: "HW 5 due"
         href: homework/HW5.qmd
-        date: 3/7/24
+        date: 5/9/24
         calendar-color: "#4FADF3"
         calendar-color2: "#FFFFFF" 
 
       - title: "Quiz 1"
-        date: 1/29/24        
+        date: 4/29/24        
         calendar-color: "#FF8021"
         calendar-color2: "#FFFFFF" 
       - title: "Quiz 2"
-        date: 2/21/24        
+        date: 5/20/24        
         calendar-color: "#FF8021"
         calendar-color2: "#FFFFFF" 
       - title: "Quiz 3"
-        date: 3/11/24        
+        date: 6/10/24        
         calendar-color: "#FF8021"
         calendar-color2: "#FFFFFF" 
 
       - title: "Lab 1 due"
         href: labs/Lab_01.qmd
-        date: 1/18/24
+        date: 4/18/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF"      
       - title: "Lab 2 due"
         href: labs/Lab_02.qmd
-        date: 2/8/24
+        date: 5/9/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
-      - title: "Lab 3 due 3/3"
+      - title: "Lab 3 due"
         href: labs/Lab_03.qmd
-        date: 3/1/24
+        date: 5/30/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
       - title: "Lab 4 due"
         href: labs/Lab_04.qmd
-        date: 3/14/24
+        date: 6/6/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
       - title: "Final Project Due"
         href: labs/Project_report_instructions.qmd
-        date: 3/21/24        
+        date: 6/13/24        
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
         
-      - title: "Virtual Class"
-        date: 2/26/24
-        calendar-color: "#A7EA52"
-        calendar-color2: "#FFFFFF" 
-      - title: "Virtual Class"
-        date: 2/28/24
-        calendar-color: "#A7EA52"
-        calendar-color2: "#FFFFFF" 
-        
-      - title: "No Class: MLKJ Day"
-        date: 1/15/24
-        calendar-color: "#A7EA52"
-        calendar-color2: "#FFFFFF" 
-      - title: "No Class: Pres Day"
-        date: 2/19/24
+      - title: "No Class: Mem Day"
+        date: 5/27/24
         calendar-color: "#A7EA52"
         calendar-color2: "#FFFFFF" 
         
       - title: "Midterm feedback due"
         href: https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURTVVRDNEMzhHVFRUQTRIVDdLSE1BNlFIWC4u
-        date: 2/23/24
+        date: 5/23/24
         calendar-color: "#213c96"
         calendar-color2: "#FFFFFF" 
 

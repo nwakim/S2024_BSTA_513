@@ -4469,8 +4469,10 @@ vertical-align: -.125em;
     <a class="nav-link active" href="../syllabus.html" rel target aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="dropdown-header">
- <span class="menu-text">schedule1.qmd</span></li>
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel target>
+ <span class="menu-text">Schedule</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../homeworks.html" rel target>
  <span class="menu-text">Homework</span></a>
@@ -4538,8 +4540,11 @@ vertical-align: -.125em;
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">schedule1.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly Pages</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
@@ -4605,8 +4610,37 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#directions" id="toc-directions" class="nav-link active" data-scroll-target="#directions">Directions</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#directions" id="toc-directions" class="nav-link" data-scroll-target="#directions">Directions</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">PART 1</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a>
+  <ul class="collapse">
+  <li><a href="#part-a" id="toc-part-a" class="nav-link" data-scroll-target="#part-a">Part a</a></li>
+  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b">Part b</a></li>
+  <li><a href="#part-c" id="toc-part-c" class="nav-link" data-scroll-target="#part-c">Part c</a></li>
+  </ul></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a>
+  <ul class="collapse">
+  <li><a href="#part-a-1" id="toc-part-a-1" class="nav-link" data-scroll-target="#part-a-1">Part a</a></li>
+  <li><a href="#part-b-1" id="toc-part-b-1" class="nav-link" data-scroll-target="#part-b-1">Part b</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">PART 2</a>
+  <ul class="collapse">
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a>
+  <ul class="collapse">
+  <li><a href="#part-a-2" id="toc-part-a-2" class="nav-link" data-scroll-target="#part-a-2">Part a</a></li>
+  <li><a href="#part-b-2" id="toc-part-b-2" class="nav-link" data-scroll-target="#part-b-2">Part b</a></li>
+  <li><a href="#part-c-1" id="toc-part-c-1" class="nav-link" data-scroll-target="#part-c-1">Part c</a></li>
+  <li><a href="#part-d" id="toc-part-d" class="nav-link" data-scroll-target="#part-d">Part d</a></li>
+  </ul></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HW1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -4654,19 +4688,17 @@ vertical-align: -.125em;
 
 </header>
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>This page is no longer under construction. You may start this homework! (1/16/24)</strong></p>
-</div>
-</div>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>This homework is designed to help you practice the following important skills and knowledge that we covered in Classes 1-2:</p>
+<ul>
+<li>Practicing and outlining your decision process to analyze the relationship between two categorical variables</li>
+<li>Interpreting research aims into questions/tests that can be answered with statistics</li>
+<li>Using R to calculate sample proportions</li>
+<li>Using R to calculate test statistic values for inference tests</li>
+<li>Interpreting new phrasing of questions that were introduced in class</li>
+</ul>
+</section>
 <section id="directions" class="level2">
 <h2 class="anchored" data-anchor-id="directions">Directions</h2>
 <ul>
@@ -4693,8 +4725,153 @@ Tip
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
+</section>
+<section id="part-1" class="level1">
+<h1>PART 1</h1>
+<p>The following questions are intended to give you practice in understanding concepts and completing calculations.</p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>If the probability that one white blood cell is a lymphocyte is 0.3, compute the probability of 2 lymphocytes out of 10 white blood cells. Also, compute the probability that at least 3 lymphocytes out of 10 white blood cells. You may calculate by hand, using a web app, or using R.</p>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Consider a 2 x 2 table from a prospective cohort study:</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: &#39;tidy.numeric&#39; is deprecated.
+See help(&quot;Deprecated&quot;)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 1
+  x[,&quot;Favorable&quot;] [,&quot;Unfavorable&quot;]
+            &lt;dbl&gt;            &lt;dbl&gt;
+1              30               20
+2              10               60</code></pre>
+</div>
+</div>
+<section id="part-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a">Part a</h3>
+<p>Estimate the probability of having favorable results for subjects in the treatment group. Report with the 95% confidence interval.</p>
+</section>
+<section id="part-b" class="level3">
+<h3 class="anchored" data-anchor-id="part-b">Part b</h3>
+<p>Repeat part a for the placebo group.</p>
+</section>
+<section id="part-c" class="level3">
+<h3 class="anchored" data-anchor-id="part-c">Part c</h3>
+<p>Conduct a statistical test to evaluate whether there is an association between group and outcome. What is the name of the test? Write down the null and alternative hypotheses. Compute the test statistic (by hand or by a software). What distribution does the test statistic follow under the null hypothesis? Give the p-value and interpret your result.</p>
+</section>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>Consider a cohort study with results shown as in following table:</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: &#39;tidy.numeric&#39; is deprecated.
+See help(&quot;Deprecated&quot;)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 1
+  x[,&quot;Favorable&quot;] [,&quot;Unfavorable&quot;]
+            &lt;dbl&gt;            &lt;dbl&gt;
+1               6                1
+2               2                5</code></pre>
+</div>
+</div>
+<p>Conduct a statistical test to evaluate whether there is an association between group and outcome. Write down the null and alternative hypotheses. Compute the expected cell counts under null hypothesis. What is the name of the test? Give the p-value and interpret your result.</p>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p>Table 4 shows the information of a selected group of adolescents on whether they use smokeless tobacco and their perception of risk for using smokeless tobacco.</p>
+<p><strong>Table 4:</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: &#39;tidy.numeric&#39; is deprecated.
+See help(&quot;Deprecated&quot;)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  x[,&quot;YES&quot;] [,&quot;NO&quot;]
+      &lt;dbl&gt;   &lt;dbl&gt;
+1        25      60
+2        35     172
+3        10     200</code></pre>
+</div>
+</div>
+<section id="part-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-1">Part a</h3>
+<p>Conduct a statistical test to examine <strong>general</strong> association between adolescent smokeless tobacco users and risk perception. What is the name of the test? Write down the null and alternative hypotheses. Compute the test statistic (use software). What distribution does the test statistic follow under the null hypothesis? Give the p-value and interpret your result.</p>
+</section>
+<section id="part-b-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-1">Part b</h3>
+<p>Is there a trend of increased risk perception for smokeless tobacco users? What test would you use? State the test, state any assumptions, conduct the inference test, and state your conclusions.</p>
+</section>
+</section>
+</section>
+<section id="part-2" class="level1">
+<h1>PART 2</h1>
+<p>The following questions are intended to give you practice in connecting concepts that will help you make decisions in real world applications.</p>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>Start making a comprehensive table or outline for the inference tests that we have covered. Here is a list of the tests we have covered:</p>
+<ul>
+<li>Single proportion</li>
+<li>Chi-squared test for general association</li>
+<li>Likelihood ratio test for general association</li>
+<li>Fisher’s Exact test for general association</li>
+<li>Cochran-Armitage test for trend</li>
+<li>Mantel-Haenszel test for linear trend</li>
+</ul>
+<p>And here is a list of attributes to include:</p>
+<ul>
+<li>Number of variables testing</li>
+<li>Types of variables</li>
+<li>Criteria (if any)</li>
+<li>Hypothesis test</li>
+<li>Test statistic (if we went over it)</li>
+<li>R code for test</li>
+<li>Sample size / Power calculation (<strong>optional</strong>, not discussed in class)</li>
+<li>Special notes (<strong>optional</strong>)</li>
+</ul>
+<p>For example, I could make a table with different rows corresponding to different tests and different columns for each attribute.</p>
+</section>
+<section id="question-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+<p>I want you to gain experience exploring a package and function. This is an important skill in coding that can help you grow as an applied statistician.</p>
+<p>In your previous course, the function lm() was introduced to perform linear regression. In this class, we will heavily use the function glm(). By typing “?glm” in the R console, we can open the Help page for glm(). The following questions ask about the glm() function. You can Google or use <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/glm">R documentation</a> to answer the questions.</p>
+<p>Feel free to <a href="https://www.statology.org/glm-vs-lm-in-r/">read more</a> about the differences between lm() and glm().</p>
+<section id="part-a-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-2">Part a</h3>
+<p>What does the input “family” mean? If I wanted to perform regression using a Poisson distribution, what would I input into family?</p>
+</section>
+<section id="part-b-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-2">Part b</h3>
+<p>What is the default action for the “na.action” input?</p>
+</section>
+<section id="part-c-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-1">Part c</h3>
+<p>How does the glm() function fit our model? (Hint: see “method”)</p>
+</section>
+<section id="part-d" class="level3">
+<h3 class="anchored" data-anchor-id="part-d">Part d</h3>
+<p>Do you think the output of summary() will be the same for lm() and glm()?</p>
+</section>
+</section>
+<section id="question-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p><strong>OPTIONAL</strong></p>
+<p>Let’s make a decision tree on the different tests we learned! I would like you to make a flow chart for the different tests we learned in Classes 1 and 2. You’ll need to include characteristics for:</p>
+<ul>
+<li>Number of variables (1, 2, or 3 - we will go over 3 variables in Class 4)</li>
+<li>Number of categories in each variable</li>
+<li>Sample size is small</li>
+<li>Ordinal/nominal independent variable</li>
+<li>Ordinal/nominal response variable(s)</li>
+</ul>
+<p>For example, if I make a decision tree that includes end nodes for different animals (cat, dog, snake, turtle, and hawk) using yes/no characteristics (has a shell, woof/meows, has fur, or flies), then my flow chart would look like: <a href="https://sakai.ohsu.edu/access/content/group/BSTA-513-1-AX-Sp23/Homework_1/Diagram.png">See my example under Sakai Resources.</a> You are welcome to draw this chart. I used SmartArt under the Insert tab in Word to create mine.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

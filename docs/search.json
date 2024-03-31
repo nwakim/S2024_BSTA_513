@@ -11,14 +11,14 @@
     "href": "homeworks.html",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n1/11/24\n\n\nHomework 0\n\n\n4 min\n\n\n\n\n1/25/24\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n2/1/24\n\n\nHomework 2\n\n\n2 min\n\n\n\n\n2/15/24\n\n\nHomework 3\n\n\n2 min\n\n\n\n\n2/25/24\n\n\nHomework 4\n\n\n2 min\n\n\n\n\n3/7/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n1/11/24\n\n\nHomework 0\n\n\n4 min\n\n\n\n\n1/25/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n2/1/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n2/15/24\n\n\nHomework 3\n\n\n2 min\n\n\n\n\n2/25/24\n\n\nHomework 4\n\n\n2 min\n\n\n\n\n3/7/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homeworks.html#assignments",
     "href": "homeworks.html#assignments",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n1/11/24\n\n\nHomework 0\n\n\n4 min\n\n\n\n\n1/25/24\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n2/1/24\n\n\nHomework 2\n\n\n2 min\n\n\n\n\n2/15/24\n\n\nHomework 3\n\n\n2 min\n\n\n\n\n2/25/24\n\n\nHomework 4\n\n\n2 min\n\n\n\n\n3/7/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n1/11/24\n\n\nHomework 0\n\n\n4 min\n\n\n\n\n1/25/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n2/1/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n2/15/24\n\n\nHomework 3\n\n\n2 min\n\n\n\n\n2/25/24\n\n\nHomework 4\n\n\n2 min\n\n\n\n\n3/7/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homeworks.html#solutions",
@@ -193,7 +193,7 @@
     "href": "homework/HW1.html",
     "title": "Homework 1",
     "section": "",
-    "text": "Important\n\n\n\nThis page is no longer under construction. You may start this homework! (1/16/24)"
+    "text": "This homework is designed to help you practice the following important skills and knowledge that we covered in Classes 1-2:\n\nPracticing and outlining your decision process to analyze the relationship between two categorical variables\nInterpreting research aims into questions/tests that can be answered with statistics\nUsing R to calculate sample proportions\nUsing R to calculate test statistic values for inference tests\nInterpreting new phrasing of questions that were introduced in class"
   },
   {
     "objectID": "homework/HW1.html#directions",
@@ -298,6 +298,104 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "ScheduleImportant timesCredit to\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJanuary\n\n\n\n\n\nMON\n\n\nTUE\n\n\nWED\n\n\nTHU\n\n\nFRI\n\n\n\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n10\n\n\n\n\n\n\n11\n\n\n\n\n\n\n12\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 0 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n\n\n\n\n\n\n16\n\n\n\n\n\n\n17\n\n\n\n\n\n\n18\n\n\n\n\n\n\n19\n\n\n\n\n\n\n\n\nNo Class: MLKJ Day\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\n\nLab 1 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n22\n\n\n\n\n\n\n23\n\n\n\n\n\n\n24\n\n\n\n\n\n\n25\n\n\n\n\n\n\n26\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 1 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n29\n\n\n\n\n\n\n30\n\n\n\n\n\n\n31\n\n\n\n\n\n\n1\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n\nWeek 4Quiz 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 2 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFebruary\n\n\n\n\n\nMON\n\n\nTUE\n\n\nWED\n\n\nTHU\n\n\nFRI\n\n\n\n\n\n\n\n\n\n29\n\n\n\n\n\n\n30\n\n\n\n\n\n\n31\n\n\n\n\n\n\n1\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n\nWeek 4Quiz 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 2 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n6\n\n\n\n\n\n\n7\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLab 2 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n\n\n\n\n\n\n13\n\n\n\n\n\n\n14\n\n\n\n\n\n\n15\n\n\n\n\n\n\n16\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 3 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n19\n\n\n\n\n\n\n20\n\n\n\n\n\n\n21\n\n\n\n\n\n\n22\n\n\n\n\n\n\n23\n\n\n\n\n\n\n\n\nNo Class: Pres Day\n\n\n\n\n\n\n\n\n\n\n\nWeek 7Quiz 2\n\n\n\n\n\n\n\n\n\n\n\nHW 4 due 2/25Midterm feedback due\n\n\n\n\n\n\n\n\n26\n\n\n\n\n\n\n27\n\n\n\n\n\n\n28\n\n\n\n\n\n\n29\n\n\n\n\n\n\n1\n\n\n\n\n\n\n\n\nWeek 8Virtual Class\n\n\n\n\n\n\n\n\n\n\n\nVirtual Class\n\n\n\n\n\n\n\n\n\n\n\nLab 3 due 3/3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarch\n\n\n\n\n\nMON\n\n\nTUE\n\n\nWED\n\n\nTHU\n\n\nFRI\n\n\n\n\n\n\n\n\n\n26\n\n\n\n\n\n\n27\n\n\n\n\n\n\n28\n\n\n\n\n\n\n29\n\n\n\n\n\n\n1\n\n\n\n\n\n\n\n\nWeek 8Virtual Class\n\n\n\n\n\n\n\n\n\n\n\nVirtual Class\n\n\n\n\n\n\n\n\n\n\n\nLab 3 due 3/3\n\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5\n\n\n\n\n\n\n6\n\n\n\n\n\n\n7\n\n\n\n\n\n\n8\n\n\n\n\n\n\n\n\nWeek 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 5 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n\n\n\n\n\n\n12\n\n\n\n\n\n\n13\n\n\n\n\n\n\n14\n\n\n\n\n\n\n15\n\n\n\n\n\n\n\n\nWeek 10Quiz 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n\n\n\n\n\n\n19\n\n\n\n\n\n\n20\n\n\n\n\n\n\n21\n\n\n\n\n\n\n22\n\n\n\n\n\n\n\n\nWeek 11\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project Due\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere is a tentative list of important, recurring times:\n\nHomeworks are always due at 11pm on the specified day (usually Thursday)\nLabs are always due at 11pm on the specified day (usually Thursday)\nExit tickets are due at 11pm 7 days after class\n\nSo for Monday classes, they are due the following Monday at 11pm\nFor Wednesday classes, they are due the following Wednesday at 11pm\n\nOffice hours with Nicky: Link to Webex\n\nThursdays, 11:30am - 1pm\nExceptions:\n\nJanuary 25th: 10:30am - 12pm\nFebruary 22nd: 11am - 12pm\n\n\nClass meets on Mondays and Wednesdays at 1 - 2:50 pm\n\n\n\nSpecial thank you to Andrew Bray, who taught the Quarto workshop I attended. This schedule page was mostly taken from the Schedule on his STAT 20 course page. You can find the .qmd file for Andrew’s schedule page on his Github."
+    "text": "ScheduleImportant timesCredit to\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApril\n\n\n\n\n\nMON\n\n\nTUE\n\n\nWED\n\n\nTHU\n\n\nFRI\n\n\n\n\n\n\n\n\n\n1\n\n\n\n\n\n\n2\n\n\n\n\n\n\n3\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n10\n\n\n\n\n\n\n11\n\n\n\n\n\n\n12\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 1 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n\n\n\n\n\n\n16\n\n\n\n\n\n\n17\n\n\n\n\n\n\n18\n\n\n\n\n\n\n19\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 2 dueLab 1 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n22\n\n\n\n\n\n\n23\n\n\n\n\n\n\n24\n\n\n\n\n\n\n25\n\n\n\n\n\n\n26\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 3 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n29\n\n\n\n\n\n\n30\n\n\n\n\n\n\n1\n\n\n\n\n\n\n2\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n\nWeek 5Quiz 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 4 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMay\n\n\n\n\n\nMON\n\n\nTUE\n\n\nWED\n\n\nTHU\n\n\nFRI\n\n\n\n\n\n\n\n\n\n29\n\n\n\n\n\n\n30\n\n\n\n\n\n\n1\n\n\n\n\n\n\n2\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n\nWeek 5Quiz 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 4 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n7\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n10\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 5 dueLab 2 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n\n\n\n\n\n\n14\n\n\n\n\n\n\n15\n\n\n\n\n\n\n16\n\n\n\n\n\n\n17\n\n\n\n\n\n\n\n\nWeek 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n20\n\n\n\n\n\n\n21\n\n\n\n\n\n\n22\n\n\n\n\n\n\n23\n\n\n\n\n\n\n24\n\n\n\n\n\n\n\n\nWeek 8Quiz 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMidterm feedback due\n\n\n\n\n\n\n\n\n\n\n\n\n\n27\n\n\n\n\n\n\n28\n\n\n\n\n\n\n29\n\n\n\n\n\n\n30\n\n\n\n\n\n\n31\n\n\n\n\n\n\n\n\nNo Class: Mem Day\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n\n\n\n\nLab 3 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJune\n\n\n\n\n\nMON\n\n\nTUE\n\n\nWED\n\n\nTHU\n\n\nFRI\n\n\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5\n\n\n\n\n\n\n6\n\n\n\n\n\n\n7\n\n\n\n\n\n\n\n\nWeek 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4 due\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n\n\n\n\n\n\n11\n\n\n\n\n\n\n12\n\n\n\n\n\n\n13\n\n\n\n\n\n\n14\n\n\n\n\n\n\n\n\nWeek 11Quiz 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project Due\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere is a tentative list of important, recurring times:\n\nHomeworks are always due at 11pm on the specified day (usually Thursday)\nLabs are always due at 11pm on the specified day (usually Thursday)\nExit tickets are due at 11pm 7 days after class\n\nSo for Monday classes, they are due the following Monday at 11pm\nFor Wednesday classes, they are due the following Wednesday at 11pm\n\nOffice hours with Nicky: Link to Webex\n\nThursdays, 11:30am - 1pm\nExceptions:\n\nJanuary 25th: 10:30am - 12pm\nFebruary 22nd: 11am - 12pm\n\n\nClass meets on Mondays and Wednesdays at 1 - 2:50 pm\n\n\n\nSpecial thank you to Andrew Bray, who taught the Quarto workshop I attended. This schedule page was mostly taken from the Schedule on his STAT 20 course page. You can find the .qmd file for Andrew’s schedule page on his Github."
+  },
+  {
+    "objectID": "homework/HW1.html#purpose",
+    "href": "homework/HW1.html#purpose",
+    "title": "Homework 1",
+    "section": "",
+    "text": "This homework is designed to help you practice the following important skills and knowledge that we covered in Classes 1-2:\n\nPracticing and outlining your decision process to analyze the relationship between two categorical variables\nInterpreting research aims into questions/tests that can be answered with statistics\nUsing R to calculate sample proportions\nUsing R to calculate test statistic values for inference tests\nInterpreting new phrasing of questions that were introduced in class"
+  },
+  {
+    "objectID": "homework/HW1.html#question-1",
+    "href": "homework/HW1.html#question-1",
+    "title": "Homework 1",
+    "section": "Question 1",
+    "text": "Question 1\nIf the probability that one white blood cell is a lymphocyte is 0.3, compute the probability of 2 lymphocytes out of 10 white blood cells. Also, compute the probability that at least 3 lymphocytes out of 10 white blood cells. You may calculate by hand, using a web app, or using R."
+  },
+  {
+    "objectID": "homework/HW1.html#question-2",
+    "href": "homework/HW1.html#question-2",
+    "title": "Homework 1",
+    "section": "Question 2",
+    "text": "Question 2\nConsider a 2 x 2 table from a prospective cohort study:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Favorable\"] [,\"Unfavorable\"]\n            &lt;dbl&gt;            &lt;dbl&gt;\n1              30               20\n2              10               60\n\n\n\nPart a\nEstimate the probability of having favorable results for subjects in the treatment group. Report with the 95% confidence interval.\n\n\nPart b\nRepeat part a for the placebo group.\n\n\nPart c\nConduct a statistical test to evaluate whether there is an association between group and outcome. What is the name of the test? Write down the null and alternative hypotheses. Compute the test statistic (by hand or by a software). What distribution does the test statistic follow under the null hypothesis? Give the p-value and interpret your result."
+  },
+  {
+    "objectID": "homework/HW1.html#question-3",
+    "href": "homework/HW1.html#question-3",
+    "title": "Homework 1",
+    "section": "Question 3",
+    "text": "Question 3\nConsider a cohort study with results shown as in following table:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Favorable\"] [,\"Unfavorable\"]\n            &lt;dbl&gt;            &lt;dbl&gt;\n1               6                1\n2               2                5\n\n\nConduct a statistical test to evaluate whether there is an association between group and outcome. Write down the null and alternative hypotheses. Compute the expected cell counts under null hypothesis. What is the name of the test? Give the p-value and interpret your result."
+  },
+  {
+    "objectID": "homework/HW1.html#question-4",
+    "href": "homework/HW1.html#question-4",
+    "title": "Homework 1",
+    "section": "Question 4",
+    "text": "Question 4\nTable 4 shows the information of a selected group of adolescents on whether they use smokeless tobacco and their perception of risk for using smokeless tobacco.\nTable 4:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 3 × 1\n  x[,\"YES\"] [,\"NO\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1        25      60\n2        35     172\n3        10     200\n\n\n\nPart a\nConduct a statistical test to examine general association between adolescent smokeless tobacco users and risk perception. What is the name of the test? Write down the null and alternative hypotheses. Compute the test statistic (use software). What distribution does the test statistic follow under the null hypothesis? Give the p-value and interpret your result.\n\n\nPart b\nIs there a trend of increased risk perception for smokeless tobacco users? What test would you use? State the test, state any assumptions, conduct the inference test, and state your conclusions."
+  },
+  {
+    "objectID": "homework/HW1.html#question-5",
+    "href": "homework/HW1.html#question-5",
+    "title": "Homework 1",
+    "section": "Question 5",
+    "text": "Question 5\nStart making a comprehensive table or outline for the inference tests that we have covered. Here is a list of the tests we have covered:\n\nSingle proportion\nChi-squared test for general association\nLikelihood ratio test for general association\nFisher’s Exact test for general association\nCochran-Armitage test for trend\nMantel-Haenszel test for linear trend\n\nAnd here is a list of attributes to include:\n\nNumber of variables testing\nTypes of variables\nCriteria (if any)\nHypothesis test\nTest statistic (if we went over it)\nR code for test\nSample size / Power calculation (optional, not discussed in class)\nSpecial notes (optional)\n\nFor example, I could make a table with different rows corresponding to different tests and different columns for each attribute."
+  },
+  {
+    "objectID": "homework/HW1.html#question-6",
+    "href": "homework/HW1.html#question-6",
+    "title": "Homework 1",
+    "section": "Question 6",
+    "text": "Question 6\nI want you to gain experience exploring a package and function. This is an important skill in coding that can help you grow as an applied statistician.\nIn your previous course, the function lm() was introduced to perform linear regression. In this class, we will heavily use the function glm(). By typing “?glm” in the R console, we can open the Help page for glm(). The following questions ask about the glm() function. You can Google or use R documentation to answer the questions.\nFeel free to read more about the differences between lm() and glm().\n\nPart a\nWhat does the input “family” mean? If I wanted to perform regression using a Poisson distribution, what would I input into family?\n\n\nPart b\nWhat is the default action for the “na.action” input?\n\n\nPart c\nHow does the glm() function fit our model? (Hint: see “method”)\n\n\nPart d\nDo you think the output of summary() will be the same for lm() and glm()?"
+  },
+  {
+    "objectID": "homework/HW1.html#question-7",
+    "href": "homework/HW1.html#question-7",
+    "title": "Homework 1",
+    "section": "Question 7",
+    "text": "Question 7\nOPTIONAL\nLet’s make a decision tree on the different tests we learned! I would like you to make a flow chart for the different tests we learned in Classes 1 and 2. You’ll need to include characteristics for:\n\nNumber of variables (1, 2, or 3 - we will go over 3 variables in Class 4)\nNumber of categories in each variable\nSample size is small\nOrdinal/nominal independent variable\nOrdinal/nominal response variable(s)\n\nFor example, if I make a decision tree that includes end nodes for different animals (cat, dog, snake, turtle, and hawk) using yes/no characteristics (has a shell, woof/meows, has fur, or flies), then my flow chart would look like: See my example under Sakai Resources. You are welcome to draw this chart. I used SmartArt under the Insert tab in Word to create mine."
+  },
+  {
+    "objectID": "homework/HW2.html#questions",
+    "href": "homework/HW2.html#questions",
+    "title": "Homework 2",
+    "section": "Questions",
+    "text": "Questions"
+  },
+  {
+    "objectID": "homework/HW2.html#question-1",
+    "href": "homework/HW2.html#question-1",
+    "title": "Homework 2",
+    "section": "Question 1",
+    "text": "Question 1\nA study looked at the effects of oral contraceptive (OC) use on heart disease in women 40 to 44 years of age. The researchers prospectively tracked whether or not the women developed a myocardial infarction (MI) over a 3-year period. The table below summarizes their results with columns indicating whether or not women developed MI and rows indicating their OC use.\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Yes\"] [,\"No\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1        13    4987\n2         7    9993\n\n\n\nPart a\nCompute the estimated risk difference comparing OC users to non-OC users. Include a 95% CI for the estimate and interpretation of the estimated value.\n\n\nPart b\nCompute the estimated relative risk comparing OC users to non-OC users. Include a 95% CI for the estimate and interpretation of the estimated value.\n\n\nPart c\nCompute the estimated odds ratio comparing OC users to non-OC users. Include a 95% CI for the estimate and interpretation of the estimated value.\n\n\nPart d\nIs the OR a good approximation of the RR? Explain why or why not."
+  },
+  {
+    "objectID": "homework/HW2.html#question-2",
+    "href": "homework/HW2.html#question-2",
+    "title": "Homework 2",
+    "section": "Question 2",
+    "text": "Question 2\nI was intrigued by the results from Question 1, so I started researching the relationship between contraception and MI. In a journal review article, the authors present smoking status as a potential confounder for the relationship between OC use and MI. In Table 2 of their paper, they present various risk ratios for smoking and nonsmoking women. Use the below tables, that are recreated from one study’s data, to answer the following questions.\nNonsmokers:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Yes\"] [,\"No\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1        36     317\n2        72     521\n\n\nSmokers:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Yes\"] [,\"No\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1       210     416\n2       236     586\n\n\n\nPart a\nCompute the stratum-specific ORs for each smoking status. Present the estimates with 95% Confidence interval.\n\n\nPart b\nIs it appropriate to compute the smoking-adjusted Mantel-Haenszel odds ratio for OC vs. non-OC users? Explain your reasoning. You may choose to perform the Breslow-Day test only if you want to explore a new topic. Otherwise, use sentences to explain your general reasoning.\nIf you answered yes, then estimate the value with its 95% confidence interval.\n\n\nAside (not a homework problem)\nIf you are interested in a short review of the relationship between oral contraceptive pills (OCP) and MI, see this article abstract. I cannot find the full article online, so if you find it, please pass along. The abstract states:\n\nAlthough OCP doses were subsequently reduced, epidemiologic evidence continued to support a smaller, but significant association between OCPs and hypertension.\n\nThis single statement packs in some interesting aspects of the research process and influences from society. To start, the OCP doses were reduced from their initial approval. However, the early studies (1980s-90s) that link increased risk of hypertension and MI to OCs were still some of the first articles presented in my Google search. You may also find it interesting to think about how the perception of contraception has changed since the 1980s, and how societal views can impact research questions."
+  },
+  {
+    "objectID": "homework/HW2.html#question-3",
+    "href": "homework/HW2.html#question-3",
+    "title": "Homework 2",
+    "section": "Question 3",
+    "text": "Question 3\nThe data presented below are from a case-control study of bladder cancer. Subjects with and without bladder cancer were recruited and then questioned about their occupation and cigarette consumption.\n\n\n\n\n\n\n  \n    \n    \n      High risk occupation\n      High cigarette consumption\n      Cases\n      Controls\n    \n  \n  \n    Yes\nNo\n48\n100\n    Yes\nYes\n180\n175\n    No\nNo\n30\n24\n    No\nYes\n120\n80\n  \n  \n  \n\n\n\n\n\nPart a\nPlease present the data using two 2x2 contingency table for High-risk occupation and Disease status, stratified by Cigarette consumption.\n\n\nPart b\nPlease present the data for High-risk occupation and Disease status using a 2x2 contingency table (you should combine the cigarette consumption).\n\n\nPart c\nIs it possible, in reference to the study design, to estimate the OR for bladder cancer and occupation from this study? If it is possible, calculate (using formulas) the crude odds ratio for bladder cancer comparing high-risk to other occupations, and estimate (using formulas) the associated 95% confidence intervals.\n\n\nPart d\nCompute the stratum-specific ORs at each of the two levels of cigarette consumption. Present the estimates with 95% Confidence interval.\n\n\nPart e\nIs it possible to estimate the RR for bladder cancer and occupation from this study? If it is possible, calculate the crude relative risk for bladder cancer comparing high-risk to other occupations, as well as the stratum-specific RRs at each of the two levels of cigarette consumption. Present the estimates with 95% Confidence interval. If it is not possible, give your reason.\n\n\nPart f\nWe will assume we found that odds ratios are relatively the same using the Breslow-Day test (which is true). Calculate the smoking-adjusted Mantel-Haenszel odds ratio for high-risk versus other occupations. Present the estimates with 95% Confidence interval.\n\n\nPart g\nAre the odds of bladder cancer different for high-risk versus other occupations after we adjusted for smoking status? (Hint: You should be running an inference test.)\n\n\nPart h\nDo you think the smoking-adjusted Mantel-Haenszel odds ratio for high-risk versus other occupations should be reported? Give your reason."
+  },
+  {
+    "objectID": "homework/HW2.html#question-4",
+    "href": "homework/HW2.html#question-4",
+    "title": "Homework 2",
+    "section": "Question 4",
+    "text": "Question 4\nOne important aspect of medical diagnosis is its reproducibility. Suppose that two different doctors examine 100 patients for dyspnea in a respiratory-disease clinic, and that doctor A diagnosed 15 patients as having dyspnea (while doctor B did not), doctor B diagnosed 10 patients as having dyspnea (while doctor A did not), and both doctor A and doctor B diagnosed 7 patients as having dyspnea.\n\nPart a\nConstruct a two-way contingency table to summarize the dyspnea diagnoses from doctor A and B.\n\n\nPart b\nCompute the Cohen’s kappa (No need to compute the confidence interval.)\n\n\nPart c\nHow would you characterize the agreement between doctor A and B? Please refer to any guidelines used.\n\n\nPart d\nIs your computed kappa greater than 0? Run the appropriate test and interpret your results."
+  },
+  {
+    "objectID": "homework/HW2.html#question-5",
+    "href": "homework/HW2.html#question-5",
+    "title": "Homework 2",
+    "section": "Question 5",
+    "text": "Question 5\nThis question is only graded for completion. Please fill out this Microsoft Form to help determine your project groups."
   }
 ]
