@@ -1,5 +1,5 @@
 ---
-title: "Lesson 1: Data Management"
+title: "Lesson 1: File Organization within R"
 author: "Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#C2352F"
@@ -12,7 +12,7 @@ format:
     show-slide-number: all
     width: 1955
     height: 1100
-    footer: "Lesson 1: Data Management"
+    footer: "Lesson 1: File Organization within R"
     html-math-method: mathjax
     highlight-style: ayu
 execute:
@@ -34,6 +34,7 @@ execute:
     -   Reports
     -   Meetings
 :::
+
 ::: column
 -   For our class, I suggest making one folder for the course with the following folders in it:
 
@@ -46,13 +47,33 @@ execute:
 :::
 :::
 
-## Creating project 
+-   Let's take a couple minutes to do this!
 
--   Go into RStudio
+## Creating project in RStudio
 
--   Create new project
+-   Basic steps 
+    
+    -   Go into RStudio
 
--   
+    -   Create new project for this class (under `File` or top right corner)
+
+-   Let me show you my process
+
+-   Let's take a couple minutes to do this!
+
+
+## Creating a new `qmd` file
 
 ## Here package
 
+::: columns
+::: column
+-   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+
+    -   Just substitute `.Rmd` with `.qmd`
+:::
+
+::: column
+![](images/paths.png){fig-align="center"}
+
+:::

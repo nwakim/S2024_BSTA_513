@@ -39,7 +39,7 @@
     "href": "syllabus.html#description",
     "title": "BSTA 513/613 Syllabus",
     "section": "Description",
-    "text": "Description\nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.\n\nCourse Learning Objectives\nAt the end of this course, students should be able to…\n\nApply and interpret a variety of hypothesis-testing procedures for two-way and three-way contingency tables\nCompute and interpret measures of association for binary and ordinal data.\nCalculate and correctly interpret odds ratios using logistic regression, make comparison across groups and examine relationship between binary outcome and predictor variables.\nApply appropriate model-building strategies for logistic regression. Effectively use statistical computing packages for contingency table and logistic regression procedures.\nPerform Poisson regression analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.\nCoherently summarize methods and results of data analyses, and discuss in context of original health-related research questions to audiences with varied statistical background.\n\nThese learning objectives were adapted from Maria Tackett’s Regression Analysis course."
+    "text": "Description\nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.\n\nCourse Learning Objectives\nAt the end of this course, students should be able to…\n\nApply and interpret a variety of hypothesis-testing procedures for two-way and three-way contingency tables\nCompute and interpret measures of association for binary and ordinal data.\nCalculate and correctly interpret odds ratios using logistic regression, make comparison across groups and examine relationship between binary outcome and predictor variables.\nApply appropriate model-building strategies for logistic regression. Effectively use statistical computing packages for contingency table and logistic regression procedures.\nPerform Poisson regression analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.\nCoherently summarize methods and results of data analyses, and discuss in context of original health-related research questions to audiences with varied statistical background."
   },
   {
     "objectID": "syllabus.html#instructors",
@@ -74,7 +74,7 @@
     "href": "syllabus.html#assessment-breakdown",
     "title": "BSTA 513/613 Syllabus",
     "section": "Assessment Breakdown",
-    "text": "Assessment Breakdown\n\nGrading & Requirements\nLetter grades will be assigned roughly according to the following scheme: A (&gt;=93%), A- (90-92%), B+ (88-89%), B(83-87%), B- (82-80%), C+(78-79%), C(73-77%), C- (70-72%), D (60 – 69%), F(&lt;60%).\nGrades will be based on homework assignments, midterm exam, class “attendance”, and final exam, as follows:\n\n\n\n\n\n\n\n\n\n\nCourse activity\nType of Assessment\nDue Date\nPercentage of final grade (BSTA 512)\nPercentage of final grade (BSTA 612)\n\n\nHomework\nFormative\nEvery 1-2 weeks\n33%\n28%\n\n\nQuizzes\nSummative\n4/22, 5/13, 6/3\n25%\n25%\n\n\nProject Labs\nFormative\nEvery 2-3 weeks\n25%\n25%\n\n\nProject Report\nSummative\n6/13\n10%\n10%\n\n\nExit tickets (Attendance)\nN/A\nTwice Weekly\n5%\n5%\n\n\nMid-Quarter Feedback\nN/A\n5/2\n2%\n2%\n\n\n613 Readings\nFormative\nApprox. every other week\n0%\n5%\n\n\n\n\n\nHomework grading\nWe are going to decide on this together!!\n\n\nLab grading\nWhile these are formative assignments, it is important to complete the whole lab and put in your best effort. Points will be deducted based on the rubric if it is clear that effort is not made or tasks are skipped.\n\n\nViewing Grades in Sakai\nPoints you receive for graded activities will be posted to the Sakai Gradebook. Click on the Gradebook link on the left navigation to view your points."
+    "text": "Assessment Breakdown\n\nGrading & Requirements\nLetter grades will be assigned roughly according to the following scheme: A (&gt;=93%), A- (90-92%), B+ (88-89%), B(83-87%), B- (82-80%), C+(78-79%), C(73-77%), C- (70-72%), D (60 – 69%), F(&lt;60%).\nGrades will be based on homework assignments, midterm exam, class “attendance”, and final exam, as follows:\n\n\n\n\n\n\n\n\n\n\nCourse activity\nType of Assessment\nDue Date\nPercentage of final grade (BSTA 513)\nPercentage of final grade (BSTA 613)\n\n\nHomework\nFormative\nEvery 1-2 weeks\n33%\n28%\n\n\nQuizzes\nSummative\n4/22, 5/13, 6/3\n25%\n25%\n\n\nProject Labs\nFormative\nEvery 2-3 weeks\n25%\n25%\n\n\nProject Report\nSummative\n6/13\n10%\n10%\n\n\nExit tickets (Attendance)\nN/A\nTwice Weekly\n5%\n5%\n\n\nMid-Quarter Feedback\nN/A\n5/2\n2%\n2%\n\n\n613 Readings\nFormative\nApprox. every other week\n0%\n5%\n\n\n\n\n\nHomework grading\nNo student has the same amount of time available to dedicate to homework. This class may not be a priority to you, you may be taking several other courses, or you may need to dedicate time to other activities. Homeworks are formative assessments, meaning its purpose is to help you learn and practice. To reduce the pressure on you to have perfect or complete homework, I have a very simple grading policy: Your homework will be given a check mark if you turn in 50% of the questions parts completed (whether the 50% is correct or wrong). I highly encourage you to stay up-to-date with the homeworks and put in as much effort as you can. This will be the most helpful work in this class!\nIf you turn in the homework on time, the TAs will give you feedback (on one or more complete problems). There is no penalty for turning in the homework late, but you will not get feedback on your work. Please make sure to check the solutions or go to office hours to assess your work.\n\n\nLab grading\nWhile these are formative assignments, it is important to complete the whole lab and put in your best effort. Points will be deducted based on the rubric if it is clear that effort is not made or tasks are skipped.\n\n\nViewing Grades in Sakai\nPoints you receive for graded activities will be posted to the Sakai Gradebook. Click on the Gradebook link on the left navigation to view your points."
   },
   {
     "objectID": "syllabus.html#course-instructor-evaluations",
@@ -417,7 +417,7 @@
     "href": "weeks/week_01_sched.html#resources",
     "title": "Week 1",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n\nIntro\n\n\n\n\n\n1\nIntroduction to Categorical Analysis\n\n\n\n\n\n2\nData Management\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nFor example, in Chrome: I would click on the 3 vertical dots in the top right corner, then click Print, then change the Destination to “Save as PDF.”\nIt doesn’t seem to work well in Safari… Let me know if you’re having trouble.\n\n\nHere is the link to my Poll Everywhere!!"
+    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n\nIntro to Course\n\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nFor example, in Chrome: I would click on the 3 vertical dots in the top right corner, then click Print, then change the Destination to “Save as PDF.”\nIt doesn’t seem to work well in Safari… Let me know if you’re having trouble.\n\n\nHere is the link to my Poll Everywhere!!"
   },
   {
     "objectID": "weeks/week_01_sched.html#announcements",
@@ -528,8 +528,8 @@
     "objectID": "lectures/01_Data_Management/01_Data_Management.html#folder-organization",
     "href": "lectures/01_Data_Management/01_Data_Management.html#folder-organization",
     "title": "Lesson 1: Data Management",
-    "section": "Folder organization",
-    "text": "Folder organization\n\n\n\nFor a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want"
+    "section": "",
+    "text": "For a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want"
   },
   {
     "objectID": "lectures/01_Data_Management/01_Data_Management.html#creating-project",
@@ -543,7 +543,7 @@
     "href": "lectures/01_Data_Management/01_Data_Management.html#here-package",
     "title": "Lesson 1: Data Management",
     "section": "Here package",
-    "text": "Here package\n\n\nLesson 1: Data Management"
+    "text": "Here package\n::: columns ::: column - Good source for the here package\n-   Just substitute `.Rmd` with `.qmd`\n:::"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#still-me",
@@ -557,28 +557,28 @@
     "href": "lectures/00_Intro/00_Intro.html#some-important-tasks",
     "title": "Lesson 0: Introduction",
     "section": "Some important tasks",
-    "text": "Some important tasks\n\nJoin the Slack page!\nStar the class website: https://nwakim.github.io/S2024_BSTA_513/\nComplete the WhenIsGood for office hours\nComplete Homework 0 by this Thursday at 11pm!\nHighly suggest that you make an appointment with a learning specialist through Student Academic Support Services!"
+    "text": "Some important tasks\n\nJoin the Slack page!\nStar the class website: https://nwakim.github.io/S2024_BSTA_513/\nComplete the WhenIsGood for office hours\n\nIf your calendar feels set, take 5 mintues to fill this out now!\nComplete by Thursday at 11pm!!!\n\nHighly suggest that you make an appointment with a learning specialist through Student Academic Support Services!"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#syllabus",
     "href": "lectures/00_Intro/00_Intro.html#syllabus",
     "title": "Lesson 0: Introduction",
     "section": "Syllabus",
-    "text": "Syllabus\n\nNot many changes from last quarter’s syllabus"
+    "text": "Syllabus\n\nNot many changes from last quarter’s syllabus\nAssessment breakdown is the same\n\n\n\n\n\n\n\n\n\n\n\nCourse activity\nType of Assessment\nDue Date\nPercentage of final grade (BSTA 513)\nPercentage of final grade (BSTA 613)\n\n\nHomework\nFormative\nEvery 1-2 weeks\n33%\n28%\n\n\nQuizzes\nSummative\n4/22, 5/13, 6/3\n25%\n25%\n\n\nProject Labs\nFormative\nEvery 2-3 weeks\n25%\n25%\n\n\nProject Report\nSummative\n6/13\n10%\n10%\n\n\nExit tickets (Attendance)\nN/A\nTwice Weekly\n5%\n5%\n\n\nMid-Quarter Feedback\nN/A\n5/2\n2%\n2%\n\n\n613 Readings\nFormative\nApprox. every other week\n0%\n5%"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#homework-grading",
     "href": "lectures/00_Intro/00_Intro.html#homework-grading",
     "title": "Lesson 0: Introduction",
     "section": "Homework grading",
-    "text": "Homework grading\n\nSlightly new grading\nNow, need to turn in 50% of the homework completed to get checkmark\nNoticed that completing the homework was"
+    "text": "Homework grading\n\nSlightly new grading\nNow, need to turn in 50% of the homework completed to get check mark\nNoticed that demonstrating understanding in the project was correlated with completing the homework*\n\nNo formal analysis was done on this\nAnd there may be confounders like time available to commit to this class in general\n\nEither way, I think practice is the most important tool for learning\n\nSo I want to us to practice the work, but I’m trying to balance this with added stress"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#how-to-print-slides",
     "href": "lectures/00_Intro/00_Intro.html#how-to-print-slides",
     "title": "Lesson 0: Introduction",
     "section": "How to print slides",
-    "text": "How to print slides"
+    "text": "How to print slides\n\nAnyone have issues with this?\n\nI can show how to do it in Chrome and Safari"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#lets-take-10-minutes",
@@ -593,5 +593,103 @@
     "title": "Lesson 0: Introduction",
     "section": "Let’s take 10 minutes for Student Survey",
     "text": "Let’s take 10 minutes for Student Survey\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 0: Introduction"
+  },
+  {
+    "objectID": "lectures/00_Intro/00_Intro.html#homework-grading-in-syllabus",
+    "href": "lectures/00_Intro/00_Intro.html#homework-grading-in-syllabus",
+    "title": "Lesson 0: Introduction",
+    "section": "Homework grading in syllabus",
+    "text": "Homework grading in syllabus"
+  },
+  {
+    "objectID": "lectures/00_Intro/00_Intro.html#quizzes",
+    "href": "lectures/00_Intro/00_Intro.html#quizzes",
+    "title": "Lesson 0: Introduction",
+    "section": "Quizzes",
+    "text": "Quizzes\n\nMight be delivered slightly differently\nWe will still have the 50 minutes at the end of class to take the quiz\n\nAnd the quiz should only take 30 minutes\n\nHowever, RPV does not have private rooms for those who need it\nI am work-shopping ideas on how to deliver the quiz, including:\n\nTake home and turn in on Wednesday\nOnline vs. on paper\nWays to mitigate cheating"
+  },
+  {
+    "objectID": "lectures/01_Data_Management/01_Data_Management.html",
+    "href": "lectures/01_Data_Management/01_Data_Management.html",
+    "title": "Lesson 1: Data Management",
+    "section": "",
+    "text": "For a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want"
+  },
+  {
+    "objectID": "lectures/00_Intro/00_Intro.html#course-learning-objectives",
+    "href": "lectures/00_Intro/00_Intro.html#course-learning-objectives",
+    "title": "Lesson 0: Introduction",
+    "section": "Course Learning Objectives",
+    "text": "Course Learning Objectives\nAt the end of this course, students should be able to…\n\nApply and interpret some hypothesis-testing procedures for two-way and three-way contingency tables\nCompute and interpret measures of association for binary and ordinal data.\nCalculate and correctly interpret odds ratios using logistic regression, make comparison across groups and examine relationship between binary outcome and predictor variables.\nApply appropriate model-building strategies for logistic regression. Effectively use statistical computing packages for contingency table and logistic regression procedures.\nPerform Poisson regression analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.\nCoherently summarize methods and results of data analyses, and discuss in context of original health-related research questions to audiences with varied statistical background."
+  },
+  {
+    "objectID": "lectures/00_Intro/00_Intro.html#new-way-to-recordview-lectures",
+    "href": "lectures/00_Intro/00_Intro.html#new-way-to-recordview-lectures",
+    "title": "Lesson 0: Introduction",
+    "section": "New way to record/view lectures",
+    "text": "New way to record/view lectures\n\nI will be using Echo360 to automatically record time from 1-3pm in this room!\nIt will be LIVE\n\nSo you can watch in real time, but won’t be able to interact with us\nMight have a 10 second lag\nNo need to tell me if you cannot make class\n\nHere is the link to our site! I’ll keep posting it on the weekly pages\n\nCurrently a public link, but working on getting everyone an account so we can make it private\n\nI don’t have to post anything after class, so no issues with me forgetting to post it"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#folder-organization",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#folder-organization",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Folder organization",
+    "text": "Folder organization\n\n\n\nFor a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want\n\n\n\n\n\nLet’s take a couple minutes to do this!"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Creating project",
+    "text": "Creating project\n\nGo into RStudio\nCreate new project"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Here package",
+    "text": "Here package\n::: columns ::: column - Good source for the here package\n-   Just substitute `.Rmd` with `.qmd`\n:::\n\n\n\n\n\n\n\n\n\nLesson 1: File Organization within R"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-a-new-qmd-file",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-a-new-qmd-file",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Creating a new qmd file",
+    "text": "Creating a new qmd file"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project-in-rstudio",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project-in-rstudio",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Creating project in RStudio",
+    "text": "Creating project in RStudio\n\nBasic steps\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nLet me show you my process\nLet’s take a couple minutes to do this!"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#folder-organization",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#folder-organization",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Folder organization",
+    "text": "Folder organization\n\n\n\nFor a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want\n\n\n\n\n\nLet’s take a couple minutes to do this!"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#creating-project-in-rstudio",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#creating-project-in-rstudio",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Creating project in RStudio",
+    "text": "Creating project in RStudio\n\nBasic steps\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nLet me show you my process\nLet’s take a couple minutes to do this!"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#creating-a-new-qmd-file",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#creating-a-new-qmd-file",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Creating a new qmd file",
+    "text": "Creating a new qmd file"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#here-package",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#here-package",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Here package",
+    "text": "Here package\n::: columns ::: column - Good source for the here package\n-   Just substitute `.Rmd` with `.qmd`\n:::\n\n\n\n\n\n\n\n\n\nLesson 1: File Organization within R"
   }
 ]

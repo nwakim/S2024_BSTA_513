@@ -2,7 +2,7 @@
 title: "Week 1"
 description: "Introduction; Review; and Data Wrangling"
 date: "4/1/2024"
-date-modified: "4/1/2024"
+date-modified: "today"
 categories: [""]
 format: 
   html:
@@ -32,11 +32,11 @@ format:
 
 Below is a table with links to resources. Icons in [orange]{style="color:#E89543;"} mean there is an available file link.
 
-| Lesson | Topic                                | Slides | Annotated Slides | Recording(s) |
-|------------|-------------------------|:----------:|:----------:|:----------:|
-|        | Intro                                |        |                  |              |
-| 1      | Introduction to Categorical Analysis |        |                  |              |
-| 2      | Data Management                      |        |                  |              |
+| Lesson | Topic                                |                                                                Slides                                                                |                                  Annotated Slides                                  |                         Recording(s)                          |
+|-------------|--------------------|:-----------:|:-----------:|:-----------:|
+|        | Intro to Course                      |               [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/00_Intro/00_Intro.qmd)]{style="color:#f8f5f0;"}               | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 1      | File Organization within R           | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/01_File_Organization_R/01_File_Organization_R.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 2      | Introduction to Categorical Analysis |                                [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                 | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 For the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:
 

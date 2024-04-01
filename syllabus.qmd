@@ -1,6 +1,6 @@
 ---
 title: "BSTA 513/613 Syllabus"
-date-modified: "4/1/2024"
+date-modified: "today"
 categories: [""]
 format: 
   html:
@@ -39,8 +39,6 @@ At the end of this course, students should be able to...
 5.  Perform Poisson regression analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.
 
 6.  Coherently summarize methods and results of data analyses, and discuss in context of original health-related research questions to audiences with varied statistical background.
-
-These learning objectives were adapted from [Maria Tackett's Regression Analysis course](https://maria-tackett.netlify.app/project/02_sta210/).
 
 ## Instructors
 
@@ -193,7 +191,7 @@ Letter grades will be assigned roughly according to the following scheme: A (\>=
 Grades will be based on homework assignments, midterm exam, class "attendance", and final exam, as follows:
 
 +:-------------------------:+:----------------------:+:------------------------:+:----------------------------------------:+:----------------------------------------:+
-| **Course activity**       | **Type of Assessment** | **Due Date**             | **Percentage of final grade (BSTA 512)** | **Percentage of final grade (BSTA 612)** |
+| **Course activity**       | **Type of Assessment** | **Due Date**             | **Percentage of final grade (BSTA 513)** | **Percentage of final grade (BSTA 613)** |
 +---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
 | Homework                  | Formative              | Every 1-2 weeks          | 33%                                      | 28%                                      |
 +---------------------------+------------------------+--------------------------+------------------------------------------+------------------------------------------+
@@ -212,7 +210,9 @@ Grades will be based on homework assignments, midterm exam, class "attendance", 
 
 ### Homework grading
 
-We are going to decide on this together!!
+No student has the same amount of time available to dedicate to homework. This class may not be a priority to you, you may be taking several other courses, or you may need to dedicate time to other activities. Homeworks are **formative assessments**, meaning its purpose is to help you learn and practice. To reduce the pressure on you to have perfect or complete homework, I have a very simple grading policy: **Your homework will be given a check mark if you turn in 50% of the questions parts completed (whether the 50% is correct or wrong).** I highly encourage you to stay up-to-date with the homeworks and put in as much effort as you can. This will be the most helpful work in this class!
+
+If you turn in the homework on time, the TAs will give you feedback (on one or more complete problems). There is no penalty for turning in the homework late, but you will not get feedback on your work. Please make sure to check the solutions or go to office hours to assess your work.
 
 ### Lab grading
 

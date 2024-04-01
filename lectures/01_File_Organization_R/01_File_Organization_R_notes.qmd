@@ -1,0 +1,80 @@
+---
+title: "Lesson 1: File Organization within R"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/01/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard:
+      src: 01_File_Organization_R_notes.json
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 1: File Organization within R"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+## Folder organization
+
+::: columns
+::: column
+-   For a project, I usually have the following folders
+
+    -   Background
+    -   Code
+    -   Data_Raw
+    -   Data_Processed
+    -   Dissemination
+    -   Reports
+    -   Meetings
+:::
+
+::: column
+-   For our class, I suggest making one folder for the course with the following folders in it:
+
+    -   Data
+    -   Homework
+    -   Notes
+    -   Project
+    -   Quizzes
+    -   And other folders if you want
+:::
+:::
+
+-   Let's take a couple minutes to do this!
+
+## Creating project in RStudio
+
+-   Basic steps 
+    
+    -   Go into RStudio
+
+    -   Create new project for this class (under `File` or top right corner)
+
+-   Let me show you my process
+
+-   Let's take a couple minutes to do this!
+
+
+## Creating a new `qmd` file
+
+## Here package
+
+::: columns
+::: column
+-   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+
+    -   Just substitute `.Rmd` with `.qmd`
+:::
+
+::: column
+![](images/paths.png){fig-align="center"}
+
+:::
