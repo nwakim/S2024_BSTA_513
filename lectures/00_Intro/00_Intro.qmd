@@ -20,12 +20,44 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
-## Syllabus 
+## Still me!
+
+## Some important tasks
+
+-   [Join the Slack page!](https://join.slack.com/t/bsta512613w2024/shared_invite/zt-29g7biioz-XhPs~tj8xwL1GajEw9YlTg)
+
+-   Star the class website: [https://nwakim.github.io/S2024_BSTA_513/](https://nwakim.github.io/W2024_BSTA_512/){.uri}
+
+-   Complete the [WhenIsGood](https://whenisgood.net/53kgg2b) for office hours
+
+-   Complete Homework 0 by this Thursday at 11pm!
+
+-   Highly suggest that you make an appointment with a learning specialist through [Student Academic Support Services](https://sakai.ohsu.edu/portal/site/Student_Support)!
+
+## Syllabus
+
+-   Not many changes from last quarter's syllabus
+
+-   
 
 ## Homework grading
 
+-   Slightly new grading
+
+-   Now, need to turn in 50% of the homework completed to get checkmark
+
+-   Noticed that completing the homework was
+
 ## How to print slides
 
-## Let's take 10 minutes
+## Let's take 10 minutes for Student Survey
 
-For the SPH survey!!
+::: columns
+::: {.column width="50%"}
+![](images/Student_survey.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/Survey_QR.png){fig-align="center"}
+:::
+:::
