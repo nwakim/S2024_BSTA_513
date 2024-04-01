@@ -7,7 +7,7 @@ website:
   navbar:
     background: primary
     search: true
-    logo: "images/bsta_512_hex.png"
+    logo: "images/Bsta513.png"
     foreground: "#fff"
     collapse-below: sm
     right:
