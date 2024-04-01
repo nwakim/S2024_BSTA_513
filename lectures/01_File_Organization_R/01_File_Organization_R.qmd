@@ -20,8 +20,35 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
+## Using OneDrive
+
+-   We all have free access to OneDrive to store files
+
+-   [Let's login](https://login.microsoftonline.com/) into our online accounts
+
+-   [You can also download OneDrive for your desktop](https://www.microsoft.com/en-us/microsoft-365/onedrive/download)
+
+    -   Allows you to access the OneDrive from your computer's interface instead of the browser
+    
+    -   Creates a link between your computer and the cloud!
+
+-   Let me show you mine
+
+    -   I can access all the files through RStudio as well!
+    
+-   Let's take a couple minutes to log into OneDrive
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
 ## Folder organization
 
+-   Make these folders in your computer
+
+    -   Only make them in OneDrive **if** you have a desktop connection
+    
 ::: columns
 ::: column
 -   For a project, I usually have the following folders
@@ -40,40 +67,143 @@ execute:
 
     -   Data
     -   Homework
-    -   Notes
+    -   Notes 
     -   Project
     -   Quizzes
     -   And other folders if you want
 :::
 :::
 
--   Let's take a couple minutes to do this!
+-   Take a few minutes to create these folders 
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+## Now download some data from my the OneDrive
+
+-   Go into the [Student files folder](https://ohsuitg-my.sharepoint.com/:f:/g/personal/wakim_ohsu_edu/EsWSKGeK3PZMrjgzBfKpossBoG_UhC_kxmeJEoiyWkn7aQ?e=crBe5N)
+
+-   Download the dataset in Sample_folder, under Data
+
+-   Create your own Sample_folder under Notes
+
+    -   Save the dataset there
+    
+-   Alternatively, you can download all of Sample_folder and then put that under Notes
 
 ## Creating project in RStudio
 
--   Basic steps 
+-   Way to designate a working directory: basically your home base when working in R
+
+    -   We have to tell R exactly where we are in our folders and where to find other things
     
+    -   A project makes it easier to tell R where we are
+    
+-   Basic steps to create a project
+
     -   Go into RStudio
 
     -   Create new project for this class (under `File` or top right corner)
+    
+-   Once we have projects, we can open one are R will automatically know that its location is the start of our working directory
 
 -   Let me show you my process
 
--   Let's take a couple minutes to do this!
-
+    -   I will create one in my Sample_folder
+    
+    -   I will show you how I switch between classes
+    
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
 
 ## Creating a new `qmd` file
 
+-   Basic steps
+
+    -   Create new `.qmd` (under `File` or top left corner)
+    
+    -   Decide on document types/options
+
+-   Let me show you my process
+
+-   Create a `.qmd` in your Sample_folder under any folder (maybe Notes is good)
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+## Looking at `Source` vs. `Visual`
+
 ## Here package
 
-::: columns
-::: column
+::: columns 
+::: column 
+
 -   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 
-    -   Just substitute `.Rmd` with `.qmd`
+-   Just substitute `.Rmd` with `.qmd`
+
+-   Basically, a `.qmd` file and `.R` file work differently
+
+    -   We haven't worked much with `.R` files
+    
+-   For `.qmd` files, the automatic directory is the folder it is in
+
+    -   But we want it to be the main project folder
+    
+-   `here` can help with that
+
 :::
 
 ::: column
 ![](images/paths.png){fig-align="center"}
+:::
 
 :::
+
+## Install `here` package
+
+-   Install `here` package: you can do this in your console (not inside `.qmd` file)
+
+```{r}
+#| eval: false
+install.packages("here")
+```
+
+-   Within your console, type `here()` and enter
+
+    -   Try this with `getwd()` as well
+    
+## Using `here()` to load data
+
+-   There `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
+
+-   To load the dataset in our `.qmd` file, we will use:
+
+```{r}
+#| eval: false
+data = read_excel(here("./Data/CH05Q01.xls"))
+data = read_excel(here("Data", "CH05Q01.xls"))
+```
+    
+::: definition
+::: def-title
+Watch out when using lubridate package simultaneously
+:::
+::: def-cont
+Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will tell R to use the function `here()` within the `here` package instead of `lubridate`'s `here()` function. To call lubridate's function, we'd use `lubridate::here()`
+:::
+:::
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+
+

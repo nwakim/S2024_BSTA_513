@@ -22,6 +22,22 @@ execute:
 
 # Still me!
 
+## Course Learning Objectives
+
+At the end of this course, students should be able to...
+
+1.  Apply and interpret some hypothesis-testing procedures for two-way and three-way **contingency tables**
+
+2.  Compute and **interpret measures of association** for **binary and ordinal data**.
+
+3.  Calculate and correctly interpret **odds ratios using logistic regression**, make comparison across groups and examine relationship between binary outcome and predictor variables.
+
+4.  Apply appropriate **model-building strategies for logistic regression**. Effectively use statistical computing packages for contingency table and logistic regression procedures.
+
+5.  Perform **Poisson regression** analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.
+
+6.  Coherently **summarize methods and results of data analyses**, and discuss in context of original health-related research questions to audiences with varied statistical background.
+
 ## New way to record/view lectures
 
 -   I will be using Echo360 to automatically record time from 1-3pm in this room!
@@ -40,21 +56,13 @@ execute:
 
 -   I don't have to post anything after class, so no issues with me forgetting to post it
 
-## Course Learning Objectives
+## New Exit ticket style
 
-At the end of this course, students should be able to...
+-   All the questions are optional
 
-1.  Apply and interpret some hypothesis-testing procedures for two-way and three-way **contingency tables**
+-   But still open the link and submit!
 
-2.  Compute and **interpret measures of association** for **binary and ordinal data**.
-
-3.  Calculate and correctly interpret **odds ratios using logistic regression**, make comparison across groups and examine relationship between binary outcome and predictor variables.
-
-4.  Apply appropriate **model-building strategies for logistic regression**. Effectively use statistical computing packages for contingency table and logistic regression procedures.
-
-5.  Perform **Poisson regression** analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.
-
-6.  Coherently **summarize methods and results of data analyses**, and discuss in context of original health-related research questions to audiences with varied statistical background.
+-   5 of the exit tickets are dropped!
 
 ## Some important tasks
 
@@ -69,6 +77,11 @@ At the end of this course, students should be able to...
     -   Complete by Thursday at 11pm!!!
 
 -   Highly suggest that you make an appointment with a learning specialist through [Student Academic Support Services](https://sakai.ohsu.edu/portal/site/Student_Support)!
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
 
 ## Syllabus
 
@@ -132,6 +145,8 @@ At the end of this course, students should be able to...
 
     -   I can show how to do it in Chrome and Safari
 
+-   [Instructions on Quarto page](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf)
+
 ## Let's take 10 minutes for Student Survey
 
 ::: columns
@@ -141,5 +156,17 @@ At the end of this course, students should be able to...
 
 ::: {.column width="50%"}
 ![](images/Survey_QR.png){fig-align="center"}
+
+```{r}
+#| echo: false
+countdown::countdown(11)
+```
 :::
 :::
+
+## Now we take a 10 minute break!
+
+```{r}
+#| echo: false
+countdown::countdown(10)
+```

@@ -1,6 +1,6 @@
 ---
 title: "Week 1"
-description: "Introduction; Review; and Data Wrangling"
+description: "Introduction; File Organization"
 date: "4/1/2024"
 date-modified: "today"
 categories: [""]
@@ -9,7 +9,6 @@ format:
     link-external-newwindow: true
     toc: true
     highlight-style: ayu
-  pdf: default
 ---
 
 ```{css, echo=FALSE}
@@ -33,7 +32,7 @@ format:
 Below is a table with links to resources. Icons in [orange]{style="color:#E89543;"} mean there is an available file link.
 
 | Lesson | Topic                                |                                                                Slides                                                                |                                  Annotated Slides                                  |                         Recording(s)                          |
-|-------------|--------------------|:-----------:|:-----------:|:-----------:|
+|--------------|----------------|:------------:|:------------:|:------------:|
 |        | Intro to Course                      |               [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/00_Intro/00_Intro.qmd)]{style="color:#f8f5f0;"}               | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 | 1      | File Organization within R           | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/01_File_Organization_R/01_File_Organization_R.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 | 2      | Introduction to Categorical Analysis |                                [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                 | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
@@ -55,9 +54,9 @@ For the slides, once they are opened, if you would like to print or save them as
 
 ## Class Exit Tickets
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNEU3TkZQUjdEMElYQVpWRUc4UkVDSVBMNy4u)]{style="color:#f8f5f0;"} Monday (4/1)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUM0hUSUlOUEk4UTJWMDdSV00zMDVWNkM4Wi4u)]{style="color:#f8f5f0;"} Monday (4/1)
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUODlaWDJPNzQxRVhaOFVDVUhOU1oxRTlTUC4u)]{style="color:#f8f5f0;"} Wednesday (4/3)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMFNKNlhJUjU3UVU0R1MyVVczUlQ3NlVSUS4u)]{style="color:#f8f5f0;"} Wednesday (4/3)
 
 ## Muddiest Points
 

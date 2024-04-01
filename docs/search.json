@@ -557,7 +557,7 @@
     "href": "lectures/00_Intro/00_Intro.html#some-important-tasks",
     "title": "Lesson 0: Introduction",
     "section": "Some important tasks",
-    "text": "Some important tasks\n\nJoin the Slack page!\nStar the class website: https://nwakim.github.io/S2024_BSTA_513/\nComplete the WhenIsGood for office hours\n\nIf your calendar feels set, take 5 mintues to fill this out now!\nComplete by Thursday at 11pm!!!\n\nHighly suggest that you make an appointment with a learning specialist through Student Academic Support Services!"
+    "text": "Some important tasks\n\nJoin the Slack page!\nStar the class website: https://nwakim.github.io/S2024_BSTA_513/\nComplete the WhenIsGood for office hours\n\nIf your calendar feels set, take 5 mintues to fill this out now!\nComplete by Thursday at 11pm!!!\n\nHighly suggest that you make an appointment with a learning specialist through Student Academic Support Services!\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#syllabus",
@@ -578,7 +578,7 @@
     "href": "lectures/00_Intro/00_Intro.html#how-to-print-slides",
     "title": "Lesson 0: Introduction",
     "section": "How to print slides",
-    "text": "How to print slides\n\nAnyone have issues with this?\n\nI can show how to do it in Chrome and Safari"
+    "text": "How to print slides\n\nAnyone have issues with this?\n\nI can show how to do it in Chrome and Safari\n\nInstructions on Quarto page"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#lets-take-10-minutes",
@@ -592,7 +592,7 @@
     "href": "lectures/00_Intro/00_Intro.html#lets-take-10-minutes-for-student-survey",
     "title": "Lesson 0: Introduction",
     "section": "Let’s take 10 minutes for Student Survey",
-    "text": "Let’s take 10 minutes for Student Survey\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 0: Introduction"
+    "text": "Let’s take 10 minutes for Student Survey\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n11:00"
   },
   {
     "objectID": "lectures/00_Intro/00_Intro.html#homework-grading-in-syllabus",
@@ -634,7 +634,7 @@
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#folder-organization",
     "title": "Lesson 1: File Organization within R",
     "section": "Folder organization",
-    "text": "Folder organization\n\n\n\nFor a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want\n\n\n\n\n\nLet’s take a couple minutes to do this!"
+    "text": "Folder organization\n\nMake these folders in your computer\n\nOnly make them in OneDrive if you have a desktop connection\n\n\n\n\n\nFor a project, I usually have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nNotes\nProject\nQuizzes\nAnd other folders if you want\n\n\n\n\n\nTake a few minutes to create these folders\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project",
@@ -648,21 +648,21 @@
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package",
     "title": "Lesson 1: File Organization within R",
     "section": "Here package",
-    "text": "Here package\n::: columns ::: column - Good source for the here package\n-   Just substitute `.Rmd` with `.qmd`\n:::\n\n\n\n\n\n\n\n\n\nLesson 1: File Organization within R"
+    "text": "Here package\n\n\n\nGood source for the here package\nJust substitute .Rmd with .qmd\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
   },
   {
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-a-new-qmd-file",
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-a-new-qmd-file",
     "title": "Lesson 1: File Organization within R",
     "section": "Creating a new qmd file",
-    "text": "Creating a new qmd file"
+    "text": "Creating a new qmd file\n\nBasic steps\n\nCreate new .qmd (under File or top left corner)\nDecide on document types/options\n\nLet me show you my process\nCreate a .qmd in your Sample_folder under any folder (maybe Notes is good)\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project-in-rstudio",
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#creating-project-in-rstudio",
     "title": "Lesson 1: File Organization within R",
     "section": "Creating project in RStudio",
-    "text": "Creating project in RStudio\n\nBasic steps\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nLet me show you my process\nLet’s take a couple minutes to do this!"
+    "text": "Creating project in RStudio\n\nWay to designate a working directory: basically your home base when working in R\n\nWe have to tell R exactly where we are in our folders and where to find other things\nA project makes it easier to tell R where we are\n\nBasic steps to create a project\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nOnce we have projects, we can open one are R will automatically know that its location is the start of our working directory\nLet me show you my process\n\nI will create one in my Sample_folder\nI will show you how I switch between classes\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R_notes.html#folder-organization",
@@ -691,5 +691,68 @@
     "title": "Lesson 1: File Organization within R",
     "section": "Here package",
     "text": "Here package\n::: columns ::: column - Good source for the here package\n-   Just substitute `.Rmd` with `.qmd`\n:::\n\n\n\n\n\n\n\n\n\nLesson 1: File Organization within R"
+  },
+  {
+    "objectID": "lectures/00_Intro/00_Intro.html#now-we-take-a-10-minute-break",
+    "href": "lectures/00_Intro/00_Intro.html#now-we-take-a-10-minute-break",
+    "title": "Lesson 0: Introduction",
+    "section": "Now we take a 10 minute break!",
+    "text": "Now we take a 10 minute break!\n\n\n\n−+\n10:00\n\n\n\n\n\nLesson 0: Introduction"
+  },
+  {
+    "objectID": "lectures/00_Intro/00_Intro.html#new-exit-ticket-style",
+    "href": "lectures/00_Intro/00_Intro.html#new-exit-ticket-style",
+    "title": "Lesson 0: Introduction",
+    "section": "New Exit ticket style",
+    "text": "New Exit ticket style\n\nAll the questions are optional\nBut still open the link and submit!\n5 of the exit tickets are dropped!"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#looking-at-source-vs.-visual",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#looking-at-source-vs.-visual",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Looking at Source vs. Visual",
+    "text": "Looking at Source vs. Visual"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-onedrive",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-onedrive",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Using OneDrive",
+    "text": "Using OneDrive\n\nWe all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#now-download-some-data-from-my-the-onedrive",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#now-download-some-data-from-my-the-onedrive",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Now download some data from my the OneDrive",
+    "text": "Now download some data from my the OneDrive\n\nGo into the Student files folder\nDownload the dataset in Sample_folder, under Data\nCreate your own Sample_folder under Notes\n\nSave the dataset there\n\nAlternatively, you can download all of Sample_folder and then put that under Notes"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package-1n",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package-1n",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Here package (1/n)",
+    "text": "Here package (1/n)\n\n\n\nGood source for the here package\nJust substitute .Rmd with .qmd\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package-2n",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#here-package-2n",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Here package (2/n)",
+    "text": "Here package (2/n)\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your .qmd file\n\n\n\nLesson 1: File Organization within R"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#install-here-package",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#install-here-package",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Install here package",
+    "text": "Install here package\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well"
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-here-to-load-data",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-here-to-load-data",
+    "title": "Lesson 1: File Organization within R",
+    "section": "Using here() to load data",
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nLesson 1: File Organization within R"
   }
 ]

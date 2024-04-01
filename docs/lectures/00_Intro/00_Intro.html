@@ -322,6 +322,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -345,6 +347,18 @@ Nicky Wakim
 <h1>Still me!</h1>
 
 </section>
+<section id="course-learning-objectives" class="slide level2">
+<h2>Course Learning Objectives</h2>
+<p>At the end of this course, students should be able to…</p>
+<ol type="1">
+<li><p>Apply and interpret some hypothesis-testing procedures for two-way and three-way <strong>contingency tables</strong></p></li>
+<li><p>Compute and <strong>interpret measures of association</strong> for <strong>binary and ordinal data</strong>.</p></li>
+<li><p>Calculate and correctly interpret <strong>odds ratios using logistic regression</strong>, make comparison across groups and examine relationship between binary outcome and predictor variables.</p></li>
+<li><p>Apply appropriate <strong>model-building strategies for logistic regression</strong>. Effectively use statistical computing packages for contingency table and logistic regression procedures.</p></li>
+<li><p>Perform <strong>Poisson regression</strong> analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.</p></li>
+<li><p>Coherently <strong>summarize methods and results of data analyses</strong>, and discuss in context of original health-related research questions to audiences with varied statistical background.</p></li>
+</ol>
+</section>
 <section id="new-way-to-recordview-lectures" class="slide level2">
 <h2>New way to record/view lectures</h2>
 <ul>
@@ -362,17 +376,13 @@ Nicky Wakim
 <li><p>I don’t have to post anything after class, so no issues with me forgetting to post it</p></li>
 </ul>
 </section>
-<section id="course-learning-objectives" class="slide level2">
-<h2>Course Learning Objectives</h2>
-<p>At the end of this course, students should be able to…</p>
-<ol type="1">
-<li><p>Apply and interpret some hypothesis-testing procedures for two-way and three-way <strong>contingency tables</strong></p></li>
-<li><p>Compute and <strong>interpret measures of association</strong> for <strong>binary and ordinal data</strong>.</p></li>
-<li><p>Calculate and correctly interpret <strong>odds ratios using logistic regression</strong>, make comparison across groups and examine relationship between binary outcome and predictor variables.</p></li>
-<li><p>Apply appropriate <strong>model-building strategies for logistic regression</strong>. Effectively use statistical computing packages for contingency table and logistic regression procedures.</p></li>
-<li><p>Perform <strong>Poisson regression</strong> analysis using count data and interpret model estimates, make comparison across groups and examine relationship between outcome and predictor variables.</p></li>
-<li><p>Coherently <strong>summarize methods and results of data analyses</strong>, and discuss in context of original health-related research questions to audiences with varied statistical background.</p></li>
-</ol>
+<section id="new-exit-ticket-style" class="slide level2">
+<h2>New Exit ticket style</h2>
+<ul>
+<li><p>All the questions are optional</p></li>
+<li><p>But still open the link and submit!</p></li>
+<li><p>5 of the exit tickets are dropped!</p></li>
+</ul>
 </section>
 <section id="some-important-tasks" class="slide level2">
 <h2>Some important tasks</h2>
@@ -386,6 +396,14 @@ Nicky Wakim
 </ul></li>
 <li><p>Highly suggest that you make an appointment with a learning specialist through <a href="https://sakai.ohsu.edu/portal/site/Student_Support">Student Academic Support Services</a>!</p></li>
 </ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_5adb23bd" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="syllabus" class="slide level2">
 <h2>Syllabus</h2>
@@ -510,6 +528,7 @@ Nicky Wakim
 <ul>
 <li>I can show how to do it in Chrome and Safari</li>
 </ul></li>
+<li><p><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Instructions on Quarto page</a></p></li>
 </ul>
 </section>
 <section id="lets-take-10-minutes-for-student-survey" class="slide level2">
@@ -526,6 +545,25 @@ Nicky Wakim
 <figure>
 <p><img data-src="images/Survey_QR.png"></p>
 </figure>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_e5b5a2da" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">11</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="now-we-take-a-10-minute-break" class="slide level2">
+<h2>Now we take a 10 minute break!</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_442c6f61" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -747,6 +785,44 @@ Nicky Wakim
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
