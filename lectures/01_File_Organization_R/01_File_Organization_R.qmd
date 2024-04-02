@@ -29,13 +29,13 @@ execute:
 -   [You can also download OneDrive for your desktop](https://www.microsoft.com/en-us/microsoft-365/onedrive/download)
 
     -   Allows you to access the OneDrive from your computer's interface instead of the browser
-    
+
     -   Creates a link between your computer and the cloud!
 
 -   Let me show you mine
 
     -   I can access all the files through RStudio as well!
-    
+
 -   Let's take a couple minutes to log into OneDrive
 
 ```{r}
@@ -48,7 +48,7 @@ countdown::countdown(5)
 -   Make these folders in your computer
 
     -   Only make them in OneDrive **if** you have a desktop connection
-    
+
 ::: columns
 ::: column
 -   For a project, I usually have the following folders
@@ -67,14 +67,14 @@ countdown::countdown(5)
 
     -   Data
     -   Homework
-    -   Notes 
+    -   Notes
     -   Project
     -   Quizzes
     -   And other folders if you want
 :::
 :::
 
--   Take a few minutes to create these folders 
+-   Take a few minutes to create these folders
 
 ```{r}
 #| echo: false
@@ -90,7 +90,7 @@ countdown::countdown(5)
 -   Create your own Sample_folder under Notes
 
     -   Save the dataset there
-    
+
 -   Alternatively, you can download all of Sample_folder and then put that under Notes
 
 ## Creating project in RStudio
@@ -98,23 +98,23 @@ countdown::countdown(5)
 -   Way to designate a working directory: basically your home base when working in R
 
     -   We have to tell R exactly where we are in our folders and where to find other things
-    
+
     -   A project makes it easier to tell R where we are
-    
+
 -   Basic steps to create a project
 
     -   Go into RStudio
 
     -   Create new project for this class (under `File` or top right corner)
-    
+
 -   Once we have projects, we can open one are R will automatically know that its location is the start of our working directory
 
 -   Let me show you my process
 
     -   I will create one in my Sample_folder
-    
+
     -   I will show you how I switch between classes
-    
+
 ```{r}
 #| echo: false
 countdown::countdown(5)
@@ -125,7 +125,7 @@ countdown::countdown(5)
 -   Basic steps
 
     -   Create new `.qmd` (under `File` or top left corner)
-    
+
     -   Decide on document types/options
 
 -   Let me show you my process
@@ -141,9 +141,8 @@ countdown::countdown(5)
 
 ## Here package
 
-::: columns 
-::: column 
-
+::: columns
+::: column
 -   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 
 -   Just substitute `.Rmd` with `.qmd`
@@ -151,19 +150,17 @@ countdown::countdown(5)
 -   Basically, a `.qmd` file and `.R` file work differently
 
     -   We haven't worked much with `.R` files
-    
+
 -   For `.qmd` files, the automatic directory is the folder it is in
 
     -   But we want it to be the main project folder
-    
--   `here` can help with that
 
+-   `here` can help with that
 :::
 
 ::: column
 ![](images/paths.png){fig-align="center"}
 :::
-
 :::
 
 ## Install `here` package
@@ -178,7 +175,7 @@ install.packages("here")
 -   Within your console, type `here()` and enter
 
     -   Try this with `getwd()` as well
-    
+
 ## Using `here()` to load data
 
 -   There `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
@@ -190,11 +187,12 @@ install.packages("here")
 data = read_excel(here("./Data/CH05Q01.xls"))
 data = read_excel(here("Data", "CH05Q01.xls"))
 ```
-    
+
 ::: definition
 ::: def-title
 Watch out when using lubridate package simultaneously
 :::
+
 ::: def-cont
 Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will tell R to use the function `here()` within the `here` package instead of `lubridate`'s `here()` function. To call lubridate's function, we'd use `lubridate::here()`
 :::
@@ -204,6 +202,3 @@ Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will 
 #| echo: false
 countdown::countdown(5)
 ```
-
-
-
