@@ -31,11 +31,11 @@ format:
 
 Below is a table with links to resources. Icons in [orange]{style="color:#E89543;"} mean there is an available file link.
 
-| Lesson | Topic                                |                                                                Slides                                                                |                                  Annotated Slides                                  |                         Recording(s)                          |
-|--------------|----------------|:------------:|:------------:|:------------:|
-|        | Intro to Course                      |               [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/00_Intro/00_Intro.qmd)]{style="color:#f8f5f0;"}               | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 1      | File Organization within R           | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/01_File_Organization_R/01_File_Organization_R.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 2      | Introduction to Categorical Analysis |                                [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                 | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic                                |                                                                Slides                                                                |                                  Annotated Slides                                  |                                                               Recording(s)                                                               |
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
+|        | Intro to Course                      |               [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/00_Intro/00_Intro.qmd)]{style="color:#f8f5f0;"}               | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} |     [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/6e11e1f1-511a-420e-abe8-d083bc0c1d08)]{style="color:#f8f5f0;"}      |
+| 1      | File Organization within R           | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/01_File_Organization_R/01_File_Organization_R.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/section/3d2de378-ed40-415a-8caf-8c75f3b5d9ff/public)]{style="color:#f8f5f0;"} |
+| 2      | Introduction to Categorical Analysis |           [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/02_Intro_CDA/02_Intro_CDA.qmd)]{style="color:#f8f5f0;"}           | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} |                                      [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                       |
 
 For the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:
 
@@ -49,6 +49,16 @@ For the slides, once they are opened, if you would like to print or save them as
 [Here is the link to my Poll Everywhere!!](https://pollev.com/nickywakim275)
 
 ## Announcements
+
+-   Shared folder for students
+
+    -   Contains a few textbooks that you can use!
+
+        -   We will use Agresti and Hosmer & Lemeshaw mostly!
+
+-   Make sure you can get into the [Echo360 page](https://echo360.org/section/3d2de378-ed40-415a-8caf-8c75f3b5d9ff/public)!!
+
+-   Last day to drop without penalty: 4/12/2024
 
 ## On the Horizon
 

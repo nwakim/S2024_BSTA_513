@@ -89,7 +89,7 @@ countdown::countdown(5)
 -   Assessment breakdown is the same
 
 |                           |                        |                          |                                          |                                          |
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|:-------------------------:|:----------------------:|:------------------------:|:----------------------------------------:|:----------------------------------------:|
 |    **Course activity**    | **Type of Assessment** |       **Due Date**       | **Percentage of final grade (BSTA 513)** | **Percentage of final grade (BSTA 613)** |
 |         Homework          |       Formative        |     Every 1-2 weeks      |                   33%                    |                   28%                    |
 |          Quizzes          |       Summative        |     4/22, 5/13, 6/3      |                   25%                    |                   25%                    |

@@ -424,7 +424,7 @@
     "href": "weeks/week_01_sched.html#announcements",
     "title": "Week 1",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nShared folder for students\n\nContains a few textbooks that you can use!\n\nWe will use Agresti and Hosmer & Lemeshaw mostly!\n\n\nMake sure you can get into the Echo360 page!!\nLast day to drop without penalty: 4/12/2024"
   },
   {
     "objectID": "weeks/week_01_sched.html#on-the-horizon",
@@ -717,8 +717,8 @@
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-onedrive",
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-onedrive",
     "title": "Lesson 1: File Organization within R",
-    "section": "Using OneDrive",
-    "text": "Using OneDrive\n\nWe all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+    "section": "",
+    "text": "We all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#now-download-some-data-from-my-the-onedrive",
@@ -753,7 +753,7 @@
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-here-to-load-data",
     "title": "Lesson 1: File Organization within R",
     "section": "Using here() to load data",
-    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nLesson 1: File Organization within R"
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "homework/HW1.html#questons-part-1",
@@ -768,5 +768,656 @@
     "title": "Homework 1",
     "section": "Questions Part 2",
     "text": "Questions Part 2\nThe following questions are intended to give you practice in connecting concepts that will help you make decisions in real world applications.\n\nQuestion 5\nStart making a comprehensive table or outline for the inference tests that we have covered. Here is a list of the tests we have covered:\n\nSingle proportion\nChi-squared test for general association\nLikelihood ratio test for general association\nFisher’s Exact test for general association\nCochran-Armitage test for trend\nMantel-Haenszel test for linear trend\n\nAnd here is a list of attributes to include:\n\nNumber of variables testing\nTypes of variables\nCriteria (if any)\nHypothesis test\nTest statistic (if we went over it)\nR code for test\nSample size / Power calculation (optional, not discussed in class)\nSpecial notes (optional)\n\nFor example, I could make a table with different rows corresponding to different tests and different columns for each attribute.\n\n\nQuestion 6\nI want you to gain experience exploring a package and function. This is an important skill in coding that can help you grow as an applied statistician.\nIn your previous course, the function lm() was introduced to perform linear regression. In this class, we will heavily use the function glm(). By typing “?glm” in the R console, we can open the Help page for glm(). The following questions ask about the glm() function. You can Google or use R documentation to answer the questions.\nFeel free to read more about the differences between lm() and glm().\n\nPart a\nWhat does the input “family” mean? If I wanted to perform regression using a Poisson distribution, what would I input into family?\n\n\nPart b\nWhat is the default action for the “na.action” input?\n\n\nPart c\nHow does the glm() function fit our model? (Hint: see “method”)\n\n\nPart d\nDo you think the output of summary() will be the same for lm() and glm()?\n\n\n\nQuestion 7\nOPTIONAL\nLet’s make a decision tree on the different tests we learned! I would like you to make a flow chart for the different tests we learned in Classes 1 and 2. You’ll need to include characteristics for:\n\nNumber of variables (1, 2, or 3 - we will go over 3 variables in Class 4)\nNumber of categories in each variable\nSample size is small\nOrdinal/nominal independent variable\nOrdinal/nominal response variable(s)\n\nFor example, if I make a decision tree that includes end nodes for different animals (cat, dog, snake, turtle, and hawk) using yes/no characteristics (has a shell, woof/meows, has fur, or flies), then my flow chart would look like: See my example under Sakai Resources. You are welcome to draw this chart. I used SmartArt under the Insert tab in Word to create mine."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-is-categorical-data-analysis",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-is-categorical-data-analysis",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "What is Categorical Data Analysis?",
+    "text": "What is Categorical Data Analysis?\n\nIn BSTA 512/612 (linear regression), we focused on continuous responses/outcomes\n\nWe included categorical variables only as covariates (aka predictors, independent variables, explanatory variables)\nExamples from 512/612: life expectancy (in years), IAT score (ranging from -2 to 2)\n\n\n   \n\nCategorical data analysis focuses on the statistical methods for categorical responses/outcomes\n\nExplanatory (or ‘independent’) variable can be of any type (continuous or categorical)"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#types-of-variables",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#types-of-variables",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Types of Variables",
+    "text": "Types of Variables"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#types-of-variables-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#types-of-variables-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Types of Variables",
+    "text": "Types of Variables\n\n\n\nLesson 2: Introduction to Categorical Data Analysis"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#types-of-variables-outcomes-we-will-cover-in-this-course",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#types-of-variables-outcomes-we-will-cover-in-this-course",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Types of Variables: Outcomes we will cover in this course",
+    "text": "Types of Variables: Outcomes we will cover in this course"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-does-this-course-cover",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-does-this-course-cover",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "What does this course cover?",
+    "text": "What does this course cover?\n\nStrategies for assessing association between categorical response variable and a one explanatory variable\n\nHypothesis testing\nMeasure of association\nSimple logistic regression\n\n\n   \n\nStatistical modeling strategies for assessing association between the categorical response variable and a set of explanatory variables\n\nLogistic regression\n\nFor binary, ordinal, and multinomial outcomes\n\nPoisson regression\n\nFor counts outcomes"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#section",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#section",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "",
+    "text": "Smoking status example\n\n\nA cross-sectional study of 8681 patients was conducted to evaluate the nature of smoking status among people. Of the 8681 people, 4840 were nonsmokers and 3841 were smokers.\n\n\nNeeded steps:\n\nEstimate proportion \\(\\widehat{p}\\)\nCheck that \\(n\\widehat{p}&gt;10\\) and \\(n(1-\\widehat{p})&gt;10\\) in order to make normal approximation\nConstruct 95% confidence interval\nWrite interpretation"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-does-this-course-cover-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-does-this-course-cover-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "What does this course cover?",
+    "text": "What does this course cover?\n\n\nStrategies for assessing association between categorical response variable and a one explanatory variable\n\nHypothesis testing\n\n\n\n\n\nMeasure of association\nSimple logistic regression\n\n\n   \n\nStatistical modeling strategies for assessing association between the categorical response variable and a set of explanatory variables\n\nLogistic regression\n\nFor binary, ordinal, and multinomial outcomes\n\nPoisson regression\n\nFor counts outcomes"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#more-resources",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#more-resources",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "More resources",
+    "text": "More resources\n\nFor a refresher or review of one proportion and differences in proportions\n\nAnd their power calculations\nFrom Meike’s BSTA 511 course (see Day 12!)\n\nFor a refresher or review of Chi-squared test or Fisher’s Exact test\n\nFrom Meike’s BSTA 511 course (see Day 13!)\n\n\n\n\nLesson 2: Introduction to Categorical Data Analysis"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Poll everywhere question 1",
+    "text": "Poll everywhere question 1"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Binomial Distribution",
+    "text": "Binomial Distribution\n\nConsider a sample of \\(n\\) independent trials, each of which can have only two possible outcomes (“success” and “failure”)\nFor each trial: \\[\\begin{align} P( \\text{success}) & = p \\\\\n                  P( \\text{failure}) & = 1- p = q \\end{align}\\]\nBinomial distribution: distribution of the number of successes in n independent trials\nThe probability mass function for the binomial distribution is: \\[P(X=k) = {n \\choose k} p^k q^{n-k}, \\text{ for } k = 0, 1, ..., n\\]\n\n\\(E(X) = np\\)\n\\(Var(X) = npq = np(1-p)\\)"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Binomial Distribution",
+    "text": "Binomial Distribution\n\nConsider a sample of \\(n\\) independent trials, each of which can have only two possible outcomes (“success” and “failure”)\nFor each trial: \\[\\begin{align} P( \\text{success}) & = p \\\\\n                  P( \\text{failure}) & = 1- p = q \\end{align}\\]\nBinomial distribution: distribution of the number of successes in n independent trials\nThe probability mass function for the binomial distribution is: \\[P(X=k) = {n \\choose k} p^k q^{n-k}, \\text{ for } k = 0, 1, ..., n\\]\n\n\\(E(X) = np\\)\n\\(Var(X) = npq = np(1-p)\\)"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution-r-commands",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution-r-commands",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Binomial Distribution: R commands",
+    "text": "Binomial Distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrbinom()\nreturns sample of random variables with specified binomial distribution\n\n\ndbinom()\nreturns probability of getting certain number of successes\n\n\npbinom()\nreturns cumulative probability of getting certain number or less successes\n\n\nqbinom()\nreturns number of successes corresponding to desired quantile"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#binomial-distribution-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Binomial Distribution Example",
+    "text": "Binomial Distribution Example\n\n\nExample\n\n\nIf the probability that one white blood cell is a lymphocyte is 0.2, compute the probability of 2 lymphocytes out of 10 white blood cells\n\n\n\\[P(X=2) = {10 \\choose 2} 0.2^2 (1-0.2)^{10-2}  = 0.3020\\]\n\ndbinom(2, 10, 0.2) %&gt;% round(4)\n\n[1] 0.302"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#normal-approximation-of-the-binomial-distribution",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#normal-approximation-of-the-binomial-distribution",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Normal Approximation of the Binomial Distribution",
+    "text": "Normal Approximation of the Binomial Distribution\n\nAlso known as: Sampling distribution of \\(\\widehat{p}\\)\nIF \\(X\\sim \\text{Binomial}(n,p)\\) and \\(np&gt;10\\) and \\(nq = n(1-p) &gt; 10\\)\n\nEnsures sample size (\\(n\\)) is moderately large and the \\(p\\) is not too close to 0 or 1\nOther resources use other criteria (like \\(npq&gt;5\\) or \\(np&gt;5\\))\nWhen looking at a sample, we use \\(\\widehat{p}\\) instead of \\(p\\) to check this!!\n\n\n \n\nTHEN approximately \\(𝑋\\sim \\text{Normal}\\big(\\mu_X = np, \\sigma_X = \\sqrt{np(1-p)} \\big)\\)\n\nOr we often write this as the sampling distribution of \\(\\widehat{p}\\): \\[\\widehat{p} \\sim \\text{Normal}\\bigg(\\mu_{\\widehat{p}} = p, \\sigma_{\\widehat{p}} = \\sqrt{\\dfrac{p(1-p)}{n}}\\bigg)\\]\n\nPretty good video behind the intuition of this (Watch 00:00 - 05:40)"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-of-single-proportion",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-of-single-proportion",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Estimate of Single Proportion",
+    "text": "Estimate of Single Proportion\n\nEstimate of proportion:\n\n\\[\n\\widehat{p} = \\dfrac{\\# \\text{successes}}{\\# \\text{successes} + \\# \\text{failures}}\n\\]\n\nUse the sampling distribution of \\(\\widehat{p}\\) to contruct the confidence interval:\n\n\\((1-\\alpha)\\%\\) confidence interval for estimate proportion:\n\n\n\\[\\begin{align} \\widehat{p} &\\pm z^*_{(1-\\alpha/2)} \\cdot SE_{\\hat{p}} \\\\ \\widehat{p} &\\pm z^*_{(1-\\alpha/2)} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} \\end{align}\\]\n\nUsing \\(SE_{\\hat{p}} = \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\) - instead of \\(\\sigma_{p} = \\sqrt{\\frac{p(1-p)}{n}}\\) - because we don’t know exactly what \\(p\\) is"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-smoking-status",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-smoking-status",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Example: Smoking Status",
+    "text": "Example: Smoking Status\nA cross-sectional study of 8681 patients was conducted to evaluate the nature of smoking status among people. Of the 8681 people, 4840 were nonsmokers and 3841 were smokers.\n\nEstimate proportion \\(\\widehat{p}\\)\nCheck that \\(np&gt;10\\) in order to make normal approximation\nConstruct 95% confidence interval\nWrite interpretation"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-for-difference-in-proportions",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-for-difference-in-proportions",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Estimate for Difference in Proportions",
+    "text": "Estimate for Difference in Proportions\nWhat to use for SE in CI formula?\n\\[\\hat{p}_1 - \\hat{p}_2 \\pm z^* \\cdot SE_{\\hat{p}_1 - \\hat{p}_2}\\]\nSE in sampling distribution of \\(\\hat{p}_1 - \\hat{p}_2\\)\n\\[\\sigma_{\\hat{p}_1 - \\hat{p}_2} =\n\\sqrt{\n\\frac{p_1\\cdot(1-p_1)}{n_1} + \\frac{p_2\\cdot(1-p_2)}{n_2}} \\]\nProblem: We don’t know what \\(p\\) is - it’s what we’re estimating with the CI.\nSolution: approximate \\(p_1\\), \\(p_2\\) with \\(\\hat{p}_1\\), \\(\\hat{p}_2\\):\n\\[SE_{\\hat{p}_1 - \\hat{p}_2} = \\sqrt{\n\\frac{\\hat{p}_1\\cdot(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2\\cdot(1-\\hat{p}_2)}{n_2}}\\]"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-heart-attack-study",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-heart-attack-study",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Example: Heart Attack Study",
+    "text": "Example: Heart Attack Study"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mcnemars-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mcnemars-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "McNemar’s Test",
+    "text": "McNemar’s Test\n\nMcNemar’s test should be used if data is from a matched pairs study\n\n \n\nWhat is a matched-pairs study?\n\nParticipants are paired based on key characteristics\nEach participant within a pair will be assigned to different treatment groups\n\nCategorical test that is parallel to the “paired t-test”\n\n \n\nR packages and functions\n\nNormal approximation: mcnemar.test() in built-in stats package\nExact test: mcnemar.exact() in exact2x2 package\n\n\n \n\nIf you would like more information of McNemar’s test, please see Rosner TB: 10.4 and 10.5: Paired Samples"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#contingency-tables",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#contingency-tables",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Contingency Tables",
+    "text": "Contingency Tables"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association",
+    "text": "Test of General Association\n\nGeneral research question: Are two variables (both categorical, nominal) associated with each other?\n\n \n\nTranslated to a hypothesis test:\n\n\\(H_0\\) : There is no association between the two variables / The variables are independent\n\\(H_1\\) : There is an association between the two variables / The variables are not independent\n\n\n   \n\nWe have two options for testing general association:\n\nChi-squared test\nFisher’s Exact test"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-chi-squared",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-chi-squared",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: Chi-squared",
+    "text": "Test of General Association: Chi-squared\n\nTest to see how likely is it that we observe our data given the null hypothesis (no association)\nWe use the null to calculate the expected cell counts and compare them to the observed cell counts\nRequirements to conduct Chi-squared test\n\nFor 2 x 2 contingency table:\n\nNo expected cell counts should be less than 10\n\nFor contingency table with 3x2, 3x3, 4x4, etc.:\n\nNo more than 20% of expected cell counts are less than 5\nNo expected cell counts are less than 1"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-likelihood-ratio-test-lrt",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-likelihood-ratio-test-lrt",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: Likelihood Ratio Test (LRT)",
+    "text": "Test of General Association: Likelihood Ratio Test (LRT)"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-fishers-exact-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-fishers-exact-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: Fisher’s Exact Test",
+    "text": "Test of General Association: Fisher’s Exact Test\n\nOnly necessary when expected counts in one or more cells is less than 5\nGiven row and column totals fixed, computes exact probability that we observe our data or more extreme data\nConsider a general 2 x 2 table:\n\n\n\nThe exact probability of observing a table with cells (a, b, c, d) can be computed based on the hypergeometric distribution\n\n\\[P(a, b, c, d) = \\dfrac{(a+b)!\\cdot(c+d)!\\cdot(a+c)!\\cdot(b+d)!}{n!\\cdot a!\\cdot b!\\cdot c!\\cdot d!}\\]\n\nNumerator is fixed and denominator changes"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-heart-attack-study-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-heart-attack-study-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Example: Heart Attack Study",
+    "text": "Example: Heart Attack Study"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend",
+    "text": "Test of Trend\n\nIf one or both variables are ordinal, a test of trend may be of interest\n\nTreats ordinal variables as quantitative rather than qualitative (nominal scale)\nTest of trend has greater power than the test of general association\nYou can use a test of general association for non-ordinal variables\n\n\n \n\nTwo tests of trend that we we learn:\n\nCochran-Armitage test\n\nTests association between a binary response and an ordinal explanatory variable\n\nMantel-Haenszel test\n\nTest association between an ordinal response and an ordinal explanatory variable"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Cochran-Armitage test",
+    "text": "Test of Trend: Cochran-Armitage test\n\nCochran-Armitage test for trend will determine if there is association between a binary response variable and an ordinal variable with 3 or more categories\nIt will test the trend of the proportions over the ordinal variable\n\nAnswers the question: Does the proportion of people with a “successful” outcome increase as the ordinal explanatory variable increases?\n\nCochran-Armitage test for trend is only suitable for 2 x C contingency tables"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Mantel-Haenszel test",
+    "text": "Test of Trend: Mantel-Haenszel test\n\nWhen both variables are ordinal, we can conduct Mantel-Haenszel test of trend for linear association\nMantel-Haenszel test for linear trend is suitable for any R x C contingency tables with two ordinal variables\nHypothesis test:\n\n\n\n\n\nNull Hypothesis (\\(H_0\\))\n\n\nThere is no correlation between the two variables \\[ \\rho = 0\\]\n\n\n\n\n\nAlternative Hypothesis (\\(H_1\\))\n\n\nThere is correlation between the two variables\n\\[ \\rho \\neq 0\\]"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#section-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#section-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "",
+    "text": "Smoking status example\n\n\nA cross-sectional study of 8681 patients was conducted to evaluate the nature of smoking status among people. Of the 8681 people, 4840 were nonsmokers and 3841 were smokers.\n\n\n\n\n\nEstimate proportion \\(\\widehat{p}\\) \\[ \\widehat{p} = \\dfrac{3841}{3841 + 4840} = \\dfrac{3841}{8681} = 0.44246\\]\nCheck that \\(n\\widehat{p}&gt;10\\) and \\(n(1-\\widehat{p})&gt;10\\) in order to make normal approximation \\[ n\\widehat{p} = 8681\\cdot0.4425 = 3841 &gt; 10\\] \\[ n(1-\\widehat{p}) = 8681\\cdot(1-0.4425) = 4840 &gt; 10\\]\n\n\n\nConstruct 95% confidence interval\n\n\\[ \\widehat{p} \\pm z^*_{0.975} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\]\n\nprop.test(x = 3841, n = 8681, correct = T)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  3841 out of 8681, null probability 0.5\nX-squared = 114.73, df = 1, p-value &lt; 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.4319827 0.4529896\nsample estimates:\n        p \n0.4424605 \n\n\n\nWrite interpretation of estimate\n\nThe estimated proportion of smokers is 0.442 (95% CI: 0.432, 0.453).\nAdditional interpretation of CI: We are 95% confident that the (population) proportion of smokers is between 0.432 and 0.453."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-2",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-2",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Poll everywhere question 2",
+    "text": "Poll everywhere question 2"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#summary-so-far",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#summary-so-far",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Summary so far",
+    "text": "Summary so far\n\nIntroduced categorical data as the response in analysis\nReviewed an important distribution (Binomial distribution) for categorical data analysis\nEstimated a single proportion from a sample with its confidence interval\nEstimated a difference in proportions from a sample with its confidence interval\n\n   \n\nCan we expand this to ask a more general question about association between a response and explanatory variable?\n\nWhat if there is more than 2 categories for either variable?"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#basic-analytical-procedures",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#basic-analytical-procedures",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Basic Analytical Procedures",
+    "text": "Basic Analytical Procedures\nGeneral procedure:\n \n\nPresent observed data\n\n \n\nDescriptive analysis\n\n \n\nInferential tests"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-and-confidence-interval-of-single-proportion",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-and-confidence-interval-of-single-proportion",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Estimate and Confidence Interval of Single Proportion",
+    "text": "Estimate and Confidence Interval of Single Proportion\n\nEstimate of proportion:\n\n\\[\n\\widehat{p} = \\dfrac{\\# \\text{successes}}{\\# \\text{successes} + \\# \\text{failures}}\n\\]\n\nUse the sampling distribution of \\(\\widehat{p}\\) to construct the confidence interval:\n\n\\((1-\\alpha)\\%\\) confidence interval for estimate proportion:\n\n\n\\[\\begin{align} \\widehat{p} &\\pm z^*_{(1-\\alpha/2)} \\cdot SE_{\\hat{p}} \\\\ \\widehat{p} &\\pm z^*_{(1-\\alpha/2)} \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} \\end{align}\\]\n\nUsing \\(SE_{\\hat{p}} = \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\\) - instead of \\(\\sigma_{p} = \\sqrt{\\frac{p(1-p)}{n}}\\) - because we don’t know exactly what \\(p\\) is"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-and-confidence-interval-for-difference-in-proportions",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#estimate-and-confidence-interval-for-difference-in-proportions",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Estimate and Confidence Interval for Difference in Proportions",
+    "text": "Estimate and Confidence Interval for Difference in Proportions\n\nUse the sampling distribution of \\(\\widehat{p}_1\\) and \\(\\widehat{p}_2\\) to construct the confidence interval:\n\n\\((1-\\alpha)\\%\\) confidence interval for estimate difference in proportions:\n\n\n\\[\\begin{align} \\widehat{p}_1 - \\widehat{p}_2 &\\pm z^*_{(1-\\alpha/2)} \\cdot SE_{\\hat{p}_1 - \\hat{p}_2} \\\\ \\widehat{p}_1 - \\widehat{p}_2 &\\pm z^*_{(1-\\alpha/2)} \\cdot \\sqrt{\n\\frac{\\hat{p}_1\\cdot(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2\\cdot(1-\\hat{p}_2)}{n_2}} \\end{align}\\]\n\nUsing \\(SE_{\\hat{p}_1 - \\hat{p}_2} = \\sqrt{\\frac{\\hat{p}_1\\cdot(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2\\cdot(1-\\hat{p}_2)}{n_2}}\\) because we don’t know exactly what \\(p_1\\) and \\(p_2\\) are"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-3",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-3",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#step-1-present-observed-data",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#step-1-present-observed-data",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Step 1: Present Observed Data",
+    "text": "Step 1: Present Observed Data\nCategorical data are often presented in tabular form, known as contingency table, which displays counts of outcomes in the cell • Smoking Example: 2 X 2 contingency table for smoking status by sex assigned at birth (sex AAB) • For ordinal variables: make sure level of rows and columns are sorted correctly"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#step-2-descriptive-analysis",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#step-2-descriptive-analysis",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Step 2: Descriptive Analysis",
+    "text": "Step 2: Descriptive Analysis\nIncludes estimation of the proportions • Computed proportions should almost always be reported with 95% estimated confidence interval • If proportions are confusing as written, can use graphic representation (i.e. bar chart) • Smoking Example: 49.6% (95% CI: (48.1%, 51.0%)) of people assigned male at birth are nonsmokers and 62.5% (95% CI: (61.0%, 63.9%)) of people assigned female at birth are nonsmokers"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#step-3-inferential-tests",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#step-3-inferential-tests",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Step 3: Inferential Tests",
+    "text": "Step 3: Inferential Tests\nTo evaluate the association between the categorical response variable and a categorical independent variable • If only two categories in both variables (Class 1 notes) • Use difference in proportions • If matched-pair, use McNemar’s test • If two variables with 2 or more categories (Today’s Notes) • For nominal categories: Chi-square test, Likelihood Ratio test, or Fisher’s exact test • For one nominal/one ordinal variable: Cochran-Armitage test • For ordinal categories: Mantel-Haenszel test"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#contingency-tables-r-x-c",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#contingency-tables-r-x-c",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Contingency Tables (R x C)",
+    "text": "Contingency Tables (R x C)\n\nR X C contingency tables\n\nContains information for two discrete variables: one has R categories and the other has C categories.\nRefers to the number of rows (R) and number of columns (C) in the table\n\n\n \n\nFor two proportions: focused on 2 X 2 contingency tables\n\nR = 2, C = 2\n\n\n \n\nExpand our contingency tables to variables with 2 or more categories\n\nCategories can be ordinal or nominal"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#contigency-table-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#contigency-table-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Contigency Table: Example",
+    "text": "Contigency Table: Example\nLet’s say we are interested in learning the association between the development of breast cancer and age at first birth. Our first step in our basic analytical procedure is to display the data with a contingency table:\n{fig-align=“center”; width=“400”}\n\nThis is a 2 x 5 contingency table"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-associationtrend-of-r-x-c-contingency-table",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-associationtrend-of-r-x-c-contingency-table",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test Association/Trend of R X C Contingency Table",
+    "text": "Test Association/Trend of R X C Contingency Table\n \n\n\nIf both variables are nominal, a test of general association will be sufficient\n\nTest of general association is the same regardless of R and C\nTest used for 2x2 contingency table same as 5x3 contingency table\nWe will cover:\n\nChi-squared test\nFisher Exact test\n\n\n\n\n\nIf one or both variables are ordinal, a test of trend may be of interest\n\nTreats ordinal variables as quantitative rather than qualitative (nominal scale)\nTest of trend has greater power than the test of general association\nWe will cover:\n\nCochran-Armitage test\nMantel-Haenszel test"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-5",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-5",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-strong-heart-study",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-strong-heart-study",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Example: Strong Heart Study",
+    "text": "Example: Strong Heart Study\n\n\nThe Strong Heart Study is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND) to study prevalence and incidence of cardiovascular disease and to identify risk factors. We will be examining the 4-year cumulative incidence of diabetes with one risk factor, glucose tolerance.\n \n\nImpaired glucose: normal or impaired glucose tolerance at baseline visit (between 1988 and 1991)\n \nDiabetes: Indicator of diabetes at follow-up visit (roughly four years after baseline) according to two-hour oral glucose tolerance test"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-strong-heart-study-12",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-strong-heart-study-12",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Example: Strong Heart Study (1/2)",
+    "text": "Example: Strong Heart Study (1/2)\n\n\nThe Strong Heart Study is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND) to study prevalence and incidence of cardiovascular disease and to identify risk factors. We will be examining the 4-year cumulative incidence of diabetes with one risk factor, glucose tolerance.\n \n\nImpaired glucose: normal or impaired glucose tolerance at baseline visit (between 1988 and 1991)\n \nDiabetes: Indicator of diabetes at follow-up visit (roughly four years after baseline) according to two-hour oral glucose tolerance test"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-strong-heart-study-22",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#example-strong-heart-study-22",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Example: Strong Heart Study (2/2)",
+    "text": "Example: Strong Heart Study (2/2)\nThere is a total of 1664 American Indians in the dataset, with the following distribution of folks with diabetes and glucose tolerance:\n \n\n\n\n#shs_data = read.csv(file = here(\"./data/SHS_data.csv\"))\n\n\nSHS = tibble(Diabetes = c(rep(\"Not diabetic\", \n                   1338), \n                   rep(\"Diabetic\", 326)),\n              Glucose = c(rep(\"Normal\", \n                  1004),#Not diabetic\n          rep(\"Impaired\", 334),\n          rep(\"Normal\", \n              128), #Diabetic\n          rep(\"Impaired\", 198)))\n\n\n\n\nDisplaying the contingency table in R\nSHS %&gt;% tabyl(Glucose, Diabetes) %&gt;% \n  adorn_totals(where = c(\"row\", \"col\")) %&gt;% \n  gt() %&gt;% \n  tab_stubhead(label = \"Glucose Impairment\") %&gt;%\n  tab_spanner(label = \"Diabetes\", \n              columns = c(\"Not diabetic\", \"Diabetic\")) %&gt;%\n  tab_options(table.font.size = 45)\n\n\n\n\n\n\n  \n    \n    \n      Glucose\n      \n        Diabetes\n      \n      Total\n    \n    \n      Not diabetic\n      Diabetic\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#section-2",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#section-2",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "",
+    "text": "Strong Heart Study\n\n\nWhat is the difference in proportions for American Indians that have diabetes comparing individuals with normal vs. impaired glucose?\n\n\nNeeded steps:\n\nEstimate the difference in proportions\nCheck that each cell has at least 10 individuals\nConstruct 95% confidence interval\nWrite interpretation of estimate"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#section-3",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#section-3",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "",
+    "text": "Strong Heart Study\n\n\nWhat is the difference in proportions for American Indians that have diabetes comparing individuals with normal vs. impaired glucose?\n\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose\n      \n        Diabetes\n      \n      Total\n    \n    \n      Not diabetic\n      Diabetic\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\nEstimate the difference in proportions \\[ \\widehat{p}_1 -\\widehat{p}_2 = \\dfrac{198}{532} - \\dfrac{128}{1132} = 0.2591\\]\nCheck that each cell has at least 10 individuals\n\n\n\nConstruct 95% confidence interval\n\n\nprop.test(x = table(SHS$Glucose, SHS$Diabetes), \n          correct = T)\n\n\n    2-sample test for equality of proportions with continuity correction\n\ndata:  table(SHS$Glucose, SHS$Diabetes)\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16\nalternative hypothesis: two.sided\n95 percent confidence interval:\n 0.2126963 0.3055162\nsample estimates:\n   prop 1    prop 2 \n0.3721805 0.1130742 \n\n\n\nWrite interpretation of estimate\n\nThe estimated difference in proportion of diabetic American Indians comparing is 0.259 (95% CI: 0.213, 0.306).\nAdditional interpretation of CI: We are 95% confident that the difference in (population) proportions of American Indians who have normal glucose tolerance and impaired glucose tolerance that developed diabetes is between 0.213 and 0.306."
+  },
+  {
+    "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html",
+    "href": "lectures/01_File_Organization_R/01_File_Organization_R.html",
+    "title": "Lesson 1: File Organization within R",
+    "section": "",
+    "text": "We all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#basic-analytic-procedures",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#basic-analytic-procedures",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Basic Analytic Procedures",
+    "text": "Basic Analytic Procedures\nGeneral procedure:\n \n\nPresent observed data\n\n \n\nDescriptive analysis\n\n \n\nInferential tests"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-shs-example-12",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-shs-example-12",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: SHS Example (1/2)",
+    "text": "Test of General Association: SHS Example (1/2)\n\nMain question: Do American Indians with impaired glucose tolerance have a different incidence of diabetes?\n\nIs glucose tolerance associated with diabetes incidence among American Indians?\n\nWe have two variables, and both variables have two nominal categories\n\nDiabetes outcome: Not diabetic and Diabetic\nGlucose tolerance: Normal or Impaired\n\nAnswer research question with a test of general association\nHypothesis:\n\n\\(H_0\\) : no association between glucose tolerance and diabetes\n\\(H_1\\) : association exists between glucose tolerance and diabetes"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-shs-example-22",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-shs-example-22",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: SHS Example (2/2)",
+    "text": "Test of General Association: SHS Example (2/2)\n\nMain question: Do American Indians with impaired glucose tolerance have a different incidence of diabetes?\n\nIs glucose tolerance associated with diabetes incidence among American Indians?\n\nStart with the 2x2 contingency table\nWe have two variables, and both variables have two nominal categories\n\nDiabetes outcome: Not diabetic and Diabetic\nGlucose tolerance: Normal or Impaired\n\nAnswer research question with a test of general association"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-shs-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-shs-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: SHS Example",
+    "text": "Test of General Association: SHS Example\n\nMain question: Do American Indians with impaired glucose tolerance have a different incidence of diabetes?\n\nIs glucose tolerance associated with diabetes incidence among American Indians?\n\nWe have two variables, and both variables have two nominal categories\n\nDiabetes outcome: Not diabetic and Diabetic\nGlucose tolerance: Normal or Impaired\n\n\n \n\nAnswer research question with a test of general association\nHypothesis:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes / Glucose tolerance and diabetes are independent\n\\(H_1\\) : There is an association between glucose tolerance and diabetes / Glucose tolerance and diabetes are not independent"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association",
+    "text": "Test of General Association\n\nWe have three options for testing general association:\n\nChi-squared test\nLikelihood Ratio test (LRT)\nFisher’s Exact test"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#expected-cell-counts",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#expected-cell-counts",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Expected Cell Counts",
+    "text": "Expected Cell Counts\n\nIs the sample size big enough for the chi-square test to be adequate? Expected cell counts?\nIf you want an explanation of how to calculate by hand, please see Vu and Harringtion TB (section 8.3.1, page 405)\nToo time consuming for this class, but R does it quickly using the"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-hypothesis-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-hypothesis-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Cochran-Armitage test: Hypothesis Test",
+    "text": "Test of Trend: Cochran-Armitage test: Hypothesis Test\n\n\n\n\nNull Hypothesis (\\(H_0\\))\n\n\nThe proportions of successes are the same across all C ordinal values of the explanatory variable. \\[p_1 = p_2 = ... = p_C\\]\n\n\n\n\n\nAlternative Hypothesis (\\(H_1\\))\n\n\nThe proportions of successes tend to increase as ordinal value of the explanatory variable increases\n\\[p_1 \\leq p_2 \\leq ... \\leq p_C\\]\nOR\nThe proportions of successes tend to decrease as ordinal value of the explanatory variable increases\n\\[p_1 \\geq p_2 \\geq ... \\geq p_C\\]"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Cochran-Armitage test: Process",
+    "text": "Test of Trend: Cochran-Armitage test: Process\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Cochran-Armitage test in R\n\nWe will not discuss the test statistic’s equation\nJust know it follows a Normal distribution\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Cochran-Armitage test: Example",
+    "text": "Test of Trend: Cochran-Armitage test: Example\nWe are interested in learning the association between the development of breast cancer and age at first birth among people who have given birth"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-example-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-example-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Cochran-Armitage test: Example",
+    "text": "Test of Trend: Cochran-Armitage test: Example\n\nBefore we go into the hypothesis test procedure, we need to construct the contingency table in R\n\n\nCancer = c(320, 1206, 1011, 463, 220)\nNo_Cancer = c(1422, 4432, 2893, 1092, 406)\nbscancer = matrix (c(Cancer, No_Cancer), nrow = 2, byrow = T)\nrownames(bscancer) = c(\"Cancer\",\"No Cancer\")\ncolnames(bscancer) = c(\"&lt;20\",\"20-24\",\"25-29\",\"30-34\",\"&gt;=35\")\nbscancer\n\n           &lt;20 20-24 25-29 30-34 &gt;=35\nCancer     320  1206  1011   463  220\nNo Cancer 1422  4432  2893  1092  406\n\n\n\nIt does not need to be pretty to use in function"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-example-2",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-cochran-armitage-test-example-2",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Cochran-Armitage test: Example",
+    "text": "Test of Trend: Cochran-Armitage test: Example\n\n\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\): The proportions of breast cancer are the same for all age levels of first birth. \\[p_1 = p_2 = ... = p_5\\]\n\\(H_1\\): The proportions of breast cancer tends to increase as level of age of first birth increases\n\n\n\\[p_1 \\leq p_2 \\leq ... \\leq p_5\\]\n\n\nCalculate the test statistic and p-value for Cochran-Armitage test in R\n\n\nlibrary(DescTools)\nCochranArmitageTest(bscancer)\n\n\n    Cochran-Armitage test for trend\n\ndata:  bscancer\nZ = 11.358, dim = 5, p-value &lt; 2.2e-16\nalternative hypothesis: two.sided\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that proportions of breast cancer are the same for all age levels of first birth (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that the proportion of of breast cancer increase as the the age at first birth increases."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Mantel-Haenszel test: Process",
+    "text": "Test of Trend: Mantel-Haenszel test: Process\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Mantel-Haenszel test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Mantel-Haenszel test: Example",
+    "text": "Test of Trend: Mantel-Haenszel test: Example\nA water treatment company is studying water additives and investigating how they affect clothes washing. The treatments studies where no treatment (plain water), the standard treatment, and a double dose of the standard treatment, called super. Washability was measured as low, medium and high. Are levels of washability associated with treatment?"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-example-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-example-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Mantel-Haenszel test: Example",
+    "text": "Test of Trend: Mantel-Haenszel test: Example\n\nBefore we go into the hypothesis test procedure, we need to construct the contingency table in R\n\n\nwater = matrix (c(27, 14, 5, 10, 17, 26, 5, 12, 50), nrow = 3, byrow = T)\nrownames(water) = c(\"plain\",\"standard\",\"super\")\ncolnames(water) = c(\"low\",\"medium\",\"high\")\nwater\n\n         low medium high\nplain     27     14    5\nstandard  10     17   26\nsuper      5     12   50\n\n\n\nIt does not need to be pretty to use in function"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-example-2",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-trend-mantel-haenszel-test-example-2",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of Trend: Mantel-Haenszel test: Example",
+    "text": "Test of Trend: Mantel-Haenszel test: Example\n\n\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\): Water treatment and washability are not correlated. \\[ \\rho = 0\\]\n\\(H_1\\): Water treatment and washability are correlated.\n\n\n\\[ \\rho \\neq 0\\]\n\n\nCalculate the test statistic and p-value for Mantel-Haenszel test in R\n\n\nlibrary(DescTools)\nMHChisqTest(water)\n\n\n    Mantel-Haenszel Chi-Square\n\ndata:  water\nX-squared = 50.602, df = 1, p-value = 1.132e-12\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that there is no correlation between washability and water treatment (\\(p = 1.13 \\cdot 10^{-12} &lt; 0.05\\)). There is sufficient evidence that level of water treatment is associated with washability."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-have-we-learned-today",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#what-have-we-learned-today",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "What have we learned today?",
+    "text": "What have we learned today?"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-chi-squared-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-chi-squared-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: Chi-squared test",
+    "text": "Test of General Association: Chi-squared test\n\nTest to see how likely is it that we observe our data given the null hypothesis (no association)\n\n \n\nWe use the null to calculate the expected cell counts and compare them to the observed cell counts\n\n \n\nRequirements to conduct Chi-squared test\n\nFor 2 x 2 contingency table:\n\nNo expected cell counts should be less than 10\n\nFor contingency table with 3x2, 3x3, 4x4, etc.:\n\nNo more than 20% of expected cell counts are less than 5\nNo expected cell counts are less than 1"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-expected-cell-counts",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-expected-cell-counts",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Chi-squared test: Expected Cell Counts",
+    "text": "Chi-squared test: Expected Cell Counts\n\nIs the sample size big enough for the chi-square test to be adequate? What are the expected cell counts?\n\n \n\nIf you want an explanation of how to calculate by hand, please see Vu and Harringtion TB (section 8.3.1, page 405)\n\n \n\nToo time consuming for this class, but R does it quickly using the expected() function in the epitools package"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-expected-cell-counts-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-expected-cell-counts-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Chi-squared test: Expected Cell Counts",
+    "text": "Chi-squared test: Expected Cell Counts\n\nIn the Strong Heart Study…\n\n\nSHS_table = table(SHS$Glucose, SHS$Diabetes)\nSHS_table\n\n          \n           Diabetic Not diabetic\n  Impaired      198          334\n  Normal        128         1004\n\nlibrary(epitools)\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\n \n\n\n\n\n\nAll expected counts &gt; 5"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-chi-squared-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-chi-squared-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: Chi-squared test: Process",
+    "text": "Test of General Association: Chi-squared test: Process\n\nCheck that the expected cell counts threshold is met\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-shs-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-shs-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Chi-squared test: SHS Example",
+    "text": "Chi-squared test: SHS Example\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\nAll expected cells are greater than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes\n\\(H_1\\) : There is an association between glucose tolerance and diabetes\n\n\n\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\n\nchisq.test(x = SHS_table, correct = T)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  SHS_table\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that glucose tolerance and diabetes are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-fisher-exact-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#test-of-general-association-fisher-exact-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Test of General Association: Fisher Exact test: Process",
+    "text": "Test of General Association: Fisher Exact test: Process\n\nCheck the expected cell counts\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Fisher Exact test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#fisher-exact-test-shs-example-not-appropriate-use-of-fisher-exact-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#fisher-exact-test-shs-example-not-appropriate-use-of-fisher-exact-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Fisher Exact test: SHS Example (not appropriate use of Fisher Exact test)",
+    "text": "Fisher Exact test: SHS Example (not appropriate use of Fisher Exact test)\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\nAll expected cells are greater than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes\n\\(H_1\\) : There is an association between glucose tolerance and diabetes\n\n\n\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\n\nfisher.test(x = SHS_table)\n\n\n    Fisher's Exact Test for Count Data\n\ndata:  SHS_table\np-value &lt; 2.2e-16\nalternative hypothesis: true odds ratio is not equal to 1\n95 percent confidence interval:\n 3.576595 6.048639\nsample estimates:\nodds ratio \n  4.644825 \n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that glucose tolerance and diabetes are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#contingency-table-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#contingency-table-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Contingency Table: Example",
+    "text": "Contingency Table: Example\nLet’s say we are interested in learning the association between the development of breast cancer and age at first birth. Our first step is typically to present the observed data:\n\n\nThis is a 2 x 5 contingency table"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-4",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#poll-everywhere-question-4",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Chi-squared test",
+    "text": "Chi-squared test\n\nTest to see how likely is it that we observe our data given the null hypothesis (no association)\n\n \n\nWe use the null to calculate the expected cell counts and compare them to the observed cell counts\n\n \n\nRequirements to conduct Chi-squared test (expected cell counts)\n\nFor 2 x 2 contingency table:\n\nNo expected cell counts should be less than 10\n\nFor contingency table with 3x2, 3x3, 4x4, etc.:\n\nNo more than 20% of expected cell counts are less than 5\nNo expected cell counts are less than 1"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#chi-squared-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Chi-squared test: Process",
+    "text": "Chi-squared test: Process\n\nCheck that the expected cell counts threshold is met\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#fishers-exact-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#fishers-exact-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Fisher’s Exact Test",
+    "text": "Fisher’s Exact Test\n\nOnly necessary when expected counts in one or more cells is less than 5\nGiven row and column totals fixed, computes exact probability that we observe our data or more extreme data\nConsider a general 2 x 2 table:\n\n\n\nThe exact probability of observing a table with cells (a, b, c, d) can be computed based on the hypergeometric distribution\n\n\\[P(a, b, c, d) = \\dfrac{(a+b)!\\cdot(c+d)!\\cdot(a+c)!\\cdot(b+d)!}{n!\\cdot a!\\cdot b!\\cdot c!\\cdot d!}\\]\n\nNumerator is fixed and denominator changes"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#fisher-exact-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#fisher-exact-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Fisher Exact test: Process",
+    "text": "Fisher Exact test: Process\n\nCheck the expected cell counts\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Fisher Exact test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#fishers-exact-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#fishers-exact-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Fisher’s Exact test: Process",
+    "text": "Fisher’s Exact test: Process\n\nCheck the expected cell counts\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Fisher Exact test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#fishers-exact-test-shs-example-not-appropriate-use-of-fishers-exact",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#fishers-exact-test-shs-example-not-appropriate-use-of-fishers-exact",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Fisher’s Exact test: SHS Example (not appropriate use of Fisher’s Exact)",
+    "text": "Fisher’s Exact test: SHS Example (not appropriate use of Fisher’s Exact)\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\nWe’re going to pretend they are less than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes\n\\(H_1\\) : There is an association between glucose tolerance and diabetes\n\n\n\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\n\nfisher.test(x = SHS_table)\n\n\n    Fisher's Exact Test for Count Data\n\ndata:  SHS_table\np-value &lt; 2.2e-16\nalternative hypothesis: true odds ratio is not equal to 1\n95 percent confidence interval:\n 3.576595 6.048639\nsample estimates:\nodds ratio \n  4.644825 \n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that glucose tolerance and diabetes are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Cochran-Armitage test",
+    "text": "Cochran-Armitage test\n\nCochran-Armitage test for trend will determine if there is association between a binary response variable and an ordinal variable with 3 or more categories\n\n \n\nIt will test the trend of the proportions over the ordinal variable\n\nAnswers the question: Does the proportion of people with a “successful” outcome increase as the ordinal explanatory variable increases?\n\n\n \n\nCochran-Armitage test for trend is only suitable for 2 x C contingency tables"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-hypothesis-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-hypothesis-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Cochran-Armitage test: Hypothesis Test",
+    "text": "Cochran-Armitage test: Hypothesis Test\n\n\n\n\nNull Hypothesis (\\(H_0\\))\n\n\nThe proportions of successes are the same across all C ordinal values of the explanatory variable. \\[p_1 = p_2 = ... = p_C\\]\n\n\n\n\n\nAlternative Hypothesis (\\(H_1\\))\n\n\nThe proportions of successes tend to increase as ordinal value of the explanatory variable increases\n\\[p_1 \\leq p_2 \\leq ... \\leq p_C\\]\nOR\nThe proportions of successes tend to decrease as ordinal value of the explanatory variable increases\n\\[p_1 \\geq p_2 \\geq ... \\geq p_C\\]"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-example-13",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-example-13",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Cochran-Armitage test: Example (1/3)",
+    "text": "Cochran-Armitage test: Example (1/3)\nWe are interested in learning the association between the development of breast cancer and age at first birth among people who have given birth"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-example-23",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-example-23",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Cochran-Armitage test: Example (2/3)",
+    "text": "Cochran-Armitage test: Example (2/3)\n\nBefore we go into the hypothesis test procedure, we need to construct the contingency table in R\n\n\nCancer = c(320, 1206, 1011, 463, 220)\nNo_Cancer = c(1422, 4432, 2893, 1092, 406)\nbscancer = matrix (c(Cancer, No_Cancer), nrow = 2, byrow = T)\nrownames(bscancer) = c(\"Cancer\",\"No Cancer\")\ncolnames(bscancer) = c(\"&lt;20\",\"20-24\",\"25-29\",\"30-34\",\"&gt;=35\")\nbscancer\n\n           &lt;20 20-24 25-29 30-34 &gt;=35\nCancer     320  1206  1011   463  220\nNo Cancer 1422  4432  2893  1092  406\n\n\n\nIt does not need to be pretty to use in function"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-example-33",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-example-33",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Cochran-Armitage test: Example (3/3)",
+    "text": "Cochran-Armitage test: Example (3/3)\n\n\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\): The proportions of breast cancer are the same for all age levels of first birth. \\[p_1 = p_2 = ... = p_5\\]\n\\(H_1\\): The proportions of breast cancer tends to increase as level of age of first birth increases\n\n\n\\[p_1 \\leq p_2 \\leq ... \\leq p_5\\]\n\n\nCalculate the test statistic and p-value for Cochran-Armitage test in R\n\n\nlibrary(DescTools)\nCochranArmitageTest(bscancer)\n\n\n    Cochran-Armitage test for trend\n\ndata:  bscancer\nZ = 11.358, dim = 5, p-value &lt; 2.2e-16\nalternative hypothesis: two.sided\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that proportions of breast cancer are the same for all age levels of first birth (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that the proportion of of breast cancer increase as the the age at first birth increases."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#cochran-armitage-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Cochran-Armitage test: Process",
+    "text": "Cochran-Armitage test: Process\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Cochran-Armitage test in R\n\nWe will not discuss the test statistic’s equation\nJust know it follows a Normal distribution\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test",
+    "text": "Mantel-Haenszel test\n\nWhen both variables are ordinal, we can conduct Mantel-Haenszel test of trend for linear association\nMantel-Haenszel test for linear trend is suitable for any R x C contingency tables with two ordinal variables\nHypothesis test:\n\n\n\n\n\nNull Hypothesis (\\(H_0\\))\n\n\nThere is no correlation between the two variables \\[ \\rho = 0\\]\n\n\n\n\n\nAlternative Hypothesis (\\(H_1\\))\n\n\nThere is correlation between the two variables\n\\[ \\rho \\neq 0\\]"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-process",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-process",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Process",
+    "text": "Mantel-Haenszel test: Process\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Mantel-Haenszel test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Example",
+    "text": "Mantel-Haenszel test: Example\nA water treatment company is studying water additives and investigating how they affect clothes washing. The treatments studies where no treatment (plain water), the standard treatment, and a double dose of the standard treatment, called super. Washability was measured as low, medium and high. Are levels of washability associated with treatment?"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-1",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-1",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Example",
+    "text": "Mantel-Haenszel test: Example\n\nBefore we go into the hypothesis test procedure, we need to construct the contingency table in R\n\n\nwater = matrix (c(27, 14, 5, 10, 17, 26, 5, 12, 50), nrow = 3, byrow = T)\nrownames(water) = c(\"plain\",\"standard\",\"super\")\ncolnames(water) = c(\"low\",\"medium\",\"high\")\nwater\n\n         low medium high\nplain     27     14    5\nstandard  10     17   26\nsuper      5     12   50\n\n\n\nIt does not need to be pretty to use in function"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-2",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-2",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Example",
+    "text": "Mantel-Haenszel test: Example\n\n\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\): Water treatment and washability are not correlated. \\[ \\rho = 0\\]\n\\(H_1\\): Water treatment and washability are correlated.\n\n\n\\[ \\rho \\neq 0\\]\n\n\nCalculate the test statistic and p-value for Mantel-Haenszel test in R\n\n\nlibrary(DescTools)\nMHChisqTest(water)\n\n\n    Mantel-Haenszel Chi-Square\n\ndata:  water\nX-squared = 50.602, df = 1, p-value = 1.132e-12\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that there is no correlation between washability and water treatment (\\(p = 1.13 \\cdot 10^{-12} &lt; 0.05\\)). There is sufficient evidence that level of water treatment is associated with washability."
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-13",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-13",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Example (1/3)",
+    "text": "Mantel-Haenszel test: Example (1/3)\nA water treatment company is studying water additives and investigating how they affect clothes washing (through measurements of abrasions, wearing, and color loss).\nThe treatments studies where no treatment (plain water), the standard treatment, and a double dose of the standard treatment, called super. Washability was measured as low, medium and high.\nAre levels of washability associated with treatment?"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-23",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-23",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Example (2/3)",
+    "text": "Mantel-Haenszel test: Example (2/3)\n\nBefore we go into the hypothesis test procedure, we need to construct the contingency table in R\n\n\nwater = matrix (c(27, 14, 5, 10, 17, 26, 5, 12, 50), nrow = 3, byrow = T)\nrownames(water) = c(\"plain\",\"standard\",\"super\")\ncolnames(water) = c(\"low\",\"medium\",\"high\")\nwater\n\n         low medium high\nplain     27     14    5\nstandard  10     17   26\nsuper      5     12   50\n\n\n\nIt does not need to be pretty to use in function"
+  },
+  {
+    "objectID": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-33",
+    "href": "lectures/02_Intro_CDA/02_Intro_CDA.html#mantel-haenszel-test-example-33",
+    "title": "Lesson 2: Introduction to Categorical Data Analysis",
+    "section": "Mantel-Haenszel test: Example (3/3)",
+    "text": "Mantel-Haenszel test: Example (3/3)\n\n\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\): Water treatment and washability are not correlated. \\[ \\rho = 0\\]\n\\(H_1\\): Water treatment and washability are correlated.\n\n\n\\[ \\rho \\neq 0\\]\n\n\nCalculate the test statistic and p-value for Mantel-Haenszel test in R\n\n\nlibrary(DescTools)\nMHChisqTest(water)\n\n\n    Mantel-Haenszel Chi-Square\n\ndata:  water\nX-squared = 50.602, df = 1, p-value = 1.132e-12\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that there is no correlation between washability and water treatment (\\(p = 1.13 \\cdot 10^{-12} &lt; 0.05\\)). There is sufficient evidence that level of water treatment is associated with washability."
   }
 ]
