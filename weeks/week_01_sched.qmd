@@ -70,6 +70,16 @@ For the slides, once they are opened, if you would like to print or save them as
 
 ## Muddiest Points
 
+### 1. Why does the test of trend treat ordinal variables as quantitative rather than qualitative?
+
+When we treat something as qualitative, we can only look at differences between groups. This means we cannot rank the groups and look at the change across groups. By treating the ordinal variables as quantitative, we can look at the change as we move from one group to another (and over all the ranked categories).
+
+### 2. Organizing the tests in a tree
+
+Here's a organizational tree that I [took from Meike](https://niederhausen.github.io/BSTA_511_F23/slides_md/Day13_bsta511_md.html#where-are-we-categorical-outcome-zoomed-in) and expanded:
+
+![](week_01/test_organization.png){fig-align="center"}
+
 ```{r}
 #| echo: false
 
