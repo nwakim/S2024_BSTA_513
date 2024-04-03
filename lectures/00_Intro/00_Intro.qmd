@@ -50,7 +50,7 @@ At the end of this course, students should be able to...
 
     -   No need to tell me if you cannot make class
 
--   [Here is the link to our site!](https://echo360.org/section/3d2de378-ed40-415a-8caf-8c75f3b5d9ff/public) I'll keep posting it on the weekly pages
+-   [Here is the link to our site!](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public) I'll keep posting it on the weekly pages
 
     -   Currently a public link, but working on getting everyone an account so we can make it private
 
@@ -89,7 +89,7 @@ countdown::countdown(5)
 -   Assessment breakdown is the same
 
 |                           |                        |                          |                                          |                                          |
-|:-------------------------:|:----------------------:|:------------------------:|:----------------------------------------:|:----------------------------------------:|
+|:------------:|:------------:|:------------:|:-------------:|:-------------:|
 |    **Course activity**    | **Type of Assessment** |       **Due Date**       | **Percentage of final grade (BSTA 513)** | **Percentage of final grade (BSTA 613)** |
 |         Homework          |       Formative        |     Every 1-2 weeks      |                   33%                    |                   28%                    |
 |          Quizzes          |       Summative        |     4/22, 5/13, 6/3      |                   25%                    |                   25%                    |
