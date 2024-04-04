@@ -78,15 +78,15 @@ library(here)
 
 ## What is Categorical Data Analysis?
 
--   In BSTA 512/612 (linear regression), we focused on [continuous responses/outcomes]{style="color:#34AC8B; font-weight: bold;"}
+-   In BSTA 512/612 (linear regression), we focused on [continuous responses/outcomes]{style="color:#70AD47; font-weight: bold;"}
 
-    -   We included [categorical variables only as covariates]{style="color:#34AC8B; font-weight: bold;"} (aka predictors, independent variables, explanatory variables)
+    -   We included [categorical variables only as covariates]{style="color:#70AD47; font-weight: bold;"} (aka predictors, independent variables, explanatory variables)
 
     -   Examples from 512/612: life expectancy (in years), IAT score (ranging from -2 to 2)
 
    
 
--   Categorical data analysis focuses on the statistical methods for [categorical responses/outcomes]{style="color:#213c96; font-weight: bold;"}
+-   Categorical data analysis focuses on the statistical methods for [categorical responses/outcomes]{style="color:#4472C4; font-weight: bold;"}
 
     -   Explanatory (or ‘independent’) variable can be of any type (continuous or categorical)
 
@@ -100,7 +100,7 @@ library(here)
 
 ## What does this course cover?
 
--   Strategies for assessing association between categorical response variable and a [one explanatory variable]{style="color:#34AC8B; font-weight: bold;"}
+-   Strategies for assessing association between categorical response variable and a [one explanatory variable]{style="color:#70AD47; font-weight: bold;"}
 
     -   Hypothesis testing
     -   Measure of association
@@ -108,7 +108,7 @@ library(here)
 
    
 
--   Statistical modeling strategies for assessing association between the categorical response variable and a [set of explanatory variables]{style="color:#213c96; font-weight: bold;"}
+-   Statistical modeling strategies for assessing association between the categorical response variable and a [set of explanatory variables]{style="color:#4472C4; font-weight: bold;"}
 
     -   Logistic regression
 
@@ -174,14 +174,14 @@ library(here)
 
 ## Binomial Distribution: R commands
 
-R commands with their [input]{style="color:#34AC8B"} and [output]{style="color:#213c96"}:
+R commands with their [input]{style="color:#70AD47"} and [output]{style="color:#4472C4"}:
 
 | R code     | What does it return?                                                                                                         |
 |--------------------|----------------------------------------------------|
-| `rbinom()` | returns [sample of random variables]{style="color:#213c96"} with [specified binomial distribution]{style="color:#34AC8B"}    |
-| `dbinom()` | returns [probability]{style="color:#213c96"} of getting [certain number of successes]{style="color:#34AC8B"}                 |
-| `pbinom()` | returns [cumulative probability]{style="color:#213c96"} of getting [certain number or less]{style="color:#34AC8B"} successes |
-| `qbinom()` | returns [number of successes]{style="color:#213c96"} corresponding to [desired quantile]{style="color:#34AC8B"}              |
+| `rbinom()` | returns [sample of random variables]{style="color:#4472C4"} with [specified binomial distribution]{style="color:#70AD47"}    |
+| `dbinom()` | returns [probability]{style="color:#4472C4"} of getting [certain number of successes]{style="color:#70AD47"}                 |
+| `pbinom()` | returns [cumulative probability]{style="color:#4472C4"} of getting [certain number or less]{style="color:#70AD47"} successes |
+| `qbinom()` | returns [number of successes]{style="color:#4472C4"} corresponding to [desired quantile]{style="color:#70AD47"}              |
 
 ## Binomial Distribution Example
 
@@ -569,7 +569,7 @@ Let's say we are interested in learning the association between the development 
 ::: columns
 ::: {.column width="46%"}
 
-If [both variables are nominal]{style="color:#213c96; font-weight: bold;"}, a [test of general association]{style="color:#213c96; font-style: italic;"} will be sufficient
+If [both variables are nominal]{style="color:#4472C4; font-weight: bold;"}, a [test of general association]{style="color:#4472C4; font-style: italic;"} will be sufficient
 
 -   Test of general association is the same regardless of R and C
 -   Test used for 2x2 contingency table same as 5x3 contingency table
@@ -583,7 +583,7 @@ If [both variables are nominal]{style="color:#213c96; font-weight: bold;"}, a [t
 :::
 ::: {.column width="48%"}
 
-If [one or both variables are ordinal]{style="color:#34AC8B; font-weight: bold;"}, a [test of trend]{style="color:#34AC8B; font-style: italic;"} may be of interest
+If [one or both variables are ordinal]{style="color:#70AD47; font-weight: bold;"}, a [test of trend]{style="color:#70AD47; font-style: italic;"} may be of interest
 
 -   Treats ordinal variables as quantitative rather than qualitative (nominal scale)
 -   Test of trend has greater power than the test of general association
@@ -680,21 +680,21 @@ If [one or both variables are ordinal]{style="color:#34AC8B; font-weight: bold;"
 
 ## Chi-squared test: Process
 
-1.  Check that the [**expected cell counts**]{style="color:#34AC8B"} threshold is met
+1.  Check that the [**expected cell counts**]{style="color:#70AD47"} threshold is met
 
-2.  Set the [**level of significance**]{style="color:#34AC8B"} $\alpha$
+2.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
 
-3.  Specify the [**null**]{style="color:#34AC8B"} ( $H_0$ ) and [**alternative**]{style="color:#34AC8B"} ( $H_A$ ) [**hypotheses**]{style="color:#34AC8B"}
+3.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
 
     -   In symbols
     -   In words
     -   Alternative: one- or two-sided?
 
-4.  Calculate the [**test statistic**]{style="color:#34AC8B"} and [**p-value**]{style="color:#34AC8B"} for Chi-squared test in R
+4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Chi-squared test in R
 
     -   We will not discuss the test statistic's equation
 
-5.  Write a [**conclusion**]{style="color:#34AC8B"} to the hypothesis test
+5.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
 
     -   Do we reject or fail to reject $H_0$?
     -   Write a conclusion in the context of the problem
@@ -809,21 +809,21 @@ $$P(a, b, c, d) = \dfrac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{n!\cdot a!\cdo
 
 ## Fisher's Exact test: Process
 
-1.  Check the [**expected cell counts**]{style="color:#34AC8B"}
+1.  Check the [**expected cell counts**]{style="color:#70AD47"}
 
-2.  Set the [**level of significance**]{style="color:#34AC8B"} $\alpha$
+2.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
 
-3.  Specify the [**null**]{style="color:#34AC8B"} ( $H_0$ ) and [**alternative**]{style="color:#34AC8B"} ( $H_A$ ) [**hypotheses**]{style="color:#34AC8B"}
+3.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
 
     -   In symbols
     -   In words
     -   Alternative: one- or two-sided?
 
-4.  Calculate the [**test statistic**]{style="color:#34AC8B"} and [**p-value**]{style="color:#34AC8B"} for Fisher Exact test in R
+4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Fisher Exact test in R
 
     -   We will not discuss the test statistic's equation
 
-5.  Write a [**conclusion**]{style="color:#34AC8B"} to the hypothesis test
+5.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
 
     -   Do we reject or fail to reject $H_0$?
     -   Write a conclusion in the context of the problem
@@ -885,7 +885,7 @@ We reject the null hypothesis that glucose tolerance and diabetes are not associ
 
 ## Test of Trend
 
--   If [one or both variables are ordinal]{style="color:#34AC8B; font-weight: bold;"}, a [test of trend]{style="color:#34AC8B; font-style: italic;"} may be of interest
+-   If [one or both variables are ordinal]{style="color:#70AD47; font-weight: bold;"}, a [test of trend]{style="color:#70AD47; font-style: italic;"} may be of interest
 
     -   Treats ordinal variables as quantitative rather than qualitative (nominal scale)
     -   Test of trend has greater power than the test of general association
@@ -905,7 +905,7 @@ We reject the null hypothesis that glucose tolerance and diabetes are not associ
 
 ## Cochran-Armitage test
 
--   Cochran-Armitage test for trend will determine if there is association between a [binary response variable]{style="color:#34AC8B; font-weight: bold;"} and an [ordinal variable with 3 or more categories]{style="color:#34AC8B; font-weight: bold;"}
+-   Cochran-Armitage test for trend will determine if there is association between a [binary response variable]{style="color:#70AD47; font-weight: bold;"} and an [ordinal variable with 3 or more categories]{style="color:#70AD47; font-weight: bold;"}
 
  
 
@@ -955,20 +955,20 @@ $$p_1 \geq p_2 \geq ... \geq p_C$$
 
 ## Cochran-Armitage test: Process
 
-1.  Set the [**level of significance**]{style="color:#34AC8B"} $\alpha$
+1.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
 
-2.  Specify the [**null**]{style="color:#34AC8B"} ( $H_0$ ) and [**alternative**]{style="color:#34AC8B"} ( $H_A$ ) [**hypotheses**]{style="color:#34AC8B"}
+2.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
 
     -   In symbols
     -   In words
     -   Alternative: one- or two-sided?
 
-3.  Calculate the [**test statistic**]{style="color:#34AC8B"} and [**p-value**]{style="color:#34AC8B"} for Cochran-Armitage test in R
+3.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Cochran-Armitage test in R
 
     -   We will not discuss the test statistic's equation
     -   Just know it follows a Normal distribution
 
-4.  Write a [**conclusion**]{style="color:#34AC8B"} to the hypothesis test
+4.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
 
     -   Do we reject or fail to reject $H_0$?
     -   Write a conclusion in the context of the problem
@@ -1090,19 +1090,19 @@ $$ \rho \neq 0$$
 
 ## Mantel-Haenszel test: Process
 
-1.  Set the [**level of significance**]{style="color:#34AC8B"} $\alpha$
+1.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
 
-2.  Specify the [**null**]{style="color:#34AC8B"} ( $H_0$ ) and [**alternative**]{style="color:#34AC8B"} ( $H_A$ ) [**hypotheses**]{style="color:#34AC8B"}
+2.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
 
     -   In symbols
     -   In words
     -   Alternative: one- or two-sided?
 
-3.  Calculate the [**test statistic**]{style="color:#34AC8B"} and [**p-value**]{style="color:#34AC8B"} for Mantel-Haenszel test in R
+3.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Mantel-Haenszel test in R
 
     -   We will not discuss the test statistic's equation
 
-4.  Write a [**conclusion**]{style="color:#34AC8B"} to the hypothesis test
+4.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
 
     -   Do we reject or fail to reject $H_0$?
     -   Write a conclusion in the context of the problem

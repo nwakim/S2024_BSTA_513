@@ -29,7 +29,7 @@ format:
 
 ## Resources
 
-Below is a table with links to resources. Icons in [orange]{style="color:#E89543;"} mean there is an available file link.
+Below is a table with links to resources. Icons in [blue]{style="color:#5B9BD5;"} mean there is an available file link.
 
 | Lesson | Topic                                |                                                                Slides                                                                |                                                          Annotated Slides                                                           |                                                               Recording(s)                                                               |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|

@@ -417,7 +417,7 @@
     "href": "weeks/week_01_sched.html#resources",
     "title": "Week 1",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n\nIntro to Course\n\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nFor example, in Chrome: I would click on the 3 vertical dots in the top right corner, then click Print, then change the Destination to “Save as PDF.”\nIt doesn’t seem to work well in Safari… Let me know if you’re having trouble.\n\n\nHere is the link to my Poll Everywhere!!"
+    "text": "Resources\nBelow is a table with links to resources. Icons in blue mean there is an available file link.\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n\nIntro to Course\n\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nFor example, in Chrome: I would click on the 3 vertical dots in the top right corner, then click Print, then change the Destination to “Save as PDF.”\nIt doesn’t seem to work well in Safari… Let me know if you’re having trouble.\n\n\nHere is the link to my Poll Everywhere!!"
   },
   {
     "objectID": "weeks/week_01_sched.html#announcements",
@@ -466,21 +466,21 @@
     "href": "weeks/week_02_sched.html#resources",
     "title": "Week 2",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser."
+    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is from a computer internet broswer:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nNote: this process does not work very well on an iPad."
   },
   {
     "objectID": "weeks/week_02_sched.html#on-the-horizon",
     "href": "weeks/week_02_sched.html#on-the-horizon",
     "title": "Week 2",
     "section": "On the Horizon",
-    "text": "On the Horizon"
+    "text": "On the Horizon\n\nHomework 1 due this Thursday!"
   },
   {
     "objectID": "weeks/week_02_sched.html#announcements",
     "href": "weeks/week_02_sched.html#announcements",
     "title": "Week 2",
     "section": "Announcements",
-    "text": "Announcements\n\nWednesday 1/17\n\nOur physical classroom space will be changing…\n\nIt’s a little confusing - our time will be split between three classrooms in the RLSB\n2 are right next to each other\nTo start, our classes for next week are in:\n\non Monday, 1/22: RLSB 3A003B\non Wednesday, 1/22: RLSB 3A003A\n\n\nHW 1 IS NOT DUE THIS WEEK!!! This is my mistake!!\n\nHomework 1 is due 1/25!!\nThe finalized HW1 is finally up! Thank you for your patience!\n\nMuddiest points for Week 1 are added\nOffice hours starting this week!\n\nFirst one is today at 4:30 with Antara\n\nIf you are in 612, the reading assignments are posted\nWanted to clear something up about attendance\n\nIf you miss the exit tickets for less than or equal to 5 classes, your grade will not be impacted\nIf you miss more than 5 exit tickets, then your attendance grade will be affected\n\nAny questions on the lab? (10 minutes)"
+    "text": "Announcements"
   },
   {
     "objectID": "weeks/week_02_sched.html#class-exit-tickets",
@@ -717,8 +717,8 @@
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-onedrive",
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-onedrive",
     "title": "Lesson 1: File Organization within R",
-    "section": "",
-    "text": "We all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+    "section": "Using OneDrive",
+    "text": "Using OneDrive\n\nWe all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "lectures/01_File_Organization_R/01_File_Organization_R.html#now-download-some-data-from-my-the-onedrive",
@@ -753,7 +753,7 @@
     "href": "lectures/01_File_Organization_R/01_File_Organization_R.html#using-here-to-load-data",
     "title": "Lesson 1: File Organization within R",
     "section": "Using here() to load data",
-    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00"
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nLesson 1: File Organization within R"
   },
   {
     "objectID": "homework/HW1.html#questons-part-1",
@@ -1727,5 +1727,362 @@
     "title": "Week 10",
     "section": "",
     "text": "```{css, echo=FALSE} .title{ font-size: 40px; color: #213c96; background-color: #fff; padding: 10px; }\n.description{ font-size: 20px; color: #fff; background-color: #213c96; padding: 10px; } ```"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Review of Test of Association",
+    "text": "Review of Test of Association\nLast week: learned some tests of association for contingency tables • For studies with two independent samples • General association (Chi-squared test, LRT, Fisher’s Exact test) • Test of trends • Cochran-Armitage test • Mantel-Haenszel test • Test of association does not provide an effective measure of association"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#test-of-association-does-not-measure-association",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#test-of-association-does-not-measure-association",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Test of association does not measure association",
+    "text": "Test of association does not measure association"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measures-of-association",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measures-of-association",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measures of Association",
+    "text": "Measures of Association"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#before-we-discuss-each-further",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#before-we-discuss-each-further",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Before we discuss each further…",
+    "text": "Before we discuss each further…"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Risk Difference",
+    "text": "Risk Difference"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference-example",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference-example",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Risk Difference Example",
+    "text": "Risk Difference Example"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#when-is-the-risk-difference-misleading",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#when-is-the-risk-difference-misleading",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "When is the risk difference misleading?",
+    "text": "When is the risk difference misleading?"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relative Risk (RR)",
+    "text": "Relative Risk (RR)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-rr",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-rr",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Log-transformation of RR",
+    "text": "Log-transformation of RR"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-rr-scale",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-rr-scale",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "How do we get back to the RR scale?",
+    "text": "How do we get back to the RR scale?"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relative Risk (RR)",
+    "text": "Relative Risk (RR)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-example",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-example",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relative Risk (RR) Example",
+    "text": "Relative Risk (RR) Example"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-building-up-to-odds-ratio",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-building-up-to-odds-ratio",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Odds (building up to Odds Ratio)",
+    "text": "Odds (building up to Odds Ratio)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Odds Ratio (OR)",
+    "text": "Odds Ratio (OR)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-3",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-3",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Odds Ratio (OR)",
+    "text": "Odds Ratio (OR)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-or",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-or",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Log-transformation of OR",
+    "text": "Log-transformation of OR"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-or-scale",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-or-scale",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "How do we get back to the OR scale?",
+    "text": "How do we get back to the OR scale?"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or-example",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or-example",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Odds Ratio (OR) Example",
+    "text": "Odds Ratio (OR) Example"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-4",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-4",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relationship Between RR and OR",
+    "text": "Relationship Between RR and OR"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#notes-for-odds-ratios",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#notes-for-odds-ratios",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Notes for Odds Ratios",
+    "text": "Notes for Odds Ratios"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "RR in retrospective case-control study",
+    "text": "RR in retrospective case-control study"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#or-in-retrospective-case-control-study",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#or-in-retrospective-case-control-study",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "OR in retrospective case-control study",
+    "text": "OR in retrospective case-control study"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#which-measurement-should-one-use",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#which-measurement-should-one-use",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Which measurement should one use?",
+    "text": "Which measurement should one use?"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-5",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-5",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measuring Agreement",
+    "text": "Measuring Agreement"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Beef Consumption in Survey",
+    "text": "Example: Beef Consumption in Survey"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measuring Agreement",
+    "text": "Measuring Agreement"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Beef Consumption in Survey",
+    "text": "Example: Beef Consumption in Survey"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-6",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-6",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 6",
+    "text": "Poll Everywhere Question 6"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-between-two-raters",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-between-two-raters",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measuring Agreement Between Two Raters",
+    "text": "Measuring Agreement Between Two Raters"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#testing-measuring-agreement",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#testing-measuring-agreement",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Testing Measuring Agreement",
+    "text": "Testing Measuring Agreement"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Beef Consumption",
+    "text": "Example: Beef Consumption"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measurement-of-association-so-far",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measurement-of-association-so-far",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measurement of Association So Far",
+    "text": "Measurement of Association So Far"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#confounding",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#confounding",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Confounding",
+    "text": "Confounding"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measurement-of-association-for-three-way-tables",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measurement-of-association-for-three-way-tables",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measurement of Association for Three-way Tables",
+    "text": "Measurement of Association for Three-way Tables"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-lung-cancer-and-drinking-status",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-lung-cancer-and-drinking-status",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Lung cancer and drinking status",
+    "text": "Example: Lung cancer and drinking status"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#types-of-confounders",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#types-of-confounders",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Types of confounders",
+    "text": "Types of confounders"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-7",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-7",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 7",
+    "text": "Poll Everywhere Question 7"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-scottish-health-heart-study",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-scottish-health-heart-study",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Scottish Health Heart Study",
+    "text": "Example: Scottish Health Heart Study"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#confounding-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#confounding-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Confounding",
+    "text": "Confounding"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#adjusted-or-mantel-haenszel-method",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#adjusted-or-mantel-haenszel-method",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Adjusted OR: Mantel-Haenszel Method",
+    "text": "Adjusted OR: Mantel-Haenszel Method"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#stratified-tables",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#stratified-tables",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Stratified tables",
+    "text": "Stratified tables"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#adjusted-or-mantel-haenszel-method-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#adjusted-or-mantel-haenszel-method-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Adjusted OR: Mantel-Haenszel Method",
+    "text": "Adjusted OR: Mantel-Haenszel Method"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-scottish-health-heart-study-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-scottish-health-heart-study-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Scottish Health Heart Study",
+    "text": "Example: Scottish Health Heart Study"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-7-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-7-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Poll Everywhere Question 7",
+    "text": "Poll Everywhere Question 7"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#cochran-mantel-haenszel-cmh-test",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#cochran-mantel-haenszel-cmh-test",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Cochran-Mantel-Haenszel (CMH) Test",
+    "text": "Cochran-Mantel-Haenszel (CMH) Test"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-scottish-health-heart-study-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-scottish-health-heart-study-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Example: Scottish Health Heart Study",
+    "text": "Example: Scottish Health Heart Study"
   }
 ]
