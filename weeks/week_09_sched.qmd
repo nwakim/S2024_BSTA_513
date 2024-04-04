@@ -1,7 +1,7 @@
 ---
 title: "Week 9"
-description: "Model Selection"
-date: "3/4/2024"
+description: "Model Diagnostics"
+date: "5/27/24"
 date-modified: "today"
 categories: [""]
 format: 
@@ -12,17 +12,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-::: callout-important
-## Room Locations for the week
-
--   On Monday, 3/4,        we will be in **RLSB 3A003 B**
--   On Wednesday, 3/6,  we will be in **RLSB 3A003 A**
-:::
-
 ```{css, echo=FALSE}
 .title{
   font-size: 40px;
-  color: #213c96;
+  color: #C2352F;
   background-color: #fff;
   padding: 10px;
 }
@@ -30,88 +23,30 @@ editor_options:
 .description{
   font-size: 20px;
   color: #fff;
-  background-color: #213c96;
+  background-color: #C2352F;
   padding: 10px;
 }
 ```
 
 ## Resources
 
-+--------+---------------------------------+--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Lesson | Topic                           | Slides                                                                                                       | Annotated Slides                                                                                                                    | Recording                                                                                                                                                                                                                                                                                                                                                                                  |
-+========+=================================+:============================================================================================================:+:===================================================================================================================================:+:==========================================================================================================================================================================================================================================================================================================================================================================================:+
-|        | Quiz, Lab, Mid-quarter feedback | [[{{< iconify ri slideshow-fill size=30px >}}](/slides/Quiz_2_Lab_2.qmd)]{style="color:#f8f5f0;"}            | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/slides_annotated/Quiz2_Lab2_Feedback.pdf)]{style="color:#f8f5f0;"}     | [[{{< iconify mdi video size=34px >}}](https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2FQuiz2%5FLab2%5FFeedback%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview)]{style="color:#f8f5f0;"}     |
-+--------+---------------------------------+--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 12     | Model selection 1               | [[{{< iconify ri slideshow-fill size=30px >}}](/slides/12_Model_selection.qmd)]{style="color:#f8f5f0;"}      | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/slides_annotated/12_Model_selection.pdf)]{style="color:#f8f5f0;"}      | [[{{< iconify mdi video size=34px >}}](https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F12%5FModel%5Fselection%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview)]{style="color:#f8f5f0;"}      |
-|        |                                 |                                                                                                              |                                                                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                            |
-|        |                                 |                                                                                                              |                                                                                                                                     | [[{{< iconify mdi video size=34px >}}](https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F12%5FModel%5Fselection%5F2%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview)]{style="color:#f8f5f0;"}  |
-+--------+---------------------------------+--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 13     | Purposeful Model Selection      | [[{{< iconify ri slideshow-fill size=30px >}}](/slides/13_Purposeful_Selection.qmd)]{style="color:#49A3D1;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/slides_annotated/13_Purposeful_selection.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F13%5FPurposeful%5Fselection%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview)]{style="color:#f8f5f0;"} |
-+--------+---------------------------------+--------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Lesson | Topic  | Slides                                                                | Annotated Slides                                                                   | Recording                                                     |
++========+========+:=====================================================================:+:==================================================================================:+:=============================================================:+
+|        |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
++--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| 12     |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
++--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| 13     |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
++--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
 
 ## On the Horizon
 
--   Lab 3 was due yesterday
-
--   HW 5 is due this Thursday
-
--   Quiz 3 next Monday!!
-
 ## Announcements
-
-### Monday 3/4
-
--   Missing a couple mid-term reviews: 32 reviews and only 29 names
-
--   We'll go through Lesson 12 on Model selection, then dive into purposeful selection (a model selection strategy)
-
-    -   I will be adding more slides to Lesson 13 Purposeful Selection for Wednesday's class
-
-### Wednesday 3/6
-
--   Is there going to be a specific strategy/type of model selection we're supposed to use for the lab/final project? Will that be the focus of Lab 4?
-
--   Lab 3: new formatting was confusing for some
-
-    -   I am sorry that I did not communicate the new formatting in multiple areas
-
-    -   Lab 4 will follow the same format
-
-        -   The course website will contain thorough, guided instructions
-
-        -   The file that you will download and edit will only contain the direct tasks that I want you to complete.
-
--   Quiz 3 info
-
-    -   Will cover Lesson 10 - 11: categorical covariates to interactions
-
-    -   I'm thinking this one will be a litter shorter since there's less material
-
-    -   Will still have the 50 min for the quiz
-
-    -   Includes HW 4 and 5
-
-        -   Will include interpretations of interactions!
-
--   Next week
-
-    -   Quiz
-
-    -   Finish Purposeful Selection (probably)
-
-    -   One more lecture on Diagnostics in MLR
-
--   Last week (3/18)
-
-    -   Meeting ONLY on 3/18
-
-    -   That class will be fully dedicated to help on the Project report!
 
 ## Class Exit Tickets
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURFZJMldXSEQ0SlhTMkozSEFNUkJCWVdPNC4u)]{style="color:#f8f5f0;"} Monday (3/4)
-
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQjI1OEJDUDdYWkVVU1BURUhSR1hDVlAwNC4u)]{style="color:#f8f5f0;"} Wednesday (3/6)
+[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/29)
 
 ## Muddiest Points
 
@@ -122,71 +57,3 @@ This will be filled in with your Exit Ticket responses.
 
 g=3
 ```
-
-### 1. In CIE, why this assumes a 10% difference indicates confounding and not effect measure modification
-
-A 10% difference can also indicate an interaction, but we would need to see the difference when we include the interaction. I think I was specifically talking about including variables, which typically means I am only including their main effects. With main effects, we can test for confounding, but not interactions. That's all! We can separately test for interactions using the same 10% criterion.
-
-### 2. "Any variables not selected for the final model have still been adjusted for, since they had a chance to be in the model" How are they adjusted for when they aren't?
-
-I feel your confusion. These variables have not been explicitly adjusted for in the model, more implicitly. If a variable is not selected that means it does not predict our outcome well and/or it does not affect other variables' relationship with the outcome. That means we tried to adjust for it, but it has no effect, so we have technically adjusted for something that does not change our model.
-
-An example is probably best. Let's say we're looking at treatment effect. We measured the weather on the day that someone went in for treatment. We have a variable on whether it was cloudy or not. That variable was not selected in the model because the cloudiness has no effect on the treatment, but we allowed it to be a potential covariate. This is different than a variable that may not have an effect but was not measured. We cannot say we adjusted for something like shirt color during treatment because we haven't actually tested it.
-
-### 3. Difference between stepwise and change in estimate approach?
-
-Stepwise is an automatic selection process that only requires us to put our dataset in a function which will return the "optimal" model. It also based only on the p-values of coefficients in the model. In CIE, we are manually including and excluding variables, and checking for a change in a coefficient estimate, instead of a significant p-value. A big change in a coefficient estimate is not necessarily accompanied by a significant p-value.
-
-### 4. How does having fewer covariates cause a more biased estimate? (and what does it mean for $\widehat\beta$ to be biased for $\beta$?)
-
-Fewer covariates in our model means we likely not capturing the complex relationship between our outcome and our variables. If we leave out a variable that is an important predictor of the outcome, then the coefficients of all the variables that made it into the model will be a little biased. (Because we are not capturing the true, underlying model).
-
-For example, let's say I am analyzing data for a study on dementia. Dementia is my outcome and I include a few variables in my model, such as whether or not you live with someone, depression, and physical activity. However, I leave out age, which is known to have high association with dementia. I have left out an important variable that may be a confounder or effect modifier of the variables in the model. Thus, the estimates of coefficients in the model will be biased.
-
-The less variables in the model, the more likely we are leaving out a variable that would help predict our outcome. We can counter this by trying to select the best model!
-
-Second part of the question: $\widehat\beta$ is a biased estimate for $\beta$ means that the estimated value, $\widehat\beta$, is not close to the true, underlying $\beta$. We work under the assumption that there is some true relationship between our covariates and our outcome, and we are trying to uncover the true value by estimating it. However, our estimate may not be close to the true value. We can try to get it as close as possible given our research aims and model.
-
-### 5. All the new approaches for model selection!
-
-Just to be clear, the main intention for the overview was that you can identify and recognize some of the key characteristics of different model selection strategies. We can't cover all of them in detail, but I just want you to know what's out there, and what other people might use.
-
-### 6. Assessing change in coefficients
-
-I highly recommend going back to the slides with interactions (effect modifiers) and confounders ([Lesson 11.2: Interactions continued](https://nwakim.github.io/W2024_BSTA_512/slides_annotated/11_Interactions_2.pdf)). On slide 18, we get into the change in coefficients. This is just one way to measure if a variable might be important in our model.
-
-### 7. General feelings of uncertainty when it comes to picking a model based on some of these more subjective measures
-
-Fair enough! It takes time to build that trust in your instincts when building a model. This is mostly why there are a few concrete rules within purposeful model selection. I don't think your model can go horribly wrong in the subjective choices, but sticking with the more concrete rules (when there are some) will be important.
-
-### 8. All of the different F-tests and p-values we are using in the early steps of model building
-
-Yeah... definitely hard to keep organized when we're seeing different uses so close together
-
--   In step 2, we use the F-test to see if a single variable (potentially with many coeffiicents) explains enough variation in our outcome
-
-    -   This is the F-test in simple linear regression with
-
-        -   Reduced / null model: $Y = \beta_0 + \epsilon$
-
-        -   Full / alternative model: $Y = \beta_0 + \beta_1 X + \epsilon$
-
-        -   This will be different for multi-level covariates
-
-        -   We can use `anova( full_model )` to get the F-statistic and p-value
-
--   In step 3, we use the F-test to see if a single variable (potentially with many coeffiicents) explains enough variation in our outcome, *given the other variables in the model*
-
-    -   This is the F-test in simple linear regression with
-
-        -   Reduced / null model: $Y = \beta_0 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \epsilon$
-
-        -   Full / alternative model: $Y = \beta_0 + \beta_1 X + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \epsilon$
-
-        -   This will be different for multi-level covariates: more coefficients removed between full and reduced
-
-        -   We can use `anova( full_model , reduced_model )` to get the F-statistic and p-value
-
-### 9. Why didn't we use those packages earlier?
-
-You got me! Partially because I wanted us to practice plotting in `ggplot` and be able to create more detailed plots. I think those functions (`skim()` and `ggpairs()`) super helpful in big picture, but if we don't know what to look for or identify oversights in the output, then we can miss important information about the data. More detailed plots, and more practice with variable types (like making factors) is needed to approach `skim()` and `ggpairs()`.

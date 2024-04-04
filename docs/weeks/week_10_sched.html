@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-03-11">
-<meta name="description" content="Model Diagnostics">
+<meta name="dcterms.date" content="2024-06-03">
+<meta name="description" content="Other generalized linear regressions">
 
-<title>Linear Models - Week 10</title>
+<title>Categorical Data Analysis - Week 10</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -108,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/bsta_512_hex.png" alt="" class="navbar-logo">
+    <img src="../images/Bsta513.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Linear Models</span>
+    <span class="navbar-title">Categorical Data Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,8 +90,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="dropdown-header">
- <span class="menu-text">schedule1.qmd</span></li>
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
@@ -193,8 +161,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">schedule1.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
@@ -220,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Weekly Pages</span></a>
   </div>
 </li>
@@ -245,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../readings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">612 Readings</span></a>
+ <span class="menu-text">613 Readings</span></a>
   </div>
 </li>
       </ul>
@@ -262,19 +233,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the Horizon</a></li>
-  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a>
-  <ul class="collapse">
-  <li><a href="#monday-311" id="toc-monday-311" class="nav-link" data-scroll-target="#monday-311">Monday 3/11</a></li>
-  <li><a href="#wednesday-313" id="toc-wednesday-313" class="nav-link" data-scroll-target="#wednesday-313">Wednesday 3/13</a></li>
-  </ul></li>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
   <li><a href="#class-exit-tickets" id="toc-class-exit-tickets" class="nav-link" data-scroll-target="#class-exit-tickets">Class Exit Tickets</a></li>
-  <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a>
-  <ul class="collapse">
-  <li><a href="#what-models-or-values-are-we-comparing-in-vif" id="toc-what-models-or-values-are-we-comparing-in-vif" class="nav-link" data-scroll-target="#what-models-or-values-are-we-comparing-in-vif">1. What models or values are we comparing in VIF?</a></li>
-  <li><a href="#still-a-little-confused-on-the-context-of-when-we-use-a-centered-value-vs-not-in-our-model." id="toc-still-a-little-confused-on-the-context-of-when-we-use-a-centered-value-vs-not-in-our-model." class="nav-link" data-scroll-target="#still-a-little-confused-on-the-context-of-when-we-use-a-centered-value-vs-not-in-our-model.">2. Still a little confused on the context of when we use a centered value vs not in our model.</a></li>
-  <li><a href="#what-is-the-difference-between-multicollinearity-vs-confounding-vs-effect-modification" id="toc-what-is-the-difference-between-multicollinearity-vs-confounding-vs-effect-modification" class="nav-link" data-scroll-target="#what-is-the-difference-between-multicollinearity-vs-confounding-vs-effect-modification">3. What is the difference between multicollinearity vs confounding vs effect modification?</a></li>
-  <li><a href="#why-we-would-have-both-age-and-age-squared-in-a-model" id="toc-why-we-would-have-both-age-and-age-squared-in-a-model" class="nav-link" data-scroll-target="#why-we-would-have-both-age-and-age-squared-in-a-model">4. Why we would have both age and age squared in a model</a></li>
-  </ul></li>
+  <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a></li>
   </ul>
 </nav>
     </div>
@@ -288,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Model Diagnostics
+    Other generalized linear regressions
   </div>
 </div>
 
@@ -299,14 +260,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 11, 2024</p>
+      <p class="date">June 3, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 30, 2024</p>
+      <p class="date-modified">April 4, 2024</p>
     </div>
   </div>
     
@@ -319,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style type="text/css">
 .title{
   font-size: 40px;
-  color: #213c96;
+  color: #C2352F;
   background-color: #fff;
   padding: 10px;
 }
@@ -327,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 .description{
   font-size: 20px;
   color: #fff;
-  background-color: #213c96;
+  background-color: #C2352F;
   padding: 10px;
 }
 </style>
@@ -335,6 +296,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <table class="table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 29%">
+<col style="width: 34%">
+<col style="width: 26%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Chapter</th>
@@ -347,26 +315,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Lab 3 Feedback</td>
-<td style="text-align: center;"><span style="color:#49A3D1;"><a href="../slides/Lab_3_feedback.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
 <td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2FLab%5F3%5Ffeedback%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 <tr class="even">
 <td>13</td>
-<td>Purposeful Model Selection</td>
-<td style="text-align: center;"><span style="color:#49A3D1;"><a href="../slides/13_Purposeful_Selection.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/13_Purposeful_selection_.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F13%5FPurposeful%5Fselection%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p>
-<p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F13%5FPurposeful%5Fselection%5F2%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p>
-<p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F13%5FPurposeful%5Fselection%5F3%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 <tr class="odd">
 <td>14</td>
-<td>MLR Diagnostics</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/14_MLR_Diagnostics.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/14_MLR_Diagnostics.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F14%5FMLR%5FDiagnostics%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 </tbody>
 </table>
@@ -376,1092 +342,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
-<section id="monday-311" class="level3">
-<h3 class="anchored" data-anchor-id="monday-311">Monday 3/11</h3>
-<ul>
-<li>Correction in Model selection slides: larger adjusted R-squared is better!!</li>
-<li>My office hours will be changed from 11:30am - 1pm <strong>to 11am - 12:30pm</strong>
-<ul>
-<li>Office hours on 3/14 are 11am - 12:30pm</li>
-</ul></li>
-</ul>
-</section>
-<section id="wednesday-313" class="level3">
-<h3 class="anchored" data-anchor-id="wednesday-313">Wednesday 3/13</h3>
-<ul>
-<li>Last lecture!!!</li>
-<li>Quiz will be returned on Monday</li>
-<li>Lab 3 feedback slides
-<ul>
-<li><p>Sorry for using “Other” instead of “A different identity” which was exactly what I was saying NOT to do</p></li>
-<li><p>I should have looked more closely at the codebook before making those slides</p></li>
-</ul></li>
-<li>My Thursday office hours will be changed from 11:30am - 1pm <strong>to 11am - 12:30pm</strong>
-<ul>
-<li>Office hours on 3/14 are 11am - 12:30pm</li>
-</ul></li>
-<li>Lab 4 feedback: aiming to give it back to you by Sunday evening</li>
-<li>Project report instructions are up!
-<ul>
-<li><p>Need to update rubric</p></li>
-<li><p>May need to alter the figure requirement for the forest plot / coefficient estimate table</p></li>
-</ul></li>
-</ul>
-</section>
 </section>
 <section id="class-exit-tickets" class="level2">
 <h2 class="anchored" data-anchor-id="class-exit-tickets">Class Exit Tickets</h2>
-<p><span style="color:#f8f5f0;"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></span> Monday (3/11)</p>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQ1Y3VENXNDk1QlNOWVpZNDhPT043S0xCSy4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Wednesday (3/13)</p>
+<p><span style="color:#f8f5f0;"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></span> Monday (6/3)</p>
+<p><span style="color:#f8f5f0;"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></span> Wednesday (6/5)</p>
 </section>
 <section id="muddiest-points" class="level2">
 <h2 class="anchored" data-anchor-id="muddiest-points">Muddiest Points</h2>
-<section id="what-models-or-values-are-we-comparing-in-vif" class="level3">
-<h3 class="anchored" data-anchor-id="what-models-or-values-are-we-comparing-in-vif">1. What models or values are we comparing in VIF?</h3>
-<p>Mmm good question! VIFs work for continuous and binary variables. So if your model only has continuous or binary covariates, then the VIFs and GVIFs are the same, and you can use either. The GVIFs are needed for multi-level covariates.</p>
-</section>
-<section id="still-a-little-confused-on-the-context-of-when-we-use-a-centered-value-vs-not-in-our-model." class="level3">
-<h3 class="anchored" data-anchor-id="still-a-little-confused-on-the-context-of-when-we-use-a-centered-value-vs-not-in-our-model.">2. Still a little confused on the context of when we use a centered value vs not in our model.</h3>
-<p>You can always center a value! There are two scenarios where centering is really helpful:</p>
-<ol type="1">
-<li><p>When we have an interaction. Centering makes coefficients more interpretable</p></li>
-<li><p>When we have a transformation of the variable. Centering avoids issues with multicollinearity.</p></li>
-</ol>
-</section>
-<section id="what-is-the-difference-between-multicollinearity-vs-confounding-vs-effect-modification" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-the-difference-between-multicollinearity-vs-confounding-vs-effect-modification">3. What is the difference between multicollinearity vs confounding vs effect modification?</h3>
-<p><a href="https://www.youtube.com/watch?v=4z39VgDgCVI&amp;ab_channel=MarinStatsLectures-RProgramming%26Statistics">Here’s a pretty good video about the differences!</a> About 8 minutes long, but easily played at 1.25/1.5 speed.</p>
-</section>
-<section id="why-we-would-have-both-age-and-age-squared-in-a-model" class="level3">
-<h3 class="anchored" data-anchor-id="why-we-would-have-both-age-and-age-squared-in-a-model">4. Why we would have both age and age squared in a model</h3>
-<p>We would only have age and age-squared if we noticed the relationship between age and our outcome was not linear. For example, our plot could look like this:</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week_10_sched_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="576"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>And let’s say we see the following plot for age-squared:</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age_sq, <span class="at">y =</span> y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week_10_sched_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="576"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Then we would make the transformation of age for our model. When we include age-squared in the model, we still need to include age. We can run the model with both:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> age <span class="sc">+</span> age_sq, <span class="at">data =</span> df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>And we can look at the regression table. Notice that the standard error of age and age-squared’s coefficients are okay, but the intercept’s standard error is really big.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(mod, <span class="at">conf.int =</span> T) <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">fmt_number</span>(<span class="at">decimals =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
 
-<div id="gibugaqghg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gibugaqghg table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-#gibugaqghg thead, #gibugaqghg tbody, #gibugaqghg tfoot, #gibugaqghg tr, #gibugaqghg td, #gibugaqghg th {
-  border-style: none;
-}
-
-#gibugaqghg p {
-  margin: 0;
-  padding: 0;
-}
-
-#gibugaqghg .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#gibugaqghg .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#gibugaqghg .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#gibugaqghg .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#gibugaqghg .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#gibugaqghg .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#gibugaqghg .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#gibugaqghg .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#gibugaqghg .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#gibugaqghg .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#gibugaqghg .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#gibugaqghg .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#gibugaqghg .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#gibugaqghg .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#gibugaqghg .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gibugaqghg .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#gibugaqghg .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#gibugaqghg .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#gibugaqghg .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gibugaqghg .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#gibugaqghg .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gibugaqghg .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#gibugaqghg .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gibugaqghg .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#gibugaqghg .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gibugaqghg .gt_left {
-  text-align: left;
-}
-
-#gibugaqghg .gt_center {
-  text-align: center;
-}
-
-#gibugaqghg .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#gibugaqghg .gt_font_normal {
-  font-weight: normal;
-}
-
-#gibugaqghg .gt_font_bold {
-  font-weight: bold;
-}
-
-#gibugaqghg .gt_font_italic {
-  font-style: italic;
-}
-
-#gibugaqghg .gt_super {
-  font-size: 65%;
-}
-
-#gibugaqghg .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#gibugaqghg .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#gibugaqghg .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#gibugaqghg .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#gibugaqghg .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#gibugaqghg .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#gibugaqghg .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="term">term</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="std.error">std.error</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="term" class="gt_row gt_left">(Intercept)</td>
-<td headers="estimate" class="gt_row gt_right">−30.11</td>
-<td headers="std.error" class="gt_row gt_right">33.67</td>
-<td headers="statistic" class="gt_row gt_right">−0.89</td>
-<td headers="p.value" class="gt_row gt_right">0.37</td>
-<td headers="conf.low" class="gt_row gt_right">−96.27</td>
-<td headers="conf.high" class="gt_row gt_right">36.05</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">age</td>
-<td headers="estimate" class="gt_row gt_right">1.61</td>
-<td headers="std.error" class="gt_row gt_right">1.53</td>
-<td headers="statistic" class="gt_row gt_right">1.05</td>
-<td headers="p.value" class="gt_row gt_right">0.29</td>
-<td headers="conf.low" class="gt_row gt_right">−1.39</td>
-<td headers="conf.high" class="gt_row gt_right">4.61</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">age_sq</td>
-<td headers="estimate" class="gt_row gt_right">0.59</td>
-<td headers="std.error" class="gt_row gt_right">0.02</td>
-<td headers="statistic" class="gt_row gt_right">37.61</td>
-<td headers="p.value" class="gt_row gt_right">0.00</td>
-<td headers="conf.low" class="gt_row gt_right">0.56</td>
-<td headers="conf.high" class="gt_row gt_right">0.62</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<p>We can also look at the VIF:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rms<span class="sc">::</span><span class="fu">vif</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    age  age_sq 
-36.7079 36.7079 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">vif</span>(mod) <span class="co"># will only give us GVIF if there is a multi-level covariate in the model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    age  age_sq 
-36.7079 36.7079 </code></pre>
-</div>
-</div>
-<p>The VIFs are really big, so centering age will help the multicolinearity of the model.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> age_c <span class="sc">+</span> age_c_sq, <span class="at">data =</span> df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Where <code>age_c</code> is age centered at the mean, and <code>age_c_sq</code> is the centered age squared.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(mod2, <span class="at">conf.int =</span> T) <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">fmt_number</span>(<span class="at">decimals =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="apoqxdwjoa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#apoqxdwjoa table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#apoqxdwjoa thead, #apoqxdwjoa tbody, #apoqxdwjoa tfoot, #apoqxdwjoa tr, #apoqxdwjoa td, #apoqxdwjoa th {
-  border-style: none;
-}
-
-#apoqxdwjoa p {
-  margin: 0;
-  padding: 0;
-}
-
-#apoqxdwjoa .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#apoqxdwjoa .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#apoqxdwjoa .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#apoqxdwjoa .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#apoqxdwjoa .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#apoqxdwjoa .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#apoqxdwjoa .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#apoqxdwjoa .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#apoqxdwjoa .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#apoqxdwjoa .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#apoqxdwjoa .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#apoqxdwjoa .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#apoqxdwjoa .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#apoqxdwjoa .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#apoqxdwjoa .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#apoqxdwjoa .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#apoqxdwjoa .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#apoqxdwjoa .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#apoqxdwjoa .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#apoqxdwjoa .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#apoqxdwjoa .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#apoqxdwjoa .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#apoqxdwjoa .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#apoqxdwjoa .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#apoqxdwjoa .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#apoqxdwjoa .gt_left {
-  text-align: left;
-}
-
-#apoqxdwjoa .gt_center {
-  text-align: center;
-}
-
-#apoqxdwjoa .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#apoqxdwjoa .gt_font_normal {
-  font-weight: normal;
-}
-
-#apoqxdwjoa .gt_font_bold {
-  font-weight: bold;
-}
-
-#apoqxdwjoa .gt_font_italic {
-  font-style: italic;
-}
-
-#apoqxdwjoa .gt_super {
-  font-size: 65%;
-}
-
-#apoqxdwjoa .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#apoqxdwjoa .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#apoqxdwjoa .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#apoqxdwjoa .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#apoqxdwjoa .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#apoqxdwjoa .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#apoqxdwjoa .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="term">term</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="std.error">std.error</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="term" class="gt_row gt_left">(Intercept)</td>
-<td headers="estimate" class="gt_row gt_right">1,408.13</td>
-<td headers="std.error" class="gt_row gt_right">7.18</td>
-<td headers="statistic" class="gt_row gt_right">196.13</td>
-<td headers="p.value" class="gt_row gt_right">0.00</td>
-<td headers="conf.low" class="gt_row gt_right">1,394.02</td>
-<td headers="conf.high" class="gt_row gt_right">1,422.23</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">age_c</td>
-<td headers="estimate" class="gt_row gt_right">58.09</td>
-<td headers="std.error" class="gt_row gt_right">0.25</td>
-<td headers="statistic" class="gt_row gt_right">230.16</td>
-<td headers="p.value" class="gt_row gt_right">0.00</td>
-<td headers="conf.low" class="gt_row gt_right">57.59</td>
-<td headers="conf.high" class="gt_row gt_right">58.58</td></tr>
-    <tr><td headers="term" class="gt_row gt_left">age_c_sq</td>
-<td headers="estimate" class="gt_row gt_right">0.59</td>
-<td headers="std.error" class="gt_row gt_right">0.02</td>
-<td headers="statistic" class="gt_row gt_right">37.61</td>
-<td headers="p.value" class="gt_row gt_right">0.00</td>
-<td headers="conf.low" class="gt_row gt_right">0.56</td>
-<td headers="conf.high" class="gt_row gt_right">0.62</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">vif</span>(mod2) <span class="co"># will only give us GVIF if there is a multi-level covariate in the model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   age_c age_c_sq 
- 1.00058  1.00058 </code></pre>
-</div>
-</div>
-<p>Yay! The VIFs are much better now! And the intercept and age coefficient estimate have better standard error!</p>
-
-
-</section>
 </section>
 
 </main> <!-- /main -->

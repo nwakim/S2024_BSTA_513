@@ -12,6 +12,9 @@
   {
     "listing": "/weeks.html",
     "items": [
+      "/weeks/week_01_sched.html",
+      "/weeks/week_02_sched.html",
+      "/weeks/week_03_sched.html",
       "/weeks/week_04_sched.html",
       "/weeks/week_05_sched.html",
       "/weeks/week_06_sched.html",
@@ -19,10 +22,7 @@
       "/weeks/week_08_sched.html",
       "/weeks/week_09_sched.html",
       "/weeks/week_10_sched.html",
-      "/weeks/week_11_sched.html",
-      "/weeks/week_01_sched.html",
-      "/weeks/week_02_sched.html",
-      "/weeks/week_03_sched.html"
+      "/weeks/week_11_sched.html"
     ]
   }
 ]

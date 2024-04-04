@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-03-04">
-<meta name="description" content="Model Selection">
+<meta name="dcterms.date" content="2024-05-27">
+<meta name="description" content="Model Diagnostics">
 
-<title>Linear Models - Week 9</title>
+<title>Categorical Data Analysis - Week 9</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +63,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -76,10 +74,10 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/bsta_512_hex.png" alt="" class="navbar-logo">
+    <img src="../images/Bsta513.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Linear Models</span>
+    <span class="navbar-title">Categorical Data Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -92,8 +90,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="dropdown-header">
- <span class="menu-text">schedule1.qmd</span></li>
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
@@ -161,8 +161,11 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">schedule1.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
@@ -188,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Weekly Pages</span></a>
   </div>
 </li>
@@ -213,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../readings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">612 Readings</span></a>
+ <span class="menu-text">613 Readings</span></a>
   </div>
 </li>
       </ul>
@@ -230,24 +233,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the Horizon</a></li>
-  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a>
-  <ul class="collapse">
-  <li><a href="#monday-34" id="toc-monday-34" class="nav-link" data-scroll-target="#monday-34">Monday 3/4</a></li>
-  <li><a href="#wednesday-36" id="toc-wednesday-36" class="nav-link" data-scroll-target="#wednesday-36">Wednesday 3/6</a></li>
-  </ul></li>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
   <li><a href="#class-exit-tickets" id="toc-class-exit-tickets" class="nav-link" data-scroll-target="#class-exit-tickets">Class Exit Tickets</a></li>
-  <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a>
-  <ul class="collapse">
-  <li><a href="#in-cie-why-this-assumes-a-10-difference-indicates-confounding-and-not-effect-measure-modification" id="toc-in-cie-why-this-assumes-a-10-difference-indicates-confounding-and-not-effect-measure-modification" class="nav-link" data-scroll-target="#in-cie-why-this-assumes-a-10-difference-indicates-confounding-and-not-effect-measure-modification">1. In CIE, why this assumes a 10% difference indicates confounding and not effect measure modification</a></li>
-  <li><a href="#any-variables-not-selected-for-the-final-model-have-still-been-adjusted-for-since-they-had-a-chance-to-be-in-the-model-how-are-they-adjusted-for-when-they-arent" id="toc-any-variables-not-selected-for-the-final-model-have-still-been-adjusted-for-since-they-had-a-chance-to-be-in-the-model-how-are-they-adjusted-for-when-they-arent" class="nav-link" data-scroll-target="#any-variables-not-selected-for-the-final-model-have-still-been-adjusted-for-since-they-had-a-chance-to-be-in-the-model-how-are-they-adjusted-for-when-they-arent">2. “Any variables not selected for the final model have still been adjusted for, since they had a chance to be in the model” How are they adjusted for when they aren’t?</a></li>
-  <li><a href="#difference-between-stepwise-and-change-in-estimate-approach" id="toc-difference-between-stepwise-and-change-in-estimate-approach" class="nav-link" data-scroll-target="#difference-between-stepwise-and-change-in-estimate-approach">3. Difference between stepwise and change in estimate approach?</a></li>
-  <li><a href="#how-does-having-fewer-covariates-cause-a-more-biased-estimate-and-what-does-it-mean-for-widehatbeta-to-be-biased-for-beta" id="toc-how-does-having-fewer-covariates-cause-a-more-biased-estimate-and-what-does-it-mean-for-widehatbeta-to-be-biased-for-beta" class="nav-link" data-scroll-target="#how-does-having-fewer-covariates-cause-a-more-biased-estimate-and-what-does-it-mean-for-widehatbeta-to-be-biased-for-beta">4. How does having fewer covariates cause a more biased estimate? (and what does it mean for <span class="math inline">\(\widehat\beta\)</span> to be biased for <span class="math inline">\(\beta\)</span>?)</a></li>
-  <li><a href="#all-the-new-approaches-for-model-selection" id="toc-all-the-new-approaches-for-model-selection" class="nav-link" data-scroll-target="#all-the-new-approaches-for-model-selection">5. All the new approaches for model selection!</a></li>
-  <li><a href="#assessing-change-in-coefficients" id="toc-assessing-change-in-coefficients" class="nav-link" data-scroll-target="#assessing-change-in-coefficients">6. Assessing change in coefficients</a></li>
-  <li><a href="#general-feelings-of-uncertainty-when-it-comes-to-picking-a-model-based-on-some-of-these-more-subjective-measures" id="toc-general-feelings-of-uncertainty-when-it-comes-to-picking-a-model-based-on-some-of-these-more-subjective-measures" class="nav-link" data-scroll-target="#general-feelings-of-uncertainty-when-it-comes-to-picking-a-model-based-on-some-of-these-more-subjective-measures">7. General feelings of uncertainty when it comes to picking a model based on some of these more subjective measures</a></li>
-  <li><a href="#all-of-the-different-f-tests-and-p-values-we-are-using-in-the-early-steps-of-model-building" id="toc-all-of-the-different-f-tests-and-p-values-we-are-using-in-the-early-steps-of-model-building" class="nav-link" data-scroll-target="#all-of-the-different-f-tests-and-p-values-we-are-using-in-the-early-steps-of-model-building">8. All of the different F-tests and p-values we are using in the early steps of model building</a></li>
-  <li><a href="#why-didnt-we-use-those-packages-earlier" id="toc-why-didnt-we-use-those-packages-earlier" class="nav-link" data-scroll-target="#why-didnt-we-use-those-packages-earlier">9. Why didn’t we use those packages earlier?</a></li>
-  </ul></li>
+  <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a></li>
   </ul>
 </nav>
     </div>
@@ -261,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Model Selection
+    Model Diagnostics
   </div>
 </div>
 
@@ -272,14 +260,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 4, 2024</p>
+      <p class="date">May 27, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 30, 2024</p>
+      <p class="date-modified">April 4, 2024</p>
     </div>
   </div>
     
@@ -288,27 +276,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Room Locations for the week
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>On Monday, 3/4, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we will be in <strong>RLSB 3A003 B</strong></li>
-<li>On Wednesday, 3/6, &nbsp;we will be in <strong>RLSB 3A003 A</strong></li>
-</ul>
-</div>
-</div>
 <div class="cell">
 <style type="text/css">
 .title{
   font-size: 40px;
-  color: #213c96;
+  color: #C2352F;
   background-color: #fff;
   padding: 10px;
 }
@@ -316,7 +288,7 @@ Room Locations for the week
 .description{
   font-size: 20px;
   color: #fff;
-  background-color: #213c96;
+  background-color: #C2352F;
   padding: 10px;
 }
 </style>
@@ -324,6 +296,13 @@ Room Locations for the week
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <table class="table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 29%">
+<col style="width: 35%">
+<col style="width: 26%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Lesson</th>
@@ -336,158 +315,43 @@ Room Locations for the week
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Quiz, Lab, Mid-quarter feedback</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/Quiz_2_Lab_2.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/Quiz2_Lab2_Feedback.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2FQuiz2%5FLab2%5FFeedback%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 <tr class="even">
 <td>12</td>
-<td>Model selection 1</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/12_Model_selection.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/12_Model_selection.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F12%5FModel%5Fselection%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p>
-<p><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F12%5FModel%5Fselection%5F2%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></p></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 <tr class="odd">
 <td>13</td>
-<td>Purposeful Model Selection</td>
-<td style="text-align: center;"><span style="color:#49A3D1;"><a href="../slides/13_Purposeful_Selection.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/13_Purposeful_selection.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F13%5FPurposeful%5Fselection%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="on-the-horizon" class="level2">
 <h2 class="anchored" data-anchor-id="on-the-horizon">On the Horizon</h2>
-<ul>
-<li><p>Lab 3 was due yesterday</p></li>
-<li><p>HW 5 is due this Thursday</p></li>
-<li><p>Quiz 3 next Monday!!</p></li>
-</ul>
 </section>
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
-<section id="monday-34" class="level3">
-<h3 class="anchored" data-anchor-id="monday-34">Monday 3/4</h3>
-<ul>
-<li><p>Missing a couple mid-term reviews: 32 reviews and only 29 names</p></li>
-<li><p>We’ll go through Lesson 12 on Model selection, then dive into purposeful selection (a model selection strategy)</p>
-<ul>
-<li>I will be adding more slides to Lesson 13 Purposeful Selection for Wednesday’s class</li>
-</ul></li>
-</ul>
-</section>
-<section id="wednesday-36" class="level3">
-<h3 class="anchored" data-anchor-id="wednesday-36">Wednesday 3/6</h3>
-<ul>
-<li><p>Is there going to be a specific strategy/type of model selection we’re supposed to use for the lab/final project? Will that be the focus of Lab 4?</p></li>
-<li><p>Lab 3: new formatting was confusing for some</p>
-<ul>
-<li><p>I am sorry that I did not communicate the new formatting in multiple areas</p></li>
-<li><p>Lab 4 will follow the same format</p>
-<ul>
-<li><p>The course website will contain thorough, guided instructions</p></li>
-<li><p>The file that you will download and edit will only contain the direct tasks that I want you to complete.</p></li>
-</ul></li>
-</ul></li>
-<li><p>Quiz 3 info</p>
-<ul>
-<li><p>Will cover Lesson 10 - 11: categorical covariates to interactions</p></li>
-<li><p>I’m thinking this one will be a litter shorter since there’s less material</p></li>
-<li><p>Will still have the 50 min for the quiz</p></li>
-<li><p>Includes HW 4 and 5</p>
-<ul>
-<li>Will include interpretations of interactions!</li>
-</ul></li>
-</ul></li>
-<li><p>Next week</p>
-<ul>
-<li><p>Quiz</p></li>
-<li><p>Finish Purposeful Selection (probably)</p></li>
-<li><p>One more lecture on Diagnostics in MLR</p></li>
-</ul></li>
-<li><p>Last week (3/18)</p>
-<ul>
-<li><p>Meeting ONLY on 3/18</p></li>
-<li><p>That class will be fully dedicated to help on the Project report!</p></li>
-</ul></li>
-</ul>
-</section>
 </section>
 <section id="class-exit-tickets" class="level2">
 <h2 class="anchored" data-anchor-id="class-exit-tickets">Class Exit Tickets</h2>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURFZJMldXSEQ0SlhTMkozSEFNUkJCWVdPNC4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Monday (3/4)</p>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQjI1OEJDUDdYWkVVU1BURUhSR1hDVlAwNC4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Wednesday (3/6)</p>
+<p><span style="color:#f8f5f0;"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></span> Wednesday (5/29)</p>
 </section>
 <section id="muddiest-points" class="level2">
 <h2 class="anchored" data-anchor-id="muddiest-points">Muddiest Points</h2>
 <p>This will be filled in with your Exit Ticket responses.</p>
-<section id="in-cie-why-this-assumes-a-10-difference-indicates-confounding-and-not-effect-measure-modification" class="level3">
-<h3 class="anchored" data-anchor-id="in-cie-why-this-assumes-a-10-difference-indicates-confounding-and-not-effect-measure-modification">1. In CIE, why this assumes a 10% difference indicates confounding and not effect measure modification</h3>
-<p>A 10% difference can also indicate an interaction, but we would need to see the difference when we include the interaction. I think I was specifically talking about including variables, which typically means I am only including their main effects. With main effects, we can test for confounding, but not interactions. That’s all! We can separately test for interactions using the same 10% criterion.</p>
-</section>
-<section id="any-variables-not-selected-for-the-final-model-have-still-been-adjusted-for-since-they-had-a-chance-to-be-in-the-model-how-are-they-adjusted-for-when-they-arent" class="level3">
-<h3 class="anchored" data-anchor-id="any-variables-not-selected-for-the-final-model-have-still-been-adjusted-for-since-they-had-a-chance-to-be-in-the-model-how-are-they-adjusted-for-when-they-arent">2. “Any variables not selected for the final model have still been adjusted for, since they had a chance to be in the model” How are they adjusted for when they aren’t?</h3>
-<p>I feel your confusion. These variables have not been explicitly adjusted for in the model, more implicitly. If a variable is not selected that means it does not predict our outcome well and/or it does not affect other variables’ relationship with the outcome. That means we tried to adjust for it, but it has no effect, so we have technically adjusted for something that does not change our model.</p>
-<p>An example is probably best. Let’s say we’re looking at treatment effect. We measured the weather on the day that someone went in for treatment. We have a variable on whether it was cloudy or not. That variable was not selected in the model because the cloudiness has no effect on the treatment, but we allowed it to be a potential covariate. This is different than a variable that may not have an effect but was not measured. We cannot say we adjusted for something like shirt color during treatment because we haven’t actually tested it.</p>
-</section>
-<section id="difference-between-stepwise-and-change-in-estimate-approach" class="level3">
-<h3 class="anchored" data-anchor-id="difference-between-stepwise-and-change-in-estimate-approach">3. Difference between stepwise and change in estimate approach?</h3>
-<p>Stepwise is an automatic selection process that only requires us to put our dataset in a function which will return the “optimal” model. It also based only on the p-values of coefficients in the model. In CIE, we are manually including and excluding variables, and checking for a change in a coefficient estimate, instead of a significant p-value. A big change in a coefficient estimate is not necessarily accompanied by a significant p-value.</p>
-</section>
-<section id="how-does-having-fewer-covariates-cause-a-more-biased-estimate-and-what-does-it-mean-for-widehatbeta-to-be-biased-for-beta" class="level3">
-<h3 class="anchored" data-anchor-id="how-does-having-fewer-covariates-cause-a-more-biased-estimate-and-what-does-it-mean-for-widehatbeta-to-be-biased-for-beta">4. How does having fewer covariates cause a more biased estimate? (and what does it mean for <span class="math inline">\(\widehat\beta\)</span> to be biased for <span class="math inline">\(\beta\)</span>?)</h3>
-<p>Fewer covariates in our model means we likely not capturing the complex relationship between our outcome and our variables. If we leave out a variable that is an important predictor of the outcome, then the coefficients of all the variables that made it into the model will be a little biased. (Because we are not capturing the true, underlying model).</p>
-<p>For example, let’s say I am analyzing data for a study on dementia. Dementia is my outcome and I include a few variables in my model, such as whether or not you live with someone, depression, and physical activity. However, I leave out age, which is known to have high association with dementia. I have left out an important variable that may be a confounder or effect modifier of the variables in the model. Thus, the estimates of coefficients in the model will be biased.</p>
-<p>The less variables in the model, the more likely we are leaving out a variable that would help predict our outcome. We can counter this by trying to select the best model!</p>
-<p>Second part of the question: <span class="math inline">\(\widehat\beta\)</span> is a biased estimate for <span class="math inline">\(\beta\)</span> means that the estimated value, <span class="math inline">\(\widehat\beta\)</span>, is not close to the true, underlying <span class="math inline">\(\beta\)</span>. We work under the assumption that there is some true relationship between our covariates and our outcome, and we are trying to uncover the true value by estimating it. However, our estimate may not be close to the true value. We can try to get it as close as possible given our research aims and model.</p>
-</section>
-<section id="all-the-new-approaches-for-model-selection" class="level3">
-<h3 class="anchored" data-anchor-id="all-the-new-approaches-for-model-selection">5. All the new approaches for model selection!</h3>
-<p>Just to be clear, the main intention for the overview was that you can identify and recognize some of the key characteristics of different model selection strategies. We can’t cover all of them in detail, but I just want you to know what’s out there, and what other people might use.</p>
-</section>
-<section id="assessing-change-in-coefficients" class="level3">
-<h3 class="anchored" data-anchor-id="assessing-change-in-coefficients">6. Assessing change in coefficients</h3>
-<p>I highly recommend going back to the slides with interactions (effect modifiers) and confounders (<a href="https://nwakim.github.io/W2024_BSTA_512/slides_annotated/11_Interactions_2.pdf">Lesson 11.2: Interactions continued</a>). On slide 18, we get into the change in coefficients. This is just one way to measure if a variable might be important in our model.</p>
-</section>
-<section id="general-feelings-of-uncertainty-when-it-comes-to-picking-a-model-based-on-some-of-these-more-subjective-measures" class="level3">
-<h3 class="anchored" data-anchor-id="general-feelings-of-uncertainty-when-it-comes-to-picking-a-model-based-on-some-of-these-more-subjective-measures">7. General feelings of uncertainty when it comes to picking a model based on some of these more subjective measures</h3>
-<p>Fair enough! It takes time to build that trust in your instincts when building a model. This is mostly why there are a few concrete rules within purposeful model selection. I don’t think your model can go horribly wrong in the subjective choices, but sticking with the more concrete rules (when there are some) will be important.</p>
-</section>
-<section id="all-of-the-different-f-tests-and-p-values-we-are-using-in-the-early-steps-of-model-building" class="level3">
-<h3 class="anchored" data-anchor-id="all-of-the-different-f-tests-and-p-values-we-are-using-in-the-early-steps-of-model-building">8. All of the different F-tests and p-values we are using in the early steps of model building</h3>
-<p>Yeah… definitely hard to keep organized when we’re seeing different uses so close together</p>
-<ul>
-<li><p>In step 2, we use the F-test to see if a single variable (potentially with many coeffiicents) explains enough variation in our outcome</p>
-<ul>
-<li><p>This is the F-test in simple linear regression with</p>
-<ul>
-<li><p>Reduced / null model: <span class="math inline">\(Y = \beta_0 + \epsilon\)</span></p></li>
-<li><p>Full / alternative model: <span class="math inline">\(Y = \beta_0 + \beta_1 X + \epsilon\)</span></p></li>
-<li><p>This will be different for multi-level covariates</p></li>
-<li><p>We can use <code>anova( full_model )</code> to get the F-statistic and p-value</p></li>
-</ul></li>
-</ul></li>
-<li><p>In step 3, we use the F-test to see if a single variable (potentially with many coeffiicents) explains enough variation in our outcome, <em>given the other variables in the model</em></p>
-<ul>
-<li><p>This is the F-test in simple linear regression with</p>
-<ul>
-<li><p>Reduced / null model: <span class="math inline">\(Y = \beta_0 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \epsilon\)</span></p></li>
-<li><p>Full / alternative model: <span class="math inline">\(Y = \beta_0 + \beta_1 X + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \epsilon\)</span></p></li>
-<li><p>This will be different for multi-level covariates: more coefficients removed between full and reduced</p></li>
-<li><p>We can use <code>anova( full_model , reduced_model )</code> to get the F-statistic and p-value</p></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="why-didnt-we-use-those-packages-earlier" class="level3">
-<h3 class="anchored" data-anchor-id="why-didnt-we-use-those-packages-earlier">9. Why didn’t we use those packages earlier?</h3>
-<p>You got me! Partially because I wanted us to practice plotting in <code>ggplot</code> and be able to create more detailed plots. I think those functions (<code>skim()</code> and <code>ggpairs()</code>) super helpful in big picture, but if we don’t know what to look for or identify oversights in the output, then we can miss important information about the data. More detailed plots, and more practice with variable types (like making factors) is needed to approach <code>skim()</code> and <code>ggpairs()</code>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-29">
-<meta name="description" content="SLR: Diagnostics">
+<meta name="dcterms.date" content="2024-04-22">
+<meta name="description" content="Logistic Regression and Interpretations">
 
-<title>Linear Models - Week 4</title>
+<title>Categorical Data Analysis - Week 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,10 +74,10 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/bsta_512_hex.png" alt="" class="navbar-logo">
+    <img src="../images/Bsta513.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Linear Models</span>
+    <span class="navbar-title">Categorical Data Analysis</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,8 +90,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="dropdown-header">
- <span class="menu-text">schedule1.qmd</span></li>
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
@@ -159,8 +161,11 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">schedule1.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
@@ -186,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Weekly Pages</span></a>
   </div>
 </li>
@@ -211,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../readings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">612 Readings</span></a>
+ <span class="menu-text">613 Readings</span></a>
   </div>
 </li>
       </ul>
@@ -244,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    SLR: Diagnostics
+    Logistic Regression and Interpretations
   </div>
 </div>
 
@@ -255,14 +260,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 29, 2024</p>
+      <p class="date">April 22, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 30, 2024</p>
+      <p class="date-modified">April 4, 2024</p>
     </div>
   </div>
     
@@ -275,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 <style type="text/css">
 .title{
   font-size: 40px;
-  color: #213c96;
+  color: #C2352F;
   background-color: #fff;
   padding: 10px;
 }
@@ -283,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 .description{
   font-size: 20px;
   color: #fff;
-  background-color: #213c96;
+  background-color: #C2352F;
   padding: 10px;
 }
 </style>
@@ -308,6 +313,13 @@ Room Locations for the week
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <p>Below is a table with links to resources. Icons in <span style="color:#E25D3B;">orange</span> mean there is an available file link.</p>
 <table class="table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 44%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Lesson</th>
@@ -320,17 +332,17 @@ Room Locations for the week
 <tbody>
 <tr class="odd">
 <td>6</td>
-<td>SLR: Model Diagnostics 1</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/06_SLR_Diagnostics.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/06_SLR_Dignostics_1.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F06%5FSLR%5FDiagnostics%5F1%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 <tr class="even">
 <td>7</td>
-<td>SLR: Model Diagnostics 2</td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides/07_SLR_Diagnostics_02.qmd"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="../slides_annotated/07_SLR_Diagnostics_2.pdf"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></a></span></td>
-<td style="text-align: center;"><span style="color:#f8f5f0;"><a href="https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FRecordings%2F07%5FSLR%5FDiagnostics%5F2%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></a></span></td>
+<td></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="ri:slideshow-fill" style="font-size: 30px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="pepicons-pop:pen-circle-filled" style="font-size: 29px;"></iconify-icon></span></td>
+<td style="text-align: center;"><span style="color:#f8f5f0;"><iconify-icon inline="" icon="mdi:video" style="font-size: 34px;"></iconify-icon></span></td>
 </tr>
 </tbody>
 </table>
@@ -340,8 +352,8 @@ Room Locations for the week
 </section>
 <section id="class-exit-tickets" class="level2">
 <h2 class="anchored" data-anchor-id="class-exit-tickets">Class Exit Tickets</h2>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUN1Y2VVNPQk5ONkFUSzI1TjcwNVM3R1JDUS4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Monday (1/29)</p>
-<p><span style="color:#f8f5f0;"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURTIwRVlSSVgzSDJPWlNYTDlBR0dYTTIwSC4u"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></a></span> Wednesday (1/31)</p>
+<p><span style="color:#f8f5f0;"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></span> Monday (4/22)</p>
+<p><span style="color:#f8f5f0;"><iconify-icon inline="" icon="healthicons:health-worker-form-negative" style="font-size: 30px;"></iconify-icon></span> Wednesday (4/24)</p>
 </section>
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
