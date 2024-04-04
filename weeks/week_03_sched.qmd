@@ -1,8 +1,8 @@
 ---
 title: "Week 3"
-description: "SLR: Hypothesis Testing and Evaluation"
-date: "1/22/2024"
-date-modified: "1/22/2024"
+description: "Simple Logistic Regression"
+date: "4/15/2024"
+date-modified: "today"
 categories: [""]
 format: 
   html:
@@ -15,7 +15,7 @@ editor_options:
 ```{css, echo=FALSE}
 .title{
   font-size: 40px;
-  color: #213c96;
+  color: #C2352F;
   background-color: #fff;
   padding: 10px;
 }
@@ -23,7 +23,7 @@ editor_options:
 .description{
   font-size: 20px;
   color: #fff;
-  background-color: #213c96;
+  background-color: #C2352F;
   padding: 10px;
 }
 ```
@@ -53,9 +53,9 @@ Below is a table with links to resources. Icons in [orange]{style="color:#E25D3B
 
 ## Class Exit Tickets
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMzhZWjc5S0dDVDU2WUozNEM0M0FKRlczSi4u)]{style="color:#f8f5f0;"} Monday (1/22)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMzhZWjc5S0dDVDU2WUozNEM0M0FKRlczSi4u)]{style="color:#f8f5f0;"} Monday (4/15)
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMU5YTFZRRzNaUlNFMElGQ0E1MDVMS0dZMC4u)]{style="color:#f8f5f0;"} Wednesday (1/24)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMU5YTFZRRzNaUlNFMElGQ0E1MDVMS0dZMC4u)]{style="color:#f8f5f0;"} Wednesday (4/17)
 
 ## Announcements
 

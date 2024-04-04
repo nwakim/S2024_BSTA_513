@@ -1,0 +1,14 @@
+---
+title: "Weekly Pages"
+format: 
+  html:
+    listing: 
+      contents: weeks
+      type: table
+      table-hover: true
+      fields: [date, title, description]
+      sort: "date asc"
+      date-format: "short"
+    link-external-newwindow: true
+---
+

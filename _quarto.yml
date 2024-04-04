@@ -39,8 +39,7 @@ website:
           - quizzes.qmd
       - section: "Course Materials"
         contents:
-          - href: schedule.qmd
-            text: Schedule
+          - href: weeks.qmd
           - href: lessons.qmd
           - href: homeworks.qmd
             text: Homework

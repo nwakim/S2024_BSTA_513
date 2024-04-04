@@ -466,7 +466,7 @@
     "href": "weeks/week_02_sched.html#resources",
     "title": "Week 2",
     "section": "Resources",
-    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nSimple Linear Regression\n\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser."
+    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser."
   },
   {
     "objectID": "weeks/week_02_sched.html#on-the-horizon",
@@ -487,7 +487,7 @@
     "href": "weeks/week_02_sched.html#class-exit-tickets",
     "title": "Week 2",
     "section": "Class Exit Tickets",
-    "text": "Class Exit Tickets\n Wednesday (1/17)"
+    "text": "Class Exit Tickets\n Monday (4/8)\n Wednesday (4/10)"
   },
   {
     "objectID": "weeks/week_02_sched.html#muddiest-points",
@@ -1419,5 +1419,47 @@
     "title": "Lesson 2: Introduction to Categorical Data Analysis",
     "section": "Mantel-Haenszel test: Example (3/3)",
     "text": "Mantel-Haenszel test: Example (3/3)\n\n\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\): Water treatment and washability are not correlated. \\[ \\rho = 0\\]\n\\(H_1\\): Water treatment and washability are correlated.\n\n\n\\[ \\rho \\neq 0\\]\n\n\nCalculate the test statistic and p-value for Mantel-Haenszel test in R\n\n\nlibrary(DescTools)\nMHChisqTest(water)\n\n\n    Mantel-Haenszel Chi-Square\n\ndata:  water\nX-squared = 50.602, df = 1, p-value = 1.132e-12\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that there is no correlation between washability and water treatment (\\(p = 1.13 \\cdot 10^{-12} &lt; 0.05\\)). There is sufficient evidence that level of water treatment is associated with washability."
+  },
+  {
+    "objectID": "weeks.html",
+    "href": "weeks.html",
+    "title": "Weekly Pages",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n1/29/24\n\n\nWeek 4\n\n\nSLR: Diagnostics\n\n\n\n\n2/5/24\n\n\nWeek 5\n\n\nMultiple Linear Regression\n\n\n\n\n2/12/24\n\n\nWeek 6\n\n\nCategorical Covariates + Interactions\n\n\n\n\n2/19/24\n\n\nWeek 7\n\n\nInteractions continued\n\n\n\n\n2/26/24\n\n\nWeek 8\n\n\nInteractions continued\n\n\n\n\n3/4/24\n\n\nWeek 9\n\n\nModel Selection\n\n\n\n\n3/11/24\n\n\nWeek 10\n\n\nModel Diagnostics\n\n\n\n\n3/18/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nRelative Risks and Odds Ratios\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nSimple Logistic Regression\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "weeks/week_03_sched.html#resources",
+    "href": "weeks/week_03_sched.html#resources",
+    "title": "Week 3",
+    "section": "Resources",
+    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nSimple Linear Regression\ncontinued\n\n\n\n\n\n\n4\nSLR: Inference and Prediction\n\n\n\n\n\n\n\n5\nSLR: More Inference"
+  },
+  {
+    "objectID": "weeks/week_03_sched.html#on-the-horizon",
+    "href": "weeks/week_03_sched.html#on-the-horizon",
+    "title": "Week 3",
+    "section": "On the Horizon",
+    "text": "On the Horizon"
+  },
+  {
+    "objectID": "weeks/week_03_sched.html#class-exit-tickets",
+    "href": "weeks/week_03_sched.html#class-exit-tickets",
+    "title": "Week 3",
+    "section": "Class Exit Tickets",
+    "text": "Class Exit Tickets\n Monday (4/15)\n Wednesday (4/17)"
+  },
+  {
+    "objectID": "weeks/week_03_sched.html#announcements",
+    "href": "weeks/week_03_sched.html#announcements",
+    "title": "Week 3",
+    "section": "Announcements",
+    "text": "Announcements"
+  },
+  {
+    "objectID": "weeks/week_03_sched.html#muddiest-points",
+    "href": "weeks/week_03_sched.html#muddiest-points",
+    "title": "Week 3",
+    "section": "Muddiest Points",
+    "text": "Muddiest Points"
   }
 ]
