@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BSTA 513/613: Categorical Data Analysis",
     "section": "",
-    "text": "BSTA 513/613: Categorical Data Analysis\n\nSpring 2024\n \nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.  \n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n TBD\nOH with Antara\n TBD\nOH with Ariel\n TBD\n\n\nCourse details\n Mondays, Wednesdays\n April 1 - June 12\n 1:00 PM - 2:50 PM\n In-person, RPV Room B/C\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "BSTA 513/613: Categorical Data Analysis\n\nSpring 2024\n \nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.  \n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n TBD\nOH with Antara\n T 5:30 - 7pm\nOH with Ariel\n Th 3:30 - 5pm\n\n\nCourse details\n Mondays, Wednesdays\n April 1 - June 12\n 1:00 PM - 2:50 PM\n In-person, RPV Room B/C\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "homeworks.html",
@@ -515,7 +515,7 @@
     "href": "instructors.html#teaching-assistants",
     "title": "Instructors",
     "section": "Teaching Assistants",
-    "text": "Teaching Assistants\nAntara and Ariel were great students in my BSTA 513 class last year! They will have the following office hours and will help answer questions on Slack.\n\nAntara Vidyarthi\nLink to Zoom!!\n\nTBD\n\n\n\nAriel Weingarten\nLink to Webex!!\n\nTBD"
+    "text": "Teaching Assistants\nAntara and Ariel were great students in my BSTA 513 class last year! They will have the following office hours and will help answer questions on Slack.\n\nAntara Vidyarthi\nLink to Zoom!!\n\nTuesdays 5:30 - 7pm\n\n\n\nAriel Weingarten\nLink to Webex!!\n\nThursdays 3:30 - 5pm"
   },
   {
     "objectID": "instructors.html#statistics-tutor-for-epidemiology-students",
@@ -1740,35 +1740,35 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Review of Test of Association",
-    "text": "Review of Test of Association\nLast week: learned some tests of association for contingency tables • For studies with two independent samples • General association (Chi-squared test, LRT, Fisher’s Exact test) • Test of trends • Cochran-Armitage test • Mantel-Haenszel test • Test of association does not provide an effective measure of association"
+    "text": "Review of Test of Association\n\nLast week: learned some tests of association for contingency tables\n\n \n\nFor studies with two independent samples\n\nGeneral association\n\nChi-squared test\nFisher’s Exact test\n\nTest of trends\n\nCochran-Armitage test\nMantel-Haenszel test\n\n\n\n \n\nTest of association does not provide an effective measure of association"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#test-of-association-does-not-measure-association",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#test-of-association-does-not-measure-association",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Test of association does not measure association",
-    "text": "Test of association does not measure association"
+    "text": "Test of association does not measure association\n\nTest of association does not provide an effective measure of association. The p-value alone is not enough.\n\n\\(\\text{p-value} &lt; 0.05\\) suggests there is a statistically significant association between the group and outcome\n\\(\\text{p-value} = 0.00001\\) vs. \\(\\text{p-value} = 0.01\\) does not mean the magnistude of association is different\n\n\n \n\nBut it does not tell how different the risks are between the two groups\n\n \n\nWe want to find out one or more measurements for quantifying the risks across the groups."
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measures-of-association",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measures-of-association",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Measures of Association",
-    "text": "Measures of Association"
+    "text": "Measures of Association\n\nWhen we have a 2x2 contingency table and independent samples, we have an option of three measures of association:\n \n\nRisk difference (RD)\n\n \n\nRelative risk (RR)\n\n \n\nOdds ratio (OR)\n\n\n \nEach measures association by comparing the proportion of successes/failures from each categorical group of our explanatory variable."
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#before-we-discuss-each-further",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#before-we-discuss-each-further",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Before we discuss each further…",
-    "text": "Before we discuss each further…"
+    "text": "Before we discuss each further…\n \nLet’s define the cells within a 2x2 contingency table:\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThen we can define risk: the proportion of “successes”\n\nWith \\(\\text{Risk}_1 = \\dfrac{n_{11}}{n_1}\\)"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Risk Difference",
-    "text": "Risk Difference"
+    "text": "Risk Difference\n\nRisk difference computes the absolute difference in risk for the two groups (from the explanatory variable)\nPoint estimate: \\[\\widehat{RD} = \\widehat{p}_1 - \\widehat{p}_1\\]\n\nWith range of point estimate from \\([-1, 1]\\)\n\nApproximate standard error:\n\n\\[ SE_{\\widehat{RD}} = \\sqrt{\\frac{\\hat{p}_1\\cdot(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2\\cdot(1-\\hat{p}_2)}{n_2}}\\]\n\n95% Wald confidence interval for \\(\\widehat{RD}\\):\n\n\\[\\widehat{RD} \\pm 1.96 \\cdot SE_{\\widehat{RD}}\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference-example",
@@ -1782,14 +1782,14 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#when-is-the-risk-difference-misleading",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "When is the risk difference misleading?",
-    "text": "When is the risk difference misleading?"
+    "text": "When is the risk difference misleading?\n\nThe same risk differences can have very different clinical meanings depending on the risk for each group\n\n \n \n\nExample: for two treatments A and B, we know the risk difference (RD) is 0.009. Is it a meaningful difference?\n\nIf the risk is 0.01 for Trt A and 0.001 for Trt B?\nIf the risk is 0.41 for Trt A and 0.401 for Trt B?\n\n\n \n\nUsing the RD alone to summarize the difference in risks for comparing the two groups can be misleading\n\nThe ratio of risk can provide an informative descriptive measure of the “relative risk”"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Relative Risk (RR)",
-    "text": "Relative Risk (RR)"
+    "text": "Relative Risk (RR)\n\nRelative risk computes the ratio of each group’s proportions of “success”\n\nAlso called risk ratio    \n\nPoint estimate: \\[\\widehat{RR}=\\dfrac{\\hat{p}_1}{\\hat{p}_2} = \\dfrac{n_{11}/n_1}{n_{21}/n_2}\\]\n\nRange: \\([0, \\infty]\\)"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-2",
@@ -1803,42 +1803,42 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-rr",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Log-transformation of RR",
-    "text": "Log-transformation of RR"
+    "text": "Log-transformation of RR\n\nSampling distribution of the relative risk is highly skewed unless sample sizes are quite large\n\nLog transformation results in approximately normal distribution\nThus, compute confidence interval using normally distributed, log-transformed RR\nThen we convert back to the RR\n\nWe take the log (natural log) of RR: \\(\\ln(\\widehat{RR})\\) or \\(log(\\widehat{RR})\\)\n\nWhenever I say “log” I mean natural log (very common in statistics)\n\n\n\n\n\nThen we need to find approximate standard error for \\(\\ln(\\widehat{RR})\\) \\[SE_{\\ln(\\widehat{RR})}=\\sqrt{\\frac{1}{n_{11}}\\ -\\frac{1}{n_1}+\\frac{1}{n_{21}}-\\frac{1}{n_2}}\\]\n95% confidence interval for \\(\\ln(\\widehat{RR})\\): \\[\\ln(\\widehat{RR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{RR})}\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-rr-scale",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-rr-scale",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "How do we get back to the RR scale?",
-    "text": "How do we get back to the RR scale?"
+    "text": "How do we get back to the RR scale?\n\nWe computed confidence interval using normally distributed, log-transformed RR (\\(\\ln(\\widehat{RR})\\)):\n\n\\[ \\bigg(\\ln(\\widehat{RR}) - 1.96 \\times SE_{\\ln(\\widehat{RR})}, \\ \\ln(\\widehat{RR}) + 1.96 \\times SE_{\\ln(\\widehat{RR})}\\bigg)\\]\n\nNow we need to exponentiate the CI to get back to interpretable values\n\nTake exponential of lower and upper bounds\n\n95% confidence interval for RR: two ways to display equation\n\n\\[ \\bigg(e^{\\ln(\\widehat{RR}) - 1.96 \\times SE_{\\ln(\\widehat{RR})}}, \\ e^{\\ln(\\widehat{RR}) + 1.96 \\times SE_{\\ln(\\widehat{RR})}}\\bigg)\\] \\[ \\bigg(\\exp\\big(\\ln(\\widehat{RR}) - 1.96 \\times SE_{\\ln(\\widehat{RR})}\\big), \\ \\exp\\big(\\ln(\\widehat{RR}) + 1.96 \\times SE_{\\ln(\\widehat{RR})}\\big)\\bigg)\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-1",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-1",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Relative Risk (RR)",
-    "text": "Relative Risk (RR)"
+    "text": "Relative Risk (RR)\n\nCan you compute the estimated RRs for the previous example?\n\nIf the risk for Trt A is 0.01 and Trt B is 0.001? \\(\\widehat{RR}= 10\\)\nIf the risk for Trt A is 0.41 and Trt B is 0.401? \\(\\widehat{RR}= 1.02\\)\n\nWhen \\(\\widehat{RR}= 1\\) …\n\nRisk is the same for the two groups\nIn other words, the group and the outcome are independent\n\nWhen computing \\(\\widehat{RR}\\) it is important to identify which variable is the response variable and which is explanatory variable\n\nWe may say “risk for Trt A” but this translates to the risk (or probability) of outcome success for those receiving Trt A"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-example",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relative-risk-rr-example",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Relative Risk (RR) Example",
-    "text": "Relative Risk (RR) Example"
+    "text": "Relative Risk (RR) Example\n\nlibrary(pubh)\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Normal    128 1004\n  Impaired  198  334\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          128         1004       1132      11.31 (9.52 to 13.30)\nExposed -          198          334        532     37.22 (33.10 to 41.48)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 0.30 (0.25, 0.37)\nInc odds ratio                                 0.22 (0.17, 0.28)\nAttrib risk in the exposed *                   -25.91 (-30.41, -21.41)\nAttrib fraction in the exposed (%)            -229.15 (-300.81, -170.30)\nAttrib risk in the population *                -17.63 (-22.16, -13.10)\nAttrib fraction in the population (%)         -89.97 (-106.38, -74.87)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-building-up-to-odds-ratio",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-building-up-to-odds-ratio",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Odds (building up to Odds Ratio)",
-    "text": "Odds (building up to Odds Ratio)"
+    "text": "Odds (building up to Odds Ratio)\n\nFor a probability of success \\(p\\) (or sometimes referred to as \\(\\pi\\)), the odds of success is: \\[\\text{odds}=\\frac{p}{1-p}=\\frac{\\pi}{1-\\pi}\\]\n\nExample: if \\(\\pi=0.75\\), then odds of success \\(= \\dfrac{0.75}{0.25}=3\\)\n\nIf odds &gt; 1, it implies a success is more likely than a failure\n\nExample: for \\(odds = 3\\), we expect to observe three times as many successes as failures\n\nIf odds is known, the probability of success can be computed \\[\\pi = \\dfrac{\\text{odds}}{\\text{odds}+1}\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Odds Ratio (OR)",
-    "text": "Odds Ratio (OR)"
+    "text": "Odds Ratio (OR)\n\nOdds ratio is the ratio of two odds:\\[\\widehat{OR}=\\frac{odds_1}{odds_2}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}\\]\n\nRange: \\([0, \\infty]\\)\nInterpretation: The odds of success for “group 1” is “\\(\\widehat{OR}\\)” times the odds of success for “group 2”\n\n\n \n\nWhat do values of odds ratios mean?\n\n\n\n\n\n\n\nOdds Ratio\nClinical Meaning\n\n\n\n\n\\(\\widehat{OR} &lt; 1\\)\nOdds of success is smaller in group 1 than in group 2\n\n\n\\(\\widehat{OR} = 1\\)\nExplanatory and response variables are independent\n\n\n\\(\\widehat{OR} &gt; 1\\)\nOdds of success is greater in group 1 than in group 2"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-3",
@@ -1852,21 +1852,21 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or-1",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Odds Ratio (OR)",
-    "text": "Odds Ratio (OR)"
+    "text": "Odds Ratio (OR)\n\nValues of OR farther from 1.0 in a given direction represent stronger association\n\nAn OR = 4 is farther from independence than an OR = 2\nAn OR = 0.25 is farther from independence than an OR = 0.5\nFor OR = 4 and OR = 0.25, they are equally away from independence (because ¼ = 0.25)\n\n\n \n\nWe take the inverse of the OR for success of group 1 compared to group 2 to get…\n\nOR for failure of group 1 compared to group 2\nOR for success of group 2 compared to group 1"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-or",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#log-transformation-of-or",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Log-transformation of OR",
-    "text": "Log-transformation of OR"
+    "text": "Log-transformation of OR\n\nLike RR, sampling distribution of the odds ratio is highly skewed\n\nLog transformation results in approximately normal distribution\nThus, compute confidence interval using normally distributed, log-transformed OR\n\n\n\n\n\nApproximate standard error for \\(\\ln (\\widehat{OR})\\): \\[SE_{\\ln(\\widehat{OR})}=\\sqrt{\\frac{1}{n_{11}}\\ +\\frac{1}{n_{12}}+\\frac{1}{n_{21}}+\\frac{1}{n_{22}}}\\]\n95% confidence interval for \\(\\ln(\\widehat{OR})\\): \\[\\ln(\\widehat{OR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{OR})}\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-or-scale",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#how-do-we-get-back-to-the-or-scale",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "How do we get back to the OR scale?",
-    "text": "How do we get back to the OR scale?"
+    "text": "How do we get back to the OR scale?\n\nWe computed confidence interval using normally distributed, log-transformed RR (\\(\\ln(\\widehat{OR})\\)):\n\n\\[ \\bigg(\\ln(\\widehat{OR}) - 1.96 \\times SE_{\\ln(\\widehat{OR})}, \\ \\ln(\\widehat{OR}) + 1.96 \\times SE_{\\ln(\\widehat{OR})}\\bigg)\\]\n\nNow we need to exponentiate the CI to get back to interpretable values\n\nTake exponential of lower and upper bounds\n\n95% confidence interval for RR: two ways to display equation\n\n\\[ \\bigg(e^{\\ln(\\widehat{OR}) - 1.96 \\times SE_{\\ln(\\widehat{OR})}}, \\ e^{\\ln(\\widehat{OR}) + 1.96 \\times SE_{\\ln(\\widehat{OR})}}\\bigg)\\] \\[ \\bigg(\\exp\\big(\\ln(\\widehat{OR}) - 1.96 \\times SE_{\\ln(\\widehat{OR})}\\big), \\ \\exp\\big(\\ln(\\widehat{OR}) + 1.96 \\times SE_{\\ln(\\widehat{OR})}\\big)\\bigg)\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#odds-ratio-or-example",
@@ -2084,5 +2084,320 @@
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Example: Scottish Health Heart Study",
     "text": "Example: Scottish Health Heart Study"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#tests-from-last-class",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#tests-from-last-class",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Tests from last class",
+    "text": "Tests from last class"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#section",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#section",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "1",
+    "text": "1\n\nlibrary(pubh)\nct = mtcars |&gt;\n  contingency(as.factor(vs) ~ as.factor(am))\n\n         Outcome\nPredictor  1  0\n        1  7  6\n        0  7 12\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +            7            6         13     53.85 (25.13 to 80.78)\nExposed -            7           12         19     36.84 (16.29 to 61.64)\nTotal               14           18         32     43.75 (26.36 to 62.34)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 1.46 (0.67, 3.17)\nInc odds ratio                                 2.00 (0.48, 8.40)\nAttrib risk in the exposed *                   17.00 (-17.71, 51.71)\nAttrib fraction in the exposed (%)            31.58 (-48.44, 68.46)\nAttrib risk in the population *                6.91 (-20.77, 34.58)\nAttrib fraction in the population (%)         15.79 (-24.73, 43.15)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 0.907 Pr&gt;chi2 = 0.341\nFisher exact test that OR = 1: Pr&gt;chi2 = 0.473\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 0.34754, df = 1, p-value = 0.5555\n\nct$observed\n\n         Outcome\nPredictor  1  0\n        1  7  6\n        0  7 12"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#section-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#section-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "2",
+    "text": "2\n\nmtcars\n\n\n\n\nmpgcyldisphpdratwtqsecvsamgearcarb\n\n21  6160  1103.9 2.6216.50144\n\n21  6160  1103.9 2.8817  0144\n\n22.84108  933.852.3218.61141\n\n21.46258  1103.083.2119.41031\n\n18.78360  1753.153.4417  0032\n\n18.16225  1052.763.4620.21031\n\n14.38360  2453.213.5715.80034\n\n24.44147  623.693.1920  1042\n\n22.84141  953.923.1522.91042\n\n19.26168  1233.923.4418.31044\n\n17.86168  1233.923.4418.91044\n\n16.48276  1803.074.0717.40033\n\n17.38276  1803.073.7317.60033\n\n15.28276  1803.073.7818  0033\n\n10.48472  2052.935.2518  0034\n\n10.48460  2153   5.4217.80034\n\n14.78440  2303.235.3417.40034\n\n32.4478.7664.082.2 19.51141\n\n30.4475.7524.931.6118.51142\n\n33.9471.1654.221.8319.91141\n\n21.54120  973.7 2.4620  1031\n\n15.58318  1502.763.5216.90032\n\n15.28304  1503.153.4417.30032\n\n13.38350  2453.733.8415.40034\n\n19.28400  1753.083.8517.10032\n\n27.3479  664.081.9418.91141\n\n26  4120  914.432.1416.70152\n\n30.4495.11133.771.5116.91152\n\n15.88351  2644.223.1714.50154\n\n19.76145  1753.622.7715.50156\n\n15  8301  3353.543.5714.60158\n\n21.44121  1094.112.7818.61142"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#recall-the-strong-heart-study",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#recall-the-strong-heart-study",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Recall the Strong Heart Study",
+    "text": "Recall the Strong Heart Study\n\n\nThe Strong Heart Study is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND). We will look at data from this study examining the incidence of diabetes at a follow-up visit and impaired glucose tolerance (ITG) at baseline (4 years apart).\n \n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference",
+    "text": "SHS Example: Risk Difference\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nCompute the risk difference\nCompute 95% confidence interval\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference-rd",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#risk-difference-rd",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Risk Difference (RD)",
+    "text": "Risk Difference (RD)\n\nRisk difference computes the absolute difference in risk for the two groups (from the explanatory variable)\nPoint estimate: \\[\\widehat{RD} = \\widehat{p}_1 - \\widehat{p}_1 = \\dfrac{n_{11}}{n_1} - \\dfrac{n_{21}}{n_2}\\]\n\nWith range of point estimate from \\([-1, 1]\\)\n\nApproximate standard error:\n\n\\[ SE_{\\widehat{RD}} = \\sqrt{\\frac{\\hat{p}_1\\cdot(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2\\cdot(1-\\hat{p}_2)}{n_2}}\\]\n\n95% Wald confidence interval for \\(\\widehat{RD}\\):\n\n\\[\\widehat{RD} \\pm 1.96 \\cdot SE_{\\widehat{RD}}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference",
+    "text": "SHS Example: Risk Difference\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute 95% confidence interval\n\n\\[\\begin{aligned} &\\widehat{RD}\\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times SE_{\\widehat{RD}} \\\\\n= &\\widehat{RD}\\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{{\\hat{p}}_1\\ (1-{\\hat{p}}_1)}{n_1}+\\frac{{\\hat{p}}_2(1-{\\hat{p}}_2)}{n_2}\\ }\\\\\n=  & -0.025 \\pm 1.96\\times \\sqrt{\\frac{0.056(1-0.056)}{733}+\\frac{0.081(1-0.081)}{742}\\ }\\\\\n=  & (-0.0506,\\ 0.0008)\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-13",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-13",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (1/3)",
+    "text": "SHS Example: Risk Difference (1/3)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute the risk difference \\[\\widehat{RD}={\\hat{p}}_1 - {\\hat{p}}_2=\\frac{n_{11}}{n_1}-\\frac{n_{21}}{n_2}=\\ \\frac{198}{532}\\ - \\frac{128}{1132}=0.3722−0.1131=0.2591\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-33",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-33",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (3/3)",
+    "text": "SHS Example: Risk Difference (3/3)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n1/2. Compute risk difference and 95% confidence interval\n\nfmsb::riskdifference(198, 128, 532, 1132)\n\n                 Cases People at risk         Risk\nExposed    198.0000000    532.0000000    0.3721805\nUnexposed  128.0000000   1132.0000000    0.1130742\nTotal      326.0000000   1664.0000000    0.1959135\n\n\n\n    Risk difference and its significance probability (H0: The difference\n    equals to zero)\n\ndata:  198 128 532 1132\np-value &lt; 2.2e-16\n95 percent confidence interval:\n 0.2140779 0.3041346\nsample estimates:\n[1] 0.2591062"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (2/)",
+    "text": "SHS Example: Risk Difference (2/)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute 95% confidence interval\n\n\\[\\begin{aligned} &\\widehat{RD}\\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times SE_{\\widehat{RD}} \\\\\n= &\\widehat{RD}\\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{{\\hat{p}}_1\\ (1-{\\hat{p}}_1)}{n_1}+\\frac{{\\hat{p}}_2(1-{\\hat{p}}_2)}{n_2}\\ }\\\\\n=  & 0.2591 \\pm 1.96\\times \\sqrt{\\frac{0.3722(1-0.3722)}{532}+\\frac{0.1131(1-0.1131)}{1132}\\ }\\\\\n=  & (0.2141,\\ 0.3041 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-33-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-33-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (3/3)",
+    "text": "SHS Example: Risk Difference (3/3)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nInterpret the estimate\n\nThe diabetes diagnosis risk difference between impaired and normal glucose tolerance is 0.2591 (95% CI: 0.2141, 0.3041). Since the 95% confidence interval contains 0, we do not have sufficient evidence that the risk of diabetes diagnosis between impaired and normal glucose tolerance is different."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-14",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-14",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (1/4)",
+    "text": "SHS Example: Risk Difference (1/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute the risk difference \\[\\widehat{RD}={\\hat{p}}_1 - {\\hat{p}}_2=\\frac{n_{11}}{n_1}-\\frac{n_{21}}{n_2}=\\ \\frac{198}{532}\\ - \\frac{128}{1132}=0.3722−0.1131=0.2591\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-24",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-24",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (2/4)",
+    "text": "SHS Example: Risk Difference (2/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute 95% confidence interval\n\n\\[\\begin{aligned} &\\widehat{RD}\\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times SE_{\\widehat{RD}} \\\\\n= &\\widehat{RD}\\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{{\\hat{p}}_1\\ (1-{\\hat{p}}_1)}{n_1}+\\frac{{\\hat{p}}_2(1-{\\hat{p}}_2)}{n_2}\\ }\\\\\n=  & 0.2591 \\pm 1.96\\times \\sqrt{\\frac{0.3722(1-0.3722)}{532}+\\frac{0.1131(1-0.1131)}{1132}\\ }\\\\\n=  & (0.2141,\\ 0.3041 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-34",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-34",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (3/4)",
+    "text": "SHS Example: Risk Difference (3/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n1/2. Compute risk difference and 95% confidence interval\n\nfmsb::riskdifference(198, 128, 532, 1132)\n\n                 Cases People at risk         Risk\nExposed    198.0000000    532.0000000    0.3721805\nUnexposed  128.0000000   1132.0000000    0.1130742\nTotal      326.0000000   1664.0000000    0.1959135\n\n\n\n    Risk difference and its significance probability (H0: The difference\n    equals to zero)\n\ndata:  198 128 532 1132\np-value &lt; 2.2e-16\n95 percent confidence interval:\n 0.2140779 0.3041346\nsample estimates:\n[1] 0.2591062"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-44",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-44",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (4/4)",
+    "text": "SHS Example: Risk Difference (4/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nInterpret the estimate\n\nThe diabetes diagnosis risk difference between impaired and normal glucose tolerance is 0.2591 (95% CI: 0.2141, 0.3041). Since the 95% confidence interval contains 0, we do not have sufficient evidence that the risk of diabetes diagnosis between impaired and normal glucose tolerance is different."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk",
+    "text": "SHS Example: Relative Risk\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nCompute the relative risk\nFind confidence interval of log RR\nConvert back to RR\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-14-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-14-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (1/4)",
+    "text": "SHS Example: Risk Difference (1/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute the relative risk \\[\\widehat{RR}=\\dfrac{{\\hat{p}}_1}{{\\hat{p}}_2}=\\dfrac{n_{11}/{n_1}}{n_{21}/{n_2}}=\\ \\frac{ 198/532}{128/1132}=\\dfrac{0.3722}{0.1131}=3.2915\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-24-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-24-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (2/4)",
+    "text": "SHS Example: Risk Difference (2/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nFind confidence interval of log RR then convert back to RR\n\n\\[\\begin{aligned} & ln(\\widehat{RR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{RR})} \\\\\n= &ln(\\widehat{RR}) \\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{1}{n_{11}}\\ -\\frac{1}{n_1}+\\frac{1}{n_{21}}-\\frac{1}{n_2}}\\\\\n=  & 1.1913 \\pm 1.96\\times \\sqrt{\\frac{1}{198}\\ -\\frac{1}{532}+\\frac{1}{128}-\\frac{1}{1132}}\\\\\n=  & (0.2,\\ 0.3 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-34-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-34-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (3/4)",
+    "text": "SHS Example: Risk Difference (3/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n1/2. Compute risk difference and 95% confidence interval\n\nlibrary(epitools)\nSHS_ct = table(SHS$glucimp, SHS$case)\nriskratio(x = SHS_ct, rev = \"rows\")$measure\n\n          risk ratio with 95% C.I.\n           estimate    lower    upper\n  Normal   1.000000       NA       NA\n  Impaired 3.291471 2.702998 4.008061"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-44-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-44-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (4/4)",
+    "text": "SHS Example: Risk Difference (4/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nInterpret the estimate\n\nThe diabetes diagnosis risk difference between impaired and normal glucose tolerance is 0.2591 (95% CI: 0.2141, 0.3041). Since the 95% confidence interval contains 0, we do not have sufficient evidence that the risk of diabetes diagnosis between impaired and normal glucose tolerance is different."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-24-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-difference-24-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Difference (2/4)",
+    "text": "SHS Example: Risk Difference (2/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nFind confidence interval of log RR then convert back to RR\n\n\\[\\begin{aligned} & ln(\\widehat{RR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{RR})} \\\\\n= &ln(\\widehat{RR}) \\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{1}{n_{11}}\\ -\\frac{1}{n_1}+\\frac{1}{n_{21}}-\\frac{1}{n_2}}\\\\\n=  & 1.1913 \\pm 1.96\\times \\sqrt{\\frac{1}{198}\\ -\\frac{1}{532}+\\frac{1}{128}-\\frac{1}{1132}}\\\\\n=  & (0.2141,\\ 0.3041 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Pause: other option",
+    "text": "Pause: other option\n\nlibrary(pubh)\nSHS = SHS %&gt;% mutate(glucimp = as.factor(glucimp) %&gt;% relevel(ref = \"Normal\"))\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532     37.22 (33.10 to 41.48)\nExposed -          128         1004       1132      11.31 (9.52 to 13.30)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.29 (2.70, 4.01)\nInc odds ratio                                 4.65 (3.61, 6.00)\nAttrib risk in the exposed *                   25.91 (21.41, 30.41)\nAttrib fraction in the exposed (%)            69.62 (63.00, 75.05)\nAttrib risk in the population *                8.28 (5.63, 10.94)\nAttrib fraction in the population (%)         42.28 (34.71, 48.98)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-14",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-14",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Ratio (1/4)",
+    "text": "SHS Example: Risk Ratio (1/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute the relative risk \\[\\widehat{RR}=\\dfrac{{\\hat{p}}_1}{{\\hat{p}}_2}=\\dfrac{n_{11}/{n_1}}{n_{21}/{n_2}}=\\ \\frac{ 198/532}{128/1132}=\\dfrac{0.3722}{0.1131}=3.2915\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-24",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-24",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Ratio (2/4)",
+    "text": "SHS Example: Risk Ratio (2/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nFind confidence interval of log RR\n\n\\[\\begin{aligned} & ln(\\widehat{RR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{RR})} \\\\\n= &ln(\\widehat{RR}) \\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{1}{n_{11}}\\ -\\frac{1}{n_1}+\\frac{1}{n_{21}}-\\frac{1}{n_2}}\\\\\n=  & 1.1913 \\pm 1.96\\times \\sqrt{\\frac{1}{198}\\ -\\frac{1}{532}+\\frac{1}{128}-\\frac{1}{1132}}\\\\\n=  & (0.9944,\\ 1.3883 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-34",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-34",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Ratio (3/4)",
+    "text": "SHS Example: Risk Ratio (3/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n1/2/3. Compute risk ratio and 95% confidence interval\n\nlibrary(epitools)\nSHS_ct = table(SHS$glucimp, SHS$case)\nriskratio(x = SHS_ct, rev = \"rows\")$measure\n\n          risk ratio with 95% C.I.\n           estimate    lower    upper\n  Normal   1.000000       NA       NA\n  Impaired 3.291471 2.702998 4.008061"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option-in-pubh-package",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option-in-pubh-package",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Pause: other option in pubh package",
+    "text": "Pause: other option in pubh package\n\n\nLoading required package: emmeans\n\n\nLoading required package: ggformula\n\n\nLoading required package: scales\n\n\n\nAttaching package: 'scales'\n\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\nLoading required package: ggridges\n\n\n\nNew to ggformula?  Try the tutorials: \n    learnr::run_tutorial(\"introduction\", package = \"ggformula\")\n    learnr::run_tutorial(\"refining\", package = \"ggformula\")\n\n\nLoading required package: huxtable\n\n\n\nAttaching package: 'huxtable'\n\n\nThe following object is masked from 'package:scales':\n\n    number_format\n\n\nThe following object is masked from 'package:gtsummary':\n\n    as_flextable\n\n\nThe following object is masked from 'package:gt':\n\n    fmt_percent\n\n\nThe following object is masked from 'package:dplyr':\n\n    add_rownames\n\n\nThe following object is masked from 'package:ggplot2':\n\n    theme_grey\n\n\nLoading required package: magrittr\n\n\n\nAttaching package: 'magrittr'\n\n\nThe following object is masked from 'package:purrr':\n\n    set_names\n\n\nThe following object is masked from 'package:tidyr':\n\n    extract\n\n\n\nSHS = SHS %&gt;% mutate(glucimp = as.factor(glucimp) %&gt;% relevel(ref = \"Normal\"))\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532     37.22 (33.10 to 41.48)\nExposed -          128         1004       1132      11.31 (9.52 to 13.30)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.29 (2.70, 4.01)\nInc odds ratio                                 4.65 (3.61, 6.00)\nAttrib risk in the exposed *                   25.91 (21.41, 30.41)\nAttrib fraction in the exposed (%)            69.62 (63.00, 75.05)\nAttrib risk in the population *                8.28 (5.63, 10.94)\nAttrib fraction in the population (%)         42.28 (34.71, 48.98)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-24-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-24-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Ratio (2/4)",
+    "text": "SHS Example: Risk Ratio (2/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nConvert back to RR\n\n\\[\\begin{aligned} & (\\exp(0.9944),\\ \\exp(1.3883 )) \\\\\n= & (2.703,\\ 4.0081 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-44",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-44",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Risk Ratio (4/4)",
+    "text": "SHS Example: Risk Ratio (4/4)\n\n\n\n\nRisk difference\n\n\nCompute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nInterpret the estimate\n\nThe estimated risk of diabetes is 3.29 times greater for American Indians who had impaired glucose tolerance at baseline compared to those who had normal glucose tolerance (95% CI: 2.70, 4.01).\n \nAdditional interpretation of 95% CI (not needed): We are 95% confident that the (population) relative risk is between 2.70 and 4.01.\n \nSince the 95% confidence interval does not include 1, there is sufficient evidence that the risk of diabetes differs significantly between impaired and normal glucose tolerance at baseline."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-16",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-16",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk (1/6)",
+    "text": "SHS Example: Relative Risk (1/6)\n\n\n\n\nRelative risk\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nCompute the relative risk\nFind confidence interval of log RR\nConvert back to RR\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-26",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-26",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk (2/6)",
+    "text": "SHS Example: Relative Risk (2/6)\n\n\n\n\nRelative risk\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute the relative risk \\[\\widehat{RR}=\\dfrac{{\\hat{p}}_1}{{\\hat{p}}_2}=\\dfrac{n_{11}/{n_1}}{n_{21}/{n_2}}=\\ \\frac{ 198/532}{128/1132}=\\dfrac{0.3722}{0.1131}=3.2915\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-36",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-36",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk (3/6)",
+    "text": "SHS Example: Relative Risk (3/6)\n\n\n\n\nRelative risk\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nFind confidence interval of log RR\n\n\\[\\begin{aligned} & \\ln(\\widehat{RR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{RR})} \\\\\n= &\\ln(\\widehat{RR}) \\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{1}{n_{11}}\\ -\\frac{1}{n_1}+\\frac{1}{n_{21}}-\\frac{1}{n_2}}\\\\\n=  & 1.1913 \\pm 1.96\\times \\sqrt{\\frac{1}{198}\\ -\\frac{1}{532}+\\frac{1}{128}-\\frac{1}{1132}}\\\\\n=  & (0.9944,\\ 1.3883 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-46",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-46",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk (4/6)",
+    "text": "SHS Example: Relative Risk (4/6)\n\n\n\n\nRelative risk\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nConvert back to RR\n\n\\[\\begin{aligned} & (\\exp(0.9944),\\ \\exp(1.3883 )) \\\\\n= & (2.703,\\ 4.0081 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-56",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-56",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk (5/6)",
+    "text": "SHS Example: Relative Risk (5/6)\n\n\n\n\nRelative risk\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n1/2/3. Compute risk ratio and 95% confidence interval\n\nlibrary(epitools)\nSHS_ct = table(SHS$glucimp, SHS$case)\nriskratio(x = SHS_ct, rev = \"rows\")$measure\n\n          risk ratio with 95% C.I.\n           estimate    lower    upper\n  Normal   1.000000       NA       NA\n  Impaired 3.291471 2.702998 4.008061"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-66",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-relative-risk-66",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Relative Risk (6/6)",
+    "text": "SHS Example: Relative Risk (6/6)\n\n\n\n\nRelative risk\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nInterpret the estimate\n\nThe estimated risk of diabetes is 3.29 times greater for American Indians who had impaired glucose tolerance at baseline compared to those who had normal glucose tolerance (95% CI: 2.70, 4.01).\n \nAdditional interpretation of 95% CI (not needed): We are 95% confident that the (population) relative risk is between 2.70 and 4.01.\n \nSince the 95% confidence interval does not include 1, there is sufficient evidence that the risk of diabetes differs significantly between impaired and normal glucose tolerance at baseline."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-16",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-16",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Odds Ratio (1/6)",
+    "text": "SHS Example: Odds Ratio (1/6)\n\n\n\n\nOdds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes odds ratio between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nCompute the odds ratio\nFind confidence interval of log OR\nConvert back to OR\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-26",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-26",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Odds Ratio (2/6)",
+    "text": "SHS Example: Odds Ratio (2/6)\n\n\n\n\nOdds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nCompute the odds ratio\n\n\\(\\widehat{p}_1 = 198/532 = 0.3722\\), \\(\\widehat{p}_2 = 128/1132 = 0.1131\\) \\[\\widehat{OR}=\\frac{\\widehat{p_1}/(1-\\widehat{p_1})}{\\widehat{p_2}/(1-\\widehat{p_2})}= \\dfrac{0.3722/(1-0.3722)}{0.1131/(1-0.1131)}= 4.6499\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-36",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-36",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Odds Ratio (3/6)",
+    "text": "SHS Example: Odds Ratio (3/6)\n\n\n\n\nOdds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nFind confidence interval of log OR\n\n\\[\\begin{aligned} & \\ln(\\widehat{OR}) \\pm 1.96 \\times SE_{\\ln(\\widehat{OR})} \\\\\n= &\\ln(\\widehat{OR}) \\pm z_{\\left(1-\\frac{\\alpha}{2}\\right)}^\\ast \\times \\sqrt{\\frac{1}{n_{11}}\\ +\\frac{1}{n_{12}}+\\frac{1}{n_{21}}+\\frac{1}{n_{22}}}\\\\\n=  & 1.5368 \\pm 1.96\\times \\sqrt{\\frac{1}{198}\\ +\\frac{1}{334}+\\frac{1}{128}+\\frac{1}{1004}}\\\\\n=  & (1.2824,\\ 1.7913 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-46",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-46",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Odds Ratio (4/6)",
+    "text": "SHS Example: Odds Ratio (4/6)\n\n\n\n\nOdds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nConvert back to OR\n\n\\[\\begin{aligned} & (\\exp(1.2824),\\ \\exp(1.7913 )) \\\\\n= & (3.6053,\\ 5.9971 )\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-56",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-56",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Odds Ratio (5/6)",
+    "text": "SHS Example: Odds Ratio (5/6)\n\n\n\n\nOdds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n1/2/3. Compute OR and 95% confidence interval\n\nlibrary(epitools)\nSHS_ct = table(SHS$glucimp, SHS$case)\n# no `rev` needed below bc we set the reference level in slide 32\noddsratio(x = SHS_ct, method = \"wald\")$measure \n\n          odds ratio with 95% C.I.\n           estimate    lower    upper\n  Normal   1.000000       NA       NA\n  Impaired 4.649888 3.605289 5.997148"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option-in-pubh-package-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option-in-pubh-package-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Pause: other option in pubh package",
+    "text": "Pause: other option in pubh package\n\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532     37.22 (33.10 to 41.48)\nExposed -          128         1004       1132      11.31 (9.52 to 13.30)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.29 (2.70, 4.01)\nInc odds ratio                                 4.65 (3.61, 6.00)\nAttrib risk in the exposed *                   25.91 (21.41, 30.41)\nAttrib fraction in the exposed (%)            69.62 (63.00, 75.05)\nAttrib risk in the population *                8.28 (5.63, 10.94)\nAttrib fraction in the population (%)         42.28 (34.71, 48.98)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-66",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-66",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Odds Ratio (6/6)",
+    "text": "SHS Example: Odds Ratio (6/6)\n\n\n\n\nOdds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\n\nInterpret the estimate\n\nThe estimated odds of diabetes for American Indians with impaired glucose tolerance at baseline is 4.65 times the odds for American Indians with normal glucose tolerance at baseline.\n \nAdditional interpretation of 95% CI (not needed): We are 95% confident that the odds ratio is between 3.61 and 6.00.\n \nSince the 95% confidence interval does not include 1, there is sufficient evidence that the odds of diabetes differs significantly between impaired and normal glucose tolerance at baseline."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#inversing-an-odds-ratio",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#inversing-an-odds-ratio",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Inversing an Odds Ratio",
+    "text": "Inversing an Odds Ratio\n\nSome clinicians may prefer interpretations of OR &gt; 1 instead of an OR &lt; 1\nThe transformation can easily be done by inverse\n\nRemember we discussed that OR = 4 is an equivalent a strong association as OR = 0.25 (1/4)\n\nOR comparing group 1 to group 2 = inverse of OR comparing group 2 to group 1\n\n\\[ OR_{1v2}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}=\\frac{1}{\\frac{{\\hat{p}}_2/(1-{\\hat{p}}_2)}{{\\hat{p}}_1/(1-{\\hat{p}}_1)}}=\\frac{1}{OR_{2v1}}\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Inversing Odds Ratio",
+    "text": "SHS Example: Inversing Odds Ratio\n\n\n\n\nInversing odds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes odds ratio between normal and impaired glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nInverse point estimate and confidence interval\n\n\\[\\widehat{OR}=\\frac{1}{4.6499}=0.2151\\] The 95% Confidence interval is then\n\\[ \\left(\\frac{1}{5.9971}, \\frac{1}{3.6053}\\right)\\ =\\ (0.1667, 0.2774)\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Inversing Odds Ratio",
+    "text": "SHS Example: Inversing Odds Ratio\n\n\n\n\nInversing odds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes odds ratio between normal and impaired glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe estimated odds of diabetes for American Indians with normal glucose tolerance at baseline is 0.22 times the odds for American Indians with impaired glucose tolerance at baseline.\n \nAdditional interpretation of 95% CI (not needed): We are 95% confident that the odds ratio is between 0.17 and 0.28.\n \nSince the 95% confidence interval does not include 1, there is sufficient evidence that the odds of diabetes differs significantly between impaired and normal glucose tolerance at baseline."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'janitor'\n\n\nThe following objects are masked from 'package:stats':\n\n    chisq.test, fisher.test\n\n\n\nAttaching package: 'rstatix'\n\n\nThe following object is masked from 'package:janitor':\n\n    make_clean_names\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nhere() starts at /Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/S2024_BSTA_513_613/S2024_BSTA_513"
   }
 ]

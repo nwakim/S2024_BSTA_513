@@ -20,6 +20,12 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
 ```{r}
 #| echo: false
 
@@ -36,75 +42,982 @@ library(here)
 
 ## Poll Everywhere Question 1
 
+## Tests from last class
+
+![](./images/test_organization.png)
+
 # Learning Objectives
 
-1. Understand the difference between testing for association and measuring association
-2. Calculate the estimated risk difference, relative risk, and odds ratios, and their confidence intervals
-3. Interpret the meaning of risk difference, relative risk, and odds ratios
-4. Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
-5. Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
-6. Define confounders and construct three-way tables to demonstrate how they affect the relationship between two other variables
-7. Calculate and test significance for adjusted odds ratio across confounder strata
+1.  Understand the difference between testing for association and measuring association
+2.  Calculate the estimated risk difference, relative risk, and odds ratios, and their confidence intervals
+3.  Interpret the meaning of risk difference, relative risk, and odds ratios
+4.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
+5.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
+6.  Define confounders and construct three-way tables to demonstrate how they affect the relationship between two other variables
+7.  Calculate and test significance for adjusted odds ratio across confounder strata
 
-# Learning Objectives 
+# Learning Objectives
 
 ## Review of Test of Association
 
-Last week: learned some tests of association for contingency tables
-• For studies with two independent samples
-• General association (Chi-squared test, LRT, Fisher’s Exact test)
-• Test of trends
-• Cochran-Armitage test
-• Mantel-Haenszel test
-• Test of association does not provide an effective measure of association
+-   Last week: learned some tests of association for contingency tables
+
+ 
+
+-   For studies with two independent samples
+
+    -   General association
+        -   Chi-squared test
+        -   Fisher’s Exact test
+    -   Test of trends
+        -   Cochran-Armitage test
+        -   Mantel-Haenszel test
+
+ 
+
+-   Test of association does not provide an effective measure of association
 
 ## Test of association does not measure association
 
-# Learning Objectives 
+-   Test of association does not provide an effective measure of association. The p-value alone is not enough.
+
+    -   $\text{p-value} < 0.05$ suggests there is a statistically significant association between the group and outcome
+
+    -   $\text{p-value} = 0.00001$ vs. $\text{p-value} = 0.01$ does not mean the magnistude of association is different
+
+ 
+
+-   But it does not tell how different the risks are between the two groups
+
+ 
+
+-   We want to find out one or more measurements for quantifying the risks across the groups.
+
+# Learning Objectives
 
 ## Measures of Association
 
+-   When we have a 2x2 contingency table and independent samples, we have an option of three measures of association:
+
+     
+
+    1.  Risk difference (RD)
+
+     
+
+    2.  Relative risk (RR)
+
+     
+
+    3.  Odds ratio (OR)
+
+ 
+
+Each measures association by comparing the proportion of successes/failures from each categorical group of our explanatory variable.
+
 ## Before we discuss each further...
 
-# Learning Objectives 
+ 
 
-## Risk Difference
+Let's define the cells within a 2x2 contingency table:
 
-## Risk Difference Example
+ 
+
+::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="60%"}
+![](./images/ct.png){fig-align="center"}
+:::
+
+::: {.column width="20%"}
+:::
+:::
+
+-   Then we can define risk: the proportion of "successes"
+
+    -   With $\text{Risk}_1 = \dfrac{n_{11}}{n_1}$
+
+# Learning Objectives
+
+## Risk Difference (RD)
+
+-   Risk difference computes the absolute difference in risk for the two groups (from the explanatory variable)
+
+-   Point estimate: $$\widehat{RD} = \widehat{p}_1 - \widehat{p}_1 = \dfrac{n_{11}}{n_1} - \dfrac{n_{21}}{n_2}$$
+
+    -   With range of point estimate from $[-1, 1]$
+
+-   Approximate standard error:
+
+$$ SE_{\widehat{RD}} = \sqrt{\frac{\hat{p}_1\cdot(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2\cdot(1-\hat{p}_2)}{n_2}}$$
+
+-   95% Wald confidence interval for $\widehat{RD}$:
+
+$$\widehat{RD} \pm 1.96 \cdot SE_{\widehat{RD}}$$
+
+## Recall the Strong Heart Study
+
+::: columns
+::: {.column width="65%"}
+The [Strong Heart Study](https://strongheartstudy.org/) is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND). We will look at data from this study examining the **incidence of diabetes** at a follow-up visit and **impaired glucose tolerance** (ITG) at baseline (4 years apart).
+
+ 
+
+```{r}
+#| echo: false
+
+SHS = read.csv(here("Data", "SHS_data.csv")) %>% 
+  mutate(glucimp = case_match(glucimp, 
+                              "impaired" ~ "Impaired", 
+                              "normal" ~ "Normal"))
+
+SHS_ct_disp = SHS %>% tabyl(glucimp, case) %>% 
+  adorn_totals(where = c("row", "col")) %>% 
+  gt(rowname_col = "glucimp") %>% 
+  cols_label(`0` ~ "No", `1`~"Yes") %>%
+  tab_spanner(label = "Diabetes", 
+              columns = c("0", "1")) %>%
+  tab_stubhead(label = "Glucose tolerance") %>%
+  opt_stylize(style = 2) %>%
+  tab_options(table.font.size = 45)
+
+SHS_ct_disp
+```
+:::
+
+::: {.column width="35%"}
+![](./images/home_box3.png){width="500"}
+:::
+:::
+
+## SHS Example: Risk Difference
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Risk difference
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+**Needed steps:**
+
+1.  Compute the risk difference
+2.  Compute 95% confidence interval
+3.  Interpret the estimate
+
+## SHS Example: Risk Difference (1/4)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Risk difference
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+1.  Compute the risk difference $$\widehat{RD}={\hat{p}}_1 - {\hat{p}}_2=\frac{n_{11}}{n_1}-\frac{n_{21}}{n_2}=\ \frac{198}{532}\ - \frac{128}{1132}=`r round(198/532, 4)`−`r round(128/1132, 4)`=`r round(198/532 - 128/1132, 4)`$$
+
+## SHS Example: Risk Difference (2/4)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Risk difference
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+2.  Compute 95% confidence interval
+
+$$\begin{aligned} &\widehat{RD}\pm z_{\left(1-\frac{\alpha}{2}\right)}^\ast \times SE_{\widehat{RD}} \\ 
+= &\widehat{RD}\pm z_{\left(1-\frac{\alpha}{2}\right)}^\ast \times \sqrt{\frac{{\hat{p}}_1\ (1-{\hat{p}}_1)}{n_1}+\frac{{\hat{p}}_2(1-{\hat{p}}_2)}{n_2}\ }\\ 
+=  & `r round(198/532 - 128/1132, 4)` \pm 1.96\times \sqrt{\frac{`r round(198/532, 4)`(1-`r round(198/532, 4)`)}{532}+\frac{`r round(128/1132, 4)`(1-`r round(128/1132, 4)`)}{1132}\ }\\ 
+=  & (`r round(0.2140779, 4)`,\ `r round(0.3041346, 4)` )\end{aligned}$$
+
+## SHS Example: Risk Difference (3/4)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Risk difference
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+1/2. Compute risk difference and 95% confidence interval
+
+```{r}
+fmsb::riskdifference(198, 128, 532, 1132)
+```
+
+## SHS Example: Risk Difference (4/4)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Risk difference
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes risk difference between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+3.  Interpret the estimate
+
+The diabetes diagnosis risk difference between impaired and normal glucose tolerance is 0.2591 (95% CI: 0.2141, 0.3041). Since the 95% confidence interval contains 0, we do not have sufficient evidence that the risk of diabetes diagnosis between impaired and normal glucose tolerance is different.
 
 ## When is the risk difference misleading?
 
-# Learning Objectives 
+-   The same risk differences can have very different clinical meanings depending on the risk for each group
+
+ 
+
+ 
+
+-   **Example:** for two treatments A and B, we know the risk difference (RD) is 0.009. Is it a meaningful difference?
+
+    -   If the risk is 0.01 for Trt A and 0.001 for Trt B?
+    -   If the risk is 0.41 for Trt A and 0.401 for Trt B?
+
+ 
+
+-   Using the RD alone to summarize the difference in risks for comparing the two groups can be **misleading**
+
+    -   The **ratio of risk** can provide an informative descriptive measure of the "relative risk"
+
+# Learning Objectives
 
 ## Relative Risk (RR)
+
+-   Relative risk computes the ratio of each group’s proportions of "success"
+
+    -   Also called **risk ratio**    
+
+-   Point estimate: $$\widehat{RR}=\dfrac{\hat{p}_1}{\hat{p}_2} = \dfrac{n_{11}/n_1}{n_{21}/n_2}$$
+
+    -   Range: $[0, \infty]$
 
 ## Poll Everywhere Question 2
 
 ## Log-transformation of RR
 
+-   Sampling distribution of the relative risk is highly skewed unless sample sizes are quite large
+
+    -   Log transformation results in approximately normal distribution
+    -   Thus, compute confidence interval using normally distributed, log-transformed RR
+    -   Then we convert back to the RR
+
+-   We take the log (natural log) of RR: $\ln(\widehat{RR})$ or $log(\widehat{RR})$
+
+    -   Whenever I say "log" I mean natural log (very common in statistics)
+
+::: columns
+::: {.column width="60%"}
+-   Then we need to find approximate standard error for $\ln(\widehat{RR})$ $$SE_{\ln(\widehat{RR})}=\sqrt{\frac{1}{n_{11}}\ -\frac{1}{n_1}+\frac{1}{n_{21}}-\frac{1}{n_2}}$$
+
+-   95% confidence interval for $\ln(\widehat{RR})$: $$\ln(\widehat{RR}) \pm 1.96 \times SE_{\ln(\widehat{RR})}$$
+:::
+
+::: {.column width="40%"}
+
+ 
+
+![](./images/ct.png)
+:::
+:::
+
+
 ## How do we get back to the RR scale?
+
+-   We computed confidence interval using normally distributed, log-transformed RR ($\ln(\widehat{RR})$):
+
+$$ \bigg(\ln(\widehat{RR}) - 1.96 \times SE_{\ln(\widehat{RR})}, \ \ln(\widehat{RR}) + 1.96 \times SE_{\ln(\widehat{RR})}\bigg)$$
+
+-   Now we need to exponentiate the CI to get back to interpretable values
+
+    -   Take exponential of lower and upper bounds
+
+-   95% confidence interval for RR: two ways to display equation
+
+$$ \bigg(e^{\ln(\widehat{RR}) - 1.96 \times SE_{\ln(\widehat{RR})}}, \ e^{\ln(\widehat{RR}) + 1.96 \times SE_{\ln(\widehat{RR})}}\bigg)$$ $$ \bigg(\exp\big(\ln(\widehat{RR}) - 1.96 \times SE_{\ln(\widehat{RR})}\big), \ \exp\big(\ln(\widehat{RR}) + 1.96 \times SE_{\ln(\widehat{RR})}\big)\bigg)$$
 
 ## Relative Risk (RR)
 
-## Relative Risk (RR) Example
+-   Can you compute the estimated RRs for the previous example?
 
-# Learning Objectives 
+    -   If the risk for Trt A is 0.01 and Trt B is 0.001? $\widehat{RR}= 10$
+    -   If the risk for Trt A is 0.41 and Trt B is 0.401? $\widehat{RR}= 1.02$
+
+-   When $\widehat{RR}= 1$ ...
+
+    -   Risk is the same for the two groups
+    -   In other words, the group and the outcome are independent
+
+-   When computing $\widehat{RR}$ it is important to identify which variable is the response variable and which is explanatory variable
+
+    -   We may say "risk for Trt A" but this translates to the risk (or probability) of outcome success for those receiving Trt A
+
+## SHS Example: Relative Risk (1/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Relative risk
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+**Needed steps:**
+
+1.  Compute the relative risk
+2.  Find confidence interval of log RR
+3.  Convert back to RR
+4.  Interpret the estimate
+
+## SHS Example: Relative Risk (2/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Relative risk
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+1.  Compute the relative risk $$\widehat{RR}=\dfrac{{\hat{p}}_1}{{\hat{p}}_2}=\dfrac{n_{11}/{n_1}}{n_{21}/{n_2}}=\ \frac{ 198/532}{128/1132}=\dfrac{`r round(198/532, 4)`}{`r round(128/1132, 4)`}=`r round((198/532)/ (128/1132), 4)`$$
+
+## SHS Example: Relative Risk (3/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Relative risk
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+2.  Find confidence interval of log RR
+
+$$\begin{aligned} & \ln(\widehat{RR}) \pm 1.96 \times SE_{\ln(\widehat{RR})} \\ 
+= &\ln(\widehat{RR}) \pm z_{\left(1-\frac{\alpha}{2}\right)}^\ast \times \sqrt{\frac{1}{n_{11}}\ -\frac{1}{n_1}+\frac{1}{n_{21}}-\frac{1}{n_2}}\\ 
+=  & `r round(log((198/532)/ (128/1132)), 4)` \pm 1.96\times \sqrt{\frac{1}{198}\ -\frac{1}{532}+\frac{1}{128}-\frac{1}{1132}}\\ 
+=  & (`r round(log(2.702998), 4)`,\ `r round(log(4.008061), 4)` )\end{aligned}$$
+
+## SHS Example: Relative Risk (4/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Relative risk
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+3.  Convert back to RR
+
+$$\begin{aligned} & (\exp(`r round(log(2.702998), 4)`),\ \exp(`r round(log(4.008061), 4)` )) \\
+= & (`r round(2.702998, 4)`,\ `r round(4.008061, 4)` )\end{aligned}$$
+
+## SHS Example: Relative Risk (5/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Relative risk
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+1/2/3. Compute risk ratio and 95% confidence interval
+
+```{r}
+library(epitools)
+SHS_ct = table(SHS$glucimp, SHS$case)
+riskratio(x = SHS_ct, rev = "rows")$measure
+```
+
+## Pause: other option in `pubh` package {.smaller}
+
+```{r}
+#| echo: false
+library(pubh)
+```
+
+```{r}
+SHS = SHS %>% mutate(glucimp = as.factor(glucimp) %>% relevel(ref = "Normal"))
+contingency(case ~ glucimp, data = SHS)
+```
+
+## SHS Example: Relative Risk (6/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Relative risk
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Relative risk between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+3.  Interpret the estimate
+
+The estimated risk of diabetes is 3.29 times greater for American Indians who had impaired glucose tolerance at baseline compared to those who had normal glucose tolerance (95% CI: 2.70, 4.01).
+
+ 
+
+Additional interpretation of 95% CI (not needed): We are 95% confident that the (population) relative risk is between 2.70 and 4.01.
+
+ 
+
+Since the 95% confidence interval does not include 1, there is sufficient evidence that the risk of diabetes differs significantly between impaired and normal glucose tolerance at baseline.
+
+# Learning Objectives
 
 ## Odds (building up to Odds Ratio)
 
+-   For a probability of success $p$ (or sometimes referred to as $\pi$), the odds of success is: $$\text{odds}=\frac{p}{1-p}=\frac{\pi}{1-\pi}$$
+
+    -   **Example:** if $\pi=0.75$, then odds of success $= \dfrac{0.75}{0.25}=3$
+
+-   If odds \> 1, it implies a success is more likely than a failure
+
+    -   Example: for $odds = 3$, we expect to observe three times as many successes as failures
+
+-   If odds is known, the probability of success can be computed $$\pi = \dfrac{\text{odds}}{\text{odds}+1}$$
+
 ## Odds Ratio (OR)
+
+-   Odds ratio is the ratio of two odds:$$\widehat{OR}=\frac{odds_1}{odds_2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}$$
+
+    -   **Range:** $[0, \infty]$
+
+    -   **Interpretation:** The odds of success for "group 1" is "$\widehat{OR}$" times the odds of success for "group 2"
+    
+ 
+
+-   What do values of odds ratios mean?
+
+    | Odds Ratio         | Clinical Meaning                                      |
+    |-----------------|-----------------------------------------------------|
+    | $\widehat{OR} < 1$ | Odds of success is smaller in group 1 than in group 2 |
+    | $\widehat{OR} = 1$ | Explanatory and response variables are independent    |
+    | $\widehat{OR} > 1$ | Odds of success is greater in group 1 than in group 2 |
 
 ## Poll Everywhere Question 3
 
 ## Odds Ratio (OR)
 
-## Log-transformation of OR
+-   Values of OR farther from 1.0 in a given direction represent stronger association
+
+    -   An OR = 4 is farther from independence than an OR = 2
+    -   An OR = 0.25 is farther from independence than an OR = 0.5
+    -   For OR = 4 and OR = 0.25, they are equally away from independence (because ¼ = 0.25)
+    
+ 
+
+-   We take the inverse of the OR for **success** of [group 1]{style="color:#70AD47; font-weight: bold;"} compared to [group 2]{style="color:#4472C4; font-weight: bold;"} to get...
+
+    -   OR for **failure** of [group 1]{style="color:#70AD47; font-weight: bold;"} compared to [group 2]{style="color:#4472C4; font-weight: bold;"}
+    -   OR for **success** of [group 2]{style="color:#4472C4; font-weight: bold;"} compared to [group 1]{style="color:#70AD47; font-weight: bold;"}
+
+
+## Log-transformation of *OR*
+
+-   Like RR, sampling distribution of the odds ratio is highly skewed
+
+    -   Log transformation results in approximately normal distribution
+    -   Thus, compute confidence interval using normally distributed, log-transformed OR
+
+::: columns
+::: {.column width="60%"}
+-   Approximate standard error for $\ln (\widehat{OR})$: $$SE_{\ln(\widehat{OR})}=\sqrt{\frac{1}{n_{11}}\ +\frac{1}{n_{12}}+\frac{1}{n_{21}}+\frac{1}{n_{22}}}$$
+
+-   95% confidence interval for $\ln(\widehat{OR})$: $$\ln(\widehat{OR}) \pm 1.96 \times SE_{\ln(\widehat{OR})}$$
+:::
+
+::: {.column width="40%"}
+
+ 
+
+![](./images/ct.png)
+:::
+:::
 
 ## How do we get back to the OR scale?
 
-## Odds Ratio (OR) Example
+-   We computed confidence interval using normally distributed, log-transformed RR ($\ln(\widehat{OR})$):
+
+$$ \bigg(\ln(\widehat{OR}) - 1.96 \times SE_{\ln(\widehat{OR})}, \ \ln(\widehat{OR}) + 1.96 \times SE_{\ln(\widehat{OR})}\bigg)$$
+
+-   Now we need to exponentiate the CI to get back to interpretable values
+
+    -   Take exponential of lower and upper bounds
+
+-   95% confidence interval for RR: two ways to display equation
+
+$$ \bigg(e^{\ln(\widehat{OR}) - 1.96 \times SE_{\ln(\widehat{OR})}}, \ e^{\ln(\widehat{OR}) + 1.96 \times SE_{\ln(\widehat{OR})}}\bigg)$$ $$ \bigg(\exp\big(\ln(\widehat{OR}) - 1.96 \times SE_{\ln(\widehat{OR})}\big), \ \exp\big(\ln(\widehat{OR}) + 1.96 \times SE_{\ln(\widehat{OR})}\big)\bigg)$$
+
+## SHS Example: Odds Ratio (1/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes odds ratio between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+**Needed steps:**
+
+1.  Compute the odds ratio
+2.  Find confidence interval of log OR
+3.  Convert back to OR
+4.  Interpret the estimate
+
+## SHS Example: Odds Ratio (2/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+p1 = 198/532
+p2 = 128/1132
+```
+:::
+:::
+
+1.  Compute the odds ratio
+
+$\widehat{p}_1 = 198/532 = `r round(p1, 4)`$, $\widehat{p}_2 = 128/1132 = `r round(p2, 4)`$
+$$\widehat{OR}=\frac{\widehat{p_1}/(1-\widehat{p_1})}{\widehat{p_2}/(1-\widehat{p_2})}= \dfrac{`r round(p1, 4)`/(1-`r round(p1, 4)`)}{`r round(p2, 4)`/(1-`r round(p2, 4)`)}= `r round((p1/(1-p1))/(p2/(1-p2)), 4)`$$
+
+## SHS Example: Odds Ratio (3/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+2.  Find confidence interval of log OR
+
+$$\begin{aligned} & \ln(\widehat{OR}) \pm 1.96 \times SE_{\ln(\widehat{OR})} \\ 
+= &\ln(\widehat{OR}) \pm z_{\left(1-\frac{\alpha}{2}\right)}^\ast \times \sqrt{\frac{1}{n_{11}}\ +\frac{1}{n_{12}}+\frac{1}{n_{21}}+\frac{1}{n_{22}}}\\ 
+=  & `r round(log((p1/(1-p1))/(p2/(1-p2))), 4)` \pm 1.96\times \sqrt{\frac{1}{198}\ +\frac{1}{334}+\frac{1}{128}+\frac{1}{1004}}\\ 
+=  & (`r round(log(3.605289), 4)`,\ `r round(log(5.997148), 4)` )\end{aligned}$$
+
+## SHS Example: Odds Ratio (4/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+3.  Convert back to OR
+
+$$\begin{aligned} & (\exp(`r round(log(3.605289), 4)`),\ \exp(`r round(log(5.997148), 4)` )) \\
+= & (`r round(3.605289, 4)`,\ `r round(5.997148, 4)` )\end{aligned}$$
+
+## SHS Example: Odds Ratio (5/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+1/2/3. Compute OR and 95% confidence interval
+
+```{r}
+library(epitools)
+SHS_ct = table(SHS$glucimp, SHS$case)
+# no `rev` needed below bc we set the reference level in slide 32
+oddsratio(x = SHS_ct, method = "wald")$measure 
+```
+
+## Pause: other option in `pubh` package {.smaller}
+
+```{r}
+#| echo: false
+library(pubh)
+```
+
+```{r}
+contingency(case ~ glucimp, data = SHS)
+```
+
+## SHS Example: Odds Ratio (6/6)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes Odds ratio between impaired and normal glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+3.  Interpret the estimate
+
+The estimated odds of diabetes for American Indians with impaired glucose tolerance at baseline is 4.65 times the odds for American Indians with normal glucose tolerance at baseline. 
+
+
+ 
+
+Additional interpretation of 95% CI (not needed): We are 95% confident that the odds ratio is between 3.61 and 6.00.
+
+ 
+
+Since the 95% confidence interval does not include 1, there is sufficient evidence that the odds of diabetes differs significantly between impaired and normal glucose tolerance at baseline.
+
+## Inversing an Odds Ratio
+
+-   Some clinicians may prefer interpretations of OR > 1 instead of an OR < 1
+
+-   The transformation can easily be done by inverse
+
+    -   Remember we discussed that OR = 4 is an equivalent a strong association as OR = 0.25 (1/4)
+
+-   OR comparing [group 1]{style="color:#70AD47; font-weight: bold;"} to [group 2]{style="color:#4472C4; font-weight: bold;"} = inverse of OR comparing [group 2]{style="color:#4472C4; font-weight: bold;"} to [group 1]{style="color:#70AD47; font-weight: bold;"}
+
+$$ OR_{1v2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}=\frac{1}{\frac{{\hat{p}}_2/(1-{\hat{p}}_2)}{{\hat{p}}_1/(1-{\hat{p}}_1)}}=\frac{1}{OR_{2v1}}$$
 
 ## Poll Everywhere Question 4
+
+## SHS Example: Inversing Odds Ratio
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Inversing odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes odds ratio between **normal** and **impaired** glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+**Needed steps:**
+
+1.  Inverse point estimate and confidence interval
+
+$$\widehat{OR}=\frac{1}{4.6499}=`r round(1/4.649888, 4)`$$
+The 95% Confidence interval is then 
+
+$$ \left(\frac{1}{5.9971}, \frac{1}{3.6053}\right)\ =\ (`r round(1/5.997148, 4)`, `r round(1/3.605289, 4)`)$$
+
+## SHS Example: Inversing Odds Ratio
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Inversing odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes odds ratio between **normal** and **impaired** glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+**Needed steps:**
+
+2.  Interpret the estimate
+
+The estimated odds of diabetes for American Indians with normal glucose tolerance at baseline is 0.22 times the odds for American Indians with impaired glucose tolerance at baseline. 
+
+
+ 
+
+Additional interpretation of 95% CI (not needed): We are 95% confident that the odds ratio is between 0.17 and 0.28.
+
+ 
+
+Since the 95% confidence interval does not include 1, there is sufficient evidence that the odds of diabetes differs significantly between impaired and normal glucose tolerance at baseline.
 
 # Learning Objectives
 
@@ -172,5 +1085,4 @@ Last week: learned some tests of association for contingency tables
 
 ## Example: Scottish Health Heart Study
 
-# Learning Objectives 
-
+# Learning Objectives

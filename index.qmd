@@ -46,11 +46,11 @@ Welcome to BSTA 513/613! In this course, we will continue to learn about regress
 
 [OH with Antara](https://pdx.zoom.us/j/84711194675)
 
-{{< iconify icon-park-solid time size=24px >}} TBD
+{{< iconify icon-park-solid time size=24px >}} T 5:30 - 7pm
 
 [OH with Ariel](https://ohsu.webex.com/meet/weingara)
 
-{{< iconify icon-park-solid time size=24px >}} TBD
+{{< iconify icon-park-solid time size=24px >}} Th 3:30 - 5pm
 
 :::
 
