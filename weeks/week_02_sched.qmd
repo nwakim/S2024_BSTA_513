@@ -68,6 +68,35 @@ For the slides, once they are opened, if you would like to print or save them as
 
 ## Muddiest Points
 
+### 1. "times greater than" vs just "times" in interpretation
+
+I've seen it both ways. It comes down to more of an English language nuance, with [what seems to be a long battle between viewpoints](https://english.stackexchange.com/questions/7894/x-times-as-many-as-or-x-times-more-than). Or maybe more accurately, I grammatically correct way to contruct the sentence, but with people understanding the meaning the "incorrect" way. I tend to be more lenient when it comes to grammar in this way, but maybe that's because I have a general distaste when languages are rigid and don't accommodate how people currently speak and write.
+
+### 2. For the relative risks poll everywhere question #2, how were they derived?
+
+-   For #1 with Trt A's risk as 0.01 (aka $risk_A=0.01$) and Trt B's risk as 0.001 (aka $risk_B=0.01$)
+
+    -   The risk ratio is: $\widehat{RR} = \dfrac{\widehat{p}_1}{\widehat{p}_2} = \dfrac{risk_A}{risk_B} = \dfrac{0.01}{0.001} = 10$
+
+-   For #2 with Trt A's risk as 0.41 (aka $risk_A=0.41$) and Trt B's risk as 0.401 (aka $risk_B=0.401$)
+
+    -   The risk ratio is: $\widehat{RR} = \dfrac{\widehat{p}_1}{\widehat{p}_2} = \dfrac{risk_A}{risk_B} = \dfrac{0.41}{0.401} = 1.02$
+
+
+### 3. Ranges that odds ratios can take (0, infinity) vs the ranges that risk ratios can take. 
+
+Yeah, so both can theoretically take on the range $[0, \infty)$. Both are ratios, so we also have to think about the range of the denominator and numerator For relative risk, the numerator and denominator are probabilities that can only take values from 0 to 1. While for ORs, the denominator and numerator are odds that can be a range of values $[0, \infty)$.
+
+The main point I was trying to make was that once we observe one group's proportion/probability, then RRs and ORs will differ in their potential range. Let's say I observe the proportion fro group 1 and now know the numerator for RR and the odds in the numerator for OR. Because the RR has numerator and denominator that has ranges $[0, 1]$, if we know the proportion of group 1 (aka numerator value), then the ratio itself has a smaller range of values because the denominator can only be between 0 and 1. Because the OR has numerator and denominator that has ranges $[0, \infty)$, if we know the proportion of group 1, then we do have a fixed numerator. However, the denominator can still be in $[0, \infty)$. 
+
+### 4. For the odds ratio equation that we reviewed today, is it different from ad/bc ? If they are different, when is it appropriate to use the equation we just reviewed over the other? p1/(1-p1) / p2/(1-p2)
+
+Nope! These are the same! If you learned it that way, you can definitely use it when we are working with contingency tables. However, once we move into ORs from regression with multiple covariates, I think it's better to understand the ORs and odds in terms of the probability/proportion.
+
+### 5. Not directly related to this class, but did we cover LRTs already? They're mentioned in HW1 but aren't in my notes.
+
+Oops! Fixed it in the HW. No need to do anything with LRTs!
+
 ```{r}
 #| echo: false
 

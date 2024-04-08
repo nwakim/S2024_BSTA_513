@@ -26,6 +26,10 @@ library(here)
 library(kableExtra)
 ```
 
+::: callout-caution
+I took out likelihood ratio tests in Question 5. We did not cover them!
+:::
+
 ## Purpose
 This homework is designed to help you practice the following important skills and knowledge that we covered in Lessons 1-2:
 
@@ -142,7 +146,6 @@ Start making a comprehensive table or outline for the inference tests that we ha
 
 * Single proportion
 * Chi-squared test for general association
-* Likelihood ratio test for general association
 * Fisher's Exact test for general association
 * Cochran-Armitage test for trend
 * Mantel-Haenszel test for linear trend
