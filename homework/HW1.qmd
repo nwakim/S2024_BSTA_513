@@ -17,8 +17,6 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.height = 2, fig.width = 4)
-
 library(tidyverse)
 library(rstatix)
 library(broom)
@@ -26,7 +24,6 @@ library(gt)
 library(janitor)
 library(here)
 library(kableExtra)
-
 ```
 
 ## Purpose
@@ -72,6 +69,7 @@ If the probability that one white blood cell is a lymphocyte is 0.3, compute the
 
 Consider a 2 x 2 table from a prospective cohort study:
 ```{r}
+#| echo: FALSE
 t1 <- matrix(c(30,20,10,60),ncol=2,byrow=TRUE)
 colnames(t1) <- c("Favorable","Unfavorable")
 rownames(t1) <- c("Treatment","Placebo")
@@ -98,6 +96,7 @@ Conduct a statistical test to evaluate whether there is an association between g
 Consider a cohort study with results shown as in following table:
 
 ```{r}
+#| echo: FALSE
 t2 <- matrix(c(6,1,2,5),ncol=2,byrow=TRUE)
 colnames(t2) <- c("Favorable","Unfavorable")
 rownames(t2) <- c("Treatment","Placebo")
@@ -116,6 +115,8 @@ Table 4 shows the information of a selected group of adolescents on whether they
 **Table 4:**
 
 ```{r}
+#| echo: FALSE
+
 t4 <- matrix(c(25,60,35,172,10,200),ncol=2,byrow=TRUE)
 colnames(t4) <- c("YES","NO")
 rownames(t4) <- c("Minimal","Moderate","Substantial")
