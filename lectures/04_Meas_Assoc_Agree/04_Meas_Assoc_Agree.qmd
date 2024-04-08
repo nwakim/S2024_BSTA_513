@@ -1,0 +1,279 @@
+---
+title: "Lesson 4: Measurements of Association and Agreement"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/10/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 4: Measurements of Association and Agreement"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+
+SHS = read.csv(here("Data", "SHS_data.csv")) %>% 
+  mutate(glucimp = case_match(glucimp, 
+                              "impaired" ~ "Impaired", 
+                              "normal" ~ "Normal"))
+
+SHS_ct_disp = SHS %>% tabyl(glucimp, case) %>% 
+  adorn_totals(where = c("row", "col")) %>% 
+  gt(rowname_col = "glucimp") %>% 
+  cols_label(`0` ~ "No", `1`~"Yes") %>%
+  tab_spanner(label = "Diabetes", 
+              columns = c("0", "1")) %>%
+  tab_stubhead(label = "Glucose tolerance") %>%
+  opt_stylize(style = 2) %>%
+  tab_options(table.font.size = 45)
+
+SHS_ct_disp
+```
+```
+
+# Learning Objectives
+
+4.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
+5.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
+
+## Relationship Between RR and OR (1/2)
+
+-   Notice that odds ratio is not equivalent to relative risk (or risk ratio)
+
+-   However, when the probability of "success" is small (e.g., rare disease), $\widehat{OR}$ is a nice approximation of $\widehat{RR}$ $$\widehat{OR}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}=\widehat{RR}\cdot \frac{1-\widehat{p_2}}{1-\widehat{p_1}}$$
+
+    -   The fraction in the last term of the above expression approximately equals to 1.0 if $\widehat{p}_1$ and $\widehat{p}_2$ BOTH quite small (\< 0.1)
+
+-   The $\widehat{OR}$ and $\widehat{RR}$ are not very close to each other in SHS: diabetes not a rare disease
+
+    -   $\widehat{OR} = 4.65$
+    -   $\widehat{RR} = 3.29$
+
+## Relationship Between RR and OR (2/2)
+
+-   An example where a disease rare over the whole sample (\~1%), but ...
+
+    -   $\widehat{OR}$ is not a good estimate of $\widehat{RR}$ in “rare” disease
+
+![](./images/rare_dis.png){fig-align="center"}
+
+-   $\widehat{p}_1$ is 0.5: thus $\widehat{OR}$ and $\widehat{RR}$ are very different
+
+$$\widehat{RR}=\frac{0.5}{0.00102}=490 \text{ and } \widehat{OR} = \frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981$$
+
+## Notes for Odds Ratios
+
+-   The OR is valid for
+
+    -   Case-control studies (where the RR is not appropriate)
+    -   Prospective cohort studies
+    -   Cross-sectional studies
+
+-   It can be interpreted either as…
+
+    -   Odds of event for exposed vs. unexposed individuals, or
+    -   Odds of exposure for individuals with vs. without the event of interest
+
+-   Pay attention to the numerator and denominator for the OR
+
+## Which measurement should one use?
+
++-----------------+---------------------------------------------------------------------------------+
+| Measurement     | Pros and Cons                                                                   |
++=================+=================================================================================+
+| Risk difference | -   Can provide additional information, but can be misleading on its own        |
+|                 |                                                                                 |
+|                 | -   Not the preferred measurement                                               |
++-----------------+---------------------------------------------------------------------------------+
+| Risk ratio      | -   Easy to interpret because is a ratio of probabilities                       |
+|                 |                                                                                 |
+|                 | -   Cannot use in retrospective, case-control studies                           |
++-----------------+---------------------------------------------------------------------------------+
+| Odds ratio      | -   Adequate for all studies                                                    |
+|                 |                                                                                 |
+|                 | -   Good estimate of RR for rare diseases                                       |
+|                 |                                                                                 |
+|                 | -   Most preferred by statisticians because integrated into logistic regression |
++-----------------+---------------------------------------------------------------------------------+
+
+## RR in retrospective case-control study
+
+-   In retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)
+
+    -   Case-control study to require much smaller sample size than do equivalent cohort studies
+
+-   However, the proportion of cases in the sample does not represent the proportion of cases in the population
+
+    -   RR compares probability of the outcome (case) for exposed and unexposed groups
+    -   Number of outcomes has been artificially inflated for retrospective study
+
+## RR in retrospective case-control study
+
+-   Assume a 1:2 case-control study summarized in below table:
+
+![](./images/retro_RR_tab1.png){fig-align="center"}
+
+-   Assume we compute the RR as if it is from a cohort study:
+
+$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\frac{40/80}{60/220}=1.8333$$
+
+## RR in retrospective case-control study
+
+-   In real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the **proportion in the population in a cohort study**
+
+![](./images/retro_RR_tab2.png){fig-align="center"}
+
+-   The estimated RR for the patient population is:
+
+$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.5152$$
+
+## OR in retrospective case-control study
+
+-   While we cannot estimate RR from a case-control study, we can still estimate OR for case-control study
+
+    -   OR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table
+
+        -   AKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased
+
+-   For case-control study where the probability of having outcome is small, the $\widehat{OR}$ is a nice approximation to $\widehat{RR}$
+
+    -   For the 1:2 case-control table: $\widehat{OR}=\frac{40\cdot160}{40\cdot60} = 2.667$
+
+# Learning Objective
+
+## Poll Everywhere Question 5
+
+## Measuring Agreement
+
+-   Still within the realm of contingency tables
+
+-   What if we are NOT looking at the association between two variables?
+
+-   What if we want to look at the agreement between two things?
+
+    -   Answers of same subjects for same survey taken at different times
+    -   Two different radiologists’ assessment of the same X-ray
+
+-   Cohen’s Kappa statistics: widely used as a measure of agreement
+
+    -   Example: Reliability studies, interobserver agreement
+
+## Example: Beef Consumption in Survey
+
+A diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?
+
+![](./images/beef.png){fig-align="center"}
+
+## Measuring Agreement
+
+-   If perfect agreement among the two raters/surveys, we would expect nonzero entries only in the diagonal cells of the table
+
+ 
+
+-   $p_o$ is the observed proportion of complete agreement (concordance)
+-   $p_E$ is the expected proportion of complete agreement if the agreement is just due to chance
+-   If the $p_o$ is much greater than $p_E$, then the agreement level is high. Otherwise, the agreement level is low
+
+ 
+
+-   **Cohen's Kappa** is based on the difference between $p_o$ and $p_E$: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
+
+## Measuring Agreement
+
+Cohen’s Kappa: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
+
+-   $p_o=\ \frac{\sum_{i}\ n_{ii}}{n}$ (sum of diagonals divided by total)
+-   $p_E=\sum_{i}{a_ib_i}$
+
+ 
+
+-   What’s $\sum_{i}{a_ib_i}$?
+
+    -   For $i$ responses (row/columns), $a_i$ is proportion of $i$ response category in first survey and $b_i$ is proportion of $i$ response category in second survey (we'll show this in the example)
+
+## Example: Beef Consumption in Survey
+
+## Poll Everywhere Question 6
+
+## Measuring Agreement Between Two Raters
+
+## Testing Measuring Agreement
+
+## Example: Beef Consumption
+
+# Learning Objective
+
+## Measurement of Association So Far
+
+-   Used contingency tables to test and measure association between two variables
+
+    -   Categorical outcome variable (Y)
+    -   One categorical explanatory variable (X)
+
+-   Such an association is called crude association
+
+    -   No adjustment for possible confounding factors
+    -   Also called marginal association
+
+-   But we cannot expand analysis based on contingency tables past 3 variables
+
+    -   We can get into stratified contingency tables to bring in a 3rd variable
+    -   But I don't think it's worth it because regression can bring in (adjust for) many variables
+
+## A taste of regression for a binary outcome (we will come back to this!!)
+
+```{r}
+logreg = glm(case ~ glucimp, data = SHS, family = binomial)
+```
+
+::: columns
+::: {.column width="60%"}
+```{r}
+summary(logreg)
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+library(epiDisplay)
+logistic.display(logreg)
+```
+
+```{r}
+#| eval: false
+#| echo: false
+
+library(oddsratio)
+or_glm(data = SHS, model = logreg)
+```
+:::
+:::
+
+# Learning Objectives

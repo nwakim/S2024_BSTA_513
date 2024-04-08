@@ -20,6 +20,10 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
+## Poll Everywhere Question 1
+
+Make sure to remember your answer!! We'll use this on Wednesday!
+
 ```{css, echo=FALSE}
 .reveal code {
   max-height: 80% !important;
@@ -28,6 +32,8 @@ execute:
 
 ```{r}
 #| echo: false
+#| warning: false
+#| message: false
 
 library(tidyverse)
 library(gt)
@@ -40,25 +46,29 @@ library(broom)
 library(here) 
 ```
 
-## Poll Everywhere Question 1
-
-## Tests from last class
-
-![](./images/test_organization.png)
-
 # Learning Objectives
 
 1.  Understand the difference between testing for association and measuring association
-2.  Calculate the estimated risk difference, relative risk, and odds ratios, and their confidence intervals
-3.  Interpret the meaning of risk difference, relative risk, and odds ratios
-4.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
-5.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
-6.  Define confounders and construct three-way tables to demonstrate how they affect the relationship between two other variables
-7.  Calculate and test significance for adjusted odds ratio across confounder strata
+
+2.  Estimate the risk difference (and its confidence interval) from a contingency table and interpret the estimate.
+
+3.  Estimate the risk ratio (and its confidence interval) from a contingency table and interpret the estimate.
+
+4.  Estimate the odds ratio (and its confidence interval) from a contingency table and interpret the estimate.
 
 # Learning Objectives
 
-## Review of Test of Association
+::: lob
+1.  Understand the difference between testing for association and measuring association
+:::
+
+2.  Estimate the risk difference (and its confidence interval) from a contingency table and interpret the estimate.
+
+3.  Estimate the risk ratio (and its confidence interval) from a contingency table and interpret the estimate.
+
+4.  Estimate the odds ratio (and its confidence interval) from a contingency table and interpret the estimate.
+
+## Review of Test of Association (1/2)
 
 -   Last week: learned some tests of association for contingency tables
 
@@ -75,11 +85,14 @@ library(here)
 
  
 
--   Test of association does not provide an effective measure of association
+## Review of Test of Association (2/2)
+
+![](./images/test_organization.png){fig-align="center"}
+
 
 ## Test of association does not measure association
 
--   Test of association does not provide an effective measure of association. The p-value alone is not enough.
+-   Test of association does not provide an effective measure of association. The p-value alone is not enough
 
     -   $\text{p-value} < 0.05$ suggests there is a statistically significant association between the group and outcome
 
@@ -92,8 +105,6 @@ library(here)
  
 
 -   We want to find out one or more measurements for quantifying the risks across the groups.
-
-# Learning Objectives
 
 ## Measures of Association
 
@@ -140,6 +151,16 @@ Let's define the cells within a 2x2 contingency table:
     -   With $\text{Risk}_1 = \dfrac{n_{11}}{n_1}$
 
 # Learning Objectives
+
+1.  Understand the difference between testing for association and measuring association
+
+::: lob
+2.  Estimate the risk difference (and its confidence interval) from a contingency table and interpret the estimate.
+:::
+
+3.  Estimate the risk ratio (and its confidence interval) from a contingency table and interpret the estimate.
+
+4.  Estimate the odds ratio (and its confidence interval) from a contingency table and interpret the estimate.
 
 ## Risk Difference (RD)
 
@@ -363,6 +384,16 @@ The diabetes diagnosis risk difference between impaired and normal glucose toler
 
 # Learning Objectives
 
+1.  Understand the difference between testing for association and measuring association
+
+2.  Estimate the risk difference (and its confidence interval) from a contingency table and interpret the estimate.
+
+::: lob
+3.  Estimate the risk ratio (and its confidence interval) from a contingency table and interpret the estimate.
+:::
+
+4.  Estimate the odds ratio (and its confidence interval) from a contingency table and interpret the estimate.
+
 ## Relative Risk (RR)
 
 -   Relative risk computes the ratio of each group’s proportions of "success"
@@ -395,13 +426,11 @@ The diabetes diagnosis risk difference between impaired and normal glucose toler
 :::
 
 ::: {.column width="40%"}
-
  
 
-![](./images/ct.png)
+![](./images/ct.png){fig-align="center"}
 :::
 :::
-
 
 ## How do we get back to the RR scale?
 
@@ -638,6 +667,16 @@ Since the 95% confidence interval does not include 1, there is sufficient eviden
 
 # Learning Objectives
 
+1.  Understand the difference between testing for association and measuring association
+
+2.  Estimate the risk difference (and its confidence interval) from a contingency table and interpret the estimate.
+
+3.  Estimate the risk ratio (and its confidence interval) from a contingency table and interpret the estimate.
+
+::: lob
+4.  Estimate the odds ratio (and its confidence interval) from a contingency table and interpret the estimate.
+:::
+
 ## Odds (building up to Odds Ratio)
 
 -   For a probability of success $p$ (or sometimes referred to as $\pi$), the odds of success is: $$\text{odds}=\frac{p}{1-p}=\frac{\pi}{1-\pi}$$
@@ -657,16 +696,20 @@ Since the 95% confidence interval does not include 1, there is sufficient eviden
     -   **Range:** $[0, \infty]$
 
     -   **Interpretation:** The odds of success for "group 1" is "$\widehat{OR}$" times the odds of success for "group 2"
-    
+
  
 
 -   What do values of odds ratios mean?
 
+    +--------------------+-------------------------------------------------------+
     | Odds Ratio         | Clinical Meaning                                      |
-    |-----------------|-----------------------------------------------------|
+    +====================+=======================================================+
     | $\widehat{OR} < 1$ | Odds of success is smaller in group 1 than in group 2 |
+    +--------------------+-------------------------------------------------------+
     | $\widehat{OR} = 1$ | Explanatory and response variables are independent    |
+    +--------------------+-------------------------------------------------------+
     | $\widehat{OR} > 1$ | Odds of success is greater in group 1 than in group 2 |
+    +--------------------+-------------------------------------------------------+
 
 ## Poll Everywhere Question 3
 
@@ -677,14 +720,13 @@ Since the 95% confidence interval does not include 1, there is sufficient eviden
     -   An OR = 4 is farther from independence than an OR = 2
     -   An OR = 0.25 is farther from independence than an OR = 0.5
     -   For OR = 4 and OR = 0.25, they are equally away from independence (because ¼ = 0.25)
-    
+
  
 
 -   We take the inverse of the OR for **success** of [group 1]{style="color:#70AD47; font-weight: bold;"} compared to [group 2]{style="color:#4472C4; font-weight: bold;"} to get...
 
     -   OR for **failure** of [group 1]{style="color:#70AD47; font-weight: bold;"} compared to [group 2]{style="color:#4472C4; font-weight: bold;"}
     -   OR for **success** of [group 2]{style="color:#4472C4; font-weight: bold;"} compared to [group 1]{style="color:#70AD47; font-weight: bold;"}
-
 
 ## Log-transformation of *OR*
 
@@ -701,10 +743,9 @@ Since the 95% confidence interval does not include 1, there is sufficient eviden
 :::
 
 ::: {.column width="40%"}
-
  
 
-![](./images/ct.png)
+![](./images/ct.png){fig-align="center"}
 :::
 :::
 
@@ -783,8 +824,7 @@ p2 = 128/1132
 
 1.  Compute the odds ratio
 
-$\widehat{p}_1 = 198/532 = `r round(p1, 4)`$, $\widehat{p}_2 = 128/1132 = `r round(p2, 4)`$
-$$\widehat{OR}=\frac{\widehat{p_1}/(1-\widehat{p_1})}{\widehat{p_2}/(1-\widehat{p_2})}= \dfrac{`r round(p1, 4)`/(1-`r round(p1, 4)`)}{`r round(p2, 4)`/(1-`r round(p2, 4)`)}= `r round((p1/(1-p1))/(p2/(1-p2)), 4)`$$
+$\widehat{p}_1 = 198/532 = `r round(p1, 4)`$, $\widehat{p}_2 = 128/1132 = `r round(p2, 4)`$ $$\widehat{OR}=\frac{\widehat{p_1}/(1-\widehat{p_1})}{\widehat{p_2}/(1-\widehat{p_2})}= \dfrac{`r round(p1, 4)`/(1-`r round(p1, 4)`)}{`r round(p2, 4)`/(1-`r round(p2, 4)`)}= `r round((p1/(1-p1))/(p2/(1-p2)), 4)`$$
 
 ## SHS Example: Odds Ratio (3/6)
 
@@ -890,7 +930,7 @@ library(pubh)
 ```
 
 ```{r}
-contingency(case ~ glucimp, data = SHS)
+contingency(case ~ glucimp, data = SHS, digits = 3)
 ```
 
 ## SHS Example: Odds Ratio (6/6)
@@ -920,8 +960,7 @@ SHS_ct_disp %>%
 
 3.  Interpret the estimate
 
-The estimated odds of diabetes for American Indians with impaired glucose tolerance at baseline is 4.65 times the odds for American Indians with normal glucose tolerance at baseline. 
-
+The estimated odds of diabetes for American Indians with impaired glucose tolerance at baseline is 4.65 times the odds for American Indians with normal glucose tolerance at baseline.
 
  
 
@@ -933,7 +972,7 @@ Since the 95% confidence interval does not include 1, there is sufficient eviden
 
 ## Inversing an Odds Ratio
 
--   Some clinicians may prefer interpretations of OR > 1 instead of an OR < 1
+-   Some clinicians may prefer interpretations of OR \> 1 instead of an OR \< 1
 
 -   The transformation can easily be done by inverse
 
@@ -974,8 +1013,7 @@ SHS_ct_disp %>%
 
 1.  Inverse point estimate and confidence interval
 
-$$\widehat{OR}=\frac{1}{4.6499}=`r round(1/4.649888, 4)`$$
-The 95% Confidence interval is then 
+$$\widehat{OR}=\frac{1}{4.6499}=`r round(1/4.649888, 4)`$$ The 95% Confidence interval is then
 
 $$ \left(\frac{1}{5.9971}, \frac{1}{3.6053}\right)\ =\ (`r round(1/5.997148, 4)`, `r round(1/3.605289, 4)`)$$
 
@@ -1006,10 +1044,44 @@ SHS_ct_disp %>%
 
 **Needed steps:**
 
+1.  Inverse point estimate and confidence interval
+
+```{r}
+library(epitools)
+oddsratio(x = SHS_ct, method = "wald", rev = "rows")$measure 
+```
+
+
+## SHS Example: Inversing Odds Ratio
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Inversing odds ratio
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the diabetes odds ratio between **normal** and **impaired** glucose tolerance.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+```{r}
+#| echo: false
+
+SHS_ct_disp %>%
+  tab_options(table.font.size = 31)
+```
+:::
+:::
+
+**Needed steps:**
+
 2.  Interpret the estimate
 
-The estimated odds of diabetes for American Indians with normal glucose tolerance at baseline is 0.22 times the odds for American Indians with impaired glucose tolerance at baseline. 
-
+The estimated odds of diabetes for American Indians with normal glucose tolerance at baseline is 0.22 times the odds for American Indians with impaired glucose tolerance at baseline.
 
  
 
@@ -1021,68 +1093,36 @@ Since the 95% confidence interval does not include 1, there is sufficient eviden
 
 # Learning Objectives
 
-## Relationship Between RR and OR
+1.  Understand the difference between testing for association and measuring association
 
-## Notes for Odds Ratios
+2.  Estimate the risk difference (and its confidence interval) from a contingency table and interpret the estimate.
 
-## RR in retrospective case-control study
+3.  Estimate the risk ratio (and its confidence interval) from a contingency table and interpret the estimate.
 
-## OR in retrospective case-control study
+4.  Estimate the odds ratio (and its confidence interval) from a contingency table and interpret the estimate.
 
-## Which measurement should one use?
+## `pubh` vs. `epitools`
 
-# Learning Objective
+-   In `pubh` with `contingency()`
 
-## Poll Everywhere Question 5
+    -   Get all the info at once
+    -   Really nice to double check how the code is interpreting your input
 
-## Measuring Agreement
+-   In `epitools` with `riskratio()` or `oddsratio()`
 
-## Example: Beef Consumption in Survey
-
-## Measuring Agreement
-
-## Example: Beef Consumption in Survey
-
-## Poll Everywhere Question 6
-
-## Measuring Agreement Between Two Raters
-
-## Testing Measuring Agreement
-
-## Example: Beef Consumption
-
-# Learning Objective
-
-## Measurement of Association So Far
-
-## Confounding
-
-## Measurement of Association for Three-way Tables
-
-## Example: Lung cancer and drinking status
-
-## Types of confounders
-
-## Poll Everywhere Question 7
-
-## Example: Scottish Health Heart Study
-
-## Confounding
-
-# Learning Objective
-
-## Adjusted OR: Mantel-Haenszel Method
-
-## Stratified tables
-
-## Adjusted OR: Mantel-Haenszel Method
-
-## Example: Scottish Health Heart Study
-
-## Poll Everywhere Question 7
-
-## Cochran-Mantel-Haenszel (CMH) Test
-
-## Example: Scottish Health Heart Study
-
-# Learning Objectives
+    -   Much easier to grab the numbers! 
+    -   [In Quarto you can take R code and directly put it in your text](https://quarto.org/docs/computations/inline-code.html#syntax-compatibility)
+    
+        ```{r}
+        g = oddsratio(x = SHS_ct, method = "wald", rev = "rows")
+        g$measure[2,1]
+        ```
+    
+        -   I can write `{r eval="false" echo="true"} round(g$measure[2,1], 3)` to print the number `r round(g$measure[2,1], 3)`
+      
+        
+        
+    
+    
+    
+    

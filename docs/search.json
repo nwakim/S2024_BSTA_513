@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BSTA 513/613: Categorical Data Analysis",
     "section": "",
-    "text": "BSTA 513/613: Categorical Data Analysis\n\nSpring 2024\n \nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.  \n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n TBD\nOH with Antara\n T 5:30 - 7pm\nOH with Ariel\n Th 3:30 - 5pm\n\n\nCourse details\n Mondays, Wednesdays\n April 1 - June 12\n 1:00 PM - 2:50 PM\n In-person, RPV Room B/C\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "BSTA 513/613: Categorical Data Analysis\n\nSpring 2024\n \nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.  \n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n F 2 - 3:30pm\nOH with Antara\n T 5:30 - 7pm\nOH with Ariel\n Th 3:30 - 5pm\n\n\nCourse details\n Mondays, Wednesdays\n April 1 - June 12\n 1:00 PM - 2:50 PM\n In-person, RPV Room B/C\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "homeworks.html",
@@ -172,14 +172,14 @@
     "href": "homework/HW3.html",
     "title": "Homework 3",
     "section": "",
-    "text": "Important\n\n\n\nThis page is no longer under construction. You may start this homework! (2/9/24)"
+    "text": "Download the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW0.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 512/612\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW3.html#directions",
     "href": "homework/HW3.html#directions",
     "title": "Homework 3",
-    "section": "Directions",
-    "text": "Directions\n\nDownload the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW0.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 512/612\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
+    "section": "",
+    "text": "Download the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW0.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 512/612\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW3.html#questions",
@@ -361,7 +361,7 @@
     "href": "homework/HW2.html#questions",
     "title": "Homework 2",
     "section": "Questions",
-    "text": "Questions"
+    "text": "Questions\n\nQuestion 1\nA study looked at the effects of oral contraceptive (OC) use on heart disease in women 40 to 44 years of age. The researchers prospectively tracked whether or not the women developed a myocardial infarction (MI) over a 3-year period. The table below summarizes their results with columns indicating whether or not women developed MI and rows indicating their OC use.\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Yes\"] [,\"No\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1        13    4987\n2         7    9993\n\n\n\nPart a\nCompute the estimated risk difference comparing OC users to non-OC users. Include a 95% CI for the estimate and interpretation of the estimated value.\n\n\nPart b\nCompute the estimated relative risk comparing OC users to non-OC users. Include a 95% CI for the estimate and interpretation of the estimated value.\n\n\nPart c\nCompute the estimated odds ratio comparing OC users to non-OC users. Include a 95% CI for the estimate and interpretation of the estimated value.\n\n\nPart d\nIs the OR a good approximation of the RR? Explain why or why not.\n\n\n\nQuestion 2\nI was intrigued by the results from Question 1, so I started researching the relationship between contraception and MI. In a journal review article, the authors present smoking status as a potential confounder for the relationship between OC use and MI. In Table 2 of their paper, they present various risk ratios for smoking and nonsmoking women. Use the below tables, that are recreated from one study’s data, to answer the following questions.\nNonsmokers:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Yes\"] [,\"No\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1        36     317\n2        72     521\n\n\nSmokers:\n\n\nWarning: 'tidy.numeric' is deprecated.\nSee help(\"Deprecated\")\n\n\n# A tibble: 2 × 1\n  x[,\"Yes\"] [,\"No\"]\n      &lt;dbl&gt;   &lt;dbl&gt;\n1       210     416\n2       236     586\n\n\n\nPart a\nCompute the stratum-specific ORs for each smoking status. Present the estimates with 95% Confidence interval.\n\n\nAside (not a homework problem)\nIf you are interested in a short review of the relationship between oral contraceptive pills (OCP) and MI, see this article abstract. I cannot find the full article online, so if you find it, please pass along. The abstract states:\n\nAlthough OCP doses were subsequently reduced, epidemiologic evidence continued to support a smaller, but significant association between OCPs and hypertension.\n\nThis single statement packs in some interesting aspects of the research process and influences from society. To start, the OCP doses were reduced from their initial approval. However, the early studies (1980s-90s) that link increased risk of hypertension and MI to OCs were still some of the first articles presented in my Google search. You may also find it interesting to think about how the perception of contraception has changed since the 1980s, and how societal views can impact research questions.\n\n\n\nQuestion 3\n\n\n\n\n\n\nTip\n\n\n\nThis question is under construction… (4/5/24)\n\n\nThe data presented below are from a case-control study of bladder cancer. Subjects with and without bladder cancer were recruited and then questioned about their occupation and cigarette consumption.\n\n\n\n\n\n\n  \n    \n    \n      High risk occupation\n      High cigarette consumption\n      Cases\n      Controls\n    \n  \n  \n    Yes\nNo\n48\n100\n    Yes\nYes\n180\n175\n    No\nNo\n30\n24\n    No\nYes\n120\n80\n  \n  \n  \n\n\n\n\n\nPart a\nPlease present the data using two 2x2 contingency table for High-risk occupation and Disease status, stratified by Cigarette consumption.\n\n\nPart b\nPlease present the data for High-risk occupation and Disease status using a 2x2 contingency table (you should combine the cigarette consumption).\n\n\nPart c\nIs it possible, in reference to the study design, to estimate the OR for bladder cancer and occupation from this study? If it is possible, calculate (using formulas) the crude odds ratio for bladder cancer comparing high-risk to other occupations, and estimate (using formulas) the associated 95% confidence intervals.\n\n\nPart d\nCompute the stratum-specific ORs at each of the two levels of cigarette consumption. Present the estimates with 95% Confidence interval.\n\n\nPart e\nIs it possible to estimate the RR for bladder cancer and occupation from this study? If it is possible, calculate the crude relative risk for bladder cancer comparing high-risk to other occupations, as well as the stratum-specific RRs at each of the two levels of cigarette consumption. Present the estimates with 95% Confidence interval. If it is not possible, give your reason.\n\n\nPart f\nWe will assume we found that odds ratios are relatively the same using the Breslow-Day test (which is true). Calculate the smoking-adjusted Mantel-Haenszel odds ratio for high-risk versus other occupations. Present the estimates with 95% Confidence interval.\n\n\nPart g\nAre the odds of bladder cancer different for high-risk versus other occupations after we adjusted for smoking status? (Hint: You should be running an inference test.)\n\n\nPart h\nDo you think the smoking-adjusted Mantel-Haenszel odds ratio for high-risk versus other occupations should be reported? Give your reason.\n\n\n\nQuestion 4\nOne important aspect of medical diagnosis is its reproducibility. Suppose that two different doctors examine 100 patients for dyspnea in a respiratory-disease clinic, and that doctor A diagnosed 15 patients as having dyspnea (while doctor B did not), doctor B diagnosed 10 patients as having dyspnea (while doctor A did not), and both doctor A and doctor B diagnosed 7 patients as having dyspnea.\n\nPart a\nConstruct a two-way contingency table to summarize the dyspnea diagnoses from doctor A and B.\n\n\nPart b\nCompute the Cohen’s kappa (No need to compute the confidence interval.)\n\n\nPart c\nHow would you characterize the agreement between doctor A and B? Please refer to any guidelines used.\n\n\nPart d\nIs your computed kappa greater than 0? Run the appropriate test and interpret your results."
   },
   {
     "objectID": "homework/HW2.html#question-1",
@@ -466,7 +466,7 @@
     "href": "weeks/week_02_sched.html#resources",
     "title": "Week 2",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is from a computer internet broswer:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nNote: this process does not work very well on an iPad."
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is from a computer internet browser:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nNote: this process does not work very well on an iPad."
   },
   {
     "objectID": "weeks/week_02_sched.html#on-the-horizon",
@@ -480,7 +480,7 @@
     "href": "weeks/week_02_sched.html#announcements",
     "title": "Week 2",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nMonday 4/8\n\nOffice hours!!\n\nTuesdays 5:30-7pm with Antara\nThursdays 3:30 - 5pm with Ariel\nFridays 2 - 3:30pm with Nicky"
   },
   {
     "objectID": "weeks/week_02_sched.html#class-exit-tickets",
@@ -501,14 +501,14 @@
     "href": "instructors.html",
     "title": "Instructors",
     "section": "",
-    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\nLink to Webex!!\n\nTBD"
+    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\nLink to Webex!!\n\nFridays 2 - 3:30pm"
   },
   {
     "objectID": "instructors.html#instructor-nicole-nicky-wakim-phd",
     "href": "instructors.html#instructor-nicole-nicky-wakim-phd",
     "title": "Instructors",
     "section": "",
-    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\nLink to Webex!!\n\nTBD"
+    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\nLink to Webex!!\n\nFridays 2 - 3:30pm"
   },
   {
     "objectID": "instructors.html#teaching-assistants",
@@ -1733,7 +1733,7 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-1",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Poll Everywhere Question 1",
-    "text": "Poll Everywhere Question 1"
+    "text": "Poll Everywhere Question 1\nMake sure to remember your answer!! We’ll use this on Wednesday!"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association",
@@ -1747,7 +1747,7 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#test-of-association-does-not-measure-association",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Test of association does not measure association",
-    "text": "Test of association does not measure association\n\nTest of association does not provide an effective measure of association. The p-value alone is not enough.\n\n\\(\\text{p-value} &lt; 0.05\\) suggests there is a statistically significant association between the group and outcome\n\\(\\text{p-value} = 0.00001\\) vs. \\(\\text{p-value} = 0.01\\) does not mean the magnistude of association is different\n\n\n \n\nBut it does not tell how different the risks are between the two groups\n\n \n\nWe want to find out one or more measurements for quantifying the risks across the groups."
+    "text": "Test of association does not measure association\n\nTest of association does not provide an effective measure of association. The p-value alone is not enough\n\n\\(\\text{p-value} &lt; 0.05\\) suggests there is a statistically significant association between the group and outcome\n\\(\\text{p-value} = 0.00001\\) vs. \\(\\text{p-value} = 0.01\\) does not mean the magnistude of association is different\n\n\n \n\nBut it does not tell how different the risks are between the two groups\n\n \n\nWe want to find out one or more measurements for quantifying the risks across the groups."
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measures-of-association",
@@ -1887,35 +1887,35 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Relationship Between RR and OR",
-    "text": "Relationship Between RR and OR"
+    "text": "Relationship Between RR and OR\n\nNotice that odds ratio is not equivalent to relative risk (or risk ratio)\nHowever, when the probability of “success” is small (e.g., rare disease), \\(\\widehat{OR}\\) is a nice approximation of \\(\\widehat{RR}\\) \\[\\widehat{OR}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}=\\widehat{RR}\\cdot \\frac{1-\\widehat{p_2}}{1-\\widehat{p_1}}\\]\n\nThe fraction in the last term of the above expression approximately equals to 1.0 if \\(\\widehat{p}_1\\) and \\(\\widehat{p}_2\\) BOTH quite small (&lt; 0.1)\n\nThe \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are not very close to each other in SHS: diabetes not a rare disease\n\n\\(\\widehat{OR} = 4.65\\)\n\\(\\widehat{RR} = 3.29\\)"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#notes-for-odds-ratios",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#notes-for-odds-ratios",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Notes for Odds Ratios",
-    "text": "Notes for Odds Ratios"
+    "text": "Notes for Odds Ratios\n\nThe OR is valid for\n\nCase-control studies (where the RR is not appropriate)\nProspective cohort studies\nCross-sectional studies\n\nIt can be interpreted either as…\n\nOdds of event for exposed vs. unexposed individuals, or\nOdds of exposure for individuals with vs. without the event of interest\n\nPay attention to the numerator and denominator for the OR"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "RR in retrospective case-control study",
-    "text": "RR in retrospective case-control study"
+    "text": "RR in retrospective case-control study\n\nIn retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)\n\nCase-control study to require much smaller sample size than do equivalent cohort studies\n\nHowever, the proportion of cases in the sample does not represent the proportion of cases in the population\n\nRR compares probability of the outcome (case) for exposed and unexposed groups\nNumber of outcomes has been artificially inflated for retrospective study"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#or-in-retrospective-case-control-study",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#or-in-retrospective-case-control-study",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "OR in retrospective case-control study",
-    "text": "OR in retrospective case-control study"
+    "text": "OR in retrospective case-control study\n\nWhile we cannot estimate RR from a case-control study, we can still estimate OR for case-control study\n\nOR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table\n\nAKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased\n\n\nFor case-control study where the probability of having outcome is small, the \\(\\widehat{OR}\\) is a nice approximation to \\(\\widehat{RR}\\)\n\nFor the 1:2 case-control table: \\(\\widehat{OR}=\\frac{40\\cdot160}{40\\cdot60} = 2.667\\)"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#which-measurement-should-one-use",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#which-measurement-should-one-use",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Which measurement should one use?",
-    "text": "Which measurement should one use?"
+    "text": "Which measurement should one use?\n\n\n\n\n\n\n\nMeasurement\nPros and Cons\n\n\n\n\nRisk difference\n\nCan provide additional information, but can be misleading on its own\nNot the preferred measurement\n\n\n\nRisk ratio\n\nEasy to interpret because is a ratio of probabilities\nCannot use in retrospective, case-control studies\n\n\n\nOdds ratio\n\nAdequate for all studies\nGood estimate of RR for rare diseases\nMost preferred by statisticians because integrated into logistic regression"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-5",
@@ -1929,21 +1929,21 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Measuring Agreement",
-    "text": "Measuring Agreement"
+    "text": "Measuring Agreement\n\nStill within the realm of contingency tables\nWhat if we are NOT looking at the association between two variables?\nWhat if we want to look at the agreement between two things?\n\nAnswers of same subjects for same survey taken at different times\nTwo different radiologists’ assessment of the same X-ray\n\nCohen’s Kappa statistics: widely used as a measure of agreement\n\nExample: Reliability studies, interobserver agreement"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Example: Beef Consumption in Survey",
-    "text": "Example: Beef Consumption in Survey"
+    "text": "Example: Beef Consumption in Survey\nA diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-1",
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-1",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Measuring Agreement",
-    "text": "Measuring Agreement"
+    "text": "Measuring Agreement\n\nIf perfect agreement among the two raters/surveys, we would expect nonzero entries only in the diagonal cells of the table\n\n \n\n\\(p_o\\) is the observed proportion of complete agreement (concordance)\n\\(p_E\\) is the expected proportion of complete agreement if the agreement is just due to chance\nIf the \\(p_o\\) is much greater than \\(p_E\\), then the agreement level is high. Otherwise, the agreement level is low\n\n \n\nCohen’s Kappa is based on the difference between \\(p_o\\) and \\(p_E\\): \\[\\hat{\\kappa}=\\frac{p_o-p_E}{1-p_E}\\]"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#example-beef-consumption-in-survey-1",
@@ -1985,7 +1985,7 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measurement-of-association-so-far",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Measurement of Association So Far",
-    "text": "Measurement of Association So Far"
+    "text": "Measurement of Association So Far\n\nUsed contingency tables to test and measure association between two variables\n\nCategorical outcome variable (Y)\nOne categorical explanatory variable (X)\n\nSuch an association is called crude association\n\nNo adjustment for possible confounding factors\nAlso called marginal association\n\nBut we cannot expand analysis based on contingency tables past 3 variables\n\nWe can get into stratified contingency tables to bring in a 3rd variable\nBut I don’t think it’s worth it because regression can bring in (adjust for) many variables"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#confounding",
@@ -2265,7 +2265,7 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option-in-pubh-package",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Pause: other option in pubh package",
-    "text": "Pause: other option in pubh package\n\n\nLoading required package: emmeans\n\n\nLoading required package: ggformula\n\n\nLoading required package: scales\n\n\n\nAttaching package: 'scales'\n\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\nLoading required package: ggridges\n\n\n\nNew to ggformula?  Try the tutorials: \n    learnr::run_tutorial(\"introduction\", package = \"ggformula\")\n    learnr::run_tutorial(\"refining\", package = \"ggformula\")\n\n\nLoading required package: huxtable\n\n\n\nAttaching package: 'huxtable'\n\n\nThe following object is masked from 'package:scales':\n\n    number_format\n\n\nThe following object is masked from 'package:gtsummary':\n\n    as_flextable\n\n\nThe following object is masked from 'package:gt':\n\n    fmt_percent\n\n\nThe following object is masked from 'package:dplyr':\n\n    add_rownames\n\n\nThe following object is masked from 'package:ggplot2':\n\n    theme_grey\n\n\nLoading required package: magrittr\n\n\n\nAttaching package: 'magrittr'\n\n\nThe following object is masked from 'package:purrr':\n\n    set_names\n\n\nThe following object is masked from 'package:tidyr':\n\n    extract\n\n\n\nSHS = SHS %&gt;% mutate(glucimp = as.factor(glucimp) %&gt;% relevel(ref = \"Normal\"))\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532     37.22 (33.10 to 41.48)\nExposed -          128         1004       1132      11.31 (9.52 to 13.30)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.29 (2.70, 4.01)\nInc odds ratio                                 4.65 (3.61, 6.00)\nAttrib risk in the exposed *                   25.91 (21.41, 30.41)\nAttrib fraction in the exposed (%)            69.62 (63.00, 75.05)\nAttrib risk in the population *                8.28 (5.63, 10.94)\nAttrib fraction in the population (%)         42.28 (34.71, 48.98)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
+    "text": "Pause: other option in pubh package\n\nSHS = SHS %&gt;% mutate(glucimp = as.factor(glucimp) %&gt;% relevel(ref = \"Normal\"))\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532     37.22 (33.10 to 41.48)\nExposed -          128         1004       1132      11.31 (9.52 to 13.30)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.29 (2.70, 4.01)\nInc odds ratio                                 4.65 (3.61, 6.00)\nAttrib risk in the exposed *                   25.91 (21.41, 30.41)\nAttrib fraction in the exposed (%)            69.62 (63.00, 75.05)\nAttrib risk in the population *                8.28 (5.63, 10.94)\nAttrib fraction in the population (%)         42.28 (34.71, 48.98)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-risk-ratio-24-1",
@@ -2363,7 +2363,7 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pause-other-option-in-pubh-package-1",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "Pause: other option in pubh package",
-    "text": "Pause: other option in pubh package\n\ncontingency(case ~ glucimp, data = SHS)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532     37.22 (33.10 to 41.48)\nExposed -          128         1004       1132      11.31 (9.52 to 13.30)\nTotal              326         1338       1664     19.59 (17.71 to 21.58)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.29 (2.70, 4.01)\nInc odds ratio                                 4.65 (3.61, 6.00)\nAttrib risk in the exposed *                   25.91 (21.41, 30.41)\nAttrib fraction in the exposed (%)            69.62 (63.00, 75.05)\nAttrib risk in the population *                8.28 (5.63, 10.94)\nAttrib fraction in the population (%)         42.28 (34.71, 48.98)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
+    "text": "Pause: other option in pubh package\n\ncontingency(case ~ glucimp, data = SHS, digits = 3)\n\n          Outcome\nPredictor     1    0\n  Impaired  198  334\n  Normal    128 1004\n\n             Outcome +    Outcome -      Total                 Inc risk *\nExposed +          198          334        532  37.218 (33.097 to 41.482)\nExposed -          128         1004       1132   11.307 (9.521 to 13.298)\nTotal              326         1338       1664  19.591 (17.709 to 21.581)\n\nPoint estimates and 95% CIs:\n-------------------------------------------------------------------\nInc risk ratio                                 3.291 (2.703, 4.008)\nInc odds ratio                                 4.650 (3.605, 5.997)\nAttrib risk in the exposed *                   25.911 (21.408, 30.413)\nAttrib fraction in the exposed (%)            69.618 (63.004, 75.050)\nAttrib risk in the population *                8.284 (5.631, 10.937)\nAttrib fraction in the population (%)         42.284 (34.713, 48.976)\n-------------------------------------------------------------------\nUncorrected chi2 test that OR = 1: chi2(1) = 154.239 Pr&gt;chi2 = &lt;0.001\nFisher exact test that OR = 1: Pr&gt;chi2 = &lt;0.001\n Wald confidence limits\n CI: confidence interval\n * Outcomes per 100 population units \n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  dat\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-odds-ratio-66",
@@ -2391,7 +2391,7 @@
     "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio-1",
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "SHS Example: Inversing Odds Ratio",
-    "text": "SHS Example: Inversing Odds Ratio\n\n\n\n\nInversing odds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes odds ratio between normal and impaired glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe estimated odds of diabetes for American Indians with normal glucose tolerance at baseline is 0.22 times the odds for American Indians with impaired glucose tolerance at baseline.\n \nAdditional interpretation of 95% CI (not needed): We are 95% confident that the odds ratio is between 0.17 and 0.28.\n \nSince the 95% confidence interval does not include 1, there is sufficient evidence that the odds of diabetes differs significantly between impaired and normal glucose tolerance at baseline."
+    "text": "SHS Example: Inversing Odds Ratio\n\n\n\n\nInversing odds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes odds ratio between normal and impaired glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nInverse point estimate and confidence interval\n\n\nlibrary(epitools)\noddsratio(x = SHS_ct, method = \"wald\", rev = \"rows\")$measure \n\n          odds ratio with 95% C.I.\n           estimate     lower     upper\n  Impaired 1.000000        NA        NA\n  Normal   0.215059 0.1667459 0.2773702"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html",
@@ -2399,5 +2399,96 @@
     "title": "Lesson 3: Measurement of Association for Contingency Tables",
     "section": "",
     "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nAttaching package: 'janitor'\n\n\nThe following objects are masked from 'package:stats':\n\n    chisq.test, fisher.test\n\n\n\nAttaching package: 'rstatix'\n\n\nThe following object is masked from 'package:janitor':\n\n    make_clean_names\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nhere() starts at /Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/S2024_BSTA_513_613/S2024_BSTA_513"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relationship Between RR and OR",
+    "text": "Relationship Between RR and OR\n\nAn example where a disease rare over the whole sample (~1%), but …\n\n\\(\\widehat{OR}\\) is not a good estimate of \\(\\widehat{RR}\\) in “rare” disease\n\n\n\n\n\\(\\widhat{p}_1\\) is 0.5: thus \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are very different\n\n\\[\\widehat{RR}=\\frac{0.5}{0.00102}=490 \\text{ and } \\widehat{OR} = \\frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or-12",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or-12",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relationship Between RR and OR (1/2)",
+    "text": "Relationship Between RR and OR (1/2)\n\nNotice that odds ratio is not equivalent to relative risk (or risk ratio)\nHowever, when the probability of “success” is small (e.g., rare disease), \\(\\widehat{OR}\\) is a nice approximation of \\(\\widehat{RR}\\) \\[\\widehat{OR}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}=\\widehat{RR}\\cdot \\frac{1-\\widehat{p_2}}{1-\\widehat{p_1}}\\]\n\nThe fraction in the last term of the above expression approximately equals to 1.0 if \\(\\widehat{p}_1\\) and \\(\\widehat{p}_2\\) BOTH quite small (&lt; 0.1)\n\nThe \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are not very close to each other in SHS: diabetes not a rare disease\n\n\\(\\widehat{OR} = 4.65\\)\n\\(\\widehat{RR} = 3.29\\)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or-22",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#relationship-between-rr-and-or-22",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Relationship Between RR and OR (2/2)",
+    "text": "Relationship Between RR and OR (2/2)\n\nAn example where a disease rare over the whole sample (~1%), but …\n\n\\(\\widehat{OR}\\) is not a good estimate of \\(\\widehat{RR}\\) in “rare” disease\n\n\n\n\n\\(\\widehat{p}_1\\) is 0.5: thus \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are very different\n\n\\[\\widehat{RR}=\\frac{0.5}{0.00102}=490 \\text{ and } \\widehat{OR} = \\frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#which-measurement-should-one-use-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#which-measurement-should-one-use-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Which measurement should one use?",
+    "text": "Which measurement should one use?\n\n\n\n\n\n\n\nMeasurement\nPros and Cons\n\n\n\n\nRisk difference\n\nCan provide additional information, but can be misleading on its own\nNot the preferred measurement\n\n\n\nRisk ratio\n\nEasy to interpret because is a ratio of probabilities\nCannot use in retrospective, case-control studies\n\n\n\nOdds ratio\n\nAdequate for all studies\nGood estimate of RR for rare diseases\nMost preferred by statisticians because integrated into logistic regression"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study-1",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study-1",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "RR in retrospective case-control study",
+    "text": "RR in retrospective case-control study\n\nAssume a 1:2 case-control study summarized in below table:\n\n\n\nAssume we compute the RR as if it is from a cohort study:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\\frac{40/80}{60/220}=1.8333\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#rr-in-retrospective-case-control-study-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "RR in retrospective case-control study",
+    "text": "RR in retrospective case-control study\n\nIn real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the proportion in the population in a cohort study\n\n\n\nThe estimated RR for the patient population is:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{400/4400}{600/16600}=2.5152\\]"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#measuring-agreement-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Measuring Agreement",
+    "text": "Measuring Agreement\nCohen’s Kappa: \\[\\hat{\\kappa}=\\frac{p_o-p_E}{1-p_E}\\]\n\n\\(p_o=\\ \\frac{\\sum_{i}\\ n_{ii}}{n}\\) (sum of diagonals divided by total)\n\\(p_E=\\sum_{i}{a_ib_i}\\)\n\n \n\nWhat’s \\(\\sum_{i}{a_ib_i}\\)?\n\nFor \\(i\\) responses (row/columns), \\(a_i\\) is proportion of \\(i\\) response category in first survey and \\(b_i\\) is proportion of \\(i\\) response category in second survey (we’ll show this in the example)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#to-give-a-taste-of-regression-for-a-categorical-outcome-we-will-come-back-to-this",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#to-give-a-taste-of-regression-for-a-categorical-outcome-we-will-come-back-to-this",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "To give a taste of regression for a categorical outcome (we will come back to this!!)",
+    "text": "To give a taste of regression for a categorical outcome (we will come back to this!!)\n\nlogreg = glm(case ~ glucimp, data = SHS, family = binomial)\n\n\n\n\nsummary(logreg)\n\n\nCall:\nglm(formula = case ~ glucimp, family = binomial, data = SHS)\n\nCoefficients:\n                Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)     -2.05972    0.09385  -21.95   &lt;2e-16 ***\nglucimpImpaired  1.53684    0.12982   11.84   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 1646.3  on 1663  degrees of freedom\nResidual deviance: 1501.3  on 1662  degrees of freedom\nAIC: 1505.3\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nlibrary(epiDisplay)\nlogistic.display(logreg)\n\n\nLogistic regression predicting case \n \n                            OR(95%CI)      P(Wald's test) P(LR-test)\nglucimp: Impaired vs Normal 4.65 (3.61,6)  &lt; 0.001        &lt; 0.001   \n                                                                    \nLog-likelihood = -750.6533\nNo. of observations = 1664\nAIC value = 1505.3066\n\n\n\nlibrary(oddsratio)\nor_glm(data = SHS, model = logreg)"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#a-taste-of-regression-for-a-binary-outcome-we-will-come-back-to-this",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#a-taste-of-regression-for-a-binary-outcome-we-will-come-back-to-this",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "A taste of regression for a binary outcome (we will come back to this!!)",
+    "text": "A taste of regression for a binary outcome (we will come back to this!!)\n\nlogreg = glm(case ~ glucimp, data = SHS, family = binomial)\n\n\n\n\nsummary(logreg)\n\n\nCall:\nglm(formula = case ~ glucimp, family = binomial, data = SHS)\n\nCoefficients:\n                Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)     -2.05972    0.09385  -21.95   &lt;2e-16 ***\nglucimpImpaired  1.53684    0.12982   11.84   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 1646.3  on 1663  degrees of freedom\nResidual deviance: 1501.3  on 1662  degrees of freedom\nAIC: 1505.3\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nlibrary(epiDisplay)\nlogistic.display(logreg)\n\n\nLogistic regression predicting case \n \n                            OR(95%CI)      P(Wald's test) P(LR-test)\nglucimp: Impaired vs Normal 4.65 (3.61,6)  &lt; 0.001        &lt; 0.001   \n                                                                    \nLog-likelihood = -750.6533\nNo. of observations = 1664\nAIC value = 1505.3066"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio-2",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#shs-example-inversing-odds-ratio-2",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "SHS Example: Inversing Odds Ratio",
+    "text": "SHS Example: Inversing Odds Ratio\n\n\n\n\nInversing odds ratio\n\n\nCompute the point estimate and 95% confidence interval for the diabetes odds ratio between normal and impaired glucose tolerance.\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      Glucose tolerance\n      \n        Diabetes\n      \n      Total\n    \n    \n      No\n      Yes\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe estimated odds of diabetes for American Indians with normal glucose tolerance at baseline is 0.22 times the odds for American Indians with impaired glucose tolerance at baseline.\n \nAdditional interpretation of 95% CI (not needed): We are 95% confident that the odds ratio is between 0.17 and 0.28.\n \nSince the 95% confidence interval does not include 1, there is sufficient evidence that the odds of diabetes differs significantly between impaired and normal glucose tolerance at baseline."
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pubh-vs.-epitools",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#pubh-vs.-epitools",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "pubh vs. epitools",
+    "text": "pubh vs. epitools\n\nIn pubh with contingency()\n\nGet all the info at once\nReally nice to double check how the code is interpreting your input\n\nIn epitools with riskratio() or oddsratio()\n\nMuch easier to grab the numbers!\nIn Quarto you can take R code and directly put it in your text\n\ng = oddsratio(x = SHS_ct, method = \"wald\", rev = \"rows\")\ng$measure[2,1]\n\n[1] 0.215059\n\n\n\nI can write {r eval=\"false\" echo=\"true\"} round(g$measure[2,1], 3) to print the number 0.215\n\n\n\n\n\nLesson 3: Measurement of Association for Contingency Tables"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association-12",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association-12",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Review of Test of Association (1/2)",
+    "text": "Review of Test of Association (1/2)\n\nLast week: learned some tests of association for contingency tables\n\n \n\nFor studies with two independent samples\n\nGeneral association\n\nChi-squared test\nFisher’s Exact test\n\nTest of trends\n\nCochran-Armitage test\nMantel-Haenszel test"
+  },
+  {
+    "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association-22",
+    "href": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#review-of-test-of-association-22",
+    "title": "Lesson 3: Measurement of Association for Contingency Tables",
+    "section": "Review of Test of Association (2/2)",
+    "text": "Review of Test of Association (2/2)"
   }
 ]

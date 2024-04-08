@@ -30,11 +30,12 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic                                             |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|------------|------------|:----------:|:----------:|:-----------------------:|
-| 3      | Measurement of Association for Contingency Tables | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic                                             |                                                          Slides                                                          |                                  Annotated Slides                                  |                           Recording                           |
+|-------------|-------------|:-----------:|:-----------:|:------------------:|
+| 3      | Measurement of Association for Contingency Tables | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 4      | Measurements of Association and Agreement         |                          [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                           | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
-For the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is **from a computer internet broswer**:
+For the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is **from a computer internet browser**:
 
 1.  Click on the icon with three horizontal bars on the bottom left of the browser.
 2.  Click on "Tools" with the gear icon at the top of the sidebar.
@@ -48,6 +49,16 @@ For the slides, once they are opened, if you would like to print or save them as
 -   Homework 1 due this Thursday!
 
 ## Announcements
+
+### Monday 4/8
+
+-   Office hours!!
+
+    -   Tuesdays 5:30-7pm with Antara
+
+    -   Thursdays 3:30 - 5pm with Ariel
+
+    -   Fridays 2 - 3:30pm with Nicky
 
 ## Class Exit Tickets
 
