@@ -45,7 +45,7 @@ The above link will take you to your **editing** file. **Please do not remove an
 
 ### Grading
 
-**This lab is graded out of 12 points.** Nicky will use the following rubric to assign grades.
+**This lab is graded out of 12 points.** The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.
 
 #### Rubric
 
@@ -65,13 +65,39 @@ I have left it up to you to load the needed packages for this lab.
 
 ### Reading and listening activities
 
+I will not check that you have read or listened to any of these, but it is a good starting point for understanding the context of our data: food insecurity in the United States. I haven't fully read them all yet, but I will be reading and sharing throughout the quarter.
+
+Here are some articles:
+
+-   NPR: [Millions of American families struggle to get food on the table, report finds](https://www.npr.org/sections/health-shots/2023/10/26/1208760054/food-insecurity-families-struggle-hunger-poverty)
+    
+    -   With option to listen to article
+    
+-   [Identification of factors related to food insecurity and the implications for social determinants of health screenings](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-021-11465-6#Tab2)
+
+-   [NIMHD's page on Food Accessibility, Insecurity and Health Outcomes](https://www.nimhd.nih.gov/resources/understanding-health-disparities/food-accessibility-insecurity-and-health-outcomes.html)
+
+-   [Food Insecurity among American Indians and Alaska Natives: A National Profile using the Current Population Survey–Food Security Supplement](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5422031/)
+
+-   [A Framework for Evaluating Social Determinants of Health Screening and Referrals for Assistance](https://journals.sagepub.com/doi/10.1177/21501327211052204)
+
 ### Familiarize yourself with the Well-Being and Basic Needs Survey
 
-Please read the [Urban Institute's page](https://www.urban.org/policy-centers/health-policy-center/projects/well-being-and-basic-needs-survey) on the Well-Being and Basic Needs Survey and more of their [published information of the survey](https://www.urban.org/sites/default/files/publication/98919/the_well-being_and_basic_needs_survey_1.pdf). You can also read about the overarching [From Safety Net to Solid Ground Initiative](https://www.urban.org/tags/safety-net-solid-ground#about) that started the survey. Answer the following questions:
+Please read the [Urban Institute's page](https://www.urban.org/policy-centers/health-policy-center/projects/well-being-and-basic-needs-survey) on the Well-Being and Basic Needs Survey (WBNS) and more of their [published information of the survey](https://www.urban.org/sites/default/files/publication/98919/the_well-being_and_basic_needs_survey_1.pdf) (at least the first 4 pages). You can also read about the overarching [From Safety Net to Solid Ground Initiative](https://www.urban.org/tags/safety-net-solid-ground#about) that started the survey. Answer the following questions:
 
 -   What is the motivation for this study? 
 -   How could an analysis that looks at associations with food insecurity help facilitate change in policy?
--   
+-   Why is it important to study food insecurity?
+
+::: callout-important
+#### Task
+
+Answer the following questions using information on WBNS:
+
+-   What is the motivation for this study? 
+-   How could an analysis that looks at associations with food insecurity help facilitate change in policy?
+-   Why is it important to study food insecurity?
+:::
 
 ### File organization
 
@@ -93,6 +119,12 @@ Display your working directory using the `here` package and `here()` function.
 6.  Login using standard OHSU login. Then the download should begin!
 7.  Make sure to move this into your project folder under the Data folder.
 8.  Take a look at the folders/files you just downloaded. Make sure to locate and understand the difference between the Codebook, Questionnaire, and User Guide. (Note that the website also contains the codebook if you go to the variable tab. I think the online one has an easier user interface than the pdf.)
+
+::: callout-important
+#### Task
+
+No task to report back on. Just make sure you have the data!
+:::
 
 ### Decide on list of variables to focus on {#sec-pred}
 
