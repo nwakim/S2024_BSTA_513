@@ -284,14 +284,14 @@
     "href": "project.html#labs",
     "title": "Project Central",
     "section": "Labs",
-    "text": "Labs\n\n\n\nLab\nDue Date\nTopics\n\n\n\n\nLab 1\n4/18\nExploring the question and data\n\n\nLab 2\n5/2\nSimple logistic regression\n\n\nLab 3\n5/16\nBuilding a model\n\n\nLab 4\n5/30\nInterpreting the final model"
+    "text": "Labs\n\n\n\nLab\nDue Date\nTopics\n\n\n\n\nLab 1\n4/18\nExploring the question and data\n\n\nLab 2\n5/2\nTable 1 + Missing data + Simple logistic regression\n\n\nLab 3\n5/16\nBuilding a model\n\n\nLab 4\n5/30\nInterpreting the final model"
   },
   {
     "objectID": "project.html#report",
     "href": "project.html#report",
     "title": "Project Central",
     "section": "Report",
-    "text": "Report\nReport Instructions\nDue 6/13/2024\n\nReading and listening sources"
+    "text": "Report\nReport Instructions\nDue 6/13/2024"
   },
   {
     "objectID": "schedule.html",
@@ -459,7 +459,7 @@
     "href": "lessons.html",
     "title": "Lessons",
     "section": "",
-    "text": "Lesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nSimple Logistic Regression\n\n\n\n\n\n5\nInterpretations of Simple Logistic Regression\n\n\n\n\n\n6\nMultiple Logistic Regression\n\n\n\n\n\n7\nInterpretations of Multiple Logistic Regression\n\n\n\n\n\n8\nConfounders and Interactions\n\n\n\n\n\n9\nModel Building Strategies\n\n\n\n\n\n10\nNumerical Problems\n\n\n\n\n\n11\nAssessing Model Fit\n\n\n\n\n\n12\nRevisit interpretations\n\n\n\n\n\n13\nPoisson Regression"
+    "text": "Lesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurement of Association and Agreement\n\n\n\n\n\n4\nSimple Logistic Regression\n\n\n\n\n\n5\nInterpretations of Simple Logistic Regression\n\n\n\n\n\n6\nMultiple Logistic Regression\n\n\n\n\n\n7\nInterpretations of Multiple Logistic Regression\n\n\n\n\n\n8\nConfounders and Interactions\n\n\n\n\n\n9\nModel Building Strategies\n\n\n\n\n\n10\nNumerical Problems\n\n\n\n\n\n11\nAssessing Model Fit\n\n\n\n\n\n12\nRevisit interpretations\n\n\n\n\n\n13\nPoisson Regression"
   },
   {
     "objectID": "weeks/week_02_sched.html#resources",
@@ -480,7 +480,7 @@
     "href": "weeks/week_02_sched.html#announcements",
     "title": "Week 2",
     "section": "Announcements",
-    "text": "Announcements\n\nMonday 4/8\n\nOffice hours!!\n\nTuesdays 5:30-7pm with Antara\nThursdays 3:30 - 5pm with Ariel\nFridays 2 - 3:30pm with Nicky"
+    "text": "Announcements\n\nMonday 4/8\n\nOffice hours!!\n\nTuesdays 5:30-7pm with Antara\nThursdays 3:30 - 5pm with Ariel\nFridays 2 - 3:30pm with Nicky\n\n\n\n\nWednesday 4/10\n\nEcho360: Let’s all double check that we can see the recordings\nHomework question 5: no need to do LRT in the table"
   },
   {
     "objectID": "weeks/week_02_sched.html#class-exit-tickets",
@@ -2494,22 +2494,330 @@
   {
     "objectID": "project/Lab_01_instructions.html",
     "href": "project/Lab_01_instructions.html",
-    "title": "Lab 1",
+    "title": "Lab 1 Instructions",
     "section": "",
-    "text": "You can download the .qmd file for this lab here.\nThe above link will take you to your editing file. Please do not remove anything from this editing file!! You will only add your code and work to this file.\n\n\nThis lab is graded out of 12 points. Nicky will use the following rubric to assign grades.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+    "text": "Caution\n\n\n\nThis project includes analysis on food insecurity."
   },
   {
     "objectID": "project/Lab_01_instructions.html#directions",
     "href": "project/Lab_01_instructions.html#directions",
-    "title": "Lab 1",
-    "section": "",
-    "text": "You can download the .qmd file for this lab here.\nThe above link will take you to your editing file. Please do not remove anything from this editing file!! You will only add your code and work to this file.\n\n\nThis lab is graded out of 12 points. Nicky will use the following rubric to assign grades.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+    "title": "Lab 1 Instructions",
+    "section": "1 Directions",
+    "text": "1 Directions\nYou can download the .qmd file for this lab here.\nThe above link will take you to your editing file. Please do not remove anything from this editing file!! You will only add your code and work to this file.\n\n1.1 Grading\nThis lab is graded out of 12 points. Nicky will use the following rubric to assign grades.\n\n1.1.1 Rubric\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
   },
   {
     "objectID": "project/Lab_01_instructions.html#lab-activities",
     "href": "project/Lab_01_instructions.html#lab-activities",
-    "title": "Lab 1",
+    "title": "Lab 1 Instructions",
     "section": "2 Lab activities",
-    "text": "2 Lab activities\n\n2.1 Reading and listening activities\n\n\n2.2 Familiarize yourself with the Well-Being and Basic Needs Survey\n\n\n2.3 Get a sense of how you would like to analyze the data\n\n\n2.4 Compile above work into an introduction\nGeneral flow of an introduction:\nImportant information to hit on in an introduction: - Connect how this analysis can help policy for food insecurity\n\n\n2.5 Access and download the data\n\nGo to the Health and Medical Care Archive page for the Well-Being and Basic Needs Survey\nGo to the Data & Documentation tab \nDownload the R version of the Public use data \nRead and agree to the Terms of Use. After this, you will be redirected to a new page.\nLog into ICPSR by clicking “Access through your institution”. You should be taken to a new page where you need to select “Oregon Health & Science University” \nLogin using standard OHSU login. Then the download should begin!\nMake sure to move this into your project folder!\n\n\n\n2.6 Save data for processing with .Rda\n\n\n2.7 Quality control / getting data in working format\n\n\n2.8 Explore the outcome\n\n\n2.9 Explore other variables\n\n\n2.10 Save processed data with .Rda\n\n\n2.11 Decide on list of variables to focus on\n\nnumeric\n\nAge"
+    "text": "2 Lab activities\n\n\n\n\n\n\nNote\n\n\n\nI have left it up to you to load the needed packages for this lab.\n\n\n\n2.1 Reading and listening activities\n\n\n2.2 Familiarize yourself with the Well-Being and Basic Needs Survey\nPlease read the Urban Institute’s page on the Well-Being and Basic Needs Survey and more of their published information of the survey. You can also read about the overarching From Safety Net to Solid Ground Initiative that started the survey. Answer the following questions:\n\nWhat is the motivation for this study?\nHow could an analysis that looks at associations with food insecurity help facilitate change in policy?\n\n\n\n\n2.3 File organization\nBefore downloading the data, go back to Lesson 2 and follow the file setup for our project. This includes making an .Rproj file within the main folder. Make sure you are working with the project by using the here() function to display your working directory.\n\n\n\n\n\n\nTask\n\n\n\nDisplay your working directory using the here package and here() function.\n\n\n\n\n2.4 Access and download the data\n\nGo to the Health and Medical Care Archive page for the Well-Being and Basic Needs Survey\nGo to the Data & Documentation tab \nDownload the R version of the Public use data \nRead and agree to the Terms of Use. After this, you will be redirected to a new page.\nLog into ICPSR by clicking “Access through your institution”. You should be taken to a new page where you need to select “Oregon Health & Science University” \nLogin using standard OHSU login. Then the download should begin!\nMake sure to move this into your project folder under the Data folder.\nTake a look at the folders/files you just downloaded. Make sure to locate and understand the difference between the Codebook, Questionnaire, and User Guide. (Note that the website also contains the codebook if you go to the variable tab. I think the online one has an easier user interface than the pdf.)\n\n\n\n2.5 Decide on list of variables to focus on\nFrom the codebook, I want you to explore the variables and create a list of 10 predictors that you would like to focus on. Our outcome is FOOD_INSEC so we cannot use this as a predictor. Feel free to take a look at the Urban Institute’s list of publications to get ideas of variables and relationships.\nThere are a few requirements for your predictors:\n\n1 variable must be a numeric (i.e. PPAGE)\n1 variable must be binary\n1 variable must be multi-level categorical (categorical with more than 2 groups)\nYou must choose at least 10 predictors (does not include the outcome)\n\nThere is a good online version of the codebook with information about the variables. I have linked you to the ID varaible, but you can take a look at all the other variables using the left hand side navigator:\n\nYou can look under survey questions to get a better sense of how questions were asked, but please stick to variables under Demographic Variables, Family Income, Insurance Status, and Material Hardship. Do not choose variables from the Administrative levels, Survey Questions, nor School Enrollment or Child Care variables. May leave in the ID variable for easier tracking on individuals, but it does not count towards the 10 predictors.\n\n\n\n\n\n\nTask\n\n\n\nList the 10 predictors that you plan to use in your analysis. Note which variables are numeric, binary, or multi-level categorical.\n\n\n\n\n2.6 Get a sense of how you would like to analyze the data\nFor our project, we will examine the association between the food insecurity and one other variable (our main explanatory variable). From the above readings, survey information, and your list of predictors in Section 2.5, which association are you most interested in analyzing?\nPlease write this in the form of a research question statement. Feel free to copy this sentence and insert your chosen predictor: We will investigate the association between food insecurity and ____.\n\n\n\n\n\n\nTask\n\n\n\nComplete the following statement to identify your research question:\nWe will investigate the association between food insecurity and ____.\n\n\n\n\n2.7 Save data for processing with .Rda\nWithin this document, or in a separate document, use R to save a copy of the dataset so that you can process it without changing the raw data. Recall the file organization that we discussed to set up proper folders. Include a screenshot showing the new .Rda file within your Data folder.\n\n\n\n\n\n\nTask\n\n\n\nInclude a screenshot showing the new .Rda file within your Data folder.\n\n\n\n\n2.8 Getting data in working format\nYou can start by selecting only the variables you will use in your analysis. Again, you can keep ID in addition to your outcome and predictors for easy tracking.\nUse the following code (with your dataset’s name) to remove the parentheses with values that are in front of the category names. Make sure to change old_df and new_df.\n\nnew_df = data.frame(lapply(old_df, function(x) {gsub(\".*) \", \"\", x)}))\n\n\n\n\n\n\n\nTask\n\n\n\n\nSelect the variables that will be used in your analysis and make a new dataset. Include the code that you used.\nRemove the parentheses with values that are in front of the category names.\n\n\n\n\n\n2.9 Explore the outcome and predictors\nThe codebook online gives some nice plots of each variable. Please take a look at the codebook online to see the spread of each variable. Make note of any categorical variables that have less than 100 observations in a group. This may cause issues in our analysis later.\n\n\n\n\n\n\nTask\n\n\n\n\nTo check that you have looked that the variables, please report the percent of respondents that were food insecure in the past 12 months.\nList any categorical variables that have less than 100 observations in a group\n\n\n\n\n\n2.10 Compile above work into an introduction\nPlease check out this source for what a research article introduction includes and how to organize it. The only thing I would add is mentioning the Well-Being and Basic Needs Survey.\n\n\n\n\n\n\nTask\n\n\n\nWrite an introduction to the analysis."
+  },
+  {
+    "objectID": "project.html#information-and-resources-on-food-insecurity",
+    "href": "project.html#information-and-resources-on-food-insecurity",
+    "title": "Project Central",
+    "section": "Information and Resources on Food Insecurity",
+    "text": "Information and Resources on Food Insecurity\nThis project will discuss food insecurity and unmet basic needs. If you have experienced or are experiencing food insecurity, and this project impacts your mental health or ability to work, please let me know. We can work on an alternative analysis with a different dataset.\nIf you are currently experiencing food insecurity or not meeting your basic needs, here are some resources for Oregon residents:\n\nOregon One elegibility page\n\nYou can apply for benefits including medical, food, cash, or child care assistance\nThis is one way to apply to multiple benefits\n\nOregon Health Plan\nThe Oregon Food Bank has a food finder\n\nIn addition to these statewide resources, as students, there are other resources available to you:\n\nFood Assistance and Basic Needs for OHSU students\n\nIncludes information on SNAP program\nIncludes information on free groceries available to students at the Food Resource Center\n\nYou can even order it online and pick it up!\n\n\nYou can email basicneeds@ohsu.edu for help getting assistance or connecting you to the following services:\n\nManage your finances\nAccess emergency funds\nFind legal services\nApply for SNAP\nFind child care\nFind housing"
+  },
+  {
+    "objectID": "project.html#reading-and-listening-sources",
+    "href": "project.html#reading-and-listening-sources",
+    "title": "Project Central",
+    "section": "Reading and listening sources",
+    "text": "Reading and listening sources"
+  },
+  {
+    "objectID": "lectures/Project_prez/Project_intro.html#original-motivation",
+    "href": "lectures/Project_prez/Project_intro.html#original-motivation",
+    "title": "Project Introduction",
+    "section": "Original motivation",
+    "text": "Original motivation\n\nMixed-Status Immigrant Families Disproportionately Experienced Material Hardships in 2021\n\n\n\nProject Introduction"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#relationship-between-rr-and-or-12",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#relationship-between-rr-and-or-12",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Relationship Between RR and OR (1/2)",
+    "text": "Relationship Between RR and OR (1/2)\n\nNotice that odds ratio is not equivalent to relative risk (or risk ratio)\nHowever, when the probability of “success” is small (e.g., rare disease), \\(\\widehat{OR}\\) is a nice approximation of \\(\\widehat{RR}\\) \\[\\widehat{OR}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}=\\widehat{RR}\\cdot \\frac{1-\\widehat{p_2}}{1-\\widehat{p_1}}\\]\n\nThe fraction in the last term of the above expression approximately equals to 1.0 if \\(\\widehat{p}_1\\) and \\(\\widehat{p}_2\\) BOTH quite small (&lt; 0.1)\n\nThe \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are not very close to each other in SHS: diabetes not a rare disease\n\n\\(\\widehat{OR} = 4.65\\)\n\\(\\widehat{RR} = 3.29\\)"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#relationship-between-rr-and-or-22",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#relationship-between-rr-and-or-22",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Relationship Between RR and OR (2/2)",
+    "text": "Relationship Between RR and OR (2/2)\n\nAn example where a disease rare over the whole sample (~1%), but …\n\n\\(\\widehat{OR}\\) is not a good estimate of \\(\\widehat{RR}\\) in “rare” disease\n\n\n\n\n\\(\\widehat{p}_1\\) is 0.5: thus \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are very different\n\n\\[\\widehat{RR}=\\frac{0.5}{0.00102}=490 \\text{ and } \\widehat{OR} = \\frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981\\]"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#notes-for-odds-ratios",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#notes-for-odds-ratios",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Notes for Odds Ratios",
+    "text": "Notes for Odds Ratios\n\nThe OR is valid for\n\nCase-control studies (where the RR is not appropriate)\nProspective cohort studies\nCross-sectional studies\n\nIt can be interpreted either as…\n\nOdds of event for exposed vs. unexposed individuals, or\nOdds of exposure for individuals with vs. without the event of interest\n\nPay attention to the numerator and denominator for the OR"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#which-measurement-should-one-use",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#which-measurement-should-one-use",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Which measurement should one use?",
+    "text": "Which measurement should one use?\n\n\n\n\n\n\n\nMeasurement\nPros and Cons\n\n\n\n\nRisk difference\n\nCan provide additional information, but can be misleading on its own\nNot the preferred measurement\n\n\n\nRisk ratio\n\nEasy to interpret because is a ratio of probabilities\nCannot use in retrospective, case-control studies\n\n\n\nOdds ratio\n\nAdequate for all studies\nGood estimate of RR for rare diseases\nMost preferred by statisticians because integrated into logistic regression"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "RR in retrospective case-control study",
+    "text": "RR in retrospective case-control study\n\nIn retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)\n\nCase-control study to require much smaller sample size than do equivalent cohort studies\n\nHowever, the proportion of cases in the sample does not represent the proportion of cases in the population\n\nRR compares probability of the outcome (case) for exposed and unexposed groups\nNumber of outcomes has been artificially inflated for retrospective study"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-1",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-1",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "RR in retrospective case-control study",
+    "text": "RR in retrospective case-control study\n\nAssume a 1:2 case-control study summarized in below table:\n\n\n\nAssume we compute the RR as if it is from a cohort study:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\\frac{40/80}{60/220}=1.8333\\]"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-2",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-2",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "RR in retrospective case-control study",
+    "text": "RR in retrospective case-control study\n\nIn real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the proportion in the population in a cohort study\n\n\n\nThe estimated RR for the patient population is:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{400/4400}{600/16600}=2.5152\\]"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#or-in-retrospective-case-control-study",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#or-in-retrospective-case-control-study",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "OR in retrospective case-control study",
+    "text": "OR in retrospective case-control study\n\nWhile we cannot estimate RR from a case-control study, we can still estimate OR for case-control study\n\nOR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table\n\nAKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased\n\n\nFor case-control study where the probability of having outcome is small, the \\(\\widehat{OR}\\) is a nice approximation to \\(\\widehat{RR}\\)\n\nFor the 1:2 case-control table: \\(\\widehat{OR}=\\frac{40\\cdot160}{40\\cdot60} = 2.667\\)"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-5",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-5",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measuring Agreement",
+    "text": "Measuring Agreement\n\nStill within the realm of contingency tables\nWhat if we are NOT looking at the association between two variables?\n\n \n\nWhat if we want to look at the agreement between two things?\n\nAnswers of same subjects for same survey taken at different times\nTwo different radiologists’ assessment of the same X-ray\n\n\n \n\nCohen’s Kappa statistics: widely used as a measure of agreement\n\nExample: Reliability studies, interobserver agreement"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption in Survey",
+    "text": "Example: Beef Consumption in Survey\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nCompute the kappa statistic\nFind confidence interval of kappa\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-1",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-1",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measuring Agreement",
+    "text": "Measuring Agreement\n\nIf perfect agreement among the two raters/surveys:\n\nWe would expect nonzero entries only in the diagonal cells of the table\n\n\n \n\n\\(p_o\\) is the observed proportion of complete agreement (concordance)\n\\(p_E\\) is the expected proportion of complete agreement if the agreement is just due to chance\nIf the \\(p_o\\) is much greater than \\(p_E\\), then the agreement level is high.\n\nOtherwise, the agreement level is low\n\n\n \n\n\n\nCohen’s Kappa is based on the difference between \\(p_o\\) and \\(p_E\\): \\[\\hat{\\kappa}=\\frac{p_o-p_E}{1-p_E}\\]\n\n\n\n\n\n\\(\\hat{\\kappa} = 0\\): No agreement between surveys/raters other than what would be expected by chance\n\\(\\hat{\\kappa} = 1\\): Complete agreement"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-2",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-2",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measuring Agreement",
+    "text": "Measuring Agreement\nCohen’s Kappa: \\[\\hat{\\kappa}=\\frac{p_o-p_E}{1-p_E}\\]\n\n\\(p_o=\\ \\frac{\\sum_{i}\\ n_{ii}}{n}\\) (sum of diagonals divided by total)\n\\(p_E=\\sum_{i}{a_ib_i}\\)\n\n \n\nWhat’s \\(\\sum_{i}{a_ib_i}\\)?\n\nFor \\(i\\) responses (row/columns), \\(a_i\\) is proportion of \\(i\\) response category in first survey and \\(b_i\\) is proportion of \\(i\\) response category in second survey (we’ll show this in the example)"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-1",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-1",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption in Survey",
+    "text": "Example: Beef Consumption in Survey\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n1/2. Compute the kappa statistic and find confidence interval of kappa\n\nlibrary(epiR)\nbeef = matrix(c(136, 92, 69, 240), nrow = 2, byrow = T)\nepi.kappa(beef, method = \"cohen\")$kappa \n\n        est         se     lower     upper\n1 0.3781906 0.04100635 0.2978196 0.4585616"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-6",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-6",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Poll Everywhere Question 6",
+    "text": "Poll Everywhere Question 6"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-between-two-raters",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-between-two-raters",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measuring Agreement Between Two Raters",
+    "text": "Measuring Agreement Between Two Raters"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#testing-measuring-agreement",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#testing-measuring-agreement",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Testing Measuring Agreement",
+    "text": "Testing Measuring Agreement"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption",
+    "text": "Example: Beef Consumption"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measurement-of-association-so-far",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measurement-of-association-so-far",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measurement of Association So Far",
+    "text": "Measurement of Association So Far\n\nUsed contingency tables to test and measure association between two variables\n\nCategorical outcome variable (Y)\nOne categorical explanatory variable (X)\n\nWe looked at risk difference, risk ratio, and odds ratio to measure association\nSuch an association is called crude association\n\nNo adjustment for possible confounding factors\nAlso called marginal association\n\nBut we cannot expand analysis based on contingency tables past 3 variables\n\nWe can get into stratified contingency tables to bring in a 3rd variable\nBut I don’t think it’s worth it because regression can bring in (adjust for) many variables"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#a-taste-of-regression-for-a-binary-outcome-we-will-come-back-to-this",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#a-taste-of-regression-for-a-binary-outcome-we-will-come-back-to-this",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "A taste of regression for a binary outcome (we will come back to this!!)",
+    "text": "A taste of regression for a binary outcome (we will come back to this!!)\n\nlogreg = glm(case ~ glucimp, data = SHS, family = binomial)\n\n\n\n\nsummary(logreg)\n\n\nCall:\nglm(formula = case ~ glucimp, family = binomial, data = SHS)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   -0.52287    0.08969   -5.83 5.55e-09 ***\nglucimpNormal -1.53684    0.12982  -11.84  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 1646.3  on 1663  degrees of freedom\nResidual deviance: 1501.3  on 1662  degrees of freedom\nAIC: 1505.3\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nlibrary(epiDisplay)\nlogistic.display(logreg)\n\n\nLogistic regression predicting case \n \n                     OR(95%CI)         P(Wald's test) P(LR-test)\nglucimp (cont. var.) 0.22 (0.17,0.28)  &lt; 0.001        &lt; 0.001   \n                                                                \nLog-likelihood = -750.6533\nNo. of observations = 1664\nAIC value = 1505.3066"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#our-example",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#our-example",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Our example!",
+    "text": "Our example!"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-1",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-1",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-2",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-2",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#lets-get-this-data-down",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#lets-get-this-data-down",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Let’s get this data down!",
+    "text": "Let’s get this data down!"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#just-in-case-our-data-doesnt-work-out-beef-consumption-in-survey",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#just-in-case-our-data-doesnt-work-out-beef-consumption-in-survey",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Just in case our data doesn’t work out: Beef Consumption in Survey",
+    "text": "Just in case our data doesn’t work out: Beef Consumption in Survey\nA diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#lets-get-our-mood-data-down",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#lets-get-our-mood-data-down",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Let’s get our mood data down!",
+    "text": "Let’s get our mood data down!"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods",
+    "text": "Example: Our moods\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nCompute the kappa statistic\nFind confidence interval of kappa\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-oberved-kappas",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-oberved-kappas",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measuring Agreement: Oberved Kappas",
+    "text": "Measuring Agreement: Oberved Kappas\n\nGuidelines for evaluating Kappa (Rosner TB)\n \n\nExcellent agreement if \\(\\hat\\kappa \\geq 0.75\\)\n\n \n\nFair to good agreement if \\(0.4 &lt; \\hat\\kappa &lt; 0.75\\)\n\n \n\nPoor agreement if \\(\\hat\\kappa \\leq 0.4\\)\n\n\n \nIf \\(\\hat\\kappa&lt;0\\), suggest agreement less than by chance"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-cohens-kappa",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#measuring-agreement-cohens-kappa",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Measuring Agreement: Cohen’s Kappa",
+    "text": "Measuring Agreement: Cohen’s Kappa\n\n\n\nPoint estimate: \\[\\hat{\\kappa}=\\frac{p_o-p_E}{1-p_E}\\]\n\nWith \\(p_o=\\ \\frac{\\sum_{i}\\ n_{ii}}{n}\\) (sum of diagonals divided by total)\nWith \\(p_E=\\sum_{i}{a_ib_i}\\)\nWith range of point estimate from \\([-1, 1]\\)\n\n\n\n\n\n\n\nWhat’s \\(\\sum_{i}{a_ib_i}\\)?\n\n\nFor \\(i\\) responses (row/columns), \\(a_i\\) is proportion of \\(i\\) response category in first survey and \\(b_i\\) is proportion of \\(i\\) response category in second survey (we’ll show this in the example)\n\n\n\n\n\nApproximate standard error:\n\n\\[ SE_{\\widehat{\\kappa}} = \\sqrt{\\frac{1}{{n\\left(1-p_e\\right)}^2}\\left\\{p_e^2+p_e-\\sum_{i}\\left[a_ib_i\\left(a_i+b_i\\right)\\right]\\right\\}}\\]\n\n95% Wald confidence interval for \\(\\widehat{\\kappa}\\):\n\n\\[\\widehat{\\kappa} \\pm 1.96 \\cdot SE_{\\widehat{\\kappa}}\\]"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-1",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-1",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods",
+    "text": "Example: Our moods\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n1/2. Compute the kappa statistic and find confidence interval of kappa\n\nlibrary(epiR)\nmoods = matrix(c(13, 9, 6, 24), nrow = 2, byrow = T)\nepi.kappa(moods, method = \"cohen\")$kappa \n\n        est       se     lower     upper\n1 0.3981481 0.131082 0.1412321 0.6550642"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#last-class",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#last-class",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Last class",
+    "text": "Last class\n\nUsed contingency tables to test and measure association between two variables\n\nCategorical outcome variable (Y)\nOne categorical explanatory variable (X)\n\nWe looked at risk difference, risk ratio, and odds ratio to measure association\n\n\n\n\n\n\n\n\nMeasure\nEstimate\n\n\n\n\nRisk difference\n\\[\\widehat{RD} = \\widehat{p}_1 - \\widehat{p}_1 = \\dfrac{n_{11}}{n_1} - \\dfrac{n_{21}}{n_2}\\]\n\n\nRelative risk / risk ratio\n\\[\\widehat{RR}=\\dfrac{\\hat{p}_1}{\\hat{p}_2} = \\dfrac{n_{11}/n_1}{n_{21}/n_2}\\]\n\n\nOdds ratio\n\\[\\widehat{OR}=\\frac{odds_1}{odds_2}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}\\]\n\n\n\n\nDiscussed how OR will be an important measurement in logistic regression"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-2",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-2",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods",
+    "text": "Example: Our moods\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe kappa statistic is ____ (95% CI: _____, _____), indicating ______ agreement.\nSince the 95% confidence interval does/does not contain 0, we have/do not have sufficient evidence that there is _________ agreement between our mood on Monday and our mood on Wednesday."
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-3",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-3",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods",
+    "text": "Example: Our moods\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n1/2. Compute the kappa statistic and find confidence interval of kappa\n\nlibrary(epiR)\nbeef = matrix(c(136, 92, 69, 240), nrow = 2, byrow = T)\nepi.kappa(beef, method = \"cohen\")$kappa \n\n        est         se     lower     upper\n1 0.3781906 0.04100635 0.2978196 0.4585616\n\n\n\n\n        est         se     lower     upper\n1 0.3781906 0.04100635 0.2978196 0.4585616"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-4",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-4",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods",
+    "text": "Example: Our moods\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe kappa statistic is 0.378 (95% CI: 0.298, 0.459), indicating fair agreement.\nSince the 95% confidence interval does not contain 0, we have sufficient evidence that there is fair agreement between the surveys for beef consumption. I would say this survey is not reliably reproducible since we did not achieve excellent agreement.\n\n\nLesson 4: Measurements of Association and Agreement"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-2",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-2",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption in Survey",
+    "text": "Example: Beef Consumption in Survey\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe kappa statistic is 0.378 (95% CI: 0.298, 0.459), indicating fair agreement.\nSince the 95% confidence interval does not contain 0, we have sufficient evidence that there is fair agreement between the surveys for beef consumption. The survey is not reliably reproducible since we did not achieve excellent agreement.\n\n\nLesson 4: Measurements of Association and Agreement"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-13",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-13",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods (1/3)",
+    "text": "Example: Our moods (1/3)\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nCompute the kappa statistic\nFind confidence interval of kappa\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-23",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-23",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods (2/3)",
+    "text": "Example: Our moods (2/3)\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n1/2. Compute the kappa statistic and find confidence interval of kappa\n\nlibrary(epiR)\nmoods = matrix(c(13, 9, 6, 24), nrow = 2, byrow = T)\nepi.kappa(moods, method = \"cohen\")$kappa \n\n        est       se     lower     upper\n1 0.3981481 0.131082 0.1412321 0.6550642"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-33",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-our-moods-33",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Our moods (3/3)",
+    "text": "Example: Our moods (3/3)\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe kappa statistic is ____ (95% CI: _____, _____), indicating ______ agreement.\nSince the 95% confidence interval does/does not contain 0, we have/do not have sufficient evidence that there is _________ agreement between our mood on Monday and our mood on Wednesday."
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-13",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-13",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption in Survey (1/3)",
+    "text": "Example: Beef Consumption in Survey (1/3)\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nCompute the kappa statistic\nFind confidence interval of kappa\nInterpret the estimate"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-23",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-23",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption in Survey (2/3)",
+    "text": "Example: Beef Consumption in Survey (2/3)\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n1/2. Compute the kappa statistic and find confidence interval of kappa\n\nlibrary(epiR)\nbeef = matrix(c(136, 92, 69, 240), nrow = 2, byrow = T)\nepi.kappa(beef, method = \"cohen\")$kappa \n\n        est         se     lower     upper\n1 0.3781906 0.04100635 0.2978196 0.4585616"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-33",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#example-beef-consumption-in-survey-33",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Example: Beef Consumption in Survey (3/3)",
+    "text": "Example: Beef Consumption in Survey (3/3)\n\n\n\n\nAgreement of surveys\n\n\nCompute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?\n\n\n\n\n\n\n\n\n\n\nNeeded steps:\n\nInterpret the estimate\n\nThe kappa statistic is 0.378 (95% CI: 0.298, 0.459), indicating fair agreement.\nSince the 95% confidence interval does not contain 0, we have sufficient evidence that there is fair agreement between the surveys for beef consumption. The survey is not reliably reproducible since we did not achieve excellent agreement.\n\n\nLesson 4: Measurements of Association and Agreement"
   }
 ]

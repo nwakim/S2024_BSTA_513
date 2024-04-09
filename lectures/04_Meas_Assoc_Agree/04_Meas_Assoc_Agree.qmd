@@ -20,6 +20,13 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
+## Poll Everywhere Question 1
+
+# Learning Objectives
+
+1.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
+2.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
+
 ```{css, echo=FALSE}
 .reveal code {
   max-height: 80% !important;
@@ -53,15 +60,65 @@ SHS_ct_disp = SHS %>% tabyl(glucimp, case) %>%
   tab_stubhead(label = "Glucose tolerance") %>%
   opt_stylize(style = 2) %>%
   tab_options(table.font.size = 45)
+```
 
-SHS_ct_disp
+## Last class
+
+-   Used contingency tables to test and measure association between two variables
+
+    -   Categorical outcome variable (Y)
+    -   One categorical explanatory variable (X)
+
+-   We looked at risk difference, risk ratio, and odds ratio to measure association
+
++---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| Measure                                           | Estimate                                                                                               |
++===================================================+========================================================================================================+
+| Risk difference                                   | $$\widehat{RD} = \widehat{p}_1 - \widehat{p}_1 = \dfrac{n_{11}}{n_1} - \dfrac{n_{21}}{n_2}$$           |
++---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| Relative risk / risk ratio                        | $$\widehat{RR}=\dfrac{\hat{p}_1}{\hat{p}_2} = \dfrac{n_{11}/n_1}{n_{21}/n_2}$$                         |
++---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| Odds ratio                                        | $$\widehat{OR}=\frac{odds_1}{odds_2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}$$ |
++---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+
+-   Discussed how OR will be an important measurement in logistic regression
+
+## A taste of regression for a binary outcome (we will come back to this!!)
+
+```{r}
+logreg = glm(case ~ glucimp, data = SHS, family = binomial)
 ```
+
+::: columns
+::: {.column width="60%"}
+```{r}
+summary(logreg)
 ```
+:::
+
+::: {.column width="40%"}
+```{r}
+library(epiDisplay)
+logistic.display(logreg)
+```
+
+```{r}
+#| eval: false
+#| echo: false
+
+library(oddsratio)
+or_glm(data = SHS, model = logreg)
+```
+:::
+:::
 
 # Learning Objectives
 
-4.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
-5.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
+::: lob
+1.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
+:::
+
+2.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
 
 ## Relationship Between RR and OR (1/2)
 
@@ -166,9 +223,13 @@ $$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.
 
     -   For the 1:2 case-control table: $\widehat{OR}=\frac{40\cdot160}{40\cdot60} = 2.667$
 
-# Learning Objective
+# Learning Objectives
 
-## Poll Everywhere Question 5
+1.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
+
+::: lob
+2.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
+:::
 
 ## Measuring Agreement
 
@@ -176,59 +237,212 @@ $$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.
 
 -   What if we are NOT looking at the association between two variables?
 
+ 
+
 -   What if we want to look at the agreement between two things?
 
     -   Answers of same subjects for same survey taken at different times
     -   Two different radiologists’ assessment of the same X-ray
 
+ 
+
 -   Cohen’s Kappa statistics: widely used as a measure of agreement
 
     -   Example: Reliability studies, interobserver agreement
 
-## Example: Beef Consumption in Survey
+## Poll Everywhere Question 2
 
-A diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?
+## Let's get our mood data down!
 
-![](./images/beef.png){fig-align="center"}
+::: columns
+::: {.column width="10%"}
+:::
+
+::: {.column width="80%"}
+![](./images/mood_ct.png){fig-align="center"}
+:::
+
+::: {.column width="10%"}
+:::
+:::
 
 ## Measuring Agreement
 
--   If perfect agreement among the two raters/surveys, we would expect nonzero entries only in the diagonal cells of the table
+-   If **perfect agreement** among the two raters/surveys:
+
+    -   We would expect nonzero entries only in the diagonal cells of the table
 
  
 
 -   $p_o$ is the observed proportion of complete agreement (concordance)
+
 -   $p_E$ is the expected proportion of complete agreement if the agreement is just due to chance
--   If the $p_o$ is much greater than $p_E$, then the agreement level is high. Otherwise, the agreement level is low
+
+-   If the $p_o$ is much greater than $p_E$, then the agreement level is high.
+
+    -   Otherwise, the agreement level is low
 
  
 
+::: columns
+::: {.column width="48%"}
 -   **Cohen's Kappa** is based on the difference between $p_o$ and $p_E$: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
+:::
 
-## Measuring Agreement
+::: {.column width="4%"}
+:::
 
-Cohen’s Kappa: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
+::: {.column width="48%"}
+-   $\hat{\kappa} = 0$: No agreement between surveys/raters other than what would be expected by chance
+-   $\hat{\kappa} = 1$: Complete agreement
+:::
+:::
 
--   $p_o=\ \frac{\sum_{i}\ n_{ii}}{n}$ (sum of diagonals divided by total)
--   $p_E=\sum_{i}{a_ib_i}$
+## Measuring Agreement: Cohen's Kappa
 
- 
+::: columns
+::: {.column width="52%"}
+-   Point estimate: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
 
--   What’s $\sum_{i}{a_ib_i}$?
+    -   With $p_o=\ \frac{\sum_{i}\ n_{ii}}{n}$ (sum of diagonals divided by total)
+    -   With $p_E=\sum_{i}{a_ib_i}$
+    -   With range of point estimate from $[-1, 1]$
+:::
 
-    -   For $i$ responses (row/columns), $a_i$ is proportion of $i$ response category in first survey and $b_i$ is proportion of $i$ response category in second survey (we'll show this in the example)
+::: {.column width="4%"}
+:::
 
-## Example: Beef Consumption in Survey
+::: {.column width="44%"}
+::: definition
+::: def-title
+What’s $\sum_{i}{a_ib_i}$?
+:::
+
+::: def-cont
+For $i$ responses (row/columns), $a_i$ is proportion of $i$ response category in first survey and $b_i$ is proportion of $i$ response category in second survey (we'll show this in the example)
+:::
+:::
+:::
+:::
+
+-   Approximate standard error:
+
+$$ SE_{\widehat{\kappa}} = \sqrt{\frac{1}{{n\left(1-p_e\right)}^2}\left\{p_e^2+p_e-\sum_{i}\left[a_ib_i\left(a_i+b_i\right)\right]\right\}}$$
+
+-   95% Wald confidence interval for $\widehat{\kappa}$:
+
+$$\widehat{\kappa} \pm 1.96 \cdot SE_{\widehat{\kappa}}$$
+
+## Example: Our moods (1/3)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Agreement of surveys
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+![](./images/mood_ct.png){fig-align="center"}
+:::
+:::
+
+**Needed steps:**
+
+1.  Compute the kappa statistic
+2.  Find confidence interval of kappa
+3.  Interpret the estimate
+
+## Example: Our moods (2/3)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Agreement of surveys
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+![](./images/mood_ct.png){fig-align="center"}
+:::
+:::
+
+**Needed steps:**
+
+1/2. Compute the kappa statistic and find confidence interval of kappa
+
+```{r}
+library(epiR)
+moods = matrix(c(13, 9, 6, 24), nrow = 2, byrow = T)
+epi.kappa(moods, method = "cohen")$kappa 
+```
+
+## Example: Our moods (3/3)
+
+::: columns
+::: {.column width="68%"}
+::: example
+::: ex-title
+Agreement of surveys
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.
+:::
+:::
+:::
+
+::: {.column width="32%"}
+![](./images/mood_ct.png){fig-align="center"}
+:::
+:::
+
+**Needed steps:**
+
+3.  Interpret the estimate
+
+The kappa statistic is \_\_\_\_ (95% CI: \_\_\_\_\_, \_\_\_\_\_), indicating \_\_\_\_\_\_ agreement.
+
+Since the 95% confidence interval does/does not contain 0, we have/do not have sufficient evidence that there is \_\_\_\_\_\_\_\_\_ agreement between our mood on Monday and our mood on Wednesday.
 
 ## Poll Everywhere Question 6
 
-## Measuring Agreement Between Two Raters
+## Measuring Agreement: Oberved Kappas
 
-## Testing Measuring Agreement
+-   Guidelines for evaluating Kappa (Rosner TB)
 
-## Example: Beef Consumption
+     
 
-# Learning Objective
+    -   **Excellent agreement** if $\hat\kappa \geq 0.75$
+
+     
+
+    -   **Fair to good agreement** if $0.4 < \hat\kappa < 0.75$
+
+     
+
+    -   **Poor agreement** if $\hat\kappa \leq 0.4$
+
+ 
+
+If $\hat\kappa<0$, suggest agreement less than by chance
+
+# Learning Objectives
+
+1.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
+2.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
 
 ## Measurement of Association So Far
 
@@ -236,6 +450,8 @@ Cohen’s Kappa: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
 
     -   Categorical outcome variable (Y)
     -   One categorical explanatory variable (X)
+
+-   We looked at risk difference, risk ratio, and odds ratio to measure association
 
 -   Such an association is called crude association
 
@@ -247,33 +463,99 @@ Cohen’s Kappa: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
     -   We can get into stratified contingency tables to bring in a 3rd variable
     -   But I don't think it's worth it because regression can bring in (adjust for) many variables
 
-## A taste of regression for a binary outcome (we will come back to this!!)
+# Extra example in case the mood example fails beautifully
 
-```{r}
-logreg = glm(case ~ glucimp, data = SHS, family = binomial)
-```
+## Just in case our data doesn't work out: Beef Consumption in Survey
+
+A diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?
+
+![](./images/beef.png){fig-align="center"}
+
+## Example: Beef Consumption in Survey (1/3)
 
 ::: columns
-::: {.column width="60%"}
-```{r}
-summary(logreg)
-```
+::: {.column width="62%"}
+::: example
+::: ex-title
+Agreement of surveys
 :::
 
-::: {.column width="40%"}
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?
+:::
+:::
+:::
+
+::: {.column width="38%"}
+![](./images/beef.png){fig-align="center"}
+:::
+:::
+
+**Needed steps:**
+
+1.  Compute the kappa statistic
+2.  Find confidence interval of kappa
+3.  Interpret the estimate
+
+## Example: Beef Consumption in Survey (2/3)
+
+::: columns
+::: {.column width="62%"}
+::: example
+::: ex-title
+Agreement of surveys
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?
+:::
+:::
+:::
+
+::: {.column width="38%"}
+![](./images/beef.png){fig-align="center"}
+:::
+:::
+
+**Needed steps:**
+
+1/2. Compute the kappa statistic and find confidence interval of kappa
+
 ```{r}
-library(epiDisplay)
-logistic.display(logreg)
+library(epiR)
+beef = matrix(c(136, 92, 69, 240), nrow = 2, byrow = T)
+epi.kappa(beef, method = "cohen")$kappa 
 ```
 
 ```{r}
-#| eval: false
 #| echo: false
-
-library(oddsratio)
-or_glm(data = SHS, model = logreg)
+kb = epi.kappa(beef, method = "cohen")$kappa 
 ```
+
+## Example: Beef Consumption in Survey (3/3)
+
+::: columns
+::: {.column width="62%"}
+::: example
+::: ex-title
+Agreement of surveys
+:::
+
+::: ex-cont
+Compute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?
+:::
 :::
 :::
 
-# Learning Objectives
+::: {.column width="38%"}
+![](./images/beef.png){fig-align="center"}
+:::
+:::
+
+**Needed steps:**
+
+3.  Interpret the estimate
+
+The kappa statistic is `r round(kb$est, 3)` (95% CI: `r round(kb$lower, 3)`, `r round(kb$upper, 3)`), indicating fair agreement.
+
+Since the 95% confidence interval does not contain 0, we have sufficient evidence that there is fair agreement between the surveys for beef consumption. The survey is not reliably reproducible since we did not achieve excellent agreement.

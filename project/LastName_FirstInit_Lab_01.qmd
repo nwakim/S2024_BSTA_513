@@ -1,0 +1,20 @@
+---
+title: "Lab 1"
+author: "Your name here!!!"
+subtitle: "BSTA 513/613"
+description: "Due: April 18, 2024 at 11pm"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    self-contained: true
+    embed-resources: true
+    number-sections: true
+    number-depth: 4
+editor_options: 
+  chunk_output_type: console
+execute:
+  freeze: auto  # re-render only when source changes
+---

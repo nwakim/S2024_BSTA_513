@@ -405,8 +405,16 @@ Nicky Wakim
 
   <p class="date">2024-04-10</p>
 </section>
-<section class="slide level2">
-
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
+</section>
+<section>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios</li>
+<li>Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa</li>
+</ol>
 <div class="cell">
 <style type="text/css">
 .reveal code {
@@ -414,681 +422,52 @@ Nicky Wakim
 }
 </style>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-
-<div id="agijdgpdhx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#agijdgpdhx table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#agijdgpdhx thead, #agijdgpdhx tbody, #agijdgpdhx tfoot, #agijdgpdhx tr, #agijdgpdhx td, #agijdgpdhx th {
-  border-style: none;
-}
-
-#agijdgpdhx p {
-  margin: 0;
-  padding: 0;
-}
-
-#agijdgpdhx .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 45px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 3px;
-  border-top-color: #D5D5D5;
-  border-right-style: solid;
-  border-right-width: 3px;
-  border-right-color: #D5D5D5;
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #D5D5D5;
-  border-left-style: solid;
-  border-left-width: 3px;
-  border-left-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#agijdgpdhx .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#agijdgpdhx .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#agijdgpdhx .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#agijdgpdhx .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D5D5D5;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#agijdgpdhx .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #004D80;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#agijdgpdhx .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #004D80;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#agijdgpdhx .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#agijdgpdhx .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#agijdgpdhx .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#agijdgpdhx .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#agijdgpdhx .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D5D5D5;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#agijdgpdhx .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D5D5D5;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-  vertical-align: middle;
-}
-
-#agijdgpdhx .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#agijdgpdhx .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#agijdgpdhx .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #89D3FE;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #89D3FE;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-right-color: #89D3FE;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#agijdgpdhx .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #5F5F5F;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#agijdgpdhx .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#agijdgpdhx .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#agijdgpdhx .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#agijdgpdhx .gt_summary_row {
-  color: #333333;
-  background-color: #89D3FE;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#agijdgpdhx .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#agijdgpdhx .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_grand_summary_row {
-  color: #FFFFFF;
-  background-color: #00A1FF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#agijdgpdhx .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_striped {
-  background-color: #F4F4F4;
-}
-
-#agijdgpdhx .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D5D5D5;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D5D5D5;
-}
-
-#agijdgpdhx .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#agijdgpdhx .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#agijdgpdhx .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#agijdgpdhx .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#agijdgpdhx .gt_left {
-  text-align: left;
-}
-
-#agijdgpdhx .gt_center {
-  text-align: center;
-}
-
-#agijdgpdhx .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#agijdgpdhx .gt_font_normal {
-  font-weight: normal;
-}
-
-#agijdgpdhx .gt_font_bold {
-  font-weight: bold;
-}
-
-#agijdgpdhx .gt_font_italic {
-  font-style: italic;
-}
-
-#agijdgpdhx .gt_super {
-  font-size: 65%;
-}
-
-#agijdgpdhx .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#agijdgpdhx .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#agijdgpdhx .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#agijdgpdhx .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#agijdgpdhx .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#agijdgpdhx .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#agijdgpdhx .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings gt_spanner_row">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="Glucose tolerance">Glucose tolerance</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Diabetes">
-        <span class="gt_column_spanner">Diabetes</span>
-      </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="Total">Total</th>
-    </tr>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="No">No</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Impaired</th>
-<td headers="stub_1_1 0" class="gt_row gt_right">334</td>
-<td headers="stub_1_1 1" class="gt_row gt_right">198</td>
-<td headers="stub_1_1 Total" class="gt_row gt_right">532</td></tr>
-    <tr><th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">Normal</th>
-<td headers="stub_1_2 0" class="gt_row gt_right gt_striped">1004</td>
-<td headers="stub_1_2 1" class="gt_row gt_right gt_striped">128</td>
-<td headers="stub_1_2 Total" class="gt_row gt_right gt_striped">1132</td></tr>
-    <tr><th id="stub_1_3" scope="row" class="gt_row gt_left gt_stub">Total</th>
-<td headers="stub_1_3 0" class="gt_row gt_right">1338</td>
-<td headers="stub_1_3 1" class="gt_row gt_right">326</td>
-<td headers="stub_1_3 Total" class="gt_row gt_right">1664</td></tr>
-  </tbody>
-  
-  
+</section>
+<section id="last-class" class="slide level2">
+<h2>Last class</h2>
+<ul>
+<li><p>Used contingency tables to test and measure association between two variables</p>
+<ul>
+<li>Categorical outcome variable (Y)</li>
+<li>One categorical explanatory variable (X)</li>
+</ul></li>
+<li><p>We looked at risk difference, risk ratio, and odds ratio to measure association</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th>Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Risk difference</td>
+<td><span class="math display">\[\widehat{RD} = \widehat{p}_1 - \widehat{p}_1 = \dfrac{n_{11}}{n_1} - \dfrac{n_{21}}{n_2}\]</span></td>
+</tr>
+<tr class="even">
+<td>Relative risk / risk ratio</td>
+<td><span class="math display">\[\widehat{RR}=\dfrac{\hat{p}_1}{\hat{p}_2} = \dfrac{n_{11}/n_1}{n_{21}/n_2}\]</span></td>
+</tr>
+<tr class="odd">
+<td>Odds ratio</td>
+<td><span class="math display">\[\widehat{OR}=\frac{odds_1}{odds_2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}\]</span></td>
+</tr>
+</tbody>
 </table>
+<ul>
+<li>Discussed how OR will be an important measurement in logistic regression</li>
+</ul>
+</section>
+<section id="a-taste-of-regression-for-a-binary-outcome-we-will-come-back-to-this" class="slide level2">
+<h2>A taste of regression for a binary outcome (we will come back to this!!)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>logreg <span class="ot">=</span> <span class="fu">glm</span>(case <span class="sc">~</span> glucimp, <span class="at">data =</span> SHS, <span class="at">family =</span> binomial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-<pre><code>
-# Learning Objectives
-
-4.  Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios
-5.  Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
-
-## Relationship Between RR and OR (1/2)
-
--   Notice that odds ratio is not equivalent to relative risk (or risk ratio)
-
--   However, when the probability of "success" is small (e.g., rare disease), $\widehat{OR}$ is a nice approximation of $\widehat{RR}$ $$\widehat{OR}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}=\widehat{RR}\cdot \frac{1-\widehat{p_2}}{1-\widehat{p_1}}$$
-
-    -   The fraction in the last term of the above expression approximately equals to 1.0 if $\widehat{p}_1$ and $\widehat{p}_2$ BOTH quite small (\&lt; 0.1)
-
--   The $\widehat{OR}$ and $\widehat{RR}$ are not very close to each other in SHS: diabetes not a rare disease
-
-    -   $\widehat{OR} = 4.65$
-    -   $\widehat{RR} = 3.29$
-
-## Relationship Between RR and OR (2/2)
-
--   An example where a disease rare over the whole sample (\~1%), but ...
-
-    -   $\widehat{OR}$ is not a good estimate of $\widehat{RR}$ in “rare” disease
-
-![](./images/rare_dis.png){fig-align="center"}
-
--   $\widehat{p}_1$ is 0.5: thus $\widehat{OR}$ and $\widehat{RR}$ are very different
-
-$$\widehat{RR}=\frac{0.5}{0.00102}=490 \text{ and } \widehat{OR} = \frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981$$
-
-## Notes for Odds Ratios
-
--   The OR is valid for
-
-    -   Case-control studies (where the RR is not appropriate)
-    -   Prospective cohort studies
-    -   Cross-sectional studies
-
--   It can be interpreted either as…
-
-    -   Odds of event for exposed vs. unexposed individuals, or
-    -   Odds of exposure for individuals with vs. without the event of interest
-
--   Pay attention to the numerator and denominator for the OR
-
-## Which measurement should one use?
-
-+-----------------+---------------------------------------------------------------------------------+
-| Measurement     | Pros and Cons                                                                   |
-+=================+=================================================================================+
-| Risk difference | -   Can provide additional information, but can be misleading on its own        |
-|                 |                                                                                 |
-|                 | -   Not the preferred measurement                                               |
-+-----------------+---------------------------------------------------------------------------------+
-| Risk ratio      | -   Easy to interpret because is a ratio of probabilities                       |
-|                 |                                                                                 |
-|                 | -   Cannot use in retrospective, case-control studies                           |
-+-----------------+---------------------------------------------------------------------------------+
-| Odds ratio      | -   Adequate for all studies                                                    |
-|                 |                                                                                 |
-|                 | -   Good estimate of RR for rare diseases                                       |
-|                 |                                                                                 |
-|                 | -   Most preferred by statisticians because integrated into logistic regression |
-+-----------------+---------------------------------------------------------------------------------+
-
-## RR in retrospective case-control study
-
--   In retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)
-
-    -   Case-control study to require much smaller sample size than do equivalent cohort studies
-
--   However, the proportion of cases in the sample does not represent the proportion of cases in the population
-
-    -   RR compares probability of the outcome (case) for exposed and unexposed groups
-    -   Number of outcomes has been artificially inflated for retrospective study
-
-## RR in retrospective case-control study
-
--   Assume a 1:2 case-control study summarized in below table:
-
-![](./images/retro_RR_tab1.png){fig-align="center"}
-
--   Assume we compute the RR as if it is from a cohort study:
-
-$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\frac{40/80}{60/220}=1.8333$$
-
-## RR in retrospective case-control study
-
--   In real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the **proportion in the population in a cohort study**
-
-![](./images/retro_RR_tab2.png){fig-align="center"}
-
--   The estimated RR for the patient population is:
-
-$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.5152$$
-
-## OR in retrospective case-control study
-
--   While we cannot estimate RR from a case-control study, we can still estimate OR for case-control study
-
-    -   OR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table
-
-        -   AKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased
-
--   For case-control study where the probability of having outcome is small, the $\widehat{OR}$ is a nice approximation to $\widehat{RR}$
-
-    -   For the 1:2 case-control table: $\widehat{OR}=\frac{40\cdot160}{40\cdot60} = 2.667$
-
-# Learning Objective
-
-## Poll Everywhere Question 5
-
-## Measuring Agreement
-
--   Still within the realm of contingency tables
-
--   What if we are NOT looking at the association between two variables?
-
--   What if we want to look at the agreement between two things?
-
-    -   Answers of same subjects for same survey taken at different times
-    -   Two different radiologists’ assessment of the same X-ray
-
--   Cohen’s Kappa statistics: widely used as a measure of agreement
-
-    -   Example: Reliability studies, interobserver agreement
-
-## Example: Beef Consumption in Survey
-
-A diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?
-
-![](./images/beef.png){fig-align="center"}
-
-## Measuring Agreement
-
--   If perfect agreement among the two raters/surveys, we would expect nonzero entries only in the diagonal cells of the table
-
-&nbsp;
-
--   $p_o$ is the observed proportion of complete agreement (concordance)
--   $p_E$ is the expected proportion of complete agreement if the agreement is just due to chance
--   If the $p_o$ is much greater than $p_E$, then the agreement level is high. Otherwise, the agreement level is low
-
-&nbsp;
-
--   **Cohen's Kappa** is based on the difference between $p_o$ and $p_E$: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
-
-## Measuring Agreement
-
-Cohen’s Kappa: $$\hat{\kappa}=\frac{p_o-p_E}{1-p_E}$$
-
--   $p_o=\ \frac{\sum_{i}\ n_{ii}}{n}$ (sum of diagonals divided by total)
--   $p_E=\sum_{i}{a_ib_i}$
-
-&nbsp;
-
--   What’s $\sum_{i}{a_ib_i}$?
-
-    -   For $i$ responses (row/columns), $a_i$ is proportion of $i$ response category in first survey and $b_i$ is proportion of $i$ response category in second survey (we'll show this in the example)
-
-## Example: Beef Consumption in Survey
-
-## Poll Everywhere Question 6
-
-## Measuring Agreement Between Two Raters
-
-## Testing Measuring Agreement
-
-## Example: Beef Consumption
-
-# Learning Objective
-
-## Measurement of Association So Far
-
--   Used contingency tables to test and measure association between two variables
-
-    -   Categorical outcome variable (Y)
-    -   One categorical explanatory variable (X)
-
--   Such an association is called crude association
-
-    -   No adjustment for possible confounding factors
-    -   Also called marginal association
-
--   But we cannot expand analysis based on contingency tables past 3 variables
-
-    -   We can get into stratified contingency tables to bring in a 3rd variable
-    -   But I don't think it's worth it because regression can bring in (adjust for) many variables
-
-## A taste of regression for a binary outcome (we will come back to this!!)
-
-::: {.cell}
-
-```{.r .cell-code}
-logreg = glm(case ~ glucimp, data = SHS, family = binomial)</code></pre>
-<p>:::</p>
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell">
@@ -1132,14 +511,514 @@ AIC value = 1505.3066</code></pre>
 </div>
 </div>
 </div>
-</section>
-<section id="learning-objectives" class="title-slide slide level1 center">
+</section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa</li>
+</ol>
+</section>
+<section id="relationship-between-rr-and-or-12" class="slide level2">
+<h2>Relationship Between RR and OR (1/2)</h2>
+<ul>
+<li><p>Notice that odds ratio is not equivalent to relative risk (or risk ratio)</p></li>
+<li><p>However, when the probability of “success” is small (e.g., rare disease), <span class="math inline">\(\widehat{OR}\)</span> is a nice approximation of <span class="math inline">\(\widehat{RR}\)</span> <span class="math display">\[\widehat{OR}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}=\widehat{RR}\cdot \frac{1-\widehat{p_2}}{1-\widehat{p_1}}\]</span></p>
+<ul>
+<li>The fraction in the last term of the above expression approximately equals to 1.0 if <span class="math inline">\(\widehat{p}_1\)</span> and <span class="math inline">\(\widehat{p}_2\)</span> BOTH quite small (&lt; 0.1)</li>
+</ul></li>
+<li><p>The <span class="math inline">\(\widehat{OR}\)</span> and <span class="math inline">\(\widehat{RR}\)</span> are not very close to each other in SHS: diabetes not a rare disease</p>
+<ul>
+<li><span class="math inline">\(\widehat{OR} = 4.65\)</span></li>
+<li><span class="math inline">\(\widehat{RR} = 3.29\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="relationship-between-rr-and-or-22" class="slide level2">
+<h2>Relationship Between RR and OR (2/2)</h2>
+<ul>
+<li><p>An example where a disease rare over the whole sample (~1%), but …</p>
+<ul>
+<li><span class="math inline">\(\widehat{OR}\)</span> is not a good estimate of <span class="math inline">\(\widehat{RR}\)</span> in “rare” disease</li>
+</ul></li>
+</ul>
+
+<img data-src="./images/rare_dis.png" class="r-stretch quarto-figure-center"><ul>
+<li><span class="math inline">\(\widehat{p}_1\)</span> is 0.5: thus <span class="math inline">\(\widehat{OR}\)</span> and <span class="math inline">\(\widehat{RR}\)</span> are very different</li>
+</ul>
+<p><span class="math display">\[\widehat{RR}=\frac{0.5}{0.00102}=490 \text{ and } \widehat{OR} = \frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981\]</span></p>
+</section>
+<section id="notes-for-odds-ratios" class="slide level2">
+<h2>Notes for Odds Ratios</h2>
+<ul>
+<li><p>The OR is valid for</p>
+<ul>
+<li>Case-control studies (where the RR is not appropriate)</li>
+<li>Prospective cohort studies</li>
+<li>Cross-sectional studies</li>
+</ul></li>
+<li><p>It can be interpreted either as…</p>
+<ul>
+<li>Odds of event for exposed vs.&nbsp;unexposed individuals, or</li>
+<li>Odds of exposure for individuals with vs.&nbsp;without the event of interest</li>
+</ul></li>
+<li><p>Pay attention to the numerator and denominator for the OR</p></li>
+</ul>
+</section>
+<section id="which-measurement-should-one-use" class="slide level2">
+<h2>Which measurement should one use?</h2>
+<table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Measurement</th>
+<th>Pros and Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Risk difference</td>
+<td><ul>
+<li><p>Can provide additional information, but can be misleading on its own</p></li>
+<li><p>Not the preferred measurement</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>Risk ratio</td>
+<td><ul>
+<li><p>Easy to interpret because is a ratio of probabilities</p></li>
+<li><p>Cannot use in retrospective, case-control studies</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>Odds ratio</td>
+<td><ul>
+<li><p>Adequate for all studies</p></li>
+<li><p>Good estimate of RR for rare diseases</p></li>
+<li><p>Most preferred by statisticians because integrated into logistic regression</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rr-in-retrospective-case-control-study" class="slide level2">
+<h2>RR in retrospective case-control study</h2>
+<ul>
+<li><p>In retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)</p>
+<ul>
+<li>Case-control study to require much smaller sample size than do equivalent cohort studies</li>
+</ul></li>
+<li><p>However, the proportion of cases in the sample does not represent the proportion of cases in the population</p>
+<ul>
+<li>RR compares probability of the outcome (case) for exposed and unexposed groups</li>
+<li>Number of outcomes has been artificially inflated for retrospective study</li>
+</ul></li>
+</ul>
+</section>
+<section id="rr-in-retrospective-case-control-study-1" class="slide level2">
+<h2>RR in retrospective case-control study</h2>
+<ul>
+<li>Assume a 1:2 case-control study summarized in below table:</li>
+</ul>
+
+<img data-src="./images/retro_RR_tab1.png" class="r-stretch quarto-figure-center"><ul>
+<li>Assume we compute the RR as if it is from a cohort study:</li>
+</ul>
+<p><span class="math display">\[\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\frac{40/80}{60/220}=1.8333\]</span></p>
+</section>
+<section id="rr-in-retrospective-case-control-study-2" class="slide level2">
+<h2>RR in retrospective case-control study</h2>
+<ul>
+<li>In real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the <strong>proportion in the population in a cohort study</strong></li>
+</ul>
+
+<img data-src="./images/retro_RR_tab2.png" class="r-stretch quarto-figure-center"><ul>
+<li>The estimated RR for the patient population is:</li>
+</ul>
+<p><span class="math display">\[\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.5152\]</span></p>
+</section>
+<section id="or-in-retrospective-case-control-study" class="slide level2">
+<h2>OR in retrospective case-control study</h2>
+<ul>
+<li><p>While we cannot estimate RR from a case-control study, we can still estimate OR for case-control study</p>
+<ul>
+<li><p>OR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table</p>
+<ul>
+<li>AKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased</li>
+</ul></li>
+</ul></li>
+<li><p>For case-control study where the probability of having outcome is small, the <span class="math inline">\(\widehat{OR}\)</span> is a nice approximation to <span class="math inline">\(\widehat{RR}\)</span></p>
+<ul>
+<li>For the 1:2 case-control table: <span class="math inline">\(\widehat{OR}=\frac{40\cdot160}{40\cdot60} = 2.667\)</span></li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa</li>
+</ol>
+</div>
+</section>
+<section id="measuring-agreement" class="slide level2">
+<h2>Measuring Agreement</h2>
+<ul>
+<li><p>Still within the realm of contingency tables</p></li>
+<li><p>What if we are NOT looking at the association between two variables?</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>What if we want to look at the agreement between two things?</p>
+<ul>
+<li>Answers of same subjects for same survey taken at different times</li>
+<li>Two different radiologists’ assessment of the same X-ray</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>Cohen’s Kappa statistics: widely used as a measure of agreement</p>
+<ul>
+<li>Example: Reliability studies, interobserver agreement</li>
+</ul></li>
+</ul>
+</section>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
+</section>
+<section id="lets-get-our-mood-data-down" class="slide level2">
+<h2>Let’s get our mood data down!</h2>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:80%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/mood_ct.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div>
+</div>
+</section>
+<section id="measuring-agreement-1" class="slide level2">
+<h2>Measuring Agreement</h2>
+<ul>
+<li><p>If <strong>perfect agreement</strong> among the two raters/surveys:</p>
+<ul>
+<li>We would expect nonzero entries only in the diagonal cells of the table</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p><span class="math inline">\(p_o\)</span> is the observed proportion of complete agreement (concordance)</p></li>
+<li><p><span class="math inline">\(p_E\)</span> is the expected proportion of complete agreement if the agreement is just due to chance</p></li>
+<li><p>If the <span class="math inline">\(p_o\)</span> is much greater than <span class="math inline">\(p_E\)</span>, then the agreement level is high.</p>
+<ul>
+<li>Otherwise, the agreement level is low</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<ul>
+<li><strong>Cohen’s Kappa</strong> is based on the difference between <span class="math inline">\(p_o\)</span> and <span class="math inline">\(p_E\)</span>: <span class="math display">\[\hat{\kappa}=\frac{p_o-p_E}{1-p_E}\]</span></li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<ul>
+<li><span class="math inline">\(\hat{\kappa} = 0\)</span>: No agreement between surveys/raters other than what would be expected by chance</li>
+<li><span class="math inline">\(\hat{\kappa} = 1\)</span>: Complete agreement</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="measuring-agreement-cohens-kappa" class="slide level2">
+<h2>Measuring Agreement: Cohen’s Kappa</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<ul>
+<li><p>Point estimate: <span class="math display">\[\hat{\kappa}=\frac{p_o-p_E}{1-p_E}\]</span></p>
+<ul>
+<li>With <span class="math inline">\(p_o=\ \frac{\sum_{i}\ n_{ii}}{n}\)</span> (sum of diagonals divided by total)</li>
+<li>With <span class="math inline">\(p_E=\sum_{i}{a_ib_i}\)</span></li>
+<li>With range of point estimate from <span class="math inline">\([-1, 1]\)</span></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:44%;">
+<div class="definition">
+<div class="def-title">
+<p>What’s <span class="math inline">\(\sum_{i}{a_ib_i}\)</span>?</p>
+</div>
+<div class="def-cont">
+<p>For <span class="math inline">\(i\)</span> responses (row/columns), <span class="math inline">\(a_i\)</span> is proportion of <span class="math inline">\(i\)</span> response category in first survey and <span class="math inline">\(b_i\)</span> is proportion of <span class="math inline">\(i\)</span> response category in second survey (we’ll show this in the example)</p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Approximate standard error:</li>
+</ul>
+<p><span class="math display">\[ SE_{\widehat{\kappa}} = \sqrt{\frac{1}{{n\left(1-p_e\right)}^2}\left\{p_e^2+p_e-\sum_{i}\left[a_ib_i\left(a_i+b_i\right)\right]\right\}}\]</span></p>
+<ul>
+<li>95% Wald confidence interval for <span class="math inline">\(\widehat{\kappa}\)</span>:</li>
+</ul>
+<p><span class="math display">\[\widehat{\kappa} \pm 1.96 \cdot SE_{\widehat{\kappa}}\]</span></p>
+</section>
+<section id="example-our-moods-13" class="slide level2">
+<h2>Example: Our moods (1/3)</h2>
+<div class="columns">
+<div class="column" style="width:68%;">
+<div class="example">
+<div class="ex-title">
+<p>Agreement of surveys</p>
+</div>
+<div class="ex-cont">
+<p>Compute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/mood_ct.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Needed steps:</strong></p>
+<ol type="1">
+<li>Compute the kappa statistic</li>
+<li>Find confidence interval of kappa</li>
+<li>Interpret the estimate</li>
+</ol>
+</section>
+<section id="example-our-moods-23" class="slide level2">
+<h2>Example: Our moods (2/3)</h2>
+<div class="columns">
+<div class="column" style="width:68%;">
+<div class="example">
+<div class="ex-title">
+<p>Agreement of surveys</p>
+</div>
+<div class="ex-cont">
+<p>Compute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/mood_ct.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Needed steps:</strong></p>
+<p>1/2. Compute the kappa statistic and find confidence interval of kappa</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(epiR)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>moods <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">13</span>, <span class="dv">9</span>, <span class="dv">6</span>, <span class="dv">24</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">epi.kappa</span>(moods, <span class="at">method =</span> <span class="st">"cohen"</span>)<span class="sc">$</span>kappa </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        est       se     lower     upper
+1 0.3981481 0.131082 0.1412321 0.6550642</code></pre>
+</div>
+</div>
+</section>
+<section id="example-our-moods-33" class="slide level2">
+<h2>Example: Our moods (3/3)</h2>
+<div class="columns">
+<div class="column" style="width:68%;">
+<div class="example">
+<div class="ex-title">
+<p>Agreement of surveys</p>
+</div>
+<div class="ex-cont">
+<p>Compute the point estimate and 95% confidence interval for the agreement between our Monday and Wednesday moods.</p>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/mood_ct.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Needed steps:</strong></p>
+<ol start="3" type="1">
+<li>Interpret the estimate</li>
+</ol>
+<p>The kappa statistic is ____ (95% CI: _____, _____), indicating ______ agreement.</p>
+<p>Since the 95% confidence interval does/does not contain 0, we have/do not have sufficient evidence that there is _________ agreement between our mood on Monday and our mood on Wednesday.</p>
+</section>
+<section id="poll-everywhere-question-6" class="slide level2">
+<h2>Poll Everywhere Question 6</h2>
+</section>
+<section id="measuring-agreement-oberved-kappas" class="slide level2">
+<h2>Measuring Agreement: Oberved Kappas</h2>
+<ul>
+<li><p>Guidelines for evaluating Kappa (Rosner TB)</p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Excellent agreement</strong> if <span class="math inline">\(\hat\kappa \geq 0.75\)</span></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Fair to good agreement</strong> if <span class="math inline">\(0.4 &lt; \hat\kappa &lt; 0.75\)</span></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Poor agreement</strong> if <span class="math inline">\(\hat\kappa \leq 0.4\)</span></li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<p>If <span class="math inline">\(\hat\kappa&lt;0\)</span>, suggest agreement less than by chance</p>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Identify cases when it is appropriate to use risk difference, relative risk, or odds ratios</li>
+<li>Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa</li>
+</ol>
+</section>
+<section id="measurement-of-association-so-far" class="slide level2">
+<h2>Measurement of Association So Far</h2>
+<ul>
+<li><p>Used contingency tables to test and measure association between two variables</p>
+<ul>
+<li>Categorical outcome variable (Y)</li>
+<li>One categorical explanatory variable (X)</li>
+</ul></li>
+<li><p>We looked at risk difference, risk ratio, and odds ratio to measure association</p></li>
+<li><p>Such an association is called crude association</p>
+<ul>
+<li>No adjustment for possible confounding factors</li>
+<li>Also called marginal association</li>
+</ul></li>
+<li><p>But we cannot expand analysis based on contingency tables past 3 variables</p>
+<ul>
+<li>We can get into stratified contingency tables to bring in a 3rd variable</li>
+<li>But I don’t think it’s worth it because regression can bring in (adjust for) many variables</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="extra-example-in-case-the-mood-example-fails-beautifully" class="title-slide slide level1 center">
+<h1>Extra example in case the mood example fails beautifully</h1>
+
+</section>
+<section id="just-in-case-our-data-doesnt-work-out-beef-consumption-in-survey" class="slide level2">
+<h2>Just in case our data doesn’t work out: Beef Consumption in Survey</h2>
+<p>A diet questionnaire was mailed to 537 female American nurses on two separate occasions several months apart. The questions asked included the quantities eaten of more than 100 separate food items. The data from the two surveys for the amount of beef consumption are presented in the below table. How can reproducibility of response for the beef-consumption data be quantified?</p>
+
+<img data-src="./images/beef.png" class="r-stretch quarto-figure-center"></section>
+<section id="example-beef-consumption-in-survey-13" class="slide level2">
+<h2>Example: Beef Consumption in Survey (1/3)</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<div class="example">
+<div class="ex-title">
+<p>Agreement of surveys</p>
+</div>
+<div class="ex-cont">
+<p>Compute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?</p>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/beef.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Needed steps:</strong></p>
+<ol type="1">
+<li>Compute the kappa statistic</li>
+<li>Find confidence interval of kappa</li>
+<li>Interpret the estimate</li>
+</ol>
+</section>
+<section id="example-beef-consumption-in-survey-23" class="slide level2">
+<h2>Example: Beef Consumption in Survey (2/3)</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<div class="example">
+<div class="ex-title">
+<p>Agreement of surveys</p>
+</div>
+<div class="ex-cont">
+<p>Compute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?</p>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/beef.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Needed steps:</strong></p>
+<p>1/2. Compute the kappa statistic and find confidence interval of kappa</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(epiR)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>beef <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">136</span>, <span class="dv">92</span>, <span class="dv">69</span>, <span class="dv">240</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">epi.kappa</span>(beef, <span class="at">method =</span> <span class="st">"cohen"</span>)<span class="sc">$</span>kappa </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        est         se     lower     upper
+1 0.3781906 0.04100635 0.2978196 0.4585616</code></pre>
+</div>
+</div>
+</section>
+<section id="example-beef-consumption-in-survey-33" class="slide level2">
+<h2>Example: Beef Consumption in Survey (3/3)</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<div class="example">
+<div class="ex-title">
+<p>Agreement of surveys</p>
+</div>
+<div class="ex-cont">
+<p>Compute the point estimate and 95% confidence interval for the agreement between beef consumption surveys. Similar to question: Are results reproducible for the beef-consumption in the survey?</p>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/beef.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Needed steps:</strong></p>
+<ol start="3" type="1">
+<li>Interpret the estimate</li>
+</ol>
+<p>The kappa statistic is 0.378 (95% CI: 0.298, 0.459), indicating fair agreement.</p>
+<p>Since the 95% confidence interval does not contain 0, we have sufficient evidence that there is fair agreement between the surveys for beef consumption. The survey is not reliably reproducible since we did not achieve excellent agreement.</p>
 
 <div class="footer footer-default">
 <p>Lesson 4: Measurements of Association and Agreement</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

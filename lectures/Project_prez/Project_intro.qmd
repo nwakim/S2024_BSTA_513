@@ -1,0 +1,27 @@
+---
+title: "Project Introduction"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/10/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Project Introduction"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+## Original motivation
+
+-   [Mixed-Status Immigrant Families Disproportionately Experienced Material Hardships in 2021](https://www.urban.org/research/publication/mixed-status-immigrant-families-disproportionately-experienced-material#:~:text=Adults%20in%20mixed%2Dstatus%20families%20were%20more%20likely%20than%20adults,for%20adults%20in%20other%20families.)
+
+

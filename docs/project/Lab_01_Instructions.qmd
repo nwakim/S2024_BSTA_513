@@ -1,5 +1,5 @@
 ---
-title: "Lab 1 Instructions"
+title: "Lab 1"
 author: "Nicky Wakim"
 subtitle: "BSTA 513/613"
 description: "Due: April 18, 2024 at 11pm"
