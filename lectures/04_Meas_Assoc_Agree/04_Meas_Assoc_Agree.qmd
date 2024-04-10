@@ -71,15 +71,11 @@ SHS_ct_disp = SHS %>% tabyl(glucimp, case) %>%
 
 -   We looked at risk difference, risk ratio, and odds ratio to measure association
 
-+---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| Measure                                           | Estimate                                                                                               |
-+===================================================+========================================================================================================+
-| Risk difference                                   | $$\widehat{RD} = \widehat{p}_1 - \widehat{p}_1 = \dfrac{n_{11}}{n_1} - \dfrac{n_{21}}{n_2}$$           |
-+---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| Relative risk / risk ratio                        | $$\widehat{RR}=\dfrac{\hat{p}_1}{\hat{p}_2} = \dfrac{n_{11}/n_1}{n_{21}/n_2}$$                         |
-+---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| Odds ratio                                        | $$\widehat{OR}=\frac{odds_1}{odds_2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}$$ |
-+---------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| Measure                    | Estimate                                                                                               |
+|------------------------|-----------------------------------------------|
+| Risk difference            | $$\widehat{RD} = \widehat{p}_1 - \widehat{p}_1 = \dfrac{n_{11}}{n_1} - \dfrac{n_{21}}{n_2}$$           |
+| Relative risk / risk ratio | $$\widehat{RR}=\dfrac{\hat{p}_1}{\hat{p}_2} = \dfrac{n_{11}/n_1}{n_{21}/n_2}$$                         |
+| Odds ratio                 | $$\widehat{OR}=\frac{odds_1}{odds_2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}$$ |
 
 -   Discussed how OR will be an important measurement in logistic regression
 
@@ -122,11 +118,15 @@ or_glm(data = SHS, model = logreg)
 
 ## Relationship Between RR and OR (1/2)
 
--   Notice that odds ratio is not equivalent to relative risk (or risk ratio)
+-   Notice that odds ratio is **not equivalent** to relative risk (or risk ratio)
 
--   However, when the probability of "success" is small (e.g., rare disease), $\widehat{OR}$ is a nice approximation of $\widehat{RR}$ $$\widehat{OR}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}=\widehat{RR}\cdot \frac{1-\widehat{p_2}}{1-\widehat{p_1}}$$
+ 
+
+-   However, when the **probability of "success" is small** (e.g., rare disease), $\widehat{OR}$ is a nice approximation of $\widehat{RR}$ $$\widehat{OR}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}=\widehat{RR}\cdot \frac{1-\widehat{p_2}}{1-\widehat{p_1}}$$
 
     -   The fraction in the last term of the above expression approximately equals to 1.0 if $\widehat{p}_1$ and $\widehat{p}_2$ BOTH quite small (\< 0.1)
+
+ 
 
 -   The $\widehat{OR}$ and $\widehat{RR}$ are not very close to each other in SHS: diabetes not a rare disease
 
@@ -145,6 +145,73 @@ or_glm(data = SHS, model = logreg)
 
 $$\widehat{RR}=\frac{0.5}{0.00102}=490 \text{ and } \widehat{OR} = \frac{0.5(1-0.5)}{0.00102(1-0.00102)}=981$$
 
+## Poll Everywhere Question 2
+
+## RR in retrospective case-control study (1/3)
+
+-   In retrospective case-control studies: we **identify cases** (patients with the outcome), then select a number of controls (patients without the outcome)
+
+    -   Case-control study to require **much smaller sample size** than equivalent cohort studies
+
+    -   So we pick out the cases and controls first, **then see if there is exposure**
+
+ 
+
+-   However, the [proportion of cases in the sample]{style="color:#70AD47; font-weight: bold;"} **does not** represent the [proportion of cases in the population]{style="color:#4472C4; font-weight: bold;"}
+
+    -   RR compares probability of the outcome (case) for exposed and unexposed groups
+    -   Number of outcomes has been artificially inflated for case-control study
+
+## RR in retrospective case-control study (2/3)
+
+-   Assume a 1:2 case-control study summarized in below table:
+
+
+::: columns
+
+::: {.column width="15%"}
+
+:::
+
+::: {.column width="70%"}
+
+![](./images/retro_RR_tab1.png){fig-align="center"}
+:::
+
+::: {.column width="15%"}
+
+:::
+
+:::
+
+-   Assume we compute the RR as if it is from a cohort study:
+
+$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\frac{40/80}{60/220}=1.8333$$
+
+## RR in retrospective case-control study (3/3)
+
+-   In real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the **proportion in the population in a cohort study**
+
+::: columns
+
+::: {.column width="15%"}
+
+:::
+
+::: {.column width="70%"}
+
+![](./images/retro_RR_tab2.png){fig-align="center"}
+:::
+
+::: {.column width="15%"}
+
+:::
+:::
+
+-   The estimated RR for the patient population is:
+
+$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.5152$$
+
 ## Notes for Odds Ratios
 
 -   The OR is valid for
@@ -153,63 +220,16 @@ $$\widehat{RR}=\frac{0.5}{0.00102}=490 \text{ and } \widehat{OR} = \frac{0.5(1-0
     -   Prospective cohort studies
     -   Cross-sectional studies
 
--   It can be interpreted either as…
+ 
 
-    -   Odds of event for exposed vs. unexposed individuals, or
-    -   Odds of exposure for individuals with vs. without the event of interest
+-   It can be interpreted either as...
+
+    -   Odds of **event** for exposed vs. unexposed individuals, or
+    -   Odds of **exposure** for individuals with vs. without the event of interest
+
+ 
 
 -   Pay attention to the numerator and denominator for the OR
-
-## Which measurement should one use?
-
-+-----------------+---------------------------------------------------------------------------------+
-| Measurement     | Pros and Cons                                                                   |
-+=================+=================================================================================+
-| Risk difference | -   Can provide additional information, but can be misleading on its own        |
-|                 |                                                                                 |
-|                 | -   Not the preferred measurement                                               |
-+-----------------+---------------------------------------------------------------------------------+
-| Risk ratio      | -   Easy to interpret because is a ratio of probabilities                       |
-|                 |                                                                                 |
-|                 | -   Cannot use in retrospective, case-control studies                           |
-+-----------------+---------------------------------------------------------------------------------+
-| Odds ratio      | -   Adequate for all studies                                                    |
-|                 |                                                                                 |
-|                 | -   Good estimate of RR for rare diseases                                       |
-|                 |                                                                                 |
-|                 | -   Most preferred by statisticians because integrated into logistic regression |
-+-----------------+---------------------------------------------------------------------------------+
-
-## RR in retrospective case-control study
-
--   In retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)
-
-    -   Case-control study to require much smaller sample size than do equivalent cohort studies
-
--   However, the proportion of cases in the sample does not represent the proportion of cases in the population
-
-    -   RR compares probability of the outcome (case) for exposed and unexposed groups
-    -   Number of outcomes has been artificially inflated for retrospective study
-
-## RR in retrospective case-control study
-
--   Assume a 1:2 case-control study summarized in below table:
-
-![](./images/retro_RR_tab1.png){fig-align="center"}
-
--   Assume we compute the RR as if it is from a cohort study:
-
-$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\frac{40/80}{60/220}=1.8333$$
-
-## RR in retrospective case-control study
-
--   In real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the **proportion in the population in a cohort study**
-
-![](./images/retro_RR_tab2.png){fig-align="center"}
-
--   The estimated RR for the patient population is:
-
-$$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.5152$$
 
 ## OR in retrospective case-control study
 
@@ -219,9 +239,25 @@ $$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.
 
         -   AKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased
 
+ 
+
+::: columns
+::: column
 -   For case-control study where the probability of having outcome is small, the $\widehat{OR}$ is a nice approximation to $\widehat{RR}$
 
     -   For the 1:2 case-control table: $\widehat{OR}=\frac{40\cdot160}{40\cdot60} = 2.667$
+
+    -   Population cohort study: $\widehat{RR}=2.5152$
+:::
+
+::: column
+![](./images/retro_RR_tab1.png){fig-align="center"}
+:::
+:::
+
+## Which measurement should one use?
+
+![](./images/meas_t.png){fig-align="center"}
 
 # Learning Objectives
 
@@ -250,7 +286,7 @@ $$\widehat{RR}=\frac{\widehat{p_1}}{\widehat{p_2}}=\frac{400/4400}{600/16600}=2.
 
     -   Example: Reliability studies, interobserver agreement
 
-## Poll Everywhere Question 2
+## Poll Everywhere Question 3
 
 ## Let's get our mood data down!
 
@@ -416,8 +452,6 @@ Compute the point estimate and 95% confidence interval for the agreement between
 The kappa statistic is \_\_\_\_ (95% CI: \_\_\_\_\_, \_\_\_\_\_), indicating \_\_\_\_\_\_ agreement.
 
 Since the 95% confidence interval does/does not contain 0, we have/do not have sufficient evidence that there is \_\_\_\_\_\_\_\_\_ agreement between our mood on Monday and our mood on Wednesday.
-
-## Poll Everywhere Question 6
 
 ## Measuring Agreement: Oberved Kappas
 

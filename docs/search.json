@@ -480,7 +480,7 @@
     "href": "weeks/week_02_sched.html#announcements",
     "title": "Week 2",
     "section": "Announcements",
-    "text": "Announcements\n\nMonday 4/8\n\nOffice hours!!\n\nTuesdays 5:30-7pm with Antara\nThursdays 3:30 - 5pm with Ariel\nFridays 2 - 3:30pm with Nicky\n\n\n\n\nWednesday 4/10\n\nEcho360: Let’s all double check that we can see the recordings\nHomework question 5: no need to do LRT in the table"
+    "text": "Announcements\n\nMonday 4/8\n\nOffice hours!!\n\nTuesdays 5:30-7pm with Antara\nThursdays 3:30 - 5pm with Ariel\nFridays 2 - 3:30pm with Nicky\n\n\n\n\nWednesday 4/10\n\nEcho360: Let’s all double check that we can see the recordings\nHomework question 5: no need to do LRT in the table\nLab 1 is up!!"
   },
   {
     "objectID": "weeks/week_02_sched.html#class-exit-tickets",
@@ -2538,7 +2538,7 @@
     "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#relationship-between-rr-and-or-12",
     "title": "Lesson 4: Measurements of Association and Agreement",
     "section": "Relationship Between RR and OR (1/2)",
-    "text": "Relationship Between RR and OR (1/2)\n\nNotice that odds ratio is not equivalent to relative risk (or risk ratio)\nHowever, when the probability of “success” is small (e.g., rare disease), \\(\\widehat{OR}\\) is a nice approximation of \\(\\widehat{RR}\\) \\[\\widehat{OR}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}=\\widehat{RR}\\cdot \\frac{1-\\widehat{p_2}}{1-\\widehat{p_1}}\\]\n\nThe fraction in the last term of the above expression approximately equals to 1.0 if \\(\\widehat{p}_1\\) and \\(\\widehat{p}_2\\) BOTH quite small (&lt; 0.1)\n\nThe \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are not very close to each other in SHS: diabetes not a rare disease\n\n\\(\\widehat{OR} = 4.65\\)\n\\(\\widehat{RR} = 3.29\\)"
+    "text": "Relationship Between RR and OR (1/2)\n\nNotice that odds ratio is not equivalent to relative risk (or risk ratio)\n\n \n\nHowever, when the probability of “success” is small (e.g., rare disease), \\(\\widehat{OR}\\) is a nice approximation of \\(\\widehat{RR}\\) \\[\\widehat{OR}=\\frac{{\\hat{p}}_1/(1-{\\hat{p}}_1)}{{\\hat{p}}_2/(1-{\\hat{p}}_2)}=\\widehat{RR}\\cdot \\frac{1-\\widehat{p_2}}{1-\\widehat{p_1}}\\]\n\nThe fraction in the last term of the above expression approximately equals to 1.0 if \\(\\widehat{p}_1\\) and \\(\\widehat{p}_2\\) BOTH quite small (&lt; 0.1)\n\n\n \n\nThe \\(\\widehat{OR}\\) and \\(\\widehat{RR}\\) are not very close to each other in SHS: diabetes not a rare disease\n\n\\(\\widehat{OR} = 4.65\\)\n\\(\\widehat{RR} = 3.29\\)"
   },
   {
     "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#relationship-between-rr-and-or-22",
@@ -2552,21 +2552,21 @@
     "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#notes-for-odds-ratios",
     "title": "Lesson 4: Measurements of Association and Agreement",
     "section": "Notes for Odds Ratios",
-    "text": "Notes for Odds Ratios\n\nThe OR is valid for\n\nCase-control studies (where the RR is not appropriate)\nProspective cohort studies\nCross-sectional studies\n\nIt can be interpreted either as…\n\nOdds of event for exposed vs. unexposed individuals, or\nOdds of exposure for individuals with vs. without the event of interest\n\nPay attention to the numerator and denominator for the OR"
+    "text": "Notes for Odds Ratios\n\nThe OR is valid for\n\nCase-control studies (where the RR is not appropriate)\nProspective cohort studies\nCross-sectional studies\n\n\n \n\nIt can be interpreted either as…\n\nOdds of event for exposed vs. unexposed individuals, or\nOdds of exposure for individuals with vs. without the event of interest\n\n\n \n\nPay attention to the numerator and denominator for the OR"
   },
   {
     "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#which-measurement-should-one-use",
     "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#which-measurement-should-one-use",
     "title": "Lesson 4: Measurements of Association and Agreement",
     "section": "Which measurement should one use?",
-    "text": "Which measurement should one use?\n\n\n\n\n\n\n\nMeasurement\nPros and Cons\n\n\n\n\nRisk difference\n\nCan provide additional information, but can be misleading on its own\nNot the preferred measurement\n\n\n\nRisk ratio\n\nEasy to interpret because is a ratio of probabilities\nCannot use in retrospective, case-control studies\n\n\n\nOdds ratio\n\nAdequate for all studies\nGood estimate of RR for rare diseases\nMost preferred by statisticians because integrated into logistic regression"
+    "text": "Which measurement should one use?"
   },
   {
     "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study",
     "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study",
     "title": "Lesson 4: Measurements of Association and Agreement",
     "section": "RR in retrospective case-control study",
-    "text": "RR in retrospective case-control study\n\nIn retrospective, case-control studies, we often identify cases (patients with the outcome), then select a number of controls (patients without the outcome)\n\nCase-control study to require much smaller sample size than do equivalent cohort studies\n\nHowever, the proportion of cases in the sample does not represent the proportion of cases in the population\n\nRR compares probability of the outcome (case) for exposed and unexposed groups\nNumber of outcomes has been artificially inflated for retrospective study"
+    "text": "RR in retrospective case-control study\n\nIn retrospective, case-control studies, we identify cases (patients with the outcome), then select a number of controls (patients without the outcome)\n\nCase-control study to require much smaller sample size than equivalent cohort studies\nSo we pick out the cases and controls first, then see if there is exposure\nBecause the odds can be interpreted as \\(OR\\) of exposure and \\(OR\\) of case, we can use the \\(OR\\) to assess the case\n\\(RR\\) relative risk does not have this property\n\nHowever, the proportion of cases in the sample does not represent the proportion of cases in the population\n\nRR compares probability of the outcome (case) for exposed and unexposed groups\nNumber of outcomes has been artificially inflated for retrospective study"
   },
   {
     "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-1",
@@ -2587,7 +2587,7 @@
     "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#or-in-retrospective-case-control-study",
     "title": "Lesson 4: Measurements of Association and Agreement",
     "section": "OR in retrospective case-control study",
-    "text": "OR in retrospective case-control study\n\nWhile we cannot estimate RR from a case-control study, we can still estimate OR for case-control study\n\nOR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table\n\nAKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased\n\n\nFor case-control study where the probability of having outcome is small, the \\(\\widehat{OR}\\) is a nice approximation to \\(\\widehat{RR}\\)\n\nFor the 1:2 case-control table: \\(\\widehat{OR}=\\frac{40\\cdot160}{40\\cdot60} = 2.667\\)"
+    "text": "OR in retrospective case-control study\n\nWhile we cannot estimate RR from a case-control study, we can still estimate OR for case-control study\n\nOR does not require us to distinguish between the outcome variable and explanatory variable in the contingency table\n\nAKA: Odds ratio of disease comparing exposed to not exposed is same as odds ratio of being exposed comparing diseased and not diseased\n\n\n\n \n\n\n\nFor case-control study where the probability of having outcome is small, the \\(\\widehat{OR}\\) is a nice approximation to \\(\\widehat{RR}\\)\n\nFor the 1:2 case-control table: \\(\\widehat{OR}=\\frac{40\\cdot160}{40\\cdot60} = 2.667\\)\nPopulation cohort study: \\(\\widehat{RR}=2.5152\\)"
   },
   {
     "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-5",
@@ -2840,5 +2840,40 @@
     "title": "Lab 1",
     "section": "",
     "text": "This lab is graded out of 12 points. The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-3",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-3",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-4",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#poll-everywhere-question-4",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-13",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-13",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "RR in retrospective case-control study (1/3)",
+    "text": "RR in retrospective case-control study (1/3)\n\nIn retrospective case-control studies: we identify cases (patients with the outcome), then select a number of controls (patients without the outcome)\n\nCase-control study to require much smaller sample size than equivalent cohort studies\nSo we pick out the cases and controls first, then see if there is exposure\n\n\n \n\nHowever, the proportion of cases in the sample does not represent the proportion of cases in the population\n\nRR compares probability of the outcome (case) for exposed and unexposed groups\nNumber of outcomes has been artificially inflated for case-control study"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-23",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-23",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "RR in retrospective case-control study (2/3)",
+    "text": "RR in retrospective case-control study (2/3)\n\nAssume a 1:2 case-control study summarized in below table:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAssume we compute the RR as if it is from a cohort study:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{n_{11}/n_{1+}}{n_{21}/n_{2+}}=\\frac{40/80}{60/220}=1.8333\\]"
+  },
+  {
+    "objectID": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-33",
+    "href": "lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.html#rr-in-retrospective-case-control-study-33",
+    "title": "Lesson 4: Measurements of Association and Agreement",
+    "section": "RR in retrospective case-control study (3/3)",
+    "text": "RR in retrospective case-control study (3/3)\n\nIn real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the proportion in the population in a cohort study\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe estimated RR for the patient population is:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{400/4400}{600/16600}=2.5152\\]"
   }
 ]
