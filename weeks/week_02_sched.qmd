@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic                                             |                                                             Slides                                                             |                                                              Annotated Slides                                                               |                                                                                                                      Recording                                                                                                                       |
+| Lesson | Topic                                             |                                                             Slides                                                             |                                                              Annotated Slides                                                               |                                                                Recording                                                                 |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 3      | Measurement of Association for Contingency Tables |    [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.qmd)]{style="color:#f8f5f0;"}    | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/lesson/G_a2cd2099-5666-4143-b05a-a1e020f96c16_dffa6d24-1dbf-45aa-8ff9-abe9b32c4e9e_2024-04-08T13:00:00.000_2024-04-08T15:00:00.000/classroom#sortDirection=desc)]{style="color:#f8f5f0;"} |
-| 4      | Measurements of Association and Agreement         | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.qmd)]{style="color:#f8f5f0;"} |                             [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                              |                                                                                            [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                                                                             |
+| 3      | Measurement of Association for Contingency Tables |    [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.qmd)]{style="color:#f8f5f0;"}    | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public)]{style="color:#f8f5f0;"} |
+| 4      | Measurements of Association and Agreement         | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.qmd)]{style="color:#f8f5f0;"} |                             [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                              |                                      [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                       |
 
 For the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is **from a computer internet browser**:
 
@@ -63,6 +63,8 @@ For the slides, once they are opened, if you would like to print or save them as
 ### Wednesday 4/10
 
 -   Echo360: Let's all double check that we can see the recordings
+
+    -   [Link to class site](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public)
 
 -   Homework question 5: no need to do LRT in the table
 
