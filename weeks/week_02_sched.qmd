@@ -70,6 +70,24 @@ For the slides, once they are opened, if you would like to print or save them as
 
 -   Lab 1 is up!!
 
+-   Quiz 1 decision
+
+    -   Online in Sakai
+
+    -   Will open up on Monday at 2pm. You can chose to take it in the classroom or wait
+
+    -   Quiz will close before class on Wednesday
+
+    -   Open book still
+
+    -   Please do not cheat
+
+        -   If I notice any unusual changes to quiz performance compared to last quarter then we will go back to the old way of giving quizzes
+
+    -   Multiple choice with potentially some free response
+
+        -   For example: interpreting an OR would be divided into a multiple choice for the estimate, CI, and then writing a sentence to interpret the estimate
+
 ## Class Exit Tickets
 
 [[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNUpBNjJJSTA0N0s1Q0hXMlkySTREREdRRC4u)]{style="color:#f8f5f0;"} Monday (4/8)
