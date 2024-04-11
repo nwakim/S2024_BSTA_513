@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic                                             |                                                             Slides                                                             |                                                              Annotated Slides                                                               |                                                                Recording                                                                 |
+| Lesson | Topic                                             |                                                             Slides                                                             |                                                                 Annotated Slides                                                                  |                                                                Recording                                                                 |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 3      | Measurement of Association for Contingency Tables |    [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.qmd)]{style="color:#f8f5f0;"}    | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public)]{style="color:#f8f5f0;"} |
-| 4      | Measurements of Association and Agreement         | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.qmd)]{style="color:#f8f5f0;"} |                             [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                              |                                      [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                       |
+| 3      | Measurement of Association for Contingency Tables |    [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.qmd)]{style="color:#f8f5f0;"}    |    [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT_notes.pdf)]{style="color:#f8f5f0;"}    | [[{{< iconify mdi video size=34px >}}](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public)]{style="color:#f8f5f0;"} |
+| 4      | Measurements of Association and Agreement         | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/04_Meas_Assoc_Agree/04_Meas_Assoc_Agree_notes.pdf)]{style="color:#f8f5f0;"} |                                      [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                       |
 
 For the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is **from a computer internet browser**:
 
@@ -123,6 +123,12 @@ Nope! These are the same! If you learned it that way, you can definitely use it 
 ### 5. Not directly related to this class, but did we cover LRTs already? They're mentioned in HW1 but aren't in my notes.
 
 Oops! Fixed it in the HW. No need to do anything with LRTs!
+
+### 6. In Epi, we were very strictly told that Odds Ratios were only to be used in one type of study. (I.e. we CAN NOT use them in cross-sectional and cohort studies) only case-control. So what is the application of attempting to utilize them, if each respective type of study already has a "pre-assigned" statistical method that suits it best?
+
+Odds ratios CAN be used in cross-sectional AND cohort studies. It is often an over-estimate of the relative risk in those situations, so it is important to interpret it ONLY as the odds ratio.
+
+Each respective study does not have a pre-assigned method. The only restriction is that relative risk cannot be used in case-control studies.
 
 ```{r}
 #| echo: false
