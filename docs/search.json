@@ -466,7 +466,7 @@
     "href": "weeks/week_02_sched.html#resources",
     "title": "Week 2",
     "section": "Resources",
-    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is from a computer internet browser:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nNote: this process does not work very well on an iPad."
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\n\nIf you ever have trouble with the above links to the videos, this Echo360 link should take you to our class page.\nFor the slides, once they are opened, if you would like to print or save them as a PDF, the best way to do this is from a computer internet browser:\n\nClick on the icon with three horizontal bars on the bottom left of the browser.\nClick on “Tools” with the gear icon at the top of the sidebar.\nClick on “PDF Export Mode.”\nFrom there, you can print or save the PDF as you would normally from your internet browser.\n\nNote: this process does not work very well on an iPad."
   },
   {
     "objectID": "weeks/week_02_sched.html#on-the-horizon",
@@ -2875,5 +2875,327 @@
     "title": "Lesson 4: Measurements of Association and Agreement",
     "section": "RR in retrospective case-control study (3/3)",
     "text": "RR in retrospective case-control study (3/3)\n\nIn real world, the proportion of controls (not diseased) is typically much higher. Assume the table below shows the proportion in the population in a cohort study\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe estimated RR for the patient population is:\n\n\\[\\widehat{RR}=\\frac{\\widehat{p_1}}{\\widehat{p_2}}=\\frac{400/4400}{600/16600}=2.5152\\]"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#health-disparities-in-breast-cancer-diagnosis-working-example",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#health-disparities-in-breast-cancer-diagnosis-working-example",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Health disparities in breast cancer diagnosis: working example",
+    "text": "Health disparities in breast cancer diagnosis: working example\n\nQuestion: Is race/ethnicity and/or age associated with an individual’s diagnosed stage of breast cancer?\n\nFor now, consider each covariate separately\n\nPopulation: individuals who are assigned female at birth who have been diagnosed with breast cancer in the United States\nData from the Surveillance, Epidemiology, and End Results (SEER) Program (2014-2018)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#please-note-that-this-question-has-been-answered",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#please-note-that-this-question-has-been-answered",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Please note that this question has been answered",
+    "text": "Please note that this question has been answered\n\nYou can take a look at the Breast Cancer Research Foundation’s page: Understanding Breast Cancer Racial Disparities\nBig contributors to racial disparities include:\n\nUnderrepresentation in clinical trials\nAccess to healthcare\nMore aggressive cancers more likely in people of Native American, African, Hispanic, and Latin American descent\n\nOur analysis will not be new, but this kind of work has shed light on the importance of focused research on people of color\n\nDr. Davis focuses research on genomics and tumor microenvironment in African and African American patients\nDr. Ambrosone focuses research on how immune cells differ between patients. Specifically on the DARC gene, which is an evolved gene that helps fight malaria, that is found at a higher rate in people with African descent."
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#example-health-disparities-in-breast-cancer-diagnosis-12",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#example-health-disparities-in-breast-cancer-diagnosis-12",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Example: Health disparities in breast cancer diagnosis (1/2)",
+    "text": "Example: Health disparities in breast cancer diagnosis (1/2)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#example-health-disparities-in-breast-cancer-diagnosis-22",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#example-health-disparities-in-breast-cancer-diagnosis-22",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Example: Health disparities in breast cancer diagnosis (2/2)",
+    "text": "Example: Health disparities in breast cancer diagnosis (2/2)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-1",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-1",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-i",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-i",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we determine differences in diagnosis? (I)",
+    "text": "How do we determine differences in diagnosis? (I)\n\n\nLesson 5: Simple Logistic Regression"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-12",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-12",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we determine differences in diagnosis? (1/2)",
+    "text": "How do we determine differences in diagnosis? (1/2)\n\nBreast cancer diagnosis study: two variables that are categorical\nWe could use a contingency table (or two-way table)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-22",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-22",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we determine differences in diagnosis? (2/2)",
+    "text": "How do we determine differences in diagnosis? (2/2)\n\n\n\nContingency table does not work for…\n\nContinuous covariates\nMultiple covariates\n\n\n \n\nLogistic regression models can handle multiple covariates that are continuous or categorical"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-22-1",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-determine-differences-in-diagnosis-22-1",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we determine differences in diagnosis? (2/2)",
+    "text": "How do we determine differences in diagnosis? (2/2)\n\n\n\nContingency table does not work for…\n\nContinuous covariates\nMultiple covariates\n\n\n \n\nLogistic regression models can handle multiple covariates that are continuous or categorical"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#reference-for-individual-overview",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#reference-for-individual-overview",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Reference for individual overview",
+    "text": "Reference for individual overview"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#building-towards-simple-logistic-regression",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#building-towards-simple-logistic-regression",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Building towards simple logistic regression",
+    "text": "Building towards simple logistic regression\n\nGoal: model the probability of our outcome (\\(\\pi(X)\\)) with the covariate (\\(X_1\\))\nIn simple linear regression, we use the model in its various forms: \\[\\begin{aligned} Y&=\\beta_0+\\beta_1X_1+\\epsilon \\\\ E[Y|X] &= \\beta_0 + \\beta_1X_1 \\\\ \\widehat{Y} &= \\beta_0 + \\beta_1X_1 \\end{aligned}\\]\nPotential problem? Probabilities can only take values from 0 to 1"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model-components",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model-components",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Simple Logistic Regression Model: Components",
+    "text": "Simple Logistic Regression Model: Components\n\nOutcome: \\(Y\\) - binary (two-level) categorical variable\n\n\\(Y=1\\)\n\\(Y=0\\)\n\nProbability of outcome for individual with observed covariates\n\n\\(P\\left(Y=1|X\\right)=\\pi\\left(X\\right)\\)\n\\(P\\left(Y=0|X\\right)=1-\\pi(X)\\)\n\nBecause the expected value is a weighted average, we can say: \\[\\begin{aligned} E(Y|X) & = P(Y=1|X) \\cdot 1 + P(Y=1|X) \\cdot 0 \\\\ & = P(Y=1|X) \\cdot 1 \\\\ & = P(Y=1|X) \\\\ & = \\pi(X) \\end{aligned}\\]\n\nFor categorical outcomes, \\(\\pi(X)\\) (or \\(\\pi\\) for shorthand), is more widely used than \\(E(Y|X)\\)\n\nCovariate: \\(X_1\\)\n\nFor now: simple logistic regression with one covariate\n\\(X_1\\) can be continuous or categorical"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#can-we-apply-olr-to-our-binary-outcome",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#can-we-apply-olr-to-our-binary-outcome",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Can we apply OLR to our binary outcome?",
+    "text": "Can we apply OLR to our binary outcome?"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-ordinary-linear-regression-olr-i",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-ordinary-linear-regression-olr-i",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Review of Ordinary Linear Regression (OLR) (I)",
+    "text": "Review of Ordinary Linear Regression (OLR) (I)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#violated-linearity",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#violated-linearity",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Violated: Linearity",
+    "text": "Violated: Linearity\n\n\n\nThe relationship between the variables is linear (a straight line):\n\n\\(E[Y|X]\\) or \\(\\pi(X)\\), is a straight-line function of \\(X\\)\n\nThe independent variable \\(X\\) can take any value, while \\(\\pi(X)\\) is a probability that should be bounded by [0,1]\n\nWe cannot use linear mapping to translate \\(X\\) to \\(\\pi(X)\\)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#violated-normality",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#violated-normality",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Violated: Normality",
+    "text": "Violated: Normality\n\n\n\nIn linear regression, \\(\\epsilon\\) is distributed normally\n\n \n\nRecall that \\(Y\\) can take only one of the two values: 0 or 1\nAnd the fitted \\(Y\\), \\(\\widehat{Y}\\) can also only take values 0 or 1\nThus, \\(\\epsilon = Y - \\widehat{Y}\\) can only take values -1, 0, or 1\n\n \n\nThen \\(\\epsilon\\) cannot follow a normal distribution, which would require \\(\\epsilon\\) to have a continuum of values and no upper or lower bound"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#violated-homoscedasticity",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#violated-homoscedasticity",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Violated: Homoscedasticity",
+    "text": "Violated: Homoscedasticity\n\nIn linear regression, \\(\\text{var}(\\epsilon) = \\sigma^2\\)\n\nVariance does not depend on \\(X\\)\n\n\n \n\nWhen Y is a binary outcome \\[\\begin{aligned} \\text{var}\\left(Y\\right) & =\\pi\\left(1-\\pi\\right)\\\\ & = \\left(\\beta_0+\\beta_1X\\right)\\left(1-\\beta_0-\\beta_1X\\right) \\end{aligned}\\]\n\nVariance depends on \\(X\\)\n\n\n \n\nBecause variance depends on \\(X\\): no homoscedasticity\n\nVariance will not be equal across X-values"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#what-happens-if-we-use-olr-for-categorical-responses",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#what-happens-if-we-use-olr-for-categorical-responses",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "What happens if we use OLR for categorical responses?",
+    "text": "What happens if we use OLR for categorical responses?"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model-components-1",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model-components-1",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Simple Logistic Regression Model: Components",
+    "text": "Simple Logistic Regression Model: Components"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-2",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-2",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-fix-these-violations",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-fix-these-violations",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we fix these violations?",
+    "text": "How do we fix these violations?\n\nQuestion: How do we manipulate our response variable so that we fix these violations?\n\n \n\nAnswer: We need to transform the outcome so we can map differences in covariates to the two levels\n\nWill discuss in a few slides: called link function"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-transform-our-outcome",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-transform-our-outcome",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we transform our outcome?",
+    "text": "How do we transform our outcome?"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Simple Logistic Regression Model",
+    "text": "Simple Logistic Regression Model\nThe (population) regression model is denoted by:\n \n\n\n\n\n\n\\[ \\text{logit} (\\pi) =  \\beta_0 + \\beta_1X\\]\n\n\n\n\n\n \nComponents\n\n\n\n\\(\\pi\\)\nprobability that the outcome occurs (\\(Y=1\\)) given \\(X\\)\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glm-i",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glm-i",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Generalized Linear Models (GLM) (I)",
+    "text": "Generalized Linear Models (GLM) (I)\n\n\n\nGeneralized Linear Models are a class of models that includes regression models for continuous and categorical responses\n\nResponses follow exponential family distribution\n\n\n \n\nHere we will focus on the GLMs for categorical/count data\n\nLogistic regression is just a one type of GLM\nPoisson regression – for counts\nLog-binomial can be used to focus on risk ratio"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-3",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-3",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-random-component",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-random-component",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "GLM: Random Component",
+    "text": "GLM: Random Component\n\nThe random component specifies the response variable \\(Y\\) and selects a probability distribution for it\n\n \n \n\nBasically, we are just identifying the distribution for our outcome\n\nIf Y is binary: assumes a binomial distribution of Y\nIf Y is count: assumes Poisson or negative binomial distribution of Y\nIf Y is continuous: assumea Normal distribution of Y"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-systematic-component",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-systematic-component",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "GLM: Systematic Component",
+    "text": "GLM: Systematic Component\n\nThe systematic component specifies the explanatory variables, which enter linearly as predictors \\[\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n \n\nAbove equation includes:\n\nCentered variables\nInteractions\nTransformations of variables (like squares)\n\n\n \n\nSystematic component is the same as what we learned in Linear Models"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-link-function",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-link-function",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "GLM: Link Function",
+    "text": "GLM: Link Function\n\nIf \\(\\mu = E(Y)\\), then the link function specifies a function \\(g(.)\\) that relates \\(\\mu\\) to the linear predictor as: \\[g\\left(\\mu\\right)=\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n\\(g\\left(\\mu\\right)\\) is the transformation we make to \\(E(Y)\\) (aka \\(\\mu\\)) so that the linear predictors (right side of equation) can be linked to the outcome\n\nThe link function connects the random component with the systematic component\nCan also think of this as: \\[\\mu=g^{-1}\\left(\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\right)\\]"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model-1",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model-1",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Simple Logistic Regression Model",
+    "text": "Simple Logistic Regression Model"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#estimation-for-logistic-regression-model",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#estimation-for-logistic-regression-model",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Estimation for Logistic Regression Model",
+    "text": "Estimation for Logistic Regression Model\n\nSame as linear regression model: we need to estimate the values of \\(\\beta_0\\) and \\(\\beta_1\\)\n\n \n\nMaximum likelihood: yields values for the unknown parameters that maximize the probability of obtaining observed set of data\n\nIn linear regression, this leads to least squares estimation\nMaximum likelihood estimators (MLE): values of parameters that maximize likelihood\n\n\n \n\nLikelihood function: expresses the probability of the observed data as a function of the unknown parameters"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-5",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-5",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-to-find-maximum-likelihood-estimator-mle",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-to-find-maximum-likelihood-estimator-mle",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How to find Maximum Likelihood Estimator (MLE)?",
+    "text": "How to find Maximum Likelihood Estimator (MLE)?\n\nConstruct a likelihood function for an individual\n\n \n\nConstruct the likelihood function across the sample\n\n \n\nConvert to log-likelihood\n\n \n\nFind parameter values that maximize log-likelihood (MLEs)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#construct-a-likelihood-function-for-an-individual",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#construct-a-likelihood-function-for-an-individual",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Construct a likelihood function for an individual",
+    "text": "Construct a likelihood function for an individual"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#construct-the-likelihood-function-across-the-sample",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#construct-the-likelihood-function-across-the-sample",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Construct the likelihood function across the sample",
+    "text": "Construct the likelihood function across the sample"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#convert-to-log-likelihood",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#convert-to-log-likelihood",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Convert to log-likelihood",
+    "text": "Convert to log-likelihood"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#find-mles-that-maximize-log-likelihood",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#find-mles-that-maximize-log-likelihood",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Find MLEs that maximize log-likelihood",
+    "text": "Find MLEs that maximize log-likelihood"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-do-this-in-r",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-we-do-this-in-r",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "How do we do this in R?",
+    "text": "How do we do this in R?"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#can-we-apply-ols-to-our-binary-outcome",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#can-we-apply-ols-to-our-binary-outcome",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Can we apply OLS to our binary outcome?",
+    "text": "Can we apply OLS to our binary outcome?\n\nLet’s see if we can apply OLS/linear regression to our binary outcome\nWhat assumptions do our data need to meet in order to use OLR?\nLet’s review OLR assumptions!"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression-i",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression-i",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Review of simple linear regression (I)",
+    "text": "Review of simple linear regression (I)\nThe (population) regression model is denoted by:\n \n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n \nComponents\n\n\n\n\\(Y\\)\nresponse, outcome, dependent variable\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression-12",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression-12",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Review of simple linear regression (1/2)",
+    "text": "Review of simple linear regression (1/2)\nThe (population) regression model is denoted by:\n \n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n \nComponents\n\n\n\n\\(Y\\)\nresponse, outcome, dependent variable\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression-22",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression-22",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Review of simple linear regression (2/2)",
+    "text": "Review of simple linear regression (2/2)\n\nAssumptions of the linear regression model:\n\nIndependence: observations are independent\nLinearity: linear relationship between \\(E[Y|X]\\) and \\(X\\) \\[E[Y|X] = \\beta_0 + \\beta_1 \\cdot X\\]\nNormality and homoscedasticity assumption for residuals (\\(\\epsilon\\)):\n\nNormality: residuals are normally distributed\nHomoscedasticity (equal variance): Variance of \\(Y\\) given \\(X\\) (\\(\\sigma_{Y|X}^2\\)), is the same for any \\(X\\)\n\n\n\n \n\nWhich assumptions are violated if dependent variable is categorical?\n\nThink in terms of binary dependent variable"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression12",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#review-of-simple-linear-regression12",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Review of simple linear regression(1/2)",
+    "text": "Review of simple linear regression(1/2)\nThe (population) regression model is denoted by:\n \n\n\n\n\n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n\n\n\n\n \nComponents\n\n\n\n\\(Y\\)\nresponse, outcome, dependent variable\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glms-12",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glms-12",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Generalized Linear Models (GLMs) (1/2)",
+    "text": "Generalized Linear Models (GLMs) (1/2)\n\n\n\nGeneralized Linear Models are a class of models that includes regression models for continuous and categorical responses\n\nResponses follow exponential family distribution\nHelps us set up other types of regressions using each outcome’s needed transformations\n\n\n \n\nHere we will focus on the GLMs for categorical/count data\n\nLogistic regression is just a one type of GLM\nPoisson regression – for counts\nLog-binomial can be used to focus on risk ratio"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glms-22",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glms-22",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Generalized Linear Models (GLMs) (2/2)",
+    "text": "Generalized Linear Models (GLMs) (2/2)"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-link-function-1",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#glm-link-function-1",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "GLM: Link Function",
+    "text": "GLM: Link Function"
+  },
+  {
+    "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-4",
+    "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#poll-everywhere-question-4",
+    "title": "Lesson 5: Simple Logistic Regression",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
   }
 ]

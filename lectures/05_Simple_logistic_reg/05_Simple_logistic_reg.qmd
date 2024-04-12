@@ -1,0 +1,513 @@
+---
+title: "Lesson 5: Simple Logistic Regression"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/15/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 5: Simple Logistic Regression"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+
+load(here("data", "bc_diagnosis.Rda"))
+```
+
+# Learning Objectives
+
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+
+2.  Recognize why ordinary linear regression cannot be applied to categorical outcomes with two levels
+
+3.  Identify the logistic regression model and define key notation in statistics language
+
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE)
+
+## Health disparities in breast cancer diagnosis: working example
+
+-   **Question:** Is race/ethnicity and/or age associated with an individual’s diagnosed stage of breast cancer?
+
+    -   For now, consider each covariate separately
+
+-   **Population:** individuals who are assigned female at birth who have been diagnosed with breast cancer in the United States
+
+-   Data from the Surveillance, Epidemiology, and End Results (SEER) Program (2014-2018)
+
+## Please note that this question has been answered
+
+-   You can take a look at the Breast Cancer Research Foundation's page: [Understanding Breast Cancer Racial Disparities](https://www.bcrf.org/understanding-breast-cancer-racial-disparities/#:~:text=Breast%20cancer%20disparities%20statistics&text=While%20white%20women%20of%20European,cancer%20compared%20to%20white%20women.)
+
+-   Big contributors to racial disparities include:
+
+    -   Underrepresentation in clinical trials
+    -   Access to healthcare
+    -   More aggressive cancers more likely in people of Native American, African, Hispanic, and Latin American descent
+
+-   Our analysis will not be new, but this kind of work has shed light on the importance of focused research on people of color
+
+    -   [Dr. Davis](https://www.bcrf.org/researchers/melissa-b-davis/) focuses research on genomics and tumor microenvironment in African and African American patients
+    -   [Dr. Ambrosone](https://www.bcrf.org/researchers/christine-b-ambrosone/) focuses research on how immune cells differ between patients. Specifically on the DARC gene, which is an evolved gene that helps fight malaria, that is found at a higher rate in people with African descent.
+
+## Example: Health disparities in breast cancer diagnosis (1/2)
+
+::: columns
+::: {.column width="40%"}
+![](./images/bc_outcome.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+:::
+:::
+
+## Example: Health disparities in breast cancer diagnosis (2/2)
+
+::: columns
+::: {.column width="40%"}
+![](./images/bc_outcome.png){fig-align="center"}
+
+![](./images/bc_age.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+![](./images/bc_RE.png){fig-align="center"}
+:::
+:::
+
+## Poll Everywhere Question 1
+
+## How do we determine differences in diagnosis? (1/2)
+
+-   Breast cancer diagnosis study: two variables that are categorical
+-   We could use a contingency table (or two-way table)
+
+![](./images/bc_ct.png){fig-align="center"}
+
+## How do we determine differences in diagnosis? (2/2)
+
+::: columns
+::: {.column width="35%"}
+-   Contingency table does not work for...
+
+    -   Continuous covariates
+    -   Multiple covariates
+
+ 
+
+-   **Logistic regression models can handle multiple covariates that are continuous or categorical**
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="63%"}
+![](./images/bc_long.png){fig-align="center"}
+:::
+:::
+
+## How do we determine differences in diagnosis? (2/2)
+
+::: columns
+::: {.column width="35%"}
+-   Contingency table does not work for...
+
+    -   Continuous covariates
+    -   Multiple covariates
+
+ 
+
+-   **Logistic regression models can handle multiple covariates that are continuous or categorical**
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="63%"}
+![](./images/bc_long.png){fig-align="center"}
+
+![](./images/bc_long_log.png){fig-align="center" width="500"}
+:::
+:::
+
+# Learning Objectives
+
+## Reference for individual overview
+
+## Building towards simple logistic regression
+
+-   **Goal:** model the probability of our outcome ($\pi(X)$) with the covariate ($X_1$)
+
+-   In simple linear regression, we use the model in its various forms: $$\begin{aligned} Y&=\beta_0+\beta_1X_1+\epsilon \\ E[Y|X] &= \beta_0 + \beta_1X_1 \\ \widehat{Y} &= \beta_0 + \beta_1X_1 \end{aligned}$$
+
+-   Potential problem? Probabilities can only take values from 0 to 1
+
+## Simple Logistic Regression Model: Components
+
+-   Outcome: $Y$ - binary (two-level) categorical variable
+
+    -   $Y=1$
+    -   $Y=0$
+
+-   Probability of outcome for individual with observed covariates
+
+    -   $P\left(Y=1|X\right)=\pi\left(X\right)$
+    -   $P\left(Y=0|X\right)=1-\pi(X)$
+
+-   Because the expected value is a weighted average, we can say: $$\begin{aligned} E(Y|X) & = P(Y=1|X) \cdot 1 + P(Y=1|X) \cdot 0 \\ & = P(Y=1|X) \cdot 1 \\ & = P(Y=1|X) \\ & = \pi(X) \end{aligned}$$
+
+    -   For categorical outcomes, $\pi(X)$ (or $\pi$ for shorthand), is more widely used than $E(Y|X)$
+
+-   Covariate: $X_1$
+
+    -   For now: simple logistic regression with one covariate
+    -   $X_1$ can be continuous or categorical
+
+## Can we apply OLS to our binary outcome?
+
+-   Let’s see if we can apply OLS/linear regression to our binary outcome
+-   What assumptions do our data need to meet in order to use OLR?
+-   Let’s review OLR assumptions!
+
+## Review of simple linear regression(1/2)
+
+The (population) regression model is denoted by:
+
+ 
+
+::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="60%"}
+::: heq
+$$Y =  \beta_0 + \beta_1X + \epsilon$$
+:::
+:::
+
+::: {.column width="20%"}
+:::
+:::
+
+ 
+
+### Components
+
+|            |                                            |
+|------------|--------------------------------------------|
+| $Y$        | response, outcome, dependent variable      |
+| $\beta_0$  | intercept                                  |
+| $\beta_1$  | slope                                      |
+| $X$        | predictor, covariate, independent variable |
+| $\epsilon$ | residuals, error term                      |
+
+## Review of simple linear regression (2/2)
+
+-   Assumptions of the linear regression model:
+
+    -   Independence: observations are independent
+
+    -   Linearity: linear relationship between $E[Y|X]$ and $X$ $$E[Y|X] = \beta_0 + \beta_1 \cdot X$$
+
+    -   Normality and homoscedasticity assumption for residuals ($\epsilon$):
+
+        -   Normality: residuals are normally distributed
+        -   Homoscedasticity (equal variance): Variance of $Y$ given $X$ ($\sigma_{Y|X}^2$), is the same for any $X$
+
+ 
+
+-   Which assumptions are violated if dependent variable is categorical?
+
+    -   Think in terms of binary dependent variable
+
+## Violated: Linearity
+
+::: columns
+::: {.column width="72%"}
+-   The relationship between the variables is linear (a straight line):
+
+    -   $E[Y|X]$ or $\pi(X)$, is a straight-line function of $X$
+
+-   The independent variable $X$ can take any value, while $\pi(X)$ is a probability that should be bounded by \[0,1\]
+
+    -   We cannot use linear mapping to translate $X$ to $\pi(X)$
+
+```{r}
+#| fig-height: 6
+#| fig-width: 10
+#| fig-align: center
+#| echo: false
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+ggplot(data = bc, aes(x=Age_c, y = Late_stage_diag)) + 
+  geom_point(size = 3) +
+  geom_abline(se = FALSE, size = 3, colour="#D6295E") +
+  labs(x = "Age centered (yrs)", 
+       y = "Late stage BC diagnosis") +
+    theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30))
+```
+:::
+
+::: {.column width="28%"}
+![](./images/linearity.png){fig-align="center"}
+:::
+:::
+
+## Violated: Normality
+
+::: columns
+::: {.column width="52%"}
+-   In linear regression, $\epsilon$ is distributed normally
+
+ 
+
+-   Recall that $Y$ can take only one of the two values: 0 or 1
+-   And the fitted $Y$, $\widehat{Y}$ can also only take values 0 or 1
+-   Thus, $\epsilon = Y - \widehat{Y}$ can only take values -1, 0, or 1
+
+ 
+
+-   Then $\epsilon$ **cannot follow a normal distribution**, which would require $\epsilon$ to have a continuum of values and no upper or lower bound
+:::
+
+::: {.column width="48%"}
+ 
+
+ 
+
+![](./images/normality.png){fig-align="center"}
+:::
+:::
+
+## Violated: Homoscedasticity
+
+-   In linear regression, $\text{var}(\epsilon) = \sigma^2$
+
+    -   Variance does not depend on $X$
+
+ 
+
+-   When Y is a binary outcome $$\begin{aligned} \text{var}\left(Y\right) & =\pi\left(1-\pi\right)\\ & = \left(\beta_0+\beta_1X\right)\left(1-\beta_0-\beta_1X\right) \end{aligned}$$
+
+    -   Variance depends on $X$
+
+ 
+
+-   Because variance depends on $X$: no homoscedasticity
+
+    -   Variance will not be equal across X-values
+
+## Poll Everywhere Question 2
+
+## How do we fix these violations?
+
+-   **Question:** How do we manipulate our response variable so that we fix these violations?
+
+ 
+
+-   **Answer:** We need to *transform the outcome* so we can map differences in covariates to the two levels
+
+    -   Will discuss in a few slides: called link function
+
+## How do we transform our outcome?
+
+![](./images/transform.png)
+
+## Simple Logistic Regression Model
+
+The (population) regression model is denoted by:
+
+ 
+
+::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="60%"}
+::: heq
+$$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
+:::
+:::
+
+::: {.column width="20%"}
+:::
+:::
+
+ 
+
+### Components
+
+|            |                                                       |
+|------------|-------------------------------------------------------|
+| $\pi$      | probability that the outcome occurs ($Y=1$) given $X$ |
+| $\beta_0$  | intercept                                             |
+| $\beta_1$  | slope                                                 |
+| $X$        | predictor, covariate, independent variable            |
+| $\epsilon$ | residuals, error term                                 |
+
+# Learning Objectives
+
+## Generalized Linear Models (GLMs) (1/2)
+
+::: columns
+::: {.column width="50%"}
+-   [Generalized Linear Models]{style="color:#4472C4; font-weight: bold;"} are a class of models that includes regression models for **continuous and categorical responses**
+
+    -   Responses follow *exponential family distribution*
+    -   Helps us set up other types of regressions using each outcome's needed transformations
+
+ 
+
+-   Here we will focus on the GLMs for **categorical/count data**
+
+    -   [Logistic regression]{style="color:#F6C342; font-weight: bold;"} is just a one type of GLM
+
+    -   [Poisson regression]{style="color:#5B9BD5; font-weight: bold;"} – for counts
+
+    -   [Log-binomial]{style="color:#ED7D31; font-weight: bold;"} can be used to focus on risk ratio
+  
+:::
+
+::: {.column width="50%"}
+![](./images/GLMs.png){fig-align="center"}
+:::
+:::
+
+## Poll Everywhere Question 3
+
+## Generalized Linear Models (GLMs) (2/2)
+
+![](./images/GLM_comp.png)
+
+## GLM: Random Component {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+-   The random component specifies the response variable $Y$ and selects a probability distribution for it
+
+ 
+
+ 
+
+-   Basically, we are just identifying the distribution for our outcome
+
+    -   If Y is [binary]{style="color:#F6C342; font-weight: bold;"}: assumes a [binomial]{style="color:#F6C342; font-weight: bold;"} distribution of Y
+
+    -   If Y is [count]{style="color:#5B9BD5; font-weight: bold;"}: assumes [Poisson]{style="color:#5B9BD5; font-weight: bold;"} or negative binomial distribution of Y
+
+    -   If Y is [continuous]{style="color:#70AD47; font-weight: bold;"}: assumea [Normal]{style="color:#70AD47; font-weight: bold;"} distribution of Y
+
+
+## GLM: Systematic Component {background-image="./images/title_yell.png" background-size="2500px 150px" background-position="top"}
+
+-   The systematic component specifies the explanatory variables, which enter linearly as predictors $$\beta_0+\beta_1X_1+\ldots+\beta_kX_k$$
+
+ 
+
+-   Above equation includes:
+
+    -   Centered variables
+    -   Interactions
+    -   Transformations of variables (like squares)
+    
+ 
+
+-   Systematic component is the **same** as what we learned in Linear Models
+
+
+## GLM: Link Function {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   If $\mu = E(Y)$, then the link function specifies a function $g(.)$ that relates $\mu$ to the linear predictor as: $$g\left(\mu\right)=\beta_0+\beta_1X_1+\ldots+\beta_kX_k$$
+
+    -   $g\left(\mu\right)$ is  the transformation we make to $E(Y)$ (aka $\mu$) so that the linear predictors (right side of equation) can be linked to the outcome
+    
+-   The link function connects the random component with the systematic component
+-   Can also think of this as: $$\mu=g^{-1}\left(\beta_0+\beta_1X_1+\ldots+\beta_kX_k\right)$$
+
+## GLM: Link Function {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+![](./images/links.png){fig-align="center"}
+
+# Learning Objective
+
+## Estimation for Logistic Regression Model
+
+-   Same as linear regression model: we need to estimate the values of $\beta_0$ and $\beta_1$
+
+ 
+
+-   [Maximum likelihood]{style="color:#5B9BD5; font-weight: bold;"}: yields values for the unknown parameters that *maximize the probability of obtaining observed set of data*
+
+    -   In linear regression, this leads to least squares estimation
+    -   [Maximum likelihood estimators (MLE)]{style="color:#70AD47; font-weight: bold;"}: values of parameters that maximize likelihood
+
+ 
+
+-   [Likelihood function:]{style="color:#F6C342; font-weight: bold;"} expresses the probability of the observed data as a function of the unknown parameters
+
+
+## Poll Everywhere Question 4
+
+## How to find Maximum Likelihood Estimator (MLE)?
+
+1. Construct a likelihood function for an individual
+
+ 
+
+2. Construct the likelihood function across the sample
+
+ 
+
+3. Convert to log-likelihood
+
+ 
+
+4. Find parameter values that maximize log-likelihood (MLEs)
+
+
+## Construct a likelihood function for an individual
+
+## Construct the likelihood function across the sample
+
+## Convert to log-likelihood
+
+## Find MLEs that maximize log-likelihood
+
+## How do we do this in R?
+
+# Learning Objectives

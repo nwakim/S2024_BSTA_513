@@ -72,7 +72,7 @@ SHS_ct_disp = SHS %>% tabyl(glucimp, case) %>%
 -   We looked at risk difference, risk ratio, and odds ratio to measure association
 
 | Measure                    | Estimate                                                                                               |
-|-------------------------|-----------------------------------------------|
+|----------------------------|--------------------------------------------------------------------------------------------------------|
 | Risk difference            | $$\widehat{RD} = \widehat{p}_1 - \widehat{p}_1 = \dfrac{n_{11}}{n_1} - \dfrac{n_{21}}{n_2}$$           |
 | Relative risk / risk ratio | $$\widehat{RR}=\dfrac{\hat{p}_1}{\hat{p}_2} = \dfrac{n_{11}/n_1}{n_{21}/n_2}$$                         |
 | Odds ratio                 | $$\widehat{OR}=\frac{odds_1}{odds_2}=\frac{{\hat{p}}_1/(1-{\hat{p}}_1)}{{\hat{p}}_2/(1-{\hat{p}}_2)}$$ |
