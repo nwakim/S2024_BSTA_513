@@ -63,4 +63,3 @@ It is a good idea to try rendering your document from time to time as you go alo
 :::
 
 ## Questions
-

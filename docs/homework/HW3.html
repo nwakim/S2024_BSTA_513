@@ -4611,7 +4611,25 @@ vertical-align: -.125em;
    
   <ul>
   <li><a href="#directions" id="toc-directions" class="nav-link active" data-scroll-target="#directions">Directions</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#part-a" id="toc-part-a" class="nav-link" data-scroll-target="#part-a">Part a</a></li>
+  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b">Part b</a></li>
+  <li><a href="#part-c" id="toc-part-c" class="nav-link" data-scroll-target="#part-c">Part c</a></li>
+  <li><a href="#part-d" id="toc-part-d" class="nav-link" data-scroll-target="#part-d">Part d</a></li>
+  <li><a href="#part-e" id="toc-part-e" class="nav-link" data-scroll-target="#part-e">Part e</a></li>
+  <li><a href="#part-f" id="toc-part-f" class="nav-link" data-scroll-target="#part-f">Part f</a></li>
+  <li><a href="#part-g" id="toc-part-g" class="nav-link" data-scroll-target="#part-g">Part g</a></li>
+  <li><a href="#part-h" id="toc-part-h" class="nav-link" data-scroll-target="#part-h">Part h</a></li>
+  <li><a href="#part-i" id="toc-part-i" class="nav-link" data-scroll-target="#part-i">Part i</a></li>
+  </ul></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a>
+  <ul class="collapse">
+  <li><a href="#part-a-1" id="toc-part-a-1" class="nav-link" data-scroll-target="#part-a-1">Part a</a></li>
+  <li><a href="#part-b-1" id="toc-part-b-1" class="nav-link" data-scroll-target="#part-b-1">Part b</a></li>
+  <li><a href="#part-c-1" id="toc-part-c-1" class="nav-link" data-scroll-target="#part-c-1">Part c</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HW3.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -4659,6 +4677,19 @@ vertical-align: -.125em;
 
 </header>
 
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note to Nicky: Need to include interactions!! questions pulled from old HW4</p>
+</div>
+</div>
 <section id="directions" class="level2">
 <h2 class="anchored" data-anchor-id="directions">Directions</h2>
 <ul>
@@ -4690,8 +4721,65 @@ Tip
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>This question is adapted from the Hosmer and Lemeshow textbook. Use the ICU data described in Section 1.6.1 (pg. 22 of textbook) and consider the multiple logistic regression model of vital status, STA, on age (AGE), cancer part of the present problem (CAN), CPR prior to ICU admission (CPR), infection probable at ICU admission (INF), and race (RACE).</p>
+</section>
+<section id="part-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a">Part a</h3>
+<p>From the above list (AGE, CAN, CPR, INF, and RACE) of independent variables, identify if each is a continuous, binary, or multi-group (&gt;2) categorical variable.</p>
+</section>
+<section id="part-b" class="level3">
+<h3 class="anchored" data-anchor-id="part-b">Part b</h3>
+<p>For the binary and multi-group categorical variables, please identify the reference groups for each. Include justification for the reference group. (You may need to go to the textbook, pg. 23, to see what each variable is.)</p>
+</section>
+<section id="part-c" class="level3">
+<h3 class="anchored" data-anchor-id="part-c">Part c</h3>
+<p>Write down the equation for the logistic regression model of STA on AGE, CAN, CPR, INF, and RACE. How many parameters does this model contain?</p>
+</section>
+<section id="part-d" class="level3">
+<h3 class="anchored" data-anchor-id="part-d">Part d</h3>
+<p>For the categorical variables (binary and multi-group), please mutate the variables within the ICU dataset to set your chosen reference groups. Do the same for the outcome variable. (Right now these variables are coded as text, not factors, so we first need to make them factors, then assign them levels. For STA, you may do the same coding from Homework 3. Hint: look into function <code>factor()</code> in the pre-loaded <code>base</code> package.)</p>
+</section>
+<section id="part-e" class="level3">
+<h3 class="anchored" data-anchor-id="part-e">Part e</h3>
+<p>Using <code>glm()</code>, obtain the maximum likelihood estimates of the parameters of the logistic regression model in Part c. Using these estimates write down the equation for the fitted values (i.e., the estimated logistic probabilities).</p>
+</section>
+<section id="part-f" class="level3">
+<h3 class="anchored" data-anchor-id="part-f">Part f</h3>
+<p>Assess the significance of the group of coefficients for all variables in the model using the likelihood ratio test. (Hint: part of the ratio in the LRT will be an intercept only model) What is the value of the deviance for the fitted model?</p>
+</section>
+<section id="part-g" class="level3">
+<h3 class="anchored" data-anchor-id="part-g">Part g</h3>
+<p>Fit a new model using only AGE and CPR as the predictors. Write a sentence interpreting the odds ratio for both variables. Please include the 95% confidence interval.</p>
+</section>
+<section id="part-h" class="level3">
+<h3 class="anchored" data-anchor-id="part-h">Part h</h3>
+<p>For age, compute 95% confidence intervals for a the estimated odds ratio for a 10 year increase. Write a sentence interpreting the odds ratio for the 10-year increase.</p>
+</section>
+<section id="part-i" class="level3">
+<h3 class="anchored" data-anchor-id="part-i">Part i</h3>
+<p>Compute the predicted probability for a subject who is 63 years old and did not receive CPR before being admitted to the ICU. Compute the 95% confidence interval for the predicted probability and interpret the predicted probability.</p>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>This question is adapted from the Hosmer and Lemeshow textbook, page 47. (Note that the parts are sited differently in the textbook.)</p>
+<p>Use the Myopia Study data described in Section 1.6.6 and use MYOPIC as the outcome and as possible variables for a model: AGE, GENDER, family history of myopia (MOMMY and DADMY), number of hours playing sports (SPORTHR) and number of hours watching television (TVHR).</p>
+<section id="part-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-1">Part a</h3>
+<p>Write down the equation for the logistic regression model of MYOPIC on AGE, GENDER, MOMMY, DADMY, SPORTHR, and TVHR. How many parameters does this model contain?</p>
+</section>
+<section id="part-b-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-1">Part b</h3>
+<p>Using <code>glm()</code>, obtain the maximum likelihood estimates of the parameters of the logistic regression model. Using these estimates write down the equation for the fitted values (i.e., the estimated logistic probabilities).</p>
+</section>
+<section id="part-c-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-1">Part c</h3>
+<p>Assess the significance of the coefficient corresponding to number of hours playing sports. You may use the Wald test or the likelihood ratio test. Please interpret the odds ratio for the coefficient (in this part, you do not need to calculate the confidence interval.)</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
