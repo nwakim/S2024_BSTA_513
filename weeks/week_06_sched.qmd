@@ -31,32 +31,23 @@ editor_options:
 ::: callout-important
 ## Room Locations for the week
 
--   On Monday, 2/12,        we will be in [**virtual**](https://ohsu.webex.com/meet/wakim)
--   On Wednesday, 2/14,  we will be in **RLSB 3A003 A**
+On Monday, 5/6, we will be in RPV Room A (1217)
 :::
 
 ## Resources
 
-+--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| Lesson | Topic  | Slides                                                                | Annotated Slides                                                                   | Recording                                                     |
-+========+========+:=====================================================================:+:==================================================================================:+:=============================================================:+
-| 10     |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| 11     |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
+|--------------|--------------|:------------:|:--------------:|:------------:|
+| 10     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
--   Homework 3 due 2/15
--   President's Day on 2/19 (no class)
--   Quiz 2 due 2/21
--   Homework 4 due 2/22
-
 ## Class Exit Tickets
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNFFKR0RHN0hETVNHMTlZMFAwOTVGQUVDTS4u)]{style="color:#f8f5f0;"} Monday (2/12)
+[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Monday (5/6)
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMVJHTkVBUFFDT1owSTZGS01KRVIzVDJQQS4u)]{style="color:#f8f5f0;"} Wednesday (2/14)
+[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/8)
 
 ## Announcements
 

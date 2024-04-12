@@ -1,6 +1,6 @@
 ---
 title: "Week 2"
-description: "Relative Risks and Odds Ratios"
+description: "Measurements of Association and Agreement"
 date: "4/8/2024"
 date-modified: "today"
 categories: [""]

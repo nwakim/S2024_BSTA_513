@@ -1,7 +1,7 @@
 {
-  "hash": "c48103b36d998394c2f22cbe09564b3b",
+  "hash": "082c87c9e04c0a19ae3aa982a1c579d6",
   "result": {
-    "markdown": "---\ntitle: \"Week 11\"\ndescription: \"Spill-Over Week\"\ndate: \"6/10/2024\"\ndate-modified: \"today\"\ncategories: [\"\"]\nformat: \n  html:\n    link-external-newwindow: true\n    toc: true\neditor_options: \n  chunk_output_type: console\n---\n\n::: {.cell}\n<style type=\"text/css\">\n.title{\n  font-size: 40px;\n  color: #C2352F;\n  background-color: #fff;\n  padding: 10px;\n}\n\n.description{\n  font-size: 20px;\n  color: #fff;\n  background-color: #C2352F;\n  padding: 10px;\n}\n</style>\n:::\n\n\n## Announcements\n\n\n::: {.cell}\n\n:::",
+    "markdown": "---\ntitle: \"Week 11\"\ndescription: \"Spill-Over Week\"\ndate: \"6/10/2024\"\ndate-modified: \"today\"\ncategories: [\"\"]\nformat: \n  html:\n    link-external-newwindow: true\n    toc: true\neditor_options: \n  chunk_output_type: console\n---\n\n\n::: callout-important\n## Room Locations for the week\n\nIf we meet this week, we will be in RPV Room A (1217)\n:::\n\n\n::: {.cell}\n<style type=\"text/css\">\n.title{\n  font-size: 40px;\n  color: #C2352F;\n  background-color: #fff;\n  padding: 10px;\n}\n\n.description{\n  font-size: 20px;\n  color: #fff;\n  background-color: #C2352F;\n  padding: 10px;\n}\n</style>\n:::\n\n\n## Announcements\n\n\n::: {.cell}\n\n:::",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

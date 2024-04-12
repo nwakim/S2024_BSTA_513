@@ -12,6 +12,12 @@ editor_options:
   chunk_output_type: console
 ---
 
+::: callout-important
+## Room Locations for the week
+
+On Wednesday, 5/22, we will be in RPV Room A (1217)
+:::
+
 ```{css, echo=FALSE}
 .title{
   font-size: 40px;
@@ -30,13 +36,10 @@ editor_options:
 
 ## Resources
 
-+--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| Lesson | Topic  | Slides                                                                | Annotated Slides                                                                   | Recording                                                     |
-+========+========+:=====================================================================:+:==================================================================================:+:=============================================================:+
-| 11     |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| 11     |        | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+--------+--------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
+|------------|------------|:-------------:|:-----------------:|:-----------:|
+| 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 

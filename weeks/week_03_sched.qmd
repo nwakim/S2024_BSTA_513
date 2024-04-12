@@ -1,6 +1,6 @@
 ---
 title: "Week 3"
-description: "Simple Logistic Regression"
+description: "Introduction to Logistic Regression"
 date: "4/15/2024"
 date-modified: "today"
 categories: [""]
@@ -30,25 +30,24 @@ editor_options:
 
 ## Resources
 
-Below is a table with links to resources. Icons in [orange]{style="color:#E25D3B;"} mean there is an available file link.
+| Lesson | Topic                                                    |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
+| 5      | Simple Logistic Regression                               | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 6      | Introduction to hypothesis tests for Logistic Regression | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
-+---------+---------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| Lesson  | Topic   | Slides                                                                | Annotated Slides                                                                   | Recording                                                     |
-+=========+=========+:=====================================================================:+:==================================================================================:+:=============================================================:+
-| 3       |         | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+---------+---------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| 4       |         | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+---------+---------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| 5       |         | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-+---------+---------+-----------------------------------------------------------------------+------------------------------------------------------------------------------------+---------------------------------------------------------------+
+If you ever have trouble with the above links to the videos, [this Echo360 link](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public) should take you to our class page.
 
 ## On the Horizon
 
+-   Lab 1 due this Thursday (4/28)
+
+-   Quiz 1 opens on Monday, 4/22, at 2pm and will close on Wednesday, 4/24, at 1pm
+
 ## Class Exit Tickets
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMzhZWjc5S0dDVDU2WUozNEM0M0FKRlczSi4u)]{style="color:#f8f5f0;"} Monday (4/15)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURU1DTVJaUElFQlc5RkxEWFFHVEJaVEdPUS4u)]{style="color:#f8f5f0;"} Monday (4/15)
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMU5YTFZRRzNaUlNFMElGQ0E1MDVMS0dZMC4u)]{style="color:#f8f5f0;"} Wednesday (4/17)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMkNBSEwyVkZLRUtJSVpJT0tIOVpRN1lLRy4u)]{style="color:#f8f5f0;"} Wednesday (4/17)
 
 ## Announcements
 

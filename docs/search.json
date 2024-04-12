@@ -1425,21 +1425,21 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nRelative Risks and Odds Ratios\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nSimple Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nLogistic Regression and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nConfounding and Interactions\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nModel Building Strategies\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nFlex Week / Spill Over\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nLogistic Regression and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nConfounding and Interactions\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nModel Building Strategies\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nFlex Week / Spill Over\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_03_sched.html#resources",
     "href": "weeks/week_03_sched.html#resources",
     "title": "Week 3",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n3\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5"
+    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n5\nSimple Logistic Regression\n\n\n\n\n\n6\nIntroduction to hypothesis tests for Logistic Regression\n\n\n\n\n\n\nIf you ever have trouble with the above links to the videos, this Echo360 link should take you to our class page."
   },
   {
     "objectID": "weeks/week_03_sched.html#on-the-horizon",
     "href": "weeks/week_03_sched.html#on-the-horizon",
     "title": "Week 3",
     "section": "On the Horizon",
-    "text": "On the Horizon"
+    "text": "On the Horizon\n\nLab 1 due this Thursday (4/28)\nQuiz 1 opens on Monday, 4/22, at 2pm and will close on Wednesday, 4/24, at 1pm"
   },
   {
     "objectID": "weeks/week_03_sched.html#class-exit-tickets",
@@ -1467,7 +1467,7 @@
     "href": "weeks/week_04_sched.html#resources",
     "title": "Week 4",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n6\n\n\n\n\n\n\n7"
+    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nInterpretations in Simple Logistic Regression\n\n\n\n\n\n8\nMultiple Logistic Regression"
   },
   {
     "objectID": "weeks/week_04_sched.html#on-the-horizon",
@@ -1481,7 +1481,7 @@
     "href": "weeks/week_04_sched.html#class-exit-tickets",
     "title": "Week 4",
     "section": "Class Exit Tickets",
-    "text": "Class Exit Tickets\n Monday (4/22)\n Wednesday (4/24)"
+    "text": "Class Exit Tickets\n Monday (4/22)\n\nMonday Exit ticket will not be graded bc of quiz\n\n Wednesday (4/24)"
   },
   {
     "objectID": "weeks/week_04_sched.html#announcements",
@@ -1509,7 +1509,7 @@
     "href": "weeks/week_05_sched.html#resources",
     "title": "Week 5",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9"
+    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n\n\n\n\n\n\n\n9\n\n\n\n\n\n\n9"
   },
   {
     "objectID": "weeks/week_05_sched.html#on-the-horizon",
@@ -1551,14 +1551,14 @@
     "href": "weeks/week_06_sched.html#on-the-horizon",
     "title": "Week 6",
     "section": "On the Horizon",
-    "text": "On the Horizon\n\nHomework 3 due 2/15\nPresident’s Day on 2/19 (no class)\nQuiz 2 due 2/21\nHomework 4 due 2/22"
+    "text": "On the Horizon"
   },
   {
     "objectID": "weeks/week_06_sched.html#class-exit-tickets",
     "href": "weeks/week_06_sched.html#class-exit-tickets",
     "title": "Week 6",
     "section": "Class Exit Tickets",
-    "text": "Class Exit Tickets\n Monday (2/12)\n Wednesday (2/14)"
+    "text": "Class Exit Tickets\n Monday (5/6)\n Wednesday (5/8)"
   },
   {
     "objectID": "weeks/week_06_sched.html#announcements",
@@ -1621,7 +1621,7 @@
     "href": "weeks/week_07_sched.html#resources",
     "title": "Week 7",
     "section": "Resources",
-    "text": "Resources\nOn Wednesday, 2/21, we will continue to look at the Interactions slides.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n11"
+    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n11"
   },
   {
     "objectID": "weeks/week_07_sched.html#on-the-horizon",
@@ -1726,7 +1726,7 @@
     "href": "weeks/week_10_sched.html",
     "title": "Week 10",
     "section": "",
-    "text": "```{css, echo=FALSE} .title{ font-size: 40px; color: #213c96; background-color: #fff; padding: 10px; }\n.description{ font-size: 20px; color: #fff; background-color: #213c96; padding: 10px; } ```"
+    "text": "Room Locations for the week\n\n\n\nOn Monday, 6/3, we will be in RPV Room A (1217)"
   },
   {
     "objectID": "lectures/03_Meas_Assoc_CT/03_Meas_Assoc_CT.html#poll-everywhere-question-1",
@@ -3204,5 +3204,19 @@
     "title": "Homework 2",
     "section": "",
     "text": "This homework is designed to help you practice the following important skills and knowledge that we covered in Lessons 3-6:\n\nCalculate and interpret the estimated risk difference, relative risk, and odds ratios, and their confidence intervals\nExpand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa\nUnderstand important differences between linear regression and logistic regression\nConstruct a simple logistic regression model\nTest a covariate for significance using the Wald test and LRT"
+  },
+  {
+    "objectID": "weeks/week_08_sched.html",
+    "href": "weeks/week_08_sched.html",
+    "title": "Week 8",
+    "section": "",
+    "text": "Room Locations for the week\n\n\n\nOn Wednesday, 5/22, we will be in RPV Room A (1217)"
+  },
+  {
+    "objectID": "weeks/week_11_sched.html",
+    "href": "weeks/week_11_sched.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Room Locations for the week\n\n\n\nIf we meet this week, we will be in RPV Room A (1217)"
   }
 ]
