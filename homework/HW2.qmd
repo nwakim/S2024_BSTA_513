@@ -28,25 +28,35 @@ library(readxl)
 library(haven)
 library(here)
 library(gtsummary) ## Added this package!!
-
+library(kableExtra)
 ```
 
+## Purpose
+This homework is designed to help you practice the following important skills and knowledge that we covered in Lessons 3-6:
+
+* Calculate and interpret the estimated risk difference, relative risk, and odds ratios, and their confidence intervals
+* Expand work on contingency tables to evaluate the agreement or reproducibility using Cohen’s Kappa
+* Understand important differences between linear regression and logistic regression
+* Construct a simple logistic regression model
+* Test a covariate for significance using the Wald test and LRT
 
 ## Directions
 
 -   [Download the `.qmd` file here.](https://github.com/nwakim/W2024_BSTA_512/blob/main/homework/HW2.qmd)
 
--   You will need to download the datasets. Use [this link to download](https://ohsuitg-my.sharepoint.com/:f:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/W2024_BSTA_512_612/Student_files/Data/Homework?csf=1&web=1&e=QEsqb9) the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named "data" that is housed in the same location as this homework `.qmd` file.
+-   You will need to download the datasets. Use [this link to download](https://ohsuitg-my.sharepoint.com/:f:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/Data/Homework/HW2?csf=1&web=1&e=v9BP7D) the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named "data" that is housed in the same location as this homework `.qmd` file.
 
--   Please upload your homework to [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-512-1-AB-W24/tool/961ec5ef-d7f9-4518-be16-25f7af3d6be4). **Upload both your `.qmd` code file and the rendered `.html` file**
+-   Please upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file
 
--   For each question, make sure to include all code and resulting output in the html file to support your answers.
+    -   Please rename you homework as Lastname_Firstinitial_HW1.qmd. This will help organize the homeworks when the TAs grade them.
+
+    -   Please also add the following line under subtitle: "BSTA 513/613": author: First-name Last-name with your first and last name so it is attached to the viewable document.
+
+-   For each question, make sure to include all code and resulting output in the html file to support your answers
 
 -   Show the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.
 
--   If you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.
-
--   Write all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.
+-   Write all answers in complete sentences as if communicating the results to a collaborator.
 
 ::: callout-tip
 It is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly.
@@ -62,7 +72,8 @@ colnames(t1) <- c("Yes","No")
 rownames(t1) <- c("OC users","Non-OC users")
 # t1 <- as.table(t1)
 # kable(t1) %>% kable_styling(full_width = F, bootstrap_options = c("striped", "hover"))
-tidy(t1)
+t1 %>% kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kable_styling(full_width = F, bootstrap_options = c("striped", "hover"))
 ```
 
 #### Part a
@@ -80,104 +91,101 @@ Compute the estimated odds ratio comparing OC users to non-OC users. Include a 9
 Is the OR a good approximation of the RR? Explain why or why not. 
 
 ### Question 2
-I was intrigued by the results from Question 1, so I started researching the relationship between contraception and MI. In a [journal review article](https://www.sciencedirect.com/science/article/pii/S001078249800016X?via%3Dihub), the authors present smoking status as a potential confounder for the relationship between OC use and MI. In Table 2 of their paper, they present various risk ratios for smoking and nonsmoking women. Use the below tables, that are recreated from [one study's data](https://jamanetwork.com/journals/jama/article-abstract/398667), to answer the following questions. 
-
-Nonsmokers:
-```{r echo=FALSE}
-t2_ns <- matrix(c(36,317,72,521),ncol=2,byrow=TRUE)
-colnames(t2_ns) <- c("Yes","No")
-rownames(t2_ns) <- c("OC users","Non-OC users")
-# t2_ns <- as.table(t2_ns)
-# kable(t2_ns) %>% kable_styling(full_width = F, bootstrap_options = c("striped", "hover"))
-tidy(t2_ns)
-```
-
-Smokers:
-```{r echo=FALSE}
-t2_s <- matrix(c(210,416,236,586),ncol=2,byrow=TRUE)
-colnames(t2_s) <- c("Yes","No")
-rownames(t2_s) <- c("OC users","Non-OC users")
-# t2_s <- as.table(t2_s)
-# kable(t2_s) %>% kable_styling(full_width = F, bootstrap_options = c("striped", "hover"))
-tidy(t2_s)
-```
-
-#### Part a
-Compute the stratum-specific ORs for each smoking status. Present the estimates with 95% Confidence interval.
-
-#### Aside (not a homework problem)
-If you are interested in a short review of the relationship between oral contraceptive pills (OCP) and MI, see [this article abstract](https://www.sciencedirect.com/science/article/pii/S001078249800016X?via%3Dihub). I cannot find the full article online, so if you find it, please pass along. The abstract states:
-
-> Although OCP doses were subsequently reduced, epidemiologic evidence continued to support a smaller, but significant association between OCPs and hypertension.
-
-This single statement packs in some interesting aspects of the research process and influences from society. To start, the OCP doses were reduced from their initial approval. However, the early studies (1980s-90s) that link increased risk of hypertension and MI to OCs were still some of the first articles presented in my Google search. You may also find it interesting to think about how the perception of contraception has changed since the 1980s, and how societal views can impact research questions. 
-
-### Question 3
-
-::: callout-tip
-This question is under construction... (4/5/24)
-:::
-
-The data presented below are from a case-control study of bladder cancer. Subjects with and without bladder cancer were recruited and then questioned about their occupation and cigarette consumption. 
-
-```{r echo=FALSE}
-q3 = cbind(high_risk_occ = c("Yes", "Yes", "No", "No"), 
-           high_cig = c("No", "Yes", "No", "Yes"), 
-           cases = c(48, 180, 30, 120), 
-           controls = c(100, 175, 24, 80))
-q3 = q3 %>% as.data.frame()
-colnames(q3) = c("High risk occupation", "High cigarette consumption", 
-                 "Cases", "Controls")
-# kable(q3) %>% kable_styling(full_width = F, bootstrap_options = c("striped", "hover"))
-gt(q3)
-```
-
-#### Part a
-
-Please present the data using two 2x2 contingency table for High-risk occupation and Disease status, stratified by Cigarette consumption.
-
-#### Part b
-
-Please present the data for High-risk occupation and Disease status using a 2x2 contingency table (you should combine the cigarette consumption).
-
-#### Part c
-
-Is it possible, in reference to the study design, to estimate the OR for bladder cancer and occupation from this study? If it is possible, calculate (using formulas) the crude odds ratio for bladder cancer comparing high-risk to other occupations, and estimate (using formulas) the associated 95% confidence intervals.
-
-#### Part d
-
-Compute the stratum-specific ORs at each of the two levels of cigarette consumption. Present the estimates with 95% Confidence interval.
-
-#### Part e
-
-Is it possible to estimate the RR for bladder cancer and occupation from this study? If it is possible, calculate the crude relative risk for bladder cancer comparing high-risk to other occupations, as well as the stratum-specific RRs at each of the two levels of cigarette consumption. Present the estimates with 95% Confidence interval. If it is not possible, give your reason.
-
-
-#### Part f
-
-We will assume we found that odds ratios are relatively the same using the Breslow-Day test (which is true). Calculate the smoking-adjusted Mantel-Haenszel odds ratio for high-risk versus other occupations. Present the estimates with 95% Confidence interval.
-
-#### Part g
-Are the odds of bladder cancer different for high-risk versus other occupations after we adjusted for smoking status? (Hint: You should be running an inference test.)
-
-#### Part h
-
-Do you think the smoking-adjusted Mantel-Haenszel odds ratio for high-risk versus other occupations should be reported? Give your reason. 
-
-### Question 4
 One important aspect of medical diagnosis is its reproducibility. Suppose that two different doctors examine 100 patients for dyspnea in a respiratory-disease clinic, and that doctor A diagnosed 15 patients as having dyspnea (while doctor B did not), doctor B diagnosed 10 patients as having dyspnea (while doctor A did not), and both doctor A and doctor B diagnosed 7 patients as having dyspnea. 
 
 #### Part a
 Construct a two-way contingency table to summarize the dyspnea diagnoses from doctor A and B.
 
 #### Part b
-Compute the Cohen's kappa (No need to compute the confidence interval.)
+Compute the Cohen's kappa, 95% confidence interval, and interpret the results. What level of agreement does your kappa indicate?
 
-#### Part c 
-How would you characterize the agreement between doctor A and B? Please refer to any guidelines used.
+### Question 3
+This question is meant to emphasize the differences between linear regression and logistic regression. Each part will ask about different aspects of the two regression models. If the question has multiple choice answers, then you must write 1-2 sentences justifying your answer.
+
+
+#### Part a
+In **linear** regression, what type of variable is our response/outcome variable?
+
+a. binary
+b. continuous
+c. count
+d. ordinal
+
+
+#### Part b
+In **logistic** regression, what type of variable is our response/outcome variable?
+
+a. binary
+b. continuous
+c. count
+d. normal
+
+
+#### Part c
+What assumptions in linear regression? Please state the assumption name and characteristics of that assumption.
 
 #### Part d
-Is your computed kappa greater than 0? Run the appropriate test and interpret your results.
+
+Which assumptions of linear regression are violated if we try to fit a binary response using linear regression? You may choose more than one answer.
+
+a. Independence
+b. Linearity
+c. Normality
+d. Homoscedasticity
+
+
+#### Part e
+Please use our notes on generalized linear models (GLMs) to answer this question. What is the random component used in linear regression? What is the random component used in logistic regression? Name the specific variable type and distribution for it.
+
+#### Part f
+Please use our notes on generalized linear models (GLMs) to answer this question. What link function do we use in linear regression? What link function do we use in logistic regression? Name the link and write out the function.
+
+
+#### Part g
+Please use our notes on generalized linear models (GLMs) to answer this question. What is the systematic component used in simple linear regression? What is the systematic component used in simple logistic regression? Please write out the function for the systematic component for a single covariate. 
+
+
+#### Part h
+How do we determine our coefficient estimates (estimates of the parameter values) in linear regression? You may choose more than one answer.
+
+a. Ordinary least squares
+b. Maximum likelihood estimation
+
+
+#### Part i
+How do we determine our coefficient estimates (estimates of the parameter values) in logistic regression? You may choose more than one answer.
+
+a. Ordinary least squares
+b. Maximum likelihood estimation
+
+### Question 4
+
+This question is taken from the Hosmer and Lemeshow textbook. The ICU study data set consists of a sample of 200 subjects who were part of a much larger study on survival of patients following admission to an adult intensive care unit (ICU). The datset should be available within Coure Materials. The major goal of this study was to develop a logistic regression model to predict the probability of survival to hospital discharge of these patients. In this question, the primary outcome variable is vital status at hospital discharge, STA. Clinicians associated with the study felt that a key determinant of survival was the patient’s age at admission, AGE.
+
+A code sheet for the variables to be considered is displayed in Table 1.5 below (from the Hosmer and Lemeshow textbook, pg. 23). We refer to this data set as the ICU data.
+
+![](./images/ICU_codebook.png)
+
+#### Part a
+
+Write down the equation for the logistic regression model of STA on AGE. What characteristic of the outcome variable, STA, leads us to consider the logistic regression model as opposed to the usual linear regression model to describe the relationship between STA and AGE?
+
+
+#### Part b
+
+Write down an expression for the log-likelihood for the logistic regression model in Part a. This will me a mathematical expression. Please do not use generic expressions like $\pi(X)$, instead replace $X$ with the specific variables in this question. 
+
+
+#### Part c
+
+Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part a. Using these estimates, write down fitted logistic regression model.
+
+#### Part d
+Use the Wald test to test whether or not the intercept ($\beta_0$) of the logistic regression model is significantly different from 0. Make sure to include your: hypothesis test, code/work leading to the computed test statistic, output including the test statistic and p-value, and conclusion. Please refer to the Additional Tips to guide you on what a complete/correct answer contains. 
+
+
+#### Part e
+Use the Likelihood Ratio test to test whether or not the coefficient for age ($\beta_1$) of the logistic regression model is significantly different from 0. Make sure to include your: hypothesis test, code/work leading to the computed test statistic, output including the test statistic and p-value, and conclusion. Please refer to the Additional Tips to guide you on what a complete/correct answer contains. **You do not need to include an interpretation of the coefficient since we have not covered this.**
 
 
 

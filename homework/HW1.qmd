@@ -43,7 +43,7 @@ This homework is designed to help you practice the following important skills an
 
 -   [Download the `.qmd` file here.](https://github.com/nwakim/S2024_BSTA_513/blob/main/homework/HW1.qmd)
 
--   You will need to download the datasets. Use [this link to download](https://ohsuitg-my.sharepoint.com/personal/wakim_ohsu_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwakim%5Fohsu%5Fedu%2FDocuments%2FTeaching%2FClasses%2FW2024%5FBSTA%5F512%5F612%2FStudent%5Ffiles%2FData%2FHomework%2FHW1&FolderCTID=0x012000313CF7F10467BC479DC8A23F258AB10C&view=0) the HW1 datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named "data" that is housed in the same location as your HW1 `.qmd` file.
+-   You will not need to download datasets for this homework.
 
 -   Please upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file
 
