@@ -20,12 +20,6 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
-```{css, echo=FALSE}
-.reveal code {
-  max-height: 80% !important;
-}
-```
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -41,6 +35,8 @@ library(moderndive)
 library(broom) 
 library(here) 
 library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
 
 load(here("data", "bc_diagnosis.Rda"))
 ```
@@ -49,21 +45,45 @@ load(here("data", "bc_diagnosis.Rda"))
 
 1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
 
-2.  Recognize why ordinary linear regression cannot be applied to categorical outcomes with two levels
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
 
-3.  Identify the logistic regression model and define key notation in statistics language
+3.  Identify the simple logistic regression model and define key notation in statistics language
 
 4.  Connect linear and logistic regression to the larger group of models, generalized linear model
 
-5.  Determine coefficient estimates using maximum likelihood estimation (MLE)
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+# Learning Objectives
+
+::: lob
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+:::
+
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
+
+3.  Identify the simple logistic regression model and define key notation in statistics language
+
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
 
 ## Health disparities in breast cancer diagnosis: working example
 
 -   **Question:** Is race/ethnicity and/or age associated with an individual’s diagnosed stage of breast cancer?
 
     -   For now, consider each covariate separately
+    
+ 
 
 -   **Population:** individuals who are assigned female at birth who have been diagnosed with breast cancer in the United States
+
+ 
 
 -   Data from the Surveillance, Epidemiology, and End Results (SEER) Program (2014-2018)
 
@@ -77,7 +97,7 @@ load(here("data", "bc_diagnosis.Rda"))
     -   Access to healthcare
     -   More aggressive cancers more likely in people of Native American, African, Hispanic, and Latin American descent
 
--   Our analysis will not be new, but this kind of work has shed light on the importance of focused research on people of color
+-   Our analysis will not be new, but this kind of work has shed light on the importance of focused research on people of color to better serve people of color who develop breast cancer
 
     -   [Dr. Davis](https://www.bcrf.org/researchers/melissa-b-davis/) focuses research on genomics and tumor microenvironment in African and African American patients
     -   [Dr. Ambrosone](https://www.bcrf.org/researchers/christine-b-ambrosone/) focuses research on how immune cells differ between patients. Specifically on the DARC gene, which is an evolved gene that helps fight malaria, that is found at a higher rate in people with African descent.
@@ -164,7 +184,21 @@ load(here("data", "bc_diagnosis.Rda"))
 
 # Learning Objectives
 
-## Reference for individual overview
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+
+::: lob
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
+:::
+
+3.  Identify the simple logistic regression model and define key notation in statistics language
+
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
+
+## Reference: individual components 
+
+![](./images/ref_ind.png){fig-align="center"}
 
 ## Building towards simple logistic regression
 
@@ -176,10 +210,20 @@ load(here("data", "bc_diagnosis.Rda"))
 
 ## Simple Logistic Regression Model: Components
 
+::: columns
+::: column
 -   Outcome: $Y$ - binary (two-level) categorical variable
 
     -   $Y=1$
     -   $Y=0$
+:::
+::: column
+-   Covariate: $X_1$
+
+    -   For today: simple logistic regression with one covariate
+    -   $X_1$ can be continuous or categorical
+:::
+:::
 
 -   Probability of outcome for individual with observed covariates
 
@@ -190,10 +234,7 @@ load(here("data", "bc_diagnosis.Rda"))
 
     -   For categorical outcomes, $\pi(X)$ (or $\pi$ for shorthand), is more widely used than $E(Y|X)$
 
--   Covariate: $X_1$
 
-    -   For now: simple logistic regression with one covariate
-    -   $X_1$ can be continuous or categorical
 
 ## Can we apply OLS to our binary outcome?
 
@@ -336,6 +377,20 @@ ggplot(data = bc, aes(x=Age_c, y = Late_stage_diag)) +
 
 ## Poll Everywhere Question 2
 
+# Learning Objectives
+
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
+
+::: lob
+3.  Identify the simple logistic regression model and define key notation in statistics language
+:::
+
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
+
 ## How do we fix these violations?
 
 -   **Question:** How do we manipulate our response variable so that we fix these violations?
@@ -346,9 +401,71 @@ ggplot(data = bc, aes(x=Age_c, y = Late_stage_diag)) +
 
     -   Will discuss in a few slides: called link function
 
-## How do we transform our outcome?
+## How do we transform our outcome? (1/2) {#slide-transform}
 
 ![](./images/transform.png)
+
+## How do we transform our outcome? (2/2)
+
+![](./images/transform_plot.png){fig-align="center"}
+
+```{r}
+#| echo: false
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+stage = ggplot(data = bc, aes(x=Age_c, y = Late_stage_num)) + 
+  geom_point(size = 4, color = "#ED7D31", shape = 1) +
+  #geom_abline(se = FALSE, size = 3, colour="#D6295E") +
+  labs(x = "Age centered (yrs)", 
+       y = "\n Late stage BC diagnosis")  + theme_classic() +
+    theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30))
+
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+bc_aug = augment(bc_reg)
+
+library(boot)
+prob_stage = ggplot(data = bc_aug, aes(x=Age_c, y = inv.logit(.fitted))) + 
+  geom_point(size = 4, color = "#70AD47", shape = 1) +
+  labs(x = "Age centered (yrs)", 
+       y = "Probability of \n Late stage BC diagnosis")  + theme_classic() +
+    theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30)) +
+  ylim(0, 1)
+```
+
+```{r}
+#| fig-height: 4.5
+#| fig-width: 20
+#| fig-align: left
+#| echo: false
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+bc_aug = augment(bc_reg)
+
+log_odds_stage = ggplot(data = bc_aug, aes(x=Age_c, y = .fitted)) + 
+  geom_point(size = 4, color = "#D6295E", shape = 1) +
+  labs(x = "Age centered (yrs)", 
+       y = "Log-odds of \n Late stage BC diagnosis")  + theme_classic() +
+      theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30))
+
+ggarrange(stage, prob_stage, log_odds_stage, nrow=1)
+```
 
 ## Simple Logistic Regression Model
 
@@ -383,6 +500,18 @@ $$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
 | $\epsilon$ | residuals, error term                                 |
 
 # Learning Objectives
+
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
+
+3.  Identify the simple logistic regression model and define key notation in statistics language
+
+::: lob
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+:::
+
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
 
 ## Generalized Linear Models (GLMs) (1/2)
 
@@ -463,7 +592,51 @@ $$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
 
 ![](./images/links.png){fig-align="center"}
 
-# Learning Objective
+# Learning Objectives
+
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
+
+3.  Identify the simple logistic regression model and define key notation in statistics language
+
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+
+::: lob
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
+:::
+
+## Reminder: Simple Logistic Regression Model
+
+The (population) regression model is denoted by:
+
+ 
+
+::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="60%"}
+::: heq
+$$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
+:::
+:::
+
+::: {.column width="20%"}
+:::
+:::
+
+ 
+
+### Components
+
+|            |                                                       |
+|------------|-------------------------------------------------------|
+| $\pi$      | probability that the outcome occurs ($Y=1$) given $X$ |
+| $\beta_0$  | intercept                                             |
+| $\beta_1$  | slope                                                 |
+| $X$        | predictor, covariate, independent variable            |
+| $\epsilon$ | residuals, error term                                 |
 
 ## Estimation for Logistic Regression Model
 
@@ -500,14 +673,207 @@ $$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
 4. Find parameter values that maximize log-likelihood (MLEs)
 
 
-## Construct a likelihood function for an individual
+## 1. Construct a likelihood function for an individual
 
-## Construct the likelihood function across the sample
+::: columns
+::: {.column width="67%"}
+-   Within a dataset with n subjects, for the $i$th subject:
 
-## Convert to log-likelihood
+    -   if $Y_i=1$, the contribution to the likelihood function is $\pi\left(X_i\right)$
+    
+	  -   if $Y_i=0$, the contribution to the likelihood function is $1-\pi\left(X_i\right)$
+	  
+	 
+ 
 
-## Find MLEs that maximize log-likelihood
+-   The **contribution from the $i$th subject** to the likelihood function can be expressed as: $$\pi\left(X_i\right)^{X_i}\left[1-\pi\left(X_i\right)\right]^{1-X_i}$$
 
-## How do we do this in R?
+
+:::
+
+::: {.column width="33%"}
+::: example
+::: ex-title
+Recall
+:::
+::: ex-cont
+-   $Y_i$: Response variable of the $i$th subject
+-   $X_i$: Independent variable for the $i$th subject
+-   $\pi\left(X_i\right)=\Pr{\left(Y_i=1\middle|\ X_i\right)}$
+-   $1-\pi\left(X_i\right)=\Pr(Y_i=0|X_i)$
+
+:::
+:::
+:::
+:::
+
+## 2. Construct the likelihood function across the sample
+
+::: columns
+::: {.column width="67%"}
+
+-   Since there are $n$ subjects in the data, and **each subject is considered independent of each other**, the likelihood function for the whole data can be expressed as: 
+
+$$l(\beta_0, \beta_1) = \prod_{i=1}^{n}{\pi(X_i)^{Y_i} (1-\pi(X_i)) ^ {1-Y_i}}$$
+:::
+
+::: {.column width="33%"}
+::: example
+::: ex-title
+Recall
+:::
+::: ex-cont
+-   $Y_i$: Response variable of the $i$th subject
+-   $X_i$: Independent variable for the $i$th subject
+-   $\pi\left(X_i\right)=\Pr{\left(Y_i=1\middle|\ X_i\right)}$
+-   $1-\pi\left(X_i\right)=\Pr(Y_i=0|X_i)$
+
+:::
+:::
+:::
+:::
+
+## 3. Convert to log-likelihood
+
+::: columns
+::: {.column width="67%"}
+
+-   Mathematically, it is easier to work with the **log likelihood** function for maximization
+
+-   The log likelihood function is: $$\begin{aligned}L\left(\beta_0,\beta_1\right) &=\ln{\left(l\left(\beta_0,\beta_1\right)\right)} \\ & = 
+\sum_{i=1}^{n}\bigg[Y_i\cdot\text{ln}[\pi(X_i)] + (1-Y_i)\cdot\text{ln}[1-\pi(X_i)] \bigg] 
+\end{aligned}$$
+
+:::
+
+::: {.column width="33%"}
+::: example
+::: ex-title
+Recall
+:::
+::: ex-cont
+-   $Y_i$: Response variable of the $i$th subject
+-   $X_i$: Independent variable for the $i$th subject
+-   $\pi\left(X_i\right)=\Pr{\left(Y_i=1\middle|\ X_i\right)}$
+-   $1-\pi\left(X_i\right)=\Pr(Y_i=0|X_i)$
+
+:::
+:::
+:::
+:::
+
+## 4. Find MLEs that maximize log-likelihood
+
+-   To find $\beta_0$ and $\beta_1$ that maximizes $L\left(\beta_0,\beta_1\right)$:
+
+    -   We **differentiate $L\left(\beta_0,\beta_1\right)$** with respect to $\beta_0$ and $\beta_1$...
+    -   And **set the resulting expression to zero**
+
+     
+
+-   Such equations are called likelihood equations.
+	
+	   -   $\sum\left[Y_i-\pi\left(X_i\right)\right]=0$
+	   -   $\sum\ X_i\left[Y_i-\pi\left(X_i\right)\right]=0$
+
+     
+
+-   In logistic regression, there is no "closed form" solution to the above equations
+-   Need to use iterative algorithm, such as iteratively reweighted least squares (IWLS) algorithm, should be used to find the MLEs for logistic regression
+
+## Poll Everywhere Question 5
+
+
+## How do perform MLE in R?
+
+-   `glm()` function automatically does MLE for you
+
+    -   For logistic regression with a binary outcome, we need to set the `family` within `glm()` to "binomial" which will automatically set the logit link
+    
+-   You can explore other algorithms (other than IWLS) to maximize the likelihood
+
+    -   Pretty good [Cross Validated](https://stats.stackexchange.com/questions/178492/which-optimization-algorithm-is-used-in-glm-function-in-r) post on algorithms in `glm()`
+    
+## Example: Breast cancer diagnosis (1/3)
+
+-   Let's start with simple logistic regression with late stage breast cancer diagnosis as the outcome and age as our independent variable
+
+ 
+    
+-   We want to fit: $$\text{logit}(\pi(Age)) = \beta_0 + \beta_1 \cdot Age$$
+
+    -   Don't forget: $\pi(Age) = P(Y=1 | Age) = P(\text{Late stage BC diagnosis}| Age)$
+    
+## Example: Breast cancer diagnosis (2/3)
+
+
+```{r}
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+summary(bc_reg)
+```
+
+## Example: Breast cancer diagnosis (3/3)
+
+-   Translate the results back to an equation!
+
+-   Just going to pull the coefficients so I have a reference as I create the fitted regression model:
+
+::: columns
+::: {.column width="65%"}
+```{r}
+summary(bc_reg)$coefficients
+```
+
+-   Fitted logistic regression model: $$\text{logit}(\pi(Age)) = `r round(summary(bc_reg)$coefficients[1,1], 3)` + `r round(summary(bc_reg)$coefficients[2,1], 3)` \cdot Age$$
+
+[We will need to reverse the transformation process in slide 24-25 to find the odds ratios]{style="color:white;"}
+
+
+:::
+
+::: {.column width="35%"}
+
+:::
+:::
+
+## Example: Breast cancer diagnosis (3/3)
+
+-   Translate the results back to an equation!
+
+-   Just going to pull the coefficients so I have a reference as I create the fitted regression model:
+
+::: columns
+::: {.column width="65%"}
+```{r}
+summary(bc_reg)$coefficients
+```
+
+-   Fitted logistic regression model: $$\text{logit}(\pi(Age)) = `r round(summary(bc_reg)$coefficients[1,1], 3)` + `r round(summary(bc_reg)$coefficients[2,1], 3)` \cdot Age$$
+
+We will need to reverse the transformation process in slide 24-25 to find the odds ratios
+
+-   Will do in next week's lessons
+:::
+::: {.column width="35%"}
+-   This is the fitted line: 
+```{r}
+#| echo: false
+#| fig-height: 6
+#| fig-width: 7
+
+log_odds_stage
+```
+:::
+:::
 
 # Learning Objectives
+
+1.  Recognize why the tests we've learned so far are not flexible enough for continuous covariates or multiple covariates.
+
+2.  Recognize why linear regression cannot be applied to categorical outcomes with two levels
+
+3.  Identify the simple logistic regression model and define key notation in statistics language
+
+4.  Connect linear and logistic regression to the larger group of models, generalized linear model
+
+5.  Determine coefficient estimates using maximum likelihood estimation (MLE) and apply it in R
