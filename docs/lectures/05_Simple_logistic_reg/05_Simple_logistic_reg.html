@@ -1102,7 +1102,7 @@ Nicky Wakim
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li>The <strong>contribution from the <span class="math inline">\(i\)</span>th subject</strong> to the likelihood function can be expressed as: <span class="math display">\[\pi\left(X_i\right)^{X_i}\left[1-\pi\left(X_i\right)\right]^{1-X_i}\]</span></li>
+<li>The <strong>contribution from the <span class="math inline">\(i\)</span>th subject</strong> to the likelihood function can be expressed as: <span class="math display">\[\pi\left(X_i\right)^{Y_i}\left[1-\pi\left(X_i\right)\right]^{1-Y_i}\]</span></li>
 </ul>
 </div><div class="column" style="width:33%;">
 <div class="example">
@@ -1189,7 +1189,7 @@ Nicky Wakim
 </ul>
 <p>&nbsp;</p></li>
 <li><p>In logistic regression, there is no “closed form” solution to the above equations</p></li>
-<li><p>Need to use iterative algorithm, such as iteratively reweighted least squares (IWLS) algorithm, should be used to find the MLEs for logistic regression</p></li>
+<li><p>Need to use iterative algorithm, such as iteratively reweighted least squares (IRLS) algorithm, should be used to find the MLEs for logistic regression</p></li>
 </ul>
 </section>
 <section id="poll-everywhere-question-5" class="slide level2">
@@ -1202,7 +1202,7 @@ Nicky Wakim
 <ul>
 <li>For logistic regression with a binary outcome, we need to set the <code>family</code> within <code>glm()</code> to “binomial” which will automatically set the logit link</li>
 </ul></li>
-<li><p>You can explore other algorithms (other than IWLS) to maximize the likelihood</p>
+<li><p>You can explore other algorithms (other than IRLS) to maximize the likelihood</p>
 <ul>
 <li>Pretty good <a href="https://stats.stackexchange.com/questions/178492/which-optimization-algorithm-is-used-in-glm-function-in-r">Cross Validated</a> post on algorithms in <code>glm()</code></li>
 </ul></li>
