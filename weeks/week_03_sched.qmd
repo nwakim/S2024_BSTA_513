@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic                                                    |                                                                Slides                                                                |                                                                    Annotated Slides                                                                     |                                                               Recording                                                                |
+| Lesson | Topic                                    |                                                                Slides                                                                |                                                                    Annotated Slides                                                                     |                                                               Recording                                                                |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 5      | Simple Logistic Regression                               | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/05_Simple_logistic_reg/05_Simple_logistic_reg_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/5ab6c501-bc15-427e-9199-766526c7f9eb/public)]{style="color:#f8f5f0;"} |
-| 6      | Introduction to hypothesis tests for Logistic Regression |                                [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                 |                                   [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                    |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
+| 5      | Simple Logistic Regression               | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/05_Simple_logistic_reg/05_Simple_logistic_reg_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/5ab6c501-bc15-427e-9199-766526c7f9eb/public)]{style="color:#f8f5f0;"} |
+| 6      | Tests for GLMs using Likelihood function |          [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/06_Tests_GLMs/06_Tests_GLMs.qmd)]{style="color:#f8f5f0;"}          |                                   [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                    |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
 
 If you ever have trouble with the above links to the videos, [this Echo360 link](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public) should take you to our class page.
 
@@ -51,6 +51,8 @@ If you ever have trouble with the above links to the videos, [this Echo360 link]
 
 ## Announcements
 
+### Monday 4/15
+
 -   I am trying to stay on track of the Exit tickets this quarter
 
     -   That may mean you have a 0 in your gradebook
@@ -58,6 +60,10 @@ If you ever have trouble with the above links to the videos, [this Echo360 link]
     -   As long as you complete the exit ticket within the 7 days, I will change the 0 to a 1
 
     -   I plan to have a scheduled block on Fridays to check them
+
+### Wednesday 4/17
+
+-   Quiz 1 info
 
 ## Muddiest Points
 
