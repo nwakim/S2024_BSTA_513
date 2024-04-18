@@ -99,6 +99,24 @@ A high number suggests that the model did NOT converge! Thus, we did not land on
 
 We are focusing on logistic! We cannot use linear regression on our binary outcomes anymore. When I say "linear" mapping I mean the mapping between our covariates and the transformed mean outcome using the link function.
 
+### 6. By the end of class (Lesson 6) my understanding is that the saturated model likelihood is the same between the two models being compared, right?
+
+Yep!!
+
+### 7. The differences between each test and when to use them. 
+
+In terms of what each test is measuring:
+
+-   The Wald test measures the distance between two potential values of $\beta$. One under the null and one under the alternative. The further they are from each other, the more evidence we have that they are different.
+
+    -   The Wald test approximates the differences in the likelihood function, but we do not actually compare the likelihoods under the null vs. alternative. We are only comparing the difference in the $\beta$ value, that is a reasonable approximation of the difference in the likelihood.
+
+-   The Score test measures how close the tangent line of the likelihood function is to 0 (under the null). If it is close to 0 under the null, this indicates that our MLE of $\beta$ is not far from 0. Again, this is no a direct comparison of the likelihoods, but only an approximation of the difference.
+
+-   The likelihood ratio test measures the difference in the log-likelihoods. This is a direct comparison of likelihoods, and is not an approximation!
+
+    -   Thus, we compare the likelihoods (horizontally, as someone asked) because we are making direct comparisons between the likelihood under the null and under the alternative.
+
 ```{r}
 #| echo: false
 

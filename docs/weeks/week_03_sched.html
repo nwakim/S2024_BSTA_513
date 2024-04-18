@@ -248,6 +248,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#is-glm-the-umbrella-over-the-other-functions-the-4-functions-all-use-different-distributions-yes" id="toc-is-glm-the-umbrella-over-the-other-functions-the-4-functions-all-use-different-distributions-yes" class="nav-link" data-scroll-target="#is-glm-the-umbrella-over-the-other-functions-the-4-functions-all-use-different-distributions-yes">3. Is GLM the umbrella over the other functions? The 4 functions all use different distributions, yes?</a></li>
   <li><a href="#what-would-you-need-to-change-in-your-model-to-reduce-a-high-irls-number-as-i-understand-it-from-the-lecture-a-high-number-suggests-convergence-but-it-appeared-like-something-unfavorable-even-though-a-model-that-converges-might-be-closer-to-maximum-likelihood-or-maybe-the-distance-to-maximum-likelihood" id="toc-what-would-you-need-to-change-in-your-model-to-reduce-a-high-irls-number-as-i-understand-it-from-the-lecture-a-high-number-suggests-convergence-but-it-appeared-like-something-unfavorable-even-though-a-model-that-converges-might-be-closer-to-maximum-likelihood-or-maybe-the-distance-to-maximum-likelihood" class="nav-link" data-scroll-target="#what-would-you-need-to-change-in-your-model-to-reduce-a-high-irls-number-as-i-understand-it-from-the-lecture-a-high-number-suggests-convergence-but-it-appeared-like-something-unfavorable-even-though-a-model-that-converges-might-be-closer-to-maximum-likelihood-or-maybe-the-distance-to-maximum-likelihood">4. What would you need to change in your model to reduce a high IRLS number? As I understand it from the lecture, a high number suggests convergence but it appeared like something unfavorable even though a model that converges might be closer to maximum likelihood or maybe the distance to maximum likelihood</a></li>
   <li><a href="#were-using-linear-vs-logistic-but-which-are-we-focusing-on-regarding-linear-how-does-linear-used-in-categorical-differ-from-continuous" id="toc-were-using-linear-vs-logistic-but-which-are-we-focusing-on-regarding-linear-how-does-linear-used-in-categorical-differ-from-continuous" class="nav-link" data-scroll-target="#were-using-linear-vs-logistic-but-which-are-we-focusing-on-regarding-linear-how-does-linear-used-in-categorical-differ-from-continuous">5. We’re using linear vs logistic, but which are we focusing on? Regarding linear, how does linear used in categorical differ from continuous?</a></li>
+  <li><a href="#by-the-end-of-class-lesson-6-my-understanding-is-that-the-saturated-model-likelihood-is-the-same-between-the-two-models-being-compared-right" id="toc-by-the-end-of-class-lesson-6-my-understanding-is-that-the-saturated-model-likelihood-is-the-same-between-the-two-models-being-compared-right" class="nav-link" data-scroll-target="#by-the-end-of-class-lesson-6-my-understanding-is-that-the-saturated-model-likelihood-is-the-same-between-the-two-models-being-compared-right">6. By the end of class (Lesson 6) my understanding is that the saturated model likelihood is the same between the two models being compared, right?</a></li>
+  <li><a href="#the-differences-between-each-test-and-when-to-use-them." id="toc-the-differences-between-each-test-and-when-to-use-them." class="nav-link" data-scroll-target="#the-differences-between-each-test-and-when-to-use-them.">7. The differences between each test and when to use them.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -398,6 +400,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="were-using-linear-vs-logistic-but-which-are-we-focusing-on-regarding-linear-how-does-linear-used-in-categorical-differ-from-continuous" class="level3">
 <h3 class="anchored" data-anchor-id="were-using-linear-vs-logistic-but-which-are-we-focusing-on-regarding-linear-how-does-linear-used-in-categorical-differ-from-continuous">5. We’re using linear vs logistic, but which are we focusing on? Regarding linear, how does linear used in categorical differ from continuous?</h3>
 <p>We are focusing on logistic! We cannot use linear regression on our binary outcomes anymore. When I say “linear” mapping I mean the mapping between our covariates and the transformed mean outcome using the link function.</p>
+</section>
+<section id="by-the-end-of-class-lesson-6-my-understanding-is-that-the-saturated-model-likelihood-is-the-same-between-the-two-models-being-compared-right" class="level3">
+<h3 class="anchored" data-anchor-id="by-the-end-of-class-lesson-6-my-understanding-is-that-the-saturated-model-likelihood-is-the-same-between-the-two-models-being-compared-right">6. By the end of class (Lesson 6) my understanding is that the saturated model likelihood is the same between the two models being compared, right?</h3>
+<p>Yep!!</p>
+</section>
+<section id="the-differences-between-each-test-and-when-to-use-them." class="level3">
+<h3 class="anchored" data-anchor-id="the-differences-between-each-test-and-when-to-use-them.">7. The differences between each test and when to use them.</h3>
+<p>In terms of what each test is measuring:</p>
+<ul>
+<li><p>The Wald test measures the distance between two potential values of <span class="math inline">\(\beta\)</span>. One under the null and one under the alternative. The further they are from each other, the more evidence we have that they are different.</p>
+<ul>
+<li>The Wald test approximates the differences in the likelihood function, but we do not actually compare the likelihoods under the null vs.&nbsp;alternative. We are only comparing the difference in the <span class="math inline">\(\beta\)</span> value, that is a reasonable approximation of the difference in the likelihood.</li>
+</ul></li>
+<li><p>The Score test measures how close the tangent line of the likelihood function is to 0 (under the null). If it is close to 0 under the null, this indicates that our MLE of <span class="math inline">\(\beta\)</span> is not far from 0. Again, this is no a direct comparison of the likelihoods, but only an approximation of the difference.</p></li>
+<li><p>The likelihood ratio test measures the difference in the log-likelihoods. This is a direct comparison of likelihoods, and is not an approximation!</p>
+<ul>
+<li>Thus, we compare the likelihoods (horizontally, as someone asked) because we are making direct comparisons between the likelihood under the null and under the alternative.</li>
+</ul></li>
+</ul>
 
 
 </section>
