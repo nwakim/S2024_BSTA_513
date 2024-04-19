@@ -1,0 +1,231 @@
+---
+title: "Lesson 7: Prediction and Visualization in Simple Logistic Regression"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/17/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 7: Prediction and Visualization in Simple Logistic Regression"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
+library(lmtest)
+library(epiDisplay)
+
+load(here("data", "bc_diagnosis.Rda"))
+mean_age = mean(bc$Age)
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+```
+
+# Learning Objectives
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+## Predicted Probability
+
+-   We may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.
+-   The predicted probability is the estimated probability of having the event for given values of covariate(s)
+-   In simple logistic regression, the predicted probability is: $$\hat{\pi}\left(X\right)=\frac{\exp({\hat{\beta}}_0+{\hat{\beta}}_1X)}{1+\exp({\hat{\beta}}_0+{\hat{\beta}}_1X)}$$
+
+-   We can calculate this using the the `predict()` function like in BSTA 512
+
+## Confidence Interval of Predicted Probability
+
+-   Not as easy to construct
+-   I have searched around for a function that does this for us, but I cannot find one
+-   So we have to construct the confidence interval "by hand"
+-   There are a couple ways to do this
+
+    -   Construct the 95% confidence interval in the logit scale, then convert to probability scale
+    -   Use Normal approximation (if appropriate) to construct confidence interval in probability scale
+
+## 95% confidence interval in logit scale
+
+-   We start by predicting the log-odds and forming 
+
+## Example: Late stage breast cancer diagnosis
+
+::: example
+::: ex-title
+Predicting probability of late stage breast cancer diagnosis
+:::
+::: ex-cont
+For someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?
+:::
+:::
+
+**Needed steps:**
+
+1. Calculate estimate and confidence interval
+2. Interpret results
+
+## Example: Late stage breast cancer diagnosis
+
+::: example
+::: ex-title
+Predicting probability of late stage breast cancer diagnosis
+:::
+::: ex-cont
+For someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?
+:::
+:::
+
+1. Calculate estimate and confidence interval
+
+```{r}
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+
+newdata = data.frame(Age_c = 60 - mean_age)
+
+pred = predict(bc_reg, newdata = newdata, se.fit = T, type = "response")
+
+LL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit
+UL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit
+
+c(Pred = pred$fit, LL_CI, UL_CI) %>% round(digits=3)
+
+pred1 = predict(bc_reg, newdata = newdata, se.fit = T, type = "link")
+
+LL_CI1 = pred1$fit - qnorm(1-0.05/2) * pred1$se.fit
+UL_CI1 = pred1$fit + qnorm(1-0.05/2) * pred1$se.fit
+
+pred_link = c(Pred = pred1$fit, LL_CI1, UL_CI1)
+(exp(pred_link)/(1+exp(pred_link))) %>% round(., digits=3)
+inv.logit(pred_link) %>% round(., digits=3)
+```
+
+## Example: Late stage breast cancer diagnosis
+
+::: example
+::: ex-title
+Predicting probability of late stage breast cancer diagnosis
+:::
+::: ex-cont
+For someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?
+:::
+:::
+
+2. Interpret results
+
+For someone who is 60 years old, the predicted probability of late stage breast cancer diagnosis is 0.252 (95% CI: 0.243, 0.261).
+
+## Predicted Probability
+
+-   Predicted probability is NOT our predicted outcome
+
+    -   We cannot interpret it as the predicted Y for individuals with certain covariate values
+
+    -   Example: our predicted probability does not tell us that one individual is or is not diagnosed with late stage breast cancer
+
+-   The predicted probability is the estimate of the mean (i.e., proportion) of individuals at a certain age who are diagnosed with late stage breast cancer
+
+## Predicted outcome
+
+-   Typically, the predicted probability is the most important thing to use in a clinical setting
+
+-   If you ever need to predict the outcome itself, remember that the predicted probability can be used in a Bernoulli distribution to find the predicted outcome
+
+-   By putting it back through a Bernoulli distribution, we are re-introducing the random component of our observed outcome
+
+```{r}
+set.seed(8392)
+rbinom(n=1, size=1, prob = pred$fit)
+rbinom(n=10, size=1, prob = pred$fit)
+```
+
+## We can also make a plot of all the predictions
+
+## Visualization
+
+```{r}
+#| echo: false
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+stage = ggplot(data = bc, aes(x=Age_c, y = Late_stage_num)) + 
+  geom_point(size = 4, color = "#ED7D31", shape = 1) +
+  #geom_abline(se = FALSE, size = 3, colour="#D6295E") +
+  labs(x = "Age centered (yrs)", 
+       y = "\n Late stage BC diagnosis")  + theme_classic() +
+    theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30))
+
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+bc_aug = augment(bc_reg)
+
+library(boot)
+prob_stage = ggplot(data = bc_aug, aes(x=Age_c, y = inv.logit(.fitted))) + 
+  geom_point(size = 4, color = "#70AD47", shape = 1) +
+  labs(x = "Age centered (yrs)", 
+       y = "Probability of \n Late stage BC diagnosis")  + theme_classic() +
+    theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30)) +
+  ylim(0, 1)
+```
+
+```{r}
+#| fig-height: 5
+#| fig-width: 20
+#| fig-align: left
+#| echo: false
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+bc_aug = augment(bc_reg)
+
+log_odds_stage = ggplot(data = bc_aug, aes(x=Age_c, y = .fitted)) + 
+  geom_point(size = 4, color = "#D6295E", shape = 1) +
+  labs(x = "Age centered (yrs)", 
+       y = "Log-odds of \n Late stage BC diagnosis")  + theme_classic() +
+      theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30))
+
+ggarrange(stage, prob_stage, log_odds_stage, nrow=1)
+```
+
+## Visualization of ORs?

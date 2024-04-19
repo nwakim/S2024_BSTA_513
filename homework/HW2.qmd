@@ -42,7 +42,7 @@ This homework is designed to help you practice the following important skills an
 
 ## Directions
 
--   [Download the `.qmd` file here.](https://github.com/nwakim/W2024_BSTA_512/blob/main/homework/HW2.qmd)
+-   [Download the `.qmd` file here.](https://github.com/nwakim/S2024_BSTA_513/blob/main/homework/HW2.qmd)
 
 -   You will need to download the datasets. Use [this link to download](https://ohsuitg-my.sharepoint.com/:f:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/Data/Homework/HW2?csf=1&web=1&e=v9BP7D) the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named "data" that is housed in the same location as this homework `.qmd` file.
 

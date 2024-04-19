@@ -1,0 +1,176 @@
+---
+title: "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/17/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
+library(lmtest)
+library(epiDisplay)
+
+load(here("data", "bc_diagnosis.Rda"))
+mean_age = mean(bc$Age)
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+```
+
+## Last time to this time
+
+-   Used the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model
+
+-   This time: Interpret using odds ratio
+
+# Learning Objectives
+
+1.    Interpret odds ratios from fitted simple logistic regression model for a continuous explanatory variable.
+
+2.    Visualize the odds ratio using a forest plot.
+
+3.    Visualize the log-odds from fitted simple logistic regression model for a continuous explanatory variable.
+
+
+## So far we've looked at the association using the log-odds scale
+
+::: columns
+::: {.column width="48%"}
+For a *population* simple logistic regression model with a continuous predictor $$\text{logit}(\pi(X)) = \beta_0 + \beta_1 \cdot X$$
+
+-   $\beta_0$: log-odds when X is 0
+-   $\beta_1$: increase in log-odds for every 1 unit increase in X
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+For our *fitted* simple logistic regression model with a continuous predictor $$\text{logit}(\widehat{\pi}(X)) = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot X$$
+
+-   $\widehat{\beta}_0$: estimated log-odds of $Y=1$ when X is 0.
+-   $\widehat{\beta}_1$: estimated increase in log-odds of $Y=1$ for every 1 unit increase in X
+-   Can use expected instead of estimated
+:::
+:::
+
+## Example: From last class
+
+
+```{r}
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+tidy(bc_reg, conf.int=T) %>% gt() %>% tab_options(table.font.size = 35) %>%
+  fmt_number(decimals = 3)
+```
+
+-   For our *fitted* simple logistic regression model with age as a predictor $$\text{logit}(\widehat{\pi}(Age^c)) = −0.989	 + 0.057	 \cdot Age^c$$
+
+-   $\widehat{\beta}_0$: The estimated log-odds is -0.989 when age is `r round(mean_age, 2)` years (95% CI: -1.035, -0.944)
+-   $\widehat{\beta}_1$: The estimated increase in log-odds is 0.057 for every 1 year increase in age (95% CI: 0.051, 0.063).
+
+## We typically interpret our results using odds ratios
+
+For our *fitted* simple logistic regression model with a continuous predictor $$\text{logit}(\widehat{\pi}(X)) = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot X$$
+
+-   How do we go from interpretations of $\widehat{\beta}_0$ and $\widehat{\beta}_1$ using log odds to odds ratios?
+
+-   We will need to take the exponential of our model:
+
+    -   $\text{exp}(\widehat{\beta}_0)$: expected odds that $Y=1$ when X is 0. 
+    -   $\text{exp}(\widehat{\beta}_1)$: expected odds ratio that $Y=1$ for every 1 unit increase in X
+
+## How do we get the odds for the intercept?
+
+For $\text{exp}(\widehat{\beta}_0)$
+
+-   When $X=0$, we have $$\text{logit}(\widehat{\pi}(X=0)) = \widehat{\beta}_0$$
+
+-   Thus, $$\begin{aligned} \widehat{\beta}_0 & = \text{logit}(\widehat{\pi}(X)) \\
+\text{exp}\big[\widehat{\beta}_0\big] & = \text{exp}\big[\text{logit}(\widehat{\pi}(X))\big] \\ 
+\text{exp}\big[\widehat{\beta}_0\big] & = \text{exp}\Bigg[\text{log}\Bigg(\dfrac{\widehat{\pi}(X)}{1-\widehat{\pi}(X)}\Bigg)\Bigg] \\ 
+\text{exp}\big[\widehat{\beta}_0\big] & = \dfrac{\widehat{\pi}(X)}{1-\widehat{\pi}(X)} \\ 
+\end{aligned}$$
+
+## How do we get the odds ratio for X's coefficient?
+
+::: columns
+::: {.column width="42%"}
+For $\text{exp}(\widehat{\beta}_1)$
+
+-   We compare $X=x$ and $X=x+1$, 
+-   So we have $$\text{logit}(\widehat{\pi}(X = x)) = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot x$$ and $$\text{logit}(\widehat{\pi}(X = x+1)) = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot (x+1)$$
+-   And... $$\begin{aligned} & \text{logit}(\widehat{\pi}(X = x+1)) - \text{logit}(\widehat{\pi}(X = x)) \\ & =  
+\widehat{\beta}_0 + \widehat{\beta}_1 \cdot (x+1) - \big[\widehat{\beta}_0 + \widehat{\beta}_1 \cdot x \big] \\ &= \widehat{\beta}_0 + \widehat{\beta}_1 \cdot x + \widehat{\beta}_1 - \widehat{\beta}_0 - \widehat{\beta}_1 \cdot x \\ & = 
+\widehat{\beta}_1 \end{aligned}$$
+:::
+
+::: {.column width="58%"}
+-   Thus, $$\begin{aligned} \widehat{\beta}_1 & =  \text{logit}(\widehat{\pi}(X = x+1)) - \text{logit}(\widehat{\pi}(X = x)) \\
+\widehat{\beta}_1 & =  \text{log}\Bigg(\dfrac{\widehat{\pi}(X=x+1)}{1-\widehat{\pi}(X=x+1)}\Bigg) - \text{log}\Bigg(\dfrac{\widehat{\pi}(X=x)}{1-\widehat{\pi}(X=x)}\Bigg) \\ 
+\widehat{\beta}_1 & =  \text{log}\left(\frac{\dfrac{\widehat{\pi}(X=x+1)}{1-\widehat{\pi}(X=x+1)}} {\dfrac{\widehat{\pi}(X=x)}{1-\widehat{\pi}(X=x)}}\right) \\ 
+\text{exp}\big[\widehat{\beta}_1\big] & =  \text{exp}\left[\text{log}\left(\frac{\text{odds}_{X=x+1}} {\text{odds}_{X=x}}\right) \right] \\ 
+\text{exp}\big[\widehat{\beta}_1\big] & =  \frac{\text{odds}_{X=x+1}} {\text{odds}_{X=x}} \\ 
+\end{aligned}$$
+:::
+:::
+
+## Example
+
+-   How do we do this in R?
+
+```{r}
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+tidy(bc_reg, conf.int=T, exponentiate=T) %>% gt() %>% 
+  tab_options(table.font.size = 35) %>% fmt_number(decimals = 3)
+logistic.display(bc_reg, decimal = 3)
+```
+
+## Transformations of continuous variable to make more interpretable
+
+-   Sometimes a change in “1” unit may not be considered clinically interesting
+
+    -   For example, a 1 year increase in age or a 1 mm Hg increase in systolic blood pressure may be too small for a meaningful change in log odds
+
+    -   Instead, we may be interested to find out the log odds change for a increase of 10 years in age or 10 mm Hg in systolic blood pressure
+
+    -   On the other hand, if the range of x is small (say 0-1), than a change in 1 unit of 𝑥 is too large to be meaningful
+
+-   We should be able to compute and interpret coefficients for a continuous independent covariate 𝑥 for an arbitrary change of “c” units in 𝑥
+
+
+## Example
+
+For our *fitted* simple logistic regression model with age as a predictor $$\text{logit}(\widehat{\pi}(Age)) = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot Age$$
+
+-   $\widehat{\beta}_0$: estimated log-odds when age is `r round(mean_age, 2)` years
+-   $\widehat{\beta}_1$: estimated increase in log-odds for every 1 year increase in age
+

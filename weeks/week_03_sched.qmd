@@ -31,7 +31,7 @@ editor_options:
 ## Resources
 
 | Lesson | Topic                                    |                                                                Slides                                                                |                                                                    Annotated Slides                                                                     |                                                               Recording                                                                |
-|---------------|---------------|:-------------:|:-------------:|:-------------:|
+|--------|------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|
 | 5      | Simple Logistic Regression               | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/05_Simple_logistic_reg/05_Simple_logistic_reg_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/5ab6c501-bc15-427e-9199-766526c7f9eb/public)]{style="color:#f8f5f0;"} |
 | 6      | Tests for GLMs using Likelihood function |          [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/06_Tests_GLMs/06_Tests_GLMs.qmd)]{style="color:#f8f5f0;"}          |          [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/06_Tests_GLMs/06_Tests_GLMs_notes.pdf)]{style="color:#f8f5f0;"}          | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/f28738d1-e2bf-47b7-9a2b-25075009f371/public)]{style="color:#f8f5f0;"} |
 
@@ -103,7 +103,7 @@ We are focusing on logistic! We cannot use linear regression on our binary outco
 
 Yep!!
 
-### 7. The differences between each test and when to use them. 
+### 7. The differences between each test and when to use them.
 
 In terms of what each test is measuring:
 

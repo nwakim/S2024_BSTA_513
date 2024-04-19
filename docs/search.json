@@ -1425,7 +1425,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nLogistic Regression and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nConfounding and Interactions\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nModel Building Strategies\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nFlex Week / Spill Over\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nPrediction, Visualization, and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nConfounding and Interactions\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nModel Building Strategies\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nFlex Week / Spill Over\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_03_sched.html#resources",
@@ -1467,14 +1467,14 @@
     "href": "weeks/week_04_sched.html#resources",
     "title": "Week 4",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nInterpretations in Simple Logistic Regression\n\n\n\n\n\n8\nMultiple Logistic Regression"
+    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations in Simple Logistic Regression"
   },
   {
     "objectID": "weeks/week_04_sched.html#on-the-horizon",
     "href": "weeks/week_04_sched.html#on-the-horizon",
     "title": "Week 4",
     "section": "On the Horizon",
-    "text": "On the Horizon"
+    "text": "On the Horizon\n\nHomework 2 due this Thursday"
   },
   {
     "objectID": "weeks/week_04_sched.html#class-exit-tickets",
@@ -3771,5 +3771,537 @@
     "title": "Lesson 6: Tests for GLMs using Likelihood function",
     "section": "Tests and what they’re used for (filled)",
     "text": "Tests and what they’re used for (filled)\n\n\n\n\n\n\n\n\n\n\nWald test\nScore test\nLRT\n\n\n\n\nUsed to test significance of single coefficient\n\n\n\n\n\nCan be used to report confidence interval for a single coefficient\n\n\n\n\n\nConfidence interval reported by R for a single coefficient (and most commonly used)\n\n\n\n\n\nUse to test significance/contribution to outcome prediction of multi-level categorical covariate\n\n\n\n\n\nUsed for comparing two models with different (but nested) covariates"
+  },
+  {
+    "objectID": "project/LastName_FirstInit_Lab_02.html",
+    "href": "project/LastName_FirstInit_Lab_02.html",
+    "title": "Lab 2",
+    "section": "",
+    "text": "This lab is graded out of 12 points. The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+  },
+  {
+    "objectID": "project/LastName_FirstInit_Lab_02.html#directions",
+    "href": "project/LastName_FirstInit_Lab_02.html#directions",
+    "title": "Lab 2",
+    "section": "",
+    "text": "This lab is graded out of 12 points. The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+  },
+  {
+    "objectID": "project/LastName_FirstInit_Lab_02.html#lab-activities",
+    "href": "project/LastName_FirstInit_Lab_02.html#lab-activities",
+    "title": "Lab 2",
+    "section": "2 Lab activities",
+    "text": "2 Lab activities"
+  },
+  {
+    "objectID": "project/Project_report_instructions.html",
+    "href": "project/Project_report_instructions.html",
+    "title": "Project Report Instructions",
+    "section": "",
+    "text": "Project template\n\n\n\nYou may use this project template to get started on the report. It is your responsibility to meet the formatting guidelines below!!\nDO NOT USE SITE PAGE (“Project Report Instructions”, current page) as your template!!\n\n\n\n\nProject reports serve as a great way to communicate the knowledge learned in a statistics class and connect it to context within research. It is important that we can take a step back from the numbers and analysis to see what questions linear regression can help us answer.\n\n\n\n\nThe report will be written in Quarto. Turn in both the qmd and html files\n\nNo code should appear in the html document\n\nThis means all R code chunks should have #| echo: false\nThis also means warnings and messages should be turned off\n\n\nThe report should be 10 - 14 paragraphs long\nTables and figures should NOT have variable names as they appear in the data frame\n\nVariable names should be understood by a reader\nVariable names should be written in full words\nInclude a title or caption for all figures\nFigure and tables appear on same page or close to same page where they are first referenced\nTables and figures are an appropriate size in the html - Nicky is able to read all words in figures and tables\n\nWriting, spelling, and grammar should be admissable\n\nThis means I can generally follow your thought/what you are trying to communicate\nSome spelling and grammar mistakes are allowed\n\nI will not take off points if there are a few sprinkled in\nIf every or close to every sentence has mistakes, then I will take off\n\n\nSectioning of the report\n\nMain sections that were required: Introduction, Statistical Methods, Results, Discussion, Conclusion, and References\nOther sections that might help group specific methods or results\n\nTitle information at the top of the html\n\nThis includes the title itself, your name, and the date\n\n\n\n\n\n\n\n\nThe project report is a separate file from the labs\n\n\n\nYou can save tables and figures from labs or separate files, then load them in the report\n\nSave R objects in analyses file:\n\nSuppose you named the Table 1 as table1\nsave(table1, file = \"table1.Rdata\")\n\nLoad R objects in report file: load(file = \"table1.Rdata\")\n\n\n\n\n\n\nThe following are examples of reports from BSTA 513 with the feedback that I gave them.\nPlease note that 513 uses a different type of outcome than our class. These examples are meant to help guide you with the formatting and some appropriate content.\nAlso note that these were converted to PDFs so I could write in feedback. Some of the tables and figure sizes were distorted. They need to be legible in the html.\n\nReport 1 with my feedback\nReport 2 with my feedback\n\nThe above reports have code showing in their html. Remember that I am asking you to hide all code, warnings, and messages.\n\n\n\nThe project report is out of 36 points. Note that the Statistical Methods and Results sections are graded on an 8-point scale, while all other components are graded on a 4-point scale.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences with very few grammatical or spelling errors. With little editing, the report can be distributed.\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences with some (around 2 per section) grammatical or spelling errors. With some editing, the report can be distributed.\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences, but have many grammatical or spelling errors. With major editing, the report can be distributed.\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences, but are very hard to follow due to grammar mistakes.\nLab not submitted on Sakai (or by email if late) with .html file. Report is not written with complete sentences. With major editing, the report can be distributed.\n\n\nFigures and work\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. Figures and tables look professional, are easily interpreted by the reader, and easily convey the intended message.\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. For the most part, figures and tables look professional, are easily interpreted by the reader, and easily convey the intended message. A few mistakes in the figures are made.\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. Figures and tables look semi-professional, are not so easily interpreted by the reader, and convey the intended message but after some work by the reader. Some mistakes in the figures are made.\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. Figures and tables do not look professional, are not easily interpreted by the reader, and/or do not convey the intended message. Many mistakes in the figures are made.\nRequested output is not displayed, Missing one or more figures.\n\n\nIntroduction\nProvides a good background for the research question, includes motivation for the question, and references previous research that justifies this analysis.\nProvides a decent background for the research question and includes motivation for the question. Previous research is mentioned, but feels disconnected to the current analysis.\nProvides a decent background for the research question and includes motivation for the question. Previous research is mentioned, but feels disconnected to the current analysis.\nDoes not provide a background that connects to the research question. Motivation and previous research are not mentioned.\nNo introduction included.\n\n\nMethods (8 points)\nDescribes statistical methods concisely and highlights pertinent information to the reader (listed Sections below). Demonstrates proper analyses were performed.\nDescribes statistical methods and highlights pertinent information to the reader (listed Sections below). Details were omitted or added that were not needed to explain the overarching methods. Demonstrates proper analyses were performed.\nDescribes statistical methods and highlights pertinent information to the reader (listed Sections below). Details were omitted or added that were not needed to explain the overarching methods. Some incorrect analyses included in the description.\nDescribes statistical methods, but lacks clarity. Demonstrates a lack of understanding about the overall process of regression analysis. Incorrect analyses included in the description.\nNo methods included.\n\n\nResults (8 points)\nCorrectly interprets coefficients for the explanatory variable and identifies any other interesting trends. Highlights pertinent results to the reader (listed Sections below).\nCorrectly interprets coefficients, but does correctly incorporate the interaction (if in the model). Highlights pertinent results to the reader (listed Sections below).\nIncorrectly interprets coefficients. Highlights pertinent results to the reader (listed Sections below).\nIncorrectly interprets coefficients.Omits pertinent results to the reader (listed Sections below).\nNo results included.\n\n\nDiscussion\nThoroughly and concisely discusses limitations and considerations of the results, and their consequences.\nDiscusses limitations and considerations of the results and their consequences, but misses some big considerations.\nDiscusses limitations and considerations of the results, but does not discuss the consequences.\nDiscusses limitations and considerations of the results, but misses many considerations and does not discuss consequences.\nNo discussion included.\n\n\nConclusion and References\nFor the conclusion, main research question is answered and statistical caveats described to non-technical person. References are mostly cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is answered and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is somewhat answered (but focus is not on the research question) and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is somewhat answered (but not the focus at all) and statistical caveats are not described. References are not cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is not answered. Or references are not included at all.\n\n\n\n\nIn formatting, an example of a report with little editing needed is one that has zero to some grammar or spelling mistakes, no code chunks showing, and no output warnings nor messages showing.\nProfessional figures mean\n\nI can read the words and numbers in the html\n\nVariable names are converted from the data frame version to readable text\nFor example: iam_001 does not show up on axes, instead something like: Response to \"Currently, I am...\"\n\nColors are only used if conveying information\nIntended message of the figure is easily understood\n\nIf you are trying to show a trend of mean IAT vs. an ordered categorical variable, then the variable is ordered on the x-axis\n\n\nFor the references\n\nI will not be overly critical about the formatting\nBy consistency, I mean that you if you are citing things like (Last Name, Year) it doesn’t suddenly change to number citations.\nIf you would like to use Quarto’s citation tool, you can! I actually pair it with Zotero and it works beautifully! (But I would not embark on this if you haven’t used Zotero before)"
+  },
+  {
+    "objectID": "project/Project_report_instructions.html#directions",
+    "href": "project/Project_report_instructions.html#directions",
+    "title": "Project Report Instructions",
+    "section": "",
+    "text": "Project template\n\n\n\nYou may use this project template to get started on the report. It is your responsibility to meet the formatting guidelines below!!\nDO NOT USE SITE PAGE (“Project Report Instructions”, current page) as your template!!\n\n\n\n\nProject reports serve as a great way to communicate the knowledge learned in a statistics class and connect it to context within research. It is important that we can take a step back from the numbers and analysis to see what questions linear regression can help us answer.\n\n\n\n\nThe report will be written in Quarto. Turn in both the qmd and html files\n\nNo code should appear in the html document\n\nThis means all R code chunks should have #| echo: false\nThis also means warnings and messages should be turned off\n\n\nThe report should be 10 - 14 paragraphs long\nTables and figures should NOT have variable names as they appear in the data frame\n\nVariable names should be understood by a reader\nVariable names should be written in full words\nInclude a title or caption for all figures\nFigure and tables appear on same page or close to same page where they are first referenced\nTables and figures are an appropriate size in the html - Nicky is able to read all words in figures and tables\n\nWriting, spelling, and grammar should be admissable\n\nThis means I can generally follow your thought/what you are trying to communicate\nSome spelling and grammar mistakes are allowed\n\nI will not take off points if there are a few sprinkled in\nIf every or close to every sentence has mistakes, then I will take off\n\n\nSectioning of the report\n\nMain sections that were required: Introduction, Statistical Methods, Results, Discussion, Conclusion, and References\nOther sections that might help group specific methods or results\n\nTitle information at the top of the html\n\nThis includes the title itself, your name, and the date\n\n\n\n\n\n\n\n\nThe project report is a separate file from the labs\n\n\n\nYou can save tables and figures from labs or separate files, then load them in the report\n\nSave R objects in analyses file:\n\nSuppose you named the Table 1 as table1\nsave(table1, file = \"table1.Rdata\")\n\nLoad R objects in report file: load(file = \"table1.Rdata\")\n\n\n\n\n\n\nThe following are examples of reports from BSTA 513 with the feedback that I gave them.\nPlease note that 513 uses a different type of outcome than our class. These examples are meant to help guide you with the formatting and some appropriate content.\nAlso note that these were converted to PDFs so I could write in feedback. Some of the tables and figure sizes were distorted. They need to be legible in the html.\n\nReport 1 with my feedback\nReport 2 with my feedback\n\nThe above reports have code showing in their html. Remember that I am asking you to hide all code, warnings, and messages.\n\n\n\nThe project report is out of 36 points. Note that the Statistical Methods and Results sections are graded on an 8-point scale, while all other components are graded on a 4-point scale.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences with very few grammatical or spelling errors. With little editing, the report can be distributed.\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences with some (around 2 per section) grammatical or spelling errors. With some editing, the report can be distributed.\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences, but have many grammatical or spelling errors. With major editing, the report can be distributed.\nLab submitted on Sakai (or by email if late) with .html file. Report is written in complete sentences, but are very hard to follow due to grammar mistakes.\nLab not submitted on Sakai (or by email if late) with .html file. Report is not written with complete sentences. With major editing, the report can be distributed.\n\n\nFigures and work\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. Figures and tables look professional, are easily interpreted by the reader, and easily convey the intended message.\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. For the most part, figures and tables look professional, are easily interpreted by the reader, and easily convey the intended message. A few mistakes in the figures are made.\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. Figures and tables look semi-professional, are not so easily interpreted by the reader, and convey the intended message but after some work by the reader. Some mistakes in the figures are made.\nAll requested output is displayed, including 2 required figures and tables, and at least one additional figure. Figures and tables do not look professional, are not easily interpreted by the reader, and/or do not convey the intended message. Many mistakes in the figures are made.\nRequested output is not displayed, Missing one or more figures.\n\n\nIntroduction\nProvides a good background for the research question, includes motivation for the question, and references previous research that justifies this analysis.\nProvides a decent background for the research question and includes motivation for the question. Previous research is mentioned, but feels disconnected to the current analysis.\nProvides a decent background for the research question and includes motivation for the question. Previous research is mentioned, but feels disconnected to the current analysis.\nDoes not provide a background that connects to the research question. Motivation and previous research are not mentioned.\nNo introduction included.\n\n\nMethods (8 points)\nDescribes statistical methods concisely and highlights pertinent information to the reader (listed Sections below). Demonstrates proper analyses were performed.\nDescribes statistical methods and highlights pertinent information to the reader (listed Sections below). Details were omitted or added that were not needed to explain the overarching methods. Demonstrates proper analyses were performed.\nDescribes statistical methods and highlights pertinent information to the reader (listed Sections below). Details were omitted or added that were not needed to explain the overarching methods. Some incorrect analyses included in the description.\nDescribes statistical methods, but lacks clarity. Demonstrates a lack of understanding about the overall process of regression analysis. Incorrect analyses included in the description.\nNo methods included.\n\n\nResults (8 points)\nCorrectly interprets coefficients for the explanatory variable and identifies any other interesting trends. Highlights pertinent results to the reader (listed Sections below).\nCorrectly interprets coefficients, but does correctly incorporate the interaction (if in the model). Highlights pertinent results to the reader (listed Sections below).\nIncorrectly interprets coefficients. Highlights pertinent results to the reader (listed Sections below).\nIncorrectly interprets coefficients.Omits pertinent results to the reader (listed Sections below).\nNo results included.\n\n\nDiscussion\nThoroughly and concisely discusses limitations and considerations of the results, and their consequences.\nDiscusses limitations and considerations of the results and their consequences, but misses some big considerations.\nDiscusses limitations and considerations of the results, but does not discuss the consequences.\nDiscusses limitations and considerations of the results, but misses many considerations and does not discuss consequences.\nNo discussion included.\n\n\nConclusion and References\nFor the conclusion, main research question is answered and statistical caveats described to non-technical person. References are mostly cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is answered and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is somewhat answered (but focus is not on the research question) and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is somewhat answered (but not the focus at all) and statistical caveats are not described. References are not cited consistently within the report, and in the Reference section. This includes the data source!\nFor the conclusion, main research question is not answered. Or references are not included at all.\n\n\n\n\nIn formatting, an example of a report with little editing needed is one that has zero to some grammar or spelling mistakes, no code chunks showing, and no output warnings nor messages showing.\nProfessional figures mean\n\nI can read the words and numbers in the html\n\nVariable names are converted from the data frame version to readable text\nFor example: iam_001 does not show up on axes, instead something like: Response to \"Currently, I am...\"\n\nColors are only used if conveying information\nIntended message of the figure is easily understood\n\nIf you are trying to show a trend of mean IAT vs. an ordered categorical variable, then the variable is ordered on the x-axis\n\n\nFor the references\n\nI will not be overly critical about the formatting\nBy consistency, I mean that you if you are citing things like (Last Name, Year) it doesn’t suddenly change to number citations.\nIf you would like to use Quarto’s citation tool, you can! I actually pair it with Zotero and it works beautifully! (But I would not embark on this if you haven’t used Zotero before)"
+  },
+  {
+    "objectID": "project/Project_report_instructions.html#sections",
+    "href": "project/Project_report_instructions.html#sections",
+    "title": "Project Report Instructions",
+    "section": "2 Sections",
+    "text": "2 Sections\n\n2.1 Title\n\nPurpose: Create an identifiable name for your research project that includes the main research question’s variables and gives some context to the analysis or results\n\n\n\n2.2 Introduction\n\nLength: 1-2 paragraphs\nPurpose: Introduce the project motivation, data, and research question. It also includes any background information relevant for understanding the analysis and relevant previous work.\nThis section is non-technical.\n\nBy reading just the introduction, someone without a technical background should have an idea of what they study was about, and why it is important\n\nYou may start with the introduction written in Lab 1, but you should edit it and make sure it flows into your report well!\nShould contain some references\nShould include a sentence that states your research question (but NOT using a question). For example: “This study investigates the association between food insecurity and age.”\n\n\n\n2.3 Statistical Methods\n\nLength: 3-5 paragraphs\nPurpose: Describe the analyses that were conducted and methods used to select variables and check diagnostics\nImportant to keep in mind: methods typically describe your approach and process, not the results of that process\n\nFor example: I might say “We investigated the linearity of each continuous covariate visually. If continuous variables were not linear, then we divided the variable into categories using existing guidelines from &lt;insert reference here&gt; or creating quartiles.”\n\nIn the methods section, I would NOT say: “We investigated the linearity of each continuous covariate visually. We found that age was not linearly related to IAT scores. Thus, we categorized age into the following groups: ___, ____, ____, ____, and ____.”\n\nThe last two sentences about age would be more appropriate in the Results section\n\n\n\nSome important methods to discuss (You may divide these into your sections, not necessarily with these names)\n\nGeneral approach to the dataset\n\n3-5 sentences\nDid you need to do any quality control?\nMissing data: we performed complete case analysis\n\n1 sentence\nCan be included in the Exploratory data analysis section\n\n\nVariables and variable creation\n\nThis includes a description of analyses for Table 1 and what statistics were used to summarize the variables\n\nMore on creation of Table 1, not discussing the results of Table 1\n\nIncludes (not required)\n\nIndicators for gender identity or race\nCreating BMI\nCategorizing a continuous variable (even if performed in model selection)\nUsing scoring for an ordered categorical variable (that is not your explanatory variable)\n\n1-2 sentences per variable\n\nModel building: we performed purposeful selection\n\n3-5 sentences\nIncludes\n\nDescribe purposeful selection: combining existing literature, clinical significance, and analysis\nHow did you build the model? Describe the process in ONE SENTENCE\nDid you consider confounders and effect modifiers?\n\n\nModel diagnostics\n\n2-5 sentences\nIncludes\n\nProcess of investigating model diagnostics\nBy the time you build the model, LINE assumptions should be met\nIf assumptions were not met, what process did you use to fix it?\n\n\n\n\n\n\n2.4 Results\n\nLength: ~3 paragraphs\nPurpose: Relay the results from our sample’s analysis typically focusing on the numbers and interpretations\n\nThe goal is not to interpret every single variable in the model but rather to show that you are proficient in using the model output to address the research questions, using the interpretations to support your conclusions.\nFocus on the variables that help you answer the research question and that provide relevant context for the reader.\n\nSome important results to discuss (also could be sections)\n\nSample data set statistics (Table 1)\n\n3-5 sentences\nInclude a brief description of the sample’s characteristics\nTable 1 should be referenced and appear here!\n\nFinal model\n\n1-2 sentences\nDescribe final model (or models if comparing a few)\n\nWhat variables were included in your final model?\nWhat interactions with your explanatory variable did you include?\n\n\nInterpret the model coefficients in the context of the research question\n\n1-2 paragraphs\nInterpreting the explanatory variable’s relationship with IAT score is the most important thing to report!!\n\nWhen doing this, make sure you account for ALL interactions: If your explanatory variable has multiple interactions and you are trying to interpret one, then what does that mean about the other variables involved in the other interactions? If this is confusing, please make an appointment with me!!\n\n\nResults of model diagnostics if there is anything worth noting\n\nTables & figures\n\nThe following are required tables or figures\n\nTable 1 summarizing participant characteristics both overall and stratified by your primary independent variable\nTable or figure with regression results\n\nCan be a forest plot\nIf you have A LOT of coefficient estimates, the forest plot may not work well!\n\n\n1-3 figures that you think are helpful in understanding the results, for example\n\nDAG explaining connection between variables (if you did this)\nTable or figure to compare model fit statistics (if you did this)\nTable or figure for unadjusted relationship between outcome and explanatory variables\n\n\n\n\n\n2.5 Discussion\n\nLength: 2-3 paragraphs\nPurpose: Discuss the results and give them context outside of the sample and its analysis\nSome important things to include\n\nInclude a paragraph on the limitations of the results\n\nYou don’t need to hit all the limitations, but think about the big ones (generalizability? independence of samples? large sample size vs. clinical significance? the way we handled variables?)\n\nAfter limitations, discuss the positive parts of the results\n\nWhat can we do with these results? What impact can it have?\n\nAny overarching trends that are worth noting? [@Giebel2024]\n\nShould contain some references\n\n\n\n2.6 Reflection\n\n\n2.7 References\n\nInclude your references here!\nYou introduction should have references, especially when discussing the social science behind the analysis\nYou must reference the IAT data source!!"
+  },
+  {
+    "objectID": "project/Lab_02_instructions.html",
+    "href": "project/Lab_02_instructions.html",
+    "title": "Lab 2 Instructions",
+    "section": "",
+    "text": "You can download the .qmd file for this lab here.\nThe above link will take you to your editing file. Please do not remove anything from this editing file!! You will only add your code and work to this file.\n\n\nThe purpose of this lab is to explore our data further, set up the unadjusted odds ratio, and create code to later help us present our final model.\n\n\n\nThis lab is graded out of 12 points. The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+  },
+  {
+    "objectID": "project/Lab_02_instructions.html#directions",
+    "href": "project/Lab_02_instructions.html#directions",
+    "title": "Lab 2 Instructions",
+    "section": "",
+    "text": "You can download the .qmd file for this lab here.\nThe above link will take you to your editing file. Please do not remove anything from this editing file!! You will only add your code and work to this file.\n\n\nThe purpose of this lab is to explore our data further, set up the unadjusted odds ratio, and create code to later help us present our final model.\n\n\n\nThis lab is graded out of 12 points. The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4 points\n3 points\n2 points\n1 point\n0 points\n\n\n\n\nFormatting\nLab submitted on Sakai with .html file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.\nLab submitted on Sakai with .html file. Answers are bulletted or do not use complete sentences.\nLab not submitted on Sakai with .html file.\n\n\nCode/Work\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nAll tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMost tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.\nSome tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.\nMore than a quarter of the tasks are not completed properly.\n\n\nReasoning*\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.\nAnswers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.\nAnswers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.\nAnswers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.\n\n\n\n*Applies to questions with reasoning"
+  },
+  {
+    "objectID": "project/Lab_02_instructions.html#lab-activities",
+    "href": "project/Lab_02_instructions.html#lab-activities",
+    "title": "Lab 2 Instructions",
+    "section": "2 Lab activities",
+    "text": "2 Lab activities\n\n\n\n\n\n\nNote\n\n\n\nI have left it up to you to load the needed packages for this lab.\n\n\n\n2.1 Restate research question\n\n\n\n\n\n\nTask\n\n\n\nPlease restate your research question below using the provided format (1 sentence). You can change the wording if you’d like, but please make sure it is still clear. It’s repetitive, but it helps me contextualize my feedback as I look through your lab.\n\n\nIn this study, we will investigate the association between food insecurity and ________.\n\n\n2.2 Make sure variables are coded correctly\nUse class() to determine the class of each of the 11 variables you selected from Lab 1 (including the outcome). A tidyverse equivalent to the apply() function that we learned last quarter is map(). Please take a look at the description of the map() function.\nMake sure the class that R recognizes is the class that you expect the variable to be. Categorical variables should be factors amd numeric variables should be numeric. It is very important that your outcome, food insecurity, is a factor with the reference level set to “No.” For example, if I am using age, but the class is character, I will need to convert age to a numeric variable. If I have a categorical covariate that is recognized as a character, I should convert it to a factor with a specific reference level.\n\ndf_name %&gt;% map(class)\n\n\n\n\n\n\n\nTask\n\n\n\n\nUse class() to determine the class of each of the 11 variables you selected from Lab 1 (including the outcome).\nChange the variable type to the appropriate type.\n\n\n\n\n\n2.3 Consider potential confounders and effect modifiers\nFor each of the 10 predictor variables, fill out the below table. This does not need to be extensive reasoning. If you would like to present this information in another way, you may.\n\n\n\n\n\n\n\n\nVariable name\nConfounder, Effect modifier, or nothing?\nReasoning (1-2 sentences)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.4 Bivariate exploratory data analysis\nUse ggpairs() (introduced in BSTA 512 Lesson 13) to quickly look at the relationship between variables.\n\n\n\n\n\n\nTask\n\n\n\nUsing ggplot or tables, visualize your variables. Get a sense of each variable’s distribution. Do you notice anything out of the ordinary?\n\n\n\n\n2.5 Multivariate exploratory data analysis\n\n\n2.6 Fit simple logistic regression\n\n\n2.7 Fit a mulivariable logistic regression"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#ive-never-explicitly-said-this",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#ive-never-explicitly-said-this",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "I’ve never explicitly said this…",
+    "text": "I’ve never explicitly said this…\n\nBecause we are in a public health class, we are often analyzing data with sensitive outcomes\n\n \n\nIf you ever need a moment in class because of our topic, feel free to just step out or leave and privately view the lecture\n\n \n\nIf you need extra time on your assignments because you have an emotional response to lectures/homework/lab, just let me know! Extenuating circumstance!"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#connection-between-tests-in-linear-models-and-glms",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#connection-between-tests-in-linear-models-and-glms",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Connection between tests in linear models and GLMs",
+    "text": "Connection between tests in linear models and GLMs\n\nIn linear regression, we used ordinary least squares (OLS) to find the best fit model, so we could use the following tests:\n\nt-test for single coefficients\nF-test for single coefficients or groups of coefficients\n\nThese tests hinge on the Mean Squared Error (MSE) which we minimized in OLS and the LINE assumptions\n\n \n\nIn GLMs, when we use maximum likelihood estimation (MLE), we cannot use t-tests or F-tests\n\nBecause we are now using likelihood to find our estimates (not OLS)\n\nBut we have parallel tests in MLE!!\n\nt-test ⟶ Wald test\nF-test ⟶ Likelihood ratio test"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#revisit-the-likelihood-function",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#revisit-the-likelihood-function",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Revisit the likelihood function",
+    "text": "Revisit the likelihood function\n\n\n\nLikelihood function: expresses the probability of the observed data as a function of the unknown parameters\n\nFunction that enumerates the likelihood (similar to probability) that we observe the data across the range of potential values of our coefficients\n\nWe often compare likelihoods to see what estimates are more likely given our data\nPlot to right is a simplistic view of likelihood\n\nI have flattened the likelihood that would be a function of \\(\\beta_0\\) and \\(\\beta_1\\) into a 2D plot (instead of 3D: \\(\\beta_0\\) vs. \\(\\beta_1\\) vs. \\(L(\\beta_0, \\beta_1)\\))\n\nI use \\(L\\) to represent the log-likelihood and \\(l\\) to represent the likelihood"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#introduction-to-three-tests-in-glm",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#introduction-to-three-tests-in-glm",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Introduction to three tests in GLM",
+    "text": "Introduction to three tests in GLM\n\nTo introduce these three tests, we will work on a single coefficient\n\nTo be clear: the Likelihood ratio test can be extended to more coefficients\n\nLet’s say we fit a GLM using MLE\n\nWe will continue to use logistic regression as our working example\n\n\n \n\nNow we want to run a hypothesis test for an individual coefficient \\(j\\):\n\n\\(H_0: \\beta_j = 0\\)\n\\(H_1: \\beta_j \\neq 0\\)\n\nThree potential tests that we use with a Likelihood function are:\n\nWald test\nScore test\nLikelihood ratio test (LRT)"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#revisit-previous-model-with-late-stage-bc-diagnosis-and-age",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#revisit-previous-model-with-late-stage-bc-diagnosis-and-age",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Revisit previous model with late stage BC diagnosis and age",
+    "text": "Revisit previous model with late stage BC diagnosis and age\n\n\n\nSimple logistic regression model: \\[\\text{logit}(\\pi(Age)) = \\beta_0 + \\beta_1 \\cdot Age\\]\n\n\n \nDon’t forget: \\(\\pi(Age) = P(Y=1 | Age)\\)\n\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nsummary(bc_reg)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Age_c, family = binomial, data = bc)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -0.989422   0.023205  -42.64   &lt;2e-16 ***\nAge_c        0.056965   0.003204   17.78   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11510  on 9998  degrees of freedom\nAIC: 11514\n\nNumber of Fisher Scoring iterations: 4"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-13",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-13",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Wald test (1/3)",
+    "text": "Wald test (1/3)\n\nVery similar to a t-test!\n\nBut slightly different because it based in our likelihood function\n\nAssumes test statistic W follows a standard normal distribution under the null hypothesis\nTest statistic: \\[W=\\frac{{\\hat{\\beta}}_j}{se({\\hat{\\beta}}_j)}\\sim N(0,1)\\]\n\nwhere \\(\\widehat{\\beta}_j\\) is a MLE of coefficient \\(j\\)\n\n95% Wald confidence interval: \\[{\\hat{\\beta}}_1\\pm1.96 \\cdot SE_{{\\hat{\\beta}}_j}\\]\nThe Wald test is a routine output in R (summary() of glm() output)\n\nIncludes \\(SE_{{\\hat{\\beta}}_j}\\) and can easily find confidence interval with tidy()"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-23",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-23",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Wald test (2/3)",
+    "text": "Wald test (2/3)"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-33",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-33",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Wald test (3/3)",
+    "text": "Wald test (3/3)"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-procedure-with-confidence-intervals",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#wald-test-procedure-with-confidence-intervals",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Wald test procedure with confidence intervals",
+    "text": "Wald test procedure with confidence intervals\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the confidence interval and determine if it overlaps with null\n\nOverlap with null (usually 0 for coefficient) = fail to reject null\nNo overlap with null (usually 0 for coefficient) = reject null\n\nWrite a conclusion to the hypothesis test\n\nWhat is the estimate and its confidence interval?\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\nRemember this from last class?\n\n\nWald test for age coefficient\n\n\nInterpret the coefficient for age in our model of late stage breast cancer diagnosis.\n\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063\n  \n  \n  \n\n\n\n\n\nWrite a conclusion to the hypothesis test\n\nFor every one year increase in age, the log-odds of late stage breast cancer diagnosis increases 0.057 (95% CI: 0.051, 0.063)."
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nWald test for age coefficient\n\n\nInterpret the coefficient for age in our model of late stage breast cancer diagnosis.\n\n\n\nSet the level of significance \\(\\alpha\\) \\[\\alpha=0.05\\]\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\n\\[\\begin{aligned}\nH_0 &: \\beta_{Age} = 0 \\\\\nH_1 &: \\beta_{Age} \\neq 0 \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-2",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-2",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nWald test for age coefficient\n\n\nInterpret the coefficient for age in our model of late stage breast cancer diagnosis.\n\n\n\nCalculate the confidence interval and determine if it overlaps with null\n\n\nlibrary(epiDisplay)\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-3",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-3",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nWald test for age coefficient\n\n\nInterpret the coefficient for age in our model of late stage breast cancer diagnosis.\n\n\n\n\n\nWrite a conclusion to the hypothesis test\n\nFor every one year increase in age, the log-odds of late stage breast cancer diagnosis increases 0.057 (95% CI: 0.051, 0.063).\nThere is sufficient evidence that age an breast cancer diagnosis are associated.\n\n\n\nNote\n\n\nI don’t want us to get fixated on this interpretation. This is more to introduce the process, BUT it’s MUCH better to interpret the coefficient in terms of OR (next class)."
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-2",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-2",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#score-test",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#score-test",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Score test",
+    "text": "Score test\n\nScore test does not require the computation of MLE for \\(\\beta_1\\), while both likelihood test and Wald test does\n\nOnly need to know \\(\\beta_1\\) under the null\n\nScore test is based on the first and second derivatives of the log-likelihood under the null hypothesis: \\[S=\\frac{\\sum_{i=1}^{n}{x_i(y_i-\\bar{y})}}{\\sqrt{\\bar{y}(1-\\bar{y})\\sum_{i=1}^{n}\\left(x_i-\\bar{x}\\right)^2}} \\sim N(0,1)\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#score-test-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#score-test-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Score test",
+    "text": "Score test"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-13",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-13",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Likelihood ratio test (1/3)",
+    "text": "Likelihood ratio test (1/3)\n\nLikelihood ratio test answers the question:\n\nFor a specific covariate, which model tell us more about the outcome variable: the model including the covariate or the model omitting the covariate?\nAka: Which model is more likely given our data: model including the covariate or the model omitting the covariate?\n\n\n \n\nTest a single coefficient by comparing different models\n\nVery similar to the F-test\n\n\n \n\nImportant: LRT can be used conduct hypothesis tests for multiple coefficients\n\nJust like F-test, we can test a single coefficient, continuous/binary covariate, multi-level covariate, or multiple covariates"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-23",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-23",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Likelihood ratio test (2/3)",
+    "text": "Likelihood ratio test (2/3)\n\nTo assess the significance of a continuous/binary covariate’s coefficient in the simple logistic regression, we compare the deviance (D) with and without the covariate \\[G=D\\left(\\text{model without } x\\right)-D\\left(\\text{model with } x\\right)\\]\n\n \n\nFor a continuous or binary variable, this is equivalent to test: \\(H_0: \\beta_j = 0\\) vs. \\(H_1: \\beta_j \\neq 0\\)\nTest statistic for LRT: \\[G=-2ln\\left[\\frac{\\text{likelihood without } x}{\\text{likelihood with } x}\\right]=2ln\\left[\\frac{l\\left({\\hat{\\beta}}_0,{\\hat{\\beta}}_1\\right)}{l({\\hat{\\beta}}_0)}\\right]\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-23-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-23-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Likelihood ratio test (2/3)",
+    "text": "Likelihood ratio test (2/3)\n\nTo assess the significance of a continuous/binary covariate’s coefficient in the simple logistic regression, we compare the deviance (D) with and without the covariate \\[G=D\\left(\\text{model without } x\\right)-D\\left(\\text{model with } x\\right)\\]\n\n \n\nFor a continuous or binary variable, this is equivalent to test: \\(H_0: \\beta_j = 0\\) vs. \\(H_1: \\beta_j \\neq 0\\)\nTest statistic for LRT: \\[G=-2ln\\left[\\frac{\\text{likelihood without } x}{\\text{likelihood with } x}\\right]=2ln\\left[\\frac{l\\left({\\hat{\\beta}}_0,{\\hat{\\beta}}_1\\right)}{l({\\hat{\\beta}}_0)}\\right]\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#lrt-what-is-deviance",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#lrt-what-is-deviance",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "LRT: what is Deviance?",
+    "text": "LRT: what is Deviance?\n\nDeviance: quantifies the difference in likelihoods between a fitted and saturated model\n\nFitted model:\n\nYour proposed fitted model\n\nSaturated model:\n\nA model that contains as many parameters as there are data points = perfect fit\n\nBasically every individual has their own covariate\n\nPerfect fit = maximum possible likelihood\n\n\n\n \n\nAll fitted models will have likelihood less than saturated model"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#lrt-what-is-deviance-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#lrt-what-is-deviance-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "LRT: what is Deviance?",
+    "text": "LRT: what is Deviance?\n\nThe deviance is mathematically defined as: \\[D=-2[L_{\\text{fitted}}-L_{\\text{saturated}}]\\]\nAn alternative way to write it is: \\[D=-2ln\\left[\\frac{\\text{likelihood of the fitted model}}{\\text{likelihood of the saturated model}}\\right]\\]\nUsing ‘-2’ is to make the deviance follow a chi-square distribution"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#deviance-to-likelihood-ratio-test",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#deviance-to-likelihood-ratio-test",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Deviance to Likelihood Ratio Test",
+    "text": "Deviance to Likelihood Ratio Test\n\nIn the LRT, we are NOT comparing the likelihood of saturated model to the fitted model\n\n \n\nWe ARE comparing the Deviance of the model with x and the model without x\n\nWe just use the saturated model to calculate Deviance\nBoth are considered fitted models with their own respective Deviance\n\n\n \n\nSo our LRT is: \\[G=D\\left(\\text{model without } x\\right)-D\\left(\\text{model with } x\\right)\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#for-reference",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#for-reference",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "For reference",
+    "text": "For reference\n\\[ \\begin{aligned}\nG&=D\\left(\\text{model without } x\\right)-D\\left(\\text{model with }x\\right) \\\\\nG&=-2ln\\left[\\frac{\\text{likelihood of model without } x}{\\text{likelihood of saturated model}}\\right]-\\left(-2ln\\left[\\frac{\\text{likelihood of model with } x}{\\text{likelihood of saturated model}}\\right]\\right) \\\\\nG&=-2ln\\left[\\frac{\\text{likelihood of model without } x}{\\text{likelihood of saturated model}}\\times\\frac{\\text{likelihood of saturated model}}{\\text{likelihood of model with } x}\\right] \\\\\nG&=-2ln\\left[\\frac{\\text{likelihood of model without } x}{\\text{likelihood of model with }}\\right] \\\\\nG&=2ln\\left[\\frac{l\\left({\\hat{\\beta}}_0,{\\hat{\\beta}}_1\\right)}{l({\\hat{\\beta}}_0)}\\right]\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-3",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-3",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-23-2",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-23-2",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Likelihood ratio test (2/3)",
+    "text": "Likelihood ratio test (2/3)\n\nTo assess the significance of a continuous/binary covariate’s coefficient in the simple logistic regression, we compare the deviance (D) with and without the covariate \\[G=D\\left(\\text{model without } x\\right)-D\\left(\\text{model with } x\\right)\\]\n\n \n\nFor a continuous or binary variable, this is equivalent to test: \\(H_0: \\beta_j = 0\\) vs. \\(H_1: \\beta_j \\neq 0\\)\nTest statistic for LRT: \\[G=-2ln\\left[\\frac{\\text{likelihood without } x}{\\text{likelihood with } x}\\right]=2ln\\left[\\frac{l\\left({\\hat{\\beta}}_0,{\\hat{\\beta}}_1\\right)}{l({\\hat{\\beta}}_0)}\\right]\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-33",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test-33",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Likelihood ratio test (3/3)",
+    "text": "Likelihood ratio test (3/3)\n\nUnder the null hypothesis, with adequate sample size, LRT statistic follows a chi-square distribution: \\[G \\sim \\chi^2(df)\\]\n\n\\(df = (\\# \\text{coefficients in larger model}) − (\\# \\text{coefficients in smaller model})\\)\n\n\n \n\nIf we are testing a single coefficient, like age, then \\(df=1\\)"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#likelihood-ratio-test",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Likelihood ratio test",
+    "text": "Likelihood ratio test"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#lrt-procedure",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#lrt-procedure",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "LRT procedure",
+    "text": "LRT procedure\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-4",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-4",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nLRT\n\n\nDetermine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?\n\n\nNeeded steps:\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-5",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-5",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nLRT\n\n\nDetermine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?\n\n\n\nSet the level of significance \\(\\alpha\\) \\[\\alpha=0.05\\]\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\n\\[\\begin{aligned}\nH_0 &: \\beta_{Age} = 0 \\\\\nH_1 &: \\beta_{Age} \\neq 0 \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-6",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-6",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nLRT\n\n\nDetermine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?\n\n\n\nCalculate the test statistic and p-value\n\n\nlibrary(lmtest)\nbc_age = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nbc_int = glm(Late_stage_diag ~ 1, data = bc, family = binomial)\nlmtest::lrtest(bc_age, bc_int)\n\nLikelihood ratio test\n\nModel 1: Late_stage_diag ~ Age_c\nModel 2: Late_stage_diag ~ 1\n  #Df  LogLik Df  Chisq Pr(&gt;Chisq)    \n1   2 -5754.8                         \n2   1 -5930.5 -1 351.27  &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-7",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-bc-diagnosis-and-age-7",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: BC diagnosis and age",
+    "text": "Example: BC diagnosis and age\n\n\nLRT\n\n\nDetermine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?\n\n\n\nWrite a conclusion to the hypothesis test\n\nWe reject the null hypothesis that the coefficient corresponding to age is 0 (\\(p-value &lt;&lt; 0.05\\)). There is sufficient evidence that there is an association between age and late stage breast cancer diagnosis."
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#all-three-tests-together",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#all-three-tests-together",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "All three tests together",
+    "text": "All three tests together\n\nUCLA FAQ on Tests"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#which-test-to-use",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#which-test-to-use",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Which test to use?",
+    "text": "Which test to use?\n\nAll three tests are asymptotically equivalent\n\nAs sample approaches infinity\n\nFor testing significance of single covariate coefficient:\n\nLRT\n\nWald and score are only approximations of LRT\nFor smaller samples, LRT better\n\nWald test is very convenient\n\nAutomatically performed in R\nDoes not need to estimate two models (LRT does)\nGood for constructing confidence intervals of coefficients and odds ratios\n\nScore test\n\nDoes not need to estimate two models (LRT does)\nI don’t really see people use this…"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-4",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-4",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-5",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-5",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-6",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-6",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 6",
+    "text": "Poll Everywhere Question 6"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-7",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-7",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 7",
+    "text": "Poll Everywhere Question 7"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-8",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#poll-everywhere-question-8",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Poll Everywhere Question 8",
+    "text": "Poll Everywhere Question 8"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#tests-and-what-theyre-used-for",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#tests-and-what-theyre-used-for",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Tests and what they’re used for",
+    "text": "Tests and what they’re used for\n\n\n\n\n\n\n\n\n\n\nWald test\nScore test\nLRT\n\n\n\n\nUsed to test significance of single coefficient\n\n\n\n\n\nCan be used to report confidence interval for a single coefficient\n\n\n\n\n\nConfidence interval reported by R for a single coefficient (and most commonly used)\n\n\n\n\n\nUse to test significance/contribution to outcome prediction of multi-level categorical covariate\n\n\n\n\n\nUsed for comparing two models with different (but nested) covariates"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#so-how-would-the-wald-test-and-lrt-show-up-in-research",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#so-how-would-the-wald-test-and-lrt-show-up-in-research",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "So how would the Wald test and LRT show up in research?",
+    "text": "So how would the Wald test and LRT show up in research?\n\nWald test\n\nOften used when reporting estimates\nGenerally presented using a forest plot or table of ORs or RRs\n\nThen we highlight the specific variable of interest in text\nWill include the OR/RR estimate (not the coefficient like we saw today) with the 95% CI and proper interpretation of result\n\n\n\n \n\nLRT\n\nOften when performing model selection and comparing two models\n\nReporting model selection Cross Validated post\n\nOften does not show up explicitly in our reports, but is essential to get to our final model!!\n\n\n\n\nLesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#last-time-to-this-time",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#last-time-to-this-time",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Last time to this time",
+    "text": "Last time to this time\n\nUsed the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "We typically interpret our results using odds ratios",
+    "text": "We typically interpret our results using odds ratios\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\nHow do we go from interpretations of \\(\\widehat{\\beta}_0\\) and \\(\\widehat{\\beta}_1\\) using log odds to odds ratios?\nWe will need to take the exponential of our model:\n\n\\(\\text{exp}(\\widehat{\\beta}_0)\\): expected odds that \\(Y=1\\) when X is 0.\n\\(\\text{exp}(\\widehat{\\beta}_1)\\): expected odds ratio that \\(Y=1\\) for every 1 unit increase in X"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "We typically interpret our results using odds ratios",
+    "text": "We typically interpret our results using odds ratios\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\nHow do we go from interpretations of \\(\\widehat{\\beta}_0\\) and \\(\\widehat{\\beta}_1\\) using log odds to odds ratios?\nWe will need to take the exponential of our model:\n\n\\(\\text{exp}(\\widehat{\\beta}_0)\\): expected odds that \\(Y=1\\) when X is 0.\n\\(\\text{exp}(\\widehat{\\beta}_1)\\): expected odds ratio that \\(Y=1\\) for every 1 unit increase in X"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\n\nHow do we do this in R?\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T, exponentiate=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;% fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c\n1.059\n0.003\n17.780\n0.000\n1.052\n1.065\n  \n  \n  \n\n\n\nlogistic.display(bc_reg, decimal = 3)\n\n\nLogistic regression predicting Late_stage_diag : 1 vs 0 \n \n                   OR(95%CI)            P(Wald's test) P(LR-test)\nAge_c (cont. var.) 1.059 (1.052,1.065)  &lt; 0.001        &lt; 0.001   \n                                                                 \nLog-likelihood = -5754.84419\nNo. of observations = 10000\nAIC value = 11513.68837"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Transformations of continuous variable to make more interpretable",
+    "text": "Transformations of continuous variable to make more interpretable\n\nSometimes a change in “1” unit may not be considered clinically interesting\n\nFor example, a 1 year increase in age or a 1 mm Hg increase in systolic blood pressure may be too small for a meaningful change in log odds\nInstead, we may be interested to find out the log odds change for a increase of 10 years in age or 10 mm Hg in systolic blood pressure\nOn the other hand, if the range of x is small (say 0-1), than a change in 1 unit of 𝑥 is too large to be meaningful\n\nWe should be able to compute and interpret coefficients for a continuous independent covariate 𝑥 for an arbitrary change of “c” units in 𝑥"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#how-do-we-get-the-odds-and-odds-ratio",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#how-do-we-get-the-odds-and-odds-ratio",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "How do we get the odds and odds ratio?",
+    "text": "How do we get the odds and odds ratio?\n\n\nFor \\(\\text{exp}(\\widehat{\\beta}_0)\\)\n\nWhen \\(X=0\\), we have \\[\\text{logit}(\\widehat{\\pi}(X=0)) = \\widehat{\\beta}_0\\]\nThus, \\[\\begin{aligned} \\widehat{\\beta}_0 & = \\text{logit}(\\widehat{\\pi}(X)) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\big[\\text{logit}(\\widehat{\\pi}(X))\\big] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\Bigg[\\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)}\\Bigg)\\Bigg] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)} \\\\\n\\end{aligned}\\]\n\n\n\n\nFor \\(\\text{exp}(\\widehat{\\beta}_1)\\)\n\nWe compare \\(X=x\\) and \\(X=x+1\\), and we have \\(\\text{logit}(\\widehat{\\pi}(X = x)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x\\) and \\(\\text{logit}(\\widehat{\\pi}(X = x+1)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1)\\)\nThus, \\[\\begin{aligned} \\widehat{\\beta}_0 & = \\text{logit}(\\widehat{\\pi}(X)) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\big[\\text{logit}(\\widehat{\\pi}(X))\\big] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\Bigg[\\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)}\\Bigg)\\Bigg] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#how-do-we-get-the-odds-for-the-intercept",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#how-do-we-get-the-odds-for-the-intercept",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "How do we get the odds for the intercept?",
+    "text": "How do we get the odds for the intercept?\nFor \\(\\text{exp}(\\widehat{\\beta}_0)\\)\n\nWhen \\(X=0\\), we have \\[\\text{logit}(\\widehat{\\pi}(X=0)) = \\widehat{\\beta}_0\\]\nThus, \\[\\begin{aligned} \\widehat{\\beta}_0 & = \\text{logit}(\\widehat{\\pi}(X)) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\big[\\text{logit}(\\widehat{\\pi}(X))\\big] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\Bigg[\\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)}\\Bigg)\\Bigg] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#how-do-we-get-the-odds-ratio-for-xs-coefficient",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#how-do-we-get-the-odds-ratio-for-xs-coefficient",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "How do we get the odds ratio for X’s coefficient?",
+    "text": "How do we get the odds ratio for X’s coefficient?\n\n\nFor \\(\\text{exp}(\\widehat{\\beta}_1)\\)\n\nWe compare \\(X=x\\) and \\(X=x+1\\),\nSo we have \\[\\text{logit}(\\widehat{\\pi}(X = x)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x\\] and \\[\\text{logit}(\\widehat{\\pi}(X = x+1)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1)\\]\nAnd… \\[\\begin{aligned} & \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\ & =  \n\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1) - \\big[\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x \\big] \\\\ &= \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x + \\widehat{\\beta}_1 - \\widehat{\\beta}_0 - \\widehat{\\beta}_1 \\cdot x \\\\ & =\n\\widehat{\\beta}_1 \\end{aligned}\\]\n\n\n\nThus, \\[\\begin{aligned} \\widehat{\\beta}_1 & =  \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}\\Bigg) - \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}\\Bigg) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\left(\\frac{\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}} {\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}}\\right) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\text{exp}\\left[\\text{log}\\left(\\frac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}}\\right) \\right] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\frac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-1",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot Age\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds when age is 61.71 years\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds for every 1 year increase in age\n\n\n\nLesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-2",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-2",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot Age\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds when age is 61.71 years\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds for every 1 year increase in age\n\n\n\nLesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-from-last-class",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#example-from-last-class",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: From last class",
+    "text": "Example: From last class\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063\n  \n  \n  \n\n\n\n\n\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age^c)) = −0.989  + 0.057     \\cdot Age^c\\]\n\\(\\widehat{\\beta}_0\\): The estimated log-odds is -0.989 when age is 61.71 years (95% CI: -1.035, -0.944)\n\\(\\widehat{\\beta}_1\\): The estimated increase in log-odds is 0.057 for every 1 year increase in age (95% CI: 0.051, 0.063)."
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#so-far-weve-looked-at-the-association-using-the-log-odds-scale",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html#so-far-weve-looked-at-the-association-using-the-log-odds-scale",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "So far we’ve looked at the association using the log-odds scale",
+    "text": "So far we’ve looked at the association using the log-odds scale\n\n\nFor a population simple logistic regression model with a continuous predictor \\[\\text{logit}(\\pi(X)) = \\beta_0 + \\beta_1 \\cdot X\\]\n\n\\(\\beta_0\\): log-odds when X is 0\n\\(\\beta_1\\): increase in log-odds for every 1 unit increase in X\n\n\n\n\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds of \\(Y=1\\) when X is 0.\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds of \\(Y=1\\) for every 1 unit increase in X\nCan use expected instead of estimated"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Predicted Probability",
+    "text": "Predicted Probability\n\nWe may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.\nThe predicted probability is the estimated probability of having the event for given values of covariate(s)\nIn simple logistic regression, the predicted probability is: \\[\\hat{\\pi}\\left(X\\right)=\\frac{\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}{1+\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}\\]\nWe can calculate this using the the predict() function like in BSTA 512"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example:",
+    "text": "Example:\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\n\nnewdata = data.frame(Age_c = 60 - mean_age)\n\npred = predict(bc_reg, newdata = newdata, se.fit = T, type = \"response\")\n\nLL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit\nUL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit\n\nc(Pred = pred$fit, LL_CI, UL_CI) %&gt;% round(digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.261"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Visualization",
+    "text": "Visualization"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Late stage breast cancer diagnosis",
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\nNeeded steps:\n\nCalculate estimate and confidence interval\nInterpret results"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-1",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-1",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Late stage breast cancer diagnosis",
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nCalculate estimate and confidence interval\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\n\nnewdata = data.frame(Age_c = 60 - mean_age)\n\npred = predict(bc_reg, newdata = newdata, se.fit = T, type = \"response\")\n\nLL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit\nUL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit\n\nc(Pred = pred$fit, LL_CI, UL_CI) %&gt;% round(digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.261 \n\npred1 = predict(bc_reg, newdata = newdata, se.fit = T, type = \"link\")\n\nLL_CI1 = pred1$fit - qnorm(1-0.05/2) * pred1$se.fit\nUL_CI1 = pred1$fit + qnorm(1-0.05/2) * pred1$se.fit\n\npred_link = c(Pred = pred1$fit, LL_CI1, UL_CI1)\n(exp(pred_link)/(1+exp(pred_link))) %&gt;% round(., digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.262 \n\ninv.logit(pred_link) %&gt;% round(., digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.262"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-2",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-2",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Late stage breast cancer diagnosis",
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nInterpret results\n\nFor someone who is 60 years old, the predicted probability of late stage breast cancer diagnosis is 0.252 (95% CI: 0.243, 0.261)."
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability-1",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability-1",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Predicted Probability",
+    "text": "Predicted Probability\n\nPredicted probability is NOT our predicted outcome\n\nWe cannot interpret it as the predicted Y for individuals with certain covariate values\nExample: our predicted probability does not tell us that one individual is or is not diagnosed with late stage breast cancer\n\nThe predicted probability is the estimate of the mean (i.e., proportion) of individuals at a certain age who are diagnosed with late stage breast cancer"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-outcome",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-outcome",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Predicted outcome",
+    "text": "Predicted outcome\n\nTypically, the predicted probability is the most important thing to use in a clinical setting\nIf you ever need to predict the outcome itself, remember that the predicted probability can be used in a Bernoulli distribution to find the predicted outcome\nBy putting it back through a Bernoulli distribution, we are re-introducing the random component of our observed outcome\n\n\nset.seed(8392)\nrbinom(n=1, size=1, prob = pred$fit)\n\n[1] 0\n\nrbinom(n=10, size=1, prob = pred$fit)\n\n [1] 0 0 0 0 1 0 0 0 1 0"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predictions",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predictions",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can also make a plot of all the predictions",
+    "text": "We can also make a plot of all the predictions"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#confidence-interval-of-predicted-probability",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#confidence-interval-of-predicted-probability",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Confidence Interval of Predicted Probability",
+    "text": "Confidence Interval of Predicted Probability\n\nNot as easy to construct\nI have searched around for a function that does this for us, but I cannot find one\nSo we have to construct the confidence interval “by hand”\nThere are a couple ways to do this\n\nConstruct the 95% confidence interval in the logit scale, then convert to probability scale\nUse Normal approximation (if appropriate) to construct confidence interval in probability scale"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#confidence-interval-in-logit-scale",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#confidence-interval-in-logit-scale",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "95% confidence interval in logit scale",
+    "text": "95% confidence interval in logit scale\n\nWe start by predicting the log-odds and forming"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization-of-ors",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization-of-ors",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Visualization of ORs?",
+    "text": "Visualization of ORs?\n\n\nLesson 7: Prediction and Visualization in Simple Logistic Regression"
+  },
+  {
+    "objectID": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html",
+    "href": "lectures/07_Interpretations_SLR/07_Interpretations_SLR.html",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "",
+    "text": "Used the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
   }
 ]
