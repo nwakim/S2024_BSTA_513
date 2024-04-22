@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BSTA 513/613: Categorical Data Analysis",
     "section": "",
-    "text": "BSTA 513/613: Categorical Data Analysis\n\nSpring 2024\n \nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.  \n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n F 2 - 3:30pm\nOH with Antara\n T 5:30 - 7pm\nOH with Ariel\n Th 3:30 - 5pm\n\n\nCourse details\n Mondays, Wednesdays\n April 1 - June 12\n 1:00 PM - 2:50 PM\n In-person, RPV Room B/C\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "BSTA 513/613: Categorical Data Analysis\n\nSpring 2024\n \nWelcome to BSTA 513/613! In this course, we will continue to learn about regression analysis, but not with categorical outcomes. We will build some theoretical understanding in order to interpret and apply logistic regression models appropriately. We will learn how to build a logistic regression model, interpret the model and coefficients, and diagnose potential issues with our model.  \n\n\n\n\n\n \nLink to Student Files OneDrive\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n F 2 - 3:30pm\nOH with Antara\n T 5:30 - 7pm\nOH with Ariel\n Th 3:30 - 5pm\n\n\nCourse details\n Mondays, Wednesdays\n April 1 - June 12\n 1:00 PM - 2:50 PM\n In-person, RPV Room B/C\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "homeworks.html",
@@ -1467,7 +1467,7 @@
     "href": "weeks/week_04_sched.html#resources",
     "title": "Week 4",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations in Simple Logistic Regression"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations in Simple Logistic Regression"
   },
   {
     "objectID": "weeks/week_04_sched.html#on-the-horizon",
@@ -3035,7 +3035,7 @@
     "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#simple-logistic-regression-model",
     "title": "Lesson 5: Simple Logistic Regression",
     "section": "Simple Logistic Regression Model",
-    "text": "Simple Logistic Regression Model\nThe (population) regression model is denoted by:\n \n\n\n\n\n\n\\[ \\text{logit} (\\pi) =  \\beta_0 + \\beta_1X\\]\n\n\n\n\n\n \nComponents\n\n\n\n\\(\\pi\\)\nprobability that the outcome occurs (\\(Y=1\\)) given \\(X\\)\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term"
+    "text": "Simple Logistic Regression Model\nThe (population) regression model is denoted by:\n \n\n\n\n\n\n\\[ \\text{logit} (\\pi) =  \\beta_0 + \\beta_1X\\]\n\n\n\n\n\n \nComponents\n\n\n\n\\(\\pi\\)\nprobability that the outcome occurs (\\(Y=1\\)) given \\(X\\)\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable"
   },
   {
     "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#generalized-linear-models-glm-i",
@@ -3266,7 +3266,7 @@
     "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#reminder-simple-logistic-regression-model",
     "title": "Lesson 5: Simple Logistic Regression",
     "section": "Reminder: Simple Logistic Regression Model",
-    "text": "Reminder: Simple Logistic Regression Model\nThe (population) regression model is denoted by:\n \n\n\n\n\n\n\\[ \\text{logit} (\\pi) =  \\beta_0 + \\beta_1X\\]\n\n\n\n\n\n \nComponents\n\n\n\n\\(\\pi\\)\nprobability that the outcome occurs (\\(Y=1\\)) given \\(X\\)\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term"
+    "text": "Reminder: Simple Logistic Regression Model\nThe (population) regression model is denoted by:\n \n\n\n\n\n\n\\[ \\text{logit} (\\pi) =  \\beta_0 + \\beta_1X\\]\n\n\n\n\n\n \nComponents\n\n\n\n\\(\\pi\\)\nprobability that the outcome occurs (\\(Y=1\\)) given \\(X\\)\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable"
   },
   {
     "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#how-do-perform-mle-in-r",
@@ -3301,7 +3301,7 @@
     "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#example-breast-cancer-diagnosis-33",
     "title": "Lesson 5: Simple Logistic Regression",
     "section": "Example: Breast cancer diagnosis (3/3)",
-    "text": "Example: Breast cancer diagnosis (3/3)\n\nTranslate the results back to an equation!\nJust going to pull the coefficients so I have a reference as I create the fitted regression model:\n\n\n\n\nsummary(bc_reg)$coefficients\n\n              Estimate Std. Error   z value     Pr(&gt;|z|)\n(Intercept) -0.9894225  0.0232055 -42.63742 0.000000e+00\nAge_c        0.0569645  0.0032039  17.77974 1.014557e-70\n\n\n\nFitted logistic regression model: \\[\\text{logit}(\\pi(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\nWe will need to reverse the transformation process in slide 24-25 to find the odds ratios"
+    "text": "Example: Breast cancer diagnosis (3/3)\n\nTranslate the results back to an equation!\nJust going to pull the coefficients so I have a reference as I create the fitted regression model:\n\n\n\n\nsummary(bc_reg)$coefficients\n\n              Estimate Std. Error   z value     Pr(&gt;|z|)\n(Intercept) -0.9894225  0.0232055 -42.63742 0.000000e+00\nAge_c        0.0569645  0.0032039  17.77974 1.014557e-70\n\n\n\nFitted logistic regression model: \\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\nWe will need to reverse the transformation process in slide 24-25 to find the odds ratios"
   },
   {
     "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#slide-transform",
@@ -3315,7 +3315,7 @@
     "href": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#example-breast-cancer-diagnosis-33-1",
     "title": "Lesson 5: Simple Logistic Regression",
     "section": "Example: Breast cancer diagnosis (3/3)",
-    "text": "Example: Breast cancer diagnosis (3/3)\n\nTranslate the results back to an equation!\nJust going to pull the coefficients so I have a reference as I create the fitted regression model:\n\n\n\n\nsummary(bc_reg)$coefficients\n\n              Estimate Std. Error   z value     Pr(&gt;|z|)\n(Intercept) -0.9894225  0.0232055 -42.63742 0.000000e+00\nAge_c        0.0569645  0.0032039  17.77974 1.014557e-70\n\n\n\nFitted logistic regression model: \\[\\text{logit}(\\pi(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\nWe will need to reverse the transformation process in slide 24-25 to find the odds ratios\n\nWill do in next week’s lessons\n\n\n\nThis is the fitted line:"
+    "text": "Example: Breast cancer diagnosis (3/3)\n\nTranslate the results back to an equation!\nJust going to pull the coefficients so I have a reference as I create the fitted regression model:\n\n\n\n\nsummary(bc_reg)$coefficients\n\n              Estimate Std. Error   z value     Pr(&gt;|z|)\n(Intercept) -0.9894225  0.0232055 -42.63742 0.000000e+00\nAge_c        0.0569645  0.0032039  17.77974 1.014557e-70\n\n\n\nFitted logistic regression model: \\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\nWe will need to reverse the transformation process in slide 24-25 to find the odds ratios\n\nWill do in next week’s lessons\n\n\n\nThis is the fitted line:"
   },
   {
     "objectID": "lectures/05_Simple_logistic_reg/05_Simple_logistic_reg.html#reference-individual-components",
@@ -4218,7 +4218,7 @@
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Predicted Probability",
-    "text": "Predicted Probability\n\nWe may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.\nThe predicted probability is the estimated probability of having the event for given values of covariate(s)\nIn simple logistic regression, the predicted probability is: \\[\\hat{\\pi}\\left(X\\right)=\\frac{\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}{1+\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}\\]\nWe can calculate this using the the predict() function like in BSTA 512"
+    "text": "Predicted Probability\n\nWe may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.\nThe predicted probability is the estimated probability of having the event for given values of covariate(s)\nIn simple logistic regression, the fitted model is:\\[\\text{logit}(\\widehat{\\pi}(X)) = \\hat{\\beta}_0 +{\\hat{\\beta}}_1X \\]\nWe can convert it to the predicted probability: \\[\\hat{\\pi}\\left(X\\right)=\\frac{\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}{1+\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}\\]\n\nThis is an inverse logit calculation\n\nWe can calculate this using the the predict() function like in BSTA 512\n\nAnother option: taking inverse logit of fitted values from augment() function"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example",
@@ -4232,42 +4232,42 @@
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Visualization",
-    "text": "Visualization"
+    "text": "Visualization\n\n\n\n\n\\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\n\\[\\widehat{\\pi}(Age) = \\dfrac{ \\exp \\left[-0.989 + 0.057 \\cdot Age \\right]}{1+\\exp \\left[-0.989 + 0.057 \\cdot Age \\right]}\\]"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis",
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Example: Late stage breast cancer diagnosis",
-    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\nNeeded steps:\n\nCalculate estimate and confidence interval\nInterpret results"
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\nNeeded steps:\n\nCalculate probability prediction\nCheck if we can use Normal approximation\nCalculate confidence interval\n\nUsing logit scale then converting\nUsing Normal approximation\n\nInterpret results"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-1",
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-1",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Example: Late stage breast cancer diagnosis",
-    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nCalculate estimate and confidence interval\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\n\nnewdata = data.frame(Age_c = 60 - mean_age)\n\npred = predict(bc_reg, newdata = newdata, se.fit = T, type = \"response\")\n\nLL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit\nUL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit\n\nc(Pred = pred$fit, LL_CI, UL_CI) %&gt;% round(digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.261 \n\npred1 = predict(bc_reg, newdata = newdata, se.fit = T, type = \"link\")\n\nLL_CI1 = pred1$fit - qnorm(1-0.05/2) * pred1$se.fit\nUL_CI1 = pred1$fit + qnorm(1-0.05/2) * pred1$se.fit\n\npred_link = c(Pred = pred1$fit, LL_CI1, UL_CI1)\n(exp(pred_link)/(1+exp(pred_link))) %&gt;% round(., digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.262 \n\ninv.logit(pred_link) %&gt;% round(., digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.262"
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nCalculate probability prediction\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nnewdata = data.frame(Age_c = 60 - mean_age)\npred1 = predict(bc_reg, newdata = newdata, se.fit = T, type = \"response\")\npred1\n\n$fit\n        1 \n0.2522616 \n\n$se.fit\n          1 \n0.004709743 \n\n$residual.scale\n[1] 1"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-2",
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-2",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Example: Late stage breast cancer diagnosis",
-    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nInterpret results\n\nFor someone who is 60 years old, the predicted probability of late stage breast cancer diagnosis is 0.252 (95% CI: 0.243, 0.261)."
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nCheck if we can use Normal approximation\n\nWe can use the Normal approximation if: \\(\\widehat{p}n = \\widehat{\\pi}(X)\\cdot n &gt; 10\\) and \\((1-\\widehat{p})n = (1-\\widehat{\\pi}(X))\\cdot n &gt; 10\\).\n\nn = nobs(bc_reg)\np = pred1$fit\nn*p\n\n       1 \n2522.616 \n\nn*(1-p)\n\n       1 \n7477.384 \n\n\nWe can use the Normal approximation!"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability-1",
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-probability-1",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Predicted Probability",
-    "text": "Predicted Probability\n\nPredicted probability is NOT our predicted outcome\n\nWe cannot interpret it as the predicted Y for individuals with certain covariate values\nExample: our predicted probability does not tell us that one individual is or is not diagnosed with late stage breast cancer\n\nThe predicted probability is the estimate of the mean (i.e., proportion) of individuals at a certain age who are diagnosed with late stage breast cancer"
+    "text": "Predicted Probability\n\nPredicted probability is NOT our predicted outcome\n\nWe cannot interpret it as the predicted \\(Y\\) for individuals with certain covariate values\nExample: our predicted probability does not tell us that one individual is or is not diagnosed with late stage breast cancer\n\nThe predicted probability is the estimate of the mean (i.e., proportion) of individuals at a certain age who are diagnosed with late stage breast cancer"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-outcome",
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predicted-outcome",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Predicted outcome",
-    "text": "Predicted outcome\n\nTypically, the predicted probability is the most important thing to use in a clinical setting\nIf you ever need to predict the outcome itself, remember that the predicted probability can be used in a Bernoulli distribution to find the predicted outcome\nBy putting it back through a Bernoulli distribution, we are re-introducing the random component of our observed outcome\n\n\nset.seed(8392)\nrbinom(n=1, size=1, prob = pred$fit)\n\n[1] 0\n\nrbinom(n=10, size=1, prob = pred$fit)\n\n [1] 0 0 0 0 1 0 0 0 1 0"
+    "text": "Predicted outcome\n\nTypically, the predicted probability is the most important thing to use in a clinical setting\n\n \n\nIf you ever need to predict the outcome itself (from logistic regression with binary outcome):\n\nRemember that the predicted probability can be used in a Bernoulli (or Binomial with \\(n=1\\)) distribution to find the predicted outcome\n\nIf outcome is something like counts, then we would use a Poisson distribution\n\n \n\nBy putting it back through a Bernoulli/binomial distribution, we are re-introducing the random component of our observed outcome\n\n\nset.seed(8392)\nrbinom(n=1, size=1, prob = pred$fit)\n\n[1] 0\n\nrbinom(n=10, size=1, prob = pred$fit)\n\n [1] 0 0 0 0 1 0 0 0 1 0"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predictions",
@@ -4281,7 +4281,7 @@
     "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#confidence-interval-of-predicted-probability",
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Confidence Interval of Predicted Probability",
-    "text": "Confidence Interval of Predicted Probability\n\nNot as easy to construct\nI have searched around for a function that does this for us, but I cannot find one\nSo we have to construct the confidence interval “by hand”\nThere are a couple ways to do this\n\nConstruct the 95% confidence interval in the logit scale, then convert to probability scale\nUse Normal approximation (if appropriate) to construct confidence interval in probability scale"
+    "text": "Confidence Interval of Predicted Probability\n\nNot as easy to construct\nI have searched around for a function that does this for us, but I cannot find one\nSo we have to construct the confidence interval “by hand”\n\n \nThere are a two ways to do this:\n\nConstruct the 95% confidence interval in the logit scale, then convert to probability scale\nUse Normal approximation (if appropriate) to construct confidence interval in probability scale"
   },
   {
     "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#confidence-interval-in-logit-scale",
@@ -4303,5 +4303,194 @@
     "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
     "section": "",
     "text": "Used the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Option 1: 95% confidence interval in logit scale",
+    "text": "Option 1: 95% confidence interval in logit scale\n\nRecall our our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\nWe can first find the predicted \\(\\text{logit}(\\widehat{\\pi}(X))\\) and then find the 95% confidence interval around it: \\[\\text{logit}(\\widehat{\\pi}(X)) \\pm 1.96 \\cdot SE_{\\text{logit}(\\widehat{\\pi}(X))}\\]\nWe’ll call this 95% CI: \\[\\left(\\text{logit}(\\widehat{\\pi}(X)) - 1.96 \\cdot SE_{\\text{logit}(\\widehat{\\pi}(X))}, \\ \\text{logit}(\\widehat{\\pi}(X)) + 1.96 \\cdot SE_{\\text{logit}(\\widehat{\\pi}(X))} \\right)\\] \\[\\left(\\text{logit}_{L}, \\ \\text{logit}_{U} \\right)\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-2-using-normal-approximation",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-2-using-normal-approximation",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Option 2: Using Normal approximation",
+    "text": "Option 2: Using Normal approximation\n\nIf we meet the Normal approximation criteria, we can construct our confidence interval directly in the probability scale\n\nWe can use the Normal approximation if:\n\n\\(\\widehat{p}n = \\widehat{\\pi}(X)\\cdot n &gt; 10\\) and\n\\((1-\\widehat{p})n = (1-\\widehat{\\pi}(X))\\cdot n &gt; 10\\)\n\n\n\n \n\nWe can first find the predicted \\(\\widehat{\\pi}(X)\\) and then find the 95% confidence interval around it: \\[\\widehat{\\pi}(X) \\pm 1.96 \\cdot SE_{\\widehat{\\pi}(X)}\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-3",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-3",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Late stage breast cancer diagnosis",
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n3a. Calculate confidence interval (Option 1: logit scale, we could skip previous step)\n\npred1 = predict(bc_reg, newdata = newdata, se.fit = T, type = \"link\")\nLL_CI1 = pred1$fit - qnorm(1-0.05/2) * pred1$se.fit\nUL_CI1 = pred1$fit + qnorm(1-0.05/2) * pred1$se.fit\npred_link = c(Pred = pred1$fit, LL_CI1, UL_CI1)\n\n(exp(pred_link)/(1+exp(pred_link))) %&gt;% round(., digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.262 \n\ninv.logit(pred_link) %&gt;% round(., digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.262"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-4",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-4",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Late stage breast cancer diagnosis",
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n3b. Calculate confidence interval (Option 2: with Normal approximation)\n\npred = predict(bc_reg, newdata = newdata, se.fit = T, type = \"response\")\n\nLL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit\nUL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit\n\nc(Pred = pred$fit, LL_CI, UL_CI) %&gt;% round(digits=3)\n\nPred.1      1      1 \n 0.252  0.243  0.261"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-5",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-late-stage-breast-cancer-diagnosis-5",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Late stage breast cancer diagnosis",
+    "text": "Example: Late stage breast cancer diagnosis\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nInterpret results\n\nFor someone who is 60 years old, the predicted probability of late stage breast cancer diagnosis is 0.252 (95% CI: 0.243, 0.261)."
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predicted-probabilities",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predicted-probabilities",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can also make a plot of all the predicted probabilities",
+    "text": "We can also make a plot of all the predicted probabilities\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nbc_aug = augment(bc_reg)\n\n\nlibrary(boot)\nprob_stage = ggplot(data = bc_aug, aes(x=Age_c, y = inv.logit(.fitted))) + \n  geom_point(size = 4, color = \"#70AD47\", shape = 1) +\n  labs(x = \"Age centered (yrs)\", \n       y = \"Probability of \\n Late stage BC diagnosis\")  + theme_classic() +\n    theme(axis.title = element_text(\n        size = 30), \n        axis.text = element_text(\n        size = 25), \n        title = element_text(\n        size = 30)) +\n  ylim(0, 1)"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale-12",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale-12",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Option 1: 95% confidence interval in logit scale (1/2)",
+    "text": "Option 1: 95% confidence interval in logit scale (1/2)\n\nRecall our our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\nWe can first find the predicted \\(\\text{logit}(\\widehat{\\pi}(X))\\) and then find the 95% confidence interval around it: \\[\\text{logit}(\\widehat{\\pi}(X)) \\pm 1.96 \\cdot SE_{\\text{logit}(\\widehat{\\pi}(X))}\\]\nWe’ll call this 95% CI: \\[\\left(\\text{logit}(\\widehat{\\pi}(X)) - 1.96 \\cdot SE_{\\text{logit}(\\widehat{\\pi}(X))}, \\ \\text{logit}(\\widehat{\\pi}(X)) + 1.96 \\cdot SE_{\\text{logit}(\\widehat{\\pi}(X))} \\right)\\] \\[\\left(\\text{logit}_{L}, \\ \\text{logit}_{U} \\right)\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale-12-1",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale-12-1",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Option 1: 95% confidence interval in logit scale (1/2)",
+    "text": "Option 1: 95% confidence interval in logit scale (1/2)\n\nThen we need to convert to the probability scale\nTo convert from \\(\\text{logit}(\\widehat{\\pi}(X))\\) to \\(\\widehat{\\pi}(X)\\), we take the inverse logit\nThus, 95% CI in the probability scale is: \\[\\left(\\dfrac{\\exp\\left[\\text{logit}_{L}\\right]}{1 + \\exp\\left[\\text{logit}_{L}\\right]}, \\ \\dfrac{\\exp\\left[\\text{logit}_{U}\\right]}{1 + \\exp\\left[\\text{logit}_{U}\\right]} \\right)\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#reference-inverse-logit",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#reference-inverse-logit",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Reference: Inverse logit",
+    "text": "Reference: Inverse logit\n\nIf we have \\(\\text{logit}(a) = b\\), then \\[\\begin{aligned}\n\\text{logit}(a) & = b \\\\\n\\text{log}\\left(\\dfrac{a}{1-a}\\right) & = b \\\\\n\\exp \\left[ \\text{log}\\left(\\dfrac{a}{1-a}\\right) \\right] & = \\exp[b] \\\\\n\\dfrac{a}{1-a} & = \\exp[b] \\\\\na & = \\exp[b]\\cdot(1-a) \\\\\na & = \\exp[b] - a\\cdot \\exp[b] \\\\\na +  a\\cdot \\exp[b]& = \\exp[b] \\\\\na\\cdot ( 1 + \\exp[b] )& = \\exp[b] \\\\\na& = \\dfrac{\\exp[b]}{1 + \\exp[b]} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale-22",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#option-1-95-confidence-interval-in-logit-scale-22",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Option 1: 95% confidence interval in logit scale (2/2)",
+    "text": "Option 1: 95% confidence interval in logit scale (2/2)\n\nThen we need to convert to the probability scale\nTo convert from \\(\\text{logit}(\\widehat{\\pi}(X))\\) to \\(\\widehat{\\pi}(X)\\), we take the inverse logit\nThus, 95% CI in the probability scale is: \\[\\left(\\dfrac{\\exp\\left[\\text{logit}_{L}\\right]}{1 + \\exp\\left[\\text{logit}_{L}\\right]}, \\ \\dfrac{\\exp\\left[\\text{logit}_{U}\\right]}{1 + \\exp\\left[\\text{logit}_{U}\\right]} \\right)\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predicted-probabilities-12",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predicted-probabilities-12",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can also make a plot of all the predicted probabilities (1/2)",
+    "text": "We can also make a plot of all the predicted probabilities (1/2)\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nbc_aug = augment(bc_reg)\n\n\nThen we plot the fitted values from the fitted model\n\n\nlibrary(boot) # for inv.logit()\nprob_stage = ggplot(data = bc_aug, aes(x=Age_c, y = inv.logit(.fitted))) + \n  # geom_point(size = 4, color = \"#70AD47\", shape = 1) +\n  geom_smooth(size = 4, color = \"#70AD47\") +\n  labs(x = \"Age centered (yrs)\", \n       y = \"Estimated probability of \\n Late stage BC diagnosis\")  + \n  theme_classic() +\n  theme(axis.title = element_text(size = 30), \n        axis.text = element_text(size = 25), \n        title = element_text(size = 30)) +\n  ylim(0, 1)"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predicted-probabilities-22",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-also-make-a-plot-of-all-the-predicted-probabilities-22",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can also make a plot of all the predicted probabilities (2/2)",
+    "text": "We can also make a plot of all the predicted probabilities (2/2)\n\nIf we are interested in seeing all the predicted probabilities across the sample’s age range\nNote that the probabilities do not need to fill the full range of 0 to 1."
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can add the confidence intervals",
+    "text": "We can add the confidence intervals\n\nnewdata2 = data.frame(Age_c = seq(min(bc$Age_c), max(bc$Age_c), by = 0.1))\npred2 = predict(bc_reg, newdata = newdata2, se.fit = T, type = \"link\")\nLL_CI1 = pred2$fit - qnorm(1-0.05/2) * pred2$se.fit\nUL_CI1 = pred2$fit + qnorm(1-0.05/2) * pred2$se.fit\n\nwith_CI = data.frame(Age_c = newdata2$Age_c, \n                     pred = inv.logit(pred2$fit), \n                     LL = inv.logit(LL_CI1), \n                     UL = inv.logit(UL_CI1))"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#section",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#section",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "",
+    "text": "library(boot)\nprob_stage_CI = ggplot(data = with_CI, aes(x = Age_c)) +\n  geom_ribbon(aes(ymin = LL, ymax = UL), fill = \"grey\") +\n  geom_smooth(aes(x=Age_c, y = pred), size = 1, color = \"#70AD47\") +\n  labs(x = \"Age centered (yrs)\", \n       y = \"Probability of \\n Late stage BC diagnosis\")  + theme_classic() +\n    theme(axis.title = element_text(\n        size = 30), \n        axis.text = element_text(\n        size = 25), \n        title = element_text(\n        size = 30)) +\n  ylim(0, 0.6)"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#section-1",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#section-1",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "",
+    "text": "prob_stage_CI"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-1",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-1",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can add the confidence intervals",
+    "text": "We can add the confidence intervals\n\nlibrary(boot)\nprob_stage_CI = ggplot(data = with_CI, aes(x = Age_c)) +\n  geom_ribbon(aes(ymin = LL, ymax = UL), fill = \"grey\") +\n  geom_smooth(aes(x=Age_c, y = pred), size = 1, color = \"#70AD47\") +\n  labs(x = \"Age centered (yrs)\", \n       y = \"Probability of \\n Late stage BC diagnosis\")  + theme_classic() +\n    theme(axis.title = element_text(\n        size = 30), \n        axis.text = element_text(\n        size = 25), \n        title = element_text(\n        size = 30)) +\n  ylim(0, 0.6)"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-2",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-2",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can add the confidence intervals",
+    "text": "We can add the confidence intervals"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-13",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-13",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can add the confidence intervals (1/3)",
+    "text": "We can add the confidence intervals (1/3)\n\nnewdata2 = data.frame(Age_c = seq(min(bc$Age_c), max(bc$Age_c), by = 0.1))\npred2 = predict(bc_reg, newdata = newdata2, se.fit = T, type = \"link\")\nLL_CI1 = pred2$fit - qnorm(1-0.05/2) * pred2$se.fit\nUL_CI1 = pred2$fit + qnorm(1-0.05/2) * pred2$se.fit\n\nwith_CI = data.frame(Age_c = newdata2$Age_c, \n                     pred = inv.logit(pred2$fit), \n                     LL = inv.logit(LL_CI1), \n                     UL = inv.logit(UL_CI1))"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-23",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-23",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can add the confidence intervals (2/3)",
+    "text": "We can add the confidence intervals (2/3)\n\nprob_stage_CI = ggplot(data = with_CI, aes(x = Age_c)) +\n  geom_ribbon(aes(ymin = LL, ymax = UL), fill = \"grey\") +\n  geom_smooth(aes(x=Age_c, y = pred), size = 1, color = \"#70AD47\") +\n  labs(x = \"Age centered (yrs)\", \n       y = \"Estimated probability of \\n Late stage BC diagnosis\")  + \n  theme_classic() +\n  theme(axis.title = element_text(size = 30), \n        axis.text = element_text(size = 25), \n        title = element_text(size = 30)) +\n  ylim(0, 0.6)"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-33",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#we-can-add-the-confidence-intervals-33",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "We can add the confidence intervals (3/3)",
+    "text": "We can add the confidence intervals (3/3)"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#poll-everywhere-question",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#poll-everywhere-question",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Poll Everywhere Question",
+    "text": "Poll Everywhere Question"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization-of-odds-ratios",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization-of-odds-ratios",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Visualization of odds ratios?",
+    "text": "Visualization of odds ratios?\n\nWe will discuss this more on Wednesday when we look at interpretations of ORs"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-breast-cancer-diagnosis",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#example-breast-cancer-diagnosis",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Example: Breast cancer diagnosis",
+    "text": "Example: Breast cancer diagnosis\n\nRecall that we fitted a simple logistic regression for late stage breast cancer diagnosis using the predictor, age:\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 38) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063\n  \n  \n  \n\n\n\n\n \n\nFitted logistic regression model: \\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#recall-our-example-late-stage-breast-cancer-diagnosis",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#recall-our-example-late-stage-breast-cancer-diagnosis",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Recall our example: Late stage breast cancer diagnosis",
+    "text": "Recall our example: Late stage breast cancer diagnosis\n\nRecall that we fitted a simple logistic regression for late stage breast cancer diagnosis using the predictor, age:\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 38) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063\n  \n  \n  \n\n\n\n\n \n\nFitted logistic regression model: \\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#predictedestimated-probability",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#predictedestimated-probability",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Predicted/Estimated probability",
+    "text": "Predicted/Estimated probability\n\nPredicted probability is NOT our predicted outcome\n\nWe cannot interpret it as the predicted \\(Y\\) for individuals with certain covariate values\nExample: our predicted probability does not tell us that one individual will or will not be diagnosed with late stage breast cancer\n\n\n \n\nThe predicted probability is the estimate of the mean (i.e., proportion) of individuals at a certain age who are diagnosed with late stage breast cancer\nWe can use the predicted/estimated probability to predict the outcome"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#recall-our-example-late-stage-breast-cancer-diagnosis-1",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#recall-our-example-late-stage-breast-cancer-diagnosis-1",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Recall our example: Late stage breast cancer diagnosis",
+    "text": "Recall our example: Late stage breast cancer diagnosis\n\nFitted logistic regression model: \\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\n     \n\nNow we want to caclulate the predicted/estimated probability from the above fitted model\nWe will need to calculate the predicted probability and its confidence interval\n\nThen we will visualize the fitted probability"
+  },
+  {
+    "objectID": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization-of-observed-outcome-and-fitted-model",
+    "href": "lectures/07_Pred_Viz/07_Pred_Viz.html#visualization-of-observed-outcome-and-fitted-model",
+    "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
+    "section": "Visualization of observed outcome and fitted model",
+    "text": "Visualization of observed outcome and fitted model\n\n\n\n\n\\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\n\\[\\widehat{\\pi}(Age) = \\dfrac{ \\exp \\left[-0.989 + 0.057 \\cdot Age \\right]}{1+\\exp \\left[-0.989 + 0.057 \\cdot Age \\right]}\\]"
   }
 ]

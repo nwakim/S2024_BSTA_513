@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Nicky Wakim">
-  <meta name="dcterms.date" content="2024-04-17">
+  <meta name="dcterms.date" content="2024-04-22">
   <title>Categorical Data Analysis - Lesson 7: Prediction and Visualization in Simple Logistic Regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -403,11 +403,16 @@ Nicky Wakim
 </div>
 </div>
 
-  <p class="date">2024-04-17</p>
+  <p class="date">2024-04-22</p>
 </section>
 <section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Make transformation between logistic regression and estimated/predicted probability.</p></li>
+<li><p>Construct confidence interval for predicted probability.</p></li>
+<li><p>Visualize the predicted probability (and its confidence intervals).</p></li>
+</ol>
 <div class="cell">
 <style type="text/css">
 .reveal code {
@@ -416,32 +421,616 @@ Nicky Wakim
 </style>
 </div>
 </section>
+<section id="recall-our-example-late-stage-breast-cancer-diagnosis" class="slide level2">
+<h2>Recall our example: Late stage breast cancer diagnosis</h2>
+<ul>
+<li>Recall that we fitted a simple logistic regression for late stage breast cancer diagnosis using the predictor, age:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>bc_reg <span class="ot">=</span> <span class="fu">glm</span>(Late_stage_diag <span class="sc">~</span> Age_c, <span class="at">data =</span> bc, <span class="at">family =</span> binomial)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">tidy</span>(bc_reg, <span class="at">conf.int=</span>T) <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">38</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">fmt_number</span>(<span class="at">decimals =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="zxqxamxulo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zxqxamxulo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#zxqxamxulo thead, #zxqxamxulo tbody, #zxqxamxulo tfoot, #zxqxamxulo tr, #zxqxamxulo td, #zxqxamxulo th {
+  border-style: none;
+}
+
+#zxqxamxulo p {
+  margin: 0;
+  padding: 0;
+}
+
+#zxqxamxulo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 38px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#zxqxamxulo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zxqxamxulo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zxqxamxulo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zxqxamxulo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zxqxamxulo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zxqxamxulo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zxqxamxulo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zxqxamxulo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#zxqxamxulo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#zxqxamxulo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zxqxamxulo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zxqxamxulo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zxqxamxulo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zxqxamxulo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxqxamxulo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#zxqxamxulo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#zxqxamxulo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#zxqxamxulo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxqxamxulo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#zxqxamxulo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxqxamxulo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#zxqxamxulo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxqxamxulo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zxqxamxulo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zxqxamxulo .gt_left {
+  text-align: left;
+}
+
+#zxqxamxulo .gt_center {
+  text-align: center;
+}
+
+#zxqxamxulo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zxqxamxulo .gt_font_normal {
+  font-weight: normal;
+}
+
+#zxqxamxulo .gt_font_bold {
+  font-weight: bold;
+}
+
+#zxqxamxulo .gt_font_italic {
+  font-style: italic;
+}
+
+#zxqxamxulo .gt_super {
+  font-size: 65%;
+}
+
+#zxqxamxulo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#zxqxamxulo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#zxqxamxulo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#zxqxamxulo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#zxqxamxulo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#zxqxamxulo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#zxqxamxulo .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="term">term</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="std.error">std.error</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="term" class="gt_row gt_left">(Intercept)</td>
+<td headers="estimate" class="gt_row gt_right">−0.989</td>
+<td headers="std.error" class="gt_row gt_right">0.023</td>
+<td headers="statistic" class="gt_row gt_right">−42.637</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">−1.035</td>
+<td headers="conf.high" class="gt_row gt_right">−0.944</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">Age_c</td>
+<td headers="estimate" class="gt_row gt_right">0.057</td>
+<td headers="std.error" class="gt_row gt_right">0.003</td>
+<td headers="statistic" class="gt_row gt_right">17.780</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">0.051</td>
+<td headers="conf.high" class="gt_row gt_right">0.063</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>Fitted logistic regression model: <span class="math display">\[\text{logit}(\widehat{\pi}(Age)) = -0.989 + 0.057 \cdot Age\]</span></li>
+</ul>
+</section>
+<section id="recall-our-example-late-stage-breast-cancer-diagnosis-1" class="slide level2">
+<h2>Recall our example: Late stage breast cancer diagnosis</h2>
+<ul>
+<li>Fitted logistic regression model: <span class="math display">\[\text{logit}(\widehat{\pi}(Age)) = -0.989 + 0.057 \cdot Age\]</span></li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp;</p>
+<ul>
+<li><p>Now we want to caclulate the predicted/estimated probability from the above fitted model</p></li>
+<li><p>We will need to calculate the predicted probability and its confidence interval</p>
+<ul>
+<li>Then we will visualize the fitted probability</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Make transformation between logistic regression and estimated/predicted probability.</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Construct confidence interval for predicted probability.</p></li>
+<li><p>Visualize the predicted probability (and its confidence intervals).</p></li>
+</ol>
+</section>
 <section id="predicted-probability" class="slide level2">
 <h2>Predicted Probability</h2>
 <ul>
 <li><p>We may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.</p></li>
 <li><p>The predicted probability is the estimated probability of having the event for given values of covariate(s)</p></li>
-<li><p>In simple logistic regression, the predicted probability is: <span class="math display">\[\hat{\pi}\left(X\right)=\frac{\exp({\hat{\beta}}_0+{\hat{\beta}}_1X)}{1+\exp({\hat{\beta}}_0+{\hat{\beta}}_1X)}\]</span></p></li>
-<li><p>We can calculate this using the the <code>predict()</code> function like in BSTA 512</p></li>
+<li><p>In simple logistic regression, the fitted model is:<span class="math display">\[\text{logit}(\widehat{\pi}(X)) = \hat{\beta}_0 +{\hat{\beta}}_1X \]</span></p></li>
+<li><p>We can convert it to the predicted probability: <span class="math display">\[\hat{\pi}\left(X\right)=\frac{\exp({\hat{\beta}}_0+{\hat{\beta}}_1X)}{1+\exp({\hat{\beta}}_0+{\hat{\beta}}_1X)}\]</span></p>
+<ul>
+<li>This is an inverse logit calculation</li>
+</ul></li>
+<li><p>We can calculate this using the the <code>predict()</code> function like in BSTA 512</p>
+<ul>
+<li>Another option: taking inverse logit of fitted values from <code>augment()</code> function</li>
+</ul></li>
 </ul>
+</section>
+<section id="reference-inverse-logit" class="slide level2">
+<h2>Reference: Inverse logit</h2>
+<ul>
+<li>If we have <span class="math inline">\(\text{logit}(a) = b\)</span>, then <span class="math display">\[\begin{aligned}
+\text{logit}(a) &amp; = b \\
+\text{log}\left(\dfrac{a}{1-a}\right) &amp; = b \\
+\exp \left[ \text{log}\left(\dfrac{a}{1-a}\right) \right] &amp; = \exp[b] \\
+\dfrac{a}{1-a} &amp; = \exp[b] \\
+a &amp; = \exp[b]\cdot(1-a) \\
+a &amp; = \exp[b] - a\cdot \exp[b] \\
+a +  a\cdot \exp[b]&amp; = \exp[b] \\
+a\cdot ( 1 + \exp[b] )&amp; = \exp[b] \\
+a&amp; = \dfrac{\exp[b]}{1 + \exp[b]} \\
+\end{aligned}\]</span></li>
+</ul>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Make transformation between logistic regression and estimated/predicted probability.</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Construct confidence interval for predicted probability.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Visualize the predicted probability (and its confidence intervals).</li>
+</ol>
 </section>
 <section id="confidence-interval-of-predicted-probability" class="slide level2">
 <h2>Confidence Interval of Predicted Probability</h2>
 <ul>
-<li><p>Not as easy to construct</p></li>
-<li><p>I have searched around for a function that does this for us, but I cannot find one</p></li>
-<li><p>So we have to construct the confidence interval “by hand”</p></li>
-<li><p>There are a couple ways to do this</p>
-<ul>
+<li>Not as easy to construct</li>
+<li>I have searched around for a function that does this for us, but I cannot find one</li>
+<li>So we have to construct the confidence interval “by hand”</li>
+</ul>
+<p>&nbsp;</p>
+<p>There are a two ways to do this:</p>
+<ol type="1">
 <li>Construct the 95% confidence interval in the logit scale, then convert to probability scale</li>
 <li>Use Normal approximation (if appropriate) to construct confidence interval in probability scale</li>
-</ul></li>
+</ol>
+</section>
+<section id="option-1-95-confidence-interval-in-logit-scale-12" class="slide level2">
+<h2>Option 1: 95% confidence interval in logit scale (1/2)</h2>
+<ul>
+<li><p>Recall our our <em>fitted</em> simple logistic regression model with a continuous predictor <span class="math display">\[\text{logit}(\widehat{\pi}(X)) = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot X\]</span></p></li>
+<li><p>We can first find the predicted <span class="math inline">\(\text{logit}(\widehat{\pi}(X))\)</span> and then find the 95% confidence interval around it: <span class="math display">\[\text{logit}(\widehat{\pi}(X)) \pm 1.96 \cdot SE_{\text{logit}(\widehat{\pi}(X))}\]</span></p></li>
+<li><p>We’ll call this 95% CI: <span class="math display">\[\left(\text{logit}(\widehat{\pi}(X)) - 1.96 \cdot SE_{\text{logit}(\widehat{\pi}(X))}, \ \text{logit}(\widehat{\pi}(X)) + 1.96 \cdot SE_{\text{logit}(\widehat{\pi}(X))} \right)\]</span> <span class="math display">\[\left(\text{logit}_{L}, \ \text{logit}_{U} \right)\]</span></p></li>
 </ul>
 </section>
-<section id="confidence-interval-in-logit-scale" class="slide level2">
-<h2>95% confidence interval in logit scale</h2>
+<section id="option-1-95-confidence-interval-in-logit-scale-22" class="slide level2">
+<h2>Option 1: 95% confidence interval in logit scale (2/2)</h2>
 <ul>
-<li>We start by predicting the log-odds and forming</li>
+<li><p>Then we need to convert to the probability scale</p></li>
+<li><p>To convert from <span class="math inline">\(\text{logit}(\widehat{\pi}(X))\)</span> to <span class="math inline">\(\widehat{\pi}(X)\)</span>, we take the inverse logit</p></li>
+<li><p>Thus, 95% CI in the probability scale is: <span class="math display">\[\left(\dfrac{\exp\left[\text{logit}_{L}\right]}{1 + \exp\left[\text{logit}_{L}\right]}, \ \dfrac{\exp\left[\text{logit}_{U}\right]}{1 + \exp\left[\text{logit}_{U}\right]} \right)\]</span></p></li>
+</ul>
+</section>
+<section id="option-2-using-normal-approximation" class="slide level2">
+<h2>Option 2: Using Normal approximation</h2>
+<ul>
+<li><p>If we meet the Normal approximation criteria, we can construct our confidence interval directly in the probability scale</p>
+<ul>
+<li><p>We can use the Normal approximation if:</p>
+<ul>
+<li><span class="math inline">\(\widehat{p}n = \widehat{\pi}(X)\cdot n &gt; 10\)</span> and</li>
+<li><span class="math inline">\((1-\widehat{p})n = (1-\widehat{\pi}(X))\cdot n &gt; 10\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>We can first find the predicted <span class="math inline">\(\widehat{\pi}(X)\)</span> and then find the 95% confidence interval around it: <span class="math display">\[\widehat{\pi}(X) \pm 1.96 \cdot SE_{\widehat{\pi}(X)}\]</span></li>
 </ul>
 </section>
 <section id="example-late-stage-breast-cancer-diagnosis" class="slide level2">
@@ -456,8 +1045,14 @@ Nicky Wakim
 </div>
 <p><strong>Needed steps:</strong></p>
 <ol type="1">
-<li>Calculate estimate and confidence interval</li>
-<li>Interpret results</li>
+<li><p>Calculate probability prediction</p></li>
+<li><p>Check if we can use Normal approximation</p></li>
+<li><p>Calculate confidence interval</p>
+<ol type="a">
+<li>Using logit scale then converting</li>
+<li>Using Normal approximation</li>
+</ol></li>
+<li><p>Interpret results</p></li>
 </ol>
 </section>
 <section id="example-late-stage-breast-cancer-diagnosis-1" class="slide level2">
@@ -471,38 +1066,24 @@ Nicky Wakim
 </div>
 </div>
 <ol type="1">
-<li>Calculate estimate and confidence interval</li>
+<li>Calculate probability prediction</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>bc_reg <span class="ot">=</span> <span class="fu">glm</span>(Late_stage_diag <span class="sc">~</span> Age_c, <span class="at">data =</span> bc, <span class="at">family =</span> binomial)</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>newdata <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Age_c =</span> <span class="dv">60</span> <span class="sc">-</span> mean_age)</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>pred <span class="ot">=</span> <span class="fu">predict</span>(bc_reg, <span class="at">newdata =</span> newdata, <span class="at">se.fit =</span> T, <span class="at">type =</span> <span class="st">"response"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a>LL_CI <span class="ot">=</span> pred<span class="sc">$</span>fit <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit</span>
-<span id="cb1-8"><a href="#cb1-8"></a>UL_CI <span class="ot">=</span> pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit</span>
-<span id="cb1-9"><a href="#cb1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">c</span>(<span class="at">Pred =</span> pred<span class="sc">$</span>fit, LL_CI, UL_CI) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>bc_reg <span class="ot">=</span> <span class="fu">glm</span>(Late_stage_diag <span class="sc">~</span> Age_c, <span class="at">data =</span> bc, <span class="at">family =</span> binomial)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>newdata <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Age_c =</span> <span class="dv">60</span> <span class="sc">-</span> mean_age)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>pred1 <span class="ot">=</span> <span class="fu">predict</span>(bc_reg, <span class="at">newdata =</span> newdata, <span class="at">se.fit =</span> T, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>pred1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Pred.1      1      1 
- 0.252  0.243  0.261 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>pred1 <span class="ot">=</span> <span class="fu">predict</span>(bc_reg, <span class="at">newdata =</span> newdata, <span class="at">se.fit =</span> T, <span class="at">type =</span> <span class="st">"link"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a>LL_CI1 <span class="ot">=</span> pred1<span class="sc">$</span>fit <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred1<span class="sc">$</span>se.fit</span>
-<span id="cb3-4"><a href="#cb3-4"></a>UL_CI1 <span class="ot">=</span> pred1<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred1<span class="sc">$</span>se.fit</span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a>pred_link <span class="ot">=</span> <span class="fu">c</span>(<span class="at">Pred =</span> pred1<span class="sc">$</span>fit, LL_CI1, UL_CI1)</span>
-<span id="cb3-7"><a href="#cb3-7"></a>(<span class="fu">exp</span>(pred_link)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(pred_link))) <span class="sc">%&gt;%</span> <span class="fu">round</span>(., <span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Pred.1      1      1 
- 0.252  0.243  0.262 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">inv.logit</span>(pred_link) <span class="sc">%&gt;%</span> <span class="fu">round</span>(., <span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Pred.1      1      1 
- 0.252  0.243  0.262 </code></pre>
+<pre><code>$fit
+        1 
+0.2522616 
+
+$se.fit
+          1 
+0.004709743 
+
+$residual.scale
+[1] 1</code></pre>
 </div>
 </div>
 </section>
@@ -517,54 +1098,248 @@ Nicky Wakim
 </div>
 </div>
 <ol start="2" type="1">
+<li>Check if we can use Normal approximation</li>
+</ol>
+<p>We can use the Normal approximation if: <span class="math inline">\(\widehat{p}n = \widehat{\pi}(X)\cdot n &gt; 10\)</span> and <span class="math inline">\((1-\widehat{p})n = (1-\widehat{\pi}(X))\cdot n &gt; 10\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>n <span class="ot">=</span> <span class="fu">nobs</span>(bc_reg)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>p <span class="ot">=</span> pred1<span class="sc">$</span>fit</span>
+<span id="cb4-3"><a href="#cb4-3"></a>n<span class="sc">*</span>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1 
+2522.616 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>n<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1 
+7477.384 </code></pre>
+</div>
+</div>
+<p>We can use the Normal approximation!</p>
+</section>
+<section id="example-late-stage-breast-cancer-diagnosis-3" class="slide level2">
+<h2>Example: Late stage breast cancer diagnosis</h2>
+<div class="example">
+<div class="ex-title">
+<p>Predicting probability of late stage breast cancer diagnosis</p>
+</div>
+<div class="ex-cont">
+<p>For someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?</p>
+</div>
+</div>
+<p>3a. Calculate confidence interval (Option 1: logit scale, we could skip previous step)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>pred1 <span class="ot">=</span> <span class="fu">predict</span>(bc_reg, <span class="at">newdata =</span> newdata, <span class="at">se.fit =</span> T, <span class="at">type =</span> <span class="st">"link"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>LL_CI1 <span class="ot">=</span> pred1<span class="sc">$</span>fit <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred1<span class="sc">$</span>se.fit</span>
+<span id="cb8-3"><a href="#cb8-3"></a>UL_CI1 <span class="ot">=</span> pred1<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred1<span class="sc">$</span>se.fit</span>
+<span id="cb8-4"><a href="#cb8-4"></a>pred_link <span class="ot">=</span> <span class="fu">c</span>(<span class="at">Pred =</span> pred1<span class="sc">$</span>fit, LL_CI1, UL_CI1)</span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>(<span class="fu">exp</span>(pred_link)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(pred_link))) <span class="sc">%&gt;%</span> <span class="fu">round</span>(., <span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pred.1      1      1 
+ 0.252  0.243  0.262 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">inv.logit</span>(pred_link) <span class="sc">%&gt;%</span> <span class="fu">round</span>(., <span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pred.1      1      1 
+ 0.252  0.243  0.262 </code></pre>
+</div>
+</div>
+</section>
+<section id="example-late-stage-breast-cancer-diagnosis-4" class="slide level2">
+<h2>Example: Late stage breast cancer diagnosis</h2>
+<div class="example">
+<div class="ex-title">
+<p>Predicting probability of late stage breast cancer diagnosis</p>
+</div>
+<div class="ex-cont">
+<p>For someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?</p>
+</div>
+</div>
+<p>3b. Calculate confidence interval (Option 2: with Normal approximation)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>pred <span class="ot">=</span> <span class="fu">predict</span>(bc_reg, <span class="at">newdata =</span> newdata, <span class="at">se.fit =</span> T, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a>LL_CI <span class="ot">=</span> pred<span class="sc">$</span>fit <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit</span>
+<span id="cb12-4"><a href="#cb12-4"></a>UL_CI <span class="ot">=</span> pred<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit</span>
+<span id="cb12-5"><a href="#cb12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="fu">c</span>(<span class="at">Pred =</span> pred<span class="sc">$</span>fit, LL_CI, UL_CI) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pred.1      1      1 
+ 0.252  0.243  0.261 </code></pre>
+</div>
+</div>
+</section>
+<section id="example-late-stage-breast-cancer-diagnosis-5" class="slide level2">
+<h2>Example: Late stage breast cancer diagnosis</h2>
+<div class="example">
+<div class="ex-title">
+<p>Predicting probability of late stage breast cancer diagnosis</p>
+</div>
+<div class="ex-cont">
+<p>For someone 50 years old, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?</p>
+</div>
+</div>
+<ol start="4" type="1">
 <li>Interpret results</li>
 </ol>
 <p>For someone who is 60 years old, the predicted probability of late stage breast cancer diagnosis is 0.252 (95% CI: 0.243, 0.261).</p>
 </section>
-<section id="predicted-probability-1" class="slide level2">
-<h2>Predicted Probability</h2>
+<section id="predictedestimated-probability" class="slide level2">
+<h2>Predicted/Estimated probability</h2>
 <ul>
 <li><p>Predicted probability is NOT our predicted outcome</p>
 <ul>
-<li><p>We cannot interpret it as the predicted Y for individuals with certain covariate values</p></li>
-<li><p>Example: our predicted probability does not tell us that one individual is or is not diagnosed with late stage breast cancer</p></li>
+<li><p>We cannot interpret it as the predicted <span class="math inline">\(Y\)</span> for individuals with certain covariate values</p></li>
+<li><p>Example: our predicted probability does not tell us that one individual will or will not be diagnosed with late stage breast cancer</p></li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li><p>The predicted probability is the estimate of the mean (i.e., proportion) of individuals at a certain age who are diagnosed with late stage breast cancer</p></li>
+<li><p>We can use the predicted/estimated probability to predict the outcome</p></li>
 </ul>
 </section>
 <section id="predicted-outcome" class="slide level2">
 <h2>Predicted outcome</h2>
 <ul>
-<li><p>Typically, the predicted probability is the most important thing to use in a clinical setting</p></li>
-<li><p>If you ever need to predict the outcome itself, remember that the predicted probability can be used in a Bernoulli distribution to find the predicted outcome</p></li>
-<li><p>By putting it back through a Bernoulli distribution, we are re-introducing the random component of our observed outcome</p></li>
+<li>Typically, the predicted probability is the <strong>most important thing to use in a clinical setting</strong></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>If you ever need to <strong>predict the outcome itself</strong> (from logistic regression with binary outcome):</p>
+<ul>
+<li>Remember that the predicted probability can be used in a Bernoulli (or Binomial with <span class="math inline">\(n=1\)</span>) distribution to find the predicted outcome</li>
+</ul></li>
+<li><p>If outcome is something like counts, then we would use a Poisson distribution</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>By putting it back through a Bernoulli/binomial distribution, we are <strong>re-introducing the random component of our observed outcome</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">set.seed</span>(<span class="dv">8392</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">1</span>, <span class="at">size=</span><span class="dv">1</span>, <span class="at">prob =</span> pred<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">set.seed</span>(<span class="dv">8392</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">1</span>, <span class="at">size=</span><span class="dv">1</span>, <span class="at">prob =</span> pred<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">size=</span><span class="dv">1</span>, <span class="at">prob =</span> pred<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">10</span>, <span class="at">size=</span><span class="dv">1</span>, <span class="at">prob =</span> pred<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0 0 0 0 1 0 0 0 1 0</code></pre>
 </div>
 </div>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Make transformation between logistic regression and estimated/predicted probability.</p></li>
+<li><p>Construct confidence interval for predicted probability.</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Visualize the predicted probability (and its confidence intervals).</li>
+</ol>
+</div>
 </section>
-<section id="we-can-also-make-a-plot-of-all-the-predictions" class="slide level2">
-<h2>We can also make a plot of all the predictions</h2>
+<section id="we-can-also-make-a-plot-of-all-the-predicted-probabilities-12" class="slide level2">
+<h2>We can also make a plot of all the predicted probabilities (1/2)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>bc_reg <span class="ot">=</span> <span class="fu">glm</span>(Late_stage_diag <span class="sc">~</span> Age_c, <span class="at">data =</span> bc, <span class="at">family =</span> binomial)</span>
+<span id="cb18-2"><a href="#cb18-2"></a>bc_aug <span class="ot">=</span> <span class="fu">augment</span>(bc_reg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Then we plot the fitted values from the fitted model</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">library</span>(boot) <span class="co"># for inv.logit()</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>prob_stage <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> bc_aug, <span class="fu">aes</span>(<span class="at">x=</span>Age_c, <span class="at">y =</span> <span class="fu">inv.logit</span>(.fitted))) <span class="sc">+</span> </span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="co"># geom_point(size = 4, color = "#70AD47", shape = 1) +</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">size =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">"#70AD47"</span>) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age centered (yrs)"</span>, </span>
+<span id="cb19-6"><a href="#cb19-6"></a>       <span class="at">y =</span> <span class="st">"Estimated probability of </span><span class="sc">\n</span><span class="st"> Late stage BC diagnosis"</span>)  <span class="sc">+</span> </span>
+<span id="cb19-7"><a href="#cb19-7"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">30</span>), </span>
+<span id="cb19-9"><a href="#cb19-9"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">25</span>), </span>
+<span id="cb19-10"><a href="#cb19-10"></a>        <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="visualization" class="slide level2">
-<h2>Visualization</h2>
+<section id="we-can-also-make-a-plot-of-all-the-predicted-probabilities-22" class="slide level2">
+<h2>We can also make a plot of all the predicted probabilities (2/2)</h2>
+<ul>
+<li><p>If we are interested in seeing all the predicted probabilities across the sample’s age range</p></li>
+<li><p>Note that the probabilities do not need to fill the full range of 0 to 1.</p></li>
+</ul>
 
-<img data-src="07_Pred_Viz_files/figure-revealjs/unnamed-chunk-6-1.png" width="1920" class="r-stretch quarto-figure-left"></section>
-<section id="visualization-of-ors" class="slide level2">
-<h2>Visualization of ORs?</h2>
+<img data-src="07_Pred_Viz_files/figure-revealjs/unnamed-chunk-11-1.png" width="864" class="r-stretch quarto-figure-center"></section>
+<section id="we-can-add-the-confidence-intervals-13" class="slide level2">
+<h2>We can add the confidence intervals (1/3)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>newdata2 <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Age_c =</span> <span class="fu">seq</span>(<span class="fu">min</span>(bc<span class="sc">$</span>Age_c), <span class="fu">max</span>(bc<span class="sc">$</span>Age_c), <span class="at">by =</span> <span class="fl">0.1</span>))</span>
+<span id="cb20-2"><a href="#cb20-2"></a>pred2 <span class="ot">=</span> <span class="fu">predict</span>(bc_reg, <span class="at">newdata =</span> newdata2, <span class="at">se.fit =</span> T, <span class="at">type =</span> <span class="st">"link"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3"></a>LL_CI1 <span class="ot">=</span> pred2<span class="sc">$</span>fit <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred2<span class="sc">$</span>se.fit</span>
+<span id="cb20-4"><a href="#cb20-4"></a>UL_CI1 <span class="ot">=</span> pred2<span class="sc">$</span>fit <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> pred2<span class="sc">$</span>se.fit</span>
+<span id="cb20-5"><a href="#cb20-5"></a></span>
+<span id="cb20-6"><a href="#cb20-6"></a>with_CI <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">Age_c =</span> newdata2<span class="sc">$</span>Age_c, </span>
+<span id="cb20-7"><a href="#cb20-7"></a>                     <span class="at">pred =</span> <span class="fu">inv.logit</span>(pred2<span class="sc">$</span>fit), </span>
+<span id="cb20-8"><a href="#cb20-8"></a>                     <span class="at">LL =</span> <span class="fu">inv.logit</span>(LL_CI1), </span>
+<span id="cb20-9"><a href="#cb20-9"></a>                     <span class="at">UL =</span> <span class="fu">inv.logit</span>(UL_CI1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="we-can-add-the-confidence-intervals-23" class="slide level2">
+<h2>We can add the confidence intervals (2/3)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>prob_stage_CI <span class="ot">=</span> <span class="fu">ggplot</span>(<span class="at">data =</span> with_CI, <span class="fu">aes</span>(<span class="at">x =</span> Age_c)) <span class="sc">+</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> LL, <span class="at">ymax =</span> UL), <span class="at">fill =</span> <span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x=</span>Age_c, <span class="at">y =</span> pred), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"#70AD47"</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age centered (yrs)"</span>, </span>
+<span id="cb21-5"><a href="#cb21-5"></a>       <span class="at">y =</span> <span class="st">"Estimated probability of </span><span class="sc">\n</span><span class="st"> Late stage BC diagnosis"</span>)  <span class="sc">+</span> </span>
+<span id="cb21-6"><a href="#cb21-6"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb21-7"><a href="#cb21-7"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">30</span>), </span>
+<span id="cb21-8"><a href="#cb21-8"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">25</span>), </span>
+<span id="cb21-9"><a href="#cb21-9"></a>        <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb21-10"><a href="#cb21-10"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="fl">0.6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="we-can-add-the-confidence-intervals-33" class="slide level2">
+<h2>We can add the confidence intervals (3/3)</h2>
+
+<img data-src="07_Pred_Viz_files/figure-revealjs/unnamed-chunk-14-1.png" width="864" class="r-stretch"></section>
+<section id="poll-everywhere-question" class="slide level2">
+<h2>Poll Everywhere Question</h2>
+</section>
+<section id="visualization-of-observed-outcome-and-fitted-model" class="slide level2 smaller">
+<h2>Visualization of observed outcome and fitted model</h2>
+<div class="columns">
+<div class="column" style="width:34%;">
+
+</div><div class="column" style="width:33%;">
+<p><span class="math display">\[\text{logit}(\widehat{\pi}(Age)) = -0.989 + 0.057 \cdot Age\]</span></p>
+</div><div class="column" style="width:33%;">
+<p><span class="math display">\[\widehat{\pi}(Age) = \dfrac{ \exp \left[-0.989 + 0.057 \cdot Age \right]}{1+\exp \left[-0.989 + 0.057 \cdot Age \right]}\]</span></p>
+</div>
+</div>
+
+<img data-src="07_Pred_Viz_files/figure-revealjs/unnamed-chunk-16-1.png" width="1920" class="r-stretch quarto-figure-left"></section>
+<section id="visualization-of-odds-ratios" class="slide level2">
+<h2>Visualization of odds ratios?</h2>
+<ul>
+<li>We will discuss this more on Wednesday when we look at interpretations of ORs</li>
+</ul>
+</section></section>
+<section id="learning-objectives-4" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Make transformation between logistic regression and estimated/predicted probability.</p></li>
+<li><p>Construct confidence interval for predicted probability.</p></li>
+<li><p>Visualize the predicted probability (and its confidence intervals).</p></li>
+</ol>
 
 <div class="footer footer-default">
 <p>Lesson 7: Prediction and Visualization in Simple Logistic Regression</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 

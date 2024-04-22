@@ -497,7 +497,6 @@ $$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
 | $\beta_0$  | intercept                                             |
 | $\beta_1$  | slope                                                 |
 | $X$        | predictor, covariate, independent variable            |
-| $\epsilon$ | residuals, error term                                 |
 
 # Learning Objectives
 
@@ -636,7 +635,6 @@ $$ \text{logit} (\pi) =  \beta_0 + \beta_1X$$
 | $\beta_0$  | intercept                                             |
 | $\beta_1$  | slope                                                 |
 | $X$        | predictor, covariate, independent variable            |
-| $\epsilon$ | residuals, error term                                 |
 
 ## Estimation for Logistic Regression Model
 
@@ -824,7 +822,7 @@ summary(bc_reg)
 summary(bc_reg)$coefficients
 ```
 
--   Fitted logistic regression model: $$\text{logit}(\pi(Age)) = `r round(summary(bc_reg)$coefficients[1,1], 3)` + `r round(summary(bc_reg)$coefficients[2,1], 3)` \cdot Age$$
+-   Fitted logistic regression model: $$\text{logit}(\widehat{\pi}(Age)) = `r round(summary(bc_reg)$coefficients[1,1], 3)` + `r round(summary(bc_reg)$coefficients[2,1], 3)` \cdot Age$$
 
 [We will need to reverse the transformation process in slide 24-25 to find the odds ratios]{style="color:white;"}
 
@@ -848,7 +846,7 @@ summary(bc_reg)$coefficients
 summary(bc_reg)$coefficients
 ```
 
--   Fitted logistic regression model: $$\text{logit}(\pi(Age)) = `r round(summary(bc_reg)$coefficients[1,1], 3)` + `r round(summary(bc_reg)$coefficients[2,1], 3)` \cdot Age$$
+-   Fitted logistic regression model: $$\text{logit}(\widehat{\pi}(Age)) = `r round(summary(bc_reg)$coefficients[1,1], 3)` + `r round(summary(bc_reg)$coefficients[2,1], 3)` \cdot Age$$
 
 We will need to reverse the transformation process in slide 24-25 to find the odds ratios
 
