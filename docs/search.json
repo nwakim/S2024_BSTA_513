@@ -4492,5 +4492,75 @@
     "title": "Lesson 7: Prediction and Visualization in Simple Logistic Regression",
     "section": "Visualization of observed outcome and fitted model",
     "text": "Visualization of observed outcome and fitted model\n\n\n\n\n\\[\\text{logit}(\\widehat{\\pi}(Age)) = -0.989 + 0.057 \\cdot Age\\]\n\n\\[\\widehat{\\pi}(Age) = \\dfrac{ \\exp \\left[-0.989 + 0.057 \\cdot Age \\right]}{1+\\exp \\left[-0.989 + 0.057 \\cdot Age \\right]}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "",
+    "text": "Used the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#last-time-to-this-time",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#last-time-to-this-time",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "",
+    "text": "Used the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#so-far-weve-looked-at-the-association-using-the-log-odds-scale",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#so-far-weve-looked-at-the-association-using-the-log-odds-scale",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "So far we’ve looked at the association using the log-odds scale",
+    "text": "So far we’ve looked at the association using the log-odds scale\n\n\nFor a population simple logistic regression model with a continuous predictor \\[\\text{logit}(\\pi(X)) = \\beta_0 + \\beta_1 \\cdot X\\]\n\n\\(\\beta_0\\): log-odds when X is 0\n\\(\\beta_1\\): increase in log-odds for every 1 unit increase in X\n\n\n\n\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds of \\(Y=1\\) when X is 0.\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds of \\(Y=1\\) for every 1 unit increase in X\nCan use expected instead of estimated"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-from-last-class",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-from-last-class",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: From last class",
+    "text": "Example: From last class\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063\n  \n  \n  \n\n\n\n\n\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age^c)) = −0.989  + 0.057     \\cdot Age^c\\]\n\\(\\widehat{\\beta}_0\\): The estimated log-odds is -0.989 when age is 61.71 years (95% CI: -1.035, -0.944)\n\\(\\widehat{\\beta}_1\\): The estimated increase in log-odds is 0.057 for every 1 year increase in age (95% CI: 0.051, 0.063)."
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "We typically interpret our results using odds ratios",
+    "text": "We typically interpret our results using odds ratios\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\nHow do we go from interpretations of \\(\\widehat{\\beta}_0\\) and \\(\\widehat{\\beta}_1\\) using log odds to odds ratios?\nWe will need to take the exponential of our model:\n\n\\(\\text{exp}(\\widehat{\\beta}_0)\\): expected odds that \\(Y=1\\) when X is 0.\n\\(\\text{exp}(\\widehat{\\beta}_1)\\): expected odds ratio that \\(Y=1\\) for every 1 unit increase in X"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-for-the-intercept",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-for-the-intercept",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "How do we get the odds for the intercept?",
+    "text": "How do we get the odds for the intercept?\nFor \\(\\text{exp}(\\widehat{\\beta}_0)\\)\n\nWhen \\(X=0\\), we have \\[\\text{logit}(\\widehat{\\pi}(X=0)) = \\widehat{\\beta}_0\\]\nThus, \\[\\begin{aligned} \\widehat{\\beta}_0 & = \\text{logit}(\\widehat{\\pi}(X)) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\big[\\text{logit}(\\widehat{\\pi}(X))\\big] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\Bigg[\\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)}\\Bigg)\\Bigg] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-ratio-for-xs-coefficient",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-ratio-for-xs-coefficient",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "How do we get the odds ratio for X’s coefficient?",
+    "text": "How do we get the odds ratio for X’s coefficient?\n\n\nFor \\(\\text{exp}(\\widehat{\\beta}_1)\\)\n\nWe compare \\(X=x\\) and \\(X=x+1\\),\nSo we have \\[\\text{logit}(\\widehat{\\pi}(X = x)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x\\] and \\[\\text{logit}(\\widehat{\\pi}(X = x+1)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1)\\]\nAnd… \\[\\begin{aligned} & \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\ & =  \n\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1) - \\big[\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x \\big] \\\\ &= \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x + \\widehat{\\beta}_1 - \\widehat{\\beta}_0 - \\widehat{\\beta}_1 \\cdot x \\\\ & =\n\\widehat{\\beta}_1 \\end{aligned}\\]\n\n\n\nThus, \\[\\begin{aligned} \\widehat{\\beta}_1 & =  \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}\\Bigg) - \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}\\Bigg) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\left(\\frac{\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}} {\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}}\\right) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\text{exp}\\left[\\text{log}\\left(\\frac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}}\\right) \\right] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\frac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\n\nHow do we do this in R?\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T, exponentiate=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;% fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c\n1.059\n0.003\n17.780\n0.000\n1.052\n1.065\n  \n  \n  \n\n\n\nlogistic.display(bc_reg, decimal = 3)\n\n\nLogistic regression predicting Late_stage_diag : 1 vs 0 \n \n                   OR(95%CI)            P(Wald's test) P(LR-test)\nAge_c (cont. var.) 1.059 (1.052,1.065)  &lt; 0.001        &lt; 0.001   \n                                                                 \nLog-likelihood = -5754.84419\nNo. of observations = 10000\nAIC value = 11513.68837"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Transformations of continuous variable to make more interpretable",
+    "text": "Transformations of continuous variable to make more interpretable\n\nSometimes a change in “1” unit may not be considered clinically interesting\n\nFor example, a 1 year increase in age or a 1 mm Hg increase in systolic blood pressure may be too small for a meaningful change in log odds\nInstead, we may be interested to find out the log odds change for a increase of 10 years in age or 10 mm Hg in systolic blood pressure\nOn the other hand, if the range of x is small (say 0-1), than a change in 1 unit of 𝑥 is too large to be meaningful\n\nWe should be able to compute and interpret coefficients for a continuous independent covariate 𝑥 for an arbitrary change of “c” units in 𝑥"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-1",
+    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot Age\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds when age is 61.71 years\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds for every 1 year increase in age"
   }
 ]
