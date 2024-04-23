@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic                                                        |                                                     Slides                                                     |                                                         Annotated Slides                                                          |                           Recording                           |
-|--------|--------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------:|
-| 7      | Predictions and Visualizations in Simple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/07_Pred_Viz/07_Pred_Viz.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/07_Pred_Viz/07_Pred_Viz_notes.pdf)]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 8      | Interpretations in Simple Logistic Regression                |                     [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                      |                        [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                         | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic                                                        |                                                     Slides                                                     |                                                         Annotated Slides                                                          |                                                  Recording                                                  |
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
+| 7      | Predictions and Visualizations in Simple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/07_Pred_Viz/07_Pred_Viz.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/07_Pred_Viz/07_Pred_Viz_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}]({{< iconify ri slideshow-fill size=30px >})]{style="color:#f8f5f0;"} |
+| 8      | Interpretations in Simple Logistic Regression                |                     [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                      |                        [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                         |                        [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                        |
 
 ## On the Horizon
 
@@ -48,6 +48,40 @@ editor_options:
 [[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUOFNVUFkyWDk0UVhCRTM5TVRaWU1TRERPOS4u)]{style="color:#f8f5f0;"} Wednesday (4/24)
 
 ## Announcements
+
+Wednesday 4/24
+
+-   [Have you all seen this??? Page on Basic Needs for students](https://ohsu-psu-sph.org/meeting-basic-needs/)
+
+    -   [SPH Emergency funds](https://ohsu-psu-sph.org/meeting-basic-needs/emergency-fund/)
+
+    -   CARE program
+
+    -   Committee for Improving Student Food Security
+
+-   Lab 2 is up!
+
+    -   From Lab 1:
+
+        -   DO NOT USE ANY_HARDSHIP or MULT_HARDSHIP as your main variable
+
+            -   These are constructed from food insecurity variable
+
+            -   See the User Guide in the downloaded ICPSR folder
+
+-   Quiz 1 should be in!
+
+-   Lab 1 feedback still in progress
+
+-   Review last quarter's project
+
+    -   On Monday we will take 15 minutes to discuss changes to the project report instructions
+
+    -   I will bring the learning objectives that I want to assess
+
+    -   We can rework or scrap parts of the report that do not assess these learning objectives
+
+    -   As part of the exit ticket, I will ask about your preferences as well
 
 ## Muddiest Points
 

@@ -459,7 +459,7 @@
     "href": "lessons.html",
     "title": "Lessons",
     "section": "",
-    "text": "Lesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\n5\nSimple Logistic Regression\n\n\n\n\n\n6\nTests for GLMs using Likelihood function\n\n\n\n\n\n7\nInterpretations and visualizations of ORs in Simple Logistic Regression\n\n\n\n\n\n8\nMultiple Logistic Regression\n\n\n\n\n\n9\nConfounders and Interactions\n\n\n\n\n\n\nInterpretations and visualizations of ORs in Multiple Logistic Regression\n\n\n\n\n\n10\nModel Building Strategies\n\n\n\n\n\n11\nNumerical Problems\n\n\n\n\n\n12\nAssessing Model Fit\n\n\n\n\n\n13\nRevisit interpretations\n\n\n\n\n\n14\nPoisson Regression\n\n\n\n\n\n15\nLog-binomial regression"
+    "text": "Lesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\n5\nSimple Logistic Regression\n\n\n\n\n\n6\nTests for GLMs using Likelihood function\n\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations in Simple Logistic Regression\n\n\n\n\n\n9\nMultiple Logistic Regression\n\n\n\n\n\n10\nConfounders and Interactions\n\n\n\n\n\n11\nInterpretations and visualizations of ORs in Multiple Logistic Regression\n\n\n\n\n\n12\nModel Building Strategies\n\n\n\n\n\n13\nNumerical Problems\n\n\n\n\n\n14\nAssessing Model Fit\n\n\n\n\n\n15\nRevisit interpretations\n\n\n\n\n\n16\nPoisson Regression\n\n\n\n\n\n17\nLog-binomial regression"
   },
   {
     "objectID": "weeks/week_02_sched.html#resources",
@@ -1488,7 +1488,7 @@
     "href": "weeks/week_04_sched.html#announcements",
     "title": "Week 4",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\nWednesday 4/24\n\nHave you all seen this??? Page on Basic Needs for students\n\nSPH Emergency funds\nCARE program\nCommittee for Improving Student Food Security\n\nLab 2 is up!\n\nFrom Lab 1:\n\nDO NOT USE ANY_HARDSHIP or MULT_HARDSHIP as your main variable\n\nThese are constructed from food insecurity variable\nSee the User Guide in the downloaded ICPSR folder\n\n\n\nQuiz 1 should be in!\nLab 1 feedback still in progress\nReview last quarter’s project\n\nOn Monday we will take 15 minutes to discuss changes to the project report instructions\nI will bring the learning objectives that I want to assess\nWe can rework or scrap parts of the report that do not assess these learning objectives\nAs part of the exit ticket, I will ask about your preferences as well"
   },
   {
     "objectID": "weeks/week_04_sched.html#muddiest-points",
