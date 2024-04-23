@@ -4653,10 +4653,10 @@ vertical-align: -.125em;
   <li><a href="#restate-research-question" id="toc-restate-research-question" class="nav-link" data-scroll-target="#restate-research-question"><span class="header-section-number">2.1</span> Restate research question</a></li>
   <li><a href="#make-sure-variables-are-coded-correctly" id="toc-make-sure-variables-are-coded-correctly" class="nav-link" data-scroll-target="#make-sure-variables-are-coded-correctly"><span class="header-section-number">2.2</span> Make sure variables are coded correctly</a></li>
   <li><a href="#consider-potential-confounders-and-effect-modifiers" id="toc-consider-potential-confounders-and-effect-modifiers" class="nav-link" data-scroll-target="#consider-potential-confounders-and-effect-modifiers"><span class="header-section-number">2.3</span> Consider potential confounders and effect modifiers</a></li>
-  <li><a href="#bivariate-exploratory-data-analysis" id="toc-bivariate-exploratory-data-analysis" class="nav-link" data-scroll-target="#bivariate-exploratory-data-analysis"><span class="header-section-number">2.4</span> Bivariate exploratory data analysis</a></li>
-  <li><a href="#multivariate-exploratory-data-analysis" id="toc-multivariate-exploratory-data-analysis" class="nav-link" data-scroll-target="#multivariate-exploratory-data-analysis"><span class="header-section-number">2.5</span> Multivariate exploratory data analysis</a></li>
+  <li><a href="#create-contingency-tables-for-categorical-predictors" id="toc-create-contingency-tables-for-categorical-predictors" class="nav-link" data-scroll-target="#create-contingency-tables-for-categorical-predictors"><span class="header-section-number">2.4</span> Create contingency tables for categorical predictors</a></li>
+  <li><a href="#bivariate-exploratory-data-analysis" id="toc-bivariate-exploratory-data-analysis" class="nav-link" data-scroll-target="#bivariate-exploratory-data-analysis"><span class="header-section-number">2.5</span> Bivariate exploratory data analysis</a></li>
   <li><a href="#fit-simple-logistic-regression" id="toc-fit-simple-logistic-regression" class="nav-link" data-scroll-target="#fit-simple-logistic-regression"><span class="header-section-number">2.6</span> Fit simple logistic regression</a></li>
-  <li><a href="#fit-a-mulivariable-logistic-regression" id="toc-fit-a-mulivariable-logistic-regression" class="nav-link" data-scroll-target="#fit-a-mulivariable-logistic-regression"><span class="header-section-number">2.7</span> Fit a mulivariable logistic regression</a></li>
+  <li><a href="#plot-the-predicted-probability" id="toc-plot-the-predicted-probability" class="nav-link" data-scroll-target="#plot-the-predicted-probability"><span class="header-section-number">2.7</span> Plot the predicted probability</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Lab_02_instructions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -4690,7 +4690,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 19, 2024</p>
+      <p class="date-modified">April 23, 2024</p>
     </div>
   </div>
     
@@ -4820,7 +4820,20 @@ Task
 </section>
 <section id="consider-potential-confounders-and-effect-modifiers" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="consider-potential-confounders-and-effect-modifiers"><span class="header-section-number">2.3</span> Consider potential confounders and effect modifiers</h3>
-<p>For each of the 10 predictor variables, fill out the below table. This does not need to be extensive reasoning. If you would like to present this information in another way, you may.</p>
+<p>For each of the 10 predictor variables, fill out the below table. Determine whether you think each variable will be a confounder, effect modifier, or nothing in relation to your main variable and food insecurity. This does not need to be extensive reasoning. If you would like to present this information in another way, you may.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill in the below table (or any other way you wish to present the same information).</p>
+</div>
+</div>
 <table class="table">
 <colgroup>
 <col style="width: 22%">
@@ -4888,9 +4901,14 @@ Task
 </tbody>
 </table>
 </section>
-<section id="bivariate-exploratory-data-analysis" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="bivariate-exploratory-data-analysis"><span class="header-section-number">2.4</span> Bivariate exploratory data analysis</h3>
-<p>Use <code>ggpairs()</code> (<a href="https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions">introduced in BSTA 512 Lesson 13</a>) to quickly look at the relationship between variables.</p>
+<section id="create-contingency-tables-for-categorical-predictors" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="create-contingency-tables-for-categorical-predictors"><span class="header-section-number">2.4</span> Create contingency tables for categorical predictors</h3>
+<p>For each categorical covariate, create a contingency table between it and food insecurity. You can create a data frame with only categorical covariattes, then use <code>lapply()</code> to make a table for each column. Take note of any cells that have less than 10 observations. <strong>No need to make these tables pretty.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You need to replace df_cat_only with your data frame that </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#     only has categorical predictors</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(df_cat_only, <span class="cf">function</span>(x) <span class="fu">table</span>(df_cat_only<span class="sc">$</span>FOOD_INSEC, x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -4901,18 +4919,70 @@ Task
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Using <code>ggplot</code> or tables, visualize your variables. Get a sense of each variable’s distribution. Do you notice anything out of the ordinary?</p>
+<ul>
+<li>Create contingency tables for all categorical covariates with food insecurity.</li>
+<li>Take note of any cell counts that are less than 10</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="multivariate-exploratory-data-analysis" class="level3" data-number="2.5">
-<h3 data-number="2.5" class="anchored" data-anchor-id="multivariate-exploratory-data-analysis"><span class="header-section-number">2.5</span> Multivariate exploratory data analysis</h3>
+<section id="bivariate-exploratory-data-analysis" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="bivariate-exploratory-data-analysis"><span class="header-section-number">2.5</span> Bivariate exploratory data analysis</h3>
+<p>Use <code>ggpairs()</code> (<a href="https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions">introduced in BSTA 512 Lesson 13</a>) to quickly look at the relationship between variables. If you have trouble seeing or interpreting the individual plots, try recreating them in <code>ggplot()</code>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use <code>ggpairs()</code> (<a href="https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions">introduced in BSTA 512 Lesson 13</a>) to quickly look at the relationship between variables.</li>
+<li>List predictors with which there is a clear trend with food insecurity.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="fit-simple-logistic-regression" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="fit-simple-logistic-regression"><span class="header-section-number">2.6</span> Fit simple logistic regression</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Using <code>glm()</code>, run a logistic regression with food insecurity and your main variable of interest.</li>
+<li>Display the unadjusted odds ratio of the regression. You can use <code>logistic.display()</code></li>
+<li>Interpret the unadjusted odds ratio (with 95% confidence interval). If you’re main variable is multi-level, then you will need to interpret multiple odds ratios.</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="fit-a-mulivariable-logistic-regression" class="level3" data-number="2.7">
-<h3 data-number="2.7" class="anchored" data-anchor-id="fit-a-mulivariable-logistic-regression"><span class="header-section-number">2.7</span> Fit a mulivariable logistic regression</h3>
+<section id="plot-the-predicted-probability" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="plot-the-predicted-probability"><span class="header-section-number">2.7</span> Plot the predicted probability</h3>
+<p>I want us to plot the predicted probability across our main independent variable. If your main variable of interest (from your research question) is continuous, then you can follow the code from Lesson 7 to construct a plot of the predicted probability. If your main variable of interest in categorical, then you can try plotting the predicted probability in the same way as Lesson 7. You may prefer to present the predicted probabilities for each group as a table.</p>
+<p>This plot will serve as a good foundation if we have any interactions in the model!</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Plot or make a table of your predicted probabilities.</p>
+</div>
+</div>
 
 
 </section>

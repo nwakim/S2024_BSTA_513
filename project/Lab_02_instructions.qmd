@@ -94,7 +94,14 @@ df_name %>% map(class)
 
 ### Consider potential confounders and effect modifiers
 
-For each of the 10 predictor variables, fill out the below table. This does not need to be extensive reasoning. If you would like to present this information in another way, you may. 
+For each of the 10 predictor variables, fill out the below table. Determine whether you think each variable will be a confounder, effect modifier, or nothing in relation to your main variable and food insecurity. This does not need to be extensive reasoning. If you would like to present this information in another way, you may. 
+
+::: callout-important
+#### Task
+
+Fill in the below table (or any other way you wish to present the same information).
+:::
+
 
 | Variable name | Confounder, Effect modifier, or nothing? | Reasoning (1-2 sentences) |
 |-----------------|-----------------------------|-----------------------------|
@@ -109,18 +116,53 @@ For each of the 10 predictor variables, fill out the below table. This does not 
 |               |                                          |                           |
 |               |                                          |                           |
 
+### Create contingency tables for categorical predictors
+
+For each categorical covariate, create a contingency table between it and food insecurity. You can create a data frame with only categorical covariattes, then use `lapply()` to make a table for each column. Take note of any cells that have less than 10 observations. **No need to make these tables pretty.**
+
+```{r}
+#| eval: false
+
+# You need to replace df_cat_only with your data frame that 
+#     only has categorical predictors
+lapply(df_cat_only, function(x) table(df_cat_only$FOOD_INSEC, x))
+```
+
+::: callout-important
+#### Task
+-   Create contingency tables for all categorical covariates with food insecurity.
+-   Take note of any cell counts that are less than 10
+:::
+
 ### Bivariate exploratory data analysis
 
-Use `ggpairs()` ([introduced in BSTA 512 Lesson 13](https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions)) to quickly look at the relationship between variables.
+Use `ggpairs()` ([introduced in BSTA 512 Lesson 13](https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions)) to quickly look at the relationship between variables. If you have trouble seeing or interpreting the individual plots, try recreating them in `ggplot()`.
 
 ::: callout-important
 #### Task
 
-Using `ggplot` or tables, visualize your variables. Get a sense of each variable's distribution. Do you notice anything out of the ordinary?
+-   Use `ggpairs()` ([introduced in BSTA 512 Lesson 13](https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions)) to quickly look at the relationship between variables.
+-   List predictors with which there is a clear trend with food insecurity.
 :::
 
-### Multivariate exploratory data analysis
 
 ### Fit simple logistic regression
 
-### Fit a mulivariable logistic regression
+::: callout-important
+#### Task
+-   Using `glm()`, run a logistic regression with food insecurity and your main variable of interest. 
+-   Display the unadjusted odds ratio of the regression. You can use `logistic.display()`
+-   Interpret the unadjusted odds ratio (with 95% confidence interval). If you're main variable is multi-level, then you will need to interpret multiple odds ratios.
+:::
+
+### Plot the predicted probability
+
+I want us to plot the predicted probability across our main independent variable. If your main variable of interest (from your research question) is continuous, then you can follow the code from Lesson 7 to construct a plot of the predicted probability. If your main variable of interest in categorical, then you can try plotting the predicted probability in the same way as Lesson 7. You may prefer to present the predicted probabilities for each group as a table. 
+
+This plot will serve as a good foundation if we have any interactions in the model!
+
+::: callout-important
+#### Task
+
+Plot or make a table of your predicted probabilities.
+:::

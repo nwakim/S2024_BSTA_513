@@ -4611,9 +4611,19 @@ vertical-align: -.125em;
   <ul>
   <li><a href="#directions" id="toc-directions" class="nav-link active" data-scroll-target="#directions"><span class="header-section-number">1</span> Directions</a>
   <ul class="collapse">
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="header-section-number">1.1</span> Grading</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">1.1</span> Purpose</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="header-section-number">1.2</span> Grading</a></li>
   </ul></li>
-  <li><a href="#lab-activities" id="toc-lab-activities" class="nav-link" data-scroll-target="#lab-activities"><span class="header-section-number">2</span> Lab activities</a></li>
+  <li><a href="#lab-activities" id="toc-lab-activities" class="nav-link" data-scroll-target="#lab-activities"><span class="header-section-number">2</span> Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#restate-research-question" id="toc-restate-research-question" class="nav-link" data-scroll-target="#restate-research-question"><span class="header-section-number">2.1</span> Restate research question</a></li>
+  <li><a href="#make-sure-variables-are-coded-correctly" id="toc-make-sure-variables-are-coded-correctly" class="nav-link" data-scroll-target="#make-sure-variables-are-coded-correctly"><span class="header-section-number">2.2</span> Make sure variables are coded correctly</a></li>
+  <li><a href="#consider-potential-confounders-and-effect-modifiers" id="toc-consider-potential-confounders-and-effect-modifiers" class="nav-link" data-scroll-target="#consider-potential-confounders-and-effect-modifiers"><span class="header-section-number">2.3</span> Consider potential confounders and effect modifiers</a></li>
+  <li><a href="#create-contingency-tables-for-categorical-predictors" id="toc-create-contingency-tables-for-categorical-predictors" class="nav-link" data-scroll-target="#create-contingency-tables-for-categorical-predictors"><span class="header-section-number">2.4</span> Create contingency tables for categorical predictors</a></li>
+  <li><a href="#bivariate-exploratory-data-analysis" id="toc-bivariate-exploratory-data-analysis" class="nav-link" data-scroll-target="#bivariate-exploratory-data-analysis"><span class="header-section-number">2.5</span> Bivariate exploratory data analysis</a></li>
+  <li><a href="#fit-simple-logistic-regression" id="toc-fit-simple-logistic-regression" class="nav-link" data-scroll-target="#fit-simple-logistic-regression"><span class="header-section-number">2.6</span> Fit simple logistic regression</a></li>
+  <li><a href="#plot-the-predicted-probability" id="toc-plot-the-predicted-probability" class="nav-link" data-scroll-target="#plot-the-predicted-probability"><span class="header-section-number">2.7</span> Plot the predicted probability</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -4646,7 +4656,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 18, 2024</p>
+      <p class="date-modified">April 23, 2024</p>
     </div>
   </div>
     
@@ -4657,65 +4667,225 @@ vertical-align: -.125em;
 
 <section id="directions" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="directions"><span class="header-section-number">1</span> Directions</h2>
-<section id="grading" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="grading"><span class="header-section-number">1.1</span> Grading</h3>
-<p><strong>This lab is graded out of 12 points.</strong> The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.</p>
-<section id="rubric" class="level4" data-number="1.1.1">
-<h4 data-number="1.1.1" class="anchored" data-anchor-id="rubric"><span class="header-section-number">1.1.1</span> Rubric</h4>
-<table class="table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>4 points</th>
-<th>3 points</th>
-<th>2 points</th>
-<th>1 point</th>
-<th>0 points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Formatting</td>
-<td>Lab submitted on Sakai with <code>.html</code> file. Answers are written in complete sentences with no major grammatical nor spelling errors. With little editing, the answer can be incorporated into the project report.</td>
-<td>Lab submitted on Sakai with <code>.html</code> file. Answers are written in complete sentences with grammatical or spelling errors. With editing, the answer can be incorporated into the project report.</td>
-<td>Lab submitted on Sakai with <code>.html</code> file. Answers are written in complete sentences with major grammatical or spelling errors. With major editing, the answer can be incorporated into the project report.</td>
-<td>Lab submitted on Sakai with <code>.html</code> file. Answers are bulletted or do not use complete sentences.</td>
-<td>Lab <em>not</em> submitted on Sakai with <code>.html</code> file.</td>
-</tr>
-<tr class="even">
-<td>Code/Work</td>
-<td>All tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.</td>
-<td>All tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.</td>
-<td>Most tasks are directly followed or answered. This includes all the needed code, in code chunks, with the requested output.</td>
-<td>Some tasks are directly followed or answered.This includes all the needed code, in code chunks, with the requested output. In a few tasks, the code syntax or output is not quite right.</td>
-<td>More than a quarter of the tasks are not completed properly.</td>
-</tr>
-<tr class="odd">
-<td>Reasoning*</td>
-<td>Answers demonstrate understanding of research context and investigation of the data. Answers are thoughtful and can be easily integrated into the final report.</td>
-<td>Answers demonstrate understanding of research context and investigation of the data. Answers are thoughtful, but lack the clarity needed to easily integrate into the final report.</td>
-<td>Answers demonstrate some understanding of research context and investigation of the data. Answers are fairly thoughtful, but lack connection to the research.</td>
-<td>Answers demonstrate some understanding of research context and investigation of the data. Answers seem rushed and with minimal thought.</td>
-<td>Answers lack understanding of research context and investigation of the data. Answers seem rushed and without thought.</td>
-</tr>
-</tbody>
-</table>
-<p>*Applies to questions with reasoning</p>
+<p>This is your <strong>editing</strong> file. <strong>Please do not remove anything from this editing file!!</strong> You will only add your code and work to this file.</p>
+<section id="purpose" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">1.1</span> Purpose</h3>
+<p>The purpose of this lab is to explore our data further, set up the unadjusted odds ratio, and create code to later help us present our final model.</p>
 </section>
+<section id="grading" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="grading"><span class="header-section-number">1.2</span> Grading</h3>
+<p><strong>This lab is graded out of 12 points.</strong> The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.</p>
 </section>
 </section>
 <section id="lab-activities" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="lab-activities"><span class="header-section-number">2</span> Lab activities</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I have left it up to you to load the needed packages for this lab.</p>
+</div>
+</div>
+<section id="restate-research-question" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="restate-research-question"><span class="header-section-number">2.1</span> Restate research question</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please restate your research question below using the provided format (1 sentence). You can change the wording if you’d like, but please make sure it is still clear. It’s repetitive, but it helps me contextualize my feedback as I look through your lab.</p>
+</div>
+</div>
+<p>In this study, we will investigate the association between food insecurity and ________.</p>
+</section>
+<section id="make-sure-variables-are-coded-correctly" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="make-sure-variables-are-coded-correctly"><span class="header-section-number">2.2</span> Make sure variables are coded correctly</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use <code>class()</code> to determine the class of each of the 11 variables you selected from Lab 1 (including the outcome).</li>
+<li>Change the variable type to the appropriate type.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="consider-potential-confounders-and-effect-modifiers" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="consider-potential-confounders-and-effect-modifiers"><span class="header-section-number">2.3</span> Consider potential confounders and effect modifiers</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fill in the below table (or any other way you wish to present the same information).</p>
+</div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 38%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable name</th>
+<th>Confounder, Effect modifier, or nothing?</th>
+<th>Reasoning (1-2 sentences)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="create-contingency-tables-for-categorical-predictors" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="create-contingency-tables-for-categorical-predictors"><span class="header-section-number">2.4</span> Create contingency tables for categorical predictors</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Create contingency tables for all categorical covariates with food insecurity.</li>
+<li>Take note of any cell counts that are less than 10</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="bivariate-exploratory-data-analysis" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="bivariate-exploratory-data-analysis"><span class="header-section-number">2.5</span> Bivariate exploratory data analysis</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use <code>ggpairs()</code> (<a href="https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions">introduced in BSTA 512 Lesson 13</a>) to quickly look at the relationship between variables.</li>
+<li>List predictors with which there is a clear trend with food insecurity.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="fit-simple-logistic-regression" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="fit-simple-logistic-regression"><span class="header-section-number">2.6</span> Fit simple logistic regression</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Using <code>glm()</code>, run a logistic regression with food insecurity and your main variable of interest.</li>
+<li>Display the unadjusted odds ratio of the regression. You can use <code>logistic.display()</code></li>
+<li>Interpret the unadjusted odds ratio (with 95% confidence interval). If you’re main variable is multi-level, then you will need to interpret multiple odds ratios.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="plot-the-predicted-probability" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="plot-the-predicted-probability"><span class="header-section-number">2.7</span> Plot the predicted probability</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Plot or make a table of your predicted probabilities.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
