@@ -1467,7 +1467,7 @@
     "href": "weeks/week_04_sched.html#resources",
     "title": "Week 4",
     "section": "Resources",
-    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations in Simple Logistic Regression"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations and Visualizations of Odds Ratios"
   },
   {
     "objectID": "weeks/week_04_sched.html#on-the-horizon",
@@ -4503,64 +4503,477 @@
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#last-time-to-this-time",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#last-time-to-this-time",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
-    "section": "",
-    "text": "Used the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Last time to this time",
+    "text": "Last time to this time\n\nUsed the Wald test and Wald 95% confidence interval to interpret coefficients in a fitted model\nThis time: Interpret using odds ratio"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#so-far-weve-looked-at-the-association-using-the-log-odds-scale",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#so-far-weve-looked-at-the-association-using-the-log-odds-scale",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
     "section": "So far we’ve looked at the association using the log-odds scale",
     "text": "So far we’ve looked at the association using the log-odds scale\n\n\nFor a population simple logistic regression model with a continuous predictor \\[\\text{logit}(\\pi(X)) = \\beta_0 + \\beta_1 \\cdot X\\]\n\n\\(\\beta_0\\): log-odds when X is 0\n\\(\\beta_1\\): increase in log-odds for every 1 unit increase in X\n\n\n\n\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds of \\(Y=1\\) when X is 0.\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds of \\(Y=1\\) for every 1 unit increase in X\nCan use expected instead of estimated"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-from-last-class",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-from-last-class",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
     "section": "Example: From last class",
     "text": "Example: From last class\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063\n  \n  \n  \n\n\n\n\n\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age^c)) = −0.989  + 0.057     \\cdot Age^c\\]\n\\(\\widehat{\\beta}_0\\): The estimated log-odds is -0.989 when age is 61.71 years (95% CI: -1.035, -0.944)\n\\(\\widehat{\\beta}_1\\): The estimated increase in log-odds is 0.057 for every 1 year increase in age (95% CI: 0.051, 0.063)."
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#we-typically-interpret-our-results-using-odds-ratios",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
     "section": "We typically interpret our results using odds ratios",
-    "text": "We typically interpret our results using odds ratios\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\nHow do we go from interpretations of \\(\\widehat{\\beta}_0\\) and \\(\\widehat{\\beta}_1\\) using log odds to odds ratios?\nWe will need to take the exponential of our model:\n\n\\(\\text{exp}(\\widehat{\\beta}_0)\\): expected odds that \\(Y=1\\) when X is 0.\n\\(\\text{exp}(\\widehat{\\beta}_1)\\): expected odds ratio that \\(Y=1\\) for every 1 unit increase in X"
+    "text": "We typically interpret our results using odds ratios\nFor our fitted simple logistic regression model with a continuous predictor \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\n\nHow do we go from interpretations of \\(\\widehat{\\beta}_0\\) and \\(\\widehat{\\beta}_1\\) using log odds to odds ratios?\nWe will need to take the exponential of our model:\n\n\\(\\text{exp}(\\widehat{\\beta}_0)\\): expected odds that \\(Y=1\\) when X is 0.\n\\(\\text{exp}(\\widehat{\\beta}_1)\\): expected odds ratio that \\(Y=1\\) for every 1 unit increase in X\n\nImportant distinction:\n\nWe take the inverse logit to find our predicted probability\nWe take the exponential to interpret the odds/odds ratios"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-for-the-intercept",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-for-the-intercept",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
     "section": "How do we get the odds for the intercept?",
     "text": "How do we get the odds for the intercept?\nFor \\(\\text{exp}(\\widehat{\\beta}_0)\\)\n\nWhen \\(X=0\\), we have \\[\\text{logit}(\\widehat{\\pi}(X=0)) = \\widehat{\\beta}_0\\]\nThus, \\[\\begin{aligned} \\widehat{\\beta}_0 & = \\text{logit}(\\widehat{\\pi}(X)) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\big[\\text{logit}(\\widehat{\\pi}(X))\\big] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\text{exp}\\Bigg[\\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)}\\Bigg)\\Bigg] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_0\\big] & = \\dfrac{\\widehat{\\pi}(X)}{1-\\widehat{\\pi}(X)} \\\\\n\\end{aligned}\\]"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-ratio-for-xs-coefficient",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-get-the-odds-ratio-for-xs-coefficient",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
     "section": "How do we get the odds ratio for X’s coefficient?",
-    "text": "How do we get the odds ratio for X’s coefficient?\n\n\nFor \\(\\text{exp}(\\widehat{\\beta}_1)\\)\n\nWe compare \\(X=x\\) and \\(X=x+1\\),\nSo we have \\[\\text{logit}(\\widehat{\\pi}(X = x)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x\\] and \\[\\text{logit}(\\widehat{\\pi}(X = x+1)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1)\\]\nAnd… \\[\\begin{aligned} & \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\ & =  \n\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1) - \\big[\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x \\big] \\\\ &= \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x + \\widehat{\\beta}_1 - \\widehat{\\beta}_0 - \\widehat{\\beta}_1 \\cdot x \\\\ & =\n\\widehat{\\beta}_1 \\end{aligned}\\]\n\n\n\nThus, \\[\\begin{aligned} \\widehat{\\beta}_1 & =  \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}\\Bigg) - \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}\\Bigg) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\left(\\frac{\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}} {\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}}\\right) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\text{exp}\\left[\\text{log}\\left(\\frac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}}\\right) \\right] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\frac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}} \\\\\n\\end{aligned}\\]"
+    "text": "How do we get the odds ratio for X’s coefficient?\n\n\nFor \\(\\text{exp}(\\widehat{\\beta}_1)\\)\n\nWe compare \\(X=x\\) and \\(X=x+1\\),\nSo we have \\[\\text{logit}(\\widehat{\\pi}(X = x)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x\\] and \\[\\text{logit}(\\widehat{\\pi}(X = x+1)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1)\\]\nAnd… \\[\\begin{aligned} & \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\ & =  \n\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot (x+1) - \\big[\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x \\big] \\\\ &= \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot x + \\widehat{\\beta}_1 - \\widehat{\\beta}_0 - \\widehat{\\beta}_1 \\cdot x \\\\ & =\n\\widehat{\\beta}_1 \\end{aligned}\\]\n\n\n\nThus, \\[\\begin{aligned} \\widehat{\\beta}_1 & =  \\text{logit}(\\widehat{\\pi}(X = x+1)) - \\text{logit}(\\widehat{\\pi}(X = x)) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}\\Bigg) - \\text{log}\\Bigg(\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}\\Bigg) \\\\\n\\widehat{\\beta}_1 & =  \\text{log}\\left(\\dfrac{\\dfrac{\\widehat{\\pi}(X=x+1)}{1-\\widehat{\\pi}(X=x+1)}} {\\dfrac{\\widehat{\\pi}(X=x)}{1-\\widehat{\\pi}(X=x)}}\\right) \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\text{exp}\\left[\\text{log}\\left(\\dfrac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}}\\right) \\right] \\\\\n\\text{exp}\\big[\\widehat{\\beta}_1\\big] & =  \\dfrac{\\text{odds}_{X=x+1}} {\\text{odds}_{X=x}} \\\\\n\\end{aligned}\\]"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
     "section": "Example",
-    "text": "Example\n\nHow do we do this in R?\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T, exponentiate=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;% fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c\n1.059\n0.003\n17.780\n0.000\n1.052\n1.065\n  \n  \n  \n\n\n\nlogistic.display(bc_reg, decimal = 3)\n\n\nLogistic regression predicting Late_stage_diag : 1 vs 0 \n \n                   OR(95%CI)            P(Wald's test) P(LR-test)\nAge_c (cont. var.) 1.059 (1.052,1.065)  &lt; 0.001        &lt; 0.001   \n                                                                 \nLog-likelihood = -5754.84419\nNo. of observations = 10000\nAIC value = 11513.68837"
+    "text": "Example\n\nWhat if we are interested in learning the OR corresponding to 10-year increase in age?\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
     "section": "Transformations of continuous variable to make more interpretable",
-    "text": "Transformations of continuous variable to make more interpretable\n\nSometimes a change in “1” unit may not be considered clinically interesting\n\nFor example, a 1 year increase in age or a 1 mm Hg increase in systolic blood pressure may be too small for a meaningful change in log odds\nInstead, we may be interested to find out the log odds change for a increase of 10 years in age or 10 mm Hg in systolic blood pressure\nOn the other hand, if the range of x is small (say 0-1), than a change in 1 unit of 𝑥 is too large to be meaningful\n\nWe should be able to compute and interpret coefficients for a continuous independent covariate 𝑥 for an arbitrary change of “c” units in 𝑥"
+    "text": "Transformations of continuous variable to make more interpretable\n\nSometimes a change in “1” unit may not be considered clinically interesting\n\nFor example, a 1 year increase in age or a 1 mm Hg increase in systolic blood pressure may be too small for a meaningful change in log odds\nInstead, we may be interested to find out the log odds change for a increase of 10 years in age or 10 mm Hg in systolic blood pressure\nOn the other hand, if the range of x is small (say 0-1), than a change in 1 unit of 𝑥 is too large to be meaningful\n\nWe should be able to compute and interpret coefficients for a continuous independent covariate \\(x\\) for an arbitrary change of “c” units in \\(x\\)"
   },
   {
     "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-1",
     "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-1",
-    "title": "Lesson 7: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\n\nWhat if we are interested in learning the OR corresponding to 10-year increase in age?\n\n\\[ \\widehat{OR}\\left(10\\right)=\\exp{\\left(10\\cdot{\\hat{\\beta}}_1\\right)}=\\exp{\\left(0.56965\\right)}=\\mathrm{\\mathrm{1.767}}\\]\n\nThe 95% CI for \\(\\widehat{OR}\\left(10\\right)\\) is: \\[\\begin{aligned} \\widehat{OR}\\left(10\\right) &=\\exp{\\left(10\\cdot{\\hat{\\beta}}_1\\pm1.96\\cdot10\\cdot SE_{\\hat{\\beta}_1} \\right)} \\\\ &=\\exp{\\left(10\\cdot0.056965\\pm1.96\\cdot10\\cdot0.003204\\right)}\\\\\n&=(1.66,\\ 1.88) \\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#introrecap-of-interpreting-fitted-model",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#introrecap-of-interpreting-fitted-model",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Intro/Recap of Interpreting Fitted Model",
+    "text": "Intro/Recap of Interpreting Fitted Model\n\nInterpret coefficients from fitted logistic regression model\n\nGoodness-of-fit of model should be assessed before summarizing findings (have not covered yet)\nIn this lecture: assume model fits data well\n\nThe interpretation of the coefficients involves two issues:\n\nThe functional relationship between the dependent variable and the independent variable (link function)\nUnit of change for the independent variable\n\nWe will learn the interpretation for\n\nBinary independent variable\nCategorical independent variable with multiple groups\n\nWe looked at this for our race and ethnicity variable\n\nContinuous independent variable"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Coefficient interpretation: Continuous Independent Variable 1",
+    "text": "Coefficient interpretation: Continuous Independent Variable 1\n\nFor simplicity, we assume the linear relationship between logit and continuous variable 𝑥\nAgain using simple logistic regression model to illustrate the interpretation of \\(\\widehat{\\beta}\\) for a continuous variable \\(x\\) \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\nThe estimated slope coefficient, \\(\\widehat{\\beta}_1\\), is the expected change in the log odds for 1 unit increase in \\(x\\)\n\nAdditional attention should be paid to picking a meaningful units of change in \\(x\\)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Coefficient Interpretation: Continuous Independent Variable 2",
+    "text": "Coefficient Interpretation: Continuous Independent Variable 2\n\nSometimes a change in “1” unit may not be considered clinically interesting\n\nFor example, a 1 year increase in age or a 1 mm Hg increase in systolic blood pressure may be too small for a meaningful change in log odds\nInstead, we may be interested to find out the log odds change for a increase of 10 years in age or 10 mm Hg in systolic blood pressure\nOn the other hand, if the range of x is small (say 0-1), than a change in 1 unit of 𝑥 is too large to be meaningful\n\nWe should be able to compute and interpret coefficients for a continuous independent covariate 𝑥 for an arbitrary change of “c” units in 𝑥"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable-3",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable-3",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Coefficient Interpretation: Continuous Independent Variable 3",
+    "text": "Coefficient Interpretation: Continuous Independent Variable 3"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Age and Late Stage Diagnosis (I)",
+    "text": "Example: Age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\nNeeded steps:\n\nFit the regression model\nTransform the coefficients into odds ratios\nInterpret the odds ratio"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Age and Late Stage Diagnosis 2",
+    "text": "Example: Age and Late Stage Diagnosis 2\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nInterpret the odds ratio\n\nFor every one year increase in age, there is an estimated 5.86% increase in the estimated odds of late stage breast cancer diagnosis (95% CI: 5.2%, 6.53%)."
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor-i",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor-i",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Interpretation of Age Coefficient/OR (I)",
+    "text": "Example: Interpretation of Age Coefficient/OR (I)\n\n\\(\\widehat{\\beta}_1\\) is 0.057, suggesting that one year increase in age is associated with 0.057 increase in log odds of receiving a late stage breast cancer diagnosis\n\\(\\exp\\left({\\widehat{\\beta}}_1\\right)\\) is 1.06, suggesting that one year increase in age is associated with 1.06 times the odds of receiving a late stage breast cancer diagnosis\nFor continuous covariates in logistic regression model, it is helpful to subtract 1 from the odds ratio and multiply by 100 to obtain the percentage change in odds for 1-unit increase.\n\nThe estimated OR for age is 1.06, suggesting that a 1-year increase in age is associated with a 6% increase in the predicted odds of late stage diagnosis in the patient population"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor-i-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor-i-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Interpretation of Age Coefficient/OR (I)",
+    "text": "Example: Interpretation of Age Coefficient/OR (I)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor-i-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor-i-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Interpretation of Age Coefficient/OR (I)",
+    "text": "Example: Interpretation of Age Coefficient/OR (I)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#last-note-about-continuous-independent-variable",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#last-note-about-continuous-independent-variable",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Last Note About Continuous Independent Variable",
+    "text": "Last Note About Continuous Independent Variable\n\nNotice that the logistic regression model suggests that logit is linear in the covariate\nThe model implies the additional risk of late stage breast cancer diagnosis for a 40 year-old compared to a 30 year-old is the same as the additional risk of late stage breast cancer diagnosis for a 60 year-old compared to a 50-year-old\nThis assumption may not be realistic\nTo address this, we may consider using higher order terms (e.g., \\(x^2\\), \\(x^3\\),…) or other nonlinear transformation(e.g., \\(log(x)\\))\nCategorize the continuous variable may be another option"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-binary-independent-variable",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-binary-independent-variable",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Coefficient Interpretation: Binary Independent Variable",
+    "text": "Coefficient Interpretation: Binary Independent Variable\n\nIndependent variable \\(x\\) is a binary variable (\\(x\\) can take values: 0 or 1)\nWe are fitting the simple logistic regression model: \\[\\text{logit}\\left(\\pi(X) \\right) = \\beta_0 + \\beta_1 \\cdot I(X=1)\\]\nThe logit difference is \\(\\beta_1\\) for binary independent variable\n\n\\(\\beta_1\\) represents the change/difference in the logit for \\(x=1\\) vs. \\(x=0\\)\n\nIt will be much easier to understand if we can interpret the coefficient using odds ratio (OR)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#binary-how-do-we-interpret-the-coefficient-i",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#binary-how-do-we-interpret-the-coefficient-i",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Binary: How do we interpret the coefficient? (I)",
+    "text": "Binary: How do we interpret the coefficient? (I)\n\nFor individuals with \\(X=0\\): \\[\\text{logit}\\left(\\pi(X=0)\\right)=\\beta_0+\\beta_1\\times\\left(0\\right)=\\beta_0\\]\nFor individuals with \\(X=1\\): \\[\\text{logit}\\left(\\pi(X=1)\\right)=\\beta_0+\\beta_1\\times\\left(1\\right)=\\beta_0 + \\beta_1\\]\nTo solve for \\(\\beta_1\\), we take the difference of the logits: \\[ \\text{logit}\\left(\\pi(X=1)\\right) - \\text{logit}\\left(\\pi(X=0)\\right) = \\left( \\beta_0 + \\beta_1 \\right) - \\left( \\beta_0 \\right) = \\beta_1\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#binary-how-do-we-interpret-the-coefficient-ii",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#binary-how-do-we-interpret-the-coefficient-ii",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Binary: How do we interpret the coefficient? (II)",
+    "text": "Binary: How do we interpret the coefficient? (II)\n\\[ \\text{logit}\\left(\\pi(X=1)\\right) - \\text{logit}\\left(\\pi(X=0)\\right) = \\left( \\beta_0 + \\beta_1 \\right) - \\left( \\beta_0 \\right) = \\beta_1\\]\n\\[\\begin{aligned}\n\\beta_1&=l\\mathrm{ogit}\\left(\\pi(X=1)\\right)\\ -l\\mathrm{ogit}\\left(\\pi\\left(X=0\\right)\\right) \\\\  \\beta_1&=l\\mathrm{og}\\left(\\dfrac{\\pi(X=1)}{1-\\pi(X=1)}\\right)-l\\mathrm{og}\\left(\\dfrac{\\pi\\left(X=0\\right)}{1-\\pi\\left(X=0\\right)}\\right) \\\\\n\\beta_1&=\\log{\\left(\\dfrac{\\dfrac{\\pi(X=1)}{1-\\pi(X=1)}}{\\dfrac{\\pi(X=0)}{1-\\pi(X=0)}}\\right)} \\\\ \\exp{\\left(\\beta_1\\right)}&=\\dfrac{\\dfrac{\\pi(X=1)}{1-\\pi(X=1)}}{\\dfrac{\\pi(X=0)}{1-\\pi(X=0)}}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#review-of-odds-ratio",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#review-of-odds-ratio",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Review of Odds Ratio",
+    "text": "Review of Odds Ratio\n\nOdds for a subject with \\(X=1\\): \\[\\text{odds}_1 = \\dfrac{\\pi(X=1)}{1-\\pi(X=1)}\\]\nOdds for a subject with \\(X=0\\): \\[\\text{odds}_0 = \\dfrac{\\pi(X=0)}{1-\\pi(X=0)}\\]\nOdds Ratio for \\(X=1\\) vs. \\(X=0\\): \\[OR = \\dfrac{\\dfrac{\\pi(X=1)}{1-\\pi(X=1)}}{\\dfrac{\\pi(X=0)}{1-\\pi(X=0)}}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-does-this-relate-to-a-2x2-table",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-does-this-relate-to-a-2x2-table",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "How does this relate to a 2x2 table?",
+    "text": "How does this relate to a 2x2 table?\n\n\n\n2x2 table with the respective logistic functions in each cell"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-3",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-3",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-does-this-relate-to-a-2x2-table-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-does-this-relate-to-a-2x2-table-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "How does this relate to a 2x2 table?",
+    "text": "How does this relate to a 2x2 table?\n\\[\nOR=\\dfrac{a/c}{b/d}=\\dfrac{\\dfrac{\\left(\\dfrac{\\exp{\\left(\\beta_0+\\beta_1\\right)}}{1+\\exp{\\left(\\beta_0+\\beta_1\\right)}}\\right)}{\\left(\\dfrac{1}{1+\\exp(\\beta_0+\\beta_1)}\\right)}}{\\dfrac{\\left(\\dfrac{\\exp(\\beta_0)}{1+\\exp(\\beta_0)}\\right)}{\\left(\\dfrac{1}{1+\\exp{\\left(\\beta_0\\right)}}\\right)}}=\\dfrac{\\exp(\\beta_0+\\beta_1)}{\\exp(\\beta_0)}=e^{\\beta_1}\n\\]\n\nSimple relationship between coefficient and odds ratio is a primary reason why we report OR for categorical data analysis.\nFor binary independent variable x, OR computed in logistic regression model is the same as OR computed using contingency table"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Binary age and Late Stage Diagnosis (I)",
+    "text": "Example: Binary age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for older individuals (&gt;65 years old) compared to younger individuals (≤65 years old)?\n\n\n\nTwo options to calculate this value:\n\nOption 1: Calculate \\(\\widehat{OR}\\) from 2x2 contingency table\n\nRefer to Lesson 3 for this process\n\nOption 2: Calculate \\(\\widehat{OR}\\) from logistic regression\n\n\nNeeded steps for Option 2:\n\nFit the regression model\nTransform the coefficients into odds ratios\nInterpret the odds ratio"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#computing-or-from-𝛽-i",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#computing-or-from-𝛽-i",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Computing OR from 𝛽 (I)",
+    "text": "Computing OR from 𝛽 (I)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-multi-group-categorical-variable",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-multi-group-categorical-variable",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Coefficient Interpretation: Multi-group Categorical Variable",
+    "text": "Coefficient Interpretation: Multi-group Categorical Variable\n\nIndependent variable \\(x\\) is a multi-level categorical variable\nLet’s say \\(X\\) takes values: a, b, c, or d\nWe are fitting the simple logistic regression model: \\[\\text{logit}\\left(\\pi(X) \\right) = \\beta_0 + \\beta_1 \\cdot I(X=b) + \\beta_2 \\cdot I(X=c) + \\beta_3 \\cdot I(X=d)\\]\n\nWhere \\(a\\) is our reference group\n\nThe logit difference is \\(\\beta_1\\) for binary independent variable\n\n\\(\\beta_1\\) represents the change/difference in the logit for \\(x=b\\) vs. \\(x=a\\)\n\nIt will be much easier to understand if we can interpret the coefficient using odds ratio (OR)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-pick-the-reference-group",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-do-we-pick-the-reference-group",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "How do we pick the reference group?",
+    "text": "How do we pick the reference group?\n\nThe choice can be more apparent for multi-group categorical independent variables within studies\nFor example, if we want to evaluate the association between clinical response and four treatments.\n\nThe treatment variable has 4 categories: “active treatment A”, “active treatment B”, “active treatment C” and “Placebo treatment”\nThe investigator is interested in comparing each of the three active treatment with the placebo treatment\nThen the placebo treatment should be picked as the reference group"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Late stage diagnosis and race and ethnicity",
+    "text": "Example: Late stage diagnosis and race and ethnicity\n\n\n\nChose Non-Hispanic White individuals as reference group\nUnderlying health disparities linked to racism in healthcare and in clinical studies\nThere is evidence that white individuals receive a certain standard of care that is not paralleled for POC Mateo and Williams (2021)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#what-if-you-want-to-compare-other-groups",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#what-if-you-want-to-compare-other-groups",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "What if you want to compare other groups?",
+    "text": "What if you want to compare other groups?\n\nWhat if we want to estimate OR comparing Non-Hispanic Asian Pacific Islander to Non-Hispanic Black individuals?\nOption 1: Change reference group and refit the model (maybe the easiest option)\nOption 2: Estimate OR using fitted coefficients (\\(\\widehat{\\beta}\\)’s) in the current model: \\[\\begin{aligned} \\text{log}\\left( OR (\\text{NH API}, \\text{NH B}) \\right) &= \\text{logit}\\left(\\pi \\left(X = \\text{NH API}\\right)\\right) - \\text{logit}\\left(\\pi \\left(X = \\text{NH B}\\right)\\right) \\\\\n& = \\left[\\beta_0 + \\beta_3 \\cdot 1\\right] - \\left[\\beta_0 + \\beta_4 \\cdot 1 \\right] \\\\\n\\text{log}\\left( \\widehat{OR} (\\text{NH API}, \\text{NH B}) \\right) &= \\widehat{\\beta}_3 - \\widehat{\\beta}_4 \\\\\n\\widehat{OR} (\\text{NH API}, \\text{NH B}) &= \\exp \\left( \\widehat{\\beta}_3 - \\widehat{\\beta}_4 \\right)\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-5",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-5",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#transformations-of-continuous-variable-to-make-more-interpretable-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Transformations of continuous variable to make more interpretable",
+    "text": "Transformations of continuous variable to make more interpretable\n\nThe estimated log odds ratio for a change of c units in x can be obtained from \\[\\hat{g}\\left(x+c\\right)-\\hat{g}\\left(x\\right)=c{\\hat{\\beta}}_1\\]\n\n\\(\\widehat{OR}\\left(c\\right)=\\exp\\left(c{\\hat{\\beta}}_1\\right)\\)\n\nThe 95% CI for \\(\\widehat{OR}(c)\\) is: \\[\\exp \\left( c \\hat{\\beta}_1 \\pm 1.96 \\cdot c \\cdot SE_{\\hat{\\beta}_1} \\right)\\]\nThe \\(c\\) is chosen to be a clinically meaningful unit change in \\(x\\)\nThe value of 𝑐 should be clearly specified in all tables and calculations\n\nBecause the estimated OR and the corresponding CI depends on the choice of 𝑐 value"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\n\nWhat if we are interested in learning the OR corresponding to 10-year increase in age?\n\n\nbc2 = bc %&gt;% mutate(Age_c_10 = Age_c/10)\nbc_reg_10 = glm(Late_stage_diag ~ Age_c_10, data = bc2, family = binomial)\ntidy(bc_reg_10, conf.int=T, exponentiate = T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c_10\n1.768\n0.032\n17.780\n0.000\n1.661\n1.883"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-3",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-3",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example",
+    "text": "Example\n\nHow do we do this in R?\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T, exponentiate=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;% fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c\n1.059\n0.003\n17.780\n0.000\n1.052\n1.065\n  \n  \n  \n\n\n\nlogistic.display(bc_reg, decimal = 3)\n\n\nLogistic regression predicting Late_stage_diag : 1 vs 0 \n \n                   OR(95%CI)            P(Wald's test) P(LR-test)\nAge_c (cont. var.) 1.059 (1.052,1.065)  &lt; 0.001        &lt; 0.001   \n                                                                 \nLog-likelihood = -5754.84419\nNo. of observations = 10000\nAIC value = 11513.68837"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-4",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-4",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
     "section": "Example",
     "text": "Example\nFor our fitted simple logistic regression model with age as a predictor \\[\\text{logit}(\\widehat{\\pi}(Age)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot Age\\]\n\n\\(\\widehat{\\beta}_0\\): estimated log-odds when age is 61.71 years\n\\(\\widehat{\\beta}_1\\): estimated increase in log-odds for every 1 year increase in age"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Age and Late Stage Diagnosis (I)",
+    "text": "Example: Age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nFit the regression model\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nsummary(bc_reg)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Age_c, family = binomial, data = bc)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -0.989422   0.023205  -42.64   &lt;2e-16 ***\nAge_c        0.056965   0.003204   17.78   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11510  on 9998  degrees of freedom\nAIC: 11514\n\nNumber of Fisher Scoring iterations: 4"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Age and Late Stage Diagnosis (I)",
+    "text": "Example: Age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nTransform the coefficients into odds ratios\n\n\nOption 1: tidy()\n\n\ntidy_bc_reg = tidy(bc_reg, conf.int=T, exponentiate = T) \ntidy_bc_reg %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c\n1.059\n0.003\n17.780\n0.000\n1.052\n1.065\n  \n  \n  \n\n\n\ntidy_bc_reg$conf.low # I prefer tidy() bc now I can grab each component\n\n[1] 0.3551931 1.0520321"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i-3",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-i-3",
+    "title": "Lesson 8: Interpretations and Visualizations of Results in Simple Logistic Regression",
+    "section": "Example: Age and Late Stage Diagnosis (I)",
+    "text": "Example: Age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nTransform the coefficients into odds ratios\n\n\nOption 2: logistic.display()\n\n\nlogistic.display(bc_reg) # Cannot grab each component in this\n\n\nLogistic regression predicting Late_stage_diag : 1 vs 0 \n \n                   OR(95%CI)         P(Wald's test) P(LR-test)\nAge_c (cont. var.) 1.06 (1.05,1.07)  &lt; 0.001        &lt; 0.001   \n                                                              \nLog-likelihood = -5754.8442\nNo. of observations = 10000\nAIC value = 11513.6884"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-interpretation-of-age-coefficientor",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Interpretation of Age Coefficient/OR",
+    "text": "Example: Interpretation of Age Coefficient/OR\n\n\\(\\widehat{\\beta}_1\\) is 0.057, suggesting that one year increase in age is associated with 0.057 increase in log odds of receiving a late stage breast cancer diagnosis\n\\(\\exp\\left({\\widehat{\\beta}}_1\\right)\\) is 1.06, suggesting that one year increase in age is associated with 1.06 times the odds of receiving a late stage breast cancer diagnosis\nFor continuous covariates in logistic regression model, it is helpful to subtract 1 from the odds ratio and multiply by 100 to obtain the percentage change in odds for 1-unit increase.\n\nThe estimated OR for age is 1.06, suggesting that a 1-year increase in age is associated with a 6% increase in the predicted odds of late stage diagnosis in the patient population"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-1-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-1-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#poll-everywhere-question-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Binary age and Late Stage Diagnosis (I)",
+    "text": "Example: Binary age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for older individuals (&gt;65 years old) compared to younger individuals (≤65 years old)?\n\n\n\nFit the regression model\n\n\nbc3 = bc %&gt;% mutate(Age_binary = ifelse(Age &gt; 65, 1, 0))\nage_bin_glm = glm(Late_stage_diag ~ Age_binary, data = bc3, family = binomial)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Binary age and Late Stage Diagnosis (I)",
+    "text": "Example: Binary age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for older individuals (&gt;65 years old) compared to younger individuals (≤65 years old)?\n\n\n\nTransform the coefficients into odds ratios\n\n\nage_bin_tidy = tidy(age_bin_glm, conf.int=T, exponentiate = T) \nage_bin_tidy %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.297\n0.031\n−39.608\n0.000\n0.280\n0.315\n    Age_binary\n1.875\n0.045\n13.928\n0.000\n1.716\n2.048"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i-3",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-binary-age-and-late-stage-diagnosis-i-3",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Binary age and Late Stage Diagnosis (I)",
+    "text": "Example: Binary age and Late Stage Diagnosis (I)\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for older individuals (&gt;65 years old) compared to younger individuals (≤65 years old)?\n\n\n\nInterpret the odds ratio\n\nThe estimated odds of late stage breast cancer among individuals over 65 years old is 1.87 (95% CI: (1.72, 2.05)) times that of individuals 65 years or younger."
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-multi-group-categorical-variable-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-multi-group-categorical-variable-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Coefficient Interpretation: Multi-group Categorical Variable",
+    "text": "Coefficient Interpretation: Multi-group Categorical Variable\nWe are fitting the simple logistic regression model with reference group \\(a\\): \\[\\text{logit}\\left(\\pi(X) \\right) = \\beta_0 + \\beta_1 \\cdot I(X=b) + \\beta_2 \\cdot I(X=c) + \\beta_3 \\cdot I(X=d)\\]\n\n\\(\\beta_0\\): the log-odds of event \\(Y=1\\) for group \\(a\\)\n\\(\\beta_1\\): the difference in log-odds of event \\(Y=1\\) comparing group \\(b\\) to group \\(a\\)\n\\(\\beta_2\\): the difference in log-odds of event \\(Y=1\\) comparing group \\(c\\) to group \\(a\\)\n\\(\\beta_3\\): the difference in log-odds of event \\(Y=1\\) comparing group \\(d\\) to group \\(a\\)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#multi-level-categorical-how-do-we-interpret-the-coefficient-ii",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#multi-level-categorical-how-do-we-interpret-the-coefficient-ii",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Multi-level categorical: How do we interpret the coefficient? (II)",
+    "text": "Multi-level categorical: How do we interpret the coefficient? (II)\n\\[ \\text{logit}\\left(\\pi(X=c)\\right) - \\text{logit}\\left(\\pi(X=a)\\right) = \\left( \\beta_0 + \\beta_1\\cdot 0 + \\beta_2\\cdot 1 + \\beta_3\\cdot 0  \\right) - \\left( \\beta_0 + \\beta_1\\cdot 0 + \\beta_2\\cdot 0 + \\beta_3\\cdot 0 \\right) = \\beta_2\\]\n\\[\\begin{aligned}\n\\beta_2&=l\\mathrm{ogit}\\left(\\pi(X=c)\\right)\\ -l\\mathrm{ogit}\\left(\\pi\\left(X=a\\right)\\right) \\\\  \\beta_2&=l\\mathrm{og}\\left(\\dfrac{\\pi(X=c)}{1-\\pi(X=c)}\\right)-l\\mathrm{og}\\left(\\dfrac{\\pi\\left(X=a\\right)}{1-\\pi\\left(X=a\\right)}\\right) \\\\\n\\beta_2&=\\log{\\left(\\dfrac{\\dfrac{\\pi(X=c)}{1-\\pi(X=c)}}{\\dfrac{\\pi(X=a)}{1-\\pi(X=a)}}\\right)} \\\\ \\exp{\\left(\\beta_2\\right)}&=\\dfrac{\\dfrac{\\pi(X=c)}{1-\\pi(X=c)}}{\\dfrac{\\pi(X=a)}{1-\\pi(X=a)}}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-multi-group-categorical-variable-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-multi-group-categorical-variable-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Coefficient Interpretation: Multi-group Categorical Variable",
+    "text": "Coefficient Interpretation: Multi-group Categorical Variable\nWe are fitting the simple logistic regression model with reference group \\(a\\): \\[\\text{logit}\\left(\\pi(X) \\right) = \\beta_0 + \\beta_1 \\cdot I(X=b) + \\beta_2 \\cdot I(X=c) + \\beta_3 \\cdot I(X=d)\\]\n\n\\(\\exp\\left(\\beta_0\\right)\\): the odds of event \\(Y=1\\) for group \\(a\\)\n\\(\\exp\\left(\\beta_1\\right)\\): the odds of event \\(Y=1\\) for group \\(b\\) is \\(\\exp\\left(\\beta_1\\right)\\) times the odds of event \\(Y=1\\) for group \\(a\\)\n\\(\\exp\\left(\\beta_2\\right)\\): the odds of event \\(Y=1\\) for group \\(c\\) is \\(\\exp\\left(\\beta_2\\right)\\) times the odds of event \\(Y=1\\) for group \\(a\\)\n\\(\\exp\\left(\\beta_3\\right)\\): the odds of event \\(Y=1\\) for group \\(d\\) is \\(\\exp\\left(\\beta_3\\right)\\) times the odds of event \\(Y=1\\) for group \\(a\\)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#references",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#references",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "References",
+    "text": "References\n\n\nLesson 8: Interpretations and Visualizations of Odds Ratios\n\n\n\nMateo, Camila M., and David R. Williams. 2021. “Racism: A Fundamental Driver of Racial Disparities in Health-Care Quality.” Nature Reviews Disease Primers 7 (1): 1–2. https://doi.org/10.1038/s41572-021-00258-1.\n\n\nYedjou, Clement G., Jennifer N. Sims, Lucio Miele, Felicite Noubissi, Leroy Lowe, Duber D. Fonseca, Richard A. Alo, Marinelle Payton, and Paul B. Tchounwou. 2019. “Health and Racial Disparity in Breast Cancer.” Advances in Experimental Medicine and Biology 1152: 31–49. https://doi.org/10.1007/978-3-030-20301-6_3."
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Late stage diagnosis and race and ethnicity",
+    "text": "Example: Late stage diagnosis and race and ethnicity\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islander individuals compared to Non-Hispanic White individuals?\n\n\nNeeded steps:\n\nFit the regression model\nTransform the coefficients into odds ratios\nInterpret the odds ratio"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Late stage diagnosis and race and ethnicity",
+    "text": "Example: Late stage diagnosis and race and ethnicity\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islander individuals compared to Non-Hispanic White individuals?\n\n\n\nFit the regression model\n\n\nRE_glm = glm(Late_stage_diag ~ Race_Ethnicity, data = bc,  \n               family = binomial)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-3",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-3",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Late stage diagnosis and race and ethnicity",
+    "text": "Example: Late stage diagnosis and race and ethnicity\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islander individuals compared to Non-Hispanic White individuals?\n\n\n\nTransform the coefficients into odds ratios\n\n\nRE_tidy = tidy(RE_glm, conf.int=T, exponentiate = T) \nRE_tidy %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.026\n−37.553\n0.000\n0.353\n0.392\n    Race_EthnicityHispanic-Latino\n0.968\n0.082\n−0.398\n0.691\n0.822\n1.135\n    Race_EthnicityNH American Indian/Alaskan Native\n0.948\n0.476\n−0.111\n0.911\n0.342\n2.287\n    Race_EthnicityNH Asian/Pacific Islander\n1.131\n0.082\n1.497\n0.134\n0.961\n1.327\n    Race_EthnicityNH Black\n1.405\n0.070\n4.826\n0.000\n1.223\n1.611"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-4",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-late-stage-diagnosis-and-race-and-ethnicity-4",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Late stage diagnosis and race and ethnicity",
+    "text": "Example: Late stage diagnosis and race and ethnicity\n\n\nOdds ratio from logistic regression\n\n\nWhat is the odds ratio of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islander individuals compared to Non-Hispanic White individuals?\n\n\n\nInterpret the odds ratio\n\nThe estimated odds of late stage breast cancer among Non-Hispanic Asian/Pacific Islander individuals is 1.13 (95% CI: (0.96, 1.33)) times that of Non-Hispanic White individuals."
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#what-if-you-want-to-compare-other-groups-option-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#what-if-you-want-to-compare-other-groups-option-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "What if you want to compare other groups? Option 1",
+    "text": "What if you want to compare other groups? Option 1\n\nbc3 = bc %&gt;% \n  mutate(Race_Ethnicity = relevel(Race_Ethnicity, ref = \"NH Black\"))\nRE_glm2 = glm(Late_stage_diag ~ Race_Ethnicity, data = bc3, \n               family = binomial)\ntidy(RE_glm2, conf.int=T, exponentiate = T) %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 38) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.523\n0.065\n−9.934\n0.000\n0.459\n0.594\n    Race_EthnicityNH White\n0.712\n0.070\n−4.826\n0.000\n0.621\n0.818\n    Race_EthnicityHispanic-Latino\n0.689\n0.102\n−3.664\n0.000\n0.564\n0.840\n    Race_EthnicityNH American Indian/Alaskan Native\n0.675\n0.479\n−0.819\n0.413\n0.242\n1.641\n    Race_EthnicityNH Asian/Pacific Islander\n0.805\n0.102\n−2.131\n0.033\n0.659\n0.982"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-to-present-odds-ratios-table",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-to-present-odds-ratios-table",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "How to present odds ratios: Table",
+    "text": "How to present odds ratios: Table\n\ntbl_regression() in the gtsummary package is helpful for presenting the odds ratios in a clean way\n\n\nlibrary(gtsummary)\ntbl_regression(RE_glm, exponentiate = TRUE) %&gt;% \n  as_gt() %&gt;% # allows us to use tab_options()\n  tab_options(table.font.size = 38)\n\n\n\n\n\n  \n    \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    Race_Ethnicity\n\n\n\n        NH White\n—\n—\n\n        Hispanic-Latino\n0.97\n0.82, 1.14\n0.7\n        NH American Indian/Alaskan Native\n0.95\n0.34, 2.29\n&gt;0.9\n        NH Asian/Pacific Islander\n1.13\n0.96, 1.33\n0.13\n        NH Black\n1.40\n1.22, 1.61\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-to-present-odds-ratios-forest-plot",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-to-present-odds-ratios-forest-plot",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "How to present odds ratios: Forest Plot",
+    "text": "How to present odds ratios: Forest Plot\n\nggplot(data=RE_tidy, aes(y=label, x=estimate, xmin=conf.low, xmax=conf.high)) + \n  geom_point(size = 3) +  geom_errorbarh(height=.2) + \n  geom_vline(xintercept=1, color='#C2352F', linetype='dashed', alpha=1) +\n  theme_classic() +\n  labs(x = \"OR (95% CI)\", y = \"Race and ethnicity\", \n       title = \"Odds ratios of Late Stage \\n Breast Cancer Diagnosis\") +\n  theme(axis.title = element_text(size = 25), axis.text = element_text(size = 25), title = element_text(size = 25))"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-to-present-odds-ratios-forest-plot-setup",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#how-to-present-odds-ratios-forest-plot-setup",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "How to present odds ratios: Forest Plot Setup",
+    "text": "How to present odds ratios: Forest Plot Setup\n\nlibrary(broom.helpers)\nRE_tidy = tidy_and_attach(RE_glm, conf.int=T, exponentiate = T) %&gt;%\n  tidy_remove_intercept() %&gt;%\n  tidy_add_reference_rows() %&gt;% tidy_add_estimate_to_reference_rows() %&gt;%\n  tidy_add_term_labels()\nglimpse(RE_tidy)\n\nRows: 5\nColumns: 16\n$ term           &lt;chr&gt; \"Race_EthnicityNH White\", \"Race_EthnicityHispanic-Latin…\n$ variable       &lt;chr&gt; \"Race_Ethnicity\", \"Race_Ethnicity\", \"Race_Ethnicity\", \"…\n$ var_label      &lt;chr&gt; \"Race_Ethnicity\", \"Race_Ethnicity\", \"Race_Ethnicity\", \"…\n$ var_class      &lt;chr&gt; \"factor\", \"factor\", \"factor\", \"factor\", \"factor\"\n$ var_type       &lt;chr&gt; \"categorical\", \"categorical\", \"categorical\", \"categoric…\n$ var_nlevels    &lt;int&gt; 5, 5, 5, 5, 5\n$ contrasts      &lt;chr&gt; \"contr.treatment\", \"contr.treatment\", \"contr.treatment\"…\n$ contrasts_type &lt;chr&gt; \"treatment\", \"treatment\", \"treatment\", \"treatment\", \"tr…\n$ reference_row  &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE\n$ label          &lt;chr&gt; \"NH White\", \"Hispanic-Latino\", \"NH American Indian/Alas…\n$ estimate       &lt;dbl&gt; 1.0000000, 0.9678002, 0.9484848, 1.1310170, 1.4046741\n$ std.error      &lt;dbl&gt; NA, 0.08224948, 0.47558680, 0.08224988, 0.07041472\n$ statistic      &lt;dbl&gt; NA, -0.3979312, -0.1112089, 1.4968682, 4.8257715\n$ p.value        &lt;dbl&gt; NA, 6.906809e-01, 9.114507e-01, 1.344276e-01, 1.394623e…\n$ conf.low       &lt;dbl&gt; NA, 0.8223138, 0.3417844, 0.9612074, 1.2226824\n$ conf.high      &lt;dbl&gt; NA, 1.135332, 2.286596, 1.327092, 1.611466"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#coefficient-interpretation-continuous-independent-variable",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Coefficient interpretation: Continuous Independent Variable",
+    "text": "Coefficient interpretation: Continuous Independent Variable\n\nFor simplicity, we assume the linear relationship between logit and continuous variable 𝑥\nAgain using simple logistic regression model to illustrate the interpretation of \\(\\widehat{\\beta}\\) for a continuous variable \\(x\\) \\[\\text{logit}(\\widehat{\\pi}(X)) = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X\\]\nThe estimated slope coefficient, \\(\\widehat{\\beta}_1\\), is the expected change in the log odds for 1 unit increase in \\(x\\)\n\nAdditional attention should be paid to picking a meaningful units of change in \\(x\\)"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-15",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-15",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Age and Late Stage Diagnosis (1/5)",
+    "text": "Example: Age and Late Stage Diagnosis (1/5)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\nNeeded steps:\n\nFit the regression model\nTransform the coefficients into odds ratios\nInterpret the odds ratio"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-25",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-25",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Age and Late Stage Diagnosis (2/5)",
+    "text": "Example: Age and Late Stage Diagnosis (2/5)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nFit the regression model\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\nsummary(bc_reg)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Age_c, family = binomial, data = bc)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -0.989422   0.023205  -42.64   &lt;2e-16 ***\nAge_c        0.056965   0.003204   17.78   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11510  on 9998  degrees of freedom\nAIC: 11514\n\nNumber of Fisher Scoring iterations: 4"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-35",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-35",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Age and Late Stage Diagnosis (3/5)",
+    "text": "Example: Age and Late Stage Diagnosis (3/5)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nTransform the coefficients into odds ratios\n\n\nOption 1: tidy()\n\n\ntidy_bc_reg = tidy(bc_reg, conf.int=T, exponentiate = T) \ntidy_bc_reg %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c\n1.059\n0.003\n17.780\n0.000\n1.052\n1.065\n  \n  \n  \n\n\n\ntidy_bc_reg$conf.low # I prefer tidy() bc now I can grab each component\n\n[1] 0.3551931 1.0520321"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-45",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-45",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Age and Late Stage Diagnosis (4/5)",
+    "text": "Example: Age and Late Stage Diagnosis (4/5)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nTransform the coefficients into odds ratios\n\n\nOption 2: logistic.display()\n\n\nlogistic.display(bc_reg) # Cannot grab each component in this\n\n\nLogistic regression predicting Late_stage_diag : 1 vs 0 \n \n                   OR(95%CI)         P(Wald's test) P(LR-test)\nAge_c (cont. var.) 1.06 (1.05,1.07)  &lt; 0.001        &lt; 0.001   \n                                                              \nLog-likelihood = -5754.8442\nNo. of observations = 10000\nAIC value = 11513.6884"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-55",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-age-and-late-stage-diagnosis-55",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: Age and Late Stage Diagnosis (5/5)",
+    "text": "Example: Age and Late Stage Diagnosis (5/5)\n\n\nOdds ratio from logistic regression\n\n\nCompute the estimate and 95% confidence interval for odds ratio for late stage breast cancer diagnosis for every 1 year increase in age.\n\n\n\nInterpret the odds ratio\n\nFor every one year increase in age, there is an estimated 5.86% increase in the estimated odds of late stage breast cancer diagnosis (95% CI: 5.2%, 6.53%)."
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-10-year-increase-in-age-and-late-stage-diagnosis",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-10-year-increase-in-age-and-late-stage-diagnosis",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: 10 year increase in age and Late Stage Diagnosis",
+    "text": "Example: 10 year increase in age and Late Stage Diagnosis\n\nWhat if we are interested in learning the OR corresponding to 10-year increase in age?\n\n\nbc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\ntidy(bc_reg, conf.int=T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.989\n0.023\n−42.637\n0.000\n−1.035\n−0.944\n    Age_c\n0.057\n0.003\n17.780\n0.000\n0.051\n0.063"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-10-year-increase-in-age-and-late-stage-diagnosis-1",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-10-year-increase-in-age-and-late-stage-diagnosis-1",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: 10 year increase in age and Late Stage Diagnosis",
+    "text": "Example: 10 year increase in age and Late Stage Diagnosis\n\nWhat if we are interested in learning the OR corresponding to 10-year increase in age?\n\n\\[ \\widehat{OR}\\left(10\\right)=\\exp{\\left(10\\cdot{\\hat{\\beta}}_1\\right)}=\\exp{\\left(0.56965\\right)}=\\mathrm{\\mathrm{1.767}}\\]\n\nThe 95% CI for \\(\\widehat{OR}\\left(10\\right)\\) is: \\[\\begin{aligned} \\widehat{OR}\\left(10\\right) &=\\exp{\\left(10\\cdot{\\hat{\\beta}}_1\\pm1.96\\cdot10\\cdot SE_{\\hat{\\beta}_1} \\right)} \\\\ &=\\exp{\\left(10\\cdot0.056965\\pm1.96\\cdot10\\cdot0.003204\\right)}\\\\\n&=(1.66,\\ 1.88) \\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-10-year-increase-in-age-and-late-stage-diagnosis-2",
+    "href": "lectures/08_Interpretations_SLR/08_Interpretations_SLR.html#example-10-year-increase-in-age-and-late-stage-diagnosis-2",
+    "title": "Lesson 8: Interpretations and Visualizations of Odds Ratios",
+    "section": "Example: 10 year increase in age and Late Stage Diagnosis",
+    "text": "Example: 10 year increase in age and Late Stage Diagnosis\n\nWhat if we are interested in learning the OR corresponding to 10-year increase in age?\n\n\nbc2 = bc %&gt;% mutate(Age_c_10 = Age_c/10)\nbc_reg_10 = glm(Late_stage_diag ~ Age_c_10, data = bc2, family = binomial)\ntidy(bc_reg_10, conf.int=T, exponentiate = T) %&gt;% gt() %&gt;% tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.372\n0.023\n−42.637\n0.000\n0.355\n0.389\n    Age_c_10\n1.768\n0.032\n17.780\n0.000\n1.661\n1.883"
   }
 ]
