@@ -1,6 +1,6 @@
 ---
 title: "Week 7"
-description: "Assessing Model Fit and Numeric Problems"
+description: "Model Building Strategies"
 date: "5/13/24"
 date-modified: "today"
 categories: [""]
@@ -31,7 +31,7 @@ editor_options:
 ## Resources
 
 | Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|--------------|--------------|:------------:|:--------------:|:------------:|
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
 | 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon

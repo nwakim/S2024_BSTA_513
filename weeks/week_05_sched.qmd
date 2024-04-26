@@ -1,6 +1,6 @@
 ---
 title: "Week 5"
-description: "Confounding and Interactions"
+description: "Missing Data"
 date: "4/29/24"
 date-modified: "today"
 categories: [""]
@@ -11,6 +11,12 @@ format:
 editor_options: 
   chunk_output_type: console
 ---
+
+::: callout-important
+## MONDAY CLASS CANCELLED
+
+Monday's class is cancelled! We will be back on Wednesday for a fun, random lecture on missing data!!
+:::
 
 ```{css, echo=FALSE}
 .title{
@@ -30,21 +36,15 @@ editor_options:
 
 ## Resources
 
-Below is a table with links to resources. Icons in [orange]{style="color:#E25D3B;"} mean there is an available file link.
-
-| Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|------------|------------|:----------:|:----------:|:-----------------------:|
-|        |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 9      |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 9      |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic        |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
+|--------------|--------------|:------------:|:------------:|:--------------:|
+| 9      | Missing Data | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
 ## Class Exit Tickets
 
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQzNRMlJSM1NGOTJRUVExQ0hKWFlYMDFDNC4u)]{style="color:#f8f5f0;"} Monday (4/29)
-
-[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMjFSMEVQTktEWEtGNk01M0dDNFE4U1pIWi4u)]{style="color:#f8f5f0;"} Wednesday (5/1)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUOUZTWFJNWDdHVDM3UFAwU0M4OFBYODQ1SC4u)]{style="color:#f8f5f0;"} Wednesday (5/1)
 
 ## Announcements
 
@@ -54,3 +54,9 @@ Below is a table with links to resources. Icons in [orange]{style="color:#E25D3B
 #| echo: false
 g=3
 ```
+
+I couldn't resist making a gif of me reacting to the fire alarm when I was editing the Echo360 recording.
+
+![](/images/fire_alarm.gif){width="342"}
+
+## 

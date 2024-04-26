@@ -1,6 +1,6 @@
 ---
 title: "Week 8"
-description: "Flex Week / Spill Over"
+description: "Assessing Model Fit and Numeric Problems"
 date: "5/20/2024"
 date-modified: "today"
 categories: [""]

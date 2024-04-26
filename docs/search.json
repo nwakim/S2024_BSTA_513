@@ -1425,7 +1425,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nPrediction, Visualization, and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nConfounding and Interactions\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nModel Building Strategies\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nFlex Week / Spill Over\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nPrediction, Visualization, and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nMissing Data\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nConfounders and Interactions\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nModel Building Strategies\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_03_sched.html#resources",
@@ -1495,21 +1495,21 @@
     "href": "weeks/week_04_sched.html#muddiest-points",
     "title": "Week 4",
     "section": "Muddiest Points",
-    "text": "Muddiest Points"
+    "text": "Muddiest Points\nNone?? Wowza!"
   },
   {
     "objectID": "weeks/week_05_sched.html",
     "href": "weeks/week_05_sched.html",
     "title": "Week 5",
     "section": "",
-    "text": "```{css, echo=FALSE} .title{ font-size: 40px; color: #C2352F; background-color: #fff; padding: 10px; }\n.description{ font-size: 20px; color: #fff; background-color: #C2352F; padding: 10px; } ```"
+    "text": "MONDAY CLASS CANCELLED\n\n\n\nMonday’s class is cancelled! We will be back on Wednesday for a fun, random lecture on missing data!!"
   },
   {
     "objectID": "weeks/week_05_sched.html#resources",
     "href": "weeks/week_05_sched.html#resources",
     "title": "Week 5",
     "section": "Resources",
-    "text": "Resources\nBelow is a table with links to resources. Icons in orange mean there is an available file link.\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n\n\n\n\n\n\n\n9\n\n\n\n\n\n\n9"
+    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n9\nMissing Data"
   },
   {
     "objectID": "weeks/week_05_sched.html#on-the-horizon",
@@ -1523,7 +1523,7 @@
     "href": "weeks/week_05_sched.html#class-exit-tickets",
     "title": "Week 5",
     "section": "Class Exit Tickets",
-    "text": "Class Exit Tickets\n Monday (4/29)\n Wednesday (5/1)"
+    "text": "Class Exit Tickets\n Wednesday (5/1)"
   },
   {
     "objectID": "weeks/week_05_sched.html#announcements",
@@ -1537,7 +1537,7 @@
     "href": "weeks/week_05_sched.html#muddiest-points",
     "title": "Week 5",
     "section": "Muddiest Points",
-    "text": "Muddiest Points"
+    "text": "Muddiest Points\nI couldn’t resist making a gif of me reacting to the fire alarm when I was editing the Echo360 recording."
   },
   {
     "objectID": "weeks/week_06_sched.html#resources",

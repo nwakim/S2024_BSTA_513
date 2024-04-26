@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic                                                        |                                                                Slides                                                                |                                                         Annotated Slides                                                          |                                                            Recording                                                            |
-|---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 7      | Predictions and Visualizations in Simple Logistic Regression |            [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/07_Pred_Viz/07_Pred_Viz.qmd)]{style="color:#f8f5f0;"}            | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/07_Pred_Viz/07_Pred_Viz_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](%7B%7B%3C%20iconify%20ri%20slideshow-fill%20size=30px%20%3E%7D)]{style="color:#f8f5f0;"} |
-| 8      | Interpretations and Visualizations of Odds Ratios            | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/08_Interpretations_SLR/08_Interpretations_SLR.qmd)]{style="color:#f8f5f0;"} |                        [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                         |                                  [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                  |
+| Lesson | Topic                                                        |                                                                Slides                                                                |                                                                    Annotated Slides                                                                     |                                                            Recording                                                            |
+|-------------|-------------|:-------------:|:----------------:|:------------:|
+| 7      | Predictions and Visualizations in Simple Logistic Regression |            [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/07_Pred_Viz/07_Pred_Viz.qmd)]{style="color:#f8f5f0;"}            |            [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/07_Pred_Viz/07_Pred_Viz_notes.pdf)]{style="color:#f8f5f0;"}            | [[{{< iconify mdi video size=34px >}}](%7B%7B%3C%20iconify%20ri%20slideshow-fill%20size=30px%20%3E%7D)]{style="color:#f8f5f0;"} |
+| 8      | Interpretations and Visualizations of Odds Ratios            | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/08_Interpretations_SLR/08_Interpretations_SLR.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/08_Interpretations_SLR/08_Interpretations_SLR_notes.pdf)]{style="color:#f8f5f0;"} |                                  [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                  |
 
 ## On the Horizon
 
@@ -84,6 +84,8 @@ Wednesday 4/24
     -   As part of the exit ticket, I will ask about your preferences as well
 
 ## Muddiest Points
+
+None?? Wowza!
 
 ```{r}
 #| echo: false
