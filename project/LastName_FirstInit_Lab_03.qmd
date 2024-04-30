@@ -1,0 +1,117 @@
+---
+title: "Lab 2"
+author: "Your name here!!!"
+subtitle: "BSTA 513/613"
+description: "Due: May 2, 2024 at 11pm"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    self-contained: true
+    embed-resources: true
+    number-sections: true
+    number-depth: 4
+editor_options: 
+  chunk_output_type: console
+execute:
+  freeze: auto  # re-render only when source changes
+---
+
+## Directions
+
+This is your **editing** file. **Please do not remove anything from this editing file!!** You will only add your code and work to this file.
+
+### Purpose
+
+The purpose of this lab is to explore our data further, set up the unadjusted odds ratio, and create code to later help us present our final model.
+
+### Grading
+
+**This lab is graded out of 12 points.** The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.
+
+## Lab activities
+
+::: callout-note
+I have left it up to you to load the needed packages for this lab.
+:::
+
+### Restate research question
+
+::: callout-important
+#### Task
+
+Please restate your research question below using the provided format (1 sentence). You can change the wording if you'd like, but please make sure it is still clear. It’s repetitive, but it helps me contextualize my feedback as I look through your lab.
+:::
+
+In this study, we will investigate the association between food insecurity and ________. 
+
+
+### Make sure variables are coded correctly
+
+::: callout-important
+#### Task
+
+-   Use `class()` to determine the class of each of the 11 variables you selected from Lab 1 (including the outcome).
+-   Change the variable type to the appropriate type.
+:::
+
+### Consider potential confounders and effect modifiers
+
+::: callout-important
+#### Task
+
+Fill in the below table (or any other way you wish to present the same information).
+:::
+
+
+| Variable name | Confounder, Effect modifier, or nothing? | Reasoning (1-2 sentences) |
+|-----------------|-----------------------------|-----------------------------|
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+|               |                                          |                           |
+
+### Create contingency tables for categorical predictors
+
+::: callout-important
+#### Task
+-   Create contingency tables for all categorical covariates with food insecurity.
+-   Take note of any cell counts that are less than 10
+:::
+
+### Bivariate exploratory data analysis
+
+::: callout-important
+#### Task
+
+-   Use `ggpairs()` ([introduced in BSTA 512 Lesson 13](https://nwakim.github.io/W2024_BSTA_512/slides/13_Purposeful_Selection.html#/pre-step-step-1-explore-simple-relationships-and-assumptions)) to quickly look at the relationship between variables.
+-   List predictors with which there is a clear trend with food insecurity.
+:::
+
+
+### Fit simple logistic regression
+
+::: callout-important
+#### Task
+-   Using `glm()`, run a logistic regression with food insecurity and your main variable of interest. 
+-   Display the unadjusted odds ratio of the regression. You can use `logistic.display()`
+-   Interpret the unadjusted odds ratio (with 95% confidence interval). If you're main variable is multi-level, then you will need to interpret multiple odds ratios.
+:::
+
+### Plot the predicted probability
+
+::: callout-important
+#### Task
+
+Plot or make a table of your predicted probabilities.
+:::
+
+

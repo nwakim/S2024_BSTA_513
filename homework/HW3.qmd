@@ -15,11 +15,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-::: callout-important
-Note to Nicky: Need to include interactions!!
-questions pulled from old HW4
-:::
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -65,58 +60,53 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ### Question 1
 
-This question is adapted from the Hosmer and Lemeshow textbook. Use the ICU data described in Section 1.6.1 (pg. 22 of textbook) and consider the multiple logistic regression model of vital status, STA, on age (AGE), cancer part of the present problem (CAN), CPR prior to ICU admission (CPR), infection probable at ICU admission (INF), and race (RACE).
+This question is taken from the Hosmer and Lemeshow textbook. The ICU study data set consists of a sample of 200 subjects who were part of a much larger study on survival of patients following admission to an adult intensive care unit (ICU). The dataset should be available within Course Materials. The major goal of this study was to develop a logistic regression model to predict the probability of survival to hospital discharge of these patients. In this question, the primary outcome variable is vital status at hospital discharge, STA. Clinicians associated with the study felt that a key determinant of survival was the patient’s age at admission, AGE. We will be building to a multivariable logistic regression model while adjusting for cancer part of the present problem (CAN), CPR prior to ICU admission (CPR), infection probable at ICU admission (INF), and level of consciousness at ICU admission (LOC).
+
+A code sheet for the variables to be considered is displayed in Table 1.5 below (from the Hosmer and Lemeshow textbook, pg. 23). We refer to this data set as the ICU data.
+
+![](./images/ICU_codebook.png){width="557"}
 
 ### Part a
 
-From the above list (AGE, CAN, CPR, INF, and RACE) of independent variables, identify if each is a continuous, binary, or multi-group (\>2) categorical variable.
+From the above list (AGE, CAN, CPR, INF, and LOC) of independent variables, identify if each is a continuous, binary, or multi-level (\>2) categorical variable.
 
 ### Part b
 
-For the binary and multi-group categorical variables, please identify the reference groups for each. Include justification for the reference group. (You may need to go to the textbook, pg. 23, to see what each variable is.)
+For the binary and multi-level categorical variables, please identify a reference group for each. Include justification for the reference group.
+
 
 ### Part c
 
-Write down the equation for the logistic regression model of STA on AGE, CAN, CPR, INF, and RACE. How many parameters does this model contain?
+Refer back to [Part c from Homework 2's Question 4](https://nwakim.github.io/S2024_BSTA_513/homework/HW2.html#part-c-2). Interpret the odds ratio for age in the simple logistic regression model. Please include the 95% confidence interval.
 
 ### Part d
 
-For the categorical variables (binary and multi-group), please mutate the variables within the ICU dataset to set your chosen reference groups. Do the same for the outcome variable. (Right now these variables are coded as text, not factors, so we first need to make them factors, then assign them levels. For STA, you may do the same coding from Homework 3. Hint: look into function `factor()` in the pre-loaded `base` package.)
+Compute the predicted probability of hospital discharge for a subject who is 63 years old. Compute the 95% confidence interval for the predicted probability and interpret the predicted probability.
 
 ### Part e
 
-Using `glm()`, obtain the maximum likelihood estimates of the parameters of the logistic regression model in Part c. Using these estimates write down the equation for the fitted values (i.e., the estimated logistic probabilities).
+For the categorical variables (binary and multi-group), please mutate the variables within the ICU dataset to set your chosen reference groups.
 
 ### Part f
 
-Assess the significance of the group of coefficients for all variables in the model using the likelihood ratio test. (Hint: part of the ratio in the LRT will be an intercept only model) What is the value of the deviance for the fitted model?
+Write down the equation for the logistic regression model of STA on CPR.
 
 ### Part g
 
-Fit a new model using only AGE and CPR as the predictors. Write a sentence interpreting the odds ratio for both variables. Please include the 95% confidence interval.
+Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part f. Using these estimates, write down fitted logistic regression model.
 
 ### Part h
 
-For age, compute 95% confidence intervals for a the estimated odds ratio for a 10 year increase. Write a sentence interpreting the odds ratio for the 10-year increase.
+Write a sentence interpreting the odds ratio for the coefficients in Part g's model. Please include the 95% confidence interval.
 
 ### Part i
 
-Compute the predicted probability for a subject who is 63 years old and did not receive CPR before being admitted to the ICU. Compute the 95% confidence interval for the predicted probability and interpret the predicted probability.
+Write down the equation for the logistic regression model of STA on LOC.
 
-## Question 2
+### Part j
 
-This question is adapted from the Hosmer and Lemeshow textbook, page 47. (Note that the parts are sited differently in the textbook.)
+Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part i. Using these estimates, write down fitted logistic regression model.
 
-Use the Myopia Study data described in Section 1.6.6 and use MYOPIC as the outcome and as possible variables for a model: AGE, GENDER, family history of myopia (MOMMY and DADMY), number of hours playing sports (SPORTHR) and number of hours watching television (TVHR).
+### Part k
 
-### Part a
-
-Write down the equation for the logistic regression model of MYOPIC on AGE, GENDER, MOMMY, DADMY, SPORTHR, and TVHR. How many parameters does this model contain?
-
-### Part b
-
-Using `glm()`, obtain the maximum likelihood estimates of the parameters of the logistic regression model. Using these estimates write down the equation for the fitted values (i.e., the estimated logistic probabilities).
-
-### Part c
-
-Assess the significance of the coefficient corresponding to number of hours playing sports. You may use the Wald test or the likelihood ratio test. Please interpret the odds ratio for the coefficient (in this part, you do not need to calculate the confidence interval.)
+Write a sentence interpreting the odds ratio for the coefficients in Part k's model. Please include the 95% confidence interval.
