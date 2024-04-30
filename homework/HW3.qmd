@@ -3,7 +3,7 @@ title: "Homework 3"
 subtitle: "BSTA 513/613"
 author: "Your name here - update this!!!!"
 description: "Due: Thursday May 9, 2024 at 11pm"
-date-modified: "4/1/2024"
+date-modified: "today"
 date: "5/9/2024"
 format: 
   html:
@@ -105,8 +105,12 @@ Write down the equation for the logistic regression model of STA on LOC.
 
 ### Part j
 
-Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part i. Using these estimates, write down fitted logistic regression model.
+Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part i. Present the coefficient estimates. No need to write out the fitted regression equation. 
+
+Please take note of the warnings that you receive from fitting the `glm()` model and any large coefficient estimate with large confidence intervals. In this case, we have a category within LOC that has very few observations. (We will discuss this more in Lesson 14: Numerical Problems)
+
+Check the number of observations that have a deep stupor and death at discharge and the number of observations that have a deep stupor and live at discharge. You can do this using the `table()` function to create a contingency table. 
 
 ### Part k
 
-Write a sentence interpreting the odds ratio for the coefficients in Part k's model. Please include the 95% confidence interval.
+Write a sentence interpreting the odds ratio of death for the indicator of coma. Please include the 95% confidence interval.
