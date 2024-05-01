@@ -66,44 +66,44 @@ A code sheet for the variables to be considered is displayed in Table 1.5 below 
 
 ![](./images/ICU_codebook.png){width="557"}
 
-### Part a
+#### Part a
 
 From the above list (AGE, CAN, CPR, INF, and LOC) of independent variables, identify if each is a continuous, binary, or multi-level (\>2) categorical variable.
 
-### Part b
+#### Part b
 
 For the binary and multi-level categorical variables, please identify a reference group for each. Include justification for the reference group.
 
 
-### Part c
+#### Part c
 
 Refer back to [Part c from Homework 2's Question 4](https://nwakim.github.io/S2024_BSTA_513/homework/HW2.html#part-c-2). Interpret the odds ratio for age in the simple logistic regression model. Please include the 95% confidence interval.
 
-### Part d
+#### Part d
 
 Compute the predicted probability of hospital discharge for a subject who is 63 years old. Compute the 95% confidence interval for the predicted probability and interpret the predicted probability.
 
-### Part e
+#### Part e
 
 For the categorical variables (binary and multi-group), please mutate the variables within the ICU dataset to set your chosen reference groups.
 
-### Part f
+#### Part f
 
 Write down the equation for the logistic regression model of STA on CPR.
 
-### Part g
+#### Part g
 
 Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part f. Using these estimates, write down fitted logistic regression model.
 
-### Part h
+#### Part h
 
 Write a sentence interpreting the odds ratio for the coefficients in Part g's model. Please include the 95% confidence interval.
 
-### Part i
+#### Part i
 
 Write down the equation for the logistic regression model of STA on LOC.
 
-### Part j
+#### Part j
 
 Using the `glm()` function, obtain the maximum likelihood estimates of the coefficient parameters of the logistic regression model in Part i. Present the coefficient estimates. No need to write out the fitted regression equation. 
 
@@ -111,6 +111,10 @@ Please take note of the warnings that you receive from fitting the `glm()` model
 
 Check the number of observations that have a deep stupor and death at discharge and the number of observations that have a deep stupor and live at discharge. You can do this using the `table()` function to create a contingency table. 
 
-### Part k
+#### Part k
 
 Write a sentence interpreting the odds ratio of death for the indicator of coma. Please include the 95% confidence interval.
+
+### Question 2
+
+Did you take the [mid-quarter survey](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUOEZVVERIT1NaVVk3R0ZHRTFZQlIyOE1VVS4u)?? 
