@@ -36,18 +36,22 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 
 ## Resources
 
-| Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|--------------|--------------|:------------:|:--------------:|:------------:|
-| 10     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic                        |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
+| 10     | Multiple Logistic Regression | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 11     | Interactions                 | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
+-   Homework 3 due 5/9 at 11pm
+
+-   Mid-quarter feedback due 5/9 at 11pm
+
 ## Class Exit Tickets
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Monday (5/6)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUOTFZQU00TUVQSVJZQjI4SEJRVTI2OVlXSi4u)]{style="color:#f8f5f0;"} Monday (5/6)
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/8)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUM1AyRjhDRzBNVEQ3WDYxVjhOTFRLMDhZMi4u)]{style="color:#f8f5f0;"} Wednesday (5/8)
 
 ## Announcements
 

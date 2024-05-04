@@ -1,0 +1,123 @@
+---
+title: "Class 8 Code"
+author: "Nicky Wakim"
+date: "2023-04-26"
+output: html_document
+---
+<style type="text/css">
+.main-container {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+
+### Set up for the code
+```{r}
+library(tidyr)
+library(dplyr)
+library(epiDisplay)
+library(kableExtra)
+library(here)
+load(here("data", "bc_diagnosis.Rda"))
+```
+
+## Simple Logistic Regression (continued from Class 7)
+
+### Interpreting a continuous independant variable
+```{r}
+age_glm = glm(Late_stage_diag ~ Age, data = bc, 
+               family = binomial())
+summary(age_glm)
+logistic.display(age_glm)
+```
+
+```{r}
+library(gmodels)
+age_10 = estimable(age_glm, c(0,10))
+age_10
+OR_age_10 = exp(c(OR = age_10$Estimate, 
+                  L_CI = age_10$Estimate - 1.96*age_10$`Std. Error`, 
+                  U_CI = age_10$Estimate + 1.96*age_10$`Std. Error`))
+OR_age_10
+```
+
+## Multiple Logistic Regression
+### Fitting the model
+```{r}
+multi_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age, data = bc, 
+               family = binomial())
+
+summary(multi_bc)
+```
+
+### Wald test for single coefficients
+```{r}
+wald_test = summary(multi_bc)$coefficients
+rownames(wald_test) = c("Intercept", "R_E: HL", "R_E: NH AIAN",
+                        "R_E: NH API","R_E: NH B", "Age")
+round(wald_test, 3)
+```
+
+### Likelihood ratio test
+#### Example 1: Age
+```{r message=FALSE, warning=FALSE}
+multi_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age, data = bc, 
+               family = binomial())
+r_e_bc = glm(Late_stage_diag ~ Race_Ethnicity, data = bc, 
+               family = binomial())
+library(lmtest)
+lrtest(multi_bc, r_e_bc)
+```
+
+#### Example 2: Race and Ethnicity
+```{r message=FALSE, warning=FALSE}
+multi_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age, data = bc, 
+               family = binomial())
+age_bc = glm(Late_stage_diag ~ Age, data = bc, 
+               family = binomial())
+library(lmtest)
+lrtest(multi_bc, age_bc)
+```
+
+#### Example 3: Race and Ethnicity, and age!
+```{r message=FALSE, warning=FALSE}
+multi_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age, data = bc, 
+               family = binomial())
+int_bc = glm(Late_stage_diag ~ 1, data = bc, 
+               family = binomial())
+library(lmtest)
+lrtest(multi_bc, int_bc)
+```
+
+## Predicted/Estimated Probability
+```{r}
+newdata = with(bc, 
+               data.frame(Race_Ethnicity = "NH Asian/Pacific Islander", 
+                          Age = 61.70569))
+pred = predict(multi_bc, newdata, se.fit = T, type="response")
+
+LL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit
+UL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit
+c(Pred = pred$fit, LL = LL_CI, UL = UL_CI)
+```
+
+### Interpreting the coefficients
+```{r}
+multi_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age, data = bc, 
+               family = binomial())
+exp(summary(multi_bc)$coefficients)
+exp(confint.default(multi_bc))
+```
