@@ -36,10 +36,10 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 
 ## Resources
 
-| Lesson | Topic                        |                                                                         Slides                                                                         |                                  Annotated Slides                                  |                           Recording                           |
+| Lesson | Topic                        |                                                                         Slides                                                                         |                                                                             Annotated Slides                                                                              |                           Recording                           |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 10     | Multiple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 11     | Interactions                 |                                         [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                          | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 10     | Multiple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression_notes.pdf)]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 11     | Interactions                 |                                         [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                          |                                            [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                             | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
@@ -64,27 +64,27 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 -   Notes on Homework 2
 
     -   Contingency tables
-    
+
         -   `Rev=”b”`
-        
+
             -   Know the appropriate rev option
-            
+
             -   `riskratio()` and `oddsratio()` reads first row as reference and first column as reference.
 
         -   Question 3 part h
 
             -   Both a and b are correct
-            
+
             -   Most ppl only marked one or the other
 
     -   Ways to change outcome into factor or appropriate form for `glm()`
-    
+
         -   `icu$STA <- ifelse(icu$STA=="Died",1,0)`
 
         -   OR: `icu = icu %>% mutate(STA = as.factor(STA) %\>% relevel(ref = “Lived”))`
 
     -   Question 4, part d
-    
+
         -   Test for intercept wrong
 
         -   Used coefficient for age

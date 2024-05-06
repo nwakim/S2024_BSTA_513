@@ -1129,7 +1129,7 @@ plot_grid(plot_MLR, OR_labs, ncol=2, align = "h", rel_widths = c(4, 1))
     -   point out that these are adjusted estimates
     -   provide a list of other variables in the model
 
-## Example: Race and Ethnicity and Age model fit
+## Example: Race and Ethnicity and Age model fit (FIXED)
 
 ::: columns
 ::: {.column width="40%"}
@@ -1150,7 +1150,7 @@ tbl_regression(multi_bc, exponentiate = TRUE) %>%
 
 -   The estimated odds of late stage breast cancer diagnosis for Non-Hispanic Black individuals is 1.43 times that of Non-Hispanic White individuals, controlling for age (95% CI: 1.24, 1.65).
 
--   For every one year increase in age, there is an estimated 6% increase in the estimated odds of late stage breast cancer diagnosis (95% CI: 5%, 7%).
+-   For every one year increase in age, there is an 6% increase in the estimated odds of late stage breast cancer diagnosis, adjusting for race and ethnicity (95% CI: 5%, 7%).
 :::
 :::
 

@@ -5801,5 +5801,12 @@
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Predicting probability in R",
     "text": "Predicting probability in R\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nInterpret results\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, the predicted probability of late stage breast cancer diagnosis is 0.269 (95% CI: 0.238, 0.299)."
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-race-and-ethnicity-and-age-model-fit-fixed",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-race-and-ethnicity-and-age-model-fit-fixed",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example: Race and Ethnicity and Age model fit (FIXED)",
+    "text": "Example: Race and Ethnicity and Age model fit (FIXED)\n\n\n\n\n\n\n\n\n  \n    \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    Race_Ethnicity\n\n\n\n        NH White\n—\n—\n\n        Hispanic-Latino\n0.98\n0.83, 1.16\n0.9\n        NH American Indian/Alaskan Native\n0.92\n0.33, 2.25\n0.9\n        NH Asian/Pacific Islander\n1.14\n0.97, 1.35\n0.11\n        NH Black\n1.43\n1.24, 1.65\n&lt;0.001\n    Age_c\n1.06\n1.05, 1.07\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval\n    \n  \n\n\n\n\n\n\nThe estimated odds of late stage breast cancer diagnosis for Hispanic-Latinx individuals is 0.98 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.83, 1.16).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic American Indian/Alaskan Natives is 0.92 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.33, 2.25).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islanders is 1.14 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.97, 1.35).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic Black individuals is 1.43 times that of Non-Hispanic White individuals, controlling for age (95% CI: 1.24, 1.65).\nFor every one year increase in age, there is an 6% increase in the estimated odds of late stage breast cancer diagnosis, adjusting for race and ethnicity (95% CI: 5%, 7%)."
   }
 ]
