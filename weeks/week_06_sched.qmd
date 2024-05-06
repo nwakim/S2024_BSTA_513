@@ -61,6 +61,34 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 
     -   I will stay after class and open Webex
 
+-   Notes on Homework 2
+
+    -   Contingency tables
+    
+        -   `Rev=”b”`
+        
+            -   Know the appropriate rev option
+            
+            -   `riskratio()` and `oddsratio()` reads first row as reference and first column as reference.
+
+        -   Question 3 part h
+
+            -   Both a and b are correct
+            
+            -   Most ppl only marked one or the other
+
+    -   Ways to change outcome into factor or appropriate form for `glm()`
+    
+        -   `icu$STA <- ifelse(icu$STA=="Died",1,0)`
+
+        -   OR: `icu = icu %>% mutate(STA = as.factor(STA) %\>% relevel(ref = “Lived”))`
+
+    -   Question 4, part d
+    
+        -   Test for intercept wrong
+
+        -   Used coefficient for age
+
 ## Muddiest Points
 
 ```{r}

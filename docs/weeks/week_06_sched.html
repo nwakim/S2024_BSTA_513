@@ -360,6 +360,32 @@ Room Locations for the week
 <ul>
 <li>I will stay after class and open Webex</li>
 </ul></li>
+<li><p>Notes on Homework 2</p>
+<ul>
+<li><p>Contingency tables</p>
+<ul>
+<li><p><code>Rev=”b”</code></p>
+<ul>
+<li><p>Know the appropriate rev option</p></li>
+<li><p><code>riskratio()</code> and <code>oddsratio()</code> reads first row as reference and first column as reference.</p></li>
+</ul></li>
+<li><p>Question 3 part h</p>
+<ul>
+<li><p>Both a and b are correct</p></li>
+<li><p>Most ppl only marked one or the other</p></li>
+</ul></li>
+</ul></li>
+<li><p>Ways to change outcome into factor or appropriate form for <code>glm()</code></p>
+<ul>
+<li><p><code>icu$STA &lt;- ifelse(icu$STA=="Died",1,0)</code></p></li>
+<li><p>OR: <code>icu = icu %&gt;% mutate(STA = as.factor(STA) %\&gt;% relevel(ref = “Lived”))</code></p></li>
+</ul></li>
+<li><p>Question 4, part d</p>
+<ul>
+<li><p>Test for intercept wrong</p></li>
+<li><p>Used coefficient for age</p></li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
 </section>
