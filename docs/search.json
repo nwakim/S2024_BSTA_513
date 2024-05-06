@@ -1544,7 +1544,7 @@
     "href": "weeks/week_06_sched.html#resources",
     "title": "Week 6",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n10\nMultiple Logistic Regression\n\n\n\n\n\n11\nInteractions"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n10\nMultiple Logistic Regression\n\n\n\n\n\n11\nInteractions"
   },
   {
     "objectID": "weeks/week_06_sched.html#on-the-horizon",
@@ -1565,7 +1565,7 @@
     "href": "weeks/week_06_sched.html#announcements",
     "title": "Week 6",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nMonday 5/6\n\nNicky’s office hours move to 3-4pm on Wednesdays\n\nI will stay after class and open Webex"
   },
   {
     "objectID": "weeks/week_06_sched.html#muddiest-points",
@@ -5359,7 +5359,7 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#how-to-present-odds-ratios-forest-plot-setup",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "How to present odds ratios: Forest Plot Setup",
-    "text": "How to present odds ratios: Forest Plot Setup\n\nlibrary(broom.helpers)\n\n\nAttaching package: 'broom.helpers'\n\n\nThe following object is masked from 'package:gtsummary':\n\n    all_continuous\n\nMLR_tidy = tidy_and_attach(multi_bc, conf.int=T, exponentiate = T) %&gt;%\n  tidy_remove_intercept() %&gt;%\n  tidy_add_reference_rows() %&gt;%\n  tidy_add_estimate_to_reference_rows() %&gt;%\n  tidy_add_term_labels()\nglimpse(MLR_tidy)\n\nRows: 6\nColumns: 16\n$ term           &lt;chr&gt; \"Race_EthnicityNH White\", \"Race_EthnicityHispanic-Latin…\n$ variable       &lt;chr&gt; \"Race_Ethnicity\", \"Race_Ethnicity\", \"Race_Ethnicity\", \"…\n$ var_label      &lt;chr&gt; \"Race_Ethnicity\", \"Race_Ethnicity\", \"Race_Ethnicity\", \"…\n$ var_class      &lt;chr&gt; \"factor\", \"factor\", \"factor\", \"factor\", \"factor\", \"nume…\n$ var_type       &lt;chr&gt; \"categorical\", \"categorical\", \"categorical\", \"categoric…\n$ var_nlevels    &lt;int&gt; 5, 5, 5, 5, 5, NA\n$ contrasts      &lt;chr&gt; \"contr.treatment\", \"contr.treatment\", \"contr.treatment\"…\n$ contrasts_type &lt;chr&gt; \"treatment\", \"treatment\", \"treatment\", \"treatment\", \"tr…\n$ reference_row  &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE, NA\n$ label          &lt;chr&gt; \"NH White\", \"Hispanic-Latino\", \"NH American Indian/Alas…\n$ estimate       &lt;dbl&gt; 1.0000000, 0.9846940, 0.9178662, 1.1433526, 1.4300256, …\n$ std.error      &lt;dbl&gt; NA, 0.083653090, 0.484110085, 0.083796726, 0.071788616,…\n$ statistic      &lt;dbl&gt; NA, -0.1843845, -0.1770333, 1.5986877, 4.9825778, 17.81…\n$ p.value        &lt;dbl&gt; NA, 8.537118e-01, 8.594822e-01, 1.098900e-01, 6.274274e…\n$ conf.low       &lt;dbl&gt; NA, 0.8344282, 0.3262638, 0.9688184, 1.2414629, 1.05221…\n$ conf.high      &lt;dbl&gt; NA, 1.158411, 2.254643, 1.345732, 1.645053, 1.065538"
+    "text": "How to present odds ratios: Forest Plot Setup\n\nlibrary(broom.helpers)\nMLR_tidy = tidy_and_attach(multi_bc, conf.int=T, exponentiate = T) %&gt;%\n  tidy_remove_intercept() %&gt;%\n  tidy_add_reference_rows() %&gt;%\n  tidy_add_estimate_to_reference_rows() %&gt;%\n  tidy_add_term_labels()\nglimpse(MLR_tidy)\n\nRows: 6\nColumns: 16\n$ term           &lt;chr&gt; \"Race_EthnicityNH White\", \"Race_EthnicityHispanic-Latin…\n$ variable       &lt;chr&gt; \"Race_Ethnicity\", \"Race_Ethnicity\", \"Race_Ethnicity\", \"…\n$ var_label      &lt;chr&gt; \"Race_Ethnicity\", \"Race_Ethnicity\", \"Race_Ethnicity\", \"…\n$ var_class      &lt;chr&gt; \"factor\", \"factor\", \"factor\", \"factor\", \"factor\", \"nume…\n$ var_type       &lt;chr&gt; \"categorical\", \"categorical\", \"categorical\", \"categoric…\n$ var_nlevels    &lt;int&gt; 5, 5, 5, 5, 5, NA\n$ contrasts      &lt;chr&gt; \"contr.treatment\", \"contr.treatment\", \"contr.treatment\"…\n$ contrasts_type &lt;chr&gt; \"treatment\", \"treatment\", \"treatment\", \"treatment\", \"tr…\n$ reference_row  &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE, NA\n$ label          &lt;chr&gt; \"NH White\", \"Hispanic-Latino\", \"NH American Indian/Alas…\n$ estimate       &lt;dbl&gt; 1.0000000, 0.9846940, 0.9178662, 1.1433526, 1.4300256, …\n$ std.error      &lt;dbl&gt; NA, 0.083653090, 0.484110085, 0.083796726, 0.071788616,…\n$ statistic      &lt;dbl&gt; NA, -0.1843845, -0.1770333, 1.5986877, 4.9825778, 17.81…\n$ p.value        &lt;dbl&gt; NA, 8.537118e-01, 8.594822e-01, 1.098900e-01, 6.274274e…\n$ conf.low       &lt;dbl&gt; NA, 0.8344282, 0.3262638, 0.9688184, 1.2414629, 1.05221…\n$ conf.high      &lt;dbl&gt; NA, 1.158411, 2.254643, 1.345732, 1.645053, 1.065538"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#how-to-present-odds-ratios-forest-plot",
@@ -5387,49 +5387,49 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#breast-cancer-example",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Breast Cancer example",
-    "text": "Breast Cancer example\n\nFor breast cancer diagnosis example, recall:\n\nOutcome: early or late stage breast cancer diagnosis\n\nPrimary Covariate: Race/ethnicity\n\nWhile non-Hispanic white individuals are more likely to be diagnosed with breast cancer, non-Hispanic black individuals have the highest death rate\nRacism affecting health care quality\n\nAdditional covariate: Age\n\nAlso a risk factor for cancer diagnosis\n\nWe want to fit a multiple logistic regression model with both risk factors included as dependent variables"
+    "text": "Breast Cancer example\n\nFor breast cancer diagnosis example, recall:\n\nOutcome: early or late stage breast cancer diagnosis (binary, categorical)\n\n\n \n\nPrimary covariate: Race/ethnicity\n\nNon-Hispanic white individuals are more likely to be diagnosed with breast cancer\n\nBut POC are more likely to be diagnosed at a later stage\n\n\n\n \n\nAdditional covariate: Age\n\nRisk factor for cancer diagnosis\n\n\n \n\nWe want to fit a multiple logistic regression model with both risk factors included as independent variables"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#introduction-to-multiple-logistic-regression",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#introduction-to-multiple-logistic-regression",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Introduction to Multiple Logistic Regression",
-    "text": "Introduction to Multiple Logistic Regression"
+    "text": "Introduction to Multiple Logistic Regression\n\nIn multiple logistic regression model, we have &gt; 1 independent variable\n\nSometimes referred to as the “multivariable regression”\nThe independent variable can be any type:\n\nContinuous\nCategorical (ordinal or nominal)\n\n\n\n \n\nWe will follow similar procedures as we did for simple logistic regression\n\nBut we need to change our interpretation of estimates because we are adjusting for other variables"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#multiple-logistic-regression-model",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#multiple-logistic-regression-model",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Multiple Logistic Regression Model",
-    "text": "Multiple Logistic Regression Model"
+    "text": "Multiple Logistic Regression Model\n\n\n\nAssume we have a collection of \\(k\\) independent variables, denoted by \\(\\mathbf{X}=\\left( X_1, X_2, ..., X_k \\right)\\)\n\n \n\nThe conditional probability is \\(P(Y=1 | \\mathbf{X}) = \\pi(\\mathbf{X})\\)\n\n \n\nWe then model the probability with logistic regression: \\[\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = \\beta_0\n+\\beta_1 \\cdot X_1 +\\beta_2 \\cdot X_2  +\\beta_3 \\cdot X_3 + ... + \\beta_k \\cdot X_k\\]\n\n\n\n\n\n\nWhy the bold \\(X\\)?\n\n\n\\(\\mathbf{X}\\) represents the vector of all the \\(X\\)’s. This is how we represent our group of covariates in our model."
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#fitting-the-multiple-logistic-regression-model",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#fitting-the-multiple-logistic-regression-model",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Fitting the Multiple Logistic Regression Model",
-    "text": "Fitting the Multiple Logistic Regression Model"
+    "text": "Fitting the Multiple Logistic Regression Model\n\nFor a multiple logistic regression model with \\(k\\) independent variables, the vector of coefficients can be denoted by \\[\\boldsymbol{\\beta}^{T} = \\left(\\beta_0, \\beta_1, \\beta_2, ..., \\beta_k \\right)\\]\n\n \n\nAs with the simple logistic regression, we use maximum likelihood method for estimating coefficients\n\nVector of estimated coefficients: \\[\\widehat{\\boldsymbol{\\beta}}^{T} = \\left(\\widehat{\\beta}_0, \\widehat{\\beta}_1, \\widehat{\\beta}_2, ..., \\widehat{\\beta}_k \\right)\\]\n\n\n \n\nFor a model with \\(k\\) independent variables, there is \\(k+1\\) coefficients to estimate\n\nUnless one of those independent variables is a multi-level categorical variables, then we need more than \\(k+1\\) coefficients"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#breast-cancer-example-population-model",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#breast-cancer-example-population-model",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Breast Cancer Example: Population Model",
-    "text": "Breast Cancer Example: Population Model\n\nWe can fit a logistic regression model with both race and ethnicity and age:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\pi(x_i)\\right) = & \\beta_0\n+\\beta_1 \\cdot I \\left( R/E = H/L \\right)\n+\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +\\beta_3 \\cdot I \\left( R/E = NH API \\right)\n+\\beta_4 \\cdot I \\left( R/E = NH B \\right)\n+\\beta_5 \\cdot Age\n\\end{aligned}\\]\n\n6 total coefficients (\\(\\beta_0\\) to \\(\\beta_6\\))"
+    "text": "Breast Cancer Example: Population Model\n\nWe can fit a logistic regression model with both race and ethnicity and age:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = & \\beta_0\n+\\beta_1 \\cdot I \\left( R/E = H/L \\right)\n+\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +\\beta_3 \\cdot I \\left( R/E = NH API \\right)\n+\\beta_4 \\cdot I \\left( R/E = NH B \\right)\n+\\beta_5 \\cdot Age\n\\end{aligned}\\]\n \n \n\nNote that race and ethnicity requires 4 coefficients to include the indicator for each category\n\n \n\nCan replace \\(\\pi(\\mathbf{X})\\) with \\(\\pi({\\text{Race/ethnicity, Age}})\\)\n\n \n\n6 total coefficients (\\(\\beta_0\\) to \\(\\beta_5\\))"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#fitting-multiple-logistic-regression-model",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#fitting-multiple-logistic-regression-model",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Fitting Multiple Logistic Regression Model",
-    "text": "Fitting Multiple Logistic Regression Model\n\nmulti_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age_c, \n               data = bc, family = binomial)\nsummary(multi_bc)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Race_Ethnicity + Age_c, family = binomial, \n    data = bc)\n\nCoefficients:\n                                                 Estimate Std. Error z value\n(Intercept)                                     -1.038389   0.027292 -38.048\nRace_EthnicityHispanic-Latino                   -0.015424   0.083653  -0.184\nRace_EthnicityNH American Indian/Alaskan Native -0.085704   0.484110  -0.177\nRace_EthnicityNH Asian/Pacific Islander          0.133965   0.083797   1.599\nRace_EthnicityNH Black                           0.357692   0.071789   4.983\nAge_c                                            0.057151   0.003209  17.811\n                                                Pr(&gt;|z|)    \n(Intercept)                                      &lt; 2e-16 ***\nRace_EthnicityHispanic-Latino                      0.854    \nRace_EthnicityNH American Indian/Alaskan Native    0.859    \nRace_EthnicityNH Asian/Pacific Islander            0.110    \nRace_EthnicityNH Black                          6.27e-07 ***\nAge_c                                            &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11484  on 9994  degrees of freedom\nAIC: 11496\n\nNumber of Fisher Scoring iterations: 4"
+    "text": "Fitting Multiple Logistic Regression Model\n\nmulti_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age_c, data = bc, family = binomial)\nsummary(multi_bc)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Race_Ethnicity + Age_c, family = binomial, \n    data = bc)\n\nCoefficients:\n                                                 Estimate Std. Error z value\n(Intercept)                                     -1.038389   0.027292 -38.048\nRace_EthnicityHispanic-Latino                   -0.015424   0.083653  -0.184\nRace_EthnicityNH American Indian/Alaskan Native -0.085704   0.484110  -0.177\nRace_EthnicityNH Asian/Pacific Islander          0.133965   0.083797   1.599\nRace_EthnicityNH Black                           0.357692   0.071789   4.983\nAge_c                                            0.057151   0.003209  17.811\n                                                Pr(&gt;|z|)    \n(Intercept)                                      &lt; 2e-16 ***\nRace_EthnicityHispanic-Latino                      0.854    \nRace_EthnicityNH American Indian/Alaskan Native    0.859    \nRace_EthnicityNH Asian/Pacific Islander            0.110    \nRace_EthnicityNH Black                          6.27e-07 ***\nAge_c                                            &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11484  on 9994  degrees of freedom\nAIC: 11496\n\nNumber of Fisher Scoring iterations: 4"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#breast-cancer-example-fitted-model",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#breast-cancer-example-fitted-model",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Breast Cancer Example: Fitted Model",
-    "text": "Breast Cancer Example: Fitted Model\n\nWe now have the fitted logistic regression model with both race and ethnicity and age:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\widehat{\\pi}(x_i)\\right) = &-4.56\n-0.02 \\cdot I \\left( R/E = H/L \\right)\n-0.09 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +0.13 \\cdot I \\left( R/E = NH API \\right)\n+0.36 \\cdot I \\left( R/E = NH B \\right)\n+0.06 \\cdot Age\n\\end{aligned}\\]\n\n6 total coefficients (\\(\\widehat{\\beta}_0\\) to \\(\\widehat{\\beta}_6\\))"
+    "text": "Breast Cancer Example: Fitted Model\n\nWe now have the fitted logistic regression model with both race and ethnicity and age:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\widehat{\\pi}(\\mathbf{X})\\right) = & \\widehat{\\beta}_0\n+ \\widehat{\\beta}_1 \\cdot I \\left( R/E = H/L \\right)\n+ \\widehat{\\beta}_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& + \\widehat{\\beta}_3 \\cdot I \\left( R/E = NH API \\right)\n+ \\widehat{\\beta}_4 \\cdot I \\left( R/E = NH B \\right)\n+ \\widehat{\\beta}_5 \\cdot Age \\\\\n\\\\\n\\text{logit}\\left(\\widehat{\\pi}(\\mathbf{X})\\right) = &-4.56\n-0.02 \\cdot I \\left( R/E = H/L \\right)\n-0.09 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +0.13 \\cdot I \\left( R/E = NH API \\right)\n+0.36 \\cdot I \\left( R/E = NH B \\right)\n+0.06 \\cdot Age\n\\end{aligned}\\]\n\n6 total coefficients (\\(\\widehat{\\beta}_0\\) to \\(\\widehat{\\beta}_5\\))"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#testing-significance-of-the-coefficients",
@@ -5450,14 +5450,14 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#a-note-on-wording",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "A note on wording",
-    "text": "A note on wording\n\nWhen I say “test a single coefficient” or “test multiple coefficients” I am referring to the \\(\\beta\\)’s\n\nA single variable can have a single coefficient\n\nExample: testing age\n\nA single variable can have multiple coefficients\n\nExample: testing race and ethnicity\n\nMuliple variables will have multiple coefficients\n\nExample: testing age and race and ethnicity together"
+    "text": "A note on wording\n\nWhen I say “test a single coefficient” or “test multiple coefficients” I am referring to the \\(\\beta\\)’s\n\nA single variable can have a single coefficient\n\nExample: testing age\n\nA single variable can have multiple coefficients\n\nExample: testing race and ethnicity\n\nMuliple variables will have multiple coefficients\n\nExample: testing age and race and ethnicity together\n\n\n \nWhen I say “test a variable” I mean “determine if the model with the variable is more likely than the model without that variable”\n\nWe can use the Wald test to do this is some scenarios (single, continuous covariate)\nBUT I advise you practice using the LRT whenever comparing models (aka testing variables)"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#wald-test-13",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#wald-test-13",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Wald test (1/3)",
-    "text": "Wald test (1/3)\n\nVery similar to a t-test!\n\nBut slightly different because it based in our likelihood function\n\nAssumes test statistic W follows a standard normal distribution under the null hypothesis\nTest statistic: \\[W=\\frac{{\\hat{\\beta}}_j}{se({\\hat{\\beta}}_j)}\\sim N(0,1)\\]\n\nwhere \\(\\widehat{\\beta}_j\\) is a MLE of coefficient \\(j\\)\n\n95% Wald confidence interval: \\[{\\hat{\\beta}}_1\\pm1.96 \\cdot SE_{{\\hat{\\beta}}_j}\\]\nThe Wald test is a routine output in R (summary() of glm() output)\n\nIncludes \\(SE_{{\\hat{\\beta}}_j}\\) and can easily find confidence interval with tidy()"
+    "text": "Wald test (1/3)\n\nFrom our multiple logistic regression model:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\pi(x_i)\\right) = & \\beta_0\n+\\beta_1 \\cdot I \\left( R/E = H/L \\right)\n+\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +\\beta_3 \\cdot I \\left( R/E = NH API \\right)\n+\\beta_4 \\cdot I \\left( R/E = NH B \\right)\n+\\beta_5 \\cdot Age\n\\end{aligned}\\]\n\nWe can only test the coefficient for age using the Wald test!"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#likelihood-ratio-test-13",
@@ -5485,7 +5485,7 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#likelihood-ratio-test-33",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Likelihood ratio test (3/3)",
-    "text": "Likelihood ratio test (3/3)\n\nIf testing single variable and it’s continuous or binary, still use this hypothesis test:\n\n\\(H_0\\): \\(\\beta_j = 0\\)\n\\(H_1\\): \\(\\beta_j \\neq 0\\)\n\n\n \n\nIf testing single variable and it’s categorical with 𝒊 groups (𝑖&gt;2), use this hypothesis test:\n\n\\(H_0\\): \\(\\beta_j=\\beta_{j+1}=\\ldots=\\beta_{j+i-1}=0\\)\n\\(H_1\\): at least one of the above \\(\\beta\\)’s is not equal to 0\n\n\n \n\nIf testing a set of variables, use this hypothesis test:\n\n\\(H_0\\): \\(\\beta_1=\\beta_{2}=\\ldots=\\beta_{k}=0\\)\n\\(H_1\\): at least one of the above \\(\\beta\\)’s is not equal to 0"
+    "text": "Likelihood ratio test (3/3)\n\nIf testing single variable and it’s continuous or binary, still use this hypothesis test:\n\n\\(H_0\\): \\(\\beta_j = 0\\)\n\\(H_1\\): \\(\\beta_j \\neq 0\\)\n\n\n \n\nIf testing single variable and it’s categorical with mroe than 2 groups, use this hypothesis test:\n\n\\(H_0\\): \\(\\beta_j=\\beta_{j+1}=\\ldots=\\beta_{j+i-1}=0\\)\n\\(H_1\\): at least one of the above \\(\\beta\\)’s is not equal to 0\n\n\n \n\nIf testing a set of variables, use this hypothesis test:\n\n\\(H_0\\): \\(\\beta_1=\\beta_{2}=\\ldots=\\beta_{k}=0\\)\n\\(H_1\\): at least one of the above \\(\\beta\\)’s is not equal to 0"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#wald-test-procedure-with-confidence-intervals",
@@ -5513,35 +5513,35 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#likelihood-ratio-test-33-1",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Likelihood ratio test (3/3)",
-    "text": "Likelihood ratio test (3/3)\n\nFrom our multiple logistic regression model:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\pi(x_i)\\right) = & \\beta_0\n+\\beta_1 \\cdot I \\left( R/E = H/L \\right)\n+\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +\\beta_3 \\cdot I \\left( R/E = NH API \\right)\n+\\beta_4 \\cdot I \\left( R/E = NH B \\right)\n+\\beta_5 \\cdot Age\n\\end{aligned}\\]\n\nWe can test a single coefficient or multiple coefficients\n\nSingle, continuous variable: Age\nSingle, &gt;2 categorical variable: Race and Ethnicity\nSet of variables: Race and Ethnicity, and Age"
+    "text": "Likelihood ratio test (3/3)\n\nFrom our multiple logistic regression model:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = & \\beta_0\n+\\beta_1 \\cdot I \\left( R/E = H/L \\right)\n+\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +\\beta_3 \\cdot I \\left( R/E = NH API \\right)\n+\\beta_4 \\cdot I \\left( R/E = NH B \\right)\n+\\beta_5 \\cdot Age\n\\end{aligned}\\]\n\nWe can test a single coefficient or multiple coefficients\n \n\nExample 1: Single, continuous variable: Age\n\n \n\nExample 2: Single, &gt;2 categorical variable: Race and Ethnicity\n\n \n\nExample 3: Set of variables: Race and Ethnicity, and Age"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Example 1: Single, continuous variable: Age",
-    "text": "Example 1: Single, continuous variable: Age"
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\nNeeded steps:\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\nCalculate the confidence interval and determine if it overlaps with null\nWrite a conclusion to the hypothesis test"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-1",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-1",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Example 1: Single, continuous variable: Age",
-    "text": "Example 1: Single, continuous variable: Age"
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nSet the level of significance \\(\\alpha\\)\n\n\\(\\alpha = 0.05\\)\n\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\n\\(H_0: \\beta_5 = 0\\)\n\\(H_1: \\beta_5 \\neq 0\\)"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Example 2: Single, >2 categorical variable: Race and Ethnicity",
-    "text": "Example 2: Single, &gt;2 categorical variable: Race and Ethnicity"
+    "text": "Example 2: Single, &gt;2 categorical variable: Race and Ethnicity\n\n\nSingle, &gt;2 categorical variable: Race and Ethnicity\n\n\nGiven age is already in the model, is the regression model with race and ethnicity more likely than the model without race and ethnicity?\n\n\nNeeded steps:\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Example 3: Set of variables: Race and Ethnicity, and Age",
-    "text": "Example 3: Set of variables: Race and Ethnicity, and Age"
+    "text": "Example 3: Set of variables: Race and Ethnicity, and Age\n\n\nSet of variables: Race and Ethnicity, and Age\n\n\nIs the regression model with race and ethnicity and age more likely than the model without race and ethnicity nor age?\n\n\nNeeded steps:\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#notes-on-likelihood-ratio-test",
@@ -5555,14 +5555,14 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#estimatedpredicted-probability-for-mlr",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Estimated/Predicted Probability for MLR",
-    "text": "Estimated/Predicted Probability for MLR\n\nBasic idea for predicting/estimating probability stays the same\nCalculations will be slightly different\n\nEspecially for the confidence interval\n\nRecall our fitted model for late stage breast cancer diagnosis: \\[ \\begin{aligned}\n\\text{logit}\\left(\\widehat{\\pi}(x_i)\\right) = &-4.56\n-0.02 \\cdot I \\left( R/E = H/L \\right)\n-0.09 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +0.13 \\cdot I \\left( R/E = NH API \\right)\n+0.36 \\cdot I \\left( R/E = NH B \\right)\n+0.06 \\cdot Age\n\\end{aligned}\\]"
+    "text": "Estimated/Predicted Probability for MLR\n\nBasic idea for predicting/estimating probability stays the same\n\n \n\nCalculations will be slightly different\n\nEspecially for the confidence interval\n\n\n \n\nRecall our fitted model for late stage breast cancer diagnosis: \\[ \\begin{aligned}\n\\text{logit}\\left(\\widehat{\\pi}(\\mathbf{X})\\right) = &-4.56\n-0.02 \\cdot I \\left( R/E = H/L \\right)\n-0.09 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +0.13 \\cdot I \\left( R/E = NH API \\right)\n+0.36 \\cdot I \\left( R/E = NH B \\right)\n+0.06 \\cdot Age\n\\end{aligned}\\]"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicted-probability",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicted-probability",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Predicted Probability",
-    "text": "Predicted Probability\n\nWe may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.\nThe predicted probability is the estimated probability of having the event for given values of covariate(s)\nRecall our fitted model for late stage breast cancer diagnosis: \\[ \\begin{aligned}\n\\text{logit}\\left(\\widehat{\\pi}(x_i)\\right) = &-4.56\n-0.02 \\cdot I \\left( R/E = H/L \\right)\n-0.09 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +0.13 \\cdot I \\left( R/E = NH API \\right)\n+0.36 \\cdot I \\left( R/E = NH B \\right)\n+0.06 \\cdot Age\n\\end{aligned}\\]\nWe can convert it to the predicted probability: \\[\\hat{\\pi}\\left(X\\right)=\\frac{\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}{1+\\exp({\\hat{\\beta}}_0+{\\hat{\\beta}}_1X)}\\]\n\nThis is an inverse logit calculation\n\nWe can calculate this using the the predict() function like in BSTA 512\n\nAnother option: taking inverse logit of fitted values from augment() function"
+    "text": "Predicted Probability\n\nWe may be interested in predicting probability of having a late stage breast cancer diagnosis for a specific age.\nThe predicted probability is the estimated probability of having the event for given values of covariate(s)\nRecall our fitted model for late stage breast cancer diagnosis: \\[ \\begin{aligned}\n\\text{logit}\\left(\\widehat{\\pi}(\\mathbf{X})\\right) = &-4.56\n-0.02 \\cdot I \\left( R/E = H/L \\right)\n-0.09 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +0.13 \\cdot I \\left( R/E = NH API \\right)\n+0.36 \\cdot I \\left( R/E = NH B \\right)\n+0.06 \\cdot Age\n\\end{aligned}\\]\nWe can convert it to the predicted probability: \\[\\hat{\\pi}(\\mathbf{X})=\\dfrac{\\exp \\left( \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot I \\left( R/E = H/L \\right) + ... + \\widehat{\\beta}_5 \\cdot Age \\right)}  {1+\\exp \\left(\\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot I \\left( R/E = H/L \\right) + ... + \\widehat{\\beta}_5 \\cdot Age \\right)}\\]\n\nThis is an inverse logit calculation\n\nWe can calculate this using the the predict() function like in BSTA 512\n\nAnother option: taking inverse logit of fitted values from augment() function"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#prediction-and-confidence-interval-in-r",
@@ -5576,21 +5576,21 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#how-to-present-odds-ratios-forest-plot-setup-1",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "How to present odds ratios: Forest Plot Setup",
-    "text": "How to present odds ratios: Forest Plot Setup\n\nlibrary(broom.helpers)\nMLR_tidy = MLR_tidy %&gt;%\n  mutate(var_label = case_match(var_label, \n                               \"Race_Ethnicity\" ~ \"Race and ethnicity\", \n                               \"Age_c\" ~ \"\"), \n         label = case_match(label, \n                            \"NH White\" ~ \"Non-Hispanic White\", \n                            \"Hispanic-Latino\" ~ \"Hispanic-Latinx\", \n                            \"NH American Indian/Alaskan Native\" ~ \"Non-Hispanic American \\n Indian/Alaskan Native\", \n                            \"NH Asian/Pacific Islander\" ~ \"Non-Hispanic \\n Asian/Pacific Islander\",\n                            \"NH Black\" ~ \"Non-Hispanic Black\", \n                               \"Age_c\" ~ \"Age (yrs)\"))"
+    "text": "How to present odds ratios: Forest Plot Setup\n\nMLR_tidy = MLR_tidy %&gt;%\n  mutate(var_label = case_match(var_label, \n                               \"Race_Ethnicity\" ~ \"Race and ethnicity\", \n                               \"Age_c\" ~ \"\"), \n         label = case_match(label, \n                            \"NH White\" ~ \"Non-Hispanic White\", \n                            \"Hispanic-Latino\" ~ \"Hispanic-Latinx\", \n                            \"NH American Indian/Alaskan Native\" ~ \"Non-Hispanic American \\n Indian/Alaskan Native\", \n                            \"NH Asian/Pacific Islander\" ~ \"Non-Hispanic \\n Asian/Pacific Islander\",\n                            \"NH Black\" ~ \"Non-Hispanic Black\", \n                               \"Age_c\" ~ \"Age (yrs)\"))"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#how-to-present-odds-ratios-forest-plot-1",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#how-to-present-odds-ratios-forest-plot-1",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "How to present odds ratios: Forest Plot",
-    "text": "How to present odds ratios: Forest Plot\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_errorbarh()`)."
+    "text": "How to present odds ratios: Forest Plot"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#adding-odds-ratios",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#adding-odds-ratios",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Adding odds ratios",
-    "text": "Adding odds ratios\n\nMLR_tidy = MLR_tidy %&gt;% \n  mutate(estimate_r = round(estimate, 2), \n         conf.low_r = round(conf.low, 2), \n         conf.high_r = round(conf.high, 2), \n         OR_char = paste0(estimate_r, \" (\", conf.low_r, \", \", conf.high_r, \")\"), \n         OR_char = ifelse(reference_row == F | is.na(reference_row), OR_char, NA))"
+    "text": "Adding odds ratios\n\nMLR_tidy = MLR_tidy %&gt;% \n  mutate(estimate_r = round(estimate, 2), \n         conf.low_r = round(conf.low, 2), \n         conf.high_r = round(conf.high, 2), \n         OR_char = paste0(estimate_r, \" (\", conf.low_r, \", \", conf.high_r, \")\"), \n         OR_char = ifelse(reference_row == F | is.na(reference_row), OR_char, NA))\n\n \n\n“Plot” of the text for odds ratios estimates\n\n\nOR_labs = ggplot(data=MLR_tidy, aes(y=label)) +\n  geom_text(aes(x = -1, label = OR_char), hjust = 0, size=8) +   \n  xlim(-1, 1) +\n  facet_grid(rows = vars(var_label), scales = \"free\",\n             space='free_y') +\n  theme_void() + \n    theme(strip.text = element_blank())"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#section",
@@ -5604,35 +5604,35 @@
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#combine-them",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Combine them!!",
-    "text": "Combine them!!\n\nlibrary(cowplot)\n\n\nAttaching package: 'cowplot'\n\n\nThe following object is masked from 'package:ggpubr':\n\n    get_legend\n\n\nThe following object is masked from 'package:lubridate':\n\n    stamp\n\nplot_grid(plot_MLR, OR_labs, ncol=2, align = \"h\", rel_widths = c(4, 1))\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_errorbarh()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_text()`)."
+    "text": "Combine them!!\n\nlibrary(cowplot)\nplot_grid(plot_MLR, OR_labs, ncol=2, align = \"h\", rel_widths = c(4, 1))"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#multivariable-logistic-regression-model",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#multivariable-logistic-regression-model",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Multivariable Logistic Regression Model",
-    "text": "Multivariable Logistic Regression Model\n\nThe multivariable model of logistic regression (called multiple logistic regression) is useful in that it statistically adjusts the estimated effect of each variable in the model\nEach estimated coefficient provides an estimate of the log odds adjusting for all other variables included in the model\nThe adjusted odds ratio can be different from or similar to the unadjusted odds ratio\nComparing adjusted vs. unadjusted odds ratios is a useful activity."
+    "text": "Multivariable Logistic Regression Model\n\nThe multivariable model of logistic regression (called multiple logistic regression) is useful in that it statistically adjusts the estimated effect of each variable in the model\n\n \n\nEach estimated coefficient provides an estimate of the log odds adjusting for all other variables included in the model\n \n\nThe adjusted odds ratio can be different from or similar to the unadjusted odds ratio\n\n \n\nComparing adjusted vs. unadjusted odds ratios can be a useful activity"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#interpretation-of-coefficients-in-mlr",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#interpretation-of-coefficients-in-mlr",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Interpretation of Coefficients in MLR",
-    "text": "Interpretation of Coefficients in MLR\n\nThe interpretation of coefficients in multiple logistic regression is essentially the same as the interpretation of coefficients in simple logistic regression\nFor interpretation, we need to\n\npoint out that these are adjusted estimates\nprovide a list of other variables in the model"
+    "text": "Interpretation of Coefficients in MLR\n\nThe interpretation of coefficients in multiple logistic regression is essentially the same as the interpretation of coefficients in simple logistic regression\n\n \n\nFor interpretation, we need to\n\npoint out that these are adjusted estimates\nprovide a list of other variables in the model"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-race-and-ethnicity-and-age-model-fit",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-race-and-ethnicity-and-age-model-fit",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Example: Race and Ethnicity and Age model fit",
-    "text": "Example: Race and Ethnicity and Age model fit"
+    "text": "Example: Race and Ethnicity and Age model fit\n\n\n\n\n\n\n\n\n  \n    \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    Race_Ethnicity\n\n\n\n        NH White\n—\n—\n\n        Hispanic-Latino\n0.98\n0.83, 1.16\n0.9\n        NH American Indian/Alaskan Native\n0.92\n0.33, 2.25\n0.9\n        NH Asian/Pacific Islander\n1.14\n0.97, 1.35\n0.11\n        NH Black\n1.43\n1.24, 1.65\n&lt;0.001\n    Age_c\n1.06\n1.05, 1.07\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval\n    \n  \n\n\n\n\n\n\nThe estimated odds of late stage breast cancer diagnosis for Hispanic-Latinx individuals is 0.98 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.83, 1.16).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic American Indian/Alaskan Natives is 0.92 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.33, 2.25).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islanders is 1.14 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.97, 1.35).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic Black individuals is 1.43 times that of Non-Hispanic White individuals, controlling for age (95% CI: 1.24, 1.65).\nFor every one year increase in age, there is an estimated 6% increase in the estimated odds of late stage breast cancer diagnosis (95% CI: 5%, 7%)."
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#what-does-controlling-for-mean-i",
     "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#what-does-controlling-for-mean-i",
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "What does “controlling for” mean? (I)",
-    "text": "What does “controlling for” mean? (I)\n\nConsider a multivariable model with two independent variables: one dichotomous (the risk factor) and one continuous (say, age)\n\nPrimary interest: to estimate the effect of the risk factor on the outcome variable\nBut we want to assess whether to adjust for age\n\nAdjusting for age may not be necessary if age distribution is quite similar for the exposed and unexposed groups\nBut if the age distribution does differs for the two groups (for example, the exposed group are older than the unexposed group), we need to adjust for age using multivariable regression modeling"
+    "text": "What does “controlling for” mean? (I)\n\nConsider a multivariable model with two independent variables: one dichotomous (the risk factor) and one continuous (say, age)\n\nPrimary interest: to estimate the effect of the risk factor on the outcome variable\nBut we want to assess whether to adjust for age\n\nAdjusting for age may not be necessary if age distribution is quite similar for the exposed and unexposed groups\nBut if the age distribution does differs for the two groups (for example, the exposed group are older than the unexposed group), we need to adjust for age using multivariable regression modeling\n\n\n\nLesson 10: Multiple Logistic Regression"
   },
   {
     "objectID": "lectures/10_Multiple_logistic_regression/old_work/Class_9_code.html",
@@ -5647,5 +5647,159 @@
     "title": "Class 9 Code",
     "section": "GLOW study example",
     "text": "GLOW study example\n\nlibrary(aplore3)\nglow = glow500\n\n\nglow_m1 = glm(fracture ~ priorfrac, data = glow, family = binomial)\n\n\nglow_m2 = glm(fracture ~ priorfrac + age, data = glow, family = binomial)\n\n\nglow_m3 = glm(fracture ~ priorfrac + age + priorfrac*age, data = glow, family = binomial)\n\n\nsummary(glow_m1); summary(glow_m2); summary(glow_m3)\n\n\nCall:\nglm(formula = fracture ~ priorfrac, family = binomial, data = glow)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   -1.4167     0.1305 -10.859  &lt; 2e-16 ***\npriorfracYes   1.0638     0.2231   4.769 1.85e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 562.34  on 499  degrees of freedom\nResidual deviance: 540.07  on 498  degrees of freedom\nAIC: 544.07\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nCall:\nglm(formula = fracture ~ priorfrac + age, family = binomial, \n    data = glow)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  -4.21429    0.84784  -4.971 6.67e-07 ***\npriorfracYes  0.83884    0.23416   3.582 0.000340 ***\nage           0.04119    0.01218   3.382 0.000719 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 562.34  on 499  degrees of freedom\nResidual deviance: 528.52  on 497  degrees of freedom\nAIC: 534.52\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nCall:\nglm(formula = fracture ~ priorfrac + age + priorfrac * age, family = binomial, \n    data = glow)\n\nCoefficients:\n                 Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)      -5.68942    1.08408  -5.248 1.54e-07 ***\npriorfracYes      4.96134    1.81022   2.741  0.00613 ** \nage               0.06251    0.01546   4.043 5.27e-05 ***\npriorfracYes:age -0.05738    0.02501  -2.294  0.02179 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 562.34  on 499  degrees of freedom\nResidual deviance: 523.27  on 496  degrees of freedom\nAIC: 531.27\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), \n                        age = 55:90)\nnewdata = with(glow, data.frame(prior_age))\nfrac_pred = predict(glow_m3, newdata, se.fit = T, type=\"response\")\npred_glow = newdata %&gt;% mutate(frac_pred = frac_pred$fit)\nggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred, color = priorfrac)) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  scale_color_discrete(name = \"Prior Fracture\") +\n  xlab(\"Age (years)\") + ylab(\"Predicted Probability of Fracture\") +\n  ylim(0,1)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), \n                        age = 55:90)\nnewdata = with(glow, data.frame(prior_age))\nfrac_pred_log = predict(glow_m3, newdata, se.fit = T, type=\"link\")\npred_glow2 = newdata %&gt;% mutate(frac_pred_log = frac_pred_log$fit)\nggplot(pred_glow2) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred_log, color = priorfrac)) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  scale_color_discrete(name = \"Prior Fracture\") +\n  xlab(\"Age (years)\") + ylab(\"Log-Odds of Fracture\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nage = 55:90\nlogit_OR = glow_m3$coefficients[2] + glow_m3$coefficients[4]*age\nOR_data = data.frame(Age = age, OR = exp(logit_OR))\nggplot(OR_data) + \n  geom_hline(yintercept=1, color = \"#65A43D\", size = 1.5) +\n  geom_smooth(method = \"loess\", aes(x = Age, y = OR), color = \"black\", size = 2) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  xlab(\"Age (years)\") + ylab(\"Odds Ratio\") +\n  ylim(0, 10)\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nInteraction model - Poll Everywhere\n\ninter_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age + Race_Ethnicity*Age, data = bc, \n               family = binomial())\nsummary(inter_bc)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Race_Ethnicity + Age + Race_Ethnicity * \n    Age, family = binomial(), data = bc)\n\nCoefficients:\n                                                     Estimate Std. Error\n(Intercept)                                         -4.540270   0.242635\nRace_EthnicityHispanic-Latino                        0.317162   0.733038\nRace_EthnicityNH American Indian/Alaskan Native     -4.104745   5.085605\nRace_EthnicityNH Asian/Pacific Islander              0.532264   0.719711\nRace_EthnicityNH Black                              -0.337456   0.657331\nAge                                                  0.056762   0.003806\nRace_EthnicityHispanic-Latino:Age                   -0.005279   0.011561\nRace_EthnicityNH American Indian/Alaskan Native:Age  0.062026   0.077179\nRace_EthnicityNH Asian/Pacific Islander:Age         -0.006314   0.011338\nRace_EthnicityNH Black:Age                           0.011035   0.010350\n                                                    z value Pr(&gt;|z|)    \n(Intercept)                                         -18.712   &lt;2e-16 ***\nRace_EthnicityHispanic-Latino                         0.433    0.665    \nRace_EthnicityNH American Indian/Alaskan Native      -0.807    0.420    \nRace_EthnicityNH Asian/Pacific Islander               0.740    0.460    \nRace_EthnicityNH Black                               -0.513    0.608    \nAge                                                  14.913   &lt;2e-16 ***\nRace_EthnicityHispanic-Latino:Age                    -0.457    0.648    \nRace_EthnicityNH American Indian/Alaskan Native:Age   0.804    0.422    \nRace_EthnicityNH Asian/Pacific Islander:Age          -0.557    0.578    \nRace_EthnicityNH Black:Age                            1.066    0.286    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11481  on 9990  degrees of freedom\nAIC: 11501\n\nNumber of Fisher Scoring iterations: 4\n\nwald_test = summary(inter_bc)$coefficients\nrownames(wald_test) = c(\"Intercept\", \"R_E: HL\", \"R_E: NH AIAN\",\n                        \"R_E: NH API\",\"R_E: NH B\", \"Age\", \n                        \"R_E: HL * Age\", \"R_E: NH AIAN * Age\",\n                        \"R_E: NH API * Age\",\"R_E: NH B * Age\")\nround(wald_test, 3)\n\n                   Estimate Std. Error z value Pr(&gt;|z|)\nIntercept            -4.540      0.243 -18.712    0.000\nR_E: HL               0.317      0.733   0.433    0.665\nR_E: NH AIAN         -4.105      5.086  -0.807    0.420\nR_E: NH API           0.532      0.720   0.740    0.460\nR_E: NH B            -0.337      0.657  -0.513    0.608\nAge                   0.057      0.004  14.913    0.000\nR_E: HL * Age        -0.005      0.012  -0.457    0.648\nR_E: NH AIAN * Age    0.062      0.077   0.804    0.422\nR_E: NH API * Age    -0.006      0.011  -0.557    0.578\nR_E: NH B * Age       0.011      0.010   1.066    0.286"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#from-lesson-6-wald-test",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#from-lesson-6-wald-test",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "From Lesson 6: Wald test",
+    "text": "From Lesson 6: Wald test\n\nAssumes test statistic W follows a standard normal distribution under the null hypothesis\nTest statistic: \\[W=\\frac{{\\hat{\\beta}}_j}{SE_{\\hat{\\beta}_j}}\\sim N(0,1)\\]\n\nwhere \\(\\widehat{\\beta}_j\\) is a MLE of coefficient \\(j\\)\n\n95% Wald confidence interval: \\[{\\hat{\\beta}}_1\\pm1.96 \\cdot SE_{{\\hat{\\beta}}_j}\\]\nThe Wald test is a routine output in R (summary() of glm() output)\n\nIncludes \\(SE_{{\\hat{\\beta}}_j}\\) and can easily find confidence interval with tidy()\n\nImportant note: Wald test is best for confidence intervals of our coefficient estimates or estimated odds ratios."
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#wald-test-in-our-example",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#wald-test-in-our-example",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Wald test in our example",
+    "text": "Wald test in our example\n\nFrom our multiple logistic regression model:\n\n\\[ \\begin{aligned}\n\\text{logit}\\left(\\pi(x_i)\\right) = & \\beta_0\n+\\beta_1 \\cdot I \\left( R/E = H/L \\right)\n+\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\\n& +\\beta_3 \\cdot I \\left( R/E = NH API \\right)\n+\\beta_4 \\cdot I \\left( R/E = NH B \\right)\n+\\beta_5 \\cdot Age\n\\end{aligned}\\]\n \n\nWald test can help us construct the confidence interval for ALL coefficient estimates\n\n \n\nIf we want to use the Wald test to determine if a covariate is significant in our model\n\nCan only do so for age"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-2",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-2",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nCalculate the confidence interval and determine if it overlaps with null\n\n\nLook at coefficient estimates (CI should not contain 0) OR estimated odds ratio (CI should not contain 1)\n\n\n\n\ntidy(multi_bc, conf.int=T) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 28) %&gt;%\n  fmt_number(decimals = 2)\n\n\n\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.04\n0.03\n−38.05\n0.00\n−1.09\n−0.99\n    Race_EthnicityHispanic-Latino\n−0.02\n0.08\n−0.18\n0.85\n−0.18\n0.15\n    Race_EthnicityNH American Indian/Alaskan Native\n−0.09\n0.48\n−0.18\n0.86\n−1.12\n0.81\n    Race_EthnicityNH Asian/Pacific Islander\n0.13\n0.08\n1.60\n0.11\n−0.03\n0.30\n    Race_EthnicityNH Black\n0.36\n0.07\n4.98\n0.00\n0.22\n0.50\n    Age_c\n0.06\n0.00\n17.81\n0.00\n0.05\n0.06"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-3",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-3",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nCalculate the confidence interval and determine if it overlaps with null\n\n\nLook at coefficient estimates (CI should not contain 0) OR estimated odds ratio (CI should not contain 1)\n\n\n\n\ntbl_regression(multi_bc, \n               exponentiate = TRUE) %&gt;%\n  as_gt() %&gt;% \n  tab_options(table.font.size = 30)\n\n\n\n\n\n\n\n\n  \n    \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    Race_Ethnicity\n\n\n\n        NH White\n—\n—\n\n        Hispanic-Latino\n0.98\n0.83, 1.16\n0.9\n        NH American Indian/Alaskan Native\n0.92\n0.33, 2.25\n0.9\n        NH Asian/Pacific Islander\n1.14\n0.97, 1.35\n0.11\n        NH Black\n1.43\n1.24, 1.65\n&lt;0.001\n    Age_c\n1.06\n1.05, 1.07\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-4",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-4",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nWrite a conclusion to the hypothesis test\n\nGiven race and ethnicity is already in the model, the regression model with age is more likely than the model without age (p-val &lt; 0.001)."
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-5",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-5",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\nNeeded steps:\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#likelihood-ratio-test",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#likelihood-ratio-test",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Likelihood ratio test",
+    "text": "Likelihood ratio test\n\nLikelihood ratio test answers the question:\n\nFor a specific covariate, which model tell us more about the outcome variable: the model including the covariate (or set of covariates) or the model omitting the covariate (or set of covariates)?\nAka: Which model is more likely given our data: model including the covariate or the model omitting the covariate?\n\n\n \n\nTest a single coefficient by comparing different models\n\nVery similar to the F-test\n\n\n \n\nImportant: LRT can be used conduct hypothesis tests for multiple coefficients\n\nJust like F-test, we can test a single coefficient, continuous/binary covariate, multi-level covariate, or multiple covariates"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#reminder-on-nested-models",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#reminder-on-nested-models",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Reminder on nested models",
+    "text": "Reminder on nested models\n\nLikelihood ratio test is only suitable to test “nested” models\n“Nested” models means the bigger model (full model) contains all the independent variables of the smaller model (reduced model)\nWe cannot compare the following two models using LRT:\n\nModel 1: \\[ \\begin{aligned} \\text{logit}\\left(\\pi(\\mathbf{X})\\right) = & \\beta_0 +\\beta_1 \\cdot I \\left( R/E = H/L \\right) +\\beta_2 \\cdot I \\left( R/E = NH AIAN \\right) \\\\ & +\\beta_3 \\cdot I \\left( R/E = NH API \\right) +\\beta_4 \\cdot I \\left( R/E = NH B \\right) \\end{aligned}\\]\nModel 2: \\[\\begin{aligned} \\text{logit}\\left(\\pi(Age)\\right) = & \\beta_0+\\beta_1 \\cdot Age  \\end{aligned}\\]\n\nIf the two models to be compared are not nested, likelihood ratio test should not be used"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-6",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-6",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nSet the level of significance \\(\\alpha\\)\n\n\\(\\alpha = 0.05\\)\n\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\n\\(H_0: \\beta_5 = 0\\) or model without age is more likely\n\\(H_1: \\beta_5 \\neq 0\\) or model with age is more likely"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-7",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-7",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nCalculate the test statistic and p-value\n\n\nmulti_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age_c, data = bc, family = binomial)\nre_bc = glm(Late_stage_diag ~ Race_Ethnicity, data = bc, family = binomial)\n\nlmtest::lrtest(multi_bc, re_bc)\n\nLikelihood ratio test\n\nModel 1: Late_stage_diag ~ Race_Ethnicity + Age_c\nModel 2: Late_stage_diag ~ Race_Ethnicity\n  #Df  LogLik Df  Chisq Pr(&gt;Chisq)    \n1   6 -5741.8                         \n2   5 -5918.1 -1 352.63  &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-8",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-1-single-continuous-variable-age-8",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 1: Single, continuous variable: Age",
+    "text": "Example 1: Single, continuous variable: Age\n\n\nSingle, continuous variable: Age\n\n\nGiven race and ethnicity is already in the model, is the regression model with age more likely than the model without age?\n\n\n\nWrite a conclusion to the hypothesis test\n\nGiven race and ethnicity is already in the model, the regression model with age is more likely than the model without age (p-val &lt; \\(2.2\\cdot10^{-16}\\))."
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity-1",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity-1",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 2: Single, >2 categorical variable: Race and Ethnicity",
+    "text": "Example 2: Single, &gt;2 categorical variable: Race and Ethnicity\n\n\nSingle, &gt;2 categorical variable: Race and Ethnicity\n\n\nGiven age is already in the model, is the regression model with race and ethnicity more likely than the model without race and ethnicity?\n\n\n\nSet the level of significance \\(\\alpha\\)\n\n\\(\\alpha = 0.05\\)\n\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\n\\(H_0: \\beta_1 = \\beta_2 = \\beta_3 = \\beta_4 = 0\\) or model without race and ethnicity is more likely\n$H_1: at least one \\(\\beta\\) is not 0 or model with race and ethnicity is more likely"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity-2",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity-2",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 2: Single, >2 categorical variable: Race and Ethnicity",
+    "text": "Example 2: Single, &gt;2 categorical variable: Race and Ethnicity\n\n\nSingle, &gt;2 categorical variable: Race and Ethnicity\n\n\nGiven age is already in the model, is the regression model with race and ethnicity more likely than the model without race and ethnicity?\n\n\n\nCalculate the test statistic and p-value\n\n\nmulti_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age_c, data = bc, family = binomial)\nage_bc = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)\n\nlmtest::lrtest(multi_bc, age_bc)\n\nLikelihood ratio test\n\nModel 1: Late_stage_diag ~ Race_Ethnicity + Age_c\nModel 2: Late_stage_diag ~ Age_c\n  #Df  LogLik Df  Chisq Pr(&gt;Chisq)    \n1   6 -5741.8                         \n2   2 -5754.8 -4 26.053  3.087e-05 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity-3",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-2-single-2-categorical-variable-race-and-ethnicity-3",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 2: Single, >2 categorical variable: Race and Ethnicity",
+    "text": "Example 2: Single, &gt;2 categorical variable: Race and Ethnicity\n\n\nSingle, &gt;2 categorical variable: Race and Ethnicity\n\n\nGiven age is already in the model, is the regression model with race and ethnicity more likely than the model without race and ethnicity?\n\n\n\nWrite a conclusion to the hypothesis test\n\nGiven age is already in the model, the regression model with race and ethnicity is more likely than the model without race and ethnicity (p-val = \\(3.1\\cdot10^{-5}\\) &lt; 0.05)."
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age-1",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age-1",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 3: Set of variables: Race and Ethnicity, and Age",
+    "text": "Example 3: Set of variables: Race and Ethnicity, and Age\n\n\nSet of variables: Race and Ethnicity, and Age\n\n\nIs the regression model with race and ethnicity and age more likely than the model without race and ethnicity nor age?\n\n\n\nSet the level of significance \\(\\alpha\\)\n\n\\(\\alpha = 0.05\\)\n\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\n\\(H_0: \\beta_1 = \\beta_2 = \\beta_3 = \\beta_4 = \\beta_5 = 0\\) or model without race and ethnicity and age is more likely\n$H_1: at least one \\(\\beta\\) is not 0 or model with race and ethnicity and age is more likely"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age-2",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age-2",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 3: Set of variables: Race and Ethnicity, and Age",
+    "text": "Example 3: Set of variables: Race and Ethnicity, and Age\n\n\nSet of variables: Race and Ethnicity, and Age\n\n\nIs the regression model with race and ethnicity and age more likely than the model without race and ethnicity nor age?\n\n\n\nCalculate the test statistic and p-value\n\n\nmulti_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age_c, data = bc, family = binomial)\nintercept_bc = glm(Late_stage_diag ~ 1, data = bc, family = binomial)\n\nlmtest::lrtest(multi_bc, intercept_bc)\n\nLikelihood ratio test\n\nModel 1: Late_stage_diag ~ Race_Ethnicity + Age_c\nModel 2: Late_stage_diag ~ 1\n  #Df  LogLik Df  Chisq Pr(&gt;Chisq)    \n1   6 -5741.8                         \n2   1 -5930.5 -5 377.32  &lt; 2.2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age-3",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#example-3-set-of-variables-race-and-ethnicity-and-age-3",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Example 3: Set of variables: Race and Ethnicity, and Age",
+    "text": "Example 3: Set of variables: Race and Ethnicity, and Age\n\n\nSet of variables: Race and Ethnicity, and Age\n\n\nIs the regression model with race and ethnicity and age more likely than the model without race and ethnicity nor age?\n\n\n\nWrite a conclusion to the hypothesis test\n\nThe regression model with race and ethnicity and age is more likely than the model omitting race and ethnicity and age (p-val &lt; \\(2.2\\cdot10^{-16}\\))."
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Predicting probability in R",
+    "text": "Predicting probability in R\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\nNeeded steps:\n\nCalculate probability prediction\nCheck if we can use Normal approximation\nCalculate confidence interval\n\nUsing logit scale then converting\nUsing Normal approximation\n\nInterpret results"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-1",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-1",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Predicting probability in R",
+    "text": "Predicting probability in R\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nCalculate probability prediction\n\n\nnewdata = data.frame(Age_c = 60 - mean_age, \n                     Race_Ethnicity = \"NH Asian/Pacific Islander\")\npred1 = predict(multi_bc, newdata, se.fit = T, type=\"response\")\npred1\n\n$fit\n        1 \n0.2685667 \n\n$se.fit\n         1 \n0.01572695 \n\n$residual.scale\n[1] 1"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-2",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-2",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Predicting probability in R",
+    "text": "Predicting probability in R\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nCheck if we can use Normal approximation\n\nWe can use the Normal approximation if: \\(\\widehat{p}n = \\widehat{\\pi}(X)\\cdot n &gt; 10\\) and \\((1-\\widehat{p})n = (1-\\widehat{\\pi}(X))\\cdot n &gt; 10\\).\n\nn = nobs(multi_bc)\np = pred1$fit\nn*p\n\n       1 \n2685.667 \n\nn*(1-p)\n\n       1 \n7314.333 \n\n\nWe can use the Normal approximation!"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-3",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-3",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Predicting probability in R",
+    "text": "Predicting probability in R\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n3b. Calculate confidence interval (Option 2: with Normal approximation)\n\npred = predict(multi_bc, newdata, se.fit = T, type = \"response\")\n\nLL_CI = pred$fit - qnorm(1-0.05/2) * pred$se.fit\nUL_CI = pred$fit + qnorm(1-0.05/2) * pred$se.fit\n\nc(Pred = pred$fit, LL_CI, UL_CI) %&gt;% round(digits=3)\n\nPred.1      1      1 \n 0.269  0.238  0.299"
+  },
+  {
+    "objectID": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-4",
+    "href": "lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.html#predicting-probability-in-r-4",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "Predicting probability in R",
+    "text": "Predicting probability in R\n\n\nPredicting probability of late stage breast cancer diagnosis\n\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, what is the predicted probability for late stage breast cancer diagnosis (with confidence intervals)?\n\n\n\nInterpret results\n\nFor someone who is 60 years old and Non-Hispanic Asian/Pacific Islander, the predicted probability of late stage breast cancer diagnosis is 0.269 (95% CI: 0.238, 0.299)."
   }
 ]
