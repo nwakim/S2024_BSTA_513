@@ -1572,7 +1572,7 @@
     "href": "weeks/week_06_sched.html#muddiest-points",
     "title": "Week 6",
     "section": "Muddiest Points",
-    "text": "Muddiest Points"
+    "text": "Muddiest Points\n\n1. Why use logistic instead of linear regression?\nFrom waaay back in our slides from Lesson 5! We violate several of the assumptions for linear regression when our outcome has only two options. One of the most important reasons is that we cannot map our predictors (that can be continuous of categorical) onto a binary outcome. We need to transform our binary outcome so it is on a continuous and unbounded scale (logit does that!)\n\n\n2. Where can we find more resources for making forest plots?\nYou can either use the code I gave in Lesson 10 or use the reference links from Lab 4 in Linear Models.\n\n\n3. And how do we make a likelihood probability table instead of a plot?\nI’m not sure what this means. Please post on Slack so we can clarify! We have discussed plotting predicted probability in Lesson 7."
   },
   {
     "objectID": "weeks/week_11_sched.html#announcements",
