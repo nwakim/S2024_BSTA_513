@@ -1,0 +1,687 @@
+---
+title: "Lesson 6: Tests for GLMs using Likelihood function"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "04/17/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 6: Tests for GLMs using Likelihood function"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
+library(lmtest)
+
+load(here("data", "bc_diagnosis.Rda"))
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+```
+
+## I've never explicitly said this...
+
+-   Because we are in a public health class, we are often analyzing data with sensitive outcomes
+
+ 
+
+-   If you ever need a moment in class because of our topic, feel free to just step out or leave and privately view the lecture
+
+ 
+
+-   If you need extra time on your assignments because you have an emotional response to lectures/homework/lab, just let me know! Extenuating circumstance!
+
+# Learning Objectives
+
+1.  Use the Wald test to test the significance of an estimated coefficient through confidence intervals.
+
+2.  Articulate how the Wald test, Score test, and likelihood ratio test (LRT) calculates a test statistic using the likelihood function.
+
+3.  Use the Likelihood ratio test to test the significance of estimated coefficients through formal hypothesis testing.
+
+4.  Understand when and how to use each test: Wald, Score, and Likelihood ratio
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+## Connection between tests in linear models and GLMs
+
+-   In linear regression, we used ordinary least squares (OLS) to find the best fit model, so we could use the following tests:
+
+    -   t-test for single coefficients
+    -   F-test for single coefficients or groups of coefficients
+
+-   These tests **hinge on the Mean Squared Error (MSE)** which we minimized in OLS and the LINE assumptions
+
+ 
+
+-   In GLMs, when we use **maximum likelihood estimation (MLE)**, we **cannot** use t-tests or F-tests
+
+    -   Because we are now using likelihood to find our estimates (not OLS)
+
+-   But we have **parallel tests in MLE**!!
+
+    -   t-test ⟶ Wald test
+
+    -   F-test ⟶ Likelihood ratio test
+
+## Revisit the likelihood function
+
+::: columns
+::: {.column width="50%"}
+-   [Likelihood function:]{style="color:#F6C342; font-weight: bold;"} expresses the probability of the observed data as a function of the unknown parameters
+
+    -   Function that enumerates the likelihood (similar to probability) that we observe the data across the range of potential values of our coefficients
+
+-   We often compare likelihoods to see what estimates are more likely given our data
+
+-   Plot to right is a simplistic view of likelihood
+
+    -   I have flattened the likelihood that would be a function of $\beta_0$ and $\beta_1$ into a 2D plot (instead of 3D: $\beta_0$ vs. $\beta_1$ vs. $L(\beta_0, \beta_1)$)
+
+-   I use $L$ to represent the log-likelihood and $l$ to represent the likelihood
+:::
+
+::: {.column width="50%"}
+ 
+
+ 
+
+![](./images/like_fn.png){fig-align="center"}
+:::
+:::
+
+## Introduction to three tests in GLM
+
+-   To introduce these three tests, we will work on a **single coefficient**
+
+    -   To be clear: the *Likelihood ratio test can be extended to more coefficients*
+
+-   Let's say we fit a GLM using MLE
+
+    -   We will continue to use logistic regression as our working example
+
+ 
+
+-   Now we want to run a hypothesis test for an individual coefficient $j$:
+
+    -   $H_0: \beta_j = 0$
+    -   $H_1: \beta_j \neq 0$
+
+-   Three potential tests that we use with a Likelihood function are:
+
+    -   [Wald test]{style="background-color:#D5E2F1;"}
+    -   [Score test]{style="background-color:#F9E7B8;"}
+    -   [Likelihood ratio test (LRT)]{style="background-color:#CADFB8;"}
+
+## Poll Everywhere Question 1
+
+## Revisit previous model with late stage BC diagnosis and age
+
+::: columns
+::: {.column width="55%"}
+-   Simple logistic regression model: $$\text{logit}(\pi(Age)) = \beta_0 + \beta_1 \cdot Age$$
+:::
+
+::: {.column width="45%"}
+ 
+
+Don't forget: $\pi(Age) = P(Y=1 | Age)$
+:::
+:::
+
+```{r}
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+summary(bc_reg)
+```
+
+# Learning Objectives
+
+::: lob
+1.  Use the Wald test to test the significance of an estimated coefficient through confidence intervals.
+
+2.  Articulate how the **Wald test**, Score test, and likelihood ratio test (LRT) calculates a test statistic using the likelihood function.
+:::
+
+3.  Use the Likelihood ratio test to test the significance of estimated coefficients through formal hypothesis testing.
+
+4.  Understand when and how to use each test: Wald, Score, and Likelihood ratio
+
+## Wald test (1/3) {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+-   Very similar to a t-test!
+
+    -   But slightly different because it based in our likelihood function
+
+-   Assumes test statistic W follows a standard normal distribution under the null hypothesis
+
+-   Test statistic: $$W=\frac{{\hat{\beta}}_j}{se({\hat{\beta}}_j)}\sim N(0,1)$$
+
+    -   where $\widehat{\beta}_j$ is a MLE of coefficient $j$
+
+-   95% Wald confidence interval: $${\hat{\beta}}_1\pm1.96 \cdot SE_{{\hat{\beta}}_j}$$
+
+-   The Wald test is a routine output in R (`summary()` of `glm()` output)
+
+    -   Includes $SE_{{\hat{\beta}}_j}$ and can easily find confidence interval with `tidy()`
+
+## Wald test (2/3) {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+![](./images/like_fn.png){fig-align="center"}
+
+## Wald test (3/3) {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+![](./images/wald.png){fig-align="center"}
+
+## Wald test procedure with confidence intervals {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+1.  Set the [**level of significance**]{style="color:#5B9BD5"} $\alpha$
+
+2.  Specify the [**null**]{style="color:#5B9BD5"} ( $H_0$ ) and [**alternative**]{style="color:#5B9BD5"} ( $H_A$ ) [**hypotheses**]{style="color:#5B9BD5"}
+
+    -   In symbols
+    -   In words
+    -   Alternative: one- or two-sided?
+
+3.  Calculate the [**confidence interval**]{style="color:#5B9BD5"} and [**determine if it overlaps with null**]{style="color:#5B9BD5"}
+
+    -   Overlap with null (usually 0 for coefficient) = fail to reject null
+    -   No overlap with null (usually 0 for coefficient) = reject null
+
+4.  Write a [**conclusion**]{style="color:#5B9BD5"} to the hypothesis test
+
+    -   What is the estimate and its confidence interval?
+    -   Do we reject or fail to reject $H_0$?
+    -   Write a conclusion in the context of the problem
+
+## Example: BC diagnosis and age {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+Wald test for age coefficient
+:::
+
+::: ex-cont
+Interpret the coefficient for age in our model of late stage breast cancer diagnosis.
+:::
+:::
+
+::: columns
+::: {.column width="60%"}
+**Needed steps:**
+
+1.  Set the **level of significance** $\alpha$
+2.  Specify the **null** ( $H_0$ ) and **alternative** ( $H_A$ ) **hypotheses**
+3.  Calculate the **confidence interval** and **determine if it overlaps with null**
+4.  Write a **conclusion** to the hypothesis test
+:::
+
+::: {.column width="40%"}
+::: proof1
+::: proof-title
+Note
+:::
+
+::: proof-cont
+I don't want us to get fixated on this interpretation. This is more to introduce the process, BUT it's MUCH better to interpret the coefficient in terms of OR (next class).
+:::
+:::
+:::
+:::
+
+## Example: BC diagnosis and age {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+Wald test for age coefficient
+:::
+
+::: ex-cont
+Interpret the coefficient for age in our model of late stage breast cancer diagnosis.
+:::
+:::
+
+1.  Set the **level of significance** $\alpha$ $$\alpha=0.05$$
+2.  Specify the **null** ( $H_0$ ) and **alternative** ( $H_A$ ) **hypotheses**
+
+$$\begin{aligned}
+H_0 &: \beta_{Age} = 0 \\
+H_1 &: \beta_{Age} \neq 0 \\
+\end{aligned}$$
+
+## Example: BC diagnosis and age {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+Wald test for age coefficient
+:::
+
+::: ex-cont
+Interpret the coefficient for age in our model of late stage breast cancer diagnosis.
+:::
+:::
+
+3.  Calculate the **confidence interval** and **determine if it overlaps with null**
+
+```{r}
+library(epiDisplay)
+bc_reg = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+tidy(bc_reg, conf.int=T) %>% gt() %>% tab_options(table.font.size = 35) %>%
+  fmt_number(decimals = 3)
+```
+
+## Example: BC diagnosis and age {background-image="./images/title_blue.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+Wald test for age coefficient
+:::
+
+::: ex-cont
+Interpret the coefficient for age in our model of late stage breast cancer diagnosis.
+:::
+:::
+
+::: columns
+::: {.column width="60%"}
+4.  Write a **conclusion** to the hypothesis test
+
+For every one year increase in age, the log-odds of late stage breast cancer diagnosis increases 0.057 (95% CI: 0.051, 0.063).
+
+There is sufficient evidence that age an breast cancer diagnosis are associated.
+:::
+
+::: {.column width="40%"}
+::: proof1
+::: proof-title
+Note
+:::
+
+::: proof-cont
+I don't want us to get fixated on this interpretation. This is more to introduce the process, BUT it's MUCH better to interpret the coefficient in terms of OR (next class).
+:::
+:::
+:::
+:::
+
+## Poll Everywhere Question 2
+
+# Learning Objectives
+
+1.  Use the Wald test to test the significance of an estimated coefficient through confidence intervals.
+
+::: lob
+2.  Articulate how the Wald test, **Score test**, and likelihood ratio test (LRT) calculates a test statistic using the likelihood function.
+:::
+
+3.  Use the Likelihood ratio test to test the significance of estimated coefficients through formal hypothesis testing.
+
+4.  Understand when and how to use each test: Wald, Score, and Likelihood ratio
+
+## Score test {background-image="./images/title_yell.png" background-size="2500px 150px" background-position="top"}
+
+-   Score test does not require the computation of MLE for $\beta_1$, while both likelihood test and Wald test does
+
+    -   Only need to know $\beta_1$ under the null
+
+-   Score test is based on the first and second derivatives of the log-likelihood under the null hypothesis: $$S=\frac{\sum_{i=1}^{n}{x_i(y_i-\bar{y})}}{\sqrt{\bar{y}(1-\bar{y})\sum_{i=1}^{n}\left(x_i-\bar{x}\right)^2}} \sim N(0,1)$$
+
+## Score test {background-image="./images/title_yell.png" background-size="2500px 150px" background-position="top"}
+
+![](./images/score.png){fig-align="center"}
+
+# Learning Objectives
+
+
+1.  Use the Wald test to test the significance of an estimated coefficient through confidence intervals.
+
+::: lob
+2.  Articulate how the Wald test, Score test, and **likelihood ratio test (LRT)** calculates a test statistic using the likelihood function.
+
+3.  Use the Likelihood ratio test to test the significance of estimated coefficients through formal hypothesis testing.
+:::
+
+4.  Understand when and how to use each test: Wald, Score, and Likelihood ratio
+
+## Likelihood ratio test (1/3) {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   Likelihood ratio test answers the question:
+
+    -   For a specific covariate, **which model tell us more about the outcome variable**: the model including the covariate or the model omitting the covariate?
+    -   Aka: Which model is more likely given our data: model including the covariate or the model omitting the covariate?
+
+ 
+
+-   Test a single coefficient by comparing different models
+
+    -   **Very similar to the F-test**
+
+ 
+
+-   Important: LRT can be used conduct hypothesis tests for **multiple coefficients**
+
+    -   Just like F-test, we can test a single coefficient, continuous/binary covariate, multi-level covariate, or multiple covariates
+
+## Likelihood ratio test (2/3) {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   To assess the significance of a continuous/binary covariate’s coefficient in the simple logistic regression, we compare the deviance (D) with and without the covariate $$G=D\left(\text{model without } x\right)-D\left(\text{model with } x\right)$$
+
+ 
+
+-   For a continuous or binary variable, this is equivalent to test: $H_0: \beta_j = 0$ vs. $H_1: \beta_j \neq 0$
+
+-   Test statistic for LRT: $$G=-2ln\left[\frac{\text{likelihood without } x}{\text{likelihood with } x}\right]=2ln\left[\frac{l\left({\hat{\beta}}_0,{\hat{\beta}}_1\right)}{l({\hat{\beta}}_0)}\right]$$
+
+## Likelihood ratio test (2/3) {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   To assess the significance of a continuous/binary covariate’s coefficient in the simple logistic regression, we compare the deviance (D) with and without the covariate $$G=D\left(\text{model without } x\right)-D\left(\text{model with } x\right)$$
+
+ 
+
+-   For a continuous or binary variable, this is equivalent to test: $H_0: \beta_j = 0$ vs. $H_1: \beta_j \neq 0$
+
+-   Test statistic for LRT: $$G=-2ln\left[\frac{\text{likelihood without } x}{\text{likelihood with } x}\right]=2ln\left[\frac{l\left({\hat{\beta}}_0,{\hat{\beta}}_1\right)}{l({\hat{\beta}}_0)}\right]$$
+
+![](./images/pause.png){.absolute bottom="7%" right="0%" width="300" height="300"}
+
+## LRT: what is Deviance? {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   **Deviance:** quantifies the difference in likelihoods between a [fitted]{style="color:#F6C342; font-weight: bold;"} and [saturated]{style="color:#ED7D31; font-weight: bold;"} model
+
+    -   [Fitted model:]{style="color:#F6C342; font-weight: bold;"}
+
+        -   Your proposed fitted model
+
+    -   [Saturated model:]{style="color:#ED7D31; font-weight: bold;"}
+
+        -   A model that contains as many parameters as there are data points = **perfect fit**
+            -   Basically every individual has their own covariate
+        -   Perfect fit = maximum possible likelihood
+
+ 
+
+-   **All fitted models will have likelihood less than saturated model**
+
+![](./images/tiny_pause.png){.absolute top="83%" right="0%" width="120" height="120"}
+
+## LRT: what is Deviance? {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   The **deviance** is mathematically defined as: $$D=-2[L_{\text{fitted}}-L_{\text{saturated}}]$$
+
+-   An alternative way to write it is: $$D=-2ln\left[\frac{\text{likelihood of the fitted model}}{\text{likelihood of the saturated model}}\right]$$
+
+-   Using ‘-2’ is to make the deviance follow a chi-square distribution
+
+![](./images/tiny_pause.png){.absolute top="83%" right="0%" width="120" height="120"}
+
+## Deviance to Likelihood Ratio Test {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   In the LRT, we are NOT comparing the likelihood of saturated model to the fitted model
+
+ 
+
+-   We ARE comparing the Deviance of the model with x and the model without x
+
+    -   We just use the saturated model to calculate Deviance
+    -   Both are considered fitted models with their own respective Deviance
+
+ 
+
+-   So our LRT is: $$G=D\left(\text{model without } x\right)-D\left(\text{model with } x\right)$$
+
+![](./images/tiny_pause.png){.absolute top="83%" right="0%" width="120" height="120"}
+
+## For reference {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+$$ \begin{aligned}
+G&=D\left(\text{model without } x\right)-D\left(\text{model with }x\right) \\
+G&=-2ln\left[\frac{\text{likelihood of model without } x}{\text{likelihood of saturated model}}\right]-\left(-2ln\left[\frac{\text{likelihood of model with } x}{\text{likelihood of saturated model}}\right]\right) \\
+G&=-2ln\left[\frac{\text{likelihood of model without } x}{\text{likelihood of saturated model}}\times\frac{\text{likelihood of saturated model}}{\text{likelihood of model with } x}\right] \\
+G&=-2ln\left[\frac{\text{likelihood of model without } x}{\text{likelihood of model with }}\right] \\
+G&=2ln\left[\frac{l\left({\hat{\beta}}_0,{\hat{\beta}}_1\right)}{l({\hat{\beta}}_0)}\right]
+\end{aligned}$$
+
+![](./images/tiny_pause.png){.absolute top="83%" right="0%" width="120" height="120"}
+
+## Poll Everywhere Question 3
+
+## Likelihood ratio test (2/3) {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   To assess the significance of a continuous/binary covariate’s coefficient in the simple logistic regression, we compare the deviance (D) with and without the covariate $$G=D\left(\text{model without } x\right)-D\left(\text{model with } x\right)$$
+
+ 
+
+-   For a continuous or binary variable, this is equivalent to test: $H_0: \beta_j = 0$ vs. $H_1: \beta_j \neq 0$
+
+-   Test statistic for LRT: $$G=-2ln\left[\frac{\text{likelihood without } x}{\text{likelihood with } x}\right]=2ln\left[\frac{l\left({\hat{\beta}}_0,{\hat{\beta}}_1\right)}{l({\hat{\beta}}_0)}\right]$$
+
+![](./images/play.png){.absolute bottom="7%" right="0%" width="300" height="300"}
+
+## Likelihood ratio test (3/3) {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+-   Under the null hypothesis, with adequate sample size, LRT statistic follows a chi-square distribution: $$G \sim \chi^2(df)$$
+
+    -   $df = (\# \text{coefficients in larger model}) − (\# \text{coefficients in smaller model})$
+
+ 
+
+-   If we are testing a single coefficient, like age, then $df=1$
+
+## Likelihood ratio test {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+![](./images/lrt.png){fig-align="center"}
+
+## LRT procedure {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+1.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
+
+2.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
+
+    -   In symbols
+    -   In words
+    -   Alternative: one- or two-sided?
+
+3.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"}
+
+4.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
+
+    -   Do we reject or fail to reject $H_0$?
+    -   Write a conclusion in the context of the problem
+
+## Example: BC diagnosis and age {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+LRT
+:::
+
+::: ex-cont
+Determine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?
+:::
+:::
+
+**Needed steps:**
+
+1.  Set the **level of significance** $\alpha$
+2.  Specify the **null** ( $H_0$ ) and **alternative** ( $H_A$ ) **hypotheses**
+3.  Calculate the **test statistic** and **p-value**
+4.  Write a **conclusion** to the hypothesis test
+
+## Example: BC diagnosis and age {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+LRT
+:::
+
+::: ex-cont
+Determine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?
+:::
+:::
+
+1.  Set the **level of significance** $\alpha$ $$\alpha=0.05$$
+2.  Specify the **null** ( $H_0$ ) and **alternative** ( $H_A$ ) **hypotheses**
+
+$$\begin{aligned}
+H_0 &: \beta_{Age} = 0 \\
+H_1 &: \beta_{Age} \neq 0 \\
+\end{aligned}$$
+
+## Example: BC diagnosis and age {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+LRT
+:::
+
+::: ex-cont
+Determine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?
+:::
+:::
+
+3.  Calculate the **test statistic** and **p-value**
+
+```{r}
+library(lmtest)
+bc_age = glm(Late_stage_diag ~ Age_c, data = bc, family = binomial)
+bc_int = glm(Late_stage_diag ~ 1, data = bc, family = binomial)
+lmtest::lrtest(bc_age, bc_int)
+```
+
+## Example: BC diagnosis and age {background-image="./images/title_green.png" background-size="2500px 150px" background-position="top"}
+
+::: example
+::: ex-title
+LRT
+:::
+
+::: ex-cont
+Determine if the model including age is more likely than model without age. Aka: Is age associated with late stage breast cancer diagnosis?
+:::
+:::
+
+4.  Write a **conclusion** to the hypothesis test
+
+We reject the null hypothesis that the coefficient corresponding to age is 0 ($p-value << 0.05$). There is sufficient evidence that there is an association between age and late stage breast cancer diagnosis.
+
+# Learning Objectives
+
+
+1.  Use the Wald test to test the significance of an estimated coefficient through confidence intervals.
+
+2.  Articulate how the Wald test, Score test, and likelihood ratio test (LRT) calculates a test statistic using the likelihood function.
+
+3.  Use the Likelihood ratio test to test the significance of estimated coefficients through formal hypothesis testing.
+
+::: lob
+4.  Understand when and how to use each test: Wald, Score, and Likelihood ratio
+:::
+
+## All three tests together
+
+![](./images/three_tests.png){fig-align="center"}
+
+[UCLA FAQ on Tests](https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faqhow-are-the-likelihood-ratio-wald-and-lagrange-multiplier-score-tests-different-andor-similar/)
+
+## Which test to use?
+
+-   All three tests are asymptotically equivalent
+
+    -   As sample approaches infinity
+
+-   For testing significance of single covariate coefficient:
+
+    -   [LRT]{style="background-color:#CADFB8;"}
+
+        -   Wald and score are only approximations of LRT
+        -   For smaller samples, LRT better
+
+    -   [Wald test]{style="background-color:#D5E2F1;"} is very convenient
+
+        -   Automatically performed in R
+        -   Does not need to estimate two models (LRT does)
+        -   Good for constructing confidence intervals of coefficients and odds ratios
+
+    -   [Score test]{style="background-color:#F9E7B8;"}
+
+        -   Does not need to estimate two models (LRT does)
+        -   I don’t really see people use this…
+
+## Poll Everywhere Question 4
+
+## Poll Everywhere Question 5
+
+## Poll Everywhere Question 6
+
+## Poll Everywhere Question 7
+
+## Poll Everywhere Question 8
+
+## Tests and what they're used for
+
+|                                                                                                  | Wald test | Score test | LRT |
+|-------------------------|----------------|----------------|----------------|
+| Used to test significance of single coefficient                                                  |           |            |     |
+| *Can be* used to report confidence interval for a single coefficient                             |           |            |     |
+| Confidence interval reported by R for a single coefficient (and most commonly used)              |           |            |     |
+| Use to test significance/contribution to outcome prediction of multi-level categorical covariate |           |            |     |
+| Used for comparing two models with different (but nested) covariates                             |           |            |     |
+
+## Tests and what they're used for {visibility="hidden"}
+
+|                                                                                                  | Wald test                                                                | Score test                                                               | LRT                                                                      |
+|-------------------------|----------------|----------------|----------------|
+| Used to test significance of single coefficient                                                  | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   |
+| *Can be* used to report confidence interval for a single coefficient                             | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   |
+| Confidence interval reported by R for a single coefficient (and most commonly used)              | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   | [{{< iconify f7 xmark-square-fill size=70px >}}]{style="color:#C2352F;"} | [{{< iconify f7 xmark-square-fill size=70px >}}]{style="color:#C2352F;"} |
+| Use to test significance/contribution to outcome prediction of multi-level categorical covariate | [{{< iconify f7 xmark-square-fill size=70px >}}]{style="color:#C2352F;"} | [{{< iconify f7 xmark-square-fill size=70px >}}]{style="color:#C2352F;"} | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   |
+| Used for comparing two models with different (but nested) covariates                             | [{{< iconify f7 xmark-square-fill size=70px >}}]{style="color:#C2352F;"} | [{{< iconify f7 xmark-square-fill size=70px >}}]{style="color:#C2352F;"} | [{{< iconify ic round-check-box size=70px >}}]{style="color:#70AD47;"}   |
+
+## So how would the Wald test and LRT show up in research?
+
+-   Wald test
+
+    -   Often used when reporting estimates
+
+    -   Generally presented using a forest plot or table of ORs or RRs
+
+        -   Then we highlight the specific variable of interest in text
+        -   Will include the OR/RR estimate (not the coefficient like we saw today) with the 95% CI and proper interpretation of result
+
+ 
+
+-   LRT
+
+    -   Often when performing model selection and comparing two models
+
+        -   [Reporting model selection Cross Validated post](https://stats.stackexchange.com/questions/27479/model-selection-in-a-paper-what-to-say-about-the-dropped-variables)
+
+    -   Often does not show up explicitly in our reports, but is essential to get to our final model!!

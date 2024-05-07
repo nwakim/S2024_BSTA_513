@@ -1,0 +1,121 @@
+---
+title: "Class 9 Code"
+author: "Nicky Wakim"
+date: "2023-04-26"
+output: html_document
+---
+<style type="text/css">
+.main-container {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+
+### Set up for the code
+```{r}
+library(tidyr)
+library(dplyr)
+library(epiDisplay)
+library(kableExtra)
+library(here)
+library(ggplot2)
+load(here("data", "bc_diagnosis.Rda"))
+```
+
+## GLOW study example
+```{r}
+library(aplore3)
+glow = glow500
+```
+
+```{r}
+glow_m1 = glm(fracture ~ priorfrac, data = glow, family = binomial)
+```
+```{r}
+glow_m2 = glm(fracture ~ priorfrac + age, data = glow, family = binomial)
+```
+
+```{r}
+glow_m3 = glm(fracture ~ priorfrac + age + priorfrac*age, data = glow, family = binomial)
+```
+
+```{r}
+summary(glow_m1); summary(glow_m2); summary(glow_m3)
+```
+
+```{r fig.width=8}
+prior_age = expand_grid(priorfrac = c("No", "Yes"), 
+                        age = 55:90)
+newdata = with(glow, data.frame(prior_age))
+frac_pred = predict(glow_m3, newdata, se.fit = T, type="response")
+pred_glow = newdata %>% mutate(frac_pred = frac_pred$fit)
+ggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +
+  geom_smooth(method = "loess", aes(x = age, y = frac_pred, color = priorfrac)) +
+  theme(legend.position = "right", 
+        text = element_text(size=20), 
+        title = element_text(size=16)) +
+  scale_color_discrete(name = "Prior Fracture") +
+  xlab("Age (years)") + ylab("Predicted Probability of Fracture") +
+  ylim(0,1)
+```
+
+```{r fig.width=8}
+prior_age = expand_grid(priorfrac = c("No", "Yes"), 
+                        age = 55:90)
+newdata = with(glow, data.frame(prior_age))
+frac_pred_log = predict(glow_m3, newdata, se.fit = T, type="link")
+pred_glow2 = newdata %>% mutate(frac_pred_log = frac_pred_log$fit)
+ggplot(pred_glow2) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +
+  geom_smooth(method = "loess", aes(x = age, y = frac_pred_log, color = priorfrac)) +
+  theme(legend.position = "right", 
+        text = element_text(size=20), 
+        title = element_text(size=16)) +
+  scale_color_discrete(name = "Prior Fracture") +
+  xlab("Age (years)") + ylab("Log-Odds of Fracture")
+```
+
+
+
+```{r fig.width=6, fig.height=4}
+age = 55:90
+logit_OR = glow_m3$coefficients[2] + glow_m3$coefficients[4]*age
+OR_data = data.frame(Age = age, OR = exp(logit_OR))
+ggplot(OR_data) + 
+  geom_hline(yintercept=1, color = "#65A43D", size = 1.5) +
+  geom_smooth(method = "loess", aes(x = Age, y = OR), color = "black", size = 2) +
+  theme(legend.position = "right", 
+        text = element_text(size=20), 
+        title = element_text(size=16)) +
+  xlab("Age (years)") + ylab("Odds Ratio") +
+  ylim(0, 10)
+```
+
+
+### Interaction model - Poll Everywhere
+```{r}
+inter_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age + Race_Ethnicity*Age, data = bc, 
+               family = binomial())
+summary(inter_bc)
+
+wald_test = summary(inter_bc)$coefficients
+rownames(wald_test) = c("Intercept", "R_E: HL", "R_E: NH AIAN",
+                        "R_E: NH API","R_E: NH B", "Age", 
+                        "R_E: HL * Age", "R_E: NH AIAN * Age",
+                        "R_E: NH API * Age","R_E: NH B * Age")
+round(wald_test, 3)
+```
+
+

@@ -5808,5 +5808,481 @@
     "title": "Lesson 10: Multiple Logistic Regression",
     "section": "Example: Race and Ethnicity and Age model fit (FIXED)",
     "text": "Example: Race and Ethnicity and Age model fit (FIXED)\n\n\n\n\n\n\n\n\n  \n    \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    Race_Ethnicity\n\n\n\n        NH White\n—\n—\n\n        Hispanic-Latino\n0.98\n0.83, 1.16\n0.9\n        NH American Indian/Alaskan Native\n0.92\n0.33, 2.25\n0.9\n        NH Asian/Pacific Islander\n1.14\n0.97, 1.35\n0.11\n        NH Black\n1.43\n1.24, 1.65\n&lt;0.001\n    Age_c\n1.06\n1.05, 1.07\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval\n    \n  \n\n\n\n\n\n\nThe estimated odds of late stage breast cancer diagnosis for Hispanic-Latinx individuals is 0.98 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.83, 1.16).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic American Indian/Alaskan Natives is 0.92 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.33, 2.25).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic Asian/Pacific Islanders is 1.14 times that of Non-Hispanic White individuals, controlling for age (95% CI: 0.97, 1.35).\nThe estimated odds of late stage breast cancer diagnosis for Non-Hispanic Black individuals is 1.43 times that of Non-Hispanic White individuals, controlling for age (95% CI: 1.24, 1.65).\nFor every one year increase in age, there is an 6% increase in the estimated odds of late stage breast cancer diagnosis, adjusting for race and ethnicity (95% CI: 5%, 7%)."
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#what-is-a-confounder",
+    "href": "lectures/11_Interactions/11_Interactions.html#what-is-a-confounder",
+    "title": "Lesson 10: Multiple Logistic Regression",
+    "section": "What is a confounder?",
+    "text": "What is a confounder?\n\nA confounding variable, or confounder, is a factor/variable that wholly or partially accounts for the observed effect of the risk factor on the outcome\nA confounder must be…\n\nRelated to the outcome Y, but not a consequence of Y\nRelated to the explanatory variable X, but not a consequence of X\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 10: Multiple Logistic Regression"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#review-of-interactions-and-confounding-from-bsta-512",
+    "href": "lectures/11_Interactions/11_Interactions.html#review-of-interactions-and-confounding-from-bsta-512",
+    "title": "Lesson 11: Interactions",
+    "section": "Review of interactions and confounding from BSTA 512",
+    "text": "Review of interactions and confounding from BSTA 512"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#revisit-from-what-is-a-confounder",
+    "href": "lectures/11_Interactions/11_Interactions.html#revisit-from-what-is-a-confounder",
+    "title": "Lesson 11: Interactions",
+    "section": "Revisit from : What is a confounder?",
+    "text": "Revisit from : What is a confounder?\n\nA confounding variable, or confounder, is a factor/variable that wholly or partially accounts for the observed effect of the risk factor on the outcome\nA confounder must be…\n\nRelated to the outcome Y, but not a consequence of Y\nRelated to the explanatory variable X, but not a consequence of X"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#including-a-confounder-in-the-model",
+    "href": "lectures/11_Interactions/11_Interactions.html#including-a-confounder-in-the-model",
+    "title": "Lesson 11: Interactions",
+    "section": "Including a confounder in the model",
+    "text": "Including a confounder in the model\n\nIn the following model we have two variables, \\(X_1\\) and \\(X_2\\)\n\n\\[Y= \\beta_0 + \\beta_1X_{1}+ \\beta_2X_{2} + \\epsilon\\]\n\nAnd we assume that every level of the confounder, there is parallel slopes\nNote: to interpret \\(\\beta_1\\), we did not specify any value of \\(X_2\\); only specified that it be held constant\n\nImplicit assumption: effect of \\(X_1\\) is equal across all values of \\(X_2\\)\n\nThe above model assumes that \\(X_{1}\\) and \\(X_{2}\\) do not interact (with respect to their effect on \\(Y\\))\n\nepidemiology: no “effect modification”\nmeaning the effect of \\(X_{1}\\) is the same regardless of the values of \\(X_{2}\\)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#where-have-we-modeled-a-confounder-before",
+    "href": "lectures/11_Interactions/11_Interactions.html#where-have-we-modeled-a-confounder-before",
+    "title": "Lesson 11: Interactions",
+    "section": "Where have we modeled a confounder before?",
+    "text": "Where have we modeled a confounder before?\n\n\n\nWe have seen a plot of Life expectancy vs. female literacy rate with different levels of food supply colored (Lesson 8)\nIn our plot and the model, we treat food supply as a confounder\nIf food supply is a confounder in the relationship between life expectancy and female literacy rate, then we only use main effects in the model:\n\n\\[\\text{LE} = \\beta_0 + \\beta_1 \\text{FLR} + \\beta_2 \\text{FS} + \\epsilon\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#what-is-an-effect-modifier",
+    "href": "lectures/11_Interactions/11_Interactions.html#what-is-an-effect-modifier",
+    "title": "Lesson 11: Interactions",
+    "section": "What is an effect modifier?",
+    "text": "What is an effect modifier?\n\n\n\nAn additional variable in the model\n\nOutside of the main relationship between \\(Y\\) and \\(X_1\\) that we are studying\n\nAn effect modifier will change the effect of \\(X_1\\) on \\(Y\\) depending on its value\n\nAka: as the effect modifier’s values change, so does the association between \\(Y\\) and \\(X_1\\)\nSo the coefficient estimating the relationship between \\(Y\\) and \\(X_1\\) changes with another variable"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#how-do-we-include-an-effect-modifier-in-the-model",
+    "href": "lectures/11_Interactions/11_Interactions.html#how-do-we-include-an-effect-modifier-in-the-model",
+    "title": "Lesson 11: Interactions",
+    "section": "How do we include an effect modifier in the model?",
+    "text": "How do we include an effect modifier in the model?\n\nInteractions!!\nWe can incorporate interactions into our model through product terms: \\[Y  =  \\beta_0 + \\beta_1X_{1}+ \\beta_2X_{2} +\n\\beta_3X_{1}X_{2} + \\epsilon\\]\nTerminology:\n\nmain effect parameters: \\(\\beta_1,\\beta_2\\)\n\nThe main effect models estimate the average \\(X_{1}\\) and \\(X_{2}\\) effects\n\ninteraction parameter: \\(\\beta_3\\)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#types-of-interactions-non-interactions",
+    "href": "lectures/11_Interactions/11_Interactions.html#types-of-interactions-non-interactions",
+    "title": "Lesson 11: Interactions",
+    "section": "Types of interactions / non-interactions",
+    "text": "Types of interactions / non-interactions\nNo interaction and three potential effects of interaction between two covariates A and B:\n\nNo interaction between A and B (confounder with no interaction)\n\n \n\nUnilateralism: exposure to A has no effect in the absence of exposure to B, but a considerable effect when B is present.\n\n \n\nSynergism: the effect of A is in the same direction, but stronger in the presence of B.\n\n \n\nAntagonism: the effect of A works in the opposite direction in the presence of B."
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#deciding-between-confounder-and-effect-modifier",
+    "href": "lectures/11_Interactions/11_Interactions.html#deciding-between-confounder-and-effect-modifier",
+    "title": "Lesson 11: Interactions",
+    "section": "Deciding between confounder and effect modifier",
+    "text": "Deciding between confounder and effect modifier\n\nThis is more of a model selection question (in coming lectures)\nBut if we had a model with only TWO covariates, we could step through the following process:\n\nTest the interaction (of potential effect modifier): use a partial F-test to test if interaction term(s) explain enough variation compared to model without interaction\n\nRecall that for two continuous covariates, we will test a single coefficient\nFor a binary and continuous covariate, we will test a single coefficient\nFor two binary categorical covariates, we will test a single coefficient\nFor a multi-level categorical covariate (with any other type of covariate), we must test a group of coefficients!!\n\nThen look at the main effect (or potential confounder)\n\nIf interaction already included, then automatically included as main effect (and thus not checked for confounding)\nFor variables that are not included in any interactions:\n\nCheck to see if they are confounders by seeing whether exclusion of the variable changes any of the main effect of the primary explanatory variable by more than 10%"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#reminder-from-lesson-9-general-steps-for-f-test",
+    "href": "lectures/11_Interactions/11_Interactions.html#reminder-from-lesson-9-general-steps-for-f-test",
+    "title": "Lesson 11: Interactions",
+    "section": "Reminder from Lesson 9: General steps for F-test",
+    "text": "Reminder from Lesson 9: General steps for F-test\n\n\n\n\n\nMet underlying LINE assumptions\n\n\n\n\n\n\nState the null hypothesis\n\n\n\n\\[\\begin{align}\nH_0 &: \\beta_1=\\beta_2= \\ldots=\\beta_k=0\\\\\n\\text{vs. } H_A&: \\text{At least one } \\beta_j\\neq0, \\text{for }j=1, 2, \\ldots, k\n\\end{align}\\]\n\n\n\nSpecify the significance level.\n\n\n\nOften we use \\(\\alpha = 0.05\\)\n\n\n\nSpecify the test statistic and its distribution under the null\n\n\n\nThe test statistic is \\(F\\), and follows an F-distribution with numerator \\(df=k\\) and denominator \\(df=n-k-1\\). (\\(n\\) = # obversation, \\(k\\) = # covariates)\n\n\n\n\n\n\nCompute the value of the test statistic\n\n\n\nThe calculated test statistic is\n\\[F^ = \\dfrac{\\frac{SSE(R) - SSE(F)}{df_R - df_F}}{\\frac{SSE(F)}{df_F}} = \\frac{MSR_{full}}{MSE_{full}}\\]\n\n\n\nCalculate the p-value\n\n\n\nWe are generally calculating: \\(P(F_{k, n-k-1} &gt; F)\\)\n\n\n\nWrite conclusion for hypothesis test\n\n\n\nWe (reject/fail to reject) the null hypothesis at the \\(100\\alpha\\%\\) significance level."
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#step-1-testing-the-interaction",
+    "href": "lectures/11_Interactions/11_Interactions.html#step-1-testing-the-interaction",
+    "title": "Lesson 11: Interactions",
+    "section": "Step 1: Testing the interaction",
+    "text": "Step 1: Testing the interaction\n\nWe test with \\(\\alpha = 0.10\\)\nFollow the LRT procedure in Lesson 6, slide 38\nUse the hypothesis tests for the specific covariate combo:\n\n\n\n\n\nBinary & continuous variable\n\n\nTesting a single coefficient for the interaction term using LRT comparing full model (with interaction) to reduced model (without interaction)\n\n\n\n\n\nBinary & continuous variables\n\n\nTesting a group of coefficients for the interaction term using LRT comparing full model (with interaction) to reduced model (without interaction)\n\n\n\n\n\n\n\n\nBinary & multi-level variable\n\n\nTesting a group of coefficients for the interaction term using LRT comparing full model (with interaction) to reduced model (without interaction)\n\n\n\n\n\nTwo continuous variables\n\n\nTesting a single coefficient for the interaction term using LRT comparing full model (with interaction) to reduced model (without interaction)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-questions-2-4",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-questions-2-4",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Questions 2-4",
+    "text": "Poll Everywhere Questions 2-4"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#step-2-testing-a-confounder",
+    "href": "lectures/11_Interactions/11_Interactions.html#step-2-testing-a-confounder",
+    "title": "Lesson 11: Interactions",
+    "section": "Step 2: Testing a confounder",
+    "text": "Step 2: Testing a confounder\n\nIf interaction already included:\n\nMeaning: LRT showed evidence for alternative/full model\nThen the variable is an effect modifier and we don’t need to consider it as a confounder\nThen automatically included as main effect (and thus not checked for confounding)\n\nFor variables that are not included in any interactions:\n\nCheck to see if they are confounders\nOne way to do this is by seeing whether exclusion of the variable changes any of the main effect of the primary explanatory variable by more than 10%\n\nIf the main effect of the primary explanatory variable changes by less than 10%, then the additional variable is neither an effect modifier nor a confounder\n\nWe leave the variable out of the model"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#testing-for-percent-change-delta-in-a-coefficient",
+    "href": "lectures/11_Interactions/11_Interactions.html#testing-for-percent-change-delta-in-a-coefficient",
+    "title": "Lesson 11: Interactions",
+    "section": "Testing for percent change ( \\(\\Delta\\%\\)) in a coefficient",
+    "text": "Testing for percent change ( \\(\\Delta\\%\\)) in a coefficient\n\nLet’s say we have \\(X_1\\) and \\(X_2\\), and we specifically want to see if \\(X_2\\) is a confounder for \\(X_1\\) (the explanatory variable or variable of interest)\nIf we are only considering \\(X_1\\) and \\(X_2\\), then we need to run the following two models:\n\nFitted model 1 / reduced model (mod1):  \\(\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) = \\widehat\\beta_0 + \\widehat\\beta_1X_1\\)\n\nWe call the above \\(\\widehat\\beta_1\\) the reduced model coefficient: \\(\\widehat\\beta_{1, \\text{mod1}}\\) or \\(\\widehat\\beta_{1, \\text{red}}\\)\n\nFitted model 2 / full model (mod2):  \\(\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) = \\widehat\\beta_0 + \\widehat\\beta_1X_1 +\\widehat\\beta_2X_2\\)\n\nWe call this \\(\\widehat\\beta_1\\) the full model coefficient: \\(\\widehat\\beta_{1, \\text{mod2}}\\) or \\(\\widehat\\beta_{1, \\text{full}}\\)\n\n\n\n\n\n\n\n\n\nCalculation for % change in coefficient\n\n\n\\[\n\\Delta\\% = 100\\% \\cdot\\frac{\\widehat\\beta_{1, \\text{mod1}} - \\widehat\\beta_{1, \\text{mod2}}}{\\widehat\\beta_{1, \\text{mod2}}} = 100\\% \\cdot \\frac{\\widehat\\beta_{1, \\text{red}} - \\widehat\\beta_{1, \\text{full}}}{\\widehat\\beta_{1, \\text{full}}}\n\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#confounding-vs.-interaction",
+    "href": "lectures/11_Interactions/11_Interactions.html#confounding-vs.-interaction",
+    "title": "Lesson 11: Interactions",
+    "section": "Confounding vs. Interaction",
+    "text": "Confounding vs. Interaction\n\n\n\nConfounders: The adjusted odds ratio for one variable adjusting for confounders can be quite different from unadjusted odds ratio\n\nAdjusting for them is called controlling for confounding.\n\n\n \n\nInteractions: When odds ratio for one variable is not constant over the levels of another variable, the two variables are said to have a statistical interaction (sometimes also called effect modification)\n\ni.e.: the log odds of one variable is modified/changed with different values of the other variable\nA variable is an effect modifier if it interacts with a risk factor\n\n\n\n\n\n\n\nNote\n\n\nPlease refer to Lesson 11 from BSTA 512/612 – lots of information about these concepts!"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-of-interaction",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-of-interaction",
+    "title": "Lesson 11: Interactions",
+    "section": "Example of interaction",
+    "text": "Example of interaction\n\n\n\nIn a cohort study of elderly people the chance of death (outcome) within 2 years was much higher for those who had previously suffered a hip fracture at the start of these 2 years, but the excess risk associated with a hip fracture was significantly higher for males vs. females\n\n \n\nThis is an interaction between hip fracture status (yes/no) and sex (unclear if assigned at birth or no)\n\n \n\nOdds ratio for females &gt; odds ratio for males"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#types-of-interactions-non-interactions-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#types-of-interactions-non-interactions-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Types of interactions / non-interactions",
+    "text": "Types of interactions / non-interactions"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#understand-the-interaction-13",
+    "href": "lectures/11_Interactions/11_Interactions.html#understand-the-interaction-13",
+    "title": "Lesson 11: Interactions",
+    "section": "Understand the interaction (1/3)",
+    "text": "Understand the interaction (1/3)\n\n\n\nFigure plots the logits (log-odds) under three different models showing the presence and absence of interaction.\n\n \n\nResponse variable: CHD\n\n \n\nRisk factor: sex\n\n \n\nCovariate to be controlled: age"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#understand-the-interaction-23",
+    "href": "lectures/11_Interactions/11_Interactions.html#understand-the-interaction-23",
+    "title": "Lesson 11: Interactions",
+    "section": "Understand the interaction (2/3)",
+    "text": "Understand the interaction (2/3)\n\n\n\nIf age does not interact with sex, the distance between \\(l_2\\) and \\(l_1\\) is the log odds ratio for sex, controlling for age (\\(l_2 - l_1\\)) stays the same for all values of age.\n\n \n\nIf age interacts with sex, the distance between \\(l_3\\) and \\(l_1\\) is the log odds ratio for sex, controlling for age.\n\nAge values need to be specified because (\\(l_3 - l_1\\)) differs for different values of age.\nMust specify age when reporting odds ratio comparing sex"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#understand-the-interaction-33",
+    "href": "lectures/11_Interactions/11_Interactions.html#understand-the-interaction-33",
+    "title": "Lesson 11: Interactions",
+    "section": "Understand the interaction (3/3)",
+    "text": "Understand the interaction (3/3)\n\n\n\nIn the real world, it is rare to see two completely parallel logit plots as we see \\(l_2\\) and \\(l_1\\)\n\nBut we need to determine if the difference between \\(l_2\\) and \\(l_3\\) is important in the model\n\n\n \n\nWe may not want to include the interaction term unless it is statistically significant and/or clinically meaningful\n\n \n\nLikelihood ratio test (or Wald test) may be used to test the significance of coefficients for variables of the interaction term"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#summary",
+    "href": "lectures/11_Interactions/11_Interactions.html#summary",
+    "title": "Lesson 11: Interactions",
+    "section": "Summary",
+    "text": "Summary\n\nIn a logistic model with two covariates : \\(X_1\\) (the risk factor, a binary variable) and \\(X_2\\) (potential confounder/effect modifier)\nThe role of \\(X_2\\) can be one of the three possibilities:\n\nNot a confounder nor effect modifier, and not significantly associated with Y\n\nNo need to include \\(X_2\\) in the model (for your dataset)\nMay still be nice to include if other literature in the field includes it\n\n\n \n\nIt is a confounder but not an effect modifier. There is statistical adjustment but no statistical interaction\n\nShould include \\(X_2\\) in the model as main effect\n\n\n \n\nIt is an effect modifier. There is statistical interaction.\n\nShould include \\(X_2\\) in the model as main effect and interaction term"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\n\nFrom GLOW (Global Longitudinal Study of Osteoporosis in Women) study\n\n \n\nOutcome variable: any fracture in the first year of follow up (FRACTURE: 0 or 1)\n\n \n\nRisk factor/variable of interest: history of prior fracture (PRIORFRAC: 0 or 1)\n\n \n\nPotential confounder or effect modifier: age (AGE, a continuous variable)\n\nCenter age will be used! We will center around the rounded mean age of 69 years old\n\n\n\nlibrary(aplore3)\nmean_age = mean(glow500$age) %&gt;% round()\nglow = glow500 %&gt;% mutate(age_c = age - mean_age)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\nWe also could jump right into model fitting (connecting to the three possible roles of Age):\n\nModel 1:  Age not included\n\n\\[\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = \\beta_0 + \\beta_1\\cdot I(\\text{PF})\\]\n \n\nModel 2:  Age as main effect (age as potential confounder)\n\n\\[\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = \\beta_0 + \\beta_1\\cdot I(\\text{PF}) +\\beta_2\\cdot Age\\]\n \n\nModel 3:  Age and Prior Fracture interaction (age as potential effect modifier)\n\n\\[\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = \\beta_0 + \\beta_1\\cdot I(\\text{PF}) +\\beta_2\\cdot Age + \\beta_3 \\cdot I(\\text{PF}) \\cdot Age\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-2",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-2",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\nWe also could jump right into model fitting (connecting to the three possible roles of Age):\n\nModel 1:  Age not included\n\n\nglow_m1 = glm(fracture ~ priorfrac, \n              data = glow, family = binomial)\n\n \n\nModel 2:  Age as main effect (age as potential confounder)\n\n\nglow_m2 = glm(fracture ~ priorfrac + age_c, \n              data = glow, family = binomial)\n\n \n\nModel 3:  Age and Prior Fracture interaction (age as potential effect modifier)\n\n\nglow_m3 = glm(fracture ~ priorfrac + age_c + priorfrac*age_c, \n              data = glow, family = binomial)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-3",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-3",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\n\nAge is an effect modifier of prior fracture\n\n \n\nWhen a covariate is an effect modifier, its status as a confounder is of secondary importance since the estimate of the effect of the risk factor depends on the specific value of the covariate\n\n \n\nMust summarize the effect of prior fracture on current fracture by age\n\nCannot summarize as a single (log) odds ratio"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-4",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-4",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\n\nIdentify two sets of values that you want to compare with only one variable changed\n\nSet 1: \\(PF = 1, Age = a\\)\nSet 2: \\(PF = 0, Age = a\\)\n\n\n \n\nSubstitute values in the fitted log-odds model\n\n\\[\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) = \\widehat\\beta_0 + \\widehat\\beta_1\\cdot I(\\text{PF}) + \\widehat\\beta_2\\cdot Age + \\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age\\] \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(PF = 1, Age = a)\\right) =& \\widehat\\beta_0 + \\widehat\\beta_1\\cdot 1 + \\widehat\\beta_2\\cdot a + \\widehat\\beta_3 \\cdot 1\\cdot Age \\\\\n=& \\widehat\\beta_0 + \\widehat\\beta_1 + \\widehat\\beta_2\\cdot a + \\widehat\\beta_3\\cdot a\n\\end{aligned}\\]\n\\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(PF = 0, Age = a)\\right) =& \\widehat\\beta_0 + \\widehat\\beta_1\\cdot 0 + \\widehat\\beta_2\\cdot a + \\widehat\\beta_3 \\cdot 0\\cdot Age \\\\\n=& \\widehat\\beta_0 + \\widehat\\beta_2\\cdot a\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-5",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-5",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\n\nTake the difference of the two log-odds\n\n\\[\\begin{aligned}\n\\left[logit\\left(\\pi\\left(PF=1,\\ Age=a\\right)\\right)\\right]- & \\left[logit\\left(\\pi\\left(PF=0,\\ Age=a\\right)\\right)\\right]\n\\\\ & =\\left[{\\hat{\\beta}}_0+{\\hat{\\beta}}_1+{\\hat{\\beta}}_2a+{\\hat{\\beta}}_3a\\right]-\\left[{\\hat{\\beta}}_0+{\\hat{\\beta}}_2a\\right]\\\\ &={\\hat{\\beta}}_1+{\\hat{\\beta}}_3a\n\\end{aligned}\\]\n\nExponentiate the resulting difference\n\n\\[\\widehat{OR}\\left[\\left(PF=1,\\ Age=a\\right),\\left(PF=0,\\ Age=a\\right)\\right]=exp\\ \\left({\\hat{\\beta}}_1+{\\hat{\\beta}}_3a\\right)\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-6",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-6",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\n\n\nLesson 11: Interactions"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-7",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-7",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study",
+    "text": "Example: GLOW Study\n\n\nLesson 11: Interactions"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#plot-the-proportions",
+    "href": "lectures/11_Interactions/11_Interactions.html#plot-the-proportions",
+    "title": "Lesson 11: Interactions",
+    "section": "Plot the proportions",
+    "text": "Plot the proportions\n\nggplot(data = glow2, aes(y = freq, x = age, color = priorfrac)) +\n  geom_point() + ylim(0, 1) + geom_smooth(se = F) +\n  labs(x = \"Age (years)\", y = \"Proportion of fracture\", \n       color = \"Prior fracture\", title = \"Sample proportion of fracture by age and prior fracture\") +\n  theme(axis.title = element_text(size = 18), axis.text = element_text(size = 18), \n        title = element_text(size = 18), legend.text=element_text(size=18))"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-calculate-the-proportions",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-calculate-the-proportions",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study: Calculate the proportions",
+    "text": "Example: GLOW Study: Calculate the proportions\n\nglow2 = glow %&gt;% \n  group_by(age, priorfrac, fracture) %&gt;% # last one needs to be outcome\n  summarise(n = n()) %&gt;%\n  mutate(freq = n / sum(n)) %&gt;% # takes the proportion of yes/no\n  filter(fracture == \"Yes\") # Filtering so only \"success\" shown\n  #filter(freq != 1 | n != 1) \n\nhead(glow2)\n\n# A tibble: 6 × 5\n# Groups:   age, priorfrac [6]\n    age priorfrac fracture     n  freq\n  &lt;int&gt; &lt;fct&gt;     &lt;fct&gt;    &lt;int&gt; &lt;dbl&gt;\n1    56 No        Yes          3 0.15 \n2    56 Yes       Yes          1 1    \n3    57 No        Yes          3 0.158\n4    57 Yes       Yes          1 0.333\n5    58 No        Yes          3 0.15 \n6    59 Yes       Yes          2 0.667"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-plot-the-proportions",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-plot-the-proportions",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study: Plot the proportions",
+    "text": "Example: GLOW Study: Plot the proportions\n\nggplot(data = glow2, aes(y = freq, x = age, color = priorfrac)) +\n  geom_point() + ylim(0, 1) + geom_smooth(se = F) +\n  labs(x = \"Age (years)\", y = \"Proportion of fracture\", \n       color = \"Prior fracture\", title = \"Sample proportion of fracture by age and prior fracture\") +\n  theme(axis.title = element_text(size = 18), axis.text = element_text(size = 18), \n        title = element_text(size = 18), legend.text=element_text(size=18))\n\n\n\nFrom sample proportions, looks like age and prior fracture may have an interaction!"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-try-to-visual-the-sample-proportions",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-try-to-visual-the-sample-proportions",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study: Try to visual the sample proportions",
+    "text": "Example: GLOW Study: Try to visual the sample proportions\n\nBack in BSTA 512/612, we could visual the data to get a sense if there was an interaction before fitting a model\n\n \n\nWith a binary outcome, this is a little harder\n\nWe could use a contingency table or plot proportions of the outcome\nHard to do this when our potential confounder or effect modifier is continuous"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-age-an-effect-modifier-or-confounder",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-age-an-effect-modifier-or-confounder",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study: Age an effect modifier or confounder?",
+    "text": "Example: GLOW Study: Age an effect modifier or confounder?\n\n\n\nModel 1:  Age not included\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.417\n0.130\n−10.859\n0.000\n−1.679\n−1.167\n    priorfracYes\n1.064\n0.223\n4.769\n0.000\n0.626\n1.502\n  \n  \n  \n\n\n\n\n\nModel 2:  Age as main effect (age as potential confounder)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.372\n0.132\n−10.407\n0.000\n−1.637\n−1.120\n    priorfracYes\n0.839\n0.234\n3.582\n0.000\n0.378\n1.297\n    age_c\n0.041\n0.012\n3.382\n0.001\n0.017\n0.065\n  \n  \n  \n\n\n\n\n\nModel 3:  Age and Prior Fracture interaction (age as potential effect modifier)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.134\n−10.270\n0.000\n−1.646\n−1.120\n    priorfracYes\n1.002\n0.240\n4.184\n0.000\n0.530\n1.471\n    age_c\n0.063\n0.015\n4.043\n0.000\n0.032\n0.093\n    priorfracYes:age_c\n−0.057\n0.025\n−2.294\n0.022\n−0.107\n−0.008"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-age-an-effect-modifier-or-confounder-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-age-an-effect-modifier-or-confounder-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study: Age an effect modifier or confounder?",
+    "text": "Example: GLOW Study: Age an effect modifier or confounder?\n\n\n\nModel 1:  Age not included\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.417\n0.130\n−10.859\n0.000\n−1.679\n−1.167\n    priorfracYes\n1.064\n0.223\n4.769\n0.000\n0.626\n1.502\n  \n  \n  \n\n\n\n\n\nModel 2:  Age as main effect (age as potential confounder)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.372\n0.132\n−10.407\n0.000\n−1.637\n−1.120\n    priorfracYes\n0.839\n0.234\n3.582\n0.000\n0.378\n1.297\n    age_c\n0.041\n0.012\n3.382\n0.001\n0.017\n0.065\n  \n  \n  \n\n\n\n\n\nModel 3:  Age and Prior Fracture interaction (age as potential effect modifier)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.134\n−10.270\n0.000\n−1.646\n−1.120\n    priorfracYes\n1.002\n0.240\n4.184\n0.000\n0.530\n1.471\n    age_c\n0.063\n0.015\n4.043\n0.000\n0.032\n0.093\n    priorfracYes:age_c\n−0.057\n0.025\n−2.294\n0.022\n−0.107\n−0.008\n  \n  \n  \n\n\n\n\n\n\nIs age an effect modifier?\n\nTest the significance of the interaction term in Model 3\nWe can use the Wald test or LRT\n\n\n \n\nIf not an effect modifier, check the change in coefficient for prior fracture between Model 1 and Model 2"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-age-an-effect-modifier-or-confounder-2",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-age-an-effect-modifier-or-confounder-2",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW Study: Age an effect modifier or confounder?",
+    "text": "Example: GLOW Study: Age an effect modifier or confounder?\n\n\n\nModel 1:  Age not included\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.417\n0.130\n−10.859\n0.000\n−1.679\n−1.167\n    priorfracYes\n1.064\n0.223\n4.769\n0.000\n0.626\n1.502\n  \n  \n  \n\n\n\n\n\nModel 2:  Age as main effect (age as potential confounder)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.372\n0.132\n−10.407\n0.000\n−1.637\n−1.120\n    priorfracYes\n0.839\n0.234\n3.582\n0.000\n0.378\n1.297\n    age_c\n0.041\n0.012\n3.382\n0.001\n0.017\n0.065\n  \n  \n  \n\n\n\n\n\nModel 3:  Age and Prior Fracture interaction (age as potential effect modifier)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.134\n−10.270\n0.000\n−1.646\n−1.120\n    priorfracYes\n1.002\n0.240\n4.184\n0.000\n0.530\n1.471\n    age_c\n0.063\n0.015\n4.043\n0.000\n0.032\n0.093\n    priorfracYes:age_c\n−0.057\n0.025\n−2.294\n0.022\n−0.107\n−0.008\n  \n  \n  \n\n\n\n\n\n\nIs age an effect modifier?\n\nTest the significance of the interaction term in Model 3\nWe can use the Wald test or LRT\n\n\n \n\nIf not an effect modifier, check the change in coefficient for prior fracture between Model 1 and Model 2\n\n \n\nShort version of testing the interaction: Wald statistic for the interaction coefficient, \\(\\widehat{\\beta}_3\\), is statistically significant with \\(p= 0.022\\). Thus, there is evidence of a statistical interaction between these age and prior fracture."
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#please-please-please-reference-your-work-from-bsta-512612",
+    "href": "lectures/11_Interactions/11_Interactions.html#please-please-please-reference-your-work-from-bsta-512612",
+    "title": "Lesson 11: Interactions",
+    "section": "Please please please reference your work from BSTA 512/612",
+    "text": "Please please please reference your work from BSTA 512/612\n\nWe had lessons and homeworks dedicated to this process!\nThe process will be the same!\n\nOnly differences are t-test and F-test are replaced by Wald test and Likelihood ratio test, respectively!!"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#section",
+    "href": "lectures/11_Interactions/11_Interactions.html#section",
+    "title": "Lesson 11: Interactions",
+    "section": "",
+    "text": "prior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), \n                        age = 55:90)\nnewdata = with(glow, data.frame(prior_age))\nfrac_pred = predict(glow_m3, newdata, se.fit = T, type=\"response\")\npred_glow = newdata %&gt;% mutate(frac_pred = frac_pred$fit)\nggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred, color = priorfrac)) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  scale_color_discrete(name = \"Prior Fracture\") +\n  xlab(\"Age (years)\") + ylab(\"Predicted Probability of Fracture\") +\n  ylim(0,1)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-interaction-interpretation",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-interaction-interpretation",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW – Interaction interpretation",
+    "text": "Example: GLOW – Interaction interpretation\n\nModel 3:  \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = \\widehat\\beta_0 &+ &\\widehat\\beta_1\\cdot I(\\text{PF}) & + &\\widehat\\beta_2\\cdot Age& + &\\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age \\\\  \n\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = -1.376 &+ &1.002\\cdot I(\\text{PF})& + &0.063\\cdot Age& -&0.057 \\cdot I(\\text{PF}) \\cdot Age\n\\end{aligned}\\]\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.134\n−10.270\n0.000\n−1.646\n−1.120\n    priorfracYes\n1.002\n0.240\n4.184\n0.000\n0.530\n1.471\n    age_c\n0.063\n0.015\n4.043\n0.000\n0.032\n0.093\n    priorfracYes:age_c\n−0.057\n0.025\n−2.294\n0.022\n−0.107\n−0.008"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-interaction-interpretation-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#example-glow-interaction-interpretation-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Example: GLOW – Interaction interpretation",
+    "text": "Example: GLOW – Interaction interpretation\n\n\n\nModel 3: \n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.000\n−1.646\n−1.120\n    priorfracYes\n1.002\n0.000\n0.530\n1.471\n    age_c\n0.063\n0.000\n0.032\n0.093\n    priorfracYes:age_c\n−0.057\n0.022\n−0.107\n−0.008\n  \n  \n  \n\n\n\n\n\nEstimated odds ratios table:\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.25\n0.00\n0.19\n0.33\n    priorfracYes\n2.72\n0.00\n1.70\n4.35\n    age_c\n1.06\n0.00\n1.03\n1.10\n    priorfracYes:age_c\n0.94\n0.02\n0.90\n0.99\n  \n  \n  \n\n\n\n\n\n\n\\(\\widehat\\beta_3 = -0.057\\)\nThe effect of having a prior fracture on the log odds of having a new fracture decreases by an estimated 0.057 for every one year increase in age (95% CI: 0.008, 0.107).\n\nAka the log odds of a new fracture comparing prior fracture to no prior fracture gets closer to one another as age increases\n\n\\(\\widehat\\beta_1 = 1.002\\)\nFor individuals 69 years old, the estimated difference in log odds for a new fracture is 1.002 comparing individuals with a prior fracture to individuals with no prior fracture (95% CI: 0.530, 1.471).\n\\(\\exp(\\widehat\\beta_1) = 2.72\\)\n\nFor individuals 69 years old, the estimated odds of a new fracture for individuals with prior fracture is 2.72 times the estimated odds of a new fracture for individuals with no prior fracture (95% CI: 1.70, 4.35)."
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-5",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-5",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#plot-the-predicted-probability-of-fracture",
+    "href": "lectures/11_Interactions/11_Interactions.html#plot-the-predicted-probability-of-fracture",
+    "title": "Lesson 11: Interactions",
+    "section": "Plot the predicted probability of fracture",
+    "text": "Plot the predicted probability of fracture\n\nfrac_pred = predict(glow_m3, prior_age, se.fit = T, type=\"response\")\npred_glow = prior_age %&gt;% mutate(frac_pred = frac_pred$fit, \n                                  age = age_c + mean_age)\n\nggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred, color = priorfrac)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) + ylim(0,1) +\n  labs(color = \"Prior Fracture\", x = \"Age (years)\", y = \"Predicted Probability of Fracture\")"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#plot-of-estimated-log-odds",
+    "href": "lectures/11_Interactions/11_Interactions.html#plot-of-estimated-log-odds",
+    "title": "Lesson 11: Interactions",
+    "section": "Plot of estimated log odds",
+    "text": "Plot of estimated log odds\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), age_c = (55:90)-69)\nfrac_pred_log = predict(glow_m3, prior_age, se.fit = T, type=\"link\")\npred_glow2 = prior_age %&gt;% mutate(frac_pred_log = frac_pred_log$fit, \n                                  age = age_c + mean_age)\n\nggplot(pred_glow2) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred_log, color = priorfrac)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(color = \"Prior Fracture\", x = \"Age (years)\", y = \"Log-Odds of Fracture\")"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#whats-the-best-way-to-report-on-the-interaction",
+    "href": "lectures/11_Interactions/11_Interactions.html#whats-the-best-way-to-report-on-the-interaction",
+    "title": "Lesson 11: Interactions",
+    "section": "What’s the best way to report on the interaction?",
+    "text": "What’s the best way to report on the interaction?"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-i",
+    "href": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-i",
+    "title": "Lesson 11: Interactions",
+    "section": "Odds Ratio in the Presence of Interaction (I)",
+    "text": "Odds Ratio in the Presence of Interaction (I)\n\nWhen interaction exists between a risk factor (F) and another variable (X), the estimate of the odds ratio for F depends on the value of X\n\n \n\nWhen an interaction term (F*X) exists in the model\n\n\\({\\widehat{OR}}_F \\neq \\exp(\\widehat\\beta_F)\\) in general\n\n\n \n\nAssume we want to compute the odds ratio for (\\(F = f_1\\) and \\(F = f_0\\), the correct model-based estimate is \\[\\begin{aligned}\n{\\widehat{OR}}_F = &\\exp{\\left(\\hat{g}\\left(F=f_1,X=x\\right)-\\hat{g}\\left(F=f_0,X=x\\right)\\right)}\n\\end{aligned}\\]\n\nLet’s work this out on the next slide!"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question",
+    "text": "Poll Everywhere Question"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-1-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-1-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-2",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-2",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-3",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-3",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-4",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-4",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-6-bonus-q-if-were-feeling-it",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-6-bonus-q-if-were-feeling-it",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 6 (Bonus q if we’re feeling it)",
+    "text": "Poll Everywhere Question 6 (Bonus q if we’re feeling it)"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-ii",
+    "href": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-ii",
+    "title": "Lesson 11: Interactions",
+    "section": "Odds Ratio in the Presence of Interaction (II)",
+    "text": "Odds Ratio in the Presence of Interaction (II)\n\nWe may write the two logits (log-odds) for given x as below:\n\n\\[ \\begin{aligned}\n\\hat{g}\\left(F = f_1,X = x\\right)&={\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_1+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_1\\cdot\\ x \\\\\n\\hat{g}\\left(F = f_0,X=x\\right)&={\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_0+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_0\\cdot\\ x\n\\end{aligned}\\]\n\nThe difference in two logits (log-odds) is:\n\n\\[ \\begin{aligned}\n\\hat{g}\\left(f_1,x\\right)-\\hat{g}\\left(f_0,x\\right) & = \\left[{\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_1+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_1\\cdot\\ x \\right] - \\left[{\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_0+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_0\\cdot\\ x \\right] \\\\\n\\hat{g}\\left(f_1,x\\right)-\\hat{g}\\left(f_0,x\\right) & = \\hat{\\beta}_1 f_1- \\hat{\\beta}_1f_0 + \\hat{\\beta}_3 x f_1 - \\hat\\beta_3 x f_0\\\\\n\\hat{g}\\left(f_1,x\\right)-\\hat{g}\\left(f_0,x\\right) & = {\\hat{\\beta}}_1\\left(f_1-f_0\\right)+{\\hat{\\beta}}_3x\\left(f_1-f_0\\right)\n\\end{aligned}\\]\n\nTherefore,\n\n\\[\\widehat{OR}(F=f-1, F=f_0, X=x) = \\widehat{OR}_F = \\exp\\left[ {\\hat{\\beta}}_1\\left(f_1-f_0\\right)+{\\hat{\\beta}}_3x\\left(f_1-f_0\\right) \\right]\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-ii-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-ii-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Odds Ratio in the Presence of Interaction (II)",
+    "text": "Odds Ratio in the Presence of Interaction (II)\n\n\nLesson 11: Interactions"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#steps-to-compute-or-under-interation",
+    "href": "lectures/11_Interactions/11_Interactions.html#steps-to-compute-or-under-interation",
+    "title": "Lesson 11: Interactions",
+    "section": "Steps to compute OR under interation",
+    "text": "Steps to compute OR under interation\n\nNote: You don’t need to know the math itself, but I think it’s helpful to think of it this way\n\n\nIdentify two sets of values that you want to compare with only one variable changed\n\nIn previous slides, one set was \\((F=f_1, X=x)\\) and the other was \\((F=f_0, X=x)\\)\n\nSubstitute values in the fitted log-odds model\n\nYou should have two equations, one for each set of values\n\nTake the difference of the two log-odds\nExponentiate the resulting difference"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#we-can-put-in-values-for-age-to-see-how-the-or-changes",
+    "href": "lectures/11_Interactions/11_Interactions.html#we-can-put-in-values-for-age-to-see-how-the-or-changes",
+    "title": "Lesson 11: Interactions",
+    "section": "We can put in values for age to see how the OR changes",
+    "text": "We can put in values for age to see how the OR changes\n\nIf we let \\(a = 60\\), i.e., compute OR for age = 60, then \\[{\\widehat{OR}}_{a=60}=\\exp(1.002-0.057\\cdot(60-69))\\ =4.55\\]\nIf we let \\(a = 70\\), i.e., compute OR for age = 70, then \\[{\\widehat{OR}}_{a=70}=\\exp(1.002-0.057\\cdot(70-69))\\ =2.57\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#table-of-the-odds-ratio-for-an-interaction",
+    "href": "lectures/11_Interactions/11_Interactions.html#table-of-the-odds-ratio-for-an-interaction",
+    "title": "Lesson 11: Interactions",
+    "section": "Table of the odds ratio for an interaction",
+    "text": "Table of the odds ratio for an interaction"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#plotting-the-odds-ratio-for-an-interaction",
+    "href": "lectures/11_Interactions/11_Interactions.html#plotting-the-odds-ratio-for-an-interaction",
+    "title": "Lesson 11: Interactions",
+    "section": "Plotting the odds ratio for an interaction",
+    "text": "Plotting the odds ratio for an interaction\n\nggplot(pred_glow2) +\n  geom_hline(yintercept = 1) +\n  geom_smooth(method = \"loess\", aes(x = age, y = OR_YN)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(x = \"Age (years)\", y = \"Estimated odds ratio\", title = \"Odds ratio of fracture outcome comparing \\n prior fracture to no prior fracture\")"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#how-would-i-report-these-results",
+    "href": "lectures/11_Interactions/11_Interactions.html#how-would-i-report-these-results",
+    "title": "Lesson 11: Interactions",
+    "section": "How would I report these results?",
+    "text": "How would I report these results?\n\nRemember our main covariate is prior fracture, so we want to focuse on how age changes the relationship between prior fracture and a new fracture!\n\n\n\nFor individuals 69 years old, the estimated odds of a new fracture for individuals with prior fracture is 2.72 times the estimated odds of a new fracture for individuals with no prior fracture (95% CI: 1.70, 4.35). As seen in Figure 1 (a), the odds ratio of a new fracture when comparing prior fracture status decreases with age, indicating that the effect of prior fractures on new fractures decreases as individuals get older. In Figure 1 (b), it is evident that for both prior fracture statuses, the predict probability of a new fracture increases as age increases. However, the predicted probability of new fracture for those without a prior fracture increases at a higher rate than that of individuals with a prior fracture. Thus, the predicted probabilities of a new fracture converge at age [insert age here].\n\n\n\n\n\n\n\n\n(a) Odds ratio of fracture outcome comparing prior fracture to no prior fracture\n\n\n\n\n\n\n\n(b) Predicted probability of fracture\n\n\n\n\nFigure 1: Plots of odds ratio and predicted probability from fitted interaction model\n\n\n\n\n\n\nLesson 11: Interactions"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#plotting-the-odds-ratio-for-an-interaction-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#plotting-the-odds-ratio-for-an-interaction-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Plotting the odds ratio for an interaction",
+    "text": "Plotting the odds ratio for an interaction\n\nggplot(pred_glow2) +\n  geom_hline(yintercept = 1) +\n  geom_smooth(method = \"loess\", aes(x = age, y = OR_YN)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(x = \"Age (years)\", y = \"Odds Ratio\", title = \"Odds ratio of fracture outcome comparing \\n prior fracture to no prior fracture\")"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#calculate-odds-ratios-across-values",
+    "href": "lectures/11_Interactions/11_Interactions.html#calculate-odds-ratios-across-values",
+    "title": "Lesson 11: Interactions",
+    "section": "Calculate odds ratios across values",
+    "text": "Calculate odds ratios across values\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), age_c = (55:90)-69)\nfrac_pred_logit = predict(glow_m3, prior_age, se.fit = T, type=\"link\")\npred_glow2 = prior_age %&gt;% mutate(frac_pred = frac_pred_logit$fit, \n                                  age = age_c + mean_age) %&gt;%\n\n                pivot_wider(names_from = priorfrac, values_from = frac_pred) %&gt;%\n\n                mutate(OR_YN = exp(Yes - No))\nhead(pred_glow2)\n\n# A tibble: 6 × 5\n  age_c   age    No    Yes OR_YN\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1   -14    55 -2.25 -0.446  6.08\n2   -13    56 -2.19 -0.441  5.74\n3   -12    57 -2.13 -0.436  5.42\n4   -11    58 -2.06 -0.430  5.12\n5   -10    59 -2.00 -0.425  4.83\n6    -9    60 -1.94 -0.420  4.56"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#revisit-from-512-what-is-a-confounder",
+    "href": "lectures/11_Interactions/11_Interactions.html#revisit-from-512-what-is-a-confounder",
+    "title": "Lesson 11: Interactions",
+    "section": "Revisit from 512: What is a confounder?",
+    "text": "Revisit from 512: What is a confounder?\n\nA confounding variable, or confounder, is a factor/variable that wholly or partially accounts for the observed effect of the risk factor on the outcome\nA confounder must be…\n\nRelated to the outcome Y, but not a consequence of Y\nRelated to the explanatory variable X, but not a consequence of X"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-questions-2",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-questions-2",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Questions 2",
+    "text": "Poll Everywhere Questions 2"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-2-1",
+    "href": "lectures/11_Interactions/11_Interactions.html#poll-everywhere-question-2-1",
+    "title": "Lesson 11: Interactions",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-12",
+    "href": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-12",
+    "title": "Lesson 11: Interactions",
+    "section": "Odds Ratio in the Presence of Interaction (1/2)",
+    "text": "Odds Ratio in the Presence of Interaction (1/2)\n\nWhen interaction exists between a risk factor (F) and another variable (X), the estimate of the odds ratio for F depends on the value of X\n\n \n\nWhen an interaction term (F*X) exists in the model\n\n\\({\\widehat{OR}}_F \\neq \\exp(\\widehat\\beta_F)\\) in general\n\n\n \n\nAssume we want to compute the odds ratio for (\\(F = f_1\\) and \\(F = f_0\\), the correct model-based estimate is \\[\\begin{aligned}\n{\\widehat{OR}}_F = &\\exp{\\left(\\hat{g}\\left(F=f_1,X=x\\right)-\\hat{g}\\left(F=f_0,X=x\\right)\\right)}\n\\end{aligned}\\]\n\nLet’s work this out on the next slide!"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-22",
+    "href": "lectures/11_Interactions/11_Interactions.html#odds-ratio-in-the-presence-of-interaction-22",
+    "title": "Lesson 11: Interactions",
+    "section": "Odds Ratio in the Presence of Interaction (2/2)",
+    "text": "Odds Ratio in the Presence of Interaction (2/2)\n\nWe may write the two logits (log-odds) for given x as below:\n\n\\[ \\begin{aligned}\n\\hat{g}\\left(F = f_1,X = x\\right)&={\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_1+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_1\\cdot\\ x \\\\\n\\hat{g}\\left(F = f_0,X=x\\right)&={\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_0+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_0\\cdot\\ x\n\\end{aligned}\\]\n\nThe difference in two logits (log-odds) is:\n\n\\[ \\begin{aligned}\n\\hat{g}\\left(f_1,x\\right)-\\hat{g}\\left(f_0,x\\right) & = \\left[{\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_1+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_1\\cdot\\ x \\right] - \\left[{\\hat{\\beta}}_0+{\\hat{\\beta}}_1f_0+{\\hat{\\beta}}_2x+{\\hat{\\beta}}_3f_0\\cdot\\ x \\right] \\\\\n\\hat{g}\\left(f_1,x\\right)-\\hat{g}\\left(f_0,x\\right) & = \\hat{\\beta}_1 f_1- \\hat{\\beta}_1f_0 + \\hat{\\beta}_3 x f_1 - \\hat\\beta_3 x f_0\\\\\n\\hat{g}\\left(f_1,x\\right)-\\hat{g}\\left(f_0,x\\right) & = {\\hat{\\beta}}_1\\left(f_1-f_0\\right)+{\\hat{\\beta}}_3x\\left(f_1-f_0\\right)\n\\end{aligned}\\]\n\nTherefore,\n\n\\[\\widehat{OR}(F=f-1, F=f_0, X=x) = \\widehat{OR}_F = \\exp\\left[ {\\hat{\\beta}}_1\\left(f_1-f_0\\right)+{\\hat{\\beta}}_3x\\left(f_1-f_0\\right) \\right]\\]"
+  },
+  {
+    "objectID": "lectures/11_Interactions/old_work/Class_9_code.html",
+    "href": "lectures/11_Interactions/old_work/Class_9_code.html",
+    "title": "Class 9 Code",
+    "section": "",
+    "text": "library(tidyr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(epiDisplay)\n\nLoading required package: foreign\n\n\nLoading required package: survival\n\n\nLoading required package: MASS\n\n\n\nAttaching package: 'MASS'\n\n\nThe following object is masked from 'package:dplyr':\n\n    select\n\n\nLoading required package: nnet\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\nlibrary(here)\n\nhere() starts at /Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/S2024_BSTA_513_613/S2024_BSTA_513\n\nlibrary(ggplot2)\n\n\nAttaching package: 'ggplot2'\n\n\nThe following object is masked from 'package:epiDisplay':\n\n    alpha\n\nload(here(\"data\", \"bc_diagnosis.Rda\"))"
+  },
+  {
+    "objectID": "lectures/11_Interactions/old_work/Class_9_code.html#glow-study-example",
+    "href": "lectures/11_Interactions/old_work/Class_9_code.html#glow-study-example",
+    "title": "Class 9 Code",
+    "section": "GLOW study example",
+    "text": "GLOW study example\n\nlibrary(aplore3)\nglow = glow500\n\n\nglow_m1 = glm(fracture ~ priorfrac, data = glow, family = binomial)\n\n\nglow_m2 = glm(fracture ~ priorfrac + age, data = glow, family = binomial)\n\n\nglow_m3 = glm(fracture ~ priorfrac + age + priorfrac*age, data = glow, family = binomial)\n\n\nsummary(glow_m1); summary(glow_m2); summary(glow_m3)\n\n\nCall:\nglm(formula = fracture ~ priorfrac, family = binomial, data = glow)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   -1.4167     0.1305 -10.859  &lt; 2e-16 ***\npriorfracYes   1.0638     0.2231   4.769 1.85e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 562.34  on 499  degrees of freedom\nResidual deviance: 540.07  on 498  degrees of freedom\nAIC: 544.07\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nCall:\nglm(formula = fracture ~ priorfrac + age, family = binomial, \n    data = glow)\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  -4.21429    0.84784  -4.971 6.67e-07 ***\npriorfracYes  0.83884    0.23416   3.582 0.000340 ***\nage           0.04119    0.01218   3.382 0.000719 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 562.34  on 499  degrees of freedom\nResidual deviance: 528.52  on 497  degrees of freedom\nAIC: 534.52\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nCall:\nglm(formula = fracture ~ priorfrac + age + priorfrac * age, family = binomial, \n    data = glow)\n\nCoefficients:\n                 Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)      -5.68942    1.08408  -5.248 1.54e-07 ***\npriorfracYes      4.96134    1.81022   2.741  0.00613 ** \nage               0.06251    0.01546   4.043 5.27e-05 ***\npriorfracYes:age -0.05738    0.02501  -2.294  0.02179 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 562.34  on 499  degrees of freedom\nResidual deviance: 523.27  on 496  degrees of freedom\nAIC: 531.27\n\nNumber of Fisher Scoring iterations: 4\n\n\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), \n                        age = 55:90)\nnewdata = with(glow, data.frame(prior_age))\nfrac_pred = predict(glow_m3, newdata, se.fit = T, type=\"response\")\npred_glow = newdata %&gt;% mutate(frac_pred = frac_pred$fit)\nggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred, color = priorfrac)) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  scale_color_discrete(name = \"Prior Fracture\") +\n  xlab(\"Age (years)\") + ylab(\"Predicted Probability of Fracture\") +\n  ylim(0,1)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), \n                        age = 55:90)\nnewdata = with(glow, data.frame(prior_age))\nfrac_pred_log = predict(glow_m3, newdata, se.fit = T, type=\"link\")\npred_glow2 = newdata %&gt;% mutate(frac_pred_log = frac_pred_log$fit)\nggplot(pred_glow2) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred_log, color = priorfrac)) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  scale_color_discrete(name = \"Prior Fracture\") +\n  xlab(\"Age (years)\") + ylab(\"Log-Odds of Fracture\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nage = 55:90\nlogit_OR = glow_m3$coefficients[2] + glow_m3$coefficients[4]*age\nOR_data = data.frame(Age = age, OR = exp(logit_OR))\nggplot(OR_data) + \n  geom_hline(yintercept=1, color = \"#65A43D\", size = 1.5) +\n  geom_smooth(method = \"loess\", aes(x = Age, y = OR), color = \"black\", size = 2) +\n  theme(legend.position = \"right\", \n        text = element_text(size=20), \n        title = element_text(size=16)) +\n  xlab(\"Age (years)\") + ylab(\"Odds Ratio\") +\n  ylim(0, 10)\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\nInteraction model - Poll Everywhere\n\ninter_bc = glm(Late_stage_diag ~ Race_Ethnicity + Age + Race_Ethnicity*Age, data = bc, \n               family = binomial())\nsummary(inter_bc)\n\n\nCall:\nglm(formula = Late_stage_diag ~ Race_Ethnicity + Age + Race_Ethnicity * \n    Age, family = binomial(), data = bc)\n\nCoefficients:\n                                                     Estimate Std. Error\n(Intercept)                                         -4.540270   0.242635\nRace_EthnicityHispanic-Latino                        0.317162   0.733038\nRace_EthnicityNH American Indian/Alaskan Native     -4.104745   5.085605\nRace_EthnicityNH Asian/Pacific Islander              0.532264   0.719711\nRace_EthnicityNH Black                              -0.337456   0.657331\nAge                                                  0.056762   0.003806\nRace_EthnicityHispanic-Latino:Age                   -0.005279   0.011561\nRace_EthnicityNH American Indian/Alaskan Native:Age  0.062026   0.077179\nRace_EthnicityNH Asian/Pacific Islander:Age         -0.006314   0.011338\nRace_EthnicityNH Black:Age                           0.011035   0.010350\n                                                    z value Pr(&gt;|z|)    \n(Intercept)                                         -18.712   &lt;2e-16 ***\nRace_EthnicityHispanic-Latino                         0.433    0.665    \nRace_EthnicityNH American Indian/Alaskan Native      -0.807    0.420    \nRace_EthnicityNH Asian/Pacific Islander               0.740    0.460    \nRace_EthnicityNH Black                               -0.513    0.608    \nAge                                                  14.913   &lt;2e-16 ***\nRace_EthnicityHispanic-Latino:Age                    -0.457    0.648    \nRace_EthnicityNH American Indian/Alaskan Native:Age   0.804    0.422    \nRace_EthnicityNH Asian/Pacific Islander:Age          -0.557    0.578    \nRace_EthnicityNH Black:Age                            1.066    0.286    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 11861  on 9999  degrees of freedom\nResidual deviance: 11481  on 9990  degrees of freedom\nAIC: 11501\n\nNumber of Fisher Scoring iterations: 4\n\nwald_test = summary(inter_bc)$coefficients\nrownames(wald_test) = c(\"Intercept\", \"R_E: HL\", \"R_E: NH AIAN\",\n                        \"R_E: NH API\",\"R_E: NH B\", \"Age\", \n                        \"R_E: HL * Age\", \"R_E: NH AIAN * Age\",\n                        \"R_E: NH API * Age\",\"R_E: NH B * Age\")\nround(wald_test, 3)\n\n                   Estimate Std. Error z value Pr(&gt;|z|)\nIntercept            -4.540      0.243 -18.712    0.000\nR_E: HL               0.317      0.733   0.433    0.665\nR_E: NH AIAN         -4.105      5.086  -0.807    0.420\nR_E: NH API           0.532      0.720   0.740    0.460\nR_E: NH B            -0.337      0.657  -0.513    0.608\nAge                   0.057      0.004  14.913    0.000\nR_E: HL * Age        -0.005      0.012  -0.457    0.648\nR_E: NH AIAN * Age    0.062      0.077   0.804    0.422\nR_E: NH API * Age    -0.006      0.011  -0.557    0.578\nR_E: NH B * Age       0.011      0.010   1.066    0.286"
   }
 ]

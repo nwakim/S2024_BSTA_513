@@ -36,13 +36,10 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 
 ## Resources
 
-+-------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-| Lesson      | Topic                        | Slides                                                                                                                                                 | Annotated Slides                                                                                                                                                          | Recording                                                                                                                              |
-+=============+==============================+:======================================================================================================================================================:+:=========================================================================================================================================================================:+:======================================================================================================================================:+
-| 10          | Multiple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/bde13efd-786f-445e-99c8-1e78cadf5981/public)]{style="color:#f8f5f0;"} |
-+-------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-| 11          | Interactions                 | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                                                                  | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                                                                        | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                                                          |
-+-------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+| Lesson | Topic                        |                                                                         Slides                                                                         |                                                                             Annotated Slides                                                                              |                                                               Recording                                                                |
+|------------|------------|:--------------:|:----------------:|:------------:|
+| 10     | Multiple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/bde13efd-786f-445e-99c8-1e78cadf5981/public)]{style="color:#f8f5f0;"} |
+| 11     | Interactions                 |                 [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/11_Interactions/11_Interactions.qmd)]{style="color:#f8f5f0;"}                 |                                            [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                             |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
 
 ## On the Horizon
 
@@ -98,11 +95,11 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 
 From waaay back in our slides from Lesson 5! We violate several of the assumptions for linear regression when our outcome has only two options. One of the most important reasons is that we cannot map our predictors (that can be continuous of categorical) onto a binary outcome. We need to transform our binary outcome so it is on a continuous and unbounded scale (logit does that!)
 
-### 2. Where can we find more resources for making forest plots? 
+### 2. Where can we find more resources for making forest plots?
 
 You can either use the code I gave in Lesson 10 or use the reference links from Lab 4 in Linear Models.
 
-### 3. And how do we make a likelihood probability table instead of a plot? 
+### 3. And how do we make a likelihood probability table instead of a plot?
 
 I'm not sure what this means. Please post on Slack so we can clarify! We have discussed plotting predicted probability in Lesson 7.
 
