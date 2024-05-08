@@ -44,6 +44,10 @@ editor_options:
 
 ## Announcements
 
+Monday 5/13
+
+-   I will review our interaction notes from last time
+
 ## Muddiest Points
 
 ```{r}

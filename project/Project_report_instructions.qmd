@@ -144,7 +144,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 
 -   **Length: 3-5 paragraphs**
 -   **Purpose:** Describe the analyses that were conducted and methods used to select variables and check diagnostics
--   **Important to keep in mind:** methods typically describe your approach and process, not the results of that process
+-   **Important to keep in mind:** methods typically describe your approach and process, *not the results of that process*
     -   For example: I might say "We investigated the linearity of each continuous covariate visually. If continuous variables were not linear, then we divided the variable into categories using existing guidelines from \<insert reference here\> or creating quartiles."
         -   In the methods section, I would NOT say: "We investigated the linearity of each continuous covariate visually. We found that age was not linearly related to IAT scores. Thus, we categorized age into the following groups: \_\_\_, \_\_\_\_, \_\_\_\_, \_\_\_\_, and \_\_\_\_."
             -   The last two sentences about age would be more appropriate in the Results section
@@ -152,7 +152,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
     -   General approach to the dataset
         -   3-5 sentences
         -   Did you need to do any quality control?
-        -   Missing data: we performed complete case analysis
+        -   Missing data: complete case analysis or imputation based on Lab 3 choices
             -   1 sentence
             -   Can be included in the Exploratory data analysis section
     -   Variables and variable creation
@@ -165,7 +165,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
             -   Using scoring for an ordered categorical variable (that is not your explanatory variable)
         -   1-2 sentences per variable
     -   Model building: we performed purposeful selection
-        -   3-5 sentences
+        -   3 sentences max
         -   Includes
             -   Describe purposeful selection: combining existing literature, clinical significance, and analysis
             -   How did you build the model? Describe the process in ONE SENTENCE
@@ -194,8 +194,9 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
             -   What variables were included in your final model?
             -   What interactions with your explanatory variable did you include?
     -   Interpret the model coefficients in the context of the research question
-        -   1-2 paragraphs
-        -   Interpreting the explanatory variable's relationship with IAT score is the most important thing to report!!
+        -   1 paragraph (maybe 2 in special cases)
+            -   When in doubt, ask Nicky if your analysis is a special case
+        -   Interpreting the explanatory variable's relationship with food insecurity is the most important thing to report!!
             -   When doing this, make sure you account for ALL interactions: If your explanatory variable has multiple interactions and you are trying to interpret one, then what does that mean about the other variables involved in the other interactions? If this is confusing, please make an appointment with me!!
     -   Results of model diagnostics if there is anything worth noting
 -   Tables & figures
@@ -223,6 +224,8 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 
 ### Reflection
 
+-   How did each Lab help you build towards your project report?
+    -   **Length: 1-2 sentences per lab**
 
 ### References
 

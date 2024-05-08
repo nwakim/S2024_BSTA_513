@@ -37,9 +37,9 @@ On Monday, 5/6, we will be in RPV Room A (1217)
 ## Resources
 
 | Lesson | Topic                        |                                                                         Slides                                                                         |                                                                             Annotated Slides                                                                              |                                                               Recording                                                                |
-|--------|------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
 | 10     | Multiple Logistic Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/10_Multiple_logistic_regression/10_Multiple_logistic_regression_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/bde13efd-786f-445e-99c8-1e78cadf5981/public)]{style="color:#f8f5f0;"} |
-| 11     | Interactions                 |                 [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/11_Interactions/11_Interactions.qmd)]{style="color:#f8f5f0;"}                 |                                            [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                             |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
+| 11     | Interactions                 |                 [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/11_Interactions/11_Interactions.qmd)]{style="color:#f8f5f0;"}                 |                 [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/11_Interactions/11_Interactions_notes.pdf)]{style="color:#f8f5f0;"}                 | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/262f895d-25ac-4dc2-a3b9-cb467d2750c6/public)]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
@@ -88,6 +88,10 @@ On Monday, 5/6, we will be in RPV Room A (1217)
         -   Test for intercept wrong
 
         -   Used coefficient for age
+
+### Wednesday 5/8
+
+-   Lab 3 is up!
 
 ## Muddiest Points
 
