@@ -822,7 +822,7 @@ tidy(glow_m3, conf.int = T) %>%
 
 ::: columns
 ::: {.column width="40%"}
--   [**Model 3: **]{style="color:#70AD47"}
+-   Model 3 estimated **coefficients**:
 
 ```{r}
 #| echo: false
@@ -833,7 +833,7 @@ tidy(glow_m3, conf.int = T) %>% dplyr::select(-std.error, -statistic) %>%
   fmt_number(decimals = 3)
 ```
 
--   Estimated odds ratios table: 
+-   Model 3 estimated **odds ratios**:
 ```{R}
 #| echo: false
 tidy(glow_m3, conf.int = T, exponentiate = T) %>% dplyr::select(-std.error, -statistic) %>%

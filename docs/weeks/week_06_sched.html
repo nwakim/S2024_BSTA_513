@@ -63,6 +63,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -244,6 +246,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-use-logistic-instead-of-linear-regression" id="toc-why-use-logistic-instead-of-linear-regression" class="nav-link" data-scroll-target="#why-use-logistic-instead-of-linear-regression">1. Why use logistic instead of linear regression?</a></li>
   <li><a href="#where-can-we-find-more-resources-for-making-forest-plots" id="toc-where-can-we-find-more-resources-for-making-forest-plots" class="nav-link" data-scroll-target="#where-can-we-find-more-resources-for-making-forest-plots">2. Where can we find more resources for making forest plots?</a></li>
   <li><a href="#and-how-do-we-make-a-likelihood-probability-table-instead-of-a-plot" id="toc-and-how-do-we-make-a-likelihood-probability-table-instead-of-a-plot" class="nav-link" data-scroll-target="#and-how-do-we-make-a-likelihood-probability-table-instead-of-a-plot">3. And how do we make a likelihood probability table instead of a plot?</a></li>
+  <li><a href="#i-am-confused-on-why-we-would-do-the-odds-ratio-of-prior-fracture-vs-no-prior-fracture-in-lesson-11." id="toc-i-am-confused-on-why-we-would-do-the-odds-ratio-of-prior-fracture-vs-no-prior-fracture-in-lesson-11." class="nav-link" data-scroll-target="#i-am-confused-on-why-we-would-do-the-odds-ratio-of-prior-fracture-vs-no-prior-fracture-in-lesson-11.">4. I am confused on why we would do the odds ratio of prior fracture vs no prior fracture (in Lesson 11).</a></li>
+  <li><a href="#im-still-confused-about-the-difference-between-model-3-and-the-estimated-odd-ratio-table-on-slide-39-and-what-each-is-telling-us." id="toc-im-still-confused-about-the-difference-between-model-3-and-the-estimated-odd-ratio-table-on-slide-39-and-what-each-is-telling-us." class="nav-link" data-scroll-target="#im-still-confused-about-the-difference-between-model-3-and-the-estimated-odd-ratio-table-on-slide-39-and-what-each-is-telling-us.">5. I’m still confused about the difference between Model 3 and the estimated odd ratio table on slide 39 and what each is telling us.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -414,6 +418,14 @@ Room Locations for the week
 <section id="and-how-do-we-make-a-likelihood-probability-table-instead-of-a-plot" class="level3">
 <h3 class="anchored" data-anchor-id="and-how-do-we-make-a-likelihood-probability-table-instead-of-a-plot">3. And how do we make a likelihood probability table instead of a plot?</h3>
 <p>I’m not sure what this means. Please post on Slack so we can clarify! We have discussed plotting predicted probability in Lesson 7.</p>
+</section>
+<section id="i-am-confused-on-why-we-would-do-the-odds-ratio-of-prior-fracture-vs-no-prior-fracture-in-lesson-11." class="level3">
+<h3 class="anchored" data-anchor-id="i-am-confused-on-why-we-would-do-the-odds-ratio-of-prior-fracture-vs-no-prior-fracture-in-lesson-11.">4. I am confused on why we would do the odds ratio of prior fracture vs no prior fracture (in Lesson 11).</h3>
+<p>The odds ratio is mostly used to compare the two cases using one value. We want to compare the odds of a new fracture. We want to see how those odds of a new fracture change when we have a prior fracture or when we do not have a prior fracture. We can calculate the odds ratio for prior fracture to do that. When we only have main effects in our model, this is easier to calculate. We only have one odds ratio. However, when we have an interaction between prior fracture and age, we need a way to demonstrate how the odds ratio for prior fracture changes with age.</p>
+</section>
+<section id="im-still-confused-about-the-difference-between-model-3-and-the-estimated-odd-ratio-table-on-slide-39-and-what-each-is-telling-us." class="level3">
+<h3 class="anchored" data-anchor-id="im-still-confused-about-the-difference-between-model-3-and-the-estimated-odd-ratio-table-on-slide-39-and-what-each-is-telling-us.">5. I’m still confused about the difference between Model 3 and the estimated odd ratio table on slide 39 and what each is telling us.</h3>
+<p>Ah, yes! I’ll clarify a little more in the slide. The first table includes the coefficient estimates (<span class="math inline">\(\widehat\beta_1\)</span>,<span class="math inline">\(\widehat\beta_2\)</span>, <span class="math inline">\(\widehat\beta_3\)</span>), and the second table includes the odds ratios (<span class="math inline">\(\exp(\widehat\beta_1)\)</span>,<span class="math inline">\(\exp(\widehat\beta_2)\)</span>, <span class="math inline">\(\exp(\widehat\beta_3)\)</span>)</p>
 
 
 </section>

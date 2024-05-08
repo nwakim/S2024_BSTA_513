@@ -107,6 +107,14 @@ You can either use the code I gave in Lesson 10 or use the reference links from 
 
 I'm not sure what this means. Please post on Slack so we can clarify! We have discussed plotting predicted probability in Lesson 7.
 
+### 4. I am confused on why we would do the odds ratio of prior fracture vs no prior fracture (in Lesson 11).
+
+The odds ratio is mostly used to compare the two cases using one value. We want to compare the odds of a new fracture. We want to see how those odds of a new fracture change when we have a prior fracture or when we do not have a prior fracture. We can calculate the odds ratio for prior fracture to do that. When we only have main effects in our model, this is easier to calculate. We only have one odds ratio. However, when we have an interaction between prior fracture and age, we need a way to demonstrate how the odds ratio for prior fracture changes with age.
+
+### 5. I'm still confused about the difference between Model 3 and the estimated odd ratio table on slide 39 and what each is telling us.
+
+Ah, yes! I'll clarify a little more in the slide. The first table includes the coefficient estimates ($\widehat\beta_1$,$\widehat\beta_2$, $\widehat\beta_3$), and the second table includes the odds ratios ($\exp(\widehat\beta_1)$,$\exp(\widehat\beta_2)$, $\exp(\widehat\beta_3)$)
+
 ```{r}
 #| echo: false
 
