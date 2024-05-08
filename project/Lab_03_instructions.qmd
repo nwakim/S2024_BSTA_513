@@ -1,8 +1,8 @@
 ---
-title: "Lab 2 Instructions"
+title: "Lab 3 Instructions"
 author: "Nicky Wakim"
 subtitle: "BSTA 513/613"
-description: "Due: May 2, 2024 at 11pm"
+description: "Due: May 16, 2024 at 11pm"
 date-modified: "today"
 categories: [""]
 format: 
@@ -14,12 +14,15 @@ format:
     number-sections: true
     number-depth: 4
     code-annotations: hover
-  pdf: default 
 editor_options: 
   chunk_output_type: console
 execute:
   freeze: auto  # re-render only when source changes
 ---
+
+::: callout-note
+This is the required work for Lab 3. I am working on guided instructions on incorporating the *optional* missing data section of the Lab.
+:::
 
 ```{r}
 #| message: false
@@ -35,13 +38,13 @@ library(here)
 
 ## Directions
 
-[You can download the `.qmd` file for this lab here.](https://github.com/nwakim/S2024_BSTA_513/blob/main/project/LastName_FirstInit_Lab_02.qmd)
+[You can download the `.qmd` file for this lab here.](https://github.com/nwakim/S2024_BSTA_513/blob/main/project/LastName_FirstInit_Lab_03.qmd)
 
 The above link will take you to your **editing** file. **Please do not remove anything from this editing file!!** You will only add your code and work to this file.
 
 ### Purpose
 
-The purpose of this lab is to 
+The purpose of this lab is to fit a multiple logistic regression model and practice how we would interpret our results for this study.
 
 ### Grading
 
@@ -73,4 +76,34 @@ Please restate your research question below using the provided format (1 sentenc
 
 In this study, we will investigate the association between food insecurity and ________. 
 
+### Fit a multiple logistic regression model
 
+::: callout-important
+#### Task
+
+Fit a main effects model with 5 of your covariates. This will not necessarily be your final model, but we can construct interpretations and code that will be useful in your final model. 
+:::
+
+### Present the odds ratio in a table
+
+::: callout-important
+#### Task
+
+Use the `tbl_regression()` function to make a table of the odds ratios from your fitted model.
+:::
+
+### Present the odds ratio in a forest plot
+
+::: callout-important
+#### Task
+
+Use the code from Lesson 10 to make a forest plot of the odds ratio from your fitted model. 
+:::
+
+### Interpret the odds ratio for your main covariate
+
+::: callout-important
+#### Task
+
+Interpret the odds ratio(s) for the covariate from your research question. Make sure to include the 95% confidence intervals and what other variables you adjusted for. 
+:::

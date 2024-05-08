@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicky Wakim">
-<meta name="description" content="Due: May 2, 2024 at 11pm">
+<meta name="description" content="Due: May 16, 2024 at 11pm">
 
-<title>Categorical Data Analysis - Lab 2 Instructions</title>
+<title>Categorical Data Analysis - Lab 3 Instructions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4491,7 +4491,7 @@ vertical-align: -.125em;
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 2 Instructions</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 3 Instructions</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label onclick="window.quartoOpenSearch();">
@@ -4617,22 +4617,26 @@ vertical-align: -.125em;
   <li><a href="#lab-activities" id="toc-lab-activities" class="nav-link" data-scroll-target="#lab-activities"><span class="header-section-number">2</span> Lab activities</a>
   <ul class="collapse">
   <li><a href="#restate-research-question" id="toc-restate-research-question" class="nav-link" data-scroll-target="#restate-research-question"><span class="header-section-number">2.1</span> Restate research question</a></li>
+  <li><a href="#fit-a-multiple-logistic-regression-model" id="toc-fit-a-multiple-logistic-regression-model" class="nav-link" data-scroll-target="#fit-a-multiple-logistic-regression-model"><span class="header-section-number">2.2</span> Fit a multiple logistic regression model</a></li>
+  <li><a href="#present-the-odds-ratio-in-a-table" id="toc-present-the-odds-ratio-in-a-table" class="nav-link" data-scroll-target="#present-the-odds-ratio-in-a-table"><span class="header-section-number">2.3</span> Present the odds ratio in a table</a></li>
+  <li><a href="#present-the-odds-ratio-in-a-forest-plot" id="toc-present-the-odds-ratio-in-a-forest-plot" class="nav-link" data-scroll-target="#present-the-odds-ratio-in-a-forest-plot"><span class="header-section-number">2.4</span> Present the odds ratio in a forest plot</a></li>
+  <li><a href="#interpret-the-odds-ratio-for-your-main-covariate" id="toc-interpret-the-odds-ratio-for-your-main-covariate" class="nav-link" data-scroll-target="#interpret-the-odds-ratio-for-your-main-covariate"><span class="header-section-number">2.5</span> Interpret the odds ratio for your main covariate</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Lab_03_instructions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 2 Instructions</h1>
+<h1 class="title">Lab 3 Instructions</h1>
 <p class="subtitle lead">BSTA 513/613</p>
 </div>
 
 <div>
   <div class="description">
-    Due: May 2, 2024 at 11pm
+    Due: May 16, 2024 at 11pm
   </div>
 </div>
 
@@ -4650,7 +4654,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 26, 2024</p>
+      <p class="date-modified">May 7, 2024</p>
     </div>
   </div>
     
@@ -4659,13 +4663,26 @@ vertical-align: -.125em;
 
 </header>
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is the required work for Lab 3. I am working on guided instructions on incorporating the <em>optional</em> missing data section of the Lab.</p>
+</div>
+</div>
 <section id="directions" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="directions"><span class="header-section-number">1</span> Directions</h2>
-<p><a href="https://github.com/nwakim/S2024_BSTA_513/blob/main/project/LastName_FirstInit_Lab_02.qmd">You can download the <code>.qmd</code> file for this lab here.</a></p>
+<p><a href="https://github.com/nwakim/S2024_BSTA_513/blob/main/project/LastName_FirstInit_Lab_03.qmd">You can download the <code>.qmd</code> file for this lab here.</a></p>
 <p>The above link will take you to your <strong>editing</strong> file. <strong>Please do not remove anything from this editing file!!</strong> You will only add your code and work to this file.</p>
 <section id="purpose" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">1.1</span> Purpose</h3>
-<p>The purpose of this lab is to</p>
+<p>The purpose of this lab is to fit a multiple logistic regression model and practice how we would interpret our results for this study.</p>
 </section>
 <section id="grading" class="level3" data-number="1.2">
 <h3 data-number="1.2" class="anchored" data-anchor-id="grading"><span class="header-section-number">1.2</span> Grading</h3>
@@ -4753,6 +4770,70 @@ Task
 </div>
 </div>
 <p>In this study, we will investigate the association between food insecurity and ________.</p>
+</section>
+<section id="fit-a-multiple-logistic-regression-model" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="fit-a-multiple-logistic-regression-model"><span class="header-section-number">2.2</span> Fit a multiple logistic regression model</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fit a main effects model with 5 of your covariates. This will not necessarily be your final model, but we can construct interpretations and code that will be useful in your final model.</p>
+</div>
+</div>
+</section>
+<section id="present-the-odds-ratio-in-a-table" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="present-the-odds-ratio-in-a-table"><span class="header-section-number">2.3</span> Present the odds ratio in a table</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the <code>tbl_regression()</code> function to make a table of the odds ratios from your fitted model.</p>
+</div>
+</div>
+</section>
+<section id="present-the-odds-ratio-in-a-forest-plot" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="present-the-odds-ratio-in-a-forest-plot"><span class="header-section-number">2.4</span> Present the odds ratio in a forest plot</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the code from Lesson 10 to make a forest plot of the odds ratio from your fitted model.</p>
+</div>
+</div>
+</section>
+<section id="interpret-the-odds-ratio-for-your-main-covariate" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="interpret-the-odds-ratio-for-your-main-covariate"><span class="header-section-number">2.5</span> Interpret the odds ratio for your main covariate</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Interpret the odds ratio(s) for the covariate from your research question. Make sure to include the 95% confidence intervals and what other variables you adjusted for.</p>
+</div>
+</div>
 
 
 </section>
