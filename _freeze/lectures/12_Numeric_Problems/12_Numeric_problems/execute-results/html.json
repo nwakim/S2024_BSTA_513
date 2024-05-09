@@ -1,0 +1,18 @@
+{
+  "hash": "be8857d05b2daea474ec0b7af20ee82e",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 12: Numeric Problems\"\nauthor: \"Nicky Wakim\"\ntitle-slide-attributes:\n    data-background-color: \"#C2352F\"\ndate: \"05/13/2024\"\nformat: \n  revealjs:\n    theme: \"../simple_NW.scss\"\n    chalkboard: true\n    slide-number: true\n    show-slide-number: all\n    width: 1955\n    height: 1100\n    footer: \"Lesson 12: Numeric Problems\"\n    html-math-method: mathjax\n    highlight-style: ayu\nexecute:\n  echo: true\n  freeze: auto  # re-render only when source changes\neditor_options: \n  chunk_output_type: console\n---\n\n::: {.cell}\n\n:::\n\n\n# Learning Objectives\n\n1.  Connect understanding of confounding and interactions from linear regression to logistic regression.\n\n2.  Determine if an additional independent variable is a not a confounder nor effect modifier, is a confounder but not effect modifier, or is an effect modifier.\n\n3.  Calculate and interpret fitted interactions, including plotting the log-odds, predicted probability, and odds ratios.\n\n\n::: {.cell}\n<style type=\"text/css\">\n.reveal code {\n  max-height: 80% !important;\n}\n</style>\n:::\n\n\n## \n\n![](images/success_model.png){fig-align=\"center\"}\n\n## \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

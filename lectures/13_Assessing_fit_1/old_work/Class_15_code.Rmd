@@ -1,0 +1,163 @@
+---
+title: "Class 15 Code"
+author: "Nicky Wakim"
+date: "2023-05-31"
+output: html_document
+---
+
+```{=html}
+<style type="text/css">
+.main-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+```
+```{=html}
+<style type="text/css">
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+```
+### Set up for the code
+
+This includes the `LogisticDx` functions. The package `LogisticDx` was not installing on my computer, and as far as I know, not working for newer versions of R in general. I have emailed the maintainer of the package to see if they can update the package and get it working for newer versions of R. In the meantime, I have copied specific functions into the file `Logistic_Dx_Functions.R`. We will need to `source()` the R script so that we can use the functions. Please make sure you download the `Logistic_Dx_Functions.R` and include the needed file location to run it.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(epiDisplay)
+library(kableExtra)
+library(ggplot2)
+library(aplore3)
+library(GGally)
+library(mfp)
+library(ResourceSelection)
+library(DescTools)
+source("Logistic_Dx_Functions.R") # Edit this if your file is not in the same folder as this Rmd file
+```
+
+# GLOW study example
+
+The GLOW study data is already a part of the `aplore3` package (stands for the "**Ap**plied **Lo**gistic **Re**gression **3**rd Edition).
+
+```{r, fig.height=9, fig.width=9}
+glow = glow500
+```
+
+# Overall Measures of Fit
+
+## Pearson Residuals
+
+```{r message=FALSE, warning=FALSE}
+glow2 = glow %>% mutate(raterisk2 = factor(raterisk, levels = c("Less", "Same", "Greater"), 
+                                            labels = c("Less and Same", "Less and Same", "Greater")), 
+                        frac_num = as.numeric(fracture)-1) 
+```
+
+```{r message=FALSE, warning=FALSE, fig.keep = "none"}
+cat_model = glm(frac_num ~ priorfrac + momfrac + 
+                  armassist + raterisk2 + 
+                  momfrac*armassist, 
+                 data = glow2, family = "binomial")
+
+gof(cat_model)$chiSq
+
+hoslem.test(glow2$frac_num, fitted(cat_model), g = 10)
+```
+
+## AIC and BIC
+
+```{r}
+prelim_final = glm(fracture ~ age + height + priorfrac + 
+                     momfrac + armassist + raterisk2 + 
+                     age*priorfrac + momfrac*armassist, 
+                 data = glow2, family = binomial)
+```
+
+```{r}
+AIC(prelim_final)
+BIC(prelim_final)
+
+cat_model = glm(frac_num ~ priorfrac + momfrac + 
+                  armassist + raterisk2 + 
+                  momfrac*armassist, 
+                 data = glow2, family = "binomial")
+```
+
+```{r}
+AIC(cat_model)
+BIC(cat_model)
+```
+
+# Logistic Regression Diagnostics
+
+Fit the preliminary final model first. Then we use the `dx` function to extract the diagnostic values from the covariate patterns.
+```{r}
+prelim_final = glm(fracture ~ age + height + priorfrac + 
+                     momfrac + armassist + raterisk2 + 
+                     age*priorfrac + momfrac*armassist, 
+                 data = glow2, family = binomial)
+```
+
+```{r}
+diagnost_pf = dx(prelim_final)
+head(diagnost_pf)
+dim(diagnost_pf)
+```
+
+Plot the change in standardized Pearson residuals against the estimated/predicted probabilities. Remember, this is the change in the 
+```{r fig.height=5, fig.width=6}
+ggplot(diagnost_pf) + geom_point(aes(x=P, y=dChisq)) + 
+  xlab("Estimated/Predicted Probability of Fracture") +
+  ylab("Change in Std. Pearson Residual") +
+  theme(text = element_text(size = 16))
+```
+
+Plot the change in standardized deviance residuals against the estimated/predicted probabilities. 
+```{r fig.height=5, fig.width=6}
+ggplot(diagnost_pf) + geom_point(aes(x=P, y=dDev)) + 
+  xlab("Estimated/Predicted Probability of Fracture") +
+  ylab("Change in Std. Deviance Residual") +
+  theme(text = element_text(size = 16))
+```
+
+Plot the change in coefficient estimates against the estimated/predicted probabilities. 
+```{r fig.height=5, fig.width=6}
+ggplot(diagnost_pf) + geom_point(aes(x=P, y=dBhat)) + 
+  xlab("Estimated/Predicted Probability of Fracture") +
+  ylab("Change in Coefficient Estimates") +
+  theme(text = element_text(size = 16))
+```
+
+```{r fig.height=5, fig.width=6}
+ggplot(diagnost_pf) + geom_point(aes(x=P, y=h)) + 
+  xlab("Estimated/Predicted Probability of Fracture") +
+  ylab("Change in Coefficient Estimates") +
+  theme(text = element_text(size = 16))
+```
+
+```{r}
+diagnost_points = diagnost_pf %>% 
+  mutate(Cov_patt = 1:nrow(.)) %>%
+  filter((sPr)^2 > 12.5 | (sdr)^2 > 4 | dBhat > 0.125) %>%
+  dplyr::select(Cov_patt, y, P, h, dChisq, dDev, dBhat) %>%
+  round(., 2)
+kable(diagnost_points) %>% kable_styling(bootstrap_options = c("striped", "hover"), full_width = F)
+```
+
+```{r}
+diagnost_points2 = diagnost_pf %>% 
+  mutate(Cov_patt = 1:nrow(.)) %>%
+  filter(Cov_patt %in% c(391, 428, 436, 454)) %>%
+  round(., 2)
+glow3 = glow2 %>%
+  filter(!(age == 65 & height == 167 & priorfrac == "No"))
+```

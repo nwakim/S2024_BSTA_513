@@ -1,0 +1,70 @@
+---
+title: "Lesson 12: Numeric Problems"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "05/13/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 12: Numeric Problems"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
+library(lmtest)
+library(epiDisplay)
+
+
+load(here("data", "bc_diagnosis.Rda"))
+mean_age = mean(bc$Age)
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+```
+
+# Learning Objectives
+
+1.  Connect understanding of confounding and interactions from linear regression to logistic regression.
+
+2.  Determine if an additional independent variable is a not a confounder nor effect modifier, is a confounder but not effect modifier, or is an effect modifier.
+
+3.  Calculate and interpret fitted interactions, including plotting the log-odds, predicted probability, and odds ratios.
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+## 
+
+![](images/success_model.png){fig-align="center"}
+
+## 

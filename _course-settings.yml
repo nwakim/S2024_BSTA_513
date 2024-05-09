@@ -77,8 +77,12 @@ schedule:
         date: 4/22/24        
         calendar-color: "#E2534D"
         calendar-color2: "#FFFFFF" 
-      - title: "Quiz 2"
-        date: 5/13/24        
+      - title: "Quiz 2 Opens at 2pm"
+        date: 5/15/24        
+        calendar-color: "#E2534D"
+        calendar-color2: "#FFFFFF" 
+      - title: "Quiz 2 Closes at 1pm"
+        date: 5/20/24        
         calendar-color: "#E2534D"
         calendar-color2: "#FFFFFF" 
       - title: "Quiz 3"

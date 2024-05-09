@@ -1,0 +1,147 @@
+---
+title: "Class 13 Code"
+author: "Nicky Wakim"
+date: "2023-05-21"
+output: html_document
+---
+<style type="text/css">
+.main-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+
+## Set up for the code
+```{r message=FALSE, warning=FALSE}
+library(car)
+library(mctest)
+library(epiDisplay)
+library(kableExtra)
+library(dplyr)
+```
+
+## Zero cell in contingency table
+
+### One covariate
+```{r}
+ex1 = as.data.frame(rbind(cbind(outcome = rep(1, 39), x = c(rep("One", 7), rep("Two", 12), rep("Three", 20))), 
+      cbind(outcome = rep(0, 21), x = c(rep("One", 13), rep("Two", 8))))) %>%
+  mutate(outcome = as.numeric(outcome), 
+         x = factor(x, levels = c("One", "Two", "Three")))
+```
+
+Running glm from the data
+```{r}
+ex1_glm = glm(outcome ~ x, data = ex1, family = binomial())
+summary(ex1_glm)
+logistic.display(ex1_glm)
+```
+
+Combine groups 2 and 3:
+```{r}
+ex1_23 = ex1 %>% mutate(x = factor(x, levels = c("One", "Two", "Three"), labels = c("One", "Two", "Two")))
+ex1_23_glm = glm(outcome ~ x, data = ex1_23, family = binomial())
+summary(ex1_23_glm)
+```
+
+Eliminate the third group:
+```{r}
+ex1_two = ex1 %>% filter(x != "Three")
+ex1_two_glm = glm(outcome ~ x, data = ex1_two, family = binomial())
+summary(ex1_two_glm)
+```
+
+Treat covariate as continuous:
+```{r}
+ex1_cont = ex1 %>% mutate(x = as.numeric(x))
+table(ex1_cont$outcome, ex1_cont$x)
+
+ex1_cont_glm = glm(outcome ~ x, data = ex1_cont, family = binomial())
+summary(ex1_cont_glm)
+logistic.display(ex1_cont_glm)
+```
+
+### Interaction
+```{r}
+outcome = c(rep(1, 35), rep(0, 25))
+x1 = c(rep(1, 5), rep(0, 2), rep(1, 10), rep(0, 2), rep(1, 15), rep(0, 1),
+       rep(1, 5), rep(0, 8), rep(1, 2), rep(0, 6), rep(0, 4))
+x2 = c(rep(1, 7), rep(2, 12), rep(3, 16), 
+       rep(1, 13), rep(2, 8), rep(3, 4))
+ex2 = data.frame(outcome = outcome, x1 = x1, x2 = x2)
+```
+
+## Complete Separation
+```{r}
+y = c(0,0,0,0,1,1,1,1)
+x1 = c(1,2,3,3,5,6,10,11)
+x2 = c(3,2,-1,-1,2,4,1,0)
+ex3 = data.frame(outcome = y, x1 = x1, x2= x2)
+ex3
+m1 = glm(y ~ x1 + x2, family=binomial)
+summary(m1)
+
+library(logistf)
+m1_f = logistf(y ~ x1 + x2, family=binomial)
+summary(m1_f)
+```
+
+
+## Collinearity
+
+Bring in GLOW study again
+```{r}
+library(aplore3)
+glow = glow500
+glow2 = glow %>% mutate(raterisk2 = factor(raterisk, levels = c("Less", "Same", "Greater"), 
+                                            labels = c("Less and Same", "Less and Same", "Greater"))) 
+```
+
+VIF
+```{r}
+main_eff = glm(fracture ~ age + height + priorfrac + momfrac + 
+                 armassist + raterisk2, 
+                 data = glow2, family = binomial)
+
+glow_model = glm(fracture ~ age + height + priorfrac + momfrac + 
+                   armassist + raterisk2 + weight + bmi, 
+                 data = glow2, family = binomial)
+
+library(car)
+vif(main_eff)
+vif(glow_model)
+```
+
+
+```{r}
+glow3 = glow2 %>% mutate(height_sq = height^2)
+height2 = glm(fracture ~ age + height + priorfrac + momfrac + 
+                 armassist + raterisk2 + height_sq, 
+                 data = glow3, family = binomial)
+# summary(height2)
+vif(height2)
+```
+
+Centering height helps with the VIF:
+```{r}
+glow4 = glow2 %>% mutate(height_c = (height - mean(height)), 
+                         height_c_sq = height_c^2)
+height_c_2 = glm(fracture ~ age + height_c + priorfrac + momfrac + 
+                 armassist + raterisk2 + height_c_sq, 
+                 data = glow4, family = binomial)
+# summary(height_c_2)
+vif(height_c_2)
+```
