@@ -1,0 +1,128 @@
+---
+title: "Lesson 12: Assessing Model Fit"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "05/13/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 12: Assessing Model Fit"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
+library(lmtest)
+library(epiDisplay)
+
+
+load(here("data", "bc_diagnosis.Rda"))
+mean_age = mean(bc$Age)
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+```
+
+# Learning Objectives
+
+1.  Use test statistics of goodness-of-fit to determine if our preliminary final model fits the data well
+
+    -   Using Pearson residual statistic (𝑋\^2) \~ 𝜒\_(𝐽−(𝑝+1))\^2
+    -   Using Hosmer and Lemeshow goodness-of-fit statistic (𝐶 ̂) \~ 𝜒\_(𝑔−2)\^2
+
+2.  Apply ROC AUC to determine how well model predicts binary outcome
+
+3.  Apply AIC and BIC as a summary measure to make additional comparisons between potential models
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+## Overview (NEED TO REVISIT!!)
+
+-   Once the preliminary final model has been determined, we need to assess the fit of the model
+
+-   Variable selection is no longer our focus at this stage
+
+    -   We want to find answer to whether the model fits the data adequately
+
+-   Assessing the Goodness of Fit or Assessing model fit
+
+    -   Assess how well our fitted logistic regression model predicts/estimates the observed outcomes
+
+    -   Comparison: fitted/estimated outcome vs. observed outcome
+
+## Overview (NEED TO REVISIT!!)
+
+-   The model building strategies we have discussed so far only assess the importance of covariates
+
+    -   It did not assess model fit
+
+-   Previous in model building, we made relative comparisons between models
+
+    -   Our conclusions were limited to: Model 1 (full model) fits data better than Model 2 (reduced model)
+
+-   Assessing goodness of fit is
+
+    -   Not a relative comparison
+    -   It is an absolute comparison
+    -   To compare the fitted model to the largest possible model (saturated model)
+    -   Model adequacy vs. Model comparison
+
+## Poll Everywhere Question 1
+
+## Components to Assess Model Fit
+
+-   The model fits the data well if
+
+    -   Summary measures of the distance between the predicted/estimated/fitted and observed Y are small
+
+    -   The contribution of each pair (predicted and observed) to these summary measures is unsystematic and is small relative to the error structure of the model
+
+    -   It is possible to see a “good” summary measure of the distance between predicted and observed Y with some substantial deviation from fit for a few subjects
+
+## Components to Assess Model Fit
+
+1.  Computation and evaluation of **overall measures of fit**
+
+2.  Examination of other measures of the difference or **distance between the observed and fitted/predicted values**
+
+3.  Examination of the **individual components** of the summary statistics (will do in Lesson 14: Model Diagnostics)
+
+-   Today we focus on #1 and #2
+
+## Summary Measures of Goodness of Fit
+
+# Learning Objectives
+
+## Comparing fitted outcome to observed outcome
+
+

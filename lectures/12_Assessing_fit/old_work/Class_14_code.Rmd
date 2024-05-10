@@ -33,7 +33,7 @@ library(ggplot2)
 library(aplore3)
 library(GGally)
 library(mfp)
-source("~/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/S2023_BSTA_513_613/Lectures/Week_9_Model_fit/Class_15/Code/Logistic_Dx_Functions.R")
+source("Logistic_Dx_Functions.R")
 ```
 
 ## GLOW study example
@@ -51,7 +51,7 @@ cat_model = glm(fracture1 ~ priorfrac + momfrac + armassist + raterisk2 + momfra
                  data = glow2, family = "binomial")
 summary(cat_model)
 
-gof(cat_model)$chiSq
+#gof(cat_model)$chiSq
 
 ## Still can't find good replacement for LogisticDx package
 ```

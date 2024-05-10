@@ -23,12 +23,19 @@ editor_options:
 
 ## Labs
 
-| Lab                                       | Due Date | Topics                                                |
-|----------------------------|---------------|-----------------------------|
-| [Lab 1](/project/Lab_01_instructions.qmd) | 4/18     | Exploring the question and data                       |
-| [Lab 2](/project/Lab_02_instructions.qmd) | 5/2      | EDA continued + Simple logistic regression            |
-| [Lab 3](/project/Lab_03_instructions.qmd) | 5/16     | Multiple logistic regression + optional missing data  |
-| Lab 4                                     | 5/30     | Building and interpreting final model                 |
++-------------------------------------------------------------------------------+---------------+------------------------------------------------------+
+| Lab                                                                           | Due Date      | Topics                                               |
++===============================================================================+===============+======================================================+
+| [Lab 1](/project/Lab_01_instructions.qmd)                                     | 4/18          | Exploring the question and data                      |
++-------------------------------------------------------------------------------+---------------+------------------------------------------------------+
+| [Lab 2](/project/Lab_02_instructions.qmd)                                     | 5/2           | EDA continued + Simple logistic regression           |
++-------------------------------------------------------------------------------+---------------+------------------------------------------------------+
+| [Lab 3](/project/Lab_03_instructions.qmd)                                     | 5/16          | Multiple logistic regression + optional missing data |
+|                                                                               |               |                                                      |
+| [Optional missing data code if you want to try it](/project/Missing_data.qmd) |               |                                                      |
++-------------------------------------------------------------------------------+---------------+------------------------------------------------------+
+| Lab 4                                                                         | 5/30          | Building and interpreting final model                |
++-------------------------------------------------------------------------------+---------------+------------------------------------------------------+
 
 ## Report
 

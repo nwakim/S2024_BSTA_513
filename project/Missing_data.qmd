@@ -1,0 +1,159 @@
+---
+title: "Missing Data"
+format: html
+editor: visual
+---
+
+```{r}
+#| warning: false
+#| message: false
+
+library(here)
+library(tidyverse)
+library(mice)
+library(naniar)
+library(gtsummary)
+```
+
+```{r}
+load(here("project", "data", "wbns_data.rda"))
+```
+
+My variables:
+
+-   Outcome: food insecurity
+
+-   Predictors:
+
+    -   PPAGE: Age
+    -   LGBT: Gay or lesbian, bisexual, or transgender (re-coded)
+    -   XACSNET: Internet access
+    -   PARTNER: Living with a partner
+    -   FAMSIZE: Family size - field data and imputed
+    -   INSURED: Insured at time of survey
+    -   UNMETCARE_Y: Needed medical care but did not get it because could not afford it in past 12 months
+    -   PPP20197: Citizen
+    -   PPINCIMP: Household income
+    -   PPETHM: Race/ethnicity
+
+You should only need to replace my dataset name with yours and my use of variable names with your project's variables.
+
+There are two blank sections that I invite you to try to complete. These are both important parts of quality assurance. It's good to check that the distribution of fully observed variables are not different in the missing vs. observed groups of our variables with missing data. Also, it is important to see how our imputed data look if we place it back with the observed data. Do they stand out? I hope not! (I was going to provide code for this, but it's not new stuff. You can visualize these! ... And I really ran out of time this week :( )
+
+## Citizenship had missing data that was not coded as `NA`
+
+I'm using the `replace_with_na` function to change the missing category to `NA`.
+
+```{r}
+summary(wbns)
+wbns_miss = wbns %>% 
+  replace_with_na(replace = list(PPP20197 = "Missing"))
+  # If Missing, replace with NA, if not then keep value as is
+
+summary(wbns_miss)
+```
+
+## Look at the missing data pattern
+
+Now I can look at the missing data pattern.
+
+```{r}
+#| fig-width: 6
+#| fig-height: 5.5
+#| fig-align: center 
+
+md.pattern(wbns_miss, rotate.names = T)
+```
+
+Looks like citizenship, food insecurity, insurance, and identifying as LGBT have missing data.
+
+## Check the distributions of the variables from the observed vs. missing data
+
+## Use mice to impute data
+
+Now we can use the `mice()` function to impute the data.
+
+Let's break down what I'm using in the function below:
+
+-   I set `m=5` as the number of imputations that I will be running
+
+-   I set `print = F` so I don't get the message as it imputes
+
+-   I set `defaultMethod = c("norm", "logreg", "polyreg", "polr")`
+
+    -   This means `mice` will determine which method to use based on the type of variable
+    -   For binary variables it will use "logreg." Thus, it will use logistic regression to predict the missing values. This will include food insecurity, insured, and LGBT variables in my data.
+    -   For continuous variables, it will use "norm.predict" which will consist of predicting the missing values from linear regression. I don't have any missing continuous values, so this one is not used.
+    -   For multi-level categorical varaibles, we use "polyreg" which is a type of logistic regression that is expanded to handle multiple levels of outcomes. This will include citizenship in my data.
+    -   For ordinal variables, we use "polr" which is a proportional odds model, another type of generalized linear regression model that handles ordered categories. I don't have any missing ordinal variables, so this one is not used.
+
+```{r}
+wbns_MI_5 = mice(wbns_miss, m=5, print = F, 
+                 defaultMethod = c("norm.predict", "logreg", "polyreg", "polr"))
+```
+
+## Complete data
+
+It's hard to parse through the output of `mice`, but we can take a look at one of the imputation's complete (aka filled in) data. Below I will look at the first imputation (hence the `1`). You can change the `1` to anything up to 5 to see the different imputations.
+
+```{r}
+d1 = complete(wbns_MI_5, 1)
+summary(d1)
+```
+
+## See how the imputed values look within the observed values
+
+## Fit regression with imputations
+
+Below is how we run a regression model with the output from `mice` (`wbns_MI_5`). We use the `with` function that can be read as: With `wbns_MI_5`, run the following `glm` function. It will automatically know to know 5 different regressions, one with each imputed dataset.
+
+```{r}
+reg = with(wbns_MI_5, glm(FOOD_INSEC ~ PPAGE + LGBT + XACSNET + PARTNER + 
+                                   FAMSIZE + INSURED + UNMETCARE_Y + PPP20197 +
+                            PPETHM, family = binomial))
+```
+
+Once I have fit the regression model with each imputed dataset, I can pool the results. The `mice` function will use Rubin's Rules to pool the estimates and variances. Note the use of the `pool` function!
+
+```{r}
+pooled_reg_MI = pool(reg)
+mi_reg = summary(pooled_reg_MI, conf.int = TRUE)
+mi_reg
+```
+
+## We can do an informal sensitivity analysis
+
+Here I am simply running a logistic regression model using our complete data. We can compare the estimates from this model to the pooled estimates from the multiply imputed datasets.
+
+```{r}
+wbns_cc = wbns_miss %>% drop_na()
+reg_cc = glm(FOOD_INSEC ~ PPAGE + LGBT + XACSNET + PARTNER + 
+               FAMSIZE + INSURED + UNMETCARE_Y + PPP20197 + 
+               PPETHM, family = binomial, data = wbns_cc)
+
+cc_reg = summary(reg_cc)
+```
+
+I will put the estimates side-by-side now.
+
+```{r}
+estimates = cbind(Mult_imp = mi_reg$estimate, 
+              Complete_case = cc_reg$coefficients[,1])
+estimates
+```
+
+The most important thing I am noting is that:
+
+1.  The complete case estimates have the same signs as the pooled.
+2.  For the most part, the magnitude of the estimates have not changed by much. Family size seems to be the most impacted.
+
+## Now we can proceed with the other parts of Lab 3
+
+Below is some sample code for how I would make a tidy dataset or an odds ratio table from the pooled results! From `reg` and `pooled_reg_MI` you should be able to do everything else in Lab 3!
+
+```{r}
+tidy(pooled_reg_MI, exponentiate=T)
+
+tbl_regression(reg, exponentiate = T) # Note I am not using the pooled results
+    # tble_regression will automatically pool them!
+```

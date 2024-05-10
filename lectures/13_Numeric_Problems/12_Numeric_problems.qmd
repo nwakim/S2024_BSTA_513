@@ -51,11 +51,14 @@ bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1,
 
 # Learning Objectives
 
-1.  Connect understanding of confounding and interactions from linear regression to logistic regression.
+1. Identify and troubleshoot logistic regression analysis when there are zero observations for the cross section of the outcome and a predictor
 
-2.  Determine if an additional independent variable is a not a confounder nor effect modifier, is a confounder but not effect modifier, or is an effect modifier.
 
-3.  Calculate and interpret fitted interactions, including plotting the log-odds, predicted probability, and odds ratios.
+2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups
+
+
+3. Identify and troubleshoot logistic regression analysis when there is collinearity between variables
+
 
 ```{css, echo=FALSE}
 .reveal code {

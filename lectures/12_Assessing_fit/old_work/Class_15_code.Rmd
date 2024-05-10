@@ -68,7 +68,7 @@ cat_model = glm(frac_num ~ priorfrac + momfrac +
                   momfrac*armassist, 
                  data = glow2, family = "binomial")
 
-gof(cat_model)$chiSq
+#gof(cat_model)$chiSq
 
 hoslem.test(glow2$frac_num, fitted(cat_model), g = 10)
 ```

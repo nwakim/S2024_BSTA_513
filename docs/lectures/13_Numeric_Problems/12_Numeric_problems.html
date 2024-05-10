@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="author" content="Nicky Wakim">
+<meta name="dcterms.date" content="2024-05-13">
 
-<title>Categorical Data Analysis - Project Central</title>
+<title>Categorical Data Analysis - Lesson 12: Numeric Problems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-sm navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/Bsta513.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/Bsta513.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Categorical Data Analysis</span>
     </a>
   </div>
@@ -85,19 +86,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./syllabus.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="../../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule.html" rel="" target="">
+    <a class="nav-link" href="../../schedule.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./homeworks.html" rel="" target="">
+    <a class="nav-link" href="../../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project.html" rel="" target="">
+    <a class="nav-link" href="../../project.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -111,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./weeks.html">Course Materials</a></li><li class="breadcrumb-item"><a href="./project.html">Project</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lesson 12: Numeric Problems</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -133,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -148,31 +149,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./instructors.html" class="sidebar-item-text sidebar-link">
+  <a href="../../instructors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instructors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quizzes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../quizzes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quizzes</span></a>
   </div>
 </li>
@@ -189,31 +190,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Weekly Pages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lessons.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lessons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homeworks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../homeworks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./readings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../readings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">613 Readings</span></a>
   </div>
 </li>
@@ -229,133 +230,73 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#labs" id="toc-labs" class="nav-link active" data-scroll-target="#labs">Labs</a></li>
-  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report">Report</a></li>
-  <li><a href="#information-and-resources-on-food-insecurity" id="toc-information-and-resources-on-food-insecurity" class="nav-link" data-scroll-target="#information-and-resources-on-food-insecurity">Information and Resources on Food Insecurity</a></li>
-  <li><a href="#reading-and-listening-sources" id="toc-reading-and-listening-sources" class="nav-link" data-scroll-target="#reading-and-listening-sources">Reading and listening sources</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="12_Numeric_problems.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Central</h1>
+<h1 class="title">Lesson 12: Numeric Problems</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nicky Wakim </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2024</p>
+      <p class="date">May 13, 2024</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">May 9, 2024</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
+<section id="learning-objectives" class="level1">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Identify and troubleshoot logistic regression analysis when there are zero observations for the cross section of the outcome and a predictor</p></li>
+<li><p>Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups</p></li>
+<li><p>Identify and troubleshoot logistic regression analysis when there is collinearity between variables</p></li>
+</ol>
 <div class="cell">
 <style type="text/css">
-.title{
-  font-size: 40px;
-  color: #C2352F;
-  background-color: #fff;
-  padding: 0px;
+.reveal code {
+  max-height: 80% !important;
 }
 </style>
 </div>
-<section id="labs" class="level2">
-<h2 class="anchored" data-anchor-id="labs">Labs</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Lab</th>
-<th>Due Date</th>
-<th>Topics</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="./project/Lab_01_instructions.html">Lab 1</a></td>
-<td>4/18</td>
-<td>Exploring the question and data</td>
-</tr>
-<tr class="even">
-<td><a href="./project/Lab_02_instructions.html">Lab 2</a></td>
-<td>5/2</td>
-<td>EDA continued + Simple logistic regression</td>
-</tr>
-<tr class="odd">
-<td><p><a href="./project/Lab_03_instructions.html">Lab 3</a></p>
-<p><a href="./project/Missing_data.html">Optional missing data code if you want to try it</a></p></td>
-<td>5/16</td>
-<td>Multiple logistic regression + optional missing data</td>
-</tr>
-<tr class="even">
-<td>Lab 4</td>
-<td>5/30</td>
-<td>Building and interpreting final model</td>
-</tr>
-</tbody>
-</table>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/success_model.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </section>
-<section id="report" class="level2">
-<h2 class="anchored" data-anchor-id="report">Report</h2>
-<p>Report Instructions</p>
-<p>Due 6/13/2024</p>
-</section>
-<section id="information-and-resources-on-food-insecurity" class="level2">
-<h2 class="anchored" data-anchor-id="information-and-resources-on-food-insecurity">Information and Resources on Food Insecurity</h2>
-<p>This project will discuss food insecurity and unmet basic needs. If you have experienced or are experiencing food insecurity, and this project impacts your mental health or ability to work, please let me know. We can work on an alternative analysis with a different dataset.</p>
-<p>If you are currently experiencing food insecurity or not meeting your basic needs, here are some resources for Oregon residents:</p>
-<ul>
-<li><p><a href="https://one.oregon.gov/">Oregon One elegibility page</a></p>
-<ul>
-<li>You can apply for benefits including medical, food, cash, or child care assistance</li>
-<li>This is one way to apply to multiple benefits</li>
-</ul></li>
-<li><p><a href="https://www.oregon.gov/oha/hsd/ohp/pages/splash.aspx">Oregon Health Plan</a></p></li>
-<li><p>The Oregon Food Bank has a <a href="https://foodfinder.oregonfoodbank.org/">food finder</a></p></li>
-</ul>
-<p>In addition to these statewide resources, as students, there are other resources available to you:</p>
-<ul>
-<li><p><a href="https://www.ohsu.edu/education/food-assistance-and-basic-needs">Food Assistance and Basic Needs for OHSU students</a></p>
-<ul>
-<li><p>Includes information on <a href="https://www.oregon.gov/odhs/food/pages/snap.aspx">SNAP program</a></p></li>
-<li><p>Includes information on free groceries available to students at the Food Resource Center</p>
-<ul>
-<li>You can even order it online and pick it up!</li>
-</ul></li>
-</ul></li>
-<li><p>You can email basicneeds@ohsu.edu for help getting assistance or connecting you to the following services:</p>
-<ul>
-<li>Manage your finances</li>
-<li>Access emergency funds</li>
-<li>Find legal services</li>
-<li>Apply for SNAP</li>
-<li>Find child care</li>
-<li>Find housing</li>
-</ul></li>
-</ul>
-</section>
-<section id="reading-and-listening-sources" class="level2">
-<h2 class="anchored" data-anchor-id="reading-and-listening-sources">Reading and listening sources</h2>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -590,20 +531,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
