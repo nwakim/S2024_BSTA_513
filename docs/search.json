@@ -459,7 +459,7 @@
     "href": "lessons.html",
     "title": "Lessons",
     "section": "",
-    "text": "Lesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\n5\nSimple Logistic Regression\n\n\n\n\n\n6\nTests for GLMs using Likelihood function\n\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations and Visualizations of Odds Ratios\n\n\n\n\n\n9\nMissing Data\nActivity:\n\n\n\n\n\n\n10\nMultiple Logistic Regression\n\n\n\n\n\n11\nInteractions\n\n\n\n\n\n13\nNumerical Problems\n\n\n\n\n\n14\nAssessing Model Fit\n\n\n\n\n\n15\nModel Building Strategies\n\n\n\n\n\n16\nRevisit interpretations\n\n\n\n\n\n17\nPoisson Regression\n\n\n\n\n\n18\nLog-binomial regression"
+    "text": "Lesson\nTopic\nSlides\nAnnotated Slides\nRecording(s)\n\n\n\n\n1\nFile Organization within R\n\n\n\n\n\n2\nIntroduction to Categorical Analysis\n\n\n\n\n\n3\nMeasurement of Association for Contingency Tables\n\n\n\n\n\n4\nMeasurements of Association and Agreement\n\n\n\n\n\n\n5\nSimple Logistic Regression\n\n\n\n\n\n6\nTests for GLMs using Likelihood function\n\n\n\n\n\n7\nPredictions and Visualizations in Simple Logistic Regression\n\n\n\n\n\n8\nInterpretations and Visualizations of Odds Ratios\n\n\n\n\n\n9\nMissing Data\nActivity:\n\n\n\n\n\n\n10\nMultiple Logistic Regression\n\n\n\n\n\n11\nInteractions\n\n\n\n\n\n12\nAssessing Model Fit\n\n\n\n\n\n13\nNumerical Problems\n\n\n\n\n\n14\nModel Diagnostics\n\n\n\n\n\n15\nModel Building Strategies\n\n\n\n\n\n16\nPoisson Regression\n\n\n\n\n\n17\nLog-binomial regression"
   },
   {
     "objectID": "weeks/week_02_sched.html#resources",
@@ -1621,7 +1621,7 @@
     "href": "weeks/week_07_sched.html#resources",
     "title": "Week 7",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n13\nNumerical Problems\n\n\n\n\n\n14\nAssessing Model Fit"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n12\nAssessing Model Fit\n\n\n\n\n\n13\nAssessing Model Fit"
   },
   {
     "objectID": "weeks/week_07_sched.html#on-the-horizon",
@@ -1635,14 +1635,14 @@
     "href": "weeks/week_07_sched.html#class-exit-tickets",
     "title": "Week 7",
     "section": "Class Exit Tickets",
-    "text": "Class Exit Tickets\n Monday (5/13)\n Wednesday (5/15)"
+    "text": "Class Exit Tickets\n Monday (5/13)\nQuiz starts on Wednesday (5/15)"
   },
   {
     "objectID": "weeks/week_07_sched.html#announcements",
     "href": "weeks/week_07_sched.html#announcements",
     "title": "Week 7",
     "section": "Announcements",
-    "text": "Announcements\nMonday 5/13\n\nI will review our interaction notes from last time\nQuiz 2 opens on Wednesday at 2pm!!\n\nWill cover Lessons 5-9!!\nMostly on Lessons 5-8, with one question about concepts covered in Lesson 9 (like types of missing data…)\n\nLab 2\n\nI noticed that a lot of you did not comment on the trends from the bivariate analysis\n\nThis is why I didn’t have us use ggpairs() last quarter. It’s too easy to just blow past this.\nGetting to know your data and the trends you see in the sample is incredibly important!!\nThe best way to identify issues with your model is to have a good understanding of your data and their trends\n\nMany people noticed small cell counts for income levels\n\nWe will address this issues in lecture this week!\n\nUnless you are removing food insecurity from any hardship or multiple hardships, do NOT use these vraibles!"
+    "text": "Announcements\n\nMonday 5/13\n\nI will review our interaction notes from last time\nQuiz 2 opens on Wednesday at 2pm!!\n\nWill cover Lessons 5-9!!\nMostly on Lessons 5-8, with one question about concepts covered in Lesson 9 (like types of missing data…)\n\nThink about how we fit logistic regression and GLMs\nThink about link functions!\nThink about our tests (Wald, Score, LRT)\nThink about the different transformations between Y, probability, and logit!\nThink about what our predictions mean\nThink about interpretations within logistic regression.\n\n\nLab 2\n\nI noticed that a lot of you did not comment on the trends from the bivariate analysis\n\nThis is why I didn’t have us use ggpairs() last quarter. It’s too easy to just blow past this.\nGetting to know your data and the trends you see in the sample is incredibly important!!\nThe best way to identify issues with your model is to have a good understanding of your data and their trends\n\nMany people noticed small cell counts for income levels\n\nWe will address this issues in lecture this week!\n\nUnless you are removing food insecurity from any hardship or multiple hardships, do NOT use these variables!"
   },
   {
     "objectID": "weeks/week_07_sched.html#muddiest-points",
@@ -6031,14 +6031,14 @@
     "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-calculate-the-proportions",
     "title": "Lesson 11: Interactions",
     "section": "Example: GLOW Study: Calculate the proportions",
-    "text": "Example: GLOW Study: Calculate the proportions\n\nglow2 = glow %&gt;% \n  group_by(age, priorfrac, fracture) %&gt;% # last one needs to be outcome\n  summarise(n = n()) %&gt;%\n  mutate(freq = n / sum(n)) %&gt;% # takes the proportion of yes/no\n  filter(fracture == \"Yes\") # Filtering so only \"success\" shown\n  #filter(freq != 1 | n != 1) \n\nhead(glow2)\n\n# A tibble: 6 × 5\n# Groups:   age, priorfrac [6]\n    age priorfrac fracture     n  freq\n  &lt;int&gt; &lt;fct&gt;     &lt;fct&gt;    &lt;int&gt; &lt;dbl&gt;\n1    56 No        Yes          3 0.15 \n2    56 Yes       Yes          1 1    \n3    57 No        Yes          3 0.158\n4    57 Yes       Yes          1 0.333\n5    58 No        Yes          3 0.15 \n6    59 Yes       Yes          2 0.667"
+    "text": "Example: GLOW Study: Calculate the proportions\n\nglow2 = glow %&gt;% \n  group_by(age, priorfrac, fracture) %&gt;% # last one needs to be outcome\n  summarise(n = n()) %&gt;%\n  mutate(freq = n / sum(n)) %&gt;% # takes the proportion of yes/no\n  filter(fracture == \"Yes\") # Filtering so only \"success\" shown\n\n`summarise()` has grouped output by 'age', 'priorfrac'. You can override using\nthe `.groups` argument.\n\n  #filter(freq != 1 | n != 1) \n\nhead(glow2)\n\n# A tibble: 6 × 5\n# Groups:   age, priorfrac [6]\n    age priorfrac fracture     n  freq\n  &lt;int&gt; &lt;fct&gt;     &lt;fct&gt;    &lt;int&gt; &lt;dbl&gt;\n1    56 No        Yes          3 0.15 \n2    56 Yes       Yes          1 1    \n3    57 No        Yes          3 0.158\n4    57 Yes       Yes          1 0.333\n5    58 No        Yes          3 0.15 \n6    59 Yes       Yes          2 0.667"
   },
   {
     "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-plot-the-proportions",
     "href": "lectures/11_Interactions/11_Interactions.html#example-glow-study-plot-the-proportions",
     "title": "Lesson 11: Interactions",
     "section": "Example: GLOW Study: Plot the proportions",
-    "text": "Example: GLOW Study: Plot the proportions\n\nggplot(data = glow2, aes(y = freq, x = age, color = priorfrac)) +\n  geom_point() + ylim(0, 1) + geom_smooth(se = F) +\n  labs(x = \"Age (years)\", y = \"Proportion of fracture\", \n       color = \"Prior fracture\", title = \"Sample proportion of fracture by age and prior fracture\") +\n  theme(axis.title = element_text(size = 18), axis.text = element_text(size = 18), \n        title = element_text(size = 18), legend.text=element_text(size=18))\n\n\n\nFrom sample proportions, looks like age and prior fracture may have an interaction!"
+    "text": "Example: GLOW Study: Plot the proportions\n\nggplot(data = glow2, aes(y = freq, x = age, color = priorfrac)) +\n  geom_point() + ylim(0, 1) + geom_smooth(se = F) +\n  labs(x = \"Age (years)\", y = \"Proportion of fracture\", \n       color = \"Prior fracture\", title = \"Sample proportion of fracture by age and prior fracture\") +\n  theme(axis.title = element_text(size = 18), axis.text = element_text(size = 18), \n        title = element_text(size = 18), legend.text=element_text(size=18))\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\nFrom sample proportions, looks like age and prior fracture may have an interaction!"
   },
   {
     "objectID": "lectures/11_Interactions/11_Interactions.html#example-glow-study-try-to-visual-the-sample-proportions",
@@ -6108,14 +6108,14 @@
     "href": "lectures/11_Interactions/11_Interactions.html#plot-the-predicted-probability-of-fracture",
     "title": "Lesson 11: Interactions",
     "section": "Plot the predicted probability of fracture",
-    "text": "Plot the predicted probability of fracture\n\nfrac_pred = predict(glow_m3, prior_age, se.fit = T, type=\"response\")\npred_glow = prior_age %&gt;% mutate(frac_pred = frac_pred$fit, \n                                  age = age_c + mean_age)\n\nggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred, color = priorfrac)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) + ylim(0,1) +\n  labs(color = \"Prior Fracture\", x = \"Age (years)\", y = \"Predicted Probability of Fracture\")"
+    "text": "Plot the predicted probability of fracture\n\nfrac_pred = predict(glow_m3, prior_age, se.fit = T, type=\"response\")\npred_glow = prior_age %&gt;% mutate(frac_pred = frac_pred$fit, \n                                  age = age_c + mean_age)\n\nggplot(pred_glow) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred, color = priorfrac)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) + ylim(0,1) +\n  labs(color = \"Prior Fracture\", x = \"Age (years)\", y = \"Predicted Probability of Fracture\")\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "lectures/11_Interactions/11_Interactions.html#plot-of-estimated-log-odds",
     "href": "lectures/11_Interactions/11_Interactions.html#plot-of-estimated-log-odds",
     "title": "Lesson 11: Interactions",
     "section": "Plot of estimated log odds",
-    "text": "Plot of estimated log odds\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), age_c = (55:90)-69)\nfrac_pred_log = predict(glow_m3, prior_age, se.fit = T, type=\"link\")\npred_glow2 = prior_age %&gt;% mutate(frac_pred_log = frac_pred_log$fit, \n                                  age = age_c + mean_age)\n\nggplot(pred_glow2) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred_log, color = priorfrac)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(color = \"Prior Fracture\", x = \"Age (years)\", y = \"Log-Odds of Fracture\")"
+    "text": "Plot of estimated log odds\n\nprior_age = expand_grid(priorfrac = c(\"No\", \"Yes\"), age_c = (55:90)-69)\nfrac_pred_log = predict(glow_m3, prior_age, se.fit = T, type=\"link\")\npred_glow2 = prior_age %&gt;% mutate(frac_pred_log = frac_pred_log$fit, \n                                  age = age_c + mean_age)\n\nggplot(pred_glow2) + #geom_point(aes(x = age, y = frac_pred, color = priorfrac)) +\n  geom_smooth(method = \"loess\", aes(x = age, y = frac_pred_log, color = priorfrac)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(color = \"Prior Fracture\", x = \"Age (years)\", y = \"Log-Odds of Fracture\")\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "lectures/11_Interactions/11_Interactions.html#whats-the-best-way-to-report-on-the-interaction",
@@ -6213,14 +6213,14 @@
     "href": "lectures/11_Interactions/11_Interactions.html#plotting-the-odds-ratio-for-an-interaction",
     "title": "Lesson 11: Interactions",
     "section": "Plotting the odds ratio for an interaction",
-    "text": "Plotting the odds ratio for an interaction\n\nggplot(pred_glow2) +\n  geom_hline(yintercept = 1) +\n  geom_smooth(method = \"loess\", aes(x = age, y = OR_YN)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(x = \"Age (years)\", y = \"Estimated odds ratio\", title = \"Odds ratio of fracture outcome comparing \\n prior fracture to no prior fracture\")"
+    "text": "Plotting the odds ratio for an interaction\n\nggplot(pred_glow2) +\n  geom_hline(yintercept = 1) +\n  geom_smooth(method = \"loess\", aes(x = age, y = OR_YN)) +\n  theme(text = element_text(size=20), title = element_text(size=16)) +\n  labs(x = \"Age (years)\", y = \"Estimated odds ratio\", title = \"Odds ratio of fracture outcome comparing \\n prior fracture to no prior fracture\")\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "lectures/11_Interactions/11_Interactions.html#how-would-i-report-these-results",
     "href": "lectures/11_Interactions/11_Interactions.html#how-would-i-report-these-results",
     "title": "Lesson 11: Interactions",
     "section": "How would I report these results?",
-    "text": "How would I report these results?\n\nRemember our main covariate is prior fracture, so we want to focuse on how age changes the relationship between prior fracture and a new fracture!\n\n\n\nFor individuals 69 years old, the estimated odds of a new fracture for individuals with prior fracture is 2.72 times the estimated odds of a new fracture for individuals with no prior fracture (95% CI: 1.70, 4.35). As seen in Figure 1 (a), the odds ratio of a new fracture when comparing prior fracture status decreases with age, indicating that the effect of prior fractures on new fractures decreases as individuals get older. In Figure 1 (b), it is evident that for both prior fracture statuses, the predict probability of a new fracture increases as age increases. However, the predicted probability of new fracture for those without a prior fracture increases at a higher rate than that of individuals with a prior fracture. Thus, the predicted probabilities of a new fracture converge at age [insert age here].\n\n\n\n\n\n\n\n\n(a) Odds ratio of fracture outcome comparing prior fracture to no prior fracture\n\n\n\n\n\n\n\n(b) Predicted probability of fracture\n\n\n\n\nFigure 1: Plots of odds ratio and predicted probability from fitted interaction model\n\n\n\n\n\n\nLesson 11: Interactions"
+    "text": "How would I report these results?\n\nRemember our main covariate is prior fracture, so we want to focuse on how age changes the relationship between prior fracture and a new fracture!\n\n\n\nFor individuals 69 years old, the estimated odds of a new fracture for individuals with prior fracture is 2.72 times the estimated odds of a new fracture for individuals with no prior fracture (95% CI: 1.70, 4.35). As seen in Figure 1 (a), the odds ratio of a new fracture when comparing prior fracture status decreases with age, indicating that the effect of prior fractures on new fractures decreases as individuals get older. In Figure 1 (b), it is evident that for both prior fracture statuses, the predict probability of a new fracture increases as age increases. However, the predicted probability of new fracture for those without a prior fracture increases at a higher rate than that of individuals with a prior fracture. Thus, the predicted probabilities of a new fracture converge at age [insert age here].\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n(a) Odds ratio of fracture outcome comparing prior fracture to no prior fracture\n\n\n\n\n\n\n\n(b) Predicted probability of fracture\n\n\n\n\nFigure 1: Plots of odds ratio and predicted probability from fitted interaction model"
   },
   {
     "objectID": "lectures/11_Interactions/11_Interactions.html#plotting-the-odds-ratio-for-an-interaction-1",
@@ -6373,36 +6373,36 @@
     "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-need-to-revisit",
     "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-need-to-revisit",
     "title": "Lesson 12: Assessing Model Fit",
-    "section": "",
-    "text": "Once the preliminary final model has been determined, we need to assess the fit of the model\nVariable selection is no longer our focus at this stage\n\nWe want to find answer to whether the model fits the data adequately\n\nAssessing the Goodness of Fit or Assessing model fit\n\nAssess how well our fitted logistic regression model predicts/estimates the observed outcomes\nComparison: fitted/estimated outcome vs. observed outcome"
+    "section": "Overview (NEED TO REVISIT!!)",
+    "text": "Overview (NEED TO REVISIT!!)\n\nOnce the preliminary final model has been determined, we need to assess the fit of the model\nVariable selection is no longer our focus at this stage\n\nWe want to find answer to whether the model fits the data adequately\n\nAssessing the Goodness of Fit or Assessing model fit\n\nAssess how well our fitted logistic regression model predicts/estimates the observed outcomes\nComparison: fitted/estimated outcome vs. observed outcome"
   },
   {
     "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-need-to-revisit-1",
     "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-need-to-revisit-1",
     "title": "Lesson 12: Assessing Model Fit",
-    "section": "",
-    "text": "The model building strategies we have discussed so far only assess the importance of covariates\n\nIt did not assess model fit\n\nPrevious in model building, we made relative comparisons between models\n\nOur conclusions were limited to: Model 1 (full model) fits data better than Model 2 (reduced model)\n\nAssessing goodness of fit is\n\nNot a relative comparison\nIt is an absolute comparison\nTo compare the fitted model to the largest possible model (saturated model)\nModel adequacy vs. Model comparison"
+    "section": "Overview (NEED TO REVISIT!!)",
+    "text": "Overview (NEED TO REVISIT!!)\n\nThe model building strategies we have discussed so far only assess the importance of covariates\n\nIt did not assess model fit\n\nPrevious in model building, we made relative comparisons between models\n\nOur conclusions were limited to: Model 1 (full model) fits data better than Model 2 (reduced model)\n\nAssessing goodness of fit is\n\nNot a relative comparison\nIt is an absolute comparison\nTo compare the fitted model to the largest possible model (saturated model)\nModel adequacy vs. Model comparison"
   },
   {
     "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#components-to-assess-model-fit",
     "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#components-to-assess-model-fit",
     "title": "Lesson 12: Assessing Model Fit",
-    "section": "",
-    "text": "The model fits the data well if\n\nSummary measures of the distance between the predicted/estimated/fitted and observed Y are small\nThe contribution of each pair (predicted and observed) to these summary measures is unsystematic and is small relative to the error structure of the model\nIt is possible to see a “good” summary measure of the distance between predicted and observed Y with some substantial deviation from fit for a few subjects"
+    "section": "Components to Assess Model Fit",
+    "text": "Components to Assess Model Fit\n\nThe model fits the data well if\n\nSummary measures of the distance between the predicted/estimated/fitted and observed Y are small\n\nToday’s lecture!!\n\nThe contribution of each pair (predicted and observed) to these summary measures is unsystematic and is small relative to the error structure of the model\n\nModel Diagnostics that will be covered in another lecture!\n\n\n\n \n\nNeed both components\n\nIt is possible to see a “good” summary measure of the distance between predicted and observed Y with some substantial deviation from fit for a few subjects"
   },
   {
     "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#components-to-assess-model-fit-1",
     "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#components-to-assess-model-fit-1",
     "title": "Lesson 12: Assessing Model Fit",
-    "section": "",
-    "text": "Computation and evaluation of overall measures of fit\nExamination of other measures of the difference or distance between the observed and fitted/predicted values\nExamination of the individual components of the summary statistics (will do in Lesson 14: Model Diagnostics)\n\n\nToday we focus on #1 and #2"
+    "section": "Components to Assess Model Fit",
+    "text": "Components to Assess Model Fit\n\nComputation and evaluation of overall measures of fit\nExamination of other measures of the difference or distance between the observed and fitted/predicted values\nExamination of the individual components of the summary statistics (will do in Lesson 14: Model Diagnostics)\n\n\nToday we focus on #1 and #2"
   },
   {
     "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#comparing-fitted-outcome-to-observed-outcome",
     "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#comparing-fitted-outcome-to-observed-outcome",
     "title": "Lesson 12: Assessing Model Fit",
     "section": "Comparing fitted outcome to observed outcome",
-    "text": "Comparing fitted outcome to observed outcome"
+    "text": "Comparing fitted outcome to observed outcome\n\nIn logistic regression model, we estimate \\(\\pi(\\mathbf{X}) = P(Y=1|\\mathbf{X})\\)\n\nPredicted value, \\(\\widehat\\pi(\\mathbf{X})\\), is between 0 and 1 for each subject\n\nHowever, we always observe \\(Y=1\\) or \\(Y=0\\)\n\nNot an observed \\(\\pi(\\mathbf{X})\\)\n\n\n \n\nWe can deterimine the fitted outcome by sampling Y’s from a Bernoulli distribution with the fitted probability\n\n\\(\\widehat{Y} \\sim \\text{Bernoulli}(\\widehat\\pi(\\mathbf{X}))\\)\n\nIf there are groups of individuals that share the same covariate observations, then we can use the same \\(\\widehat\\pi(\\mathbf{X})\\)\n\n\\(\\sum_j \\widehat{Y} \\sim \\text{Binomial}(\\sum_j, \\widehat\\pi(\\mathbf{X}))\\)\n\n\n \n\nInstead of comparing the expected vs. observed at individual level, we can compare them at “group” level"
   },
   {
     "objectID": "lectures/12_Assessing_fit/old_work/Class_14_code.html",
@@ -6445,5 +6445,299 @@
     "title": "Class 14 Code",
     "section": "AIC and BIC",
     "text": "AIC and BIC\n\nprelim_final = glm(fracture ~ age + height + priorfrac + \n                     momfrac + armassist + raterisk2 + \n                     age*priorfrac + momfrac*armassist, \n                 data = glow2, family = binomial)\n\n\nAIC(prelim_final)\n\n[1] 518.4966\n\nBIC(prelim_final)\n\n[1] 556.4281\n\nprelim_final2 = glm(fracture ~ age + height + priorfrac + \n                      momfrac + armassist + raterisk2 + \n                      age*height, \n                 data = glow2, family = binomial)\n\n\nAIC(prelim_final2)\n\n[1] 525.6843\n\nBIC(prelim_final2)\n\n[1] 559.4012"
+  },
+  {
+    "objectID": "lectures/11_Interactions/11_Interactions.html",
+    "href": "lectures/11_Interactions/11_Interactions.html",
+    "title": "Lesson 11: Interactions",
+    "section": "",
+    "text": "Connect understanding of confounding and interactions from linear regression to logistic regression.\nDetermine if an additional independent variable is a not a confounder nor effect modifier, is a confounder but not effect modifier, or is an effect modifier.\nCalculate and interpret fitted interactions, including plotting the log-odds, predicted probability, and odds ratios."
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-1",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-1",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary-measures-of-goodness-of-fit",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary-measures-of-goodness-of-fit",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Summary Measures of Goodness of Fit",
+    "text": "Summary Measures of Goodness of Fit\n\nAka overall measure of fit\n\n \n\nWhat do we need to calculate them?\n\nNeed to define what the fitted outcome is\nNeed to calculate how close the fitted outcome is to the observed outcome\nSummarize across all observations (or individuals’ data)\n\n\n \n\nTwo tests of goodness-of-fit\n\nPearson residual statistic\nHosmer-Lemeshaw goodness-of-fit statistic"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#last-class-glow-study-with-interactions",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#last-class-glow-study-with-interactions",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Last Class: GLOW Study with interactions",
+    "text": "Last Class: GLOW Study with interactions\n\nOutcome variable: any fracture in the first year of follow up (FRACTURE: 0 or 1)\nRisk factor/variable of interest: history of prior fracture (PRIORFRAC: 0 or 1)\nPotential confounder or effect modifier: age (AGE, a continuous variable)\nFitted model with interactions: \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = \\widehat\\beta_0 &+ &\\widehat\\beta_1\\cdot I(\\text{PF}) & + &\\widehat\\beta_2\\cdot Age& + &\\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age \\\\  \n\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = -1.376 &+ &1.002\\cdot I(\\text{PF})& + &0.063\\cdot Age& -&0.057 \\cdot I(\\text{PF}) \\cdot Age\n\\end{aligned}\\]\n\n \n\nToday: determine the overall fit of this model"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#last-class-reporting-results-of-glow-study-with-interactions",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#last-class-reporting-results-of-glow-study-with-interactions",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Last Class: Reporting results of GLOW Study with interactions",
+    "text": "Last Class: Reporting results of GLOW Study with interactions\n\nRemember our main covariate is prior fracture, so we want to focuse on how age changes the relationship between prior fracture and a new fracture!\n\n\n\nFor individuals 69 years old, the estimated odds of a new fracture for individuals with prior fracture is 2.72 times the estimated odds of a new fracture for individuals with no prior fracture (95% CI: 1.70, 4.35). As seen in Figure 1 (a), the odds ratio of a new fracture when comparing prior fracture status decreases with age, indicating that the effect of prior fractures on new fractures decreases as individuals get older. In Figure 1 (b), it is evident that for both prior fracture statuses, the predict probability of a new fracture increases as age increases. However, the predicted probability of new fracture for those without a prior fracture increases at a higher rate than that of individuals with a prior fracture. Thus, the predicted probabilities of a new fracture converge at age [insert age here].\n\n\n\n\n\n\n\n\n(a) Odds ratio of fracture outcome comparing prior fracture to no prior fracture\n\n\n\n\n\n\n\n(b) Predicted probability of fracture\n\n\n\n\nFigure 1: Plots of odds ratio and predicted probability from fitted interaction model"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#today-a-jump-forward",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#today-a-jump-forward",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Today: a jump forward",
+    "text": "Today: a jump forward\n\nGLOW study still\n\n \n\nAdding more variables\n\n \n\nWe’re jumping to our “final model”\n\nWe can use the Purposeful Selection from last quarter to arrive at this model!!\n\n\n \n\nToday we will be assessing the overall fit of the final model"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#some-good-measurements-for-our-final-models",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#some-good-measurements-for-our-final-models",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Some good measurements for our final model(s)",
+    "text": "Some good measurements for our final model(s)\n\nPearson residual statistic\n\n \n\nHosmer-Lemeshaw goodness-of-fit statistic\n\n \n\nAUC-ROC (area under the curve of the receiver operating characteristic)\n\n \n\nAIC/BIC"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Overview",
+    "text": "Overview\n\nOnce a potential final model has been determined, we need to assess the fit of the model\nVariable selection is no longer our focus at this stage\n\nWe want to find answer to whether the model fits the data adequately\n\nAssessing the Goodness of Fit or Assessing model fit\n\nAssess how well our fitted logistic regression model predicts/estimates the observed outcomes\nComparison: fitted/estimated outcome vs. observed outcome"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-1",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-1",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Overview",
+    "text": "Overview\n\nTo assess the fit of the model, it is good to have a mixture of measurements\nWe want to measure the absolute fit: not comparing to any models, but determining if the model fits the data well\n\nPearson residual statistic\nHosmer-Lemeshaw goodness-of-fit statistic\nAUC-ROC (kind of, often do not use a hypothesis test but you can!)\n\nWe want comparable measures of fit: if we have candidate models that are not nested\n\nAUC-ROC\nAIC/BIC"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#number-of-covariate-patterns",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#number-of-covariate-patterns",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Number of Covariate Patterns",
+    "text": "Number of Covariate Patterns\n\nWhen the logistic regression model contains only categorical covariates, we can think of the number of covariate patterns\nFor example: model contains two binary covariates (history of fracture and smoking status), there will be 4 unique combination of these factors\n\nThis model has 4 covariate patterns\nSubjects can be divided into 4 groups based on the covariates’ values\n\nWe can then compute the predicted number of individuals with Y=1 in each group, and compare that with the actual observed number of individuals with Y=1 in that group\n\nWe don’t need to sample this\nWe use the expected value (mean) of the Binomial to determine the \\(\\widehat{Y}\\) for each covariate pattern\nFor covariate pattern \\(j\\) with \\(m_j\\) observations: \\[\\widehat{Y}_j = m_j \\widehat\\pi(\\mathbf{X_j}) = m_j{\\hat{\\pi}}_j\\]"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#pearson-residual",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#pearson-residual",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Pearson Residual",
+    "text": "Pearson Residual\n\nIn logistic regression model, can use Pearson residual for summary measure of goodness-of-fit Uses the \\(\\widehat{Y}_j\\) fitted value from previous slide\nPearson residual for jth covariate pattern is: \\[r\\left(Y_j,{\\hat{\\pi}}_j\\right)=\\frac{(Y_j-m_j{\\hat{\\pi}}_j)}{\\sqrt{m_j{\\hat{\\pi}}_j(1-{\\hat{\\pi}}_j)}}=\\frac{(Y_j-{\\hat{Y}}_i)}{\\sqrt{{\\hat{Y}}_i(1-{\\hat{\\pi}}_j)}}\\]\nThe summary statistics of Pearson residual is thus: \\[X^2=\\sum_{j=1}^{J}{r\\left(Y_j,{\\hat{\\pi}}_j\\right)^2}\\]"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#example",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#example",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#issues-with-pearson-residuals",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#issues-with-pearson-residuals",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Issues with Pearson Residuals",
+    "text": "Issues with Pearson Residuals\n\nAssume current model has p covariates…\n\nthen \\(X^2\\) (Pearson residual) follows a chi-squared distribution\n\nunder the null hypothesis based on large sample theory\n\nOnly appropriate if the number of covariate patterns is less than the number of observations\n\n\n \n\nWhen the logistic regression model contains one or more continuous covariates, it is likely that the number of covariate patterns equals to the sample size n\n\n \n\nWe should not use Pearson Residuals to evaluate goodness-of-fit test when the fitted model contains one or more continuous variables"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#pearson-residual-testing",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#pearson-residual-testing",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Pearson Residual: testing",
+    "text": "Pearson Residual: testing\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses: same for all data\n\n\\(H_0\\): model fits well\n\\(H_1\\): model does not fits well\n\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#not-going-to-bother-going-through-an-example",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#not-going-to-bother-going-through-an-example",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Not going to bother going through an example",
+    "text": "Not going to bother going through an example\n\nWe can calculate this by hand and test against a chi-squared distribution\n\n \n\nNo set R code to do this\n\n \n\nI do not see this as the main way to determine goodness of fit… for a binary outcome!\n\nOften because of the bigger issues with it…"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Hosmer-Lemeshow test",
+    "text": "Hosmer-Lemeshow test\n\nIf number of covariate patterns is roughly same as the number of observations\n\nWhenever you include a continuous variable in your model\nHosmer-Lemeshow (HL) goodness-of-fit test should be used instead\n\n\n \n\nHowever, HL test does not work well if the number of covariate patterns is small\n\nHL test should not be used if the number of covariate patterns ≤ 6\n\nFor reference: 3 binary predictors makes 8 covariate patterns\n\nPearson residuals \\(X^2\\) should be used when the number of covariate patterns is small\n\n\n \n\nA large p-value from HL test suggests the model fits well"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-pearson-residual",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-pearson-residual",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "GLOW Study: Pearson residual",
+    "text": "GLOW Study: Pearson residual\n\nOkay, so let’s look at a model with only prior fracture: \\[\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = \\beta_0 + \\beta_1\\cdot I(\\text{PF})\\]\nWe need to fit the model and use a new command:\n\n\nlibrary(aplore3)\nglow=glow500\nsource(here(\"lectures\", \"12_Assessing_fit\", \"Logistic_Dx_Functions.R\"))\nglow2 = glow %&gt;% mutate(frac_num = as.numeric(fracture)-1) \nglow2 = glow %&gt;% mutate(raterisk2 = factor(raterisk, levels = c(\"Less\", \"Same\", \"Greater\"), \n                                            labels = c(\"Less and Same\", \"Less and Same\", \"Greater\")), \n                        frac_num = as.numeric(fracture)-1) \nglow_m1 = glm(fracture ~ priorfrac + momfrac + \n                  armassist + raterisk2 + \n                  momfrac*armassist, , \n              data = glow2, family = binomial)\n\nanova(glow_m1,\nupdate(glow_m1, ~ 1),\ntest= \"Chisq\")\n\nAnalysis of Deviance Table\n\nModel 1: fracture ~ priorfrac + momfrac + armassist + raterisk2 + momfrac * \n    armassist\nModel 2: fracture ~ 1\n  Resid. Df Resid. Dev Df Deviance  Pr(&gt;Chi)    \n1       494     523.94                          \n2       499     562.34 -5  -38.396 3.142e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\ngof(glow_m1)\n\n\n$ct\n        n     y1hat    y1      y0hat    y0\n    &lt;int&gt;     &lt;num&gt; &lt;num&gt;      &lt;num&gt; &lt;num&gt;\n 1:     6  1.929020     2   4.070980     4\n 2:    11  4.129453     4   6.870547     7\n 3:    82 19.204752    20  62.795248    62\n 4:   169 22.823424    21 146.176576   148\n 5:    54  9.802732    11  44.197268    43\n 6:     6  3.221457     3   2.778543     3\n 7:    33 17.003775    16  15.996225    17\n 8:    38 10.504263     9  27.495737    29\n 9:    10  2.501341     3   7.498659     7\n10:     4  2.380969     2   1.619031     2\n11:    20  5.946266     7  14.053734    13\n12:    26 11.128460    13  14.871540    13\n13:    22  6.663013     5  15.336987    17\n14:     5  2.543312     2   2.456688     3\n15:     3  1.348182     1   1.651818     2\n16:    11  3.869581     6   7.130419     5\n\n$chiSq\n     test      chiSq    df      pVal\n   &lt;char&gt;      &lt;num&gt; &lt;int&gt;     &lt;num&gt;\n1:    PrI 497.234325   494 0.4507076\n2:    drI 523.939507   494 0.1697839\n3:    PrG   4.756822    10 0.9068193\n4:    drG   4.686232    10 0.9111289\n5:   PrCT   4.756822    10 0.9068193\n6:   drCT   4.686232    10 0.9111289\n\n$ctHL\n        P    y1     y1hat    y0     y0hat     n      Pbar\n   &lt;fctr&gt; &lt;num&gt;     &lt;num&gt; &lt;num&gt;     &lt;num&gt; &lt;int&gt;     &lt;num&gt;\n1:  0.135    21 22.823424   148 146.17658   169 0.1350498\n2:  0.182    11  9.802732    43  44.19727    54 0.1815321\n3:   0.25    23 21.706092    69  70.29391    92 0.2359358\n4:  0.303    21 23.113542    59  56.88646    80 0.2889193\n5:  0.428    25 21.056515    29  32.94348    54 0.3899355\n6:  0.595    24 26.497695    27  24.50230    51 0.5195626\n\n$gof\n         test   stat        val    df      pVal\n       &lt;char&gt; &lt;char&gt;      &lt;num&gt; &lt;num&gt;     &lt;num&gt;\n1:         HL  chiSq  2.4204611     8 0.9653368\n2:        mHL      F  2.1434000     5 0.1427335\n3:       OsRo      Z -0.9746271    NA 0.3297453\n4: SstPgeq0.5      Z  0.4922364    NA 0.6225522\n5:   SstPl0.5      Z  0.7472311    NA 0.4549241\n6:    SstBoth  chiSq  0.8006510     2 0.6701019\n7: SllPgeq0.5  chiSq  0.2381638     1 0.6255355\n8:   SllPl0.5  chiSq  0.5572551     1 0.4553683\n9:    SllBoth  chiSq  0.6056863     2 0.7387150\n\n$R2\n   method         R2\n   &lt;char&gt;      &lt;num&gt;\n1:    ssI 0.07826505\n2:    ssG 0.98817727\n3:    llI 0.06827892\n4:    llG 0.89122495\n\n$auc\n         auc lower 95% CI upper 95% CI \n    67.79413     62.41380     73.17447 \nattr(,\"interpret\")\n[1] \"auc = 0.5       --&gt; useless\"   \"0.7 &lt; auc &lt; 0.8 --&gt; good\"     \n[3] \"0.8 &lt; auc &lt; 0.9 --&gt; excellent\"\n\nattr(,\"link\")\n[1] \"logit\"\nattr(,\"class\")\n[1] \"gof.glm\" \"list\"   \n\n\n\n\nLesson 12: Assessing Model Fit"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test-1",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test-1",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Hosmer-Lemeshow test",
+    "text": "Hosmer-Lemeshow test\n\nHL test uses groupings from percentiles to basically measure what Pearson residual measures\n\n \n\nSteps to compute HL test statistic:\n\nCompute estimated probability \\(\\widehat\\pi(\\mathbf{X}))\\) for all n subjects (\\(n=1, 2, ..., n\\))\nOrder \\(\\widehat\\pi(\\mathbf{X}))\\) from largest to smallest values\nDivide ordered values into g percentile grouping (usually \\(g = 10\\) based on H-L’s suggestion)\nForm table of observed and expected counts\nCalculate HL test statistic from table\nCompare HL test statistic to chi-squared distribution (\\(\\chi^2_{g-2}\\))"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everwhere-question-2",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everwhere-question-2",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Poll Everwhere question 2",
+    "text": "Poll Everwhere question 2"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test-statistic",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test-statistic",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Hosmer-Lemeshow test statistic",
+    "text": "Hosmer-Lemeshow test statistic\n\nThe test statistic of Hosmer-Lemeshow goodness-of-fit test is denoted by \\(\\widehat{C}\\), which is obtained by calculating the Pearson chi-squared statistic from the \\(g \\times 2\\) table of observed and estimated expected frequencies \\[\\hat{C}=\\sum_{k=1}^{g}\\frac{\\left(o_k-n_k^\\prime{\\bar{\\pi}}_k\\right)^2}{n_k^\\prime{\\bar{\\pi}}_k(1-{\\bar{\\pi}}_k)}\\]\n\nwhere \\(n'_k\\) is the total number of subjects in the \\(k\\)th group\n\nLet \\(c_k\\) be the number of covariate patterns in the \\(k\\)th decile: \\[o_k=\\sum_{j=1}^{c_k}y_j\\] and \\[{\\bar{\\pi}}_k=\\sum_{j=1}^{c_k}\\frac{m_j{\\hat{\\pi}}_j}{n_k^\\prime}\\]"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test-procedure",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#hosmer-lemeshow-test-procedure",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Hosmer-Lemeshow test procedure",
+    "text": "Hosmer-Lemeshow test procedure\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses: same for all data\n\n\\(H_0\\): model fits well\n\\(H_1\\): model does not fits well\n\nCalculate the test statistic and p-value\n\nNote: \\(\\widehat{C} \\sim \\chi^2_{df=g-2}\\)\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-hosmer-lemeshow-test",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-hosmer-lemeshow-test",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "GLOW Study: Hosmer-Lemeshow test",
+    "text": "GLOW Study: Hosmer-Lemeshow test\n\nOkay, so let’s look at the interaction model from last class \\[\\text{logit}\\left(\\pi(\\mathbf{X})\\right) = \\beta_0 + \\beta_1\\cdot I(\\text{PF}) +\\beta_2\\cdot Age + \\beta_3 \\cdot I(\\text{PF}) \\cdot Age\\]\nWe need to fit the model and use a new command:\n\n\nglow_m3 = glm(fracture ~ priorfrac + age_c + priorfrac*age_c, \n              data = glow, family = binomial)\nlibrary(ResourceSelection)\nobs_vals = as.numeric(glow$fracture) -1\nfit_vals = fitted(glow_m3)\nhoslem.test(obs_vals, fit_vals, g = 10)\n\n\n    Hosmer and Lemeshow goodness of fit (GOF) test\n\ndata:  obs_vals, fit_vals\nX-squared = 6.778, df = 8, p-value = 0.5608\n\n\nNote to Nicky: do NOT make conclusion yet! In the poll everywhere!"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-3",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-3",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Poll Everywhere question 3",
+    "text": "Poll Everywhere question 3"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-hosmer-lemeshow-test-1",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-hosmer-lemeshow-test-1",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "GLOW Study: Hosmer-Lemeshow test",
+    "text": "GLOW Study: Hosmer-Lemeshow test\n\nConclusion: The p-value is 0.5608, so we fail to reject the null hypothesis that the model fits the data well. Thus, the preliminary final model for the GLOW dataset fits the data well\n\n \n\nDon’t forget that we still need to check individual observations (Model Diagnostics!)\n\n \n\nR may give results for the HL test even if it is not appropriate to use it!\n\nIf number of covariate patterns ≤ 6, do not use HL test"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#big-data-issue-in-goodness-of-fit-test",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#big-data-issue-in-goodness-of-fit-test",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Big Data Issue in Goodness-of-fit Test",
+    "text": "Big Data Issue in Goodness-of-fit Test\n\nWhen the sample size is really big (&gt; 1000), it is much more likely to find the H-L reject the model fit (even when the expected vs. observed in each decile categories looks pretty similar)\n\n \n\nThis is due to “too much” power in hypothesis testing.\n\nPaul et al. (2012) for samples sizes from 1000 to 25,000, the number of groups g should be equal to \\[g=\\max{\\left(10,\\min{\\left\\{\\frac{n_1}{2},\\ \\frac{n-n_1}{2},\\ 2+8\\left(\\frac{n}{1000}\\right)^2\\right\\}}\\right)}\\]\n\n\n \n\nFor example, if one has a sample with \\(n=10, 000\\) (sample size) and \\(n_1=1,000\\) (number of events) then \\(g=500\\) groups are suggested\nFor n &gt; 25000, other methods, such as partitioning data into a developmental data set (with smaller n) and a validation set"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#final-notes-on-goodness-of-fit-test",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#final-notes-on-goodness-of-fit-test",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Final Notes on Goodness-of-fit Test",
+    "text": "Final Notes on Goodness-of-fit Test\n\nThey should not be used for variable selection\n\nThe likelihood ratio tests for significance of coefficients are much more powerful and appropriate (when nested)\n\n\n \n\nThey are not for model comparison\n\nOne should not use the p-value from goodness of fit tests of different models to decide which model is better than the other\nSomething like AUC-ROC, AIC, or BIC can be used"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#roc-curve-and-auc-12",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#roc-curve-and-auc-12",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "ROC Curve and AUC (1/2)",
+    "text": "ROC Curve and AUC (1/2)\n\n\n\nReceiver Operating Characteristics (ROC) curve is useful tool to quantify how good is our model predicting binary outcome\n\n \n\nIt is a plot of sensitivity (true positive rate) versus (1-specificity) or false positive rate of fitted binary values\n\nTrue Positive Rate \\(= \\dfrac{TP}{TP + FN}\\)\nFalse Positive Rate \\(= \\dfrac{FP}{FP + TN}\\)\n\n\n \n\nThe ROC curve shows the tradeoff between sensitivity and specificity"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#roc-curve-and-auc-22",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#roc-curve-and-auc-22",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "ROC Curve and AUC (2/2)",
+    "text": "ROC Curve and AUC (2/2)\n\n\n\nArea under the ROC curve (AUC ROC) is a reasonable summary of the overall predictive accuracy of the test\n\nAccuracy means how well the predicted value matches the observed value\n\n\n \n\nThe closer the curve follows the left-hand border and top border of the ROC space, the more accurate the test\n\nAn AUC =1 represents 100% accuracy\n\n\n \n\nThe closer the curve comes to the 45-degree diagonal line, the less accurate the test\n\nAn AUC = 0.5 represents an unhelpful model\n\nRandom predictions"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-4",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-4",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#roc-curve-and-auc-33",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#roc-curve-and-auc-33",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "ROC Curve and AUC (3/3)",
+    "text": "ROC Curve and AUC (3/3)\n\nOften only report the AUC\n\n \n\nSuggestions of how to interpret model fit through AUC values:"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-roc-of-interaction-model",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#glow-study-roc-of-interaction-model",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "GLOW Study: ROC of interaction model",
+    "text": "GLOW Study: ROC of interaction model\n\n\n\nlibrary(pROC)\npredicted &lt;- predict(glow_m3, glow, type=\"response\")\n\n# define object to plot and calculate AUC\nrocobj &lt;- roc(glow$fracture, predicted)\nauc &lt;- round(auc(glow$fracture, predicted),4)\n\n#create ROC plot\nggroc(rocobj, colour = 'steelblue', \n      size = 2, legacy.axes = TRUE) +\n  ggtitle(paste0('ROC Curve ','(AUC = ',auc,')')) +\n  theme(text = element_text(size = 23)) +\n  xlab(\"False Positive Rate (1 - Specificity)\") +\n  ylab(\"True Positive Rate (Sensitivity)\")\n\n\n\n\n\n\n\n\n\n\nWe have a poorly fitting model\nWe can take auc and compare it to other models: good way to pick a model based on predictive power"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#another-way-to-think-about-auc",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#another-way-to-think-about-auc",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Another way to think about AUC",
+    "text": "Another way to think about AUC\n\nGLOW Study: Consider the situation in which the fracture status of each individual is known\n\n \n\nRandomly pick one individual from fractured group and one from non-fractured outcome group\n\nBased on their age, height, prior fracture, and all other covariates, we will correctly predict which is from fractured group\n\n\n \n\nThe AUC is the percentage of randomly drawn pairs for which we predict the pair correctly\n\n \n\nTherefore, AUC represents the ability of our covariates to discriminate between individuals with the outcome (fracture) and those without the outcome"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#aic-and-bic",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#aic-and-bic",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "AIC and BIC",
+    "text": "AIC and BIC\n\nTwo widely used non-hypothesis testing based measurements that helps select a good model\n\nAkaike Information Criterion (AIC)\nBayesian Information Criterion (BIC)\n\n\n \n\nUnlike likelihood ratio test which is only suitable for nested model, AIC and BIC are suitable for both nested and non-nested model\n\n \n\nThere is no hypothesis/conclusion testing for the comparison between two models\n\nSo not the best for selecting covariates to include in model\nBUT helpful if you have a few preliminary final models that you want to compare"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-5",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#poll-everywhere-question-5",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#aic-and-bic-1",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#aic-and-bic-1",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "AIC and BIC",
+    "text": "AIC and BIC\n\nBoth AIC and BIC penalize a model for having many parameters\n\n \n\n\n\n\n\n\n\n\nMeasure of fit\nEquation\nR code\n\n\n\n\nAkaike information criterion (AIC)\n\\(AIC = -2 \\cdot \\text{log-likelihood} + 2q\\)\nAIC(model_name)\n\n\nBayesian information criterion (BIC)\n\\(AIC = -2 \\cdot \\text{log-likelihood} + q\\text{log}(n)\\)\nBIC(model_name)\n\n\n\n \n\nWhere q is the number of parameters in the model and n is the sample size\nBoth AIC and BIC can only be used to compare models fitting the same data set\nIn comparing two models, the model with smaller AIC and/or BIC is preferred\n\nWhen the difference in AIC between two models exceeds 3, the difference is viewed as “meaningful”"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\n\n\n\nMeasure of fit\nHypothesis tested?\nEquation\nR code\n\n\n\n\nPearson residual\nYes\n\\(X^2=\\sum_{j=1}^{J}{r\\left(Y_j,{\\hat{\\pi}}_j\\right)^2}\\)\nNot given\n\n\nHosmer-Lemeshow test\nYes\n\\(\\hat{C}=\\sum_{k=1}^{g}\\frac{\\left(o_k-n_k^\\prime{\\bar{\\pi}}_k\\right)^2}{n_k^\\prime{\\bar{\\pi}}_k(1-{\\bar{\\pi}}_k)}\\)\nhoslem.test()\n\n\nAUC-ROC\nKinda\nNot given\nauc(observed, predicted)\n\n\nAIC\nOnly to compare models\n\\(AIC = -2 \\cdot \\text{log-likelihood} + 2q\\)\nAIC(model_name)\n\n\nBIC\nOnly to compare models\n\\(AIC = -2 \\cdot \\text{log-likelihood} + q\\text{log}(n)\\)\nBIC(model_name)\n\n\n\nSpecial notes:\n\nUse Hosmer-Lemshow test over Pearson residual unless number of covariate patterns is less than 6\nCannot use Pearson residual when there is a continuous variable in the model\n\n\n\nLesson 12: Assessing Model Fit"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#aic-and-bic-in-r",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#aic-and-bic-in-r",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "AIC and BIC in R",
+    "text": "AIC and BIC in R\n\nAfter fitting the logistic regression model, can calculate AIC and BIC\nLet’s look at the AIC and BIC of our interaction model:\n\n\nAIC(glow_m3)\n\n[1] 531.2716\n\nBIC(glow_m3)\n\n[1] 548.13"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary-12",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary-12",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Summary (1/2)",
+    "text": "Summary (1/2)\n\n\n\n\n\n\n\n\n\nMeasure of fit\nHypothesis tested?\nEquation\nR code\n\n\n\n\nPearson residual\nYes\n\\(X^2=\\sum_{j=1}^{J}{r\\left(Y_j,{\\hat{\\pi}}_j\\right)^2}\\)\nNot given\n\n\nHosmer-Lemeshow test\nYes\n\\(\\hat{C}=\\sum_{k=1}^{g}\\frac{\\left(o_k-n_k^\\prime{\\bar{\\pi}}_k\\right)^2}{n_k^\\prime{\\bar{\\pi}}_k(1-{\\bar{\\pi}}_k)}\\)\nhoslem.test()\n\n\nAUC-ROC\nKinda\nNot given\nauc(observed, predicted)\n\n\nAIC\nOnly to compare models\n\\(AIC = -2 \\cdot \\text{log-likelihood} + 2q\\)\nAIC(model_name)\n\n\nBIC\nOnly to compare models\n\\(AIC = -2 \\cdot \\text{log-likelihood} + q\\text{log}(n)\\)\nBIC(model_name)\n\n\n\nSpecial notes:\n\nUse Hosmer-Lemshow test over Pearson residual unless number of covariate patterns is less than 6\nCannot use Pearson residual when there is a continuous variable in the model"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary-22",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#summary-22",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Summary (2/2)",
+    "text": "Summary (2/2)\n\nFor our interaction model: \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = \\widehat\\beta_0 &+ &\\widehat\\beta_1\\cdot I(\\text{PF}) & + &\\widehat\\beta_2\\cdot Age& + &\\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age \\\\  \n\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = -1.376 &+ &1.002\\cdot I(\\text{PF})& + &0.063\\cdot Age& -&0.057 \\cdot I(\\text{PF}) \\cdot Age\n\\end{aligned}\\]\nWe can examine the overall model fit using:\n\nNot comparing to any other models:\n\nPearson residual: Not appropriate for this model\nHosmer-Lemeshow: \\(\\hat{C}=6.778\\), p-value = 0.56\nAUC-ROC: 0.6819\n\nCan be used to compare to other models:\n\nAUC-ROC: 0.6819\nAIC: 531.27\nBIC: 548.13\n\n\n\n\n\nLesson 12: Assessing Model Fit"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-12",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-12",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Overview (1/2)",
+    "text": "Overview (1/2)\n\nOnce a potential final model has been determined, we need to assess the fit of the model\n\n \n\nVariable selection is no longer our focus at this stage\n\nWe want to find answer to whether the model fits the data adequately\n\n\n \n\nAssessing the Goodness of Fit or Assessing model fit\n\nAssess how well our fitted logistic regression model predicts/estimates the observed outcomes\nComparison: fitted/estimated outcome vs. observed outcome"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-22",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#overview-22",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Overview (2/2)",
+    "text": "Overview (2/2)\n\nTo assess the fit of the model, it is good to have a mixture of measurements\n\n \n\nWe want to measure the absolute fit: not comparing to any models, but determining if the model fits the data well\n\nPearson residual statistic\nHosmer-Lemeshaw goodness-of-fit statistic\nAUC-ROC (kind of, often do not use a hypothesis test but you can!)\n\n\n \n\nWe want comparable measures of fit: if we have candidate models that are not nested\n\nAUC-ROC\nAIC/BIC"
+  },
+  {
+    "objectID": "lectures/12_Assessing_fit/12_Assessing_fit.html#pearson-residual-procedure",
+    "href": "lectures/12_Assessing_fit/12_Assessing_fit.html#pearson-residual-procedure",
+    "title": "Lesson 12: Assessing Model Fit",
+    "section": "Pearson Residual procedure",
+    "text": "Pearson Residual procedure\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses: same for all data\n\n\\(H_0\\): model fits well\n\\(H_1\\): model does not fits well\n\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
   }
 ]

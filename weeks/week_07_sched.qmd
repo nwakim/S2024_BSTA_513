@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic               |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|-------------|-------------|:-------------:|:-------------:|:-------------:|
-| 13     | Numerical Problems  | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 14     | Assessing Model Fit | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic               |                                                          Slides                                                          |                                  Annotated Slides                                  |                           Recording                           |
+|-------------|-------------|:-------------:|:-----------------:|:-----------:|
+| 12     | Assessing Model Fit | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/12_Assessing_fit/12_Assessing_fit.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 13     | Assessing Model Fit |                          [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                           | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
@@ -41,16 +41,22 @@ editor_options:
 
 [{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Monday (5/13)
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/15)
+Quiz starts on Wednesday (5/15)
 
 ## Announcements
 
-Monday 5/13
+### Monday 5/13
 
 -   I will review our interaction notes from last time
 -   **Quiz 2 opens on Wednesday at 2pm!!**
     -   Will cover Lessons 5-9!!
     -   Mostly on Lessons 5-8, with one question about concepts covered in Lesson 9 (like types of missing data...)
+        -   Think about how we fit logistic regression and GLMs
+        -   Think about link functions!
+        -   Think about our tests (Wald, Score, LRT)
+        -   Think about the different transformations between Y, probability, and logit!
+        -   Think about what our predictions mean
+        -   Think about interpretations within logistic regression.
 -   Lab 2
     -   I noticed that a lot of you did not comment on the trends from the bivariate analysis
         -   This is why I didn't have us use `ggpairs()` last quarter. It's too easy to just blow past this.
@@ -58,7 +64,7 @@ Monday 5/13
         -   The best way to identify issues with your model is to have a good understanding of your data and their trends
     -   Many people noticed small cell counts for income levels
         -   We will address this issues in lecture this week!
-    -   Unless you are removing food insecurity from any hardship or multiple hardships, do NOT use these vraibles!
+    -   Unless you are removing food insecurity from any hardship or multiple hardships, do NOT use these variables!
 
 ## Muddiest Points
 

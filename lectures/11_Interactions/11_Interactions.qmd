@@ -57,12 +57,12 @@ bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1,
 
 3.    Calculate and interpret fitted interactions, including plotting the log-odds, predicted probability, and odds ratios. 
 
-
 ```{css, echo=FALSE}
 .reveal code {
   max-height: 80% !important;
 }
 ```
+
 
 # Learning Objectives
 
@@ -1044,6 +1044,8 @@ For individuals 69 years old, the estimated odds of a new fracture for individua
 #|   - "Predicted probability of fracture" 
 #| layout-ncol: 2
 #| echo: false
+
+# save(pred_glow2, glow_m3, prior_age, file = here("lectures", "12_Assessing_fit/data", "glow_results.Rda"))
 
 ggplot(pred_glow2) +
   geom_hline(yintercept = 1) +
