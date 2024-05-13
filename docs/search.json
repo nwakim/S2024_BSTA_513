@@ -1649,7 +1649,7 @@
     "href": "weeks/week_07_sched.html#muddiest-points",
     "title": "Week 7",
     "section": "Muddiest Points",
-    "text": "Muddiest Points"
+    "text": "Muddiest Points\n\n1. How do we determine the number of covariate patterns in R?\nTheoretically, all you need to do is count the number of groups in each categorical covariates. To find the total number of covariate patterns, you multiple those numbers by each other.\nIn R, we can take a dataframe with only the predictors in your model. You can use the distinct() function to create unique rows. The number of rows outputted will be the number of covariate patterns."
   },
   {
     "objectID": "weeks/week_08_sched.html#resources",
