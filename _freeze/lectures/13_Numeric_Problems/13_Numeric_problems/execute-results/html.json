@@ -1,0 +1,14 @@
+{
+  "hash": "b740820c9435cf2100e5eed5f694a2c4",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 12: Numeric Problems\"\nauthor: \"Nicky Wakim\"\ntitle-slide-attributes:\n    data-background-color: \"#C2352F\"\ndate: \"05/13/2024\"\nformat: \n  revealjs:\n    theme: \"../simple_NW.scss\"\n    chalkboard: true\n    slide-number: true\n    show-slide-number: all\n    width: 1955\n    height: 1100\n    footer: \"Lesson 12: Numeric Problems\"\n    html-math-method: mathjax\n    highlight-style: ayu\nexecute:\n  echo: true\n  freeze: auto  # re-render only when source changes\neditor_options: \n  chunk_output_type: console\n---\n\n::: {.cell}\n\n:::\n\n\n\n# Learning Objectives\n\n1. Identify and troubleshoot logistic regression analysis when there are zero observations for the cross section of the outcome and a predictor\n\n\n2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups\n\n\n3. Identify and troubleshoot logistic regression analysis when there is collinearity between variables\n\n\n\n\n::: {.cell}\n<style type=\"text/css\">\n.reveal code {\n  max-height: 80% !important;\n}\n</style>\n:::\n\n\n\n## \n\n![](images/success_model.png){fig-align=\"center\"}\n\n## \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nicky Wakim">
+<meta name="dcterms.date" content="2024-05-13">
 
-<title>Categorical Data Analysis - Weekly Pages</title>
+<title>Categorical Data Analysis - Lesson 12: Numeric Problems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,38 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -103,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-sm navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/Bsta513.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/Bsta513.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Categorical Data Analysis</span>
     </a>
   </div>
@@ -117,19 +86,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./syllabus.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="../../syllabus.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule.html" rel="" target="">
+    <a class="nav-link" href="../../schedule.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./homeworks.html" rel="" target="">
+    <a class="nav-link" href="../../homeworks.html" rel="" target="">
  <span class="menu-text">Homework</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project.html" rel="" target="">
+    <a class="nav-link" href="../../project.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -143,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./weeks.html">Course Materials</a></li><li class="breadcrumb-item"><a href="./weeks.html">Weekly Pages</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lesson 12: Numeric Problems</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -165,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -180,31 +149,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./instructors.html" class="sidebar-item-text sidebar-link">
+  <a href="../../instructors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instructors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quizzes.html" class="sidebar-item-text sidebar-link">
+  <a href="../../quizzes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quizzes</span></a>
   </div>
 </li>
@@ -221,31 +190,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Weekly Pages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lessons.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lessons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homeworks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../homeworks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./readings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../readings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">613 Readings</span></a>
   </div>
 </li>
@@ -257,21 +226,43 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="13_Numeric_problems.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Weekly Pages</h1>
+<h1 class="title">Lesson 12: Numeric Problems</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nicky Wakim </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 13, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -279,188 +270,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<section id="learning-objectives" class="level1">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Identify and troubleshoot logistic regression analysis when there are zero observations for the cross section of the outcome and a predictor</p></li>
+<li><p>Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups</p></li>
+<li><p>Identify and troubleshoot logistic regression analysis when there is collinearity between variables</p></li>
+</ol>
+<div class="cell">
+<style type="text/css">
+.reveal code {
+  max-height: 80% !important;
+}
+</style>
 </div>
-
-<table class="quarto-listing-table table table-hover">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="" data-listing-date-sort="1711954800000" data-listing-file-modified-sort="1712597749354" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="6" data-listing-title-sort="Week 1" data-listing-filename-sort="week_01_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">4/1/24</span>
-</td>
-<td>
-<a href="./weeks/week_01_sched.html" class="title listing-title">Week 1</a>
-</td>
-<td>
-<span class="listing-description">Introduction; File Organization</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="" data-listing-date-sort="1712559600000" data-listing-file-modified-sort="1712954049979" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="14" data-listing-title-sort="Week 2" data-listing-filename-sort="week_02_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">4/8/24</span>
-</td>
-<td>
-<a href="./weeks/week_02_sched.html" class="title listing-title">Week 2</a>
-</td>
-<td>
-<span class="listing-description">Measurements of Association and Agreement</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="" data-listing-date-sort="1713164400000" data-listing-file-modified-sort="1713468785291" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="8" data-listing-title-sort="Week 3" data-listing-filename-sort="week_03_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">4/15/24</span>
-</td>
-<td>
-<a href="./weeks/week_03_sched.html" class="title listing-title">Week 3</a>
-</td>
-<td>
-<span class="listing-description">Introduction to Logistic Regression</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="" data-listing-date-sort="1713769200000" data-listing-file-modified-sort="1715276734123" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="5" data-listing-title-sort="Week 4" data-listing-filename-sort="week_04_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">4/22/24</span>
-</td>
-<td>
-<a href="./weeks/week_04_sched.html" class="title listing-title">Week 4</a>
-</td>
-<td>
-<span class="listing-description">Prediction, Visualization, and Interpretations</span>
-</td>
-</tr>
-<tr data-index="4" data-categories="" data-listing-date-sort="1714374000000" data-listing-file-modified-sort="1714785679082" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="7" data-listing-title-sort="Week 5" data-listing-filename-sort="week_05_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">4/29/24</span>
-</td>
-<td>
-<a href="./weeks/week_05_sched.html" class="title listing-title">Week 5</a>
-</td>
-<td>
-<span class="listing-description">Missing Data</span>
-</td>
-</tr>
-<tr data-index="5" data-categories="" data-listing-date-sort="1714978800000" data-listing-file-modified-sort="1715280858858" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="7" data-listing-title-sort="Week 6" data-listing-filename-sort="week_06_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">5/6/24</span>
-</td>
-<td>
-<a href="./weeks/week_06_sched.html" class="title listing-title">Week 6</a>
-</td>
-<td>
-<span class="listing-description">Confounders and Interactions</span>
-</td>
-</tr>
-<tr data-index="6" data-categories="" data-listing-date-sort="1715583600000" data-listing-file-modified-sort="1715629993743" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="4" data-listing-title-sort="Week 7" data-listing-filename-sort="week_07_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">5/13/24</span>
-</td>
-<td>
-<a href="./weeks/week_07_sched.html" class="title listing-title">Week 7</a>
-</td>
-<td>
-<span class="listing-description">Model Building Strategies</span>
-</td>
-</tr>
-<tr data-index="7" data-categories="" data-listing-date-sort="1716188400000" data-listing-file-modified-sort="1714174182229" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="2" data-listing-title-sort="Week 8" data-listing-filename-sort="week_08_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">5/20/24</span>
-</td>
-<td>
-<a href="./weeks/week_08_sched.html" class="title listing-title">Week 8</a>
-</td>
-<td>
-<span class="listing-description">Assessing Model Fit and Numeric Problems</span>
-</td>
-</tr>
-<tr data-index="8" data-categories="" data-listing-date-sort="1716793200000" data-listing-file-modified-sort="1712954602750" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="2" data-listing-title-sort="Week 9" data-listing-filename-sort="week_09_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">5/27/24</span>
-</td>
-<td>
-<a href="./weeks/week_09_sched.html" class="title listing-title">Week 9</a>
-</td>
-<td>
-<span class="listing-description">Model Diagnostics</span>
-</td>
-</tr>
-<tr data-index="9" data-categories="" data-listing-date-sort="1717398000000" data-listing-file-modified-sort="1712954607137" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="2" data-listing-title-sort="Week 10" data-listing-filename-sort="week_10_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">6/3/24</span>
-</td>
-<td>
-<a href="./weeks/week_10_sched.html" class="title listing-title">Week 10</a>
-</td>
-<td>
-<span class="listing-description">Other generalized linear regressions</span>
-</td>
-</tr>
-<tr data-index="10" data-categories="" data-listing-date-sort="1718002800000" data-listing-file-modified-sort="1712954595984" data-listing-date-modified-sort="1715583600000" data-listing-reading-time-sort="1" data-listing-title-sort="Week 11" data-listing-filename-sort="week_11_sched.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">6/10/24</span>
-</td>
-<td>
-<a href="./weeks/week_11_sched.html" class="title listing-title">Week 11</a>
-</td>
-<td>
-<span class="listing-description">Spill-Over Week</span>
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/success_model.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-</div></main> <!-- /main -->
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -692,20 +531,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->

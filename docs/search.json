@@ -6739,5 +6739,12 @@
     "title": "Lesson 12: Assessing Model Fit",
     "section": "Pearson Residual procedure",
     "text": "Pearson Residual procedure\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses: same for all data\n\n\\(H_0\\): model fits well\n\\(H_1\\): model does not fits well\n\nCalculate the test statistic and p-value\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html",
+    "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html",
+    "title": "Lesson 12: Numeric Problems",
+    "section": "",
+    "text": "Identify and troubleshoot logistic regression analysis when there are zero observations for the cross section of the outcome and a predictor\nIdentify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups\nIdentify and troubleshoot logistic regression analysis when there is collinearity between variables"
   }
 ]
