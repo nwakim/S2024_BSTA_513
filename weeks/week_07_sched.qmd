@@ -1,6 +1,6 @@
 ---
 title: "Week 7"
-description: "Model Building Strategies"
+description: "Assessing Model Fit"
 date: "5/13/24"
 date-modified: "today"
 categories: [""]
@@ -30,10 +30,10 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic               |                                                          Slides                                                          |                                  Annotated Slides                                  |                           Recording                           |
+| Lesson | Topic               |                                                          Slides                                                          |                                                              Annotated Slides                                                               |                                                               Recording                                                                |
 |-------------|-------------|:-------------:|:-----------------:|:-----------:|
-| 12     | Assessing Model Fit | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/12_Assessing_fit/12_Assessing_fit.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 13     | Assessing Model Fit |                          [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                           | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 12     | Assessing Model Fit | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/12_Assessing_fit/12_Assessing_fit.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/12_Assessing_fit/12_Assessing_fit_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/f3988298-163b-41da-a14f-b13b19714ad5/public)]{style="color:#f8f5f0;"} |
+| 13     | Numerical Problems  |                          [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                           |                             [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                              |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
 
 ## On the Horizon
 
