@@ -1,0 +1,812 @@
+---
+title: "Lesson 12: Numerical Problems"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "05/15/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 12: Numerical Problems"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(broom) 
+library(here) 
+library(ggplot2)
+library(ggpubr)
+library(boot) # for inv.logit()
+library(lmtest)
+library(epiDisplay)
+
+library(car)
+library(mctest)
+library(kableExtra)
+
+
+load(here("data", "bc_diagnosis.Rda"))
+mean_age = mean(bc$Age)
+bc = bc %>% mutate(Late_stage_num = as.numeric(Late_stage_diag)-1, 
+                   Age_c = Age - mean(Age))
+```
+
+# Learning Objectives
+
+1. Identify and troubleshoot logistic regression analysis when there are low or zero observations for the cross section of the outcome and a predictor
+
+
+2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups
+
+
+3. Identify and troubleshoot logistic regression analysis when there is multicollinearity between variables
+
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+## Three Numerical Problems
+
+-   Issues that may cause numerical problems:
+
+     
+
+    1.    Zero cell count
+    
+     
+    
+    2.    Complete separation 
+    
+     
+    
+    3.    Multicollinearity
+
+
+ 
+
+-   All may cause large estimated coefficients and/or large estimated standard errors
+
+# Learning Objectives
+
+::: lob
+1. Identify and troubleshoot logistic regression analysis when there are low or zero observations for the cross section of the outcome and a predictor
+:::
+
+2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups
+
+
+3. Identify and troubleshoot logistic regression analysis when there is multicollinearity between variables
+
+## Zero cell count in a contingency table
+
+-   If no observations at any intersection of the covariate and outcome 
+
+ 
+
+-   Zero cell in a contingency table should be detected in descriptive statistical analysis stage
+
+ 
+
+-   Example of one covariate with outcome: 
+
+ 
+
+![](images/zero_cell_ex.png){fig-align="center"}
+
+ 
+
+```{r}
+#| echo: false
+ex1 = as.data.frame(rbind(cbind(outcome = rep(1, 39), x = c(rep("One", 7), rep("Two", 12), rep("Three", 20))), 
+      cbind(outcome = rep(0, 21), x = c(rep("One", 13), rep("Two", 8))))) %>%
+  mutate(outcome = as.factor(outcome) %>% relevel(ref = "0"), 
+         x = factor(x, levels = c("One", "Two", "Three")))
+```
+
+## Zero cell count: example (1/3)
+
+::: columns
+::: {.column width="73%"}
+- Example of logistic regression with **one** covariate:
+```{r}
+ex1_m = glm(outcome ~ x, data = ex1, 
+              family = binomial)
+```
+:::
+
+::: {.column width="10%"}
+![](images/zero_cell_ex_small.png){.absolute top=35 right=5 width="530"}
+:::
+:::
+::: columns
+::: {.column width="50%"}
+
+
+:::
+
+::: {.column width="50%"}
+
+:::
+
+:::
+
+## Zero cell count: example (2/3)
+
+::: columns
+::: {.column width="73%"}
+- Example of logistic regression with **one** covariate:
+```{r}
+ex1_m = glm(outcome ~ x, data = ex1, 
+              family = binomial())
+```
+:::
+
+::: {.column width="10%"}
+![](images/zero_cell_ex_small.png){.absolute top=35 right=5 width="530"}
+:::
+:::
+::: columns
+::: {.column width="50%"}
+```{r}
+#| code-fold: true
+#| code-summary: Coefficient estimates
+tidy(ex1_m, conf.int=T) %>% gt() %>% 
+  tab_options(table.font.size = 32) %>%
+  fmt_number(decimals = 2)
+```
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| code-fold: true
+#| code-summary: Odds ratio
+tbl_regression(ex1_m, exponentiate=T) %>%
+  as_gt() %>% # allows us to use tab_options()
+  tab_options(table.font.size = 38)
+```
+:::
+
+:::
+
+## Zero cell count: example (3/3)
+
+::: columns
+::: {.column width="73%"}
+- Example of logistic regression with **one** covariate:
+```{r}
+ex1_m = glm(outcome ~ x, data = ex1, 
+              family = binomial())
+```
+:::
+
+::: {.column width="10%"}
+![](images/zero_cell_ex_small.png){.absolute top=35 right=5 width="530"}
+:::
+:::
+::: columns
+::: {.column width="50%"}
+```{r}
+#| code-fold: true
+#| code-summary: Coefficient estimates
+tidy(ex1_m, conf.int=T) %>% gt() %>% 
+  tab_options(table.font.size = 32) %>%
+  fmt_number(decimals = 2)
+```
+
+ 
+
+::: box2
+Coefficient estimate is large and standard error is large!  Estimated odds ratio is very large and confidence interval cannot be computed.
+:::
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| code-fold: true
+#| code-summary: Odds ratio
+tbl_regression(ex1_m, exponentiate=T) %>%
+  as_gt() %>% # allows us to use tab_options()
+  tab_options(table.font.size = 38)
+```
+:::
+
+:::
+
+## Ways to address zero cell
+
+-   Add one-half to each of the cell counts
+
+    -   Technically works, but not the best option
+    -   Rarely useful with a more complex analysis: may work for simple logistic regression
+    -   Nicky would say worst option because manipulating the data that does not work on individual level
+
+-   Collapse the categories to remove the 0 cells
+
+    -   We could collapse groups 2 and 3 together if it makes clinical sense
+    -   Good idea if this makes clinical sense OR there is no difference between groups
+
+-   Remove the category with 0 cells
+
+    -   This would mean we reduce the total sample size as well
+    -   Not a good idea: we would remove people from our dataset. Why would we do that?
+
+-   If the variable is in ordinal scale, treat it as continuous
+
+    -   Good idea if you have seen evidence that there is a linear trend on log-odds scale
+
+## Decide on how to address zero cell (1/2)
+
+-   Look at the proportions across the predictor, X: 
+```{r}
+#| fig-width: 4
+#| fig-height: 2.5
+#| eval: false
+
+ggplot(data = ex1, aes(x = x, fill = outcome)) + 
+      geom_bar(stat = "count", position = "fill") +
+      labs(y = "Proportion of Outcome")
+```
+
+::: columns
+::: column
+```{r}
+#| out-width: 100%
+#| fig-width: 4
+#| fig-height: 2.5
+#| echo: false
+
+ggplot(data = ex1, aes(x = x, fill = outcome)) + 
+      geom_bar(stat = "count", position = "fill") +
+      labs(y = "Proportion of Outcome") +
+      scale_fill_manual(values=c("#D6295E", "#ED7D31"))
+```
+:::
+::: column
+ 
+
+:::
+:::
+
+## Decide on how to address zero cell (2/2)
+
+-   Look at the proportions across the predictor, X: 
+```{r}
+#| fig-width: 4
+#| fig-height: 2.5
+#| eval: false
+
+ggplot(data = ex1, aes(x = x, fill = outcome)) + 
+      geom_bar(stat = "count", position = "fill") +
+      labs(y = "Proportion of Outcome")
+```
+
+::: columns
+::: column
+```{r}
+#| out-width: 100%
+#| fig-width: 4
+#| fig-height: 2.5
+#| echo: false
+
+ggplot(data = ex1, aes(x = x, fill = outcome)) + 
+      geom_bar(stat = "count", position = "fill") +
+      labs(y = "Proportion of Outcome") +
+      scale_fill_manual(values=c("#D6295E", "#ED7D31"))
+```
+:::
+::: column
+ 
+
+::: box2
+- Combining groups 2 and 3 together *may not be a good idea*. 
+- **Their proportions of the outcome do not look similar.** 
+- The predictor has an *ordinal quality*, so this is making me think a *continuous approach might be good*.
+:::
+:::
+:::
+
+## Collapse the categories of predictor
+
+Combine groups 2 and 3:
+```{r}
+ex1_23 = ex1 %>% 
+            mutate(x = factor(x, levels = c("One", "Two", "Three"), 
+                                 labels = c("One", "Two-Three", "Two-Three")))
+ex1_23_glm = glm(outcome ~ x, data = ex1_23, family = binomial)
+tbl_regression(ex1_23_glm, exponentiate=T) %>% as_gt() %>% 
+  tab_options(table.font.size = 38)
+```
+
+-   Based on our previous visual, I don't think this is a good idea
+-   Look at the estimated OR comparing group 2 to group 1 from our original model: 2.79 (95% CI: 0.79, 10.5)
+
+    -   Looks different than the estimated OR in the above table
+
+## Remove the category with 0 cells
+
+Remove group 3 from the data:
+```{r}
+ex1_two = ex1 %>% filter(x != "Three")
+ex1_two_glm = glm(outcome ~ x, data = ex1_two, family = binomial())
+tbl_regression(ex1_two_glm, exponentiate=T) %>% as_gt() %>% 
+  tab_options(table.font.size = 38)
+```
+
+ 
+
+-   Not a good idea because we lose information (sample size goes down!)
+-   **And really bad when we have other predictors!!**
+
+
+## Treat predictor as continuous
+
+-   When we treat a predictor as continuous, we need to make sure we have **linearty between continuous predictor and log-odds**
+-   Cannot test this before fitting the logistic regression with the continuous predictor
+
+    -   Try taking the logit of a probability of 1... it's infinity!
+
+```{r}
+ex1_cont = ex1 %>% mutate(x = as.numeric(x))
+ex1_cont_glm = glm(outcome ~ x, data = ex1_cont, family = binomial())
+tbl_regression(ex1_cont_glm, exponentiate=T) %>% as_gt() %>% 
+  tab_options(table.font.size = 38)
+```
+
+## Treat predictor as continuous: check linearity assumption
+
+```{r}
+newdata = data.frame(x = c(1, 2, 3)) 
+pred = predict(ex1_cont_glm, newdata, se.fit=T, type = "link")
+LL_CI1 = pred$fit - qnorm(1-0.05/2) * pred$se.fit
+UL_CI1 = pred$fit + qnorm(1-0.05/2) * pred$se.fit
+
+pred_link = cbind(Pred = pred$fit, LL_CI1, UL_CI1) %>% inv.logit()
+pred_prob = as.data.frame(pred_link) %>% mutate(x = c("One", "Two", "Three"))
+```
+
+
+::: columns
+::: column
+```{r}
+#| out-width: 100%
+#| fig-width: 4
+#| fig-height: 2.5
+#| code-fold: true
+#| code-summary: Plotting sample and predicted probabilities
+
+ggplot() + 
+      geom_bar(data = ex1, aes(x = x, fill = outcome), stat = "count", position = "fill") +
+      labs(y = "Proportion of Outcome") +
+      scale_fill_manual(values=c("#D6295E", "#ED7D31")) +
+      geom_point(data = pred_prob, aes(x = x, y=Pred), size=3) +
+      geom_errorbar(data = pred_prob, aes(x = x, y=Pred, ymin = LL_CI1, ymax = UL_CI1), width = 0.25)
+```
+:::
+::: column
+ 
+
+::: box2
+This looks pretty good. We've mostly captured the trend of the outcome proportion!
+:::
+:::
+:::
+
+## Zero cell count when we have multiple predictors
+
+-   Note that we may not see the zero count cells in a single predictor 
+
+     
+    
+    -   But we may have issues if there is an interaction!
+    
+     
+    
+    -   This is why I suggested we keep an eye out for cell counts below 10 in our lab! 
+
+ 
+    
+-   If you see a big coefficient estimate with a big standard deviation for a specific category or interaction...
+    
+     
+    
+    -   ...this may mean that a low cell count for that category is causing you issues!
+
+## Zero cell count: summary
+
+My suggestion is to try possible solutions in this order
+
+1.    For group with zero cell count, see if there is an adjacent group that makes sense to combine it with
+    
+ 
+    
+2.    If that does not make sense (or obscures your data) AND your data has an inherent order, then you can try treating it as continuous. 
+    
+ 
+    
+3.    Remove the zero count group and all the observations in it (not a very good solution)
+    
+ 
+
+4.    Add a half count to each cell (only works for a single predictor)
+
+## Poll Everywhere Question 1
+
+# Learning Objectives
+
+1. Identify and troubleshoot logistic regression analysis when there are low or zero observations for the cross section of the outcome and a predictor
+
+::: lob
+2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups
+:::
+
+3. Identify and troubleshoot logistic regression analysis when there is multicollinearity between variables
+
+## Complete Separation
+
+-   **Complete separation:** occurs when a collection of the covariates completely separates the outcome groups
+
+    -   Example: Outcome is “gets senior discount at iHop” and the only covariate you measure is age
+    -   Age will completely separate the outcome
+    -   No overlap in distribution of covariates between two outcome groups
+
+ 
+
+-   Problem: the maximum likelihood estimates do not exist
+
+    -   Likelihood function is monotone
+    -   In order to have finite maximum likelihood estimates we must have some overlap in the distribution of the covariates in the model
+
+
+## Poll Everywhere Question 2
+
+## Complete Separation: example (1/3)
+
+::: columns
+::: {.column width="65%"}
+
+-   We get a warning when we have complete separation
+```{r}
+#| eval: false
+y = c(0,0,0,0,1,1,1,1)
+x1 = c(1,2,3,3,5,6,10,11)
+x2 = c(3,2,-1,-1,2,4,1,0)
+ex3 = data.frame(outcome = y, x1 = x1, x2= x2)
+ex3
+```
+:::
+
+::: {.column width="35%"}
+```{r}
+#| echo: false
+y = c(0,0,0,0,1,1,1,1)
+x1 = c(1,2,3,3,5,6,10,11)
+x2 = c(3,2,-1,-1,2,4,1,0)
+ex3 = data.frame(outcome = y, x1 = x1, x2= x2)
+ex3
+```
+:::
+
+:::
+
+ 
+
+```{r}
+#| warning: true
+m1 = glm(outcome ~ x1 + x2, data = ex3, family=binomial)
+```
+
+-   Outcomes of 0 and 1 are completely separated by `x2`
+    
+    -   If `x2 > 4` then outcome is 1
+    -   If `x2 < 4` then outcome is 0
+
+## Complete Separation: example (2/3)
+
+::: columns
+::: {.column width="60%"}
+
+ 
+
+Coefficient estimates:
+```{r}
+tidy(m1, conf.int=T) %>% gt() %>% 
+  tab_options(table.font.size = 35) %>%
+  fmt_number(decimals = 2)
+```
+:::
+
+::: {.column width="40%"}
+
+:::
+
+:::
+
+## Complete Separation: example (3/3)
+
+::: columns
+::: {.column width="60%"}
+
+ 
+
+Coefficient estimates:
+```{r}
+tidy(m1, conf.int=T) %>% gt() %>% 
+  tab_options(table.font.size = 35) %>%
+  fmt_number(decimals = 2)
+```
+:::
+
+::: {.column width="40%"}
+
+ 
+
+::: box2
+-   Coefficient estimate of `x1` is large
+-   Standard error of `x1`'s coefficient is large
+-   But also the coefficients and standard errors for the intercept and `x2` are large!
+:::
+
+:::
+
+:::
+
+## Complete Separation
+
+-   The occurrence of complete separation in practice **depends on** 
+
+    -   Sample size
+    -   Number of subjects with the outcome present
+    -   Number of variables included in the model
+
+ 
+
+-   Example: 25 observations and only 5 have “success” outcome
+
+    -   1 variable in model may not lead to complete separation
+    -   More variables = more dimensions that can completely separate the observations
+
+ 
+
+-   In most cases, the occurrence of complete separation is not bad for clinical importance
+
+    -   But rather a numerical coincidence that causing problem for model fitting
+
+
+## Poll Everywhere Question 3
+
+## Complete Separation: Ways to address issue
+
+-   Collapse categorical variables in a meaningful way
+
+    -   Easiest and best if stat methods are restricted (common for collaborations)
+
+ 
+
+-   Exclude `x1` from the model
+
+    -   Not ideal because this could lead to biased estimates for the other predicted variables in the model
+
+ 
+
+-   Firth logistic regression
+
+    -   Uses penalized likelihood estimation method
+
+    -   Basically takes the likelihood (that has no maximum) and adds a penalty that makes the MLE estimatable 
+
+![](images/firth.png){.absolute bottom=5 right=0 width="150"}
+
+## Complete Separation: Firth logistic regression
+
+```{r}
+library(logistf)
+m1_f = logistf(outcome ~ x1 + x2, data = ex3, family=binomial)
+summary(m1_f) # Cannot use tidy on this :(
+```
+
+![](images/firth.png){.absolute bottom=5 right=0 width="150"}
+
+# Learning Objectives
+
+1. Identify and troubleshoot logistic regression analysis when there are low or zero observations for the cross section of the outcome and a predictor
+
+
+2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups
+
+::: lob
+3. Identify and troubleshoot logistic regression analysis when there is multicollinearity between variables
+:::
+
+## Multicollinearity
+
+-   **Multicollinearity** happens when one or more of the covariates in a model can be predicted from other covariates in the same model
+
+ 
+
+-   This will cause unreliable coefficient estimates for some covariates in logistic regression, as in an ordinary linear regression
+
+ 
+
+-   Looking at correlations among pairs of variables is helpful but not enough to identify multicollinearity problem
+
+    -   Because multicollinearity problems may involve relationships among more than two covariates 
+
+
+## Multicollinearity: example (1/4)
+
+-   Table below is a simulated data with 
+
+    -   $x_1 \sim \text{Normal}(0,1)$
+    -   $x_2 = x_1 + \text{Uniform}(0,0.1)$
+    -   $x_3 = 1 + \text{Uniform}(0, 0.01)$
+
+-   Therefore, $x_1$ and $x_2$ are highly correlated, and $x_3$ is nearly collinear with the constant term
+
+![](images/collin_ex_tb.png){fig-align="center"}
+
+## Multicollinearity: example (2/4)
+
+-   Four logistic regression models using data in the previous slide
+
+-   Consequence of multicollinearity: large coefficient estimates and/or standard errors
+
+ 
+
+::: columns
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="80%"}
+
+![](images/collin_ex_coef.png){fig-align="center"}
+
+:::
+::: {.column width="10%"}
+
+:::
+
+:::
+
+
+
+## Multicollinearity: example (3/4)
+
+-   Four logistic regression models using data in the previous slide
+
+-   Consequence of multicollinearity: large coefficient estimates and/or standard errors
+
+ 
+
+::: columns
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="80%"}
+
+![](images/collin_ex_coef_mod.png){fig-align="center"}
+
+:::
+::: {.column width="10%"}
+
+:::
+
+:::
+
+## Multicollinearity: example (4/4)
+
+-   Four logistic regression models using data in the previous slide
+
+-   Consequence of multicollinearity: large coefficient estimates and/or standard errors
+
+ 
+
+::: columns
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="80%"}
+
+![](images/collin_ex_coef_mod2.png){fig-align="center"}
+
+:::
+::: {.column width="10%"}
+
+:::
+
+:::
+
+## Multicollinearity: how to detect
+
+-   Multicollinearity only involves the covariates
+
+    -   No specific issues to logistic regression (vs. linear regression)
+    -   Techniques from 512/612 work well for logistic regression model
+
+ 
+
+-   In more complicated dataset/analysis, we may not be able to detect multicollinearity using the coefficient estimates/SE
+
+ 
+
+-   **Variance inflation factor (VIF) approach:** well-known approach to detect multicollinearity
+
+
+## Variance Inflation Factor (VIF) Approach
+
+-   Computed by regressing each variable on all the other explanatory variables
+
+    -   For example: $E(x_1│x_2,x_3,…)=\alpha_0+\alpha_1 x_2+\alpha_2 x_3$
+
+-   Calculate the coefficient of determination, $R^2$
+
+    -   Proportion of the variation in $x_1$ that is predicted from $x_2$, $x_3$,... $$VIF = \dfrac{1}{1=R^2}$$
+
+-   Each covariate has its own VIF computed
+
+-   Get worried for multicollinearity if VIF > 10
+
+-   Sometimes VIF approach may miss serious multicollinearity 
+
+    -   Same multicollinearity we wish to detect using VIF can cause numerical problems in reliably estimating $R^2$
+
+## Multicollinearity: Ways to address the issue
+
+-   Exclude the redundant variable from the model
+        
+-   Scaling and centering variables
+
+    -   When you have transformed a continuous variable
+
+-   Other modeling approach (outside scope of this class)
+
+    -   Ridge regression
+    -   Principle component analysis
+
+ 
+
+-   **Please take a look at the [BSTA 512/612 lesson](https://nwakim.github.io/W2024_BSTA_512/weeks/week_10_sched.html) that included multicollinearity**
+
+## Poll Everywhere Question 4
+
+# Learning Objectives
+
+1. Identify and troubleshoot logistic regression analysis when there are low or zero observations for the cross section of the outcome and a predictor
+
+
+2. Identify and troubleshoot logistic regression analysis when there is complete separation between the two outcome groups
+
+
+3. Identify and troubleshoot logistic regression analysis when there is multicollinearity between variables
+
+
+
