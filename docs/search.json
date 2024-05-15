@@ -1621,7 +1621,7 @@
     "href": "weeks/week_07_sched.html#resources",
     "title": "Week 7",
     "section": "Resources",
-    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n12\nAssessing Model Fit\n\n\n\n\n\n13\nNumerical Problems"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n12\nAssessing Model Fit\n\n\n\n\n\n13\nNumerical Problems\n\npdf on github"
   },
   {
     "objectID": "weeks/week_07_sched.html#on-the-horizon",
@@ -6757,7 +6757,7 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#three-numerical-problems",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#three-numerical-problems",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Three Numerical Problems",
     "text": "Three Numerical Problems\n\nIssues that may cause numerical problems:\n \n\nZero cell count\n\n \n\nComplete separation\n\n \n\nMulticollinearity\n\n\n \n\nAll may cause large estimated coefficients and/or large estimated standard errors"
   },
@@ -6792,14 +6792,14 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#ways-to-address-zero-cell",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#ways-to-address-zero-cell",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Ways to address zero cell",
     "text": "Ways to address zero cell\n\nAdd one-half to each of the cell counts\n\nTechnically works, but not the best option\nRarely useful with a more complex analysis: may work for simple logistic regression\nNicky would say worst option because manipulating the data that does not work on individual level\n\nCollapse the categories to remove the 0 cells\n\nWe could collapse groups 2 and 3 together if it makes clinical sense\nGood idea if this makes clinical sense OR there is no difference between groups\n\nRemove the category with 0 cells\n\nThis would mean we reduce the total sample size as well\nNot a good idea: we would remove people from our dataset. Why would we do that?\n\nIf the variable is in ordinal scale, treat it as continuous\n\nGood idea if you have seen evidence that there is a linear trend on log-odds scale"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-1",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-1",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Poll Everywhere Question 1",
     "text": "Poll Everywhere Question 1"
   },
@@ -6827,14 +6827,14 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation",
     "text": "Complete Separation\n\nComplete separation: occurs when a collection of the covariates completely separates the outcome groups\n\nExample: Outcome is “gets senior discount at iHop” and the only covariate you measure is age\nAge will completely separate the outcome\nNo overlap in distribution of covariates between two outcome groups\n\n\n \n\nProblem: the maximum likelihood estimates do not exist\n\nLikelihood function is monotone\nIn order to have finite maximum likelihood estimates we must have some overlap in the distribution of the covariates in the model"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-2",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-2",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Poll Everywhere Question 2",
     "text": "Poll Everywhere Question 2"
   },
@@ -6862,14 +6862,14 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-1",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-1",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation",
     "text": "Complete Separation\n\nThe occurrence of complete separation in practice depends on\n\nSample size\nNumber of subjects with the outcome present\nNumber of variables included in the model\n\n\n \n\nExample: 25 observations and only 5 have “success” outcome\n\n1 variable in model may not lead to complete separation\nMore variables = more dimensions that can completely separate the observations\n\n\n \n\nIn most cases, the occurrence of complete separation is not bad for clinical importance\n\nBut rather a numerical coincidence that causing problem for model fitting"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-3",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-3",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Poll Everywhere Question 3",
     "text": "Poll Everywhere Question 3"
   },
@@ -6932,7 +6932,7 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#variance-inflation-factor-vif-approach",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#variance-inflation-factor-vif-approach",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Variance Inflation Factor (VIF) Approach",
     "text": "Variance Inflation Factor (VIF) Approach\n\nComputed by regressing each variable on all the other explanatory variables\n\nFor example: \\(E(x_1│x_2,x_3,…)=\\alpha_0+\\alpha_1 x_2+\\alpha_2 x_3\\)\n\nCalculate the coefficient of determination, \\(R^2\\)\n\nProportion of the variation in \\(x_1\\) that is predicted from \\(x_2\\), \\(x_3\\),… \\[VIF = \\dfrac{1}{1=R^2}\\]\n\nEach covariate has its own VIF computed\nGet worried for multicollinearity if VIF &gt; 10\nSometimes VIF approach may miss serious multicollinearity\n\nSame multicollinearity we wish to detect using VIF can cause numerical problems in reliably estimating \\(R^2\\)"
   },
@@ -6953,7 +6953,7 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-4",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#poll-everywhere-question-4",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Poll Everywhere Question 4",
     "text": "Poll Everywhere Question 4"
   },
@@ -6981,21 +6981,21 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#collapse-the-categories-of-predictor",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#collapse-the-categories-of-predictor",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Collapse the categories of predictor",
     "text": "Collapse the categories of predictor\nCombine groups 2 and 3:\n\nex1_23 = ex1 %&gt;% \n            mutate(x = factor(x, levels = c(\"One\", \"Two\", \"Three\"), \n                                 labels = c(\"One\", \"Two-Three\", \"Two-Three\")))\nex1_23_glm = glm(outcome ~ x, data = ex1_23, family = binomial)\ntbl_regression(ex1_23_glm, exponentiate=T) %&gt;% as_gt() %&gt;% \n  tab_options(table.font.size = 38)\n\n\n\n\n\n  \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    x\n\n\n\n        One\n—\n—\n\n        Two-Three\n7.43\n2.32, 26.3\n0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval\n    \n  \n\n\n\n\n\nBased on our previous visual, I don’t think this is a good idea\nLook at the estimated OR comparing group 2 to group 1 from our original model: 2.79 (95% CI: 0.79, 10.5)\n\nLooks different than the estimated OR in the above table"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#remove-the-category-with-0-cells",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#remove-the-category-with-0-cells",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Remove the category with 0 cells",
     "text": "Remove the category with 0 cells\nRemove group 3 from the data:\n\nex1_two = ex1 %&gt;% filter(x != \"Three\")\nex1_two_glm = glm(outcome ~ x, data = ex1_two, family = binomial())\ntbl_regression(ex1_two_glm, exponentiate=T) %&gt;% as_gt() %&gt;% \n  tab_options(table.font.size = 38)\n\n\n\n\n\n  \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    x\n\n\n\n        One\n—\n—\n\n        Two\n2.79\n0.79, 10.5\n0.12\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval\n    \n  \n\n\n\n\n \n\nNot a good idea because we lose information (sample size goes down!)\nAnd really bad when we have other predictors!!"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#treat-predictor-as-continuous",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#treat-predictor-as-continuous",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Treat predictor as continuous",
     "text": "Treat predictor as continuous\n\nWhen we treat a predictor as continuous, we need to make sure we have linearty between continuous predictor and log-odds\nCannot test this before fitting the logistic regression with the continuous predictor\n\nTry taking the logit of a probability of 1… it’s infinity!\n\n\n\nex1_cont = ex1 %&gt;% mutate(x = as.numeric(x))\nex1_cont_glm = glm(outcome ~ x, data = ex1_cont, family = binomial())\ntbl_regression(ex1_cont_glm, exponentiate=T) %&gt;% as_gt() %&gt;% \n  tab_options(table.font.size = 38)\n\n\n\n\n\n  \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    x\n6.22\n2.63, 18.0\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval"
   },
@@ -7016,7 +7016,7 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#treat-predictor-as-continuous-check-linearity-assumption",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#treat-predictor-as-continuous-check-linearity-assumption",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Treat predictor as continuous: check linearity assumption",
     "text": "Treat predictor as continuous: check linearity assumption\n\nnewdata = data.frame(x = c(1, 2, 3)) \npred = predict(ex1_cont_glm, newdata, se.fit=T, type = \"link\")\nLL_CI1 = pred$fit - qnorm(1-0.05/2) * pred$se.fit\nUL_CI1 = pred$fit + qnorm(1-0.05/2) * pred$se.fit\n\npred_link = cbind(Pred = pred$fit, LL_CI1, UL_CI1) %&gt;% inv.logit()\npred_prob = as.data.frame(pred_link) %&gt;% mutate(x = c(\"One\", \"Two\", \"Three\"))\n\n\n\n\n\nPlotting sample and predicted probabilities\nggplot() + \n      geom_bar(data = ex1, aes(x = x, fill = outcome), stat = \"count\", position = \"fill\") +\n      labs(y = \"Proportion of Outcome\") +\n      scale_fill_manual(values=c(\"#D6295E\", \"#ED7D31\")) +\n      geom_point(data = pred_prob, aes(x = x, y=Pred), size=3) +\n      geom_errorbar(data = pred_prob, aes(x = x, y=Pred, ymin = LL_CI1, ymax = UL_CI1), width = 0.25)\n\n\n\n\n\n\n \n\nThis looks pretty good. We’ve mostly captured the trend of the outcome proportion!"
   },
@@ -7037,49 +7037,49 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-when-we-have-multiple-predictors",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-when-we-have-multiple-predictors",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Zero cell count when we have multiple predictors",
     "text": "Zero cell count when we have multiple predictors\n\nNote that we may not see the zero count cells in a single predictor\n \n\nBut we may have issues if there is an interaction!\n\n \n\nThis is why I suggested we keep an eye out for cell counts below 10 in our lab!\n\n\n \n\nIf you see a big coefficient estimate with a big standard deviation for a specific category or interaction…\n \n\n…this may mean that a low cell count for that category is causing you issues!"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-summary",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-summary",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Zero cell count: summary",
     "text": "Zero cell count: summary\nMy suggestion is to try possible solutions in this order\n\nFor group with zero cell count, see if there is an adjacent group that makes sense to combine it with\n\n \n\nIf that does not make sense (or obscures your data) AND your data has an inherent order, then you can try treating it as continuous.\n\n \n\nRemove the zero count group and all the observations in it (not a very good solution)\n\n \n\nAdd a half count to each cell (only works for a single predictor)"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-example-13",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-example-13",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation: example (1/3)",
     "text": "Complete Separation: example (1/3)\n\n\n\nWe get a warning when we have complete separation\n\n\ny = c(0,0,0,0,1,1,1,1)\nx1 = c(1,2,3,3,5,6,10,11)\nx2 = c(3,2,-1,-1,2,4,1,0)\nex3 = data.frame(outcome = y, x1 = x1, x2= x2)\nex3\n\n\n\n\n  outcome x1 x2\n1       0  1  3\n2       0  2  2\n3       0  3 -1\n4       0  3 -1\n5       1  5  2\n6       1  6  4\n7       1 10  1\n8       1 11  0\n\n\n\n\n \n\nm1 = glm(outcome ~ x1 + x2, data = ex3, family=binomial)\n\nWarning: glm.fit: fitted probabilities numerically 0 or 1 occurred\n\n\n\nOutcomes of 0 and 1 are completely separated by x2\n\nIf x2 &gt; 4 then outcome is 1\nIf x2 &lt; 4 then outcome is 0"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-example-23",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-example-23",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation: example (2/3)",
     "text": "Complete Separation: example (2/3)\n\n\n \nCoefficient estimates:\n\ntidy(m1, conf.int=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−66.10\n183,471.72\n0.00\n1.00\n−10,644.72\n10,512.52\n    x1\n15.29\n27,362.84\n0.00\n1.00\n−3,122.69\nNA\n    x2\n6.24\n81,543.72\n0.00\n1.00\n−12,797.28\nNA"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-example-33",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-example-33",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation: example (3/3)",
     "text": "Complete Separation: example (3/3)\n\n\n \nCoefficient estimates:\n\ntidy(m1, conf.int=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−66.10\n183,471.72\n0.00\n1.00\n−10,644.72\n10,512.52\n    x1\n15.29\n27,362.84\n0.00\n1.00\n−3,122.69\nNA\n    x2\n6.24\n81,543.72\n0.00\n1.00\n−12,797.28\nNA\n  \n  \n  \n\n\n\n\n\n \n\n\nCoefficient estimate of x1 is large\nStandard error of x1’s coefficient is large\nBut also the coefficients and standard errors for the intercept and x2 are large!"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-ways-to-address-issue",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-ways-to-address-issue",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation: Ways to address issue",
     "text": "Complete Separation: Ways to address issue\n\nCollapse categorical variables in a meaningful way\n\nEasiest and best if stat methods are restricted (common for collaborations)\n\n\n \n\nExclude x1 from the model\n\nNot ideal because this could lead to biased estimates for the other predicted variables in the model\n\n\n \n\nFirth logistic regression\n\nUses penalized likelihood estimation method\nBasically takes the likelihood (that has no maximum) and adds a penalty that makes the MLE estimatable"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-firth-logistic-regression",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#complete-separation-firth-logistic-regression",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Complete Separation: Firth logistic regression",
     "text": "Complete Separation: Firth logistic regression\n\nlibrary(logistf)\nm1_f = logistf(outcome ~ x1 + x2, data = ex3, family=binomial)\nsummary(m1_f) # Cannot use tidy on this :(\n\nlogistf(formula = outcome ~ x1 + x2, data = ex3, family = binomial)\n\nModel fitted by Penalized ML\nCoefficients:\n                  coef  se(coef)   lower 0.95 upper 0.95     Chisq          p\n(Intercept) -2.9748898 1.7244237 -15.47721665 -0.1208883 4.2179522 0.03999841\nx1           0.4908484 0.2745754   0.05268216  2.1275832 5.0225056 0.02501994\nx2           0.4313732 0.4988396  -0.65793078  4.4758930 0.7807099 0.37692411\n            method\n(Intercept)      2\nx1               2\nx2               2\n\nMethod: 1-Wald, 2-Profile penalized log-likelihood, 3-None\n\nLikelihood ratio test=5.505687 on 2 df, p=0.06374636, n=8\nWald test = 3.624899 on 2 df, p = 0.1632538"
   },
@@ -7107,7 +7107,7 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity",
     "text": "Multicollinearity\n\nMulticollinearity happens when one or more of the covariates in a model can be predicted from other covariates in the same model\n\n \n\nThis will cause unreliable coefficient estimates for some covariates in logistic regression, as in an ordinary linear regression\n\n \n\nLooking at correlations among pairs of variables is helpful but not enough to identify multicollinearity problem\n\nBecause multicollinearity problems may involve relationships among more than two covariates"
   },
@@ -7149,14 +7149,14 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-ways-to-address-the-issue",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-ways-to-address-the-issue",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity: Ways to address the issue",
     "text": "Multicollinearity: Ways to address the issue\n\nExclude the redundant variable from the model\nScaling and centering variables\n\nWhen you have transformed a continuous variable\n\nOther modeling approach (outside scope of this class)\n\nRidge regression\nPrinciple component analysis\n\n\n \n\nPlease take a look at the BSTA 512/612 lesson that included multicollinearity"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-in-a-contingency-table",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-in-a-contingency-table",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Zero cell count in a contingency table",
     "text": "Zero cell count in a contingency table\n\nIf no observations at any intersection of the covariate and outcome\n\n \n\nZero cell in a contingency table should be detected in descriptive statistical analysis stage\n\n \n\nExample of one covariate with outcome:"
   },
@@ -7184,35 +7184,35 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-example-13",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-example-13",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Zero cell count: example (1/3)",
     "text": "Zero cell count: example (1/3)\n\n\n\nExample of logistic regression with one covariate:\n\n\nex1_m = glm(outcome ~ x, data = ex1, \n              family = binomial)"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-example-23",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-example-23",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Zero cell count: example (2/3)",
     "text": "Zero cell count: example (2/3)\n\n\n\nExample of logistic regression with one covariate:\n\n\nex1_m = glm(outcome ~ x, data = ex1, \n              family = binomial())\n\n\n\n\n\n\n\n\n\nCoefficient estimates\ntidy(ex1_m, conf.int=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 32) %&gt;%\n  fmt_number(decimals = 2)\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.62\n0.47\n−1.32\n0.19\n−1.60\n0.27\n    xTwo\n1.02\n0.65\n1.57\n0.12\n−0.23\n2.35\n    xThree\n20.19\n2,404.67\n0.01\n0.99\n−119.00\nNA\n  \n  \n  \n\n\n\n\n\n\n\nOdds ratio\ntbl_regression(ex1_m, exponentiate=T) %&gt;%\n  as_gt() %&gt;% # allows us to use tab_options()\n  tab_options(table.font.size = 38)\n\n\n\n\n\n\n  \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    x\n\n\n\n        One\n—\n—\n\n        Two\n2.79\n0.79, 10.5\n0.12\n        Three\n583,822,601\n0.00, NA\n&gt;0.9\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-example-33",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#zero-cell-count-example-33",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Zero cell count: example (3/3)",
     "text": "Zero cell count: example (3/3)\n\n\n\nExample of logistic regression with one covariate:\n\n\nex1_m = glm(outcome ~ x, data = ex1, \n              family = binomial())\n\n\n\n\n\n\n\n\n\nCoefficient estimates\ntidy(ex1_m, conf.int=T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 32) %&gt;%\n  fmt_number(decimals = 2)\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−0.62\n0.47\n−1.32\n0.19\n−1.60\n0.27\n    xTwo\n1.02\n0.65\n1.57\n0.12\n−0.23\n2.35\n    xThree\n20.19\n2,404.67\n0.01\n0.99\n−119.00\nNA\n  \n  \n  \n\n\n\n\n \n\nCoefficient estimate is large and standard error is large! Estimated odds ratio is very large and confidence interval cannot be computed.\n\n\n\n\nOdds ratio\ntbl_regression(ex1_m, exponentiate=T) %&gt;%\n  as_gt() %&gt;% # allows us to use tab_options()\n  tab_options(table.font.size = 38)\n\n\n\n\n\n\n  \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    x\n\n\n\n        One\n—\n—\n\n        Two\n2.79\n0.79, 10.5\n0.12\n        Three\n583,822,601\n0.00, NA\n&gt;0.9\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#decide-on-how-to-address-zero-cell-12",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#decide-on-how-to-address-zero-cell-12",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Decide on how to address zero cell (1/2)",
     "text": "Decide on how to address zero cell (1/2)\n\nLook at the proportions across the predictor, X:\n\n\nggplot(data = ex1, aes(x = x, fill = outcome)) + \n      geom_bar(stat = \"count\", position = \"fill\") +\n      labs(y = \"Proportion of Outcome\")"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#decide-on-how-to-address-zero-cell-22",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#decide-on-how-to-address-zero-cell-22",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Decide on how to address zero cell (2/2)",
     "text": "Decide on how to address zero cell (2/2)\n\nLook at the proportions across the predictor, X:\n\n\nggplot(data = ex1, aes(x = x, fill = outcome)) + \n      geom_bar(stat = \"count\", position = \"fill\") +\n      labs(y = \"Proportion of Outcome\")\n\n\n\n\n\n\n\n\n\n \n\n\nCombining groups 2 and 3 together may not be a good idea.\nTheir proportions of the outcome do not look similar.\nThe predictor has an ordinal quality, so this is making me think a continuous approach might be good."
   },
@@ -7233,28 +7233,28 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-14",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-14",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity: example (1/4)",
     "text": "Multicollinearity: example (1/4)\n\nTable below is a simulated data with\n\n\\(x_1 \\sim \\text{Normal}(0,1)\\)\n\\(x_2 = x_1 + \\text{Uniform}(0,0.1)\\)\n\\(x_3 = 1 + \\text{Uniform}(0, 0.01)\\)\n\nTherefore, \\(x_1\\) and \\(x_2\\) are highly correlated, and \\(x_3\\) is nearly collinear with the constant term"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-24",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-24",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity: example (2/4)",
     "text": "Multicollinearity: example (2/4)\n\nFour logistic regression models using data in the previous slide\nConsequence of multicollinearity: large coefficient estimates and/or standard errors"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-34",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-34",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity: example (3/4)",
     "text": "Multicollinearity: example (3/4)\n\nFour logistic regression models using data in the previous slide\nConsequence of multicollinearity: large coefficient estimates and/or standard errors"
   },
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-44",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-example-44",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity: example (4/4)",
     "text": "Multicollinearity: example (4/4)\n\nFour logistic regression models using data in the previous slide\nConsequence of multicollinearity: large coefficient estimates and/or standard errors"
   },
@@ -7268,7 +7268,7 @@
   {
     "objectID": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-how-to-detect",
     "href": "lectures/13_Numeric_Problems/13_Numeric_problems.html#multicollinearity-how-to-detect",
-    "title": "Lesson 12: Numerical Problems",
+    "title": "Lesson 13: Numerical Problems",
     "section": "Multicollinearity: how to detect",
     "text": "Multicollinearity: how to detect\n\nMulticollinearity only involves the covariates\n\nNo specific issues to logistic regression (vs. linear regression)\nTechniques from 512/612 work well for logistic regression model\n\n\n \n\nIn more complicated dataset/analysis, we may not be able to detect multicollinearity using the coefficient estimates/SE\n\n \n\nVariance inflation factor (VIF) approach: well-known approach to detect multicollinearity"
   },
