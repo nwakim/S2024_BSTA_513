@@ -1,1 +1,3 @@
 https://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting
+
+https://datasciencebox.org/02-making-rigorous-conclusions
