@@ -11,14 +11,14 @@
     "href": "homeworks.html",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items\n\n\n\nHomework 4 Part e help"
   },
   {
     "objectID": "homeworks.html#assignments",
     "href": "homeworks.html#assignments",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items\n\n\n\nHomework 4 Part e help"
   },
   {
     "objectID": "homeworks.html#solutions",
@@ -1670,7 +1670,7 @@
     "href": "weeks/week_08_sched.html#announcements",
     "title": "Week 8",
     "section": "Announcements",
-    "text": "Announcements\n\nMonday 5/20\n\nHW 4 part d UPDATED!!\nomework 3\n\nRemember to include the indicator function for different categories of your variables!!\nLOC has three levels: there should be two indicator functions and two coefficients for this variable!!"
+    "text": "Announcements\n\nMonday 5/20\n\nHW 4 part d UPDATED!!\n\nHelp from Monday class\n\nHomework 3\n\nRemember to include the indicator function for different categories of your variables!!\nLOC has three levels: there should be two indicator functions and two coefficients for this variable!!"
   },
   {
     "objectID": "weeks/week_08_sched.html#class-exit-tickets",
@@ -7803,5 +7803,12 @@
     "title": "Lesson 14: Model Building",
     "section": "hfnekl",
     "text": "hfnekl\nhttps://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting\nhttps://datasciencebox.org/02-making-rigorous-conclusions"
+  },
+  {
+    "objectID": "weeks/week_08_sched.html#muddiest-points-questions",
+    "href": "weeks/week_08_sched.html#muddiest-points-questions",
+    "title": "Week 8",
+    "section": "Muddiest Points / Questions",
+    "text": "Muddiest Points / Questions\n\n1. How did you determine the ages for the R output on slide 24 (standardized deviance residuals)\nThe centered ages are centered around the mean age. A few classes ago I mentioned that the mean was 69 years old, might have gotten lost in this lesson. So calculating the actual ages is just adding the mean age and centered age. So centered age of 6 is 69+6 = 75. Also, very confusing because apparently I can’t add!"
   }
 ]

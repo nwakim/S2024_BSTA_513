@@ -36,10 +36,10 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
 ## Resources
 
-| Lesson | Topic             |                                                              Slides                                                              |                                  Annotated Slides                                  |                           Recording                           |
+| Lesson | Topic             |                                                              Slides                                                              |                                                                  Annotated Slides                                                                   |                                                               Recording                                                                |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 14     | Model Diagnostics | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/14_Model_diagnostics/14_Model_diagnostics.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 15     | Model Building    |                              [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                               | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 14     | Model Diagnostics | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/14_Model_diagnostics/14_Model_diagnostics.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/14_Model_diagnostics/14_Model_diagnostics_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/81e8b1c4-1c1a-4747-9b1d-f154a6702c36/public)]{style="color:#f8f5f0;"} |
+| 15     | Model Building    |                              [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                               |                                 [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                  |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
 
 ## On the Horizon
 
@@ -49,7 +49,9 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
 -   HW 4 part d UPDATED!!
 
--   omework 3
+    -   [Help from Monday class](week_08/HW4_help.pdf)
+
+-   Homework 3
 
     -   Remember to include the indicator function for different categories of your variables!!
 
@@ -63,7 +65,11 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
 [{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/22)
 
-## Muddiest Points
+## Muddiest Points / Questions
+
+### 1. How did you determine the ages for the R output on slide 24 (standardized deviance residuals)
+
+The centered ages are centered around the mean age. A few classes ago I mentioned that the mean was 69 years old, might have gotten lost in this lesson. So calculating the actual ages is just adding the mean age and centered age. So centered age of 6 is 69+6 = 75. Also, very confusing because apparently I can't add!
 
 ```{r}
 #| echo: false

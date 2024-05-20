@@ -18,12 +18,14 @@ format:
 ::: {#homework}
 :::
 
+-   [Homework 4 Part e help](week_08/HW4_help.pdf)
+
 ## Solutions
 
 Please note that you need to download the `.html` file to see the LaTeX math properly.
 
 | Homework | `.qmd` file                                                                                                                                                                                                                                                             | `.html` file                                                                                                                                                                                                                                             |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------|-------------------------------|-----------------------------|
 | 1        | [[{{< iconify icon-park-twotone file-code size=29px >}}](https://ohsuitg-my.sharepoint.com/:u:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/HW_solns/HW1/HW1_solns_BSTA_513.qmd?csf=1&web=1&e=MET7cM)]{style="color:#f8f5f0;"} | [[{{< iconify ph key-fill size=29px >}}](https://ohsuitg-my.sharepoint.com/:u:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/HW_solns/HW1/HW1_solns_BSTA_513.html?csf=1&web=1&e=Dh0Pv1)]{style="color:#f8f5f0;"} |
 | 2        | [[{{< iconify icon-park-twotone file-code size=29px >}}](https://ohsuitg-my.sharepoint.com/:u:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/HW_solns/HW2/HW2_solns_BSTA_513.qmd?csf=1&web=1&e=qA4XoU)]{style="color:#f8f5f0;"} | [[{{< iconify ph key-fill size=29px >}}](https://ohsuitg-my.sharepoint.com/:u:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/HW_solns/HW2/HW2_solns_BSTA_513.html?csf=1&web=1&e=fxDtZq)]{style="color:#f8f5f0;"} |
 | 3        | [[{{< iconify icon-park-twotone file-code size=29px >}}](https://ohsuitg-my.sharepoint.com/:u:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/HW_solns/HW3/HW3_solns_BSTA_513.qmd?csf=1&web=1&e=jf1RtW)]{style="color:#f8f5f0;"} | [[{{< iconify ph key-fill size=29px >}}](https://ohsuitg-my.sharepoint.com/:u:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/HW_solns/HW3/HW3_solns_BSTA_513.html?csf=1&web=1&e=aSV5Qy)]{style="color:#f8f5f0;"} |
