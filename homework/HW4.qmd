@@ -83,7 +83,7 @@ Assess the significance of the group of coefficients for all variables in the mo
 
 #### Part d
 
-Fit a new model using only CPR and INF as the predictors, including an interaction between CPR and INF. Write a sentence interpreting the odds ratio for the main effects in the model. Please include the 95% confidence interval.
+Fit a new model using only CAN and INF as the predictors, including an interaction between CAN and INF. Write a sentence interpreting the odds ratio for the main effects in the model. Please include the 95% confidence interval.
 
 #### Part e
 
