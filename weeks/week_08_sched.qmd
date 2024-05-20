@@ -1,6 +1,6 @@
 ---
 title: "Week 8"
-description: "Assessing Model Fit and Numeric Problems"
+description: "Model Diagnostics and Model Building"
 date: "5/20/2024"
 date-modified: "today"
 categories: [""]
@@ -36,18 +36,28 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
 ## Resources
 
-| Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|------------|------------|:-------------:|:-----------------:|:-----------:|
-| 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 11     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic             |                                                              Slides                                                              |                                  Annotated Slides                                  |                           Recording                           |
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
+| 14     | Model Diagnostics | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/14_Model_diagnostics/14_Model_diagnostics.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 15     | Model Building    |                              [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                               | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
 ## Announcements
 
+### Monday 5/20
+
+-   Homework 3
+
+    -   Remember to include the indicator function for different categories of your variables!!
+
+    -   LOC has three levels: there should be two indicator functions and two coefficients for this variable!!
+
+        ![](week_08/loc.png)
+
 ## Class Exit Tickets
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Monday (5/20)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNzhJTkoyOEtZNEExQjQ1U1hIVTM4UTJKMy4u)]{style="color:#f8f5f0;"} Monday (5/20)
 
 [{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/22)
 

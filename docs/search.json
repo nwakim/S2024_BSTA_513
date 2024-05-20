@@ -1425,7 +1425,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nPrediction, Visualization, and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nMissing Data\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nConfounders and Interactions\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nAssessing Model Fit and Numeric Problems\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n4/1/24\n\n\nWeek 1\n\n\nIntroduction; File Organization\n\n\n\n\n4/8/24\n\n\nWeek 2\n\n\nMeasurements of Association and Agreement\n\n\n\n\n4/15/24\n\n\nWeek 3\n\n\nIntroduction to Logistic Regression\n\n\n\n\n4/22/24\n\n\nWeek 4\n\n\nPrediction, Visualization, and Interpretations\n\n\n\n\n4/29/24\n\n\nWeek 5\n\n\nMissing Data\n\n\n\n\n5/6/24\n\n\nWeek 6\n\n\nConfounders and Interactions\n\n\n\n\n5/13/24\n\n\nWeek 7\n\n\nAssessing Model Fit\n\n\n\n\n5/20/24\n\n\nWeek 8\n\n\nModel Diagnostics and Model Building\n\n\n\n\n5/27/24\n\n\nWeek 9\n\n\nModel Diagnostics\n\n\n\n\n6/3/24\n\n\nWeek 10\n\n\nOther generalized linear regressions\n\n\n\n\n6/10/24\n\n\nWeek 11\n\n\nSpill-Over Week\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_03_sched.html#resources",
@@ -1656,7 +1656,7 @@
     "href": "weeks/week_08_sched.html#resources",
     "title": "Week 8",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n11\n\n\n\n\n\n\n11"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n14\nModel Diagnostics\n\n\n\n\n\n15\nModel Building"
   },
   {
     "objectID": "weeks/week_08_sched.html#on-the-horizon",
@@ -1670,7 +1670,7 @@
     "href": "weeks/week_08_sched.html#announcements",
     "title": "Week 8",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nMonday 5/20\n\nHomework 3\n\nRemember to include the indicator function for different categories of your variables!!\nLOC has three levels: there should be two indicator functions and two coefficients for this variable!!"
   },
   {
     "objectID": "weeks/week_08_sched.html#class-exit-tickets",
@@ -7327,5 +7327,481 @@
     "title": "Categorical Data Analysis",
     "section": "",
     "text": "https://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting\nhttps://datasciencebox.org/02-making-rigorous-conclusions"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#model-complexity-vs.-parsimony",
+    "href": "lectures/14_Model_building/14_Model_Building.html#model-complexity-vs.-parsimony",
+    "title": "Lesson 14: Model Building",
+    "section": "Model Complexity vs. Parsimony",
+    "text": "Model Complexity vs. Parsimony\n\n\nSuppose we have \\(p = 30\\) covariates (in the true model) and n = 50 observations. We could consider the following two alternatives:\n\nWe could fit a model using all of the covariates.\n\nIn this case, \\(\\widehat\\beta\\) is unbiased for \\(\\beta\\) (in a linear model fit using OLS). But \\(\\widehat\\beta\\) has very high variance.\n\nWe could fit a model using only the five strongest covariates.\n\nIn this case, \\(\\widehat\\beta\\) will be biased for \\(\\beta\\), but it will have lower variance (compared to the estimate including all covariates)\n\n\n\n\n\n\nSource: http://scott.fortmann-roe.com/docs/BiasVariance.html"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#some-important-definitions",
+    "href": "lectures/14_Model_building/14_Model_Building.html#some-important-definitions",
+    "title": "Lesson 14: Model Building",
+    "section": "Some important definitions",
+    "text": "Some important definitions\n\nModel selection: picking the “best” model from a set of possible models\n\nModels will have the same outcome, but typically differ by the covariates that are included, their transformations, and their interactions\n\n\n \n\nModel selection strategies: a process or framework that helps us pick our “best” model\n\nThese strategies often differ by the approach and criteria used to the determine the “best” model\n\n\n \n\nOverfitting: result of fitting a model so closely to our particular sample data that it cannot be generalized to other samples (or the population)"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#the-goals-of-association-vs.-prediction",
+    "href": "lectures/14_Model_building/14_Model_Building.html#the-goals-of-association-vs.-prediction",
+    "title": "Lesson 14: Model Building",
+    "section": "The goals of association vs. prediction",
+    "text": "The goals of association vs. prediction\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nGoal: Understand one variable’s (or a group of variable’s) effect on the response after adjusting for other factors\nMainly interpret odds ratios of the variable that is the focus of the study\n\n\n\n\n\n\nPrediction\n\n\n\nGoal: to calculate the most precise prediction of the response variable\nInterpreting coefficients is not important\nChoose only the variables that are strong predictors of the response variable\n\nExcluding irrelevant variables can help reduce widths of the prediction intervals"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#hfnekl",
+    "href": "lectures/14_Model_building/14_Model_Building.html#hfnekl",
+    "title": "Lesson 14: Model Building",
+    "section": "hfnekl",
+    "text": "hfnekl\nhttps://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting\nhttps://datasciencebox.org/02-making-rigorous-conclusions\n\n\nLesson 14: Model Building"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#model-selection-strategies-for-continuous-outcomes",
+    "href": "lectures/14_Model_building/14_Model_Building.html#model-selection-strategies-for-continuous-outcomes",
+    "title": "Lesson 14: Model Building",
+    "section": "Model selection strategies for continuous outcomes",
+    "text": "Model selection strategies for continuous outcomes\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nSelection of potential models is tied more with the research context with some incorporation of prediction scores\nPre-specification of multivariable model\nPurposeful model selection\n\n“Risk factor modeling”\n\nChange in Estimate (CIE) approaches\n\nWill learn in Survival Analysis (BSTA 514)\n\n\n\n\n\n\n\nPrediction\n\n\n\nSelection of potential models is fully dependent on prediction scores\nAutomated strategies\n\nStepwise selection (forward/backward)\n\nYou’ll see these a lot, but they’re not really good methods\n\nBest subset\nRegularization techniques (LASSO, Ridge, Elastic net)\n\n\n\n\n\n\n\nFor categorical outcomes, there are more prediction model selection strategies (will learn more in BSTA 513)\n\nExamples: Decision trees, Random forest, Neural networks, K-means"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#model-selection-strategies-for-categorical-outcomes",
+    "href": "lectures/14_Model_building/14_Model_Building.html#model-selection-strategies-for-categorical-outcomes",
+    "title": "Lesson 14: Model Building",
+    "section": "Model selection strategies for categorical outcomes",
+    "text": "Model selection strategies for categorical outcomes\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nSelection of potential models is tied more with the research context with some incorporation of prediction scores\n\n \n\nPre-specification of multivariable model\nPurposeful model selection\n\n“Risk factor modeling”\n\nChange in Estimate (CIE) approaches\n\nWill learn in Survival Analysis (BSTA 514)\n\n\n\n\n\n\n\nPrediction\n\n\n\nSelection of potential models is fully dependent on prediction scores\n\n \n\nLogistic regression with more refined model selection\n\nRegularization techniques (LASSO, Ridge, Elastic net)\n\nMachine learning realm\n\nDecision trees, random forest, k-nearest neighbors, Neural networks"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#before-i-move-on",
+    "href": "lectures/14_Model_building/14_Model_Building.html#before-i-move-on",
+    "title": "Lesson 14: Model Building",
+    "section": "Before I move on…",
+    "text": "Before I move on…\n\nWe CAN use purposeful selection from last quarter in any type of generalized linear model (GLM)\n\nThis includes logistic regression!\n\n\n \n\nThe best documented information on purposeful selection is in the Hosmer-Lemeshow textbook on logistic regression\n\nTextbook in student files is linked here\nPurposeful selection starts on page 89 (or page 101 in the pdf)\n\n\n \n\nI will not discuss purposeful selection in this course\n\nBe aware that this is a tool that you can use in any regression!"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#okay-so-prediction-of-categorical-outcomes",
+    "href": "lectures/14_Model_building/14_Model_Building.html#okay-so-prediction-of-categorical-outcomes",
+    "title": "Lesson 14: Model Building",
+    "section": "Okay, so prediction of categorical outcomes",
+    "text": "Okay, so prediction of categorical outcomes\n\nClassification: process of predicting categorical responses/outcomes\n\nAssigning a category outcome based on an observation’s predictors\n\nCommon classification methods (good site on brief explanation of each)\n\nLogistic regression\nNaive Bayes\nk-Nearest Neighbor (KNN)\nDecision Trees\nSupport Vector Machines (SVMs)\nNeural Networks"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#bias-variance-trade-off",
+    "href": "lectures/14_Model_building/14_Model_Building.html#bias-variance-trade-off",
+    "title": "Lesson 14: Model Building",
+    "section": "Bias-variance trade off",
+    "text": "Bias-variance trade off\n\n\n\nRecall from 512/612: MSE can be written as a function of the bias and variance\n\\[\nMSE = \\text{bias}\\big(\\widehat\\beta\\big)^2 + \\text{variance}\\big(\\widehat\\beta\\big)\n\\]\n\nWe no longer use MSE in logistic regression to find the best fit model, BUT the idea between the bias and variance trade off holds!\n\nFor the same data:\n\nMore covariates in model: less bias, more variance\n\nPotential overfitting: with new data does our model still hold?\n\nLess covariates in model: more bias, less variance\n\n\n\n\n\n\nSource: http://scott.fortmann-roe.com/docs/BiasVariance.html"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#logistic-regression-is-a-classification-method",
+    "href": "lectures/14_Model_building/14_Model_Building.html#logistic-regression-is-a-classification-method",
+    "title": "Lesson 14: Model Building",
+    "section": "Logistic regression is a classification method",
+    "text": "Logistic regression is a classification method\n\nBut to be a good classifier, our model needs to built a certain way\nPrediction depends on type of variable/model selection!\n\nThis is when it can become machine learning\n\nSo the big question is: how do we select this model??"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#poll-everywhere-question-1",
+    "href": "lectures/14_Model_building/14_Model_Building.html#poll-everywhere-question-1",
+    "title": "Lesson 14: Model Building",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#overview-of-the-process",
+    "href": "lectures/14_Model_building/14_Model_Building.html#overview-of-the-process",
+    "title": "Lesson 14: Model Building",
+    "section": "Overview of the process",
+    "text": "Overview of the process"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#splitting-data",
+    "href": "lectures/14_Model_building/14_Model_Building.html#splitting-data",
+    "title": "Lesson 14: Model Building",
+    "section": "Splitting data",
+    "text": "Splitting data\n\nLet’s keep this in context of the outcome\n\n\nggplot(glow1, aes(x = fracture)) + geom_bar()\n\nglow = glow1 %&gt;%\n    dplyr::select(-sub_id, -site_id, -phy_id, -age)"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#splitting-data-1",
+    "href": "lectures/14_Model_building/14_Model_Building.html#splitting-data-1",
+    "title": "Lesson 14: Model Building",
+    "section": "Splitting data",
+    "text": "Splitting data\n\nWant to split our data into training and testing sets\nStratify by fracture: because we have imbalanced data\n\n\nglow_split = initial_split(glow, strata = fracture)\nglow_split\n\n&lt;Training/Testing/Total&gt;\n&lt;374/126/500&gt;\n\nglow_train = training(glow_split)\nglow_test = testing(glow_split)"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#fitting-the-logistic-regression-model",
+    "href": "lectures/14_Model_building/14_Model_Building.html#fitting-the-logistic-regression-model",
+    "title": "Lesson 14: Model Building",
+    "section": "Fitting the logistic regression model",
+    "text": "Fitting the logistic regression model\n\nUse Lasso\n\nLasso with interactions!! Using interactions??\n\nlasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %&gt;%\n            set_engine(\"glmnet\")"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#build-recipe",
+    "href": "lectures/14_Model_building/14_Model_Building.html#build-recipe",
+    "title": "Lesson 14: Model Building",
+    "section": "build recipe??",
+    "text": "build recipe??\n\nglow_rec = recipe(fracture ~ ., data = glow_train) %&gt;%\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) \n\nglow_workflow = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec)\n\n\nglow_folds = vfold_cv(glow_train, v = 5, strata = fracture)\n\nglow_fit_rs = glow_workflow %&gt;% \n      fit_resamples(glow_folds, control = control_resamples(save_pred=T))\n\nglow_train_metrics = collect_metrics(glow_fit_rs)\nglow_train_metrics\n\n# A tibble: 3 × 6\n  .metric     .estimator  mean     n std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.754     5 0.0206  Preprocessor1_Model1\n2 brier_class binary     0.176     5 0.00902 Preprocessor1_Model1\n3 roc_auc     binary     0.675     5 0.0357  Preprocessor1_Model1\n\nglow_train_pred = collect_predictions(glow_fit_rs)\n\nglow_train_pred %&gt;%\n    group_by(id) %&gt;%\n    roc_curve(truth = fracture, .pred_No) %&gt;%\n    autoplot()\n\n\n\nglow_fit = glow_workflow %&gt;% fit(data = glow_train)\n\nglow_test_pred = predict(glow_fit, new_data = glow_test, type = \"prob\") %&gt;%\n    bind_cols(glow_test)\n\nglow_test_pred %&gt;% \n    roc_curve(truth = fracture, .pred_No) %&gt;%\n    autoplot()\n\n\n\nglow_test_pred %&gt;% \n    roc_auc(truth = fracture, .pred_No)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.652\n\nglow_test_pred %&gt;% filter(fracture == \"No\", .pred_Yes &gt; 0.5)\n\n# A tibble: 7 × 14\n  .pred_No .pred_Yes priorfrac weight height   bmi premeno momfrac armassist\n     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;    \n1    0.493     0.507 Yes         54.4    158  21.8 Yes     No      No       \n2    0.488     0.512 Yes         58.5    155  24.3 No      No      Yes      \n3    0.298     0.702 Yes         54.9    159  21.7 No      Yes     Yes      \n4    0.433     0.567 No          99.8    153  42.6 Yes     No      Yes      \n5    0.499     0.501 No          50.8    150  22.6 No      No      Yes      \n6    0.368     0.632 Yes         55.3    152  23.9 No      No      Yes      \n7    0.429     0.571 No         113.     152  49.1 Yes     No      Yes      \n# ℹ 5 more variables: smoke &lt;fct&gt;, raterisk &lt;fct&gt;, fracscore &lt;int&gt;,\n#   fracture &lt;fct&gt;, age_c &lt;dbl&gt;\n\nglow_test_pred %&gt;% filter(fracture == \"Yes\", .pred_No &gt; 0.5)\n\n# A tibble: 27 × 14\n   .pred_No .pred_Yes priorfrac weight height   bmi premeno momfrac armassist\n      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;    \n 1    0.768     0.232 No          49.9    151  21.9 No      No      No       \n 2    0.598     0.402 Yes         88.5    158  35.5 No      No      Yes      \n 3    0.850     0.150 Yes         94.3    173  31.5 No      No      Yes      \n 4    0.551     0.449 No          60.3    148  27.5 Yes     No      Yes      \n 5    0.527     0.473 Yes         78.5    165  28.8 No      Yes     Yes      \n 6    0.822     0.178 Yes         54.4    165  20.0 No      No      No       \n 7    0.715     0.285 No          46.3    158  18.5 No      No      No       \n 8    0.579     0.421 Yes         63.5    165  23.3 Yes     No      Yes      \n 9    0.849     0.151 No          68      173  22.7 No      Yes     No       \n10    0.673     0.327 Yes         56.2    157  22.8 No      No      No       \n# ℹ 17 more rows\n# ℹ 5 more variables: smoke &lt;fct&gt;, raterisk &lt;fct&gt;, fracscore &lt;int&gt;,\n#   fracture &lt;fct&gt;, age_c &lt;dbl&gt;"
+  },
+  {
+    "objectID": "lectures/14_Model_building/14_Model_Building.html#other-stufs",
+    "href": "lectures/14_Model_building/14_Model_Building.html#other-stufs",
+    "title": "Lesson 14: Model Building",
+    "section": "Other stufs",
+    "text": "Other stufs\n\nlibrary(vip)\n\nvi_data = glow_workflow %&gt;% \n    fit(glow_train) %&gt;%\n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#review-of-model-assessment-so-far-12",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#review-of-model-assessment-so-far-12",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Review of model assessment so far (1/2)",
+    "text": "Review of model assessment so far (1/2)\n\nOverall measurements of fit\n\nHow well does the fitted logistic regression model predict the outcome?\nDifferent ways to measure the answer to this question\n\n\n\n\n\n\n\n\n\n\n\nMeasure of fit\nHypothesis tested?\nEquation\nR code\n\n\n\n\nPearson residual\nYes\n\\(X^2=\\sum_{j=1}^{J}{r\\left(Y_j,{\\hat{\\pi}}_j\\right)^2}\\)\nNot given\n\n\nHosmer-Lemeshow test\nYes\n\\(\\hat{C}=\\sum_{k=1}^{g}\\frac{\\left(o_k-n_k^\\prime{\\bar{\\pi}}_k\\right)^2}{n_k^\\prime{\\bar{\\pi}}_k(1-{\\bar{\\pi}}_k)}\\)\nhoslem.test()\n\n\nAUC-ROC\nKinda\nNot given\nauc(observed, predicted)\n\n\nAIC\nOnly to compare models\n\\(AIC = -2 \\cdot \\text{log-likelihood} + 2q\\)\nAIC(model_name)\n\n\nBIC\nOnly to compare models\n\\(BIC = -2 \\cdot \\text{log-likelihood} + q\\text{log}(n)\\)\nBIC(model_name)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#review-of-model-assessment-so-far-22",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#review-of-model-assessment-so-far-22",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Review of model assessment so far (2/2)",
+    "text": "Review of model assessment so far (2/2)\n\nNumerical problems\n\nAssess pre and post model fit\nNumerical problems often depend on the final model (which variables and interactions are included)\n\nDifferent numerical problems to look out for\n\nZero cell count\nComplete separation\nMulticollinearity"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#today",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#today",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Today",
+    "text": "Today\n\nWe now use model diagnostics to identify any observations that the model does not fit well"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#review-of-number-of-covariate-patterns",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#review-of-number-of-covariate-patterns",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Review of Number of Covariate Patterns",
+    "text": "Review of Number of Covariate Patterns\n\nCovariate patterns are the unique covariate combinations that are observed\n\n \n\nFor example: model contains two binary covariates (history of fracture and smoking status), there will be 4 unique combination of these factors\n\nThis model has 4 covariate patterns\nSubjects can be divided into 4 groups based on the covariates’ values\n\n\n \n\nWhen we have continuous covariates, the number of covariate patterns will be close to the number of individuals in the dataset"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#overall-measure-to-diagnostics",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#overall-measure-to-diagnostics",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Overall measure to diagnostics",
+    "text": "Overall measure to diagnostics\n\nNow we need to investigate diagnostics looking at individual data or covariate pattern data\n\nMake sure the overall measure has not been influenced by certain observations\n\n\n \n\nThe key quantities from logistic regression diagnostics are the components of “residual sum-of-squares”\n\nThe same idea as in the linear regression\nAssessed for each covariate pattern \\(j\\), by computing standardized Pearson residuals and Deviance residuals\n\nStandardization using \\(h_j\\), the leverage values"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-12",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-12",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Hat Matrix and Leverage Values (1/2)",
+    "text": "Hat Matrix and Leverage Values (1/2)\n\nWe have learned “hat” matrix and leverage values from linear regression diagnostics\nIn linear regression, the hat matrix projects the outcome variable onto the covariate space:\n\n$ H=X(XX){-1}X; =Hy$\nThe linear regression residuals is thus \\(y=\\widehat{y}\\), or \\((I-H)y\\)\n\nThe leverage is just the diagonal elements of the hat matrix, which is proportional to the distance of \\(x_j\\) to the mean of the data \\(\\overline{x}\\)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-22",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-22",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Hat Matrix and Leverage Values (2/2)",
+    "text": "Hat Matrix and Leverage Values (2/2)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#diagnostic-statistics-computation-12",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#diagnostic-statistics-computation-12",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Diagnostic Statistics Computation (1/2)",
+    "text": "Diagnostic Statistics Computation (1/2)\n\nTwo diagnostic statistics computation approach\n\nApproach 1: computed by covariate pattern\n\nRecommendation of Hosmer-Lemeshow textbook\nR uses this approach\nIdentify outliers as group that shares the same covariate values (in the same covariate pattern)\n\nApproach 2: individual observation approach\n\nSAS uses this approach\nIdentify outliers as individual\n\n\nWhy prefer covariate patterns approach?\n\nWhen the number of covariate pattern is much smaller than n, there is risk that we may fail to identify influential and/or poorly fit covariate patterns using individual based on residual"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#diagnostic-statistics-computation-22",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#diagnostic-statistics-computation-22",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Diagnostic Statistics Computation (2/2)",
+    "text": "Diagnostic Statistics Computation (2/2)\nConsider a covariate pattern with \\(m_j\\) subjects, all did not have event (some \\(y_i = 0\\)). So the estimated logistic probability is \\(\\widehat\\pi_j\\)\n\nPearson residual computed by individual \\[r_i=-\\sqrt{\\frac{{\\hat{\\pi}}_j}{(1-{\\hat{\\pi}}_j)}}\\]\nPearson residual computed by covariate pattern \\[r_i=-\\sqrt{m_j}\\sqrt{\\frac{{\\hat{\\pi}}_j}{(1-{\\hat{\\pi}}_j)}}\\]\nDifference between aboveresiduals will be large if \\(m_j\\) is large: usually a problem if less covariate patterns\n\nResidual from covariate pattern will identify poorly fit covariate patterns"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#diagnostics-of-logistic-regression",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#diagnostics-of-logistic-regression",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Diagnostics of Logistic Regression",
+    "text": "Diagnostics of Logistic Regression\n\nModel diagnostics of logistic regression can be assessed by checking how influential a covariate pattern is:\n \n\nLook at change in residuals if a covariate pattern is excluded\n\nStandardized Pearson residual\nStandardized Deviance residual\n\n\n \n\nLook at change in coefficients if a covariate pattern is excluded"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#change-of-standardized-residuals",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#change-of-standardized-residuals",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Change of Standardized Residuals",
+    "text": "Change of Standardized Residuals\n\nChange in standardized Pearson Chi-square statistic due to deletion of subjects with covariate pattern \\(x_j\\): \\[\\Delta X_j^2 = r_{sj}^2 = \\dfrac{r_j^2}{1-h_j}\\]\nDon’t need to know this: change in standardized deviance statistic due to deletion of subjects with covariate pattern \\(x_j\\): \\[\\Delta D_j = \\dfrac{d_j^2}{1-h_j}\\]\nRefer to Lesson 12: Assessing Model Fit for expression of Pearson residual"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#change-of-estimated-coefficients",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#change-of-estimated-coefficients",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Change of Estimated Coefficients",
+    "text": "Change of Estimated Coefficients\n\nChange in estimated coefficients due to deletion of subjects with covariate pattern \\(x_j\\): \\[\\Delta \\widehat{\\beta}_j = \\dfrac{r_j^2 h_j}{(1-h_j)^2}\\]\n\n \n\nThis is the logistic regression analog of Cook’s influence statistic (in linear regression)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#visual-assessment-for-diagnostics-of-logistic-regression-i",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#visual-assessment-for-diagnostics-of-logistic-regression-i",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Visual Assessment for Diagnostics of Logistic Regression (I)",
+    "text": "Visual Assessment for Diagnostics of Logistic Regression (I)\n\nIn logistic regression, we mainly rely on graphical methods\n\nBecause the distribution of diagnostic measures under null hypothesis (that the model fits) is only known in certain limited settings\n\n\n \n\nFour plots for analysis of diagnostics in logistic regression:\n\n\\(\\Delta X_j^2\\) vs. \\({\\hat{\\pi}}_j\\)\n\\(\\Delta D_j\\) vs. \\({\\hat{\\pi}}_j\\)\n\\(\\Delta\\widehat{\\beta}_j\\) vs. \\({\\hat{\\pi}}_j\\)\n\\(h_j\\) vs. \\({\\hat{\\pi}}_j\\)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-linear-regression",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-linear-regression",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Hat Matrix and Leverage Values: Linear regression",
+    "text": "Hat Matrix and Leverage Values: Linear regression\n\nWe have learned “hat” matrix and leverage values from linear regression diagnostics\n\n \n\nIn linear regression, the hat matrix projects the outcome variable onto the covariate space:\n \n\n\\(H=X\\left(X^\\prime X\\right)^{-1}X^\\prime\\) and \\(\\hat{y}=Hy\\)\n\n \n\nThe linear regression residuals is thus \\(y - \\widehat{y}\\), or \\((I-H)y\\)\n\n\n \n\nThe leverage is just the diagonal elements of the hat matrix, which is proportional to the distance of \\(x_j\\) to the mean of the data \\(\\overline{x}\\)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-logistic-regression",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#hat-matrix-and-leverage-values-logistic-regression",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Hat Matrix and Leverage Values: Logistic regression",
+    "text": "Hat Matrix and Leverage Values: Logistic regression\n\nIn logistic regression model, the hat matrix is: \\[H=V^\\frac{1}{2}X\\left(X^\\prime V\\ X\\right)^{-1}X^\\prime V^\\frac{1}{2}\\]\nThe leverage is \\[h_j=m_j\\cdot\\hat{\\pi}\\left(\\textbf{x}_j\\right)\\left[1-\\hat{\\pi}\\left(\\textbf{x}_j\\right)\\right]\\textbf{x}_j^\\prime\\left(\\textbf{X}^\\prime\\textbf{VX}\\right)^{-1}\\textbf{x}_j=v_j\\cdot b_j\\]\n\n\\(b\\): weighted distance of \\(x_j\\) from \\(\\overline{x}\\)\n\\(v_j\\): model based estimator of the variance of \\(y_j\\)\n\n\\(v_j=m_j\\cdot\\hat{\\pi}\\left(\\textbf{x}_j\\right)\\left[1-\\hat{\\pi}\\left(\\textbf{x}_j\\right)\\right]\\)\n\n\n\\(h_j\\) reflects the relative influence of each covariate pattern on the model’s fit"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#recall-the-model-we-fit",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#recall-the-model-we-fit",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Recall the model we fit",
+    "text": "Recall the model we fit"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#last-class-glow-study-with-interactions",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#last-class-glow-study-with-interactions",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Last Class: GLOW Study with interactions",
+    "text": "Last Class: GLOW Study with interactions\n\nOutcome variable: any fracture in the first year of follow up (FRACTURE: 0 or 1)\nRisk factor/variable of interest: history of prior fracture (PRIORFRAC: 0 or 1)\nPotential confounder or effect modifier: age (AGE, a continuous variable)\nFitted model with interactions: \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = \\widehat\\beta_0 &+ &\\widehat\\beta_1\\cdot I(\\text{PF}) & + &\\widehat\\beta_2\\cdot Age& + &\\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age \\\\  \n\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = -1.376 &+ &1.002\\cdot I(\\text{PF})& + &0.063\\cdot Age& -&0.057 \\cdot I(\\text{PF}) \\cdot Age\n\\end{aligned}\\]\n\n \n\nLesson 12: determined the overall fit of this model\nToday: determine the if any observations/covariate patterns that model does not fit well"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#how-do-we-get-these-values-in-r",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#how-do-we-get-these-values-in-r",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "How do we get these values in R?",
+    "text": "How do we get these values in R?\n\nNice function in the R script Logistic_Dx_Functions.R\n\nHighly suggest you save this R script for future use!!\n\n\n\nsource(here(\"lectures\", \"14_Model_diagnostics\", \"Logistic_Dx_Functions.R\"))\ndx_glow = dx(glow_m3)\nglimpse(dx_glow)\n\nRows: 71\nColumns: 16\n$ `(Intercept)`        &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ priorfracYes         &lt;dbl&gt; 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0…\n$ age_c                &lt;dbl&gt; 1, -7, 7, -2, 10, 20, 1, -2, 2, 8, 18, -8, 11, 10…\n$ `priorfracYes:age_c` &lt;dbl&gt; 1, 0, 7, 0, 10, 0, 0, -2, 2, 0, 0, 0, 0, 0, -3, 0…\n$ y                    &lt;dbl&gt; 2, 2, 3, 2, 2, 1, 3, 3, 1, 5, 1, 3, 2, 1, 1, 4, 1…\n$ P                    &lt;dbl&gt; 0.4088354, 0.1402159, 0.4162991, 0.1822879, 0.420…\n$ n                    &lt;int&gt; 5, 15, 7, 10, 5, 2, 12, 8, 3, 15, 2, 18, 7, 4, 3,…\n$ yhat                 &lt;dbl&gt; 2.0441770, 2.1032389, 2.9140936, 1.8228786, 2.100…\n$ Pr                   &lt;dbl&gt; -0.04018670, -0.07677228, 0.06586860, 0.14507476,…\n$ dr                   &lt;dbl&gt; -0.04023255, -0.07730975, 0.06577949, 0.14332786,…\n$ h                    &lt;dbl&gt; 0.008844090, 0.003811004, 0.008725450, 0.00290085…\n$ sPr                  &lt;dbl&gt; -0.04036559, -0.07691899, 0.06615786, 0.14528564,…\n$ sdr                  &lt;dbl&gt; -0.04041165, -0.07745749, 0.06606836, 0.14353620,…\n$ dChisq               &lt;dbl&gt; 0.001629381, 0.005916530, 0.004376863, 0.02110791…\n$ dDev                 &lt;dbl&gt; 0.001633102, 0.005999662, 0.004365028, 0.02060264…\n$ dBhat                &lt;dbl&gt; 1.453897e-05, 2.263418e-05, 3.852626e-05, 6.14091…"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#poll-everywhere-question-3",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#poll-everywhere-question-3",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#visual-assessment-for-diagnostics-of-logistic-regression",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#visual-assessment-for-diagnostics-of-logistic-regression",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Visual Assessment for Diagnostics of Logistic Regression",
+    "text": "Visual Assessment for Diagnostics of Logistic Regression\n\nThe plots allow us to identify those covariate patterns that are…\n\nPoorly fit\n\nLarge values of \\(\\Delta X_j^2\\) (and/or \\(\\Delta D_j\\) if we looked at those)\n\nInfluential on estimated coefficients\n\nLarge values of \\(\\Delta\\widehat{\\beta}_j\\)\n\n\nIf you are interested to look at the contribution of leverage (ℎ_𝑗) to the values of the diagnostic statistic, you may also look at plots of:\n\n\\(\\Delta X_j^2\\) vs. \\({\\hat{\\pi}}_j\\)\n\\(\\Delta D_j\\) vs. \\({\\hat{\\pi}}_j\\)\n\\(\\Delta\\widehat{\\beta}_j\\) vs. \\({\\hat{\\pi}}_j\\)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-pearson-residuals",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-pearson-residuals",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "GLOW study: standardized Pearson residuals",
+    "text": "GLOW study: standardized Pearson residuals\n\n\n\nGenerally, the points that curve from top left to bottom right of plot correspond to covariate patterns with \\(y_j = 1\\)\n\nOpposite corresponds to \\(y_j = 0\\)\n\n\n\n\n\nTo make the plot\nggplot(dx_glow) + geom_point(aes(x=P, y=dChisq), size = 3) + \n  xlab(\"Estimated/Predicted Probability of Fracture\") +\n  ylab(\"Change in Std. Pearson Residual\") +\n  theme(text = element_text(size = 26))"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-pearson-residuals-1",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-pearson-residuals-1",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "GLOW study: standardized Pearson residuals",
+    "text": "GLOW study: standardized Pearson residuals\n\n\n\nGenerally, the points that curve from top left to bottom right of plot correspond to covariate patterns with \\(y_j = 1\\)\n\nOpposite corresponds to \\(y_j = 0\\)\n\nPoints in the top left or top right corners identify the covariate patterns that are poorly fit\nWe may use 4 as a crude approximation to the upper 95th percentile for \\(\\Delta X_j^2\\)\n\n95th percentile of chi-squared distribution is 3.84\n\n\n\n\n\nTo make the plot\nggplot(dx_glow) + geom_point(aes(x=P, y=dChisq), size = 3) + \n  xlab(\"Estimated/Predicted Probability of Fracture\") +\n  ylab(\"Change in Std. Pearson Residual\") +\n  theme(text = element_text(size = 26))"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-pearson-residuals-2",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-pearson-residuals-2",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "GLOW study: standardized Pearson residuals",
+    "text": "GLOW study: standardized Pearson residuals\n\n\n\nGenerally, the points that curve from top left to bottom right of plot correspond to covariate patterns with \\(y_j = 1\\)\n\nOpposite corresponds to \\(y_j = 0\\)\n\nPoints in the top left or top right corners identify the covariate patterns that are poorly fit\nWe may use 4 as a crude approximation to the upper 95th percentile for \\(\\Delta X_j^2\\)\n\n95th percentile of chi-squared distribution is 3.84\n\nWhich point is over 4?\n\n\ndx_glow %&gt;% filter(dChisq &gt; 4) %&gt;% select(priorfracYes, age_c, P, dChisq)\n\n   priorfracYes age_c         P   dChisq\n          &lt;num&gt; &lt;num&gt;     &lt;num&gt;    &lt;num&gt;\n1:            0    -4 0.1643855 4.413937\n\n\n\n\n\nTo make the plot\nggplot(dx_glow) + geom_point(aes(x=P, y=dChisq), size = 3) + \n  xlab(\"Estimated/Predicted Probability of Fracture\") +\n  ylab(\"Change in Std. Pearson Residual\") +\n  theme(text = element_text(size = 26))"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-deviance-residuals",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-standardized-deviance-residuals",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "GLOW study: standardized Deviance residuals",
+    "text": "GLOW study: standardized Deviance residuals\n\n\n\nSame investigation as Pearson residuals\nPoints in the top left or top right corners identify the covariate patterns that are poorly fit\nUse 4 as a crude approximation to the upper 95th percentile\nWhich point is over 4?\n\n\ndx_glow %&gt;% filter(dDev &gt; 4) %&gt;% \n  select(priorfracYes, age_c, P, dDev)\n\n   priorfracYes age_c         P     dDev\n          &lt;num&gt; &lt;num&gt;     &lt;num&gt;    &lt;num&gt;\n1:            0   -10 0.1190935 4.841217\n2:            0     7 0.2812460 5.313540\n3:            1     6 0.4150524 4.325664\n\n\n\n\n\nTo make the plot\nggplot(dx_glow) + geom_point(aes(x=P, y=dDev), size = 3) + \n  xlab(\"Estimated/Predicted Probability of Fracture\") +\n  ylab(\"Change in Std. Deviance Residual\") +\n  theme(text = element_text(size = 26))"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-change-in-coefficient-estimates",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-change-in-coefficient-estimates",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "GLOW Study: Change in coefficient estimates",
+    "text": "GLOW Study: Change in coefficient estimates\n\n\n\nBook recommends flagging certain covariate patterns if change in coefficient estimates are greater than 1\nAll values of \\(\\Delta\\widehat{\\beta}_j\\) are below 0.09\n\n\ndx_glow %&gt;% filter(dBhat &gt; 0.075) %&gt;% \n  select(priorfracYes, age_c, P, dBhat)\n\n   priorfracYes age_c         P      dBhat\n          &lt;num&gt; &lt;num&gt;     &lt;num&gt;      &lt;num&gt;\n1:            1    20 0.4325984 0.08926472\n\n\n\n\n\nTo make the plot\nggplot(dx_glow) + geom_point(aes(x=P, y=dBhat), size = 3) + \n  xlab(\"Estimated/Predicted Probability of Fracture\") +\n  ylab(\"Change in Coefficient Estimates\") +\n  theme(text = element_text(size = 26))"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-leverage",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#glow-study-leverage",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "GLOW Study: Leverage",
+    "text": "GLOW Study: Leverage\n\n\n\nWe can use the same rule as linear regression: \\(h_j &gt; 3p/n\\)\n\nFlag these points as high leverage\n\nPoints with high leverage\n\n\\(p=4\\): four regression coefficients\n\\(n=500\\): 500 total observations\nLook for \\(h_j &gt; 3p/n = 3\\cdot4 /500 = 0.024\\)\n\n\n\ndx_glow %&gt;% filter(h &gt; 3*4/500) %&gt;% \n  select(priorfracYes, age_c, P, h) %&gt;% \n  head()\n\n   priorfracYes age_c         P          h\n          &lt;num&gt; &lt;num&gt;     &lt;num&gt;      &lt;num&gt;\n1:            0    20 0.4686423 0.02688958\n2:            1   -12 0.3928116 0.03186122\n3:            0    19 0.4531105 0.02451738\n4:            1   -11 0.3940365 0.02900675\n5:            1    19 0.4313389 0.02895824\n6:            1    18 0.4300804 0.02621708\n\n\n\n\n\nTo make the plot\nggplot(dx_glow) + geom_point(aes(x=P, y=h), size=3) + \n  xlab(\"Estimated/Predicted Probability of Fracture\") +\n  ylab(\"Leverage\") +\n  theme(text = element_text(size = 26))"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#find-out-the-influential-observation-from-the-data-set",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#find-out-the-influential-observation-from-the-data-set",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Find Out the “Influential” Observation From the Data Set",
+    "text": "Find Out the “Influential” Observation From the Data Set\n\n\n\nWe identified covariate patterns that may be poorly fit or influential\n\n \n\nLet’s identify the covariate patterns that were not fit well\n\n\n\ndx_glow %&gt;% mutate(Cov_patt = 1:nrow(.)) %&gt;%\n  filter(dChisq &gt; 4 | dDev &gt; 4 | dBhat &gt; 1 | \n          h &gt; 3*4/500) %&gt;%\n  select(Cov_patt, y, P, h, dChisq, dDev, dBhat, h) %&gt;%\n  round(., 3)\n\n    Cov_patt     y     P     h dChisq  dDev dBhat\n       &lt;num&gt; &lt;num&gt; &lt;num&gt; &lt;num&gt;  &lt;num&gt; &lt;num&gt; &lt;num&gt;\n 1:        6     1 0.469 0.027  0.008 0.008 0.000\n 2:       22     1 0.393 0.032  0.046 0.047 0.002\n 3:       36     1 0.453 0.025  0.178 0.183 0.004\n 4:       43     0 0.119 0.005  2.581 4.841 0.012\n 5:       45     6 0.164 0.003  4.414 3.554 0.014\n 6:       47     0 0.281 0.006  3.148 5.314 0.018\n 7:       48     0 0.394 0.029  0.670 1.032 0.020\n 8:       49     2 0.431 0.029  0.698 0.693 0.021\n 9:       50     0 0.430 0.026  0.775 1.155 0.021\n10:       53     0 0.415 0.008  2.862 4.326 0.024\n11:       57     2 0.395 0.026  0.949 0.924 0.026\n12:       63     0 0.484 0.029  0.967 1.364 0.029\n13:       69     0 0.434 0.035  1.588 2.358 0.058\n14:       70     1 0.392 0.035  1.610 1.943 0.058\n15:       71     2 0.433 0.032  2.710 3.462 0.089"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#key-to-the-values",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#key-to-the-values",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Key to the values",
+    "text": "Key to the values\n\n\n\ncolnames(dx_glow)\n\n [1] \"(Intercept)\"        \"priorfracYes\"       \"age_c\"             \n [4] \"priorfracYes:age_c\" \"y\"                  \"P\"                 \n [7] \"n\"                  \"yhat\"               \"Pr\"                \n[10] \"dr\"                 \"h\"                  \"sPr\"               \n[13] \"sdr\"                \"dChisq\"             \"dDev\"              \n[16] \"dBhat\"             \n\n\n\nFor each covariate pattern (which is each row) …\n\ny: Number of events\nP: Estimated probability of events\nn: Number of observations\nyhat: Estimated number of events\nPr: Pearson residual\ndr: Deviance\nh: leverage\nsPr: Standardized Pearson residual\nsdr: Standardized deviance\ndChisq: Change in standardized Pearson residual\ndDev: Change in standardized deviance\ndBhat: Change in coefficient estimates"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#three-potentials-when-model-fits-poorly",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#three-potentials-when-model-fits-poorly",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Three Potentials when model fits poorly",
+    "text": "Three Potentials when model fits poorly\n\nIf only a few covariate pattern does not fit well (\\(y_j\\) differs from \\(m_j\\widehat\\pi_j\\) ), we are not too worried\n\nWe had 15 out of 71 covariate patterns\n\n\n \n\nIf quite a few covariate patterns do not fit well, potential reasons can be considered:\n\nThe link used in logistic regression model is not appropriate for outcome\n\nThis is usually unlikely, since logistic regression model is very flexible (think back to why we transformed our outcome from binary form)\n\nOne or more important covariates missing in the model\n\nAt least one of the covariates in the model has been entered in the wrong scale (think age-squared vs. age)\n\n\n\n \n\nCommon to do nothing after looking at the diagnostics\n\nIf data is feasible, we leave as is…"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#after-identifying-points",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#after-identifying-points",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "After identifying points",
+    "text": "After identifying points\n\nDo a data quality check\n\nUnless you have a very good reason to believe the data are not measured correctly, then we leave it in\nCommon to do nothing\n\n\n \n\nIf only a few covariate pattern does not fit well (\\(y_j\\) differs from \\(m_j\\widehat\\pi_j\\) ), we are not too worried\n\nWe had 15 out of 71 covariate patterns\n\n\n \n\nIf quite a few covariate patterns do not fit well, potential reasons can be considered:\n\nThe link used in logistic regression model is not appropriate for outcome\n\nThis is usually unlikely, since logistic regression model is very flexible (think back to why we transformed our outcome from binary form)\n\nOne or more important covariates missing in the model\n\nAt least one of the covariates in the model has been entered in the wrong scale (think age-squared vs. age)"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#how-would-i-report-this-combining-all-model-assessment",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#how-would-i-report-this-combining-all-model-assessment",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "How would I report this? (Combining all model assessment)",
+    "text": "How would I report this? (Combining all model assessment)\n\nAssuming I have not checked other final models (no other models to compare AIC/BIC or AUC with)\n\nMethods: To assess the overall model fit, we calculated the AUC-ROC. We also calculated several model diagnostics including standardized Pearson residual, standardized deviance, change in coefficient estimates, and leverage. We identified covariate patterns with high standardized Pearson residual (greater than 4), standardized deviance (greater than 4), change in coefficient estimates (greater than 1), and leverage (greater than 0.024).\n \nResults: Our final logistic regression model consisted of the outcome, fracture, and predictors including prior fracture, age, and their interaction. The AUC-ROC was 0.68. We identified 11 covariate patterns with high leverage and 4 with high standardized Pearson residual, standardized deviance, or change in coefficient estimates. No identified observations were omitted.\n \nDiscussion:\n\nAUC-ROC low: Included covariates were pre-determined\nInfluential points were kept in because all observations were within feasible range of the predictors and outcome. (we could try age-sqaured and see if that helps AUC and/or diagnostics)\n\n\n\nLesson 14: Model Diagnostics"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#recall-the-model-we-fit-glow-study-with-interactions",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#recall-the-model-we-fit-glow-study-with-interactions",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Recall the model we fit: GLOW Study with interactions",
+    "text": "Recall the model we fit: GLOW Study with interactions\n\nOutcome variable: any fracture in the first year of follow up (FRACTURE: 0 or 1)\nRisk factor/variable of interest: history of prior fracture (PRIORFRAC: 0 or 1)\nPotential confounder or effect modifier: age (AGE, a continuous variable)\nFitted model with interactions: \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = \\widehat\\beta_0 &+ &\\widehat\\beta_1\\cdot I(\\text{PF}) & + &\\widehat\\beta_2\\cdot Age& + &\\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age \\\\  \n\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = -1.376 &+ &1.002\\cdot I(\\text{PF})& + &0.063\\cdot Age& -&0.057 \\cdot I(\\text{PF}) \\cdot Age\n\\end{aligned}\\]\n\n \n\nLesson 12: determined the overall fit of this model\nToday: determine the if any observations/covariate patterns that model does not fit well"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#from-overall-measure-to-diagnostics",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#from-overall-measure-to-diagnostics",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "From overall measure to diagnostics",
+    "text": "From overall measure to diagnostics\n\nNow we need to investigate diagnostics looking at individual data or covariate pattern data\n\nMake sure the overall measure has not been influenced by certain observations\n\n\n \n\nThe key quantities from logistic regression diagnostics are the components of “residual sum-of-squares”\n\nThe same idea as in the linear regression\nAssessed for each covariate pattern \\(j\\), by computing standardized Pearson residuals and Deviance residuals\n\nStandardization using \\(h_j\\), the leverage values"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#poll-everywhere-question-1",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#poll-everywhere-question-1",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#poll-everywhere-question-2",
+    "href": "lectures/14_Model_diagnostics/14_Model_diagnostics.html#poll-everywhere-question-2",
+    "title": "Lesson 14: Model Diagnostics",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html",
+    "href": "lectures/15_Model_building/15_Model_Building.html",
+    "title": "Lesson 14: Model Building",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.2.0 ──\n✔ broom        1.0.5      ✔ rsample      1.2.1 \n✔ dials        1.2.1      ✔ tune         1.2.1 \n✔ infer        1.0.7      ✔ workflows    1.1.4 \n✔ modeldata    1.3.0      ✔ workflowsets 1.1.0 \n✔ parsnip      1.2.1      ✔ yardstick    1.3.1 \n✔ recipes      1.0.10     \n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Learn how to get started at https://www.tidymodels.org/start/\n\nlibrary(tidytext)\n#library(textrecipes)\nlibrary(here)\n\nhere() starts at /Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/S2024_BSTA_513_613/S2024_BSTA_513\n\nlibrary(aplore3)\n\ntheme_set(theme_minimal())\n\n\nmean_age = mean(glow500$age) %&gt;% round()\nglow1 = glow500 %&gt;% mutate(age_c = age - mean_age)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#some-important-definitions",
+    "href": "lectures/15_Model_building/15_Model_Building.html#some-important-definitions",
+    "title": "Lesson 14: Model Building",
+    "section": "Some important definitions",
+    "text": "Some important definitions\n\nModel selection: picking the “best” model from a set of possible models\n\nModels will have the same outcome, but typically differ by the covariates that are included, their transformations, and their interactions\n\n\n \n\nModel selection strategies: a process or framework that helps us pick our “best” model\n\nThese strategies often differ by the approach and criteria used to the determine the “best” model\n\n\n \n\nOverfitting: result of fitting a model so closely to our particular sample data that it cannot be generalized to other samples (or the population)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#bias-variance-trade-off",
+    "href": "lectures/15_Model_building/15_Model_Building.html#bias-variance-trade-off",
+    "title": "Lesson 14: Model Building",
+    "section": "Bias-variance trade off",
+    "text": "Bias-variance trade off\n\n\n\nRecall from 512/612: MSE can be written as a function of the bias and variance\n\\[\nMSE = \\text{bias}\\big(\\widehat\\beta\\big)^2 + \\text{variance}\\big(\\widehat\\beta\\big)\n\\]\n\nWe no longer use MSE in logistic regression to find the best fit model, BUT the idea between the bias and variance trade off holds!\n\nFor the same data:\n\nMore covariates in model: less bias, more variance\n\nPotential overfitting: with new data does our model still hold?\n\nLess covariates in model: more bias, less variance\n\n\n\n\n\n\nSource: http://scott.fortmann-roe.com/docs/BiasVariance.html"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#the-goals-of-association-vs.-prediction",
+    "href": "lectures/15_Model_building/15_Model_Building.html#the-goals-of-association-vs.-prediction",
+    "title": "Lesson 14: Model Building",
+    "section": "The goals of association vs. prediction",
+    "text": "The goals of association vs. prediction\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nGoal: Understand one variable’s (or a group of variable’s) effect on the response after adjusting for other factors\nMainly interpret odds ratios of the variable that is the focus of the study\n\n\n\n\n\n\nPrediction\n\n\n\nGoal: to calculate the most precise prediction of the response variable\nInterpreting coefficients is not important\nChoose only the variables that are strong predictors of the response variable\n\nExcluding irrelevant variables can help reduce widths of the prediction intervals"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#model-selection-strategies-for-categorical-outcomes",
+    "href": "lectures/15_Model_building/15_Model_Building.html#model-selection-strategies-for-categorical-outcomes",
+    "title": "Lesson 14: Model Building",
+    "section": "Model selection strategies for categorical outcomes",
+    "text": "Model selection strategies for categorical outcomes\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nSelection of potential models is tied more with the research context with some incorporation of prediction scores\n\n \n\nPre-specification of multivariable model\nPurposeful model selection\n\n“Risk factor modeling”\n\nChange in Estimate (CIE) approaches\n\nWill learn in Survival Analysis (BSTA 514)\n\n\n\n\n\n\n\nPrediction\n\n\n\nSelection of potential models is fully dependent on prediction scores\n\n \n\nLogistic regression with more refined model selection\n\nRegularization techniques (LASSO, Ridge, Elastic net)\n\nMachine learning realm\n\nDecision trees, random forest, k-nearest neighbors, Neural networks"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#before-i-move-on",
+    "href": "lectures/15_Model_building/15_Model_Building.html#before-i-move-on",
+    "title": "Lesson 14: Model Building",
+    "section": "Before I move on…",
+    "text": "Before I move on…\n\nWe CAN use purposeful selection from last quarter in any type of generalized linear model (GLM)\n\nThis includes logistic regression!\n\n\n \n\nThe best documented information on purposeful selection is in the Hosmer-Lemeshow textbook on logistic regression\n\nTextbook in student files is linked here\nPurposeful selection starts on page 89 (or page 101 in the pdf)\n\n\n \n\nI will not discuss purposeful selection in this course\n\nBe aware that this is a tool that you can use in any regression!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#okay-so-prediction-of-categorical-outcomes",
+    "href": "lectures/15_Model_building/15_Model_Building.html#okay-so-prediction-of-categorical-outcomes",
+    "title": "Lesson 14: Model Building",
+    "section": "Okay, so prediction of categorical outcomes",
+    "text": "Okay, so prediction of categorical outcomes\n\nClassification: process of predicting categorical responses/outcomes\n\nAssigning a category outcome based on an observation’s predictors\n\nCommon classification methods (good site on brief explanation of each)\n\nLogistic regression\nNaive Bayes\nk-Nearest Neighbor (KNN)\nDecision Trees\nSupport Vector Machines (SVMs)\nNeural Networks"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#logistic-regression-is-a-classification-method",
+    "href": "lectures/15_Model_building/15_Model_Building.html#logistic-regression-is-a-classification-method",
+    "title": "Lesson 14: Model Building",
+    "section": "Logistic regression is a classification method",
+    "text": "Logistic regression is a classification method\n\nBut to be a good classifier, our model needs to built a certain way\nPrediction depends on type of variable/model selection!\n\nThis is when it can become machine learning\n\nSo the big question is: how do we select this model??"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-1",
+    "title": "Lesson 14: Model Building",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#overview-of-the-process",
+    "href": "lectures/15_Model_building/15_Model_Building.html#overview-of-the-process",
+    "title": "Lesson 14: Model Building",
+    "section": "Overview of the process",
+    "text": "Overview of the process"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-data",
+    "href": "lectures/15_Model_building/15_Model_Building.html#splitting-data",
+    "title": "Lesson 14: Model Building",
+    "section": "Splitting data",
+    "text": "Splitting data\n\nLet’s keep this in context of the outcome\n\n\nggplot(glow1, aes(x = fracture)) + geom_bar()\n\n\n\nglow = glow1 %&gt;%\n    dplyr::select(-sub_id, -site_id, -phy_id, -age)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-data-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#splitting-data-1",
+    "title": "Lesson 14: Model Building",
+    "section": "Splitting data",
+    "text": "Splitting data\n\nWant to split our data into training and testing sets\nStratify by fracture: because we have imbalanced data\n\n\nglow_split = initial_split(glow, strata = fracture)\nglow_split\n\n&lt;Training/Testing/Total&gt;\n&lt;374/126/500&gt;\n\nglow_train = training(glow_split)\nglow_test = testing(glow_split)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#fitting-the-logistic-regression-model",
+    "href": "lectures/15_Model_building/15_Model_Building.html#fitting-the-logistic-regression-model",
+    "title": "Lesson 14: Model Building",
+    "section": "Fitting the logistic regression model",
+    "text": "Fitting the logistic regression model\n\nUse Lasso\n\nLasso with interactions!! Using interactions??\n\nlasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %&gt;%\n            set_engine(\"glmnet\")"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#build-recipe",
+    "href": "lectures/15_Model_building/15_Model_Building.html#build-recipe",
+    "title": "Lesson 14: Model Building",
+    "section": "build recipe??",
+    "text": "build recipe??\n\nglow_rec = recipe(fracture ~ ., data = glow_train) %&gt;%\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) \n\nglow_workflow = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec)\n\n\nglow_folds = vfold_cv(glow_train, v = 5, strata = fracture)\n\nglow_fit_rs = glow_workflow %&gt;% \n      fit_resamples(glow_folds, control = control_resamples(save_pred=T))\n\nglow_train_metrics = collect_metrics(glow_fit_rs)\nglow_train_metrics\n\n# A tibble: 3 × 6\n  .metric     .estimator  mean     n std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.733     5 0.00744 Preprocessor1_Model1\n2 brier_class binary     0.185     5 0.00380 Preprocessor1_Model1\n3 roc_auc     binary     0.639     5 0.0220  Preprocessor1_Model1\n\nglow_train_pred = collect_predictions(glow_fit_rs)\n\nglow_train_pred %&gt;%\n    group_by(id) %&gt;%\n    roc_curve(truth = fracture, .pred_No) %&gt;%\n    autoplot()\n\n\n\nglow_fit = glow_workflow %&gt;% fit(data = glow_train)\n\nglow_test_pred = predict(glow_fit, new_data = glow_test, type = \"prob\") %&gt;%\n    bind_cols(glow_test)\n\nglow_test_pred %&gt;% \n    roc_curve(truth = fracture, .pred_No) %&gt;%\n    autoplot()\n\n\n\nglow_test_pred %&gt;% \n    roc_auc(truth = fracture, .pred_No)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.690\n\nglow_test_pred %&gt;% filter(fracture == \"No\", .pred_Yes &gt; 0.5)\n\n# A tibble: 3 × 14\n  .pred_No .pred_Yes priorfrac weight height   bmi premeno momfrac armassist\n     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;    \n1    0.429     0.571 Yes         79.4    163  29.9 No      No      Yes      \n2    0.379     0.621 Yes         59      153  25.2 No      No      Yes      \n3    0.393     0.607 Yes         55.3    152  23.9 No      No      Yes      \n# ℹ 5 more variables: smoke &lt;fct&gt;, raterisk &lt;fct&gt;, fracscore &lt;int&gt;,\n#   fracture &lt;fct&gt;, age_c &lt;dbl&gt;\n\nglow_test_pred %&gt;% filter(fracture == \"Yes\", .pred_No &gt; 0.5)\n\n# A tibble: 24 × 14\n   .pred_No .pred_Yes priorfrac weight height   bmi premeno momfrac armassist\n      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;    \n 1    0.816     0.184 Yes         94.3    173  31.5 No      No      Yes      \n 2    0.596     0.404 No          60.3    148  27.5 Yes     No      Yes      \n 3    0.792     0.208 No          64.9    160  25.4 No      No      Yes      \n 4    0.844     0.156 No          55.3    158  22.2 No      No      No       \n 5    0.708     0.292 No          46.3    158  18.5 No      No      No       \n 6    0.676     0.324 No          59.9    160  23.4 Yes     No      Yes      \n 7    0.722     0.278 No          63.5    155  26.4 Yes     Yes     No       \n 8    0.866     0.134 No          59      160  23.0 No      No      No       \n 9    0.521     0.479 Yes         68      160  26.6 Yes     Yes     No       \n10    0.627     0.373 No          50.8    152  22.0 No      No      Yes      \n# ℹ 14 more rows\n# ℹ 5 more variables: smoke &lt;fct&gt;, raterisk &lt;fct&gt;, fracscore &lt;int&gt;,\n#   fracture &lt;fct&gt;, age_c &lt;dbl&gt;"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#other-stufs",
+    "href": "lectures/15_Model_building/15_Model_Building.html#other-stufs",
+    "title": "Lesson 14: Model Building",
+    "section": "Other stufs",
+    "text": "Other stufs\n\nlibrary(vip)\n\n\nAttaching package: 'vip'\n\n\nThe following object is masked from 'package:utils':\n\n    vi\n\nvi_data = glow_workflow %&gt;% \n    fit(glow_train) %&gt;%\n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\n\nWarning: `pull_workflow_fit()` was deprecated in workflows 0.2.3.\nℹ Please use `extract_fit_parsnip()` instead."
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#hfnekl",
+    "href": "lectures/15_Model_building/15_Model_Building.html#hfnekl",
+    "title": "Lesson 14: Model Building",
+    "section": "hfnekl",
+    "text": "hfnekl\nhttps://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting\nhttps://datasciencebox.org/02-making-rigorous-conclusions"
   }
 ]

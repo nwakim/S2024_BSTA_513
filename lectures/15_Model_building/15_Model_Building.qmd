@@ -1,0 +1,323 @@
+---
+title: "Lesson 14: Model Building"
+subtitle: "With an emphasis on prediction"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "05/20/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 14: Model Building"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(tidytext)
+#library(textrecipes)
+library(here)
+library(aplore3)
+
+theme_set(theme_minimal())
+
+
+mean_age = mean(glow500$age) %>% round()
+glow1 = glow500 %>% mutate(age_c = age - mean_age)
+```
+
+
+# Learning Objectives
+
+
+## Some important definitions
+
+-   **Model selection**: picking the "best" model from a set of possible models
+
+    -   Models will have the same outcome, but typically differ by the covariates that are included, their transformations, and their interactions
+
+ 
+
+-   **Model selection strategies**: a process or framework that helps us pick our "best" model
+
+    -   These strategies often differ by the approach and criteria used to the determine the "best" model
+
+ 
+
+-   **Overfitting**: result of fitting a model so closely to our *particular* sample data that it cannot be generalized to other samples (or the population)
+
+## Bias-variance trade off
+
+::: columns
+::: {.column width="50%"}
+
+-   Recall from 512/612: MSE can be written as a function of the bias and variance
+
+    $$
+    MSE = \text{bias}\big(\widehat\beta\big)^2 + \text{variance}\big(\widehat\beta\big)
+    $$
+    
+    -   **We no longer use MSE in logistic regression to find the best fit model, BUT the idea between the bias and variance trade off holds!**
+
+-   For the same data:
+
+    -   More covariates in model: less bias, more variance
+    
+        -   Potential overfitting: with new data does our model still hold?
+
+    -   Less covariates in model: more bias, less variance
+
+:::
+
+::: {.column width="50%"}
+[![Source: http://scott.fortmann-roe.com/docs/BiasVariance.html](images/biasvariance_tradeoff.png){width="1000"}](http://scott.fortmann-roe.com/docs/BiasVariance.html)
+:::
+:::
+
+## The goals of association vs. prediction
+
+::: columns
+::: column
+::: definition
+::: def-title
+Association / Explanatory / One variable's effect
+:::
+
+::: def-cont
+-   **Goal:** Understand one variable's (or a group of variable's) effect on the response after adjusting for other factors
+
+-   Mainly interpret odds ratios of the variable that is the focus of the study
+
+:::
+:::
+:::
+
+::: column
+::: proposition
+::: prop-title
+Prediction
+:::
+
+::: prop-cont
+-   **Goal:** to calculate the most precise prediction of the response variable
+
+-   Interpreting coefficients is not important
+
+-   Choose only the variables that are strong predictors of the response variable
+
+    -   Excluding irrelevant variables can help reduce widths of the prediction intervals
+
+:::
+:::
+:::
+:::
+
+## Model selection strategies for *categorical* outcomes
+
+::: columns
+::: column
+::: definition
+::: def-title
+Association / Explanatory / One variable's effect
+:::
+
+::: def-cont
+-   Selection of potential models is tied more with the research context with some incorporation of prediction scores
+
+ 
+
+-   Pre-specification of multivariable model
+
+-   Purposeful model selection
+
+    -   "Risk factor modeling"
+
+-   Change in Estimate (CIE) approaches
+
+    -   Will learn in Survival Analysis (BSTA 514)
+:::
+:::
+:::
+
+::: column
+::: proposition
+::: prop-title
+Prediction
+:::
+
+::: prop-cont
+-   Selection of potential models is fully dependent on prediction scores
+
+ 
+
+-   Logistic regression with more refined model selection
+    
+    -   Regularization techniques (LASSO, Ridge, Elastic net)
+    
+-   Machine learning realm
+    
+    -   Decision trees, random forest, k-nearest neighbors, Neural networks
+:::
+:::
+:::
+:::
+
+## Before I move on...
+
+-   We CAN use purposeful selection from last quarter in **any** type of generalized linear model (GLM)
+
+    -   This includes logistic regression!
+    
+ 
+    
+-   The best documented information on purposeful selection is in the Hosmer-Lemeshow textbook on logistic regression
+
+    -   [Textbook in student files is linked here](https://ohsuitg-my.sharepoint.com/:b:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/Textbooks/Hosmer_Applied_Logistic_Regression.pdf?csf=1&web=1&e=3tVxMV)
+    
+    -   Purposeful selection starts on page 89 (or page 101 in the pdf)
+
+ 
+
+-   I will not discuss purposeful selection in this course 
+
+    -   Be aware that this is a tool that you can use in any regression!
+
+## Okay, so prediction of categorical outcomes
+
+-   **Classification:** process of predicting categorical responses/outcomes
+
+    -   Assigning a category outcome based on an observation's predictors
+    
+-   Common classification methods ([good site on brief explanation of each](https://www.mathworks.com/campaigns/offers/next/choosing-the-best-machine-learning-classification-model-and-avoiding-overfitting.html))
+
+    -   Logistic regression
+    -   Naive Bayes
+    -   k-Nearest Neighbor (KNN)
+    -   Decision Trees
+    -   Support Vector Machines (SVMs)
+    -   Neural Networks
+
+## Logistic regression is a classification method
+
+-   But to be a good classifier, our model needs to built a certain way
+     
+-   Prediction depends on type of variable/model selection! 
+
+    -   This is when it can become machine learning
+    
+-   So the big question is: how do we select this model??
+    
+## Poll Everywhere Question 1
+
+## Overview of the process
+
+-   
+
+## Splitting data
+
+-   Let's keep this in context of the outcome
+
+```{r}
+ggplot(glow1, aes(x = fracture)) + geom_bar()
+
+glow = glow1 %>%
+    dplyr::select(-sub_id, -site_id, -phy_id, -age)
+```
+
+## Splitting data
+
+-   Want to split our data into training and testing sets
+-   Stratify by fracture: because we have imbalanced data
+```{r}
+glow_split = initial_split(glow, strata = fracture)
+glow_split
+glow_train = training(glow_split)
+glow_test = testing(glow_split)
+```
+
+## Fitting the logistic regression model
+
+-   Use Lasso
+
+[Lasso with interactions!!](https://strakaps.github.io/post/glinternet/) Using interactions??
+
+```{r}
+lasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %>%
+            set_engine("glmnet")
+```
+
+## build recipe??
+
+```{r}
+glow_rec = recipe(fracture ~ ., data = glow_train) %>%
+  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) 
+
+glow_workflow = workflow() %>%
+      add_model(lasso_mod) %>% add_recipe(glow_rec)
+```
+
+```{r}
+glow_folds = vfold_cv(glow_train, v = 5, strata = fracture)
+
+glow_fit_rs = glow_workflow %>% 
+      fit_resamples(glow_folds, control = control_resamples(save_pred=T))
+
+glow_train_metrics = collect_metrics(glow_fit_rs)
+glow_train_metrics
+
+glow_train_pred = collect_predictions(glow_fit_rs)
+
+glow_train_pred %>%
+    group_by(id) %>%
+    roc_curve(truth = fracture, .pred_No) %>%
+    autoplot()
+
+glow_fit = glow_workflow %>% fit(data = glow_train)
+
+glow_test_pred = predict(glow_fit, new_data = glow_test, type = "prob") %>%
+    bind_cols(glow_test)
+
+glow_test_pred %>% 
+    roc_curve(truth = fracture, .pred_No) %>%
+    autoplot()
+
+glow_test_pred %>% 
+    roc_auc(truth = fracture, .pred_No)
+
+glow_test_pred %>% filter(fracture == "No", .pred_Yes > 0.5)
+glow_test_pred %>% filter(fracture == "Yes", .pred_No > 0.5)
+```
+
+
+## Other stufs
+
+```{r}
+library(vip)
+
+vi_data = glow_workflow %>% 
+    fit(glow_train) %>%
+    pull_workflow_fit() %>%
+    vi(lambda = 0.001) %>%
+    filter(Importance != 0)
+```
+
+
+
+
+## hfnekl
+
+https://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting
+
+https://datasciencebox.org/02-making-rigorous-conclusions
