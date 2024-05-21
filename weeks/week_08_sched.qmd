@@ -59,6 +59,30 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
         ![](week_08/loc.png)
 
+### Wednesday 5/22
+
+-   Lab 3
+
+    -   When interpreting ORs...
+
+        -   You all are correct by including as much detail about the covariate as possible
+
+            -   For example: If I was using `UNMETCARE_Y` and I wrote "The estimated odds of food insecurity for individuals who needed medical care in the last 12 months but could not get it because they could not afford it..."
+
+                -   This is correct!
+
+                -   BUT within our longer written report, we should define "unmet care" earlier on. Thus, once we get to interpreting ORs, we can just say "unmet care."
+
+        -   Also, correct for including a list of the variables that you are adjusting for!
+
+            -   But again, we hopefully defined our final model and specifically mentioned the variables that we are adjusting for
+
+            -   Thus, once we get to our interpretation, we can say something more like "adjusting for the previously listed variables in our model"
+
+    -   For output of \`tbl_regression()\` make sure to edit the variable names into more common language
+
+        -   `set_variable_labels()` [from tibbleOne package might help!](https://rdrr.io/cran/tibbleOne/man/set_variable_labels.html)
+
 ## Class Exit Tickets
 
 [[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNzhJTkoyOEtZNEExQjQ1U1hIVTM4UTJKMy4u)]{style="color:#f8f5f0;"} Monday (5/20)
