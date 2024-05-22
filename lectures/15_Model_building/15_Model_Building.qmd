@@ -1,10 +1,10 @@
 ---
-title: "Lesson 14: Model Building"
+title: "Lesson 15: Model Building"
 subtitle: "With an emphasis on prediction"
 author: "Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#C2352F"
-date: "05/20/2024"
+date: "05/22/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -13,7 +13,7 @@ format:
     show-slide-number: all
     width: 1955
     height: 1100
-    footer: "Lesson 14: Model Building"
+    footer: "Lesson 15: Model Building"
     html-math-method: mathjax
     highlight-style: ayu
 execute:
@@ -24,6 +24,12 @@ editor_options:
 ---
 
 ```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(gt)
+library(gtsummary)
 library(tidyverse)
 library(tidymodels)
 library(tidytext)
@@ -36,17 +42,45 @@ theme_set(theme_minimal())
 
 mean_age = mean(glow500$age) %>% round()
 glow1 = glow500 %>% mutate(age_c = age - mean_age)
-```
 
+set.seed(513613)
+```
 
 # Learning Objectives
 
+1. Understand the place of LASSO regression within association and prediction modeling for binary outcomes.
+
+2. Recognize the process for `tidymodels`
+
+3. Understand how penalized regression is a form of model/variable selection.
+
+4. Perform LASSO regression on a dataset using R and the general process for classification methods.
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 80% !important;
+}
+```
+
+# Learning Objectives
+
+::: lob
+1. Understand the place of LASSO regression within association and prediction modeling for binary outcomes.
+:::
+
+2. Recognize the process for `tidymodels`
+
+3. Understand how penalized regression is a form of model/variable selection.
+
+4. Perform LASSO regression on a dataset using R and the general process for classification methods.
 
 ## Some important definitions
 
 -   **Model selection**: picking the "best" model from a set of possible models
 
     -   Models will have the same outcome, but typically differ by the covariates that are included, their transformations, and their interactions
+
+    -   "Best" model is defined by the research question and by how you want to answer it!
 
  
 
@@ -62,23 +96,23 @@ glow1 = glow500 %>% mutate(age_c = age - mean_age)
 
 ::: columns
 ::: {.column width="50%"}
-
 -   Recall from 512/612: MSE can be written as a function of the bias and variance
 
     $$
     MSE = \text{bias}\big(\widehat\beta\big)^2 + \text{variance}\big(\widehat\beta\big)
     $$
-    
+
     -   **We no longer use MSE in logistic regression to find the best fit model, BUT the idea between the bias and variance trade off holds!**
 
 -   For the same data:
 
     -   More covariates in model: less bias, more variance
-    
+
         -   Potential overfitting: with new data does our model still hold?
 
     -   Less covariates in model: more bias, less variance
 
+        -   More bias bc more likely that were are not capturing the true underlying relationship with less variables
 :::
 
 ::: {.column width="50%"}
@@ -99,7 +133,6 @@ Association / Explanatory / One variable's effect
 -   **Goal:** Understand one variable's (or a group of variable's) effect on the response after adjusting for other factors
 
 -   Mainly interpret odds ratios of the variable that is the focus of the study
-
 :::
 :::
 :::
@@ -118,7 +151,6 @@ Prediction
 -   Choose only the variables that are strong predictors of the response variable
 
     -   Excluding irrelevant variables can help reduce widths of the prediction intervals
-
 :::
 :::
 :::
@@ -163,11 +195,11 @@ Prediction
  
 
 -   Logistic regression with more refined model selection
-    
+
     -   Regularization techniques (LASSO, Ridge, Elastic net)
-    
+
 -   Machine learning realm
-    
+
     -   Decision trees, random forest, k-nearest neighbors, Neural networks
 :::
 :::
@@ -179,18 +211,18 @@ Prediction
 -   We CAN use purposeful selection from last quarter in **any** type of generalized linear model (GLM)
 
     -   This includes logistic regression!
-    
+
  
-    
+
 -   The best documented information on purposeful selection is in the Hosmer-Lemeshow textbook on logistic regression
 
     -   [Textbook in student files is linked here](https://ohsuitg-my.sharepoint.com/:b:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files/Textbooks/Hosmer_Applied_Logistic_Regression.pdf?csf=1&web=1&e=3tVxMV)
-    
+
     -   Purposeful selection starts on page 89 (or page 101 in the pdf)
 
  
 
--   I will not discuss purposeful selection in this course 
+-   I will not discuss purposeful selection in this course
 
     -   Be aware that this is a tool that you can use in any regression!
 
@@ -199,7 +231,15 @@ Prediction
 -   **Classification:** process of predicting categorical responses/outcomes
 
     -   Assigning a category outcome based on an observation's predictors
-    
+
+ 
+
+-   Note: we've already done a lot of work around predicting probabilities within logistic regression
+
+    -   Can we take those predicted probabilities one step further to predict the binary outcome??
+
+ 
+
 -   Common classification methods ([good site on brief explanation of each](https://www.mathworks.com/campaigns/offers/next/choosing-the-best-machine-learning-classification-model-and-avoiding-overfitting.html))
 
     -   Logistic regression
@@ -211,113 +251,640 @@ Prediction
 
 ## Logistic regression is a classification method
 
--   But to be a good classifier, our model needs to built a certain way
-     
--   Prediction depends on type of variable/model selection! 
+-   But to be a good classifier, our logistic regression model needs to built a certain way
+
+ 
+
+-   Prediction depends on type of variable/model selection!
 
     -   This is when it can become machine learning
-    
+
+ 
+
 -   So the big question is: how do we select this model??
-    
+
+    -   Regularized techniques, aka penalized regression
+
 ## Poll Everywhere Question 1
+
+# Learning Objectives
+
+1. Understand the place of LASSO regression within association and prediction modeling for binary outcomes.
+
+::: lob
+2. Recognize the process for `tidymodels`
+:::
+
+3. Understand how penalized regression is a form of model/variable selection.
+
+4. Perform LASSO regression on a dataset using R and the general process for classification methods.
+
+## Before I get really into things!!
+
+-   `tidymodels` is a great package when we are performing prediction
+
+-   One problem: it uses very different syntax for model fitting than we are used to...
+
+-   `tidymodels` syntax dictates that we need to define:
+
+    -   A model 
+    -   A recipe
+    -   A workflow
+
+## `tidymodels` with GLOW
+
+To fit our logistic regression model with the interaction between age and prior fracture, we use:
+
+```{r}
+# model
+model = logistic_reg()
+# recipe
+recipe = recipe(fracture ~ priorfrac + age_c, data = glow1) %>%
+            step_dummy(priorfrac) %>%
+            step_interact(terms = ~ age_c:starts_with("priorfrac"))
+# workflow
+workflow = workflow() %>% add_model(model) %>% add_recipe(recipe)
+
+fit = workflow %>% fit(data = glow1)
+```
+
+```{r}
+#| echo: false
+#| code-fold: true
+
+tidy(fit, conf.int = T) %>% gt() %>% 
+  tab_options(table.font.size = 35) %>%
+  fmt_number(decimals = 3)
+```
+
+## Same as results from previous lessons
+
+```{r}
+glow_m3 = glm(fracture ~ priorfrac + age_c + priorfrac*age_c, 
+              data = glow1, family = binomial)
+```
+
+```{r}
+tidy(glow_m3, conf.int = T) %>% gt() %>% 
+  tab_options(table.font.size = 35) %>%
+  fmt_number(decimals = 3)
+```
+
+[**Interaction model: **]{style="color:#70AD47"} $$\begin{aligned} \text{logit}\left(\widehat\pi(\mathbf{X})\right) & = \widehat\beta_0 &+ &\widehat\beta_1\cdot I(\text{PF}) & + &\widehat\beta_2\cdot Age& + &\widehat\beta_3 \cdot I(\text{PF}) \cdot Age \\  
+\text{logit}\left(\widehat\pi(\mathbf{X})\right) & = -1.376 &+ &1.002\cdot I(\text{PF})& + &0.063\cdot Age& -&0.057 \cdot I(\text{PF}) \cdot Age
+\end{aligned}$$
+
+-   Reminder of main effects and interactions
+
+# Learning Objectives
+
+1. Understand the place of LASSO regression within association and prediction modeling for binary outcomes.
+
+2. Recognize the process for `tidymodels`
+
+::: lob
+3. Understand how penalized regression is a form of model/variable selection.
+:::
+
+4. Perform LASSO regression on a dataset using R and the general process for classification methods.
+
+## Penalized regression
+
+-   **Basic idea:** We are running regression, but now we want to **incentivize our model fit to have less predictors**
+
+    -   Include a **penalty to discourage too many predictors** in the model
+
+ 
+
+-   Also known as *shrinkage* or *regularization* methods
+
+ 
+
+-   Penalty will reduce coefficient values to zero (or close to zero) if the predictor does not contribute much information to predicting our outcome
+
+ 
+
+-   We need a tuning parameter that determines the amount of shrinkage called lambda/$\lambda$
+
+    -   How much do we want to penalize additional predictors?
+
+## Poll Everywhere Question 2
+
+
+## Three types of penalized regression
+
+Main difference is the type of penalty used
+
+::: columns
+
+::: {.column width="33%"}
+
+::: proposition
+::: prop-title
+Ridge regression
+:::
+::: prop-cont
+- Penalty called L2 norm, uses sqaured values
+
+- Pros
+  - Reduces overfitting
+  - Handles $p>n$
+  - Handles collinearity
+
+- Cons
+  - Does not shrink coefficients to 0
+  - Difficult to interpret
+
+:::
+
+:::
+
+:::
+
+::: {.column width="33%"}
+
+::: axiom
+::: axiom-title
+Lasso regression
+:::
+::: axiom-cont
+- Penalty called L1 norm, uses absolute values
+
+ 
+
+- Pros
+  - Reduces overfitting
+  - Shrinks coefficients to 0
+
+- Cons
+  - Cannot handle $p>n$
+  - Does not handle multicollinearity well
+
+:::
+:::
+
+:::
+
+::: {.column width="33%"}
+
+::: proof1
+::: proof-title
+Elastic net regression
+:::
+::: proof-cont
+- L1 and L2 used, best of both worlds
+
+- Pros
+  - Reduces overfitting
+  - Handles $p>n$
+  - Handles collinearity
+  - Shrinks coefficients to 0
+  
+- Cons 
+  - More difficult to do than other two
+:::
+:::
+
+:::
+
+:::
+
+# Learning Objectives
+
+1. Understand the place of LASSO regression within association and prediction modeling for binary outcomes.
+
+2. Recognize the process for `tidymodels`
+
+3. Understand how penalized regression is a form of model/variable selection.
+
+::: lob
+4. Perform LASSO regression on a dataset using R and the general process for classification methods.
+:::
 
 ## Overview of the process
 
--   
+1.  Split data into training and testing datasets
 
-## Splitting data
+ 
 
--   Let's keep this in context of the outcome
+2.  Perform our classification method on training set
+
+    -   This is where we will use penalized regression!
+
+ 
+
+3.  Measure predictive accuracy on testing set
+
+
+
+## Example to be used: GLOW Study
+
+-   From GLOW (Global Longitudinal Study of Osteoporosis in Women) study
+
+ 
+
+-   **Outcome variable:** any fracture in the first year of follow up (FRACTURE: 0 or 1)
+
+ 
+
+-   ~~**Risk factor/variable of interest:** history of prior fracture (PRIORFRAC: 0 or 1)~~
+
+-   ~~**Potential confounder or effect modifier:** age (AGE, a continuous variable)~~
+
+    -   ~~Center age will be used! We will center around the rounded mean age of 69 years old~~
+
+ 
+   
+-   Crossed out because we are no longer attached to specific predictors and their association with fracture
+
+    -   Focused on **predicting fracture with whatever variables we can!**
+
+
+
+## Step 1: Splitting data
+
+-   **Training:** act of creating our prediction model based on our observed data
+
+    -   Supervised: Means we keep information on our outcome while training
+
+ 
+
+-   **Testing:** act of measuring the predictive accuracy of our model by trying it out on *new* data
+
+ 
+
+-   When we use data to create a prediction model, we want to test our prediction model on *new* data
+
+    -   Helps make sure prediction model can be applied to other data **outside of the data that was used to create it!**
+
+ 
+
+-   So an important first step in prediction modeling is to *split our data* into a **training set** and a **testing set**!
+
+## Step 1: Splitting data
+
+::: columns
+::: column
+::: definition
+::: def-title
+Training set
+:::
+
+::: def-cont
+-   Sandbox for model building
+-   Spend most of your time using the training set to develop the model
+-   Majority of the data (usually 80%)
+:::
+:::
+:::
+
+::: column
+::: theorem
+::: thm-title
+Testing set
+:::
+
+::: thm-cont
+-   Held in reserve to determine efficacy of one or two chosen models
+-   Critical to look at it once at the end, otherwise it becomes part of the modeling process
+-   Remainder of the data (usually 20%)
+:::
+:::
+:::
+:::
+
+     
+
+ 
+
+-   Slide content from [Data Science in a Box](https://datasciencebox.org/02-making-rigorous-conclusions)
+
+## Poll Everywhere Question 3
+
+## Step 1: Splitting data
+
+-   When splitting data, we need to be conscious of the proportions of our outcomes
+
+    -   Is there imbalance within our outcome?
+
+    -   We want to randomly select observations but make sure the proportions of No and Yes stay the same
+    -   We **stratify** by the outcome, meaning we pick Yes's and No's separately for the training set
 
 ```{r}
-ggplot(glow1, aes(x = fracture)) + geom_bar()
+#| fig-width: 3
+#| fig-height: 3
 
-glow = glow1 %>%
-    dplyr::select(-sub_id, -site_id, -phy_id, -age)
+ggplot(glow1, aes(x = fracture)) + geom_bar()
 ```
 
-## Splitting data
+-   Side note: took out `bmi` and `weight` bc we have multicollinearity issues
 
--   Want to split our data into training and testing sets
--   Stratify by fracture: because we have imbalanced data
+    -   Combo of I hate these variables and my previous work in the LASSO identified these as not important
+    
 ```{r}
-glow_split = initial_split(glow, strata = fracture)
+glow = glow1 %>%
+    dplyr::select(-sub_id, -site_id, -phy_id, -age, -bmi, -weight)
+```
+
+## Step 1: Splitting data
+
+-   From package `rsample` within `tidyverse`, we can use `initial_split()` to create training and testing data
+
+    -   Use `strata` to stratify by fracture
+
+```{r}
+glow_split = initial_split(glow, strata = fracture, prop = 0.8)
 glow_split
+```
+
+-   Then we can pull the training and testing data into their own datasets
+
+```{r}
 glow_train = training(glow_split)
 glow_test = testing(glow_split)
 ```
 
-## Fitting the logistic regression model
+## Step 1: Splitting data: peek at the split {.smaller}
 
--   Use Lasso
+::: columns
+::: column
+```{r}
+glimpse(glow_train)
+```
 
-[Lasso with interactions!!](https://strakaps.github.io/post/glinternet/) Using interactions??
+:::
+::: column
+```{r}
+glimpse(glow_test)
+```
+:::
+:::
+
+## Step 2: Fit LASSO penalized logistic regression model
+
+-   Using Lasso penalized regression!
+
+-   We can simply set up a penalized regression model
+
+ 
 
 ```{r}
 lasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %>%
+
             set_engine("glmnet")
 ```
 
-## build recipe??
+-   `glmnet` takes the basic fitting of `glm` and adds penalties! 
+
+    -   In `tidymodels` we set an engine that will fit the model
+    
+-   `mixture` option let's us pick the penalty
+
+    -   `mixture = 0` for Ridge regression
+    -   `mixture = 1` for Lasso regression
+    -   `0 < mixture < 1` for Elastic net regression
+
+## Step 2: Fit LASSO: Main effects
 
 ```{r}
-glow_rec = recipe(fracture ~ ., data = glow_train) %>%
-  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) 
+glow_rec_main = recipe(fracture ~ ., data = glow_train) %>%
 
-glow_workflow = workflow() %>%
-      add_model(lasso_mod) %>% add_recipe(glow_rec)
+  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk)
+
+glow_workflow_main = workflow() %>%
+
+      add_model(lasso_mod) %>% add_recipe(glow_rec_main)
+  
+glow_fit_main = glow_workflow_main %>% fit(glow_train)
 ```
 
+## Step 2: Fit LASSO: Main effects: Identify variables
 ```{r}
-glow_folds = vfold_cv(glow_train, v = 5, strata = fracture)
-
-glow_fit_rs = glow_workflow %>% 
-      fit_resamples(glow_folds, control = control_resamples(save_pred=T))
-
-glow_train_metrics = collect_metrics(glow_fit_rs)
-glow_train_metrics
-
-glow_train_pred = collect_predictions(glow_fit_rs)
-
-glow_train_pred %>%
-    group_by(id) %>%
-    roc_curve(truth = fracture, .pred_No) %>%
-    autoplot()
-
-glow_fit = glow_workflow %>% fit(data = glow_train)
-
-glow_test_pred = predict(glow_fit, new_data = glow_test, type = "prob") %>%
-    bind_cols(glow_test)
-
-glow_test_pred %>% 
-    roc_curve(truth = fracture, .pred_No) %>%
-    autoplot()
-
-glow_test_pred %>% 
-    roc_auc(truth = fracture, .pred_No)
-
-glow_test_pred %>% filter(fracture == "No", .pred_Yes > 0.5)
-glow_test_pred %>% filter(fracture == "Yes", .pred_No > 0.5)
-```
-
-
-## Other stufs
-
-```{r}
-library(vip)
-
-vi_data = glow_workflow %>% 
-    fit(glow_train) %>%
+library(vip)  
+vi_data_main = glow_fit_main %>% 
     pull_workflow_fit() %>%
     vi(lambda = 0.001) %>%
     filter(Importance != 0)
+vi_data_main
 ```
 
+- Looks like age is removed!
+
+## Step 2: Fit LASSO: Main effects + interactions
+
+-   We want to include interactions in our regression 
+-   The main effect model will be our starting point
+    -   Otherwise, we may drop main effects but not their interactions
+    -   Cannot do that: see [hierarchy principle](http://www.feat.engineering/interactions-guiding-principles)
+    
+-   I remove `age_c` from this section because main effects did not include it
+
+```{r}
+glow_rec_int = recipe(fracture ~ ., data = glow_train) %>%
+  update_role(age_c, new_role = "dont_use") %>%
+
+  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) %>%
+
+  step_interact(terms = ~ all_predictors():all_predictors())
+
+glow_workflow_int = workflow() %>%
+      add_model(lasso_mod) %>% add_recipe(glow_rec_int)
+  
+glow_fit_int = glow_workflow_int %>% fit(glow_train)
+```
+
+## Step 2: Fit LASSO: Identify interactions
+
+```{r}
+vi_data_int = glow_fit_int %>%
+    pull_workflow_fit() %>%
+    vi(lambda = 0.001) %>%
+    filter(Importance != 0)
+vi_data_int
+```
+
+- This is where things got a little annoying for me...
+
+## Step 2: Fit LASSO: Identify interactions
+
+- I combed through the column names of the results to find the interactions
+
+```{r}
+vi_data_int$Variable
+```
+
+## Step 2: Fit LASSO: Identify interactions
+
+- I combed through the column names of the results to find the interactions
+  - I used ChatGPT to help me because I'm pretty new to `tidymodels`: [let's view what I asked](https://chatgpt.com/c/506e4235-52fc-46b9-a9ad-6edf425818d5)
+
+```{r}
+interactions = vi_data_int %>% filter(grepl("_x_", Variable))
+
+interaction_terms = ~ (all_predictors()^2) - #Makes interactions b/w all predictors
+                      fracscore:starts_with("premeno") - # Removes this interaction
+                      height:starts_with("premeno") - 
+                      height:starts_with("smoke") - 
+                      height:starts_with("momfrac")
+```
+
+## Step 2: Fit LASSO: Create recipe and fit model (from LASSO)
+
+- This is not the typical procedure for LASSO, but the `tidymodels` framework for interactions did not let me keep all main effects when looking at my interactions
 
 
+```{r}
+glow_rec_int2 = recipe(fracture ~ ., data = glow_train) %>%
+  update_role(age_c, new_role = "dont_use") %>%
 
-## hfnekl
+  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) %>%
 
-https://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting
+  step_interact(terms = interaction_terms)
+  
+log_model = logistic_reg()
 
-https://datasciencebox.org/02-making-rigorous-conclusions
+glow_workflow_int2 = workflow() %>%
+      add_model(log_model) %>% add_recipe(glow_rec_int2)
+  
+glow_fit_int2 = glow_workflow_int2 %>% fit(glow_train)
+```
+
+## Step 2: Fit LASSO: Look at model fit
+
+```{r}
+print(tidy(glow_fit_int2), n=60)
+```
+
+## Poll Everywhere Question 4
+
+
+## Step 3: Prediction on testing set
+
+```{r}
+glow_test_pred = predict(glow_fit_int2, new_data = glow_test, type = "prob") %>%
+    bind_cols(glow_test)
+```
+
+::: columns
+::: {.column width="45%"}
+```{r}
+glow_test_pred %>% 
+  roc_auc(truth = fracture, 
+                  .pred_No)
+```
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+#| fig-align: center
+
+glow_test_pred %>% 
+  roc_curve(truth = fracture, .pred_No) %>%
+  autoplot()
+```
+
+:::
+:::
+
+## Step 3: Prediction on testing set
+
+```{r}
+glow_test_pred = predict(glow_fit_int2, new_data = glow_test, type = "prob") %>%
+    bind_cols(glow_test)
+```
+
+::: columns
+::: {.column width="45%"}
+```{r}
+glow_test_pred %>% 
+  roc_auc(truth = fracture, 
+                  .pred_No)
+```
+
+ 
+
+::: box2
+Why is this AUC worse than the one we saw with prior fracture, age, and their interaction?
+
+- Only 1 training and testing set: can overfit training and perform poorly on testing
+- We did not tune our penalty
+- Our testing set only has 100 observations!
+:::
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+#| fig-align: center
+
+glow_test_pred %>% 
+  roc_curve(truth = fracture, .pred_No) %>%
+  autoplot()
+```
+
+:::
+:::
+
+
+## Cross-validation (specifically k-fold)
+
+-   Prevents overfitting to one set of training data
+
+-   Split data into folds that train and validate model selection
+
+-   Basically subsection of training and testing (called validating) before truly testing on our original testing set
+
+![](images/cross_val.png)
+
+## Solutions / Resources (beyond our class right now)
+
+-   Use a tuning parameter for our penalty
+
+    -   Basically, we need to figure out what the best penalty is for our model
+    -   We use the training set to determine the best penality
+    -   Videos that includes tuning parameter with LASSO
+        
+        -   [TidyTuesday video on LASSO with interactions](https://www.youtube.com/watch?v=a7VTTQovUGU&ab_channel=AndrewCouch)
+        
+
+-   Cross-validation
+
+    -   Under [Cross validation within Data Science in a Box](https://datasciencebox.org/02-making-rigorous-conclusions#model-validation)
+
+    
+-   For complete video of machine learning with **LASSO**, **cross-validation**, and **tuning parameters**
+
+    -   See "Unit 5 - Deck 4: Machine learning" on [this Data Science in a Box page](https://datasciencebox.org/02-looking-further#slides-videos-and-application-exercises)
+    
+        -   Video goes through an example with more complicated data, but can be followed with our work!
+        
+## Summary
+
+- Revisited model selection techniques and discussed how a binary outcome can be treated differently than a continuous outcome
+- Discussed association vs prediction modeling
+- Discussed classification: a type of machine learning!
+- Introduced penalized regression as a classification method
+- Performed penalized regression (specifically LASSO) to select a prediction model
+- Process presented today has major flaws
+  - We did not tune our parameter
+  - We did not perform cross validation
+  
+## For your Lab 4
+
+-   You can use purposeful selection, like we did last quarter
+
+    -   If you want to focus on **association** modeling!
+
+    -   A good way to practice this again if you struggled with it previously
+
+ 
+
+-   You can try out LASSO regression 
+
+    -   If you want to focus on **prediction** modeling!
+    -   And if you want to stretch your R coding skills

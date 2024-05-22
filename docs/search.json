@@ -7702,107 +7702,107 @@
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#some-important-definitions",
     "href": "lectures/15_Model_building/15_Model_Building.html#some-important-definitions",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Some important definitions",
-    "text": "Some important definitions\n\nModel selection: picking the “best” model from a set of possible models\n\nModels will have the same outcome, but typically differ by the covariates that are included, their transformations, and their interactions\n\n\n \n\nModel selection strategies: a process or framework that helps us pick our “best” model\n\nThese strategies often differ by the approach and criteria used to the determine the “best” model\n\n\n \n\nOverfitting: result of fitting a model so closely to our particular sample data that it cannot be generalized to other samples (or the population)"
+    "text": "Some important definitions\n\nModel selection: picking the “best” model from a set of possible models\n\nModels will have the same outcome, but typically differ by the covariates that are included, their transformations, and their interactions\n“Best” model is defined by the research question and by how you want to answer it!\n\n\n \n\nModel selection strategies: a process or framework that helps us pick our “best” model\n\nThese strategies often differ by the approach and criteria used to the determine the “best” model\n\n\n \n\nOverfitting: result of fitting a model so closely to our particular sample data that it cannot be generalized to other samples (or the population)"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#bias-variance-trade-off",
     "href": "lectures/15_Model_building/15_Model_Building.html#bias-variance-trade-off",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Bias-variance trade off",
-    "text": "Bias-variance trade off\n\n\n\nRecall from 512/612: MSE can be written as a function of the bias and variance\n\\[\nMSE = \\text{bias}\\big(\\widehat\\beta\\big)^2 + \\text{variance}\\big(\\widehat\\beta\\big)\n\\]\n\nWe no longer use MSE in logistic regression to find the best fit model, BUT the idea between the bias and variance trade off holds!\n\nFor the same data:\n\nMore covariates in model: less bias, more variance\n\nPotential overfitting: with new data does our model still hold?\n\nLess covariates in model: more bias, less variance\n\n\n\n\n\n\nSource: http://scott.fortmann-roe.com/docs/BiasVariance.html"
+    "text": "Bias-variance trade off\n\n\n\nRecall from 512/612: MSE can be written as a function of the bias and variance\n\\[\nMSE = \\text{bias}\\big(\\widehat\\beta\\big)^2 + \\text{variance}\\big(\\widehat\\beta\\big)\n\\]\n\nWe no longer use MSE in logistic regression to find the best fit model, BUT the idea between the bias and variance trade off holds!\n\nFor the same data:\n\nMore covariates in model: less bias, more variance\n\nPotential overfitting: with new data does our model still hold?\n\nLess covariates in model: more bias, less variance\n\nMore bias bc more likely that were are not capturing the true underlying relationship with less variables\n\n\n\n\n\n\n\nSource: http://scott.fortmann-roe.com/docs/BiasVariance.html"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#the-goals-of-association-vs.-prediction",
     "href": "lectures/15_Model_building/15_Model_Building.html#the-goals-of-association-vs.-prediction",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "The goals of association vs. prediction",
     "text": "The goals of association vs. prediction\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nGoal: Understand one variable’s (or a group of variable’s) effect on the response after adjusting for other factors\nMainly interpret odds ratios of the variable that is the focus of the study\n\n\n\n\n\n\nPrediction\n\n\n\nGoal: to calculate the most precise prediction of the response variable\nInterpreting coefficients is not important\nChoose only the variables that are strong predictors of the response variable\n\nExcluding irrelevant variables can help reduce widths of the prediction intervals"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#model-selection-strategies-for-categorical-outcomes",
     "href": "lectures/15_Model_building/15_Model_Building.html#model-selection-strategies-for-categorical-outcomes",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Model selection strategies for categorical outcomes",
     "text": "Model selection strategies for categorical outcomes\n\n\n\n\nAssociation / Explanatory / One variable’s effect\n\n\n\nSelection of potential models is tied more with the research context with some incorporation of prediction scores\n\n \n\nPre-specification of multivariable model\nPurposeful model selection\n\n“Risk factor modeling”\n\nChange in Estimate (CIE) approaches\n\nWill learn in Survival Analysis (BSTA 514)\n\n\n\n\n\n\n\nPrediction\n\n\n\nSelection of potential models is fully dependent on prediction scores\n\n \n\nLogistic regression with more refined model selection\n\nRegularization techniques (LASSO, Ridge, Elastic net)\n\nMachine learning realm\n\nDecision trees, random forest, k-nearest neighbors, Neural networks"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#before-i-move-on",
     "href": "lectures/15_Model_building/15_Model_Building.html#before-i-move-on",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Before I move on…",
     "text": "Before I move on…\n\nWe CAN use purposeful selection from last quarter in any type of generalized linear model (GLM)\n\nThis includes logistic regression!\n\n\n \n\nThe best documented information on purposeful selection is in the Hosmer-Lemeshow textbook on logistic regression\n\nTextbook in student files is linked here\nPurposeful selection starts on page 89 (or page 101 in the pdf)\n\n\n \n\nI will not discuss purposeful selection in this course\n\nBe aware that this is a tool that you can use in any regression!"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#okay-so-prediction-of-categorical-outcomes",
     "href": "lectures/15_Model_building/15_Model_Building.html#okay-so-prediction-of-categorical-outcomes",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Okay, so prediction of categorical outcomes",
-    "text": "Okay, so prediction of categorical outcomes\n\nClassification: process of predicting categorical responses/outcomes\n\nAssigning a category outcome based on an observation’s predictors\n\nCommon classification methods (good site on brief explanation of each)\n\nLogistic regression\nNaive Bayes\nk-Nearest Neighbor (KNN)\nDecision Trees\nSupport Vector Machines (SVMs)\nNeural Networks"
+    "text": "Okay, so prediction of categorical outcomes\n\nClassification: process of predicting categorical responses/outcomes\n\nAssigning a category outcome based on an observation’s predictors\n\n\n \n\nNote: we’ve already done a lot of work around predicting probabilities within logistic regression\n\nCan we take those predicted probabilities one step further to predict the binary outcome??\n\n\n \n\nCommon classification methods (good site on brief explanation of each)\n\nLogistic regression\nNaive Bayes\nk-Nearest Neighbor (KNN)\nDecision Trees\nSupport Vector Machines (SVMs)\nNeural Networks"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#logistic-regression-is-a-classification-method",
     "href": "lectures/15_Model_building/15_Model_Building.html#logistic-regression-is-a-classification-method",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Logistic regression is a classification method",
-    "text": "Logistic regression is a classification method\n\nBut to be a good classifier, our model needs to built a certain way\nPrediction depends on type of variable/model selection!\n\nThis is when it can become machine learning\n\nSo the big question is: how do we select this model??"
+    "text": "Logistic regression is a classification method\n\nBut to be a good classifier, our logistic regression model needs to built a certain way\n\n \n\nPrediction depends on type of variable/model selection!\n\nThis is when it can become machine learning\n\n\n \n\nSo the big question is: how do we select this model??\n\nRegularized techniques, aka penalized regression"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-1",
     "href": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-1",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Poll Everywhere Question 1",
     "text": "Poll Everywhere Question 1"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#overview-of-the-process",
     "href": "lectures/15_Model_building/15_Model_Building.html#overview-of-the-process",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Overview of the process",
-    "text": "Overview of the process"
+    "text": "Overview of the process\n\nSplit data into training and testing datasets\n\n \n\nPerform our classification method on training set\n\nThis is where we will use penalized regression!\n\n\n \n\nMeasure predictive accuracy on testing set"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-data",
     "href": "lectures/15_Model_building/15_Model_Building.html#splitting-data",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Splitting data",
-    "text": "Splitting data\n\nLet’s keep this in context of the outcome\n\n\nggplot(glow1, aes(x = fracture)) + geom_bar()\n\n\n\nglow = glow1 %&gt;%\n    dplyr::select(-sub_id, -site_id, -phy_id, -age)"
+    "text": "Splitting data\n\nWhen splitting data, we need to be conscious of the proportions of our outcomes\n\nIs there imbalance within our outcome?\nWe want to randomly select observations but make sure the proportions of No and Yes stay the same\nWe stratify by the outcome, meaning we pick Yes’s and No’s separately for the training set\n\n\n\nggplot(glow1, aes(x = fracture)) + geom_bar()"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-data-1",
     "href": "lectures/15_Model_building/15_Model_Building.html#splitting-data-1",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Splitting data",
-    "text": "Splitting data\n\nWant to split our data into training and testing sets\nStratify by fracture: because we have imbalanced data\n\n\nglow_split = initial_split(glow, strata = fracture)\nglow_split\n\n&lt;Training/Testing/Total&gt;\n&lt;374/126/500&gt;\n\nglow_train = training(glow_split)\nglow_test = testing(glow_split)"
+    "text": "Splitting data\n\nFrom package rsample within tidyverse, we can use initial_split() to create training and testing data\n\nUse strata to stratify by fracture\n\n\n\nglow_split = initial_split(glow, strata = fracture, prop = 0.8)\nglow_split\n\n&lt;Training/Testing/Total&gt;\n&lt;400/100/500&gt;\n\n\n\nThen we can pull the training and testing data into their own datasets\n\n\nglow_train = training(glow_split)\nglow_test = testing(glow_split)"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#fitting-the-logistic-regression-model",
     "href": "lectures/15_Model_building/15_Model_Building.html#fitting-the-logistic-regression-model",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Fitting the logistic regression model",
-    "text": "Fitting the logistic regression model\n\nUse Lasso\n\nLasso with interactions!! Using interactions??\n\nlasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %&gt;%\n            set_engine(\"glmnet\")"
+    "text": "Fitting the logistic regression model\n\nUsing Lasso penalized regression!\n\nLasso with interactions!! Using interactions??\n\nlasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %&gt;% #mixture =1 means lasso\n            set_engine(\"glmnet\")"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#build-recipe",
     "href": "lectures/15_Model_building/15_Model_Building.html#build-recipe",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "build recipe??",
-    "text": "build recipe??\n\nglow_rec = recipe(fracture ~ ., data = glow_train) %&gt;%\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) \n\nglow_workflow = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec)\n\n\nglow_folds = vfold_cv(glow_train, v = 5, strata = fracture)\n\nglow_fit_rs = glow_workflow %&gt;% \n      fit_resamples(glow_folds, control = control_resamples(save_pred=T))\n\nglow_train_metrics = collect_metrics(glow_fit_rs)\nglow_train_metrics\n\n# A tibble: 3 × 6\n  .metric     .estimator  mean     n std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.733     5 0.00744 Preprocessor1_Model1\n2 brier_class binary     0.185     5 0.00380 Preprocessor1_Model1\n3 roc_auc     binary     0.639     5 0.0220  Preprocessor1_Model1\n\nglow_train_pred = collect_predictions(glow_fit_rs)\n\nglow_train_pred %&gt;%\n    group_by(id) %&gt;%\n    roc_curve(truth = fracture, .pred_No) %&gt;%\n    autoplot()\n\n\n\nglow_fit = glow_workflow %&gt;% fit(data = glow_train)\n\nglow_test_pred = predict(glow_fit, new_data = glow_test, type = \"prob\") %&gt;%\n    bind_cols(glow_test)\n\nglow_test_pred %&gt;% \n    roc_curve(truth = fracture, .pred_No) %&gt;%\n    autoplot()\n\n\n\nglow_test_pred %&gt;% \n    roc_auc(truth = fracture, .pred_No)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.690\n\nglow_test_pred %&gt;% filter(fracture == \"No\", .pred_Yes &gt; 0.5)\n\n# A tibble: 3 × 14\n  .pred_No .pred_Yes priorfrac weight height   bmi premeno momfrac armassist\n     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;    \n1    0.429     0.571 Yes         79.4    163  29.9 No      No      Yes      \n2    0.379     0.621 Yes         59      153  25.2 No      No      Yes      \n3    0.393     0.607 Yes         55.3    152  23.9 No      No      Yes      \n# ℹ 5 more variables: smoke &lt;fct&gt;, raterisk &lt;fct&gt;, fracscore &lt;int&gt;,\n#   fracture &lt;fct&gt;, age_c &lt;dbl&gt;\n\nglow_test_pred %&gt;% filter(fracture == \"Yes\", .pred_No &gt; 0.5)\n\n# A tibble: 24 × 14\n   .pred_No .pred_Yes priorfrac weight height   bmi premeno momfrac armassist\n      &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt;    \n 1    0.816     0.184 Yes         94.3    173  31.5 No      No      Yes      \n 2    0.596     0.404 No          60.3    148  27.5 Yes     No      Yes      \n 3    0.792     0.208 No          64.9    160  25.4 No      No      Yes      \n 4    0.844     0.156 No          55.3    158  22.2 No      No      No       \n 5    0.708     0.292 No          46.3    158  18.5 No      No      No       \n 6    0.676     0.324 No          59.9    160  23.4 Yes     No      Yes      \n 7    0.722     0.278 No          63.5    155  26.4 Yes     Yes     No       \n 8    0.866     0.134 No          59      160  23.0 No      No      No       \n 9    0.521     0.479 Yes         68      160  26.6 Yes     Yes     No       \n10    0.627     0.373 No          50.8    152  22.0 No      No      Yes      \n# ℹ 14 more rows\n# ℹ 5 more variables: smoke &lt;fct&gt;, raterisk &lt;fct&gt;, fracscore &lt;int&gt;,\n#   fracture &lt;fct&gt;, age_c &lt;dbl&gt;"
+    "text": "build recipe??\n\nglow_rec_main = recipe(fracture ~ ., data = glow_train) %&gt;%\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk)\n  \nglow_workflow_main = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec_main)\n  \nglow_fit_main = glow_workflow_main %&gt;% \n      fit(glow_train)\ntidy(glow_fit_main)\n\n# A tibble: 13 × 3\n   term             estimate penalty\n   &lt;chr&gt;               &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)      -3.19      0.001\n 2 weight           -0.0405    0.001\n 3 height            0         0.001\n 4 bmi               0.133     0.001\n 5 fracscore         0.191     0.001\n 6 age_c             0.00813   0.001\n 7 priorfrac_Yes     0.434     0.001\n 8 premeno_Yes       0.151     0.001\n 9 momfrac_Yes       0.482     0.001\n10 armassist_Yes    -0.120     0.001\n11 smoke_Yes        -0.605     0.001\n12 raterisk_Same     0.275     0.001\n13 raterisk_Greater  0.835     0.001\n\nlibrary(vip)  \nvi_data_main = glow_fit_main %&gt;% \n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\nvi_data_main\n\n# A tibble: 11 × 3\n   Variable         Importance Sign \n   &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;\n 1 raterisk_Greater    0.835   POS  \n 2 smoke_Yes           0.605   NEG  \n 3 momfrac_Yes         0.482   POS  \n 4 priorfrac_Yes       0.434   POS  \n 5 raterisk_Same       0.275   POS  \n 6 fracscore           0.191   POS  \n 7 premeno_Yes         0.151   POS  \n 8 bmi                 0.133   POS  \n 9 armassist_Yes       0.120   NEG  \n10 weight              0.0405  NEG  \n11 age_c               0.00813 POS"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#other-stufs",
     "href": "lectures/15_Model_building/15_Model_Building.html#other-stufs",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "Other stufs",
-    "text": "Other stufs\n\nlibrary(vip)\n\n\nAttaching package: 'vip'\n\n\nThe following object is masked from 'package:utils':\n\n    vi\n\nvi_data = glow_workflow %&gt;% \n    fit(glow_train) %&gt;%\n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\n\nWarning: `pull_workflow_fit()` was deprecated in workflows 0.2.3.\nℹ Please use `extract_fit_parsnip()` instead."
+    "text": "Other stufs"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#hfnekl",
     "href": "lectures/15_Model_building/15_Model_Building.html#hfnekl",
-    "title": "Lesson 14: Model Building",
+    "title": "Lesson 15: Model Building",
     "section": "hfnekl",
-    "text": "hfnekl\nhttps://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting\nhttps://datasciencebox.org/02-making-rigorous-conclusions"
+    "text": "hfnekl\nhttps://github.com/tidyverse/datascience-box/tree/main/course-materials/_slides/u4-d07-prediction-overfitting\nhttps://datasciencebox.org/02-making-rigorous-conclusions\n\n\nLesson 15: Model Building"
   },
   {
     "objectID": "weeks/week_08_sched.html#muddiest-points-questions",
@@ -7810,5 +7810,278 @@
     "title": "Week 8",
     "section": "Muddiest Points / Questions",
     "text": "Muddiest Points / Questions\n\n1. How did you determine the ages for the R output on slide 24 (standardized deviance residuals)\nThe centered ages are centered around the mean age. A few classes ago I mentioned that the mean was 69 years old, might have gotten lost in this lesson. So calculating the actual ages is just adding the mean age and centered age. So centered age of 6 is 69+6 = 75. Also, very confusing because apparently I can’t add!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#penalized-regression",
+    "href": "lectures/15_Model_building/15_Model_Building.html#penalized-regression",
+    "title": "Lesson 15: Model Building",
+    "section": "Penalized regression",
+    "text": "Penalized regression\n\nBasic idea: We are running regression, but now we want to incentivize our model fit to have less predictors\n\nInclude a penalty to discourage too many predictors in the model\n\n\n \n\nAlso known as shrinkage or regularization methods\n\n \n\nPenalty will reduce coefficient values to zero (or close to zero) if the predictor does not contribute much information to predicting our outcome\n\n \n\nWe need a tuning parameter that determines the amount of shrinkage called lambda/\\(\\lambda\\)\n\nHow much do we want to penalize additional predictors?"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#cross-validation",
+    "href": "lectures/15_Model_building/15_Model_Building.html#cross-validation",
+    "title": "Lesson 15: Model Building",
+    "section": "Cross validation",
+    "text": "Cross validation\n\nPrevents overfitting to one set of training data\nSplit data into folds that train and validate model selection\nBasically subsection of training and testing (called validating) before truly testing on our original testing set"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-our-data",
+    "href": "lectures/15_Model_building/15_Model_Building.html#splitting-our-data",
+    "title": "Lesson 15: Model Building",
+    "section": "Splitting our data",
+    "text": "Splitting our data\n\nTraining: act of creating our prediction model based on our observed data\n\nSupervised: Means we keep information on our outcome while training\n\n\n \n\nTesting: act of measuring the predictive accuracy of our model by trying it out on new data\n\n \n\nWhen we use data to create a prediction model, we want to test our prediction model on new data\n\nHelps make sure prediction model can be applied to other data outside of the data that was used to create it!\n\n\n \n\nSo an important first step in prediction modeling is to split our data into a training set and a testing set!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-our-data-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#splitting-our-data-1",
+    "title": "Lesson 15: Model Building",
+    "section": "Splitting our data",
+    "text": "Splitting our data\n\n\n\n\nTraining set\n\n\n\nSandbox for model building\nSpend most of your time using the training set to develop the model\nMajority of the data (usually 80%)\n\n\n\n\n\n\nTesting set\n\n\n\nHeld in reserve to determine efficacy of one or two chosen models\nCritical to look at it once, otherwise it becomes part of the modeling process\nRemainder of the data (usually 20%)\n\n\n\n\n\n     \n \n\nSlide content from Data Science in a Box"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#example-to-be-used-glow-study",
+    "href": "lectures/15_Model_building/15_Model_Building.html#example-to-be-used-glow-study",
+    "title": "Lesson 15: Model Building",
+    "section": "Example to be used: GLOW Study",
+    "text": "Example to be used: GLOW Study\n\nFrom GLOW (Global Longitudinal Study of Osteoporosis in Women) study\n\n \n\nOutcome variable: any fracture in the first year of follow up (FRACTURE: 0 or 1)\n\n \n\nRisk factor/variable of interest: history of prior fracture (PRIORFRAC: 0 or 1)\nPotential confounder or effect modifier: age (AGE, a continuous variable)\n\nCenter age will be used! We will center around the rounded mean age of 69 years old\n\n\n \n\nCrossed out because we are no longer attached to specific predictors and their association with fracture\n\nFocused on predicting fracture with whatever variables we can!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#splitting-data-peek-at-the-split",
+    "href": "lectures/15_Model_building/15_Model_Building.html#splitting-data-peek-at-the-split",
+    "title": "Lesson 15: Model Building",
+    "section": "Splitting data: peek at the split",
+    "text": "Splitting data: peek at the split\n\n\n\nglimpse(glow_train)\n\nRows: 400\nColumns: 12\n$ priorfrac &lt;fct&gt; No, No, Yes, No, Yes, No, Yes, No, No, No, No, No, No, No, N…\n$ weight    &lt;dbl&gt; 70.3, 87.1, 50.8, 62.1, 68.0, 50.8, 40.8, 63.5, 117.9, 67.1,…\n$ height    &lt;int&gt; 158, 160, 157, 160, 161, 150, 153, 166, 167, 162, 165, 160, …\n$ bmi       &lt;dbl&gt; 28.16055, 34.02344, 20.60936, 24.25781, 26.23356, 22.57778, …\n$ premeno   &lt;fct&gt; No, No, No, No, No, No, No, No, No, No, No, Yes, No, No, No,…\n$ momfrac   &lt;fct&gt; No, No, Yes, No, No, No, No, No, No, No, No, No, No, No, No,…\n$ armassist &lt;fct&gt; No, No, Yes, No, No, No, No, No, Yes, No, Yes, No, Yes, No, …\n$ smoke     &lt;fct&gt; No, No, No, No, Yes, No, No, No, Yes, Yes, No, No, No, No, N…\n$ raterisk  &lt;fct&gt; Same, Same, Less, Less, Same, Less, Same, Less, Same, Less, …\n$ fracscore &lt;int&gt; 1, 2, 11, 5, 4, 6, 7, 0, 3, 1, 5, 1, 4, 2, 2, 7, 2, 1, 4, 5,…\n$ fracture  &lt;fct&gt; No, No, No, No, No, No, No, No, No, No, No, No, No, No, No, …\n$ age_c     &lt;dbl&gt; -7, -4, 19, 13, -2, 15, 13, -11, -13, -10, 3, -5, -1, -2, 0,…\n\n\n\n\nglimpse(glow_test)\n\nRows: 100\nColumns: 12\n$ priorfrac &lt;fct&gt; No, Yes, No, No, No, No, No, No, No, No, Yes, No, No, No, No…\n$ weight    &lt;dbl&gt; 68.0, 62.6, 67.6, 88.0, 58.5, 69.9, 58.5, 62.1, 93.0, 59.0, …\n$ height    &lt;int&gt; 152, 156, 153, 158, 165, 153, 175, 158, 163, 157, 152, 160, …\n$ bmi       &lt;dbl&gt; 29.43213, 25.72321, 28.87778, 35.25076, 21.48760, 29.86031, …\n$ premeno   &lt;fct&gt; No, No, No, Yes, No, No, No, No, No, Yes, No, No, No, Yes, N…\n$ momfrac   &lt;fct&gt; No, No, Yes, No, No, No, No, No, No, No, No, No, No, No, No,…\n$ armassist &lt;fct&gt; No, No, No, No, No, Yes, No, No, Yes, Yes, No, No, Yes, No, …\n$ smoke     &lt;fct&gt; No, No, Yes, No, No, No, No, No, No, Yes, No, No, No, No, No…\n$ raterisk  &lt;fct&gt; Same, Same, Less, Greater, Same, Same, Greater, Less, Less, …\n$ fracscore &lt;int&gt; 1, 7, 4, 1, 3, 8, 3, 5, 4, 5, 7, 1, 3, 1, 4, 2, 2, 4, 1, 3, …\n$ fracture  &lt;fct&gt; No, No, No, No, No, No, No, No, No, No, No, No, No, No, No, …\n$ age_c     &lt;dbl&gt; -8, 17, -2, -8, 2, 17, 2, 11, -3, -4, 17, -9, -5, -6, 7, -7,…"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#before-i-get-really-into-things",
+    "href": "lectures/15_Model_building/15_Model_Building.html#before-i-get-really-into-things",
+    "title": "Lesson 15: Model Building",
+    "section": "Before I get really into things!!",
+    "text": "Before I get really into things!!\n\ntidymodels is a great package when we are performing prediction\nOne problem: it uses very different syntax for model fitting than we are used to…\ntidymodels syntax dictates that we need to define:\n\nA model\nA recipe\nA workflow"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#tidymodels-with-glow",
+    "href": "lectures/15_Model_building/15_Model_Building.html#tidymodels-with-glow",
+    "title": "Lesson 15: Model Building",
+    "section": "tidymodels with GLOW",
+    "text": "tidymodels with GLOW\nTo fit our logistic regression model with the interaction between age and prior fracture, we use:\n\n# model\nmodel = logistic_reg()\n# recipe\nrecipe = recipe(fracture ~ priorfrac + age_c, data = glow1) %&gt;%\n            step_dummy(priorfrac) %&gt;%\n            step_interact(terms = ~ age_c:starts_with(\"priorfrac\"))\n# workflow\nworkflow = workflow() %&gt;% add_model(model) %&gt;% add_recipe(recipe)\n\nfit = workflow %&gt;% fit(data = glow1)\n\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.134\n−10.270\n0.000\n−1.646\n−1.120\n    age_c\n0.063\n0.015\n4.043\n0.000\n0.032\n0.093\n    priorfrac_Yes\n1.002\n0.240\n4.184\n0.000\n0.530\n1.471\n    age_c_x_priorfrac_Yes\n−0.057\n0.025\n−2.294\n0.022\n−0.107\n−0.008"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#section",
+    "href": "lectures/15_Model_building/15_Model_Building.html#section",
+    "title": "Lesson 15: Model Building",
+    "section": "",
+    "text": "glow_rec_int = recipe(fracture ~ ., data = glow_train) %&gt;%\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) %&gt;%\n  step_interact(terms = ~ all_predictors():all_predictors())\n\nglow_workflow_int = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec_int)\n  \nglow_fit_int = glow_workflow_int %&gt;% fit(glow_train)\ntidy(glow_fit_int)\n\n# A tibble: 79 × 3\n   term          estimate penalty\n   &lt;chr&gt;            &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)    -4.16     0.001\n 2 weight          0        0.001\n 3 height          0        0.001\n 4 bmi             0.165    0.001\n 5 fracscore       0        0.001\n 6 age_c           0        0.001\n 7 priorfrac_Yes   0.0371   0.001\n 8 premeno_Yes     1.21     0.001\n 9 momfrac_Yes     0        0.001\n10 armassist_Yes   0        0.001\n# ℹ 69 more rows\n\nvi_data_int = glow_fit_int %&gt;%\n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\nvi_data_int\n\n# A tibble: 46 × 3\n   Variable                         Importance Sign \n   &lt;chr&gt;                                 &lt;dbl&gt; &lt;chr&gt;\n 1 smoke_Yes_x_raterisk_Greater          2.54  POS  \n 2 priorfrac_Yes_x_momfrac_Yes           1.82  NEG  \n 3 momfrac_Yes_x_armassist_Yes           1.56  NEG  \n 4 smoke_Yes                             1.50  NEG  \n 5 priorfrac_Yes_x_premeno_Yes           1.25  NEG  \n 6 premeno_Yes                           1.21  POS  \n 7 premeno_Yes_x_armassist_Yes           1.18  POS  \n 8 priorfrac_Yes_x_raterisk_Greater      0.921 POS  \n 9 premeno_Yes_x_raterisk_Greater        0.792 POS  \n10 momfrac_Yes_x_raterisk_Same           0.758 POS  \n# ℹ 36 more rows"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#three-types-of-penalized-regression",
+    "href": "lectures/15_Model_building/15_Model_Building.html#three-types-of-penalized-regression",
+    "title": "Lesson 15: Model Building",
+    "section": "Three types of penalized regression",
+    "text": "Three types of penalized regression\nMain difference is the type of penalty used\n\n\n\n\nRidge regression\n\n\n\nPenalty called L2 norm, uses sqaured values\nPros\n\nReduces overfitting\nHandles \\(p&gt;n\\)\nHandles collinearity\n\nCons\n\nDoes not shrink coefficients to 0\nDifficult to interpret\n\n\n\n\n\n\n\nLasso regression\n\n\n\nPenalty called L1 norm, uses absolute values\n\n \n\nPros\n\nReduces overfitting\nShrinks coefficients to 0\n\nCons\n\nCannot handle \\(p&gt;n\\)\nDoes not handle multicollinearity well\n\n\n\n\n\n\n\nElastic net regression\n\n\n\nL1 and L2 used, best of both worlds\nPros\n\nReduces overfitting\nHandles \\(p&gt;n\\)\nHandles collinearity\nShrinks coefficients to 0\n\nCons\n\nMore difficult to do than other two"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 1: Splitting data",
+    "text": "Step 1: Splitting data\n\nTraining: act of creating our prediction model based on our observed data\n\nSupervised: Means we keep information on our outcome while training\n\n\n \n\nTesting: act of measuring the predictive accuracy of our model by trying it out on new data\n\n \n\nWhen we use data to create a prediction model, we want to test our prediction model on new data\n\nHelps make sure prediction model can be applied to other data outside of the data that was used to create it!\n\n\n \n\nSo an important first step in prediction modeling is to split our data into a training set and a testing set!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-1",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 1: Splitting data",
+    "text": "Step 1: Splitting data\n\n\n\n\nTraining set\n\n\n\nSandbox for model building\nSpend most of your time using the training set to develop the model\nMajority of the data (usually 80%)\n\n\n\n\n\n\nTesting set\n\n\n\nHeld in reserve to determine efficacy of one or two chosen models\nCritical to look at it once at the end, otherwise it becomes part of the modeling process\nRemainder of the data (usually 20%)\n\n\n\n\n\n     \n \n\nSlide content from Data Science in a Box"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-2",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-2",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 1: Splitting data",
+    "text": "Step 1: Splitting data\n\nWhen splitting data, we need to be conscious of the proportions of our outcomes\n\nIs there imbalance within our outcome?\nWe want to randomly select observations but make sure the proportions of No and Yes stay the same\nWe stratify by the outcome, meaning we pick Yes’s and No’s separately for the training set\n\n\n\nggplot(glow1, aes(x = fracture)) + geom_bar()\n\n\n\nSide note: took out bmi and weight bc we have multicollinearity issues\n\nCombo of I hate these variables and my previous work in the LASSO identified these as not important\n\n\n\nglow = glow1 %&gt;%\n    dplyr::select(-sub_id, -site_id, -phy_id, -age, -bmi, -weight)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-3",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-3",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 1: Splitting data",
+    "text": "Step 1: Splitting data\n\nFrom package rsample within tidyverse, we can use initial_split() to create training and testing data\n\nUse strata to stratify by fracture\n\n\n\nglow_split = initial_split(glow, strata = fracture, prop = 0.8)\nglow_split\n\n&lt;Training/Testing/Total&gt;\n&lt;400/100/500&gt;\n\n\n\nThen we can pull the training and testing data into their own datasets\n\n\nglow_train = training(glow_split)\nglow_test = testing(glow_split)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-peek-at-the-split",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-1-splitting-data-peek-at-the-split",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 1: Splitting data: peek at the split",
+    "text": "Step 1: Splitting data: peek at the split\n\n\n\nglimpse(glow_train)\n\nRows: 400\nColumns: 10\n$ priorfrac &lt;fct&gt; No, No, Yes, No, No, Yes, No, Yes, Yes, No, No, No, No, No, …\n$ height    &lt;int&gt; 158, 160, 157, 160, 152, 161, 150, 153, 156, 166, 153, 160, …\n$ premeno   &lt;fct&gt; No, No, No, No, No, No, No, No, No, No, No, Yes, No, No, No,…\n$ momfrac   &lt;fct&gt; No, No, Yes, No, No, No, No, No, No, No, Yes, No, No, No, No…\n$ armassist &lt;fct&gt; No, No, Yes, No, No, No, No, No, No, No, No, No, Yes, No, No…\n$ smoke     &lt;fct&gt; No, No, No, No, No, Yes, No, No, No, No, Yes, No, No, No, No…\n$ raterisk  &lt;fct&gt; Same, Same, Less, Less, Same, Same, Less, Same, Same, Less, …\n$ fracscore &lt;int&gt; 1, 2, 11, 5, 1, 4, 6, 7, 7, 0, 4, 1, 4, 2, 2, 7, 2, 1, 4, 5,…\n$ fracture  &lt;fct&gt; No, No, No, No, No, No, No, No, No, No, No, No, No, No, No, …\n$ age_c     &lt;dbl&gt; -7, -4, 19, 13, -8, -2, 15, 13, 17, -11, -2, -5, -1, -2, 0, …\n\n\n\n\nglimpse(glow_test)\n\nRows: 100\nColumns: 10\n$ priorfrac &lt;fct&gt; No, No, No, No, No, No, No, No, Yes, Yes, No, No, No, No, No…\n$ height    &lt;int&gt; 167, 162, 165, 158, 153, 170, 154, 171, 142, 152, 166, 154, …\n$ premeno   &lt;fct&gt; No, No, No, Yes, No, Yes, Yes, Yes, Yes, No, No, No, No, No,…\n$ momfrac   &lt;fct&gt; No, No, No, No, No, Yes, No, No, Yes, No, No, No, No, No, No…\n$ armassist &lt;fct&gt; Yes, No, Yes, No, Yes, No, Yes, No, No, No, No, No, No, No, …\n$ smoke     &lt;fct&gt; Yes, Yes, No, No, No, No, No, No, No, No, No, No, No, No, No…\n$ raterisk  &lt;fct&gt; Same, Less, Less, Greater, Same, Same, Same, Same, Same, Sam…\n$ fracscore &lt;int&gt; 3, 1, 5, 1, 8, 3, 7, 1, 6, 7, 0, 2, 0, 0, 1, 2, 2, 8, 4, 3, …\n$ fracture  &lt;fct&gt; No, No, No, No, No, No, No, No, No, No, No, No, No, No, No, …\n$ age_c     &lt;dbl&gt; -13, -10, 3, -8, 17, 0, 6, -5, 1, 17, -11, -6, -10, -12, -6,…"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-penalized-logistic-regression-model",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-penalized-logistic-regression-model",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO penalized logistic regression model",
+    "text": "Step 2: Fit LASSO penalized logistic regression model\n\nUsing Lasso penalized regression!\nWe can simply set up a penalized regression model\n\n \n\nlasso_mod = logistic_reg(penalty = 0.001, mixture = 1) %&gt;%\n\n            set_engine(\"glmnet\")\n\n\nglmnet takes the basic fitting of glm and adds penalties!\n\nIn tidymodels we set an engine that will fit the model\n\nmixture option let’s us pick the penalty\n\nmixture = 0 for Ridge regression\nmixture = 1 for Lasso regression\n0 &lt; mixture &lt; 1 for Elastic net regression"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-3-prediction-on-testing-set",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-3-prediction-on-testing-set",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 3: Prediction on testing set",
+    "text": "Step 3: Prediction on testing set\n\nglow_test_pred = predict(glow_fit_int2, new_data = glow_test, type = \"prob\") %&gt;%\n    bind_cols(glow_test)\n\n\n\n\nglow_test_pred %&gt;% \n  roc_auc(truth = fracture, \n                  .pred_No)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.644\n\n\n\n\nglow_test_pred %&gt;% \n  roc_curve(truth = fracture, .pred_No) %&gt;%\n  autoplot()"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Main effects",
+    "text": "Step 2: Fit LASSO: Main effects\n\nglow_rec_main = recipe(fracture ~ ., data = glow_train) %&gt;%\n\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk)\n\nglow_workflow_main = workflow() %&gt;%\n\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec_main)\n  \nglow_fit_main = glow_workflow_main %&gt;% fit(glow_train)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-1",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Main effects",
+    "text": "Step 2: Fit LASSO: Main effects\n\nWe want to include interactions in our regression\nThe main effect model will be our starting point\n\nOtherwise, we may drop main effects but not their interactions\nCannot do that: see hierarchy principle\n\nSo we look at the main effects and build from there"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-add-interactions",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-add-interactions",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Add interactions",
+    "text": "Step 2: Fit LASSO: Add interactions\n\nglow_rec_int = recipe(fracture ~ ., data = glow_train) %&gt;%\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) %&gt;%\n  step_interact(terms = ~ all_predictors():all_predictors())\n\nglow_workflow_int = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec_int)\n  \nglow_fit_int = glow_workflow_int %&gt;% fit(glow_train)\n\nvi_data_int = glow_fit_int %&gt;%\n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\nvi_data_int\n\n# A tibble: 46 × 3\n   Variable                     Importance Sign \n   &lt;chr&gt;                             &lt;dbl&gt; &lt;chr&gt;\n 1 priorfrac_Yes_x_premeno_Yes        2.45 NEG  \n 2 premeno_Yes_x_smoke_Yes            2.40 NEG  \n 3 armassist_Yes_x_smoke_Yes          2.22 POS  \n 4 premeno_Yes                        2.06 POS  \n 5 momfrac_Yes_x_smoke_Yes            2.03 NEG  \n 6 smoke_Yes_x_raterisk_Greater       1.96 POS  \n 7 momfrac_Yes_x_armassist_Yes        1.43 NEG  \n 8 smoke_Yes_x_raterisk_Same          1.40 POS  \n 9 premeno_Yes_x_armassist_Yes        1.34 POS  \n10 momfrac_Yes_x_raterisk_Same        1.07 POS  \n# ℹ 36 more rows"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-2",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-2",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Main effects",
+    "text": "Step 2: Fit LASSO: Main effects\n\nWe want to include interactions in our regression\nThe main effect model will be our starting point\n\nOtherwise, we may drop main effects but not their interactions\nCannot do that: see hierarchy principle\n\nSo we look at the main effects and build from there"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Identify interactions",
+    "text": "Step 2: Fit LASSO: Identify interactions\n\nvi_data_int = glow_fit_int %&gt;%\n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\nvi_data_int\n\n# A tibble: 34 × 3\n   Variable                       Importance Sign \n   &lt;chr&gt;                               &lt;dbl&gt; &lt;chr&gt;\n 1 smoke_Yes                            4.29 NEG  \n 2 smoke_Yes_x_raterisk_Greater         3.89 POS  \n 3 smoke_Yes_x_raterisk_Same            3.14 POS  \n 4 premeno_Yes_x_smoke_Yes              3.00 NEG  \n 5 momfrac_Yes_x_armassist_Yes          2.82 NEG  \n 6 priorfrac_Yes_x_premeno_Yes          2.50 NEG  \n 7 priorfrac_Yes                        1.82 POS  \n 8 armassist_Yes_x_smoke_Yes            1.44 POS  \n 9 premeno_Yes_x_raterisk_Greater       1.31 POS  \n10 momfrac_Yes_x_smoke_Yes              1.17 POS  \n# ℹ 24 more rows\n\n\n\nThis is where things got a little annoying for me…"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-identify-variables",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-identify-variables",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Main effects: Identify variables",
+    "text": "Step 2: Fit LASSO: Main effects: Identify variables\n\nlibrary(vip)  \nvi_data_main = glow_fit_main %&gt;% \n    pull_workflow_fit() %&gt;%\n    vi(lambda = 0.001) %&gt;%\n    filter(Importance != 0)\nvi_data_main\n\n# A tibble: 9 × 3\n  Variable         Importance Sign \n  &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;\n1 raterisk_Greater     0.559  POS  \n2 momfrac_Yes          0.542  POS  \n3 priorfrac_Yes        0.493  POS  \n4 raterisk_Same        0.438  POS  \n5 smoke_Yes            0.376  NEG  \n6 premeno_Yes          0.285  POS  \n7 fracscore            0.197  POS  \n8 armassist_Yes        0.146  POS  \n9 height               0.0382 NEG  \n\n\n\nLooks like age is removed!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-interactions",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-main-effects-interactions",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Main effects + interactions",
+    "text": "Step 2: Fit LASSO: Main effects + interactions\n\nWe want to include interactions in our regression\nThe main effect model will be our starting point\n\nOtherwise, we may drop main effects but not their interactions\nCannot do that: see hierarchy principle\n\nI remove age_c from this section because main effects did not include it\n\n\nglow_rec_int = recipe(fracture ~ ., data = glow_train) %&gt;%\n  update_role(age_c, new_role = \"dont_use\") %&gt;%\n\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) %&gt;%\n\n  step_interact(terms = ~ all_predictors():all_predictors())\n\nglow_workflow_int = workflow() %&gt;%\n      add_model(lasso_mod) %&gt;% add_recipe(glow_rec_int)\n  \nglow_fit_int = glow_workflow_int %&gt;% fit(glow_train)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions-2",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions-2",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Identify interactions",
+    "text": "Step 2: Fit LASSO: Identify interactions\n\nI combed through the column names of the results to find the interactions\n\nI used ChatGPT to help me because I’m pretty new to tidymodels: let’s view what I asked\n\n\n\ninteractions = vi_data_int %&gt;% filter(grepl(\"_x_\", Variable))\n\ninteraction_terms = ~ (all_predictors()^2) - #Makes interactions b/w all predictors\n                      fracscore:starts_with(\"premeno\") - # Removes this interaction\n                      height:starts_with(\"premeno\") - \n                      height:starts_with(\"smoke\") - \n                      height:starts_with(\"momfrac\")"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions-1",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Identify interactions",
+    "text": "Step 2: Fit LASSO: Identify interactions\n\nI combed through the column names of the results to find the interactions\n\n\nvi_data_int$Variable\n\n [1] \"smoke_Yes\"                        \"smoke_Yes_x_raterisk_Greater\"    \n [3] \"smoke_Yes_x_raterisk_Same\"        \"premeno_Yes_x_smoke_Yes\"         \n [5] \"momfrac_Yes_x_armassist_Yes\"      \"priorfrac_Yes_x_premeno_Yes\"     \n [7] \"priorfrac_Yes\"                    \"armassist_Yes_x_smoke_Yes\"       \n [9] \"premeno_Yes_x_raterisk_Greater\"   \"momfrac_Yes_x_smoke_Yes\"         \n[11] \"priorfrac_Yes_x_momfrac_Yes\"      \"priorfrac_Yes_x_armassist_Yes\"   \n[13] \"premeno_Yes_x_armassist_Yes\"      \"momfrac_Yes_x_raterisk_Same\"     \n[15] \"priorfrac_Yes_x_raterisk_Greater\" \"armassist_Yes_x_raterisk_Greater\"\n[17] \"fracscore_x_momfrac_Yes\"          \"priorfrac_Yes_x_smoke_Yes\"       \n[19] \"premeno_Yes_x_raterisk_Same\"      \"fracscore_x_priorfrac_Yes\"       \n[21] \"fracscore_x_premeno_Yes\"          \"raterisk_Same\"                   \n[23] \"fracscore\"                        \"fracscore_x_raterisk_Greater\"    \n[25] \"armassist_Yes_x_raterisk_Same\"    \"fracscore_x_smoke_Yes\"           \n[27] \"height\"                           \"momfrac_Yes_x_raterisk_Greater\"  \n[29] \"priorfrac_Yes_x_raterisk_Same\"    \"fracscore_x_raterisk_Same\"       \n[31] \"height_x_raterisk_Greater\"        \"height_x_premeno_Yes\"            \n[33] \"height_x_fracscore\"               \"height_x_armassist_Yes\""
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-create-recipe-and-fit-model-from-lasso",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-create-recipe-and-fit-model-from-lasso",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Create recipe and fit model (from LASSO)",
+    "text": "Step 2: Fit LASSO: Create recipe and fit model (from LASSO)\n\nThis is not the typical procedure for LASSO, but the tidymodels framework for interactions did not let me keep all main effects when looking at my interactions\n\n\nglow_rec_int2 = recipe(fracture ~ ., data = glow_train) %&gt;%\n  update_role(age_c, new_role = \"dont_use\") %&gt;%\n\n  step_dummy(priorfrac, premeno, momfrac, armassist, smoke, raterisk) %&gt;%\n\n  step_interact(terms = interaction_terms)\n  \nlog_model = logistic_reg()\n\nglow_workflow_int2 = workflow() %&gt;%\n      add_model(log_model) %&gt;% add_recipe(glow_rec_int2)\n  \nglow_fit_int2 = glow_workflow_int2 %&gt;% fit(glow_train)"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-look-at-model-fit",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-look-at-model-fit",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 2: Fit LASSO: Look at model fit",
+    "text": "Step 2: Fit LASSO: Look at model fit\n\nprint(tidy(glow_fit_int2), n=60)\n\n# A tibble: 42 × 5\n   term                              estimate std.error statistic p.value\n   &lt;chr&gt;                                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)                        3.09      10.3       0.300   0.764 \n 2 height                            -0.0415     0.0637   -0.652   0.515 \n 3 fracscore                         -2.92       2.15     -1.36    0.175 \n 4 priorfrac_Yes                     15.1        8.61      1.75    0.0793\n 5 premeno_Yes                       -0.805      1.14     -0.709   0.478 \n 6 momfrac_Yes                       -1.71       1.74     -0.984   0.325 \n 7 armassist_Yes                     18.5       10.7       1.73    0.0838\n 8 smoke_Yes                        -22.8      838.       -0.0272  0.978 \n 9 raterisk_Same                     16.0       10.1       1.59    0.112 \n10 raterisk_Greater                   1.13       9.16      0.123   0.902 \n11 height_x_fracscore                 0.0215     0.0136    1.58    0.113 \n12 height_x_priorfrac_Yes            -0.0825     0.0531   -1.55    0.120 \n13 height_x_armassist_Yes            -0.114      0.0645   -1.77    0.0762\n14 height_x_raterisk_Same            -0.0940     0.0623   -1.51    0.131 \n15 height_x_raterisk_Greater          0.00238    0.0563    0.0423  0.966 \n16 fracscore_x_priorfrac_Yes         -0.373      0.177    -2.10    0.0353\n17 fracscore_x_momfrac_Yes            0.608      0.313     1.94    0.0520\n18 fracscore_x_armassist_Yes         -0.111      0.178    -0.626   0.531 \n19 fracscore_x_smoke_Yes              0.604      0.564     1.07    0.284 \n20 fracscore_x_raterisk_Same         -0.257      0.209    -1.23    0.217 \n21 fracscore_x_raterisk_Greater      -0.318      0.212    -1.50    0.133 \n22 priorfrac_Yes_x_premeno_Yes       -2.72       1.06     -2.56    0.0104\n23 priorfrac_Yes_x_momfrac_Yes       -1.35       1.35     -1.00    0.317 \n24 priorfrac_Yes_x_armassist_Yes      1.45       0.820     1.76    0.0779\n25 priorfrac_Yes_x_smoke_Yes         -0.329      1.68     -0.196   0.845 \n26 priorfrac_Yes_x_raterisk_Same      0.122      0.837     0.146   0.884 \n27 priorfrac_Yes_x_raterisk_Greater   0.838      0.916     0.915   0.360 \n28 premeno_Yes_x_momfrac_Yes          0.304      1.58      0.192   0.848 \n29 premeno_Yes_x_armassist_Yes        1.73       0.923     1.87    0.0615\n30 premeno_Yes_x_smoke_Yes           -3.98       1.84     -2.17    0.0300\n31 premeno_Yes_x_raterisk_Same        0.716      1.16      0.620   0.535 \n32 premeno_Yes_x_raterisk_Greater     1.71       1.19      1.44    0.150 \n33 momfrac_Yes_x_armassist_Yes       -3.60       1.43     -2.52    0.0118\n34 momfrac_Yes_x_smoke_Yes            2.73       2.67      1.02    0.307 \n35 momfrac_Yes_x_raterisk_Same        1.87       1.33      1.41    0.160 \n36 momfrac_Yes_x_raterisk_Greater     0.730      1.33      0.548   0.583 \n37 armassist_Yes_x_smoke_Yes          1.58       1.67      0.948   0.343 \n38 armassist_Yes_x_raterisk_Same      0.690      0.893     0.774   0.439 \n39 armassist_Yes_x_raterisk_Greater  -0.247      0.975    -0.253   0.800 \n40 smoke_Yes_x_raterisk_Same         19.5      838.        0.0232  0.981 \n41 smoke_Yes_x_raterisk_Greater      20.0      838.        0.0239  0.981 \n42 raterisk_Same_x_raterisk_Greater  NA         NA        NA      NA"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#step-3-prediction-on-testing-set-1",
+    "href": "lectures/15_Model_building/15_Model_Building.html#step-3-prediction-on-testing-set-1",
+    "title": "Lesson 15: Model Building",
+    "section": "Step 3: Prediction on testing set",
+    "text": "Step 3: Prediction on testing set\n\nglow_test_pred = predict(glow_fit_int2, new_data = glow_test, type = \"prob\") %&gt;%\n    bind_cols(glow_test)\n\n\n\n\nglow_test_pred %&gt;% \n  roc_auc(truth = fracture, \n                  .pred_No)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.644\n\n\n \n\nWhy is this AUC worse than the one we saw with prior fracture, age, and their interaction?\n\nOnly 1 training and testing set: can overfit training and perform poorly on testing\nWe did not tune our penalty\nOur testing set only has 100 observations!\n\n\n\n\nglow_test_pred %&gt;% \n  roc_curve(truth = fracture, .pred_No) %&gt;%\n  autoplot()"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#solutions",
+    "href": "lectures/15_Model_building/15_Model_Building.html#solutions",
+    "title": "Lesson 15: Model Building",
+    "section": "Solutions",
+    "text": "Solutions\n\nUse a tuning parameter for our penalty\n\nBasically, we need to figure out what the best penalty is for our model\nWe use the training set to determine the best penality\nVideos that include info on coding tuning parameter\n\nTidyTuesday video on LASSO with interactions\n[]\n\n\nCross-validation\n\nUnder Cross validation within Data Science in a Box\nWill discuss more on next slide\n\nFor complete video of machine learning with LASSO, cross-validation, and tuning parameters\n\nSee “Unit 5 - Deck 4: Machine learning” on this page\n\nVideo goes through an example with more complicated data, but can be followed with our work!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#solutions-beyond-our-class-right-now",
+    "href": "lectures/15_Model_building/15_Model_Building.html#solutions-beyond-our-class-right-now",
+    "title": "Lesson 15: Model Building",
+    "section": "Solutions (beyond our class right now)",
+    "text": "Solutions (beyond our class right now)\n\nUse a tuning parameter for our penalty\n\nBasically, we need to figure out what the best penalty is for our model\nWe use the training set to determine the best penality\nVideos that include info on coding tuning parameter\n\nTidyTuesday video on LASSO with interactions\n[]\n\n\nCross-validation\n\nUnder Cross validation within Data Science in a Box\nWill discuss more on next slide\n\nFor complete video of machine learning with LASSO, cross-validation, and tuning parameters\n\nSee “Unit 5 - Deck 4: Machine learning” on this page\n\nVideo goes through an example with more complicated data, but can be followed with our work!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#cross-validation-specifically-k-fold",
+    "href": "lectures/15_Model_building/15_Model_Building.html#cross-validation-specifically-k-fold",
+    "title": "Lesson 15: Model Building",
+    "section": "Cross-validation (specifically k-fold)",
+    "text": "Cross-validation (specifically k-fold)\n\nPrevents overfitting to one set of training data\nSplit data into folds that train and validate model selection\nBasically subsection of training and testing (called validating) before truly testing on our original testing set"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#solutions-resources-beyond-our-class-right-now",
+    "href": "lectures/15_Model_building/15_Model_Building.html#solutions-resources-beyond-our-class-right-now",
+    "title": "Lesson 15: Model Building",
+    "section": "Solutions / Resources (beyond our class right now)",
+    "text": "Solutions / Resources (beyond our class right now)\n\nUse a tuning parameter for our penalty\n\nBasically, we need to figure out what the best penalty is for our model\nWe use the training set to determine the best penality\nVideos that includes tuning parameter with LASSO\n\nTidyTuesday video on LASSO with interactions\n\n\nCross-validation\n\nUnder Cross validation within Data Science in a Box\n\nFor complete video of machine learning with LASSO, cross-validation, and tuning parameters\n\nSee “Unit 5 - Deck 4: Machine learning” on this Data Science in a Box page\n\nVideo goes through an example with more complicated data, but can be followed with our work!"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#for-your-lab-4",
+    "href": "lectures/15_Model_building/15_Model_Building.html#for-your-lab-4",
+    "title": "Lesson 15: Model Building",
+    "section": "For your Lab 4",
+    "text": "For your Lab 4\n\nYou can use purposeful selection, like we did last quarter\n\nIf you want to focus on association modeling!\nA good way to practice this again if you struggled with it previously\n\n\n \n\nYou can try out LASSO regression\n\nIf you want to focus on prediction modeling!\nAnd if you want to stretch your R coding skills\n\n\n\n\nLesson 15: Model Building"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#same-as-results-from-previous-lessons",
+    "href": "lectures/15_Model_building/15_Model_Building.html#same-as-results-from-previous-lessons",
+    "title": "Lesson 15: Model Building",
+    "section": "Same as results from previous lessons",
+    "text": "Same as results from previous lessons\n\nglow_m3 = glm(fracture ~ priorfrac + age_c + priorfrac*age_c, \n              data = glow1, family = binomial)\n\n\ntidy(glow_m3, conf.int = T) %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n−1.376\n0.134\n−10.270\n0.000\n−1.646\n−1.120\n    priorfracYes\n1.002\n0.240\n4.184\n0.000\n0.530\n1.471\n    age_c\n0.063\n0.015\n4.043\n0.000\n0.032\n0.093\n    priorfracYes:age_c\n−0.057\n0.025\n−2.294\n0.022\n−0.107\n−0.008\n  \n  \n  \n\n\n\n\nInteraction model:  \\[\\begin{aligned} \\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = \\widehat\\beta_0 &+ &\\widehat\\beta_1\\cdot I(\\text{PF}) & + &\\widehat\\beta_2\\cdot Age& + &\\widehat\\beta_3 \\cdot I(\\text{PF}) \\cdot Age \\\\  \n\\text{logit}\\left(\\widehat\\pi(\\mathbf{X})\\right) & = -1.376 &+ &1.002\\cdot I(\\text{PF})& + &0.063\\cdot Age& -&0.057 \\cdot I(\\text{PF}) \\cdot Age\n\\end{aligned}\\]\n\nReminder of main effects and interactions"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-2",
+    "href": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-2",
+    "title": "Lesson 15: Model Building",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-3",
+    "href": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-3",
+    "title": "Lesson 15: Model Building",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-4",
+    "href": "lectures/15_Model_building/15_Model_Building.html#poll-everywhere-question-4",
+    "title": "Lesson 15: Model Building",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lectures/15_Model_building/15_Model_Building.html#summary",
+    "href": "lectures/15_Model_building/15_Model_Building.html#summary",
+    "title": "Lesson 15: Model Building",
+    "section": "Summary",
+    "text": "Summary\n\nRevisited model selection techniques and discussed how a binary outcome can be treated differently than a continuous outcome\nDiscussed association vs prediction modeling\nDiscussed classification: a type of machine learning!\nIntroduced penalized regression as a classification method\nPerformed penalized regression (specifically LASSO) to select a prediction model\nProcess presented today has major flaws\n\nWe did not tune our parameter\nWe did not perform cross validation"
   }
 ]
