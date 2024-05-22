@@ -87,7 +87,7 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
 [[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUNzhJTkoyOEtZNEExQjQ1U1hIVTM4UTJKMy4u)]{style="color:#f8f5f0;"} Monday (5/20)
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/22)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURTNFQ1haMjNWN1FSMVFHSjdaNFNIV0w4RC4u)]{style="color:#f8f5f0;"} Wednesday (5/22)
 
 ## Muddiest Points / Questions
 
