@@ -93,6 +93,24 @@ On Wednesday, 5/22, we will be in RPV Room A (1217)
 
 The centered ages are centered around the mean age. A few classes ago I mentioned that the mean was 69 years old, might have gotten lost in this lesson. So calculating the actual ages is just adding the mean age and centered age. So centered age of 6 is 69+6 = 75. Also, very confusing because apparently I can't add!
 
+### 2. From comment on shrinkage vs. regularization vs. penalized methods
+
+All these terms are used intercahngeably!
+
+Penalized regression means that penalty is added to our likelihood function! This may feel like a more generic form of shrinkage or regularization. However, within statistics, I do not see penalized regression used for anything other than minimizing the coefficient values towards zero. I often see it defined as: form of regression that uses a penalty to shrink coefficients towards zero.
+
+Definitions of regularized regression mirror the above for penalized regression.
+
+Shrinkage is more the action of reducing coefficient values towards zero. Many people will refer to regularization and penalized regression as shrinkage methods.
+
+-   LASSO, ridge, and Elastic net are all types of penalized/regularization/shrinkage methods
+
+### 3. Sign column within `vi()` output
+
+The sign column is in fact the sign of the coefficient within the model.
+
+So within our interaction model, the sign for smoking status is negative. Since smoking status had many interactions, we cannot make claims about the association between smoking and fracture without considering all other variables that it interacts with. ALSO, remember that our goal here is prediction, NOT association.
+
 ```{r}
 #| echo: false
 

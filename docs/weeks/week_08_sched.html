@@ -241,6 +241,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#muddiest-points-questions" id="toc-muddiest-points-questions" class="nav-link" data-scroll-target="#muddiest-points-questions">Muddiest Points / Questions</a>
   <ul class="collapse">
   <li><a href="#how-did-you-determine-the-ages-for-the-r-output-on-slide-24-standardized-deviance-residuals" id="toc-how-did-you-determine-the-ages-for-the-r-output-on-slide-24-standardized-deviance-residuals" class="nav-link" data-scroll-target="#how-did-you-determine-the-ages-for-the-r-output-on-slide-24-standardized-deviance-residuals">1. How did you determine the ages for the R output on slide 24 (standardized deviance residuals)</a></li>
+  <li><a href="#from-comment-on-shrinkage-vs.-regularization-vs.-penalized-methods" id="toc-from-comment-on-shrinkage-vs.-regularization-vs.-penalized-methods" class="nav-link" data-scroll-target="#from-comment-on-shrinkage-vs.-regularization-vs.-penalized-methods">2. From comment on shrinkage vs.&nbsp;regularization vs.&nbsp;penalized methods</a></li>
+  <li><a href="#sign-column-within-vi-output" id="toc-sign-column-within-vi-output" class="nav-link" data-scroll-target="#sign-column-within-vi-output">3. Sign column within <code>vi()</code> output</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   </ul>
@@ -399,6 +401,21 @@ Room Locations for the week
 <section id="how-did-you-determine-the-ages-for-the-r-output-on-slide-24-standardized-deviance-residuals" class="level3">
 <h3 class="anchored" data-anchor-id="how-did-you-determine-the-ages-for-the-r-output-on-slide-24-standardized-deviance-residuals">1. How did you determine the ages for the R output on slide 24 (standardized deviance residuals)</h3>
 <p>The centered ages are centered around the mean age. A few classes ago I mentioned that the mean was 69 years old, might have gotten lost in this lesson. So calculating the actual ages is just adding the mean age and centered age. So centered age of 6 is 69+6 = 75. Also, very confusing because apparently I can’t add!</p>
+</section>
+<section id="from-comment-on-shrinkage-vs.-regularization-vs.-penalized-methods" class="level3">
+<h3 class="anchored" data-anchor-id="from-comment-on-shrinkage-vs.-regularization-vs.-penalized-methods">2. From comment on shrinkage vs.&nbsp;regularization vs.&nbsp;penalized methods</h3>
+<p>All these terms are used intercahngeably!</p>
+<p>Penalized regression means that penalty is added to our likelihood function! This may feel like a more generic form of shrinkage or regularization. However, within statistics, I do not see penalized regression used for anything other than minimizing the coefficient values towards zero. I often see it defined as: form of regression that uses a penalty to shrink coefficients towards zero.</p>
+<p>Definitions of regularized regression mirror the above for penalized regression.</p>
+<p>Shrinkage is more the action of reducing coefficient values towards zero. Many people will refer to regularization and penalized regression as shrinkage methods.</p>
+<ul>
+<li>LASSO, ridge, and Elastic net are all types of penalized/regularization/shrinkage methods</li>
+</ul>
+</section>
+<section id="sign-column-within-vi-output" class="level3">
+<h3 class="anchored" data-anchor-id="sign-column-within-vi-output">3. Sign column within <code>vi()</code> output</h3>
+<p>The sign column is in fact the sign of the coefficient within the model.</p>
+<p>So within our interaction model, the sign for smoking status is negative. Since smoking status had many interactions, we cannot make claims about the association between smoking and fracture without considering all other variables that it interacts with. ALSO, remember that our goal here is prediction, NOT association.</p>
 </section>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section"></h3>
