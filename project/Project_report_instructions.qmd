@@ -26,7 +26,7 @@ execute:
 ::: callout-important
 ## Project template
 
-You *may* use [this project template](https://github.com/nwakim/W2024_BSTA_512/blob/main/labs/Project_template.qmd) to get started on the report. It is your responsibility to meet the formatting guidelines below!!
+You *may* use [this project template](https://github.com/nwakim/S2024_BSTA_513/blob/main/project/Project_template.qmd) to get started on the report. It is your responsibility to meet the formatting guidelines below!!
 
 DO NOT USE SITE PAGE ("Project Report Instructions", current page) as your template!!
 :::
@@ -84,11 +84,13 @@ Also note that these were converted to PDFs so I could write in feedback. Some o
 
 The above reports have code showing in their `html`. Remember that I am asking you to **hide** all code, warnings, and messages.
 
+::: {.panel-tabset}
+
 ### Grading
 
 The project report is out of 36 points. Note that the Statistical Methods and Results sections are graded on an 8-point scale, while all other components are graded on a 4-point scale.
 
-#### Rubric
+### Rubric
 
 |                           | 4 points                                                                                                                                                                                                                                   | 3 points                                                                                                                                                                                                                                                                                       | 2 points                                                                                                                                                                                                                                                                                                          | 1 point                                                                                                                                                                                                                                                                                  | 0 points                                                                                                                                                              |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +101,8 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 | Results (8 points)        | Correctly interprets coefficients for the explanatory variable and identifies any other interesting trends. Highlights pertinent results to the reader (listed Sections below).                                                            | Correctly interprets coefficients, but does correctly incorporate the interaction (if in the model). Highlights pertinent results to the reader (listed Sections below).                                                                                                                       | Incorrectly interprets coefficients. Highlights pertinent results to the reader (listed Sections below).                                                                                                                                                                                                          | Incorrectly interprets coefficients.Omits pertinent results to the reader (listed Sections below).                                                                                                                                                                                       | No results included.                                                                                                                                                  |
 | Discussion                | Thoroughly and concisely discusses limitations and considerations of the results, and their consequences.                                                                                                                                  | Discusses limitations and considerations of the results and their consequences, but misses some big considerations.                                                                                                                                                                            | Discusses limitations and considerations of the results, but does not discuss the consequences.                                                                                                                                                                                                                   | Discusses limitations and considerations of the results, but misses many considerations and does not discuss consequences.                                                                                                                                                               | No discussion included.                                                                                                                                               |
 | Conclusion and References | For the conclusion, main research question is answered and statistical caveats described to non-technical person. References are mostly cited consistently within the report, and in the Reference section. This includes the data source! | For the conclusion, main research question is answered and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!                                                  | For the conclusion, main research question is somewhat answered (but focus is not on the research question) and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!                | For the conclusion, main research question is somewhat answered (but not the focus at all) and statistical caveats are not described. References are not cited consistently within the report, and in the Reference section. This includes the data source!                              | For the conclusion, main research question is not answered. Or references are not included at all.                                                                    |
+
+### More clarifications
 
 -   In formatting, an example of a report with little editing needed is one that has zero to some grammar or spelling mistakes, no code chunks showing, and no output warnings nor messages showing.
 
@@ -124,6 +128,8 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 
     -   If you would like to use Quarto's citation tool, you can! I actually pair it with Zotero and it works beautifully! (But I would not embark on this if you haven't used Zotero before)
 
+:::
+
 ## Sections
 
 ### Title
@@ -136,7 +142,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 -   **Purpose:** Introduce the project motivation, data, and research question. It also includes any background information relevant for understanding the analysis and relevant previous work.
 -   This section is non-technical.
     -   By reading just the introduction, someone without a technical background should have an idea of what they study was about, and why it is important
--   You may start with the introduction written in Lab 1, but you should edit it and make sure it flows into your report well!
+-   [**You may start with the introduction written in Lab 1, but you should edit it and make sure it flows into your report well!**]{style="color:#F6C342"}
 -   Should contain some references
 -   Should include a sentence that states your research question (but NOT using a question). For example: "This study investigates the association between food insecurity and age."
 
@@ -152,24 +158,28 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
     -   General approach to the dataset
         -   3-5 sentences
         -   Did you need to do any quality control?
-        -   Missing data: complete case analysis or imputation based on Lab 3 choices
+        -   [**Missing data: complete case analysis or imputation based on Lab 3 choices**]{style="color:#F6C342"}
             -   1 sentence
             -   Can be included in the Exploratory data analysis section
-    -   Variables and variable creation
+    -   Variable transformations
         -   This includes a description of analyses for Table 1 and what statistics were used to summarize the variables
             -   More on creation of Table 1, not discussing the results of Table 1
         -   Includes (not required)
-            -   Indicators for gender identity or race
-            -   Creating BMI
             -   Categorizing a continuous variable (even if performed in model selection)
+            -   Did you use family size/household size/number of children as categorical or continuous?
+            -   Did you make any transformations to income?
             -   Using scoring for an ordered categorical variable (that is not your explanatory variable)
-        -   1-2 sentences per variable
-    -   Model building: we performed purposeful selection
+        -   1 sentence per **changed** variable
+            -   Making a categorical variable a factor in our R code is NOT a change!
+    -   Model building: we performed purposeful selection OR LASSO regression
         -   3 sentences max
-        -   Includes
+        -   [**This is where we incorporate our work from Lab 4**]{style="color:#F6C342"}
+        -   For purposeful selection, includes: 
             -   Describe purposeful selection: combining existing literature, clinical significance, and analysis
             -   How did you build the model? Describe the process in ONE SENTENCE
             -   Did you consider confounders and effect modifiers?
+        -   For LASSO:
+            -   Mention that you used LASSO regression with important facts like the penalty used, percent testing set, included interactions in the selection process
     -   Model diagnostics
         -   2-5 sentences
         -   Includes
