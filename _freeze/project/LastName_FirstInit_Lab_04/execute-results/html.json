@@ -1,0 +1,14 @@
+{
+  "hash": "a66a4983ac5866e96789af11c36f71d1",
+  "result": {
+    "markdown": "---\ntitle: \"Lab 4\"\nauthor: \"Your name here!!!\"\nsubtitle: \"BSTA 513/613\"\ndescription: \"Due: May 30, 2024 at 11pm\"\ndate-modified: \"today\"\ncategories: [\"\"]\nformat: \n  html:\n    link-external-newwindow: true\n    toc: true\n    self-contained: true\n    embed-resources: true\n    number-sections: true\n    number-depth: 4\neditor_options: \n  chunk_output_type: console\nexecute:\n  freeze: auto  # re-render only when source changes\n---\n\n\n::: callout-note\nThis is the required work for Lab 3. I am working on guided instructions on incorporating the *optional* missing data section of the Lab.\n:::\n\n\n::: {.cell}\n\n:::\n\n\n## Directions\n\nThis is your **editing** file. **Please do not remove anything from this editing file!!** You will only add your code and work to this file.\n\n### Purpose\n\nThe purpose of this lab is to fit a multiple logistic regression model and practice how we would interpret our results for this study.\n\n### Grading\n\n**This lab is graded out of 12 points.** The TAs will go through and grade your lab. They will make sure each section is complete and will follow the rubric below. I have instructed them that completion and clear effort is all that is needed to receive 100%. Nicky will go through the labs to give you feedback.\n\n\n## Lab activities\n\n::: callout-note\nI have left it up to you to load the needed packages for this lab.\n:::\n\n### Restate research question\n\nIn this study, we will investigate the association between food insecurity and ________. \n\n### Build your model\n\n\n### Assess your model fit\n\n\n### Perform model diagnostics\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
