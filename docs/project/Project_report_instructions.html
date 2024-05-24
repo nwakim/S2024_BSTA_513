@@ -4624,6 +4624,7 @@ vertical-align: -.125em;
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">2.5</span> Discussion</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">2.6</span> Reflection</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.7</span> References</a></li>
+  <li><a href="#optional-appendix" id="toc-optional-appendix" class="nav-link" data-scroll-target="#optional-appendix"><span class="header-section-number">2.8</span> Optional: Appendix</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Project_report_instructions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -4684,7 +4685,8 @@ Project template
 </div>
 <section id="purpose" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">1.1</span> Purpose</h3>
-<p>Project reports serve as a great way to communicate the knowledge learned in a statistics class and connect it to context within research. It is important that we can take a step back from the numbers and analysis to see what questions linear regression can help us answer.</p>
+<p>Project reports serve as a great way to communicate the knowledge learned in our class and connect it to context within research. It is important that we can take a step back from the numbers and analysis to see what questions linear regression can help us answer.</p>
+<p><strong>It is really important for you to look back through your labs and connect the work!!</strong></p>
 </section>
 <section id="formatting-guide" class="level3" data-number="1.2">
 <h3 data-number="1.2" class="anchored" data-anchor-id="formatting-guide"><span class="header-section-number">1.2</span> Formatting guide</h3>
@@ -4712,12 +4714,15 @@ Project template
 <li>Some spelling and grammar mistakes are allowed
 <ul>
 <li>I will not take off points if there are a few sprinkled in</li>
-<li>If <em>every or close to every</em> sentence has mistakes, then I will take off</li>
+<li>If <em>every or close to every sentence</em> has mistakes, then I will take off</li>
 </ul></li>
 </ul></li>
 <li>Sectioning of the report
 <ul>
-<li>Main sections that were required: Introduction, Statistical Methods, Results, Discussion, Conclusion, and References</li>
+<li>Main sections that are required: Introduction, Statistical Methods, Results, Discussion, Conclusion, <strong>Reflection</strong>, and References
+<ul>
+<li>You may have an appendix to include additional figures!</li>
+</ul></li>
 <li>Other sections that might help group specific methods or results</li>
 </ul></li>
 <li>Title information at the top of the <code>html</code>
@@ -4766,12 +4771,12 @@ The project report is a separate file from the labs
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <table class="table">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 18%">
-<col style="width: 22%">
-<col style="width: 23%">
-<col style="width: 21%">
-<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -4839,6 +4844,14 @@ The project report is a separate file from the labs
 <td>For the conclusion, main research question is somewhat answered (but focus is not on the research question) and statistical caveats described to non-technical person. References are sometimes cited consistently within the report, and in the Reference section. This includes the data source!</td>
 <td>For the conclusion, main research question is somewhat answered (but not the focus at all) and statistical caveats are not described. References are not cited consistently within the report, and in the Reference section. This includes the data source!</td>
 <td>For the conclusion, main research question is not answered. Or references are not included at all.</td>
+</tr>
+<tr class="even">
+<td>Reflection</td>
+<td>Discusses all the labs. Reflection demonstrates an understanding of each lab’s purpose and overarching connection from the labs to overall project.</td>
+<td>Discusses 3 out of 4 labs.</td>
+<td>Discusses 2 out of 4 labs.</td>
+<td>Discusses 1 out of 4 labs.</td>
+<td>No reflection included</td>
 </tr>
 </tbody>
 </table>
@@ -4941,7 +4954,7 @@ The project report is a separate file from the labs
 <li>Model building: we performed purposeful selection OR LASSO regression
 <ul>
 <li>3 sentences max</li>
-<li><span style="color:#F6C342"><strong>This is where we incorporate our work from Lab 4</strong></span></li>
+<li><span style="color:#F6C342"><strong>This is where we discuss our process from Lab 4</strong></span></li>
 <li>For purposeful selection, includes:
 <ul>
 <li>Describe purposeful selection: combining existing literature, clinical significance, and analysis</li>
@@ -4953,14 +4966,18 @@ The project report is a separate file from the labs
 <li>Mention that you used LASSO regression with important facts like the penalty used, percent testing set, included interactions in the selection process</li>
 </ul></li>
 </ul></li>
-<li>Model diagnostics
+<li>Model diagnostics and model fit
 <ul>
 <li>2-5 sentences</li>
+<li><span style="color:#F6C342"><strong>This is where we discuss our process from Lab 4</strong></span></li>
 <li>Includes
 <ul>
-<li>Process of investigating model diagnostics</li>
-<li>By the time you build the model, LINE assumptions should be met</li>
+<li>Process of investigating model diagnostics and fit</li>
 <li>If assumptions were not met, what process did you use to fix it?</li>
+<li>Again, we will NOT discuss the results of the model diagnostics
+<ul>
+<li>For example: “We investigate the change in Pearson residual for every observation. For observations with large changes (exceeding change of 4), we check the feasibility of their measurements.</li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -4969,10 +4986,10 @@ The project report is a separate file from the labs
 <section id="results" class="level3" data-number="2.4">
 <h3 data-number="2.4" class="anchored" data-anchor-id="results"><span class="header-section-number">2.4</span> Results</h3>
 <ul>
-<li><strong>Length: ~3 paragraphs</strong></li>
+<li><strong>Length: ~2-3 paragraphs</strong></li>
 <li><strong>Purpose:</strong> Relay the results from our sample’s analysis typically focusing on the numbers and interpretations
 <ul>
-<li>The goal is not to interpret every single variable in the model but rather to show that you are proficient in using the model output to address the research questions, using the interpretations to support your conclusions.</li>
+<li>The goal is <strong>not to interpret every single variable</strong> in the model but rather to show that you are proficient in using the model output to address the research question, using the interpretations to support your conclusions.</li>
 <li>Focus on the variables that help you answer the research question and that provide relevant context for the reader.</li>
 </ul></li>
 <li>Some important results to discuss (also could be sections)
@@ -5003,7 +5020,7 @@ The project report is a separate file from the labs
 <li>When doing this, make sure you account for ALL interactions: If your explanatory variable has multiple interactions and you are trying to interpret one, then what does that mean about the other variables involved in the other interactions? If this is confusing, please make an appointment with me!!</li>
 </ul></li>
 </ul></li>
-<li>Results of model diagnostics if there is anything worth noting</li>
+<li>Results of model diagnostics and model fit if there is anything worth noting</li>
 </ul></li>
 <li>Tables &amp; figures
 <ul>
@@ -5060,6 +5077,12 @@ The project report is a separate file from the labs
 <li>Include your references here!</li>
 <li>You introduction should have references, especially when discussing the social science behind the analysis</li>
 <li>You must reference the IAT data source!!</li>
+</ul>
+</section>
+<section id="optional-appendix" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="optional-appendix"><span class="header-section-number">2.8</span> Optional: Appendix</h3>
+<ul>
+<li>Additional figures, tables, and plots that you may want to include</li>
 </ul>
 
 

@@ -27,4 +27,6 @@ editor_options:
 
 ## Conclusion
 
+## Reflection
+
 ## References
