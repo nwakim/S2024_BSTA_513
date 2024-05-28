@@ -11,14 +11,14 @@
     "href": "homeworks.html",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items\n\n\n\nHomework 4 Part e help"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n5 min\n\n\n\n\n\n\nNo matching items\n\n\n\nHomework 4 Part e help"
   },
   {
     "objectID": "homeworks.html#assignments",
     "href": "homeworks.html#assignments",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n2 min\n\n\n\n\n\n\nNo matching items\n\n\n\nHomework 4 Part e help"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n4/11/24\n\n\nHomework 1\n\n\n6 min\n\n\n\n\n4/25/24\n\n\nHomework 2\n\n\n7 min\n\n\n\n\n5/9/24\n\n\nHomework 3\n\n\n5 min\n\n\n\n\n5/23/24\n\n\nHomework 4\n\n\n6 min\n\n\n\n\n6/6/24\n\n\nHomework 5\n\n\n5 min\n\n\n\n\n\n\nNo matching items\n\n\n\nHomework 4 Part e help"
   },
   {
     "objectID": "homeworks.html#solutions",
@@ -165,7 +165,7 @@
     "href": "homework/HW5.html#directions",
     "title": "Homework 5",
     "section": "Directions",
-    "text": "Directions\n\nDownload the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW5.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 512/612\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "Directions\n\nDownload the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW5.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 513/613\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW3.html",
@@ -1705,7 +1705,7 @@
     "href": "weeks/week_09_sched.html#announcements",
     "title": "Week 9",
     "section": "Announcements",
-    "text": "Announcements\n\nWednesday 5/29\n#1 “The Final Stretch: How to Find Motivation & Prioritize Tasks”\nWednesday, May 29th 6-7pm via Zoom\nIs your to-do list starting to feel overwhelming as we approach the end of spring term? Are you having a difficult time finding motivation or knowing which task to do first?  We got you!! \n \nJoin ONLINE on Wednesday, May 29th from 6PM-7PM to learn time-management tips and tricks.  \nRegister here and a Zoom link will be sent to you prior to the event:  \nhttps://forms.gle/DkYYhdFXN7XtQ3YF8 \n \n Learn skills to: \n· Help you get started \n· Identify, reflect, and reframe hard tasks \n· Prioritize your long list of to-dos\n· Maintain workflow    \nQuestions? Please connect with Noni Villalobos at villabri@ohsu.edu\n \n#2 “Refuel for Finals”\nStudent Success Center, 6th floor Vanport\nJune 3rd-4th & 6th-7th  9am-5pm\nDuring the week of June 3rd, we invite you to drop by the Student Success Center on the 6th floor of the Vanport building (1810 SW 5th Ave) to refuel between 9am-5pm on Monday, Tuesday, Thursday, and Friday (unavailable Wednesday). Students can make their own PB&J sandwiches to enjoy in community or for later, along with various snacks, coffee, tea, and hot cocoa. Nut-free, vegan, and gluten-free snacks will be included. Grab and go snacks will be available for those unable to stick around. No registration required! Please contact sphsuccess@ohsu.edu with any questions or accommodation needs.\n \n#3 “The Last Bounce: Bunnies, Burritos, and DIY Bath Salts”\nWednesday, June 5th Noon-2pm\nStudent Success Center, 6th floor Vanport\nPlease join the SPH Student Success Center for an end of academic year celebration on Wednesday, June 5th from Noon-2pm on the 6th floor in Vanport. Come take a break from your busy schedule and never ending to-do list and hold a bunny, enjoy some lunch, or make your own scented bath salts for a relaxing soak later on. This will be a great opportunity to connect with other SPH students, faculty, and staff while celebrating all of your hard work and accomplishments!\nAdditionally, staff from the PSU Center for Student Health and Counseling (SHAC) will be in attendance and sharing information on stress relieving strategies, SHAC services and resources, and future student employment opportunities with SHAC’s Health Promotion teams.\nIn an effort to ensure we have enough food, beverages, and bunny time for all attendees, please take a moment to let us know you will be attending and if you have any food restrictions or accommodation needs. Thank you!\nPlease RSVP here: https://forms.gle/y1ZfghNq8PuKusu99\nQuestions? Please contact sphsuccess@ohsu.edu"
+    "text": "Announcements\n\nWednesday 5/29\n\nSome student events coming up\n\n#1 “The Final Stretch: How to Find Motivation & Prioritize Tasks”\n\nJoin ONLINE on Wednesday, May 29th from 6PM-7PM to learn time-management tips and tricks.  \nRegister here and a Zoom link will be sent to you prior to the event: https://forms.gle/DkYYhdFXN7XtQ3YF8 \n\n#2 “Refuel for Finals”\n\nStudent Success Center, 6th floor Vanport\nJune 3rd-4th & 6th-7th  9am-5pm\n\n#3 “The Last Bounce: Bunnies, Burritos, and DIY Bath Salts”\n\nWednesday, June 5th Noon-2pm\nStudent Success Center, 6th floor Vanport\n\n\nReview of Quiz 2"
   },
   {
     "objectID": "weeks/week_09_sched.html#class-exit-tickets",
@@ -8172,22 +8172,22 @@
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "This distribution is often used to model count data\nExamples:\n\nDistribution of number of deaths due to lung cancer\nDistribution of number of individuals diagnosed with leukemia\nDistribution of number of hospitalizations"
+    "section": "Poisson Distribution",
+    "text": "Poisson Distribution\n\nThis distribution is often used to model count data\nExamples:\n\nDistribution of number of deaths due to lung cancer\nDistribution of number of individuals diagnosed with leukemia\nDistribution of number of hospitalizations"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-ii",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-ii",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "The probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)"
+    "section": "Poisson Distribution (II)",
+    "text": "Poisson Distribution (II)\n\nThe probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-iii",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-iii",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "If we look at the probability of \\(y\\) events in a time period \\(t\\) for a Poisson random variable, we could write: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu = \\lambda t\\), where \\(\\lambda\\) is the expected number of events per unit time\nThen \\(\\mu\\) is the expected number of events over time \\(t\\)"
+    "section": "Poisson Distribution (III)",
+    "text": "Poisson Distribution (III)\n\nIf we look at the probability of \\(y\\) events in a time period \\(t\\) for a Poisson random variable, we could write: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu = \\lambda t\\), where \\(\\lambda\\) is the expected number of events per unit time\nThen \\(\\mu\\) is the expected number of events over time \\(t\\)"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-iv",
@@ -8207,50 +8207,50 @@
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-i",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-i",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "In the example of number of patient arrivals, an event does not conclude the study\n\nIf someone arrives within the first minute of the study, then we keep counting\nWe may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving\n\nWhat happens if we want to measure qualities of the individual?\n\nWe can measure a hospitalization rate"
+    "section": "Why Person-Years? (I)",
+    "text": "Why Person-Years? (I)\n\nIn the example of number of patient arrivals, an event does not conclude the study\n\nIf someone arrives within the first minute of the study, then we keep counting\nWe may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving\n\nWhat happens if we want to measure qualities of the individual?\n\nWe can measure a hospitalization rate"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-ii",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-ii",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "If we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1\n\nExample: Number of individuals diagnosed with leukemia\nThis only happens once, so how do we measure the rate here?\n\nSince rate involves the counts and time – we can use the time to diagnosis to estimate the rate\n\nOften expressed in units such as events per thousand person-years"
+    "section": "Why Person-Years? (II)",
+    "text": "Why Person-Years? (II)\n\nIf we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1\n\nExample: Number of individuals diagnosed with leukemia\nThis only happens once, so how do we measure the rate here?\n\nSince rate involves the counts and time – we can use the time to diagnosis to estimate the rate\n\nOften expressed in units such as events per thousand person-years"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#calculating-person-year",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#calculating-person-year",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "One person-year is a unit of time defined as one person being followed for one year\nPerson-years for a sample of n subjects is calculated as the total years followed for the n subjects, where each subject could have different follow-up time\nExample: suppose we have 5 subjects, two of the subjects were followed for 2 years, and two of them are followed for 3 years and the fifth subject was followed for 3.8 years\n\n\\[\\text{person-years} = 2 \\text{ people} \\cdot 2 \\text{ years} +2 \\text{ people} \\cdot 3 \\text{ years}+ 1 \\text{ person} \\cdot 3.8 \\text{ years} = 13.8 \\text{ person-years}\\]"
+    "section": "Calculating Person-Year",
+    "text": "Calculating Person-Year\n\nOne person-year is a unit of time defined as one person being followed for one year\nPerson-years for a sample of n subjects is calculated as the total years followed for the n subjects, where each subject could have different follow-up time\nExample: suppose we have 5 subjects, two of the subjects were followed for 2 years, and two of them are followed for 3 years and the fifth subject was followed for 3.8 years\n\n\\[\\text{person-years} = 2 \\text{ people} \\cdot 2 \\text{ years} +2 \\text{ people} \\cdot 3 \\text{ years}+ 1 \\text{ person} \\cdot 3.8 \\text{ years} = 13.8 \\text{ person-years}\\]"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#calculating-rate-ii",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#calculating-rate-ii",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "Suppose that we observe one event during the follow-up period, then\n\n\\[\\begin{aligned}\n\\text{Rate of event} &= \\dfrac{\\# events}{\\text{person-years}}= \\dfrac{1 \\text{ event}}{13.8 \\text{person-years}} \\\\ &= 0.072 \\text{ events per person−year} \\\\ &=72 \\text{ events per } 1000 \\text{ person−years} \\end{aligned}\\]"
+    "section": "Calculating Rate (II)",
+    "text": "Calculating Rate (II)\n\nSuppose that we observe one event during the follow-up period, then\n\n\\[\\begin{aligned}\n\\text{Rate of event} &= \\dfrac{\\# events}{\\text{person-years}}= \\dfrac{1 \\text{ event}}{13.8 \\text{person-years}} \\\\ &= 0.072 \\text{ events per person−year} \\\\ &=72 \\text{ events per } 1000 \\text{ person−years} \\end{aligned}\\]"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#review-simple-logistic-regression",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#review-simple-logistic-regression",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "Let Y is the dependent variable of interest and x is a predictor variable,\n\nIn simple logistic regression, we have \\[\\log\\left(\\frac{\\pi(X)}{1 - \\pi(X)}\\right) = \\beta_0 + \\beta_1 X\\]\nwhere \\(\\pi (X) =P(Y = 1 \\mid X = x)\\)"
+    "section": "Review: Simple Logistic Regression",
+    "text": "Review: Simple Logistic Regression\n\nLet Y is the dependent variable of interest and x is a predictor variable,\n\nIn simple logistic regression, we have \\[\\log\\left(\\frac{\\pi(X)}{1 - \\pi(X)}\\right) = \\beta_0 + \\beta_1 X\\]\nwhere \\(\\pi (X) =P(Y = 1 \\mid X = x)\\)"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#simple-poisson-regression-model",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#simple-poisson-regression-model",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "What do we model in a Poisson regression?\nLog of conditional mean of Y given x\n\nLet Y be a Poisson count for a given unit of time, then \\(\\mu(X) =\\lambda(X)\\)\nIn a simple Poisson regression, we have \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\n\nSo this is also called a log-linear model"
+    "section": "Simple Poisson Regression Model",
+    "text": "Simple Poisson Regression Model\n\nWhat do we model in a Poisson regression?\nLog of conditional mean of Y given x\n\nLet Y be a Poisson count for a given unit of time, then \\(\\mu(X) =\\lambda(X)\\)\nIn a simple Poisson regression, we have \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\n\nSo this is also called a log-linear model"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-i",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-i",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "In simple Poisson regression: \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nWhen \\(X=0\\)\nWhen \\(X=1\\)"
+    "section": "Parameter Interpretation (I)",
+    "text": "Parameter Interpretation (I)\n\nIn simple Poisson regression: \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nWhen \\(X=0\\)\nWhen \\(X=1\\)"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-ii",
@@ -8298,8 +8298,8 @@
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-does-lambda-represent-in-the-poisson-distribution",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-does-lambda-represent-in-the-poisson-distribution",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "What does \\(\\lambda\\) represent?\n\nA rate, the expected number of events in a given population over a given period time\n\nExample: Number of patient arrivals into the Emergency Room per hour\nThe Poisson distribution is the prototype for assigning probabilities of observing any number of events"
+    "section": "What does \\(\\lambda\\) represent in the Poisson distribution?",
+    "text": "What does \\(\\lambda\\) represent in the Poisson distribution?\n\nWhat does \\(\\lambda\\) represent?\n\nA rate, the expected number of events in a given population over a given period time\n\nExample: Number of patient arrivals into the Emergency Room per hour\nThe Poisson distribution is the prototype for assigning probabilities of observing any number of events"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#review-generalized-linear-models-glms",
@@ -8312,22 +8312,22 @@
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-random-component",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-random-component",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "The random component specifies the response variable \\(Y\\) and selects a probability distribution for it\n\n \n \n\nBasically, we are just identifying the distribution for our outcome\n\nIf Y is binary: assumes a binomial distribution of Y\nIf Y is count: assumes Poisson or negative binomial distribution of Y\nIf Y is continuous: assumea Normal distribution of Y"
+    "section": "GLM: Random Component",
+    "text": "GLM: Random Component\n\nThe random component specifies the response variable \\(Y\\) and selects a probability distribution for it\n\n \n \n\nBasically, we are just identifying the distribution for our outcome\n\nIf Y is binary: assumes a binomial distribution of Y\nIf Y is count: assumes Poisson or negative binomial distribution of Y\nIf Y is continuous: assumea Normal distribution of Y"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-systematic-component",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-systematic-component",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "The systematic component specifies the explanatory variables, which enter linearly as predictors \\[\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n \n\nAbove equation includes:\n\nCentered variables\nInteractions\nTransformations of variables (like squares)\n\n\n \n\nSystematic component is the same as what we learned in Linear Models"
+    "section": "GLM: Systematic Component",
+    "text": "GLM: Systematic Component\n\nThe systematic component specifies the explanatory variables, which enter linearly as predictors \\[\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n \n\nAbove equation includes:\n\nCentered variables\nInteractions\nTransformations of variables (like squares)\n\n\n \n\nSystematic component is the same as what we learned in Linear Models"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-link-function",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-link-function",
     "title": "Lesson 16: Poisson Regression",
-    "section": "",
-    "text": "If \\(\\mu = E(Y)\\), then the link function specifies a function \\(g(.)\\) that relates \\(\\mu\\) to the linear predictor as: \\[g\\left(\\mu\\right)=\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n\\(g\\left(\\mu\\right)\\) is the transformation we make to \\(E(Y)\\) (aka \\(\\mu\\)) so that the linear predictors (right side of equation) can be linked to the outcome\n\nThe link function connects the random component with the systematic component\nCan also think of this as: \\[\\mu=g^{-1}\\left(\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\right)\\]"
+    "section": "GLM: Link Function",
+    "text": "GLM: Link Function\n\nIf \\(\\mu = E(Y)\\), then the link function specifies a function \\(g(.)\\) that relates \\(\\mu\\) to the linear predictor as: \\[g\\left(\\mu\\right)=\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n\\(g\\left(\\mu\\right)\\) is the transformation we make to \\(E(Y)\\) (aka \\(\\mu\\)) so that the linear predictors (right side of equation) can be linked to the outcome\n\nThe link function connects the random component with the systematic component\nCan also think of this as: \\[\\mu=g^{-1}\\left(\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\right)\\]"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#glm-link-function-1",
@@ -8342,5 +8342,19 @@
     "title": "Lesson 16: Poisson Regression",
     "section": "",
     "text": "The random component specifies the response variable \\(Y\\) and selects a probability distribution for it\n\n \n \n\nBasically, we are just identifying the distribution for our outcome\n\nIf Y is binary: assumes a binomial distribution of Y\nIf Y is count: assumes Poisson or negative binomial distribution of Y\nIf Y is continuous: assumea Normal distribution of Y\n\n\n\n\n\n\nThe systematic component specifies the explanatory variables, which enter linearly as predictors \\[\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n \n\nAbove equation includes:\n\nCentered variables\nInteractions\nTransformations of variables (like squares)\n\n\n \n\nSystematic component is the same as what we learned in Linear Models\n\n\n\n\n\nIf \\(\\mu = E(Y)\\), then the link function specifies a function \\(g(.)\\) that relates \\(\\mu\\) to the linear predictor as: \\[g\\left(\\mu\\right)=\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\]\n\n\\(g\\left(\\mu\\right)\\) is the transformation we make to \\(E(Y)\\) (aka \\(\\mu\\)) so that the linear predictors (right side of equation) can be linked to the outcome\n\nThe link function connects the random component with the systematic component\nCan also think of this as: \\[\\mu=g^{-1}\\left(\\beta_0+\\beta_1X_1+\\ldots+\\beta_kX_k\\right)\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis distribution is often used to model count data\nExamples:\n\nDistribution of number of deaths due to lung cancer\nDistribution of number of individuals diagnosed with leukemia\nDistribution of number of hospitalizations\n\n\n\n\n\n\nThe probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)\n\n\n\n\n\n\nIf we look at the probability of \\(y\\) events in a time period \\(t\\) for a Poisson random variable, we could write: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu = \\lambda t\\), where \\(\\lambda\\) is the expected number of events per unit time\nThen \\(\\mu\\) is the expected number of events over time \\(t\\)\n\n\n\n\n\n\nWhat does \\(\\lambda\\) represent?\n\nA rate, the expected number of events in a given population over a given period time\n\nExample: Number of patient arrivals into the Emergency Room per hour\nThe Poisson distribution is the prototype for assigning probabilities of observing any number of events\n\n\n\n\n\n\n\n\nIn the example of number of patient arrivals, an event does not conclude the study\n\nIf someone arrives within the first minute of the study, then we keep counting\nWe may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving\n\nWhat happens if we want to measure qualities of the individual?\n\nWe can measure a hospitalization rate\n\n\n\n\n\n\nIf we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1\n\nExample: Number of individuals diagnosed with leukemia\nThis only happens once, so how do we measure the rate here?\n\nSince rate involves the counts and time – we can use the time to diagnosis to estimate the rate\n\nOften expressed in units such as events per thousand person-years\n\n\n\n\n\n\nOne person-year is a unit of time defined as one person being followed for one year\nPerson-years for a sample of n subjects is calculated as the total years followed for the n subjects, where each subject could have different follow-up time\nExample: suppose we have 5 subjects, two of the subjects were followed for 2 years, and two of them are followed for 3 years and the fifth subject was followed for 3.8 years\n\n\\[\\text{person-years} = 2 \\text{ people} \\cdot 2 \\text{ years} +2 \\text{ people} \\cdot 3 \\text{ years}+ 1 \\text{ person} \\cdot 3.8 \\text{ years} = 13.8 \\text{ person-years}\\]\n\n\n\n\nSuppose that we observe one event during the follow-up period, then\n\n\\[\\begin{aligned}\n\\text{Rate of event} &= \\dfrac{\\# events}{\\text{person-years}}= \\dfrac{1 \\text{ event}}{13.8 \\text{person-years}} \\\\ &= 0.072 \\text{ events per person−year} \\\\ &=72 \\text{ events per } 1000 \\text{ person−years} \\end{aligned}\\]\n\n\n\n\nLet Y is the dependent variable of interest and x is a predictor variable,\n\nIn simple logistic regression, we have \\[\\log\\left(\\frac{\\pi(X)}{1 - \\pi(X)}\\right) = \\beta_0 + \\beta_1 X\\]\nwhere \\(\\pi (X) =P(Y = 1 \\mid X = x)\\)\n\n\n\n\n\n\nWhat do we model in a Poisson regression?\nLog of conditional mean of Y given x\n\nLet Y be a Poisson count for a given unit of time, then \\(\\mu(X) =\\lambda(X)\\)\nIn a simple Poisson regression, we have \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\n\nSo this is also called a log-linear model\n\n\n\n\n\nIn simple Poisson regression: \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nWhen \\(X=0\\)\nWhen \\(X=1\\)"
+  },
+  {
+    "objectID": "homework/HW5.html#question-1",
+    "href": "homework/HW5.html#question-1",
+    "title": "Homework 5",
+    "section": "Question 1",
+    "text": "Question 1\nThis question stems from an example from an online textbook by Dr. Ramzi W. Nahhas. The dataset for this problem includes a subset of individuals from the 2019 National Survey on Drug Use and Health (NSDUH). Overall, our study aims included investigating potential risk factors for lifetime heroin use. Lifetime heroin use is a binary outcome, which we regress on age at first use of alcohol (alc_agefirst), age with 6 categories (demog_age_cat6), and sex assigned at birth (demog_sex).\n\nload(here(\"data\", \"nsduh2019_adult_sub_rmph.RData\"))\nnsduh = nsduh_adult_sub %&gt;% \n  dplyr::select(her_lifetime, alc_agefirst, demog_age_cat6, demog_sex) %&gt;% \n  drop_na()\n\n\nPart a\nUsing the nsduh dataset from the above chunk of code, please run a regression model and present the model summary using lifetime heroin use as our outcome, and age at first use of alcohol, categorical age, and sex assigned at birth as covariates in our model. No need to write out your model, you just need to write the R code to run it.\n\n\nPart b\nAre we encountering a numerical problem with our regression? If yes, please name the numerical issue. What first clued you into that issue? Provide conclusive evidence of this numerical issue (with a contingency table), and explain which variable(s) are causing this problem.\n\n\nPart c\nWhat would you do to “fix” this numerical issue? Please apply your “fix” and rerun the regression"
+  },
+  {
+    "objectID": "homework/HW5.html#question-2",
+    "href": "homework/HW5.html#question-2",
+    "title": "Homework 5",
+    "section": "Question 2",
+    "text": "Question 2\nThis question is taken from the Hosmer and Lemeshow textbook. The ICU study data set consists of a sample of 200 subjects who were part of a much larger study on survival of patients following admission to an adult intensive care unit (ICU). The dataset should be available within Course Materials. The major goal of this study was to develop a logistic regression model to predict the probability of survival to hospital discharge of these patients. In this question, the primary outcome variable is vital status at hospital discharge, STA. Clinicians associated with the study felt that a key determinant of survival was the patient’s age at admission, AGE. We will be building to a multivariable logistic regression model while adjusting for cancer part of the present problem (CAN), CPR prior to ICU admission (CPR), infection probable at ICU admission (INF), and level of consciousness at ICU admission (LOC).\nWe will use the model from Homework 4 Question 1a for this question: \\[\\text{logit}(\\pi(\\textbf{X}))=\\beta_0 + \\beta_1 \\cdot AGE + \\beta_2 \\cdot CAN + \\beta_3 \\cdot CPR + \\\\ \\beta_4 \\cdot INF\\]\n\nicu = read_csv(here(\"data\", \"icu.csv\"))\nicu1 = icu %&gt;% mutate(STA = as.factor(STA) %&gt;% relevel(ref = \"Lived\"))\nicu2 = icu1 %&gt;% mutate(CAN = as.factor(CAN) %&gt;% relevel(ref = \"No\"), \n                     CPR = as.factor(CPR) %&gt;% relevel(ref = \"No\"), \n                     INF = as.factor(INF) %&gt;% relevel(ref = \"No\"), \n                     LOC = as.factor(LOC) %&gt;% \n                       relevel(ref = \"No Coma or Deep Stupor\"))\n\n\nPart a\nAssess the fit of the above model. You may use Hosmer-Lemeshow test, or Pearson Residual as appropriate. Discuss your choice and interpret.\n\n\nPart b\nAssess the your models ability to discriminate vital status (STA) using AUC.\n\n\nPart c\nLet’s say a colleague found a different preliminary final model than yours. Using the below model that your colleague found, compare your model to theirs using AIC and BIC.\n\ncoll_model = glm(STA ~ SYS + AGE + CPR + INF + AGE*CPR, \n                 data = icu2, family = \"binomial\")\ncoll_model\n\n\nCall:  glm(formula = STA ~ SYS + AGE + CPR + INF + AGE * CPR, family = \"binomial\", \n    data = icu2)\n\nCoefficients:\n(Intercept)          SYS          AGE       CPRYes       INFYes   AGE:CPRYes  \n   -1.47960     -0.01343      0.02340     -3.37369      0.53449      0.08370  \n\nDegrees of Freedom: 199 Total (i.e. Null);  194 Residual\nNull Deviance:      200.2 \nResidual Deviance: 172.5    AIC: 184.5"
   }
 ]
