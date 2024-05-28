@@ -44,6 +44,9 @@ Project reports serve as a great way to communicate the knowledge learned in our
         -   This means all R code chunks should have `#| echo: false`
         -   This also means warnings and messages should be turned off
 -   The report should be 10 - 14 paragraphs long
+    -   **In 512, many lab reports were a little too long!**
+    -   **Remember, I know mostly what you did in the labs! This report is meant to synthesize that work into a coherent message/story!** 
+        -   **This often means details of our analysis are lost.**
 -   Tables and figures should NOT have variable names as they appear in the data frame
     -   Variable names should be understood by a reader
     -   Variable names should be written in full words
@@ -121,7 +124,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 
     -   Intended message of the figure is easily understood
 
-        -   If you are trying to show a trend of mean IAT vs. an ordered categorical variable, then the variable is ordered on the x-axis
+        -   If you are trying to show a trend of proportion of food insecurity vs. an ordered categorical variable, then the variable is ordered on the x-axis
 
 -   For the references
 
@@ -154,7 +157,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 -   **Purpose:** Describe the analyses that were conducted and methods used to select variables and check diagnostics
 -   **Important to keep in mind:** methods typically describe your approach and process, *not the results of that process*
     -   For example: I might say "We investigated the linearity of each continuous covariate visually. If continuous variables were not linear, then we divided the variable into categories using existing guidelines from \<insert reference here\> or creating quartiles."
-        -   In the methods section, I would NOT say: "We investigated the linearity of each continuous covariate visually. We found that age was not linearly related to IAT scores. Thus, we categorized age into the following groups: \_\_\_, \_\_\_\_, \_\_\_\_, \_\_\_\_, and \_\_\_\_."
+        -   In the methods section, I would NOT say: "We investigated the linearity of each continuous covariate visually. We found that age was not linearly related to log-odds of food insecurity. Thus, we categorized age into the following groups: \_\_\_, \_\_\_\_, \_\_\_\_, \_\_\_\_, and \_\_\_\_."
             -   The last two sentences about age would be more appropriate in the Results section
 -   **Some important methods to discuss** (You may divide these into your sections, not necessarily with these names)
     -   General approach to the dataset
@@ -233,19 +236,24 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
         -   You don't need to hit all the limitations, but think about the big ones (generalizability? independence of samples? large sample size vs. clinical significance? the way we handled variables?)
     -   After limitations, discuss the positive parts of the results
         -   What can we do with these results? What impact can it have?
-    -   Any overarching trends that are worth noting? [@Giebel2024]
+    -   Any overarching trends that are worth noting?
 -   Should contain some references
 
 ### Reflection
 
 -   How did each Lab help you build towards your project report?
     -   **Length: 1-2 sentences per lab**
+-   Did you change anything from your labs?
+    -   **Length: 1-5 sentences per lab**
+        -   1 sentence to say no changes were made or up to 5 sentences describing the changes you made
+    -   For example, if I gave you feedback about changing a variable to a factor, you do not need to discuss that here.
+    -   However, if you made a serious change to how you built your model from Lab 4 (after seeing my feedback) then put that here.
 
 ### References
 
 -   Include your references here!
 -   You introduction should have references, especially when discussing the social science behind the analysis
--   You must reference the IAT data source!!
+-   You must reference the WBNS data source!!
 
 ### Optional: Appendix
 

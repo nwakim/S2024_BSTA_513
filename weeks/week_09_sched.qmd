@@ -30,15 +30,71 @@ editor_options:
 
 ## Resources
 
-| Lesson | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|--------|-------|:---------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:-------------------------------------------------------------:|
-|        |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 12     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 13     |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic              |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
+|------------|------------|:--------------:|:------------------:|:------------:|
+| 16     | Poisson Regression | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
 ## Announcements
+
+### Wednesday 5/29
+
+**#1 “The Final Stretch: How to Find Motivation & Prioritize Tasks”**
+
+**Wednesday, May 29^th^ 6-7pm via Zoom**
+
+Is your to-do list starting to feel overwhelming as we approach the end of spring term? Are you having a difficult time finding motivation or knowing which task to do first?  We got you!! 
+
+ 
+
+Join ONLINE on [**Wednesday, May 29th from 6PM-7PM**]{.underline} to learn time-management tips and tricks.  
+
+Register here and a Zoom link will be sent to you prior to the event:  
+
+[https://forms.gle/DkYYhdFXN7XtQ3YF8](https://urldefense.com/v3/__https:/forms.gle/DkYYhdFXN7XtQ3YF8__;!!Mi0JBg!O3aH8xf0FmywAbLS4xx0ioLjMcOygWvFrWb3Ft6hXlx0CYDEKDfa08fGJ-cG8O73ciewShoBUnJLLGM$ "https://urldefense.com/v3/__https:/forms.gle/DkYYhdFXN7XtQ3YF8__;!!Mi0JBg!O3aH8xf0FmywAbLS4xx0ioLjMcOygWvFrWb3Ft6hXlx0CYDEKDfa08fGJ-cG8O73ciewShoBUnJLLGM$") 
+
+ 
+
+ Learn skills to: 
+
+· Help you get started 
+
+· Identify, reflect, and reframe hard tasks 
+
+· Prioritize your long list of to-dos
+
+· Maintain workflow    
+
+Questions? Please connect with Noni Villalobos at [villabri\@ohsu.edu](mailto:villabri@ohsu.edu "mailto:villabri@ohsu.edu")
+
+ 
+
+**#2 “Refuel for Finals”**
+
+**Student Success Center, 6^th^ floor Vanport**
+
+**June 3^rd^-4^th^ & 6^th^-7^th^  9am-5pm**
+
+During the week of **June 3rd**, we invite you to drop by the Student Success Center on the 6^th^ floor of the Vanport building (1810 SW 5th Ave) to refuel between 9am-5pm on Monday, Tuesday, Thursday, and Friday (unavailable Wednesday). Students can make their own PB&J sandwiches to enjoy in community or for later, along with various snacks, coffee, tea, and hot cocoa. Nut-free, vegan, and gluten-free snacks will be included. Grab and go snacks will be available for those unable to stick around. No registration required! Please contact [sphsuccess\@ohsu.edu](mailto:sphsuccess@ohsu.edu "mailto:sphsuccess@ohsu.edu") with any questions or accommodation needs.
+
+ 
+
+**#3 “The Last Bounce: Bunnies, Burritos, and DIY Bath Salts”**
+
+**Wednesday, June 5^th^ Noon-2pm**
+
+**Student Success Center, 6^th^ floor Vanport**
+
+Please join the SPH Student Success Center for an end of academic year celebration on **Wednesday, June 5^th^ from Noon-2pm on the 6^th^ floor in Vanport**. Come take a break from your busy schedule and never ending to-do list and hold a bunny, enjoy some lunch, or make your own scented bath salts for a relaxing soak later on. This will be a great opportunity to connect with other SPH students, faculty, and staff while celebrating all of your hard work and accomplishments!
+
+Additionally, staff from the PSU Center for Student Health and Counseling (SHAC) will be in attendance and sharing information on stress relieving strategies, SHAC services and resources, and future student employment opportunities with SHAC’s Health Promotion teams.
+
+In an effort to ensure we have enough food, beverages, and bunny time for all attendees, please take a moment to let us know you will be attending and if you have any food restrictions or accommodation needs. Thank you!
+
+**Please RSVP here**: [https://forms.gle/y1ZfghNq8PuKusu99](http://click.send.ohsu.edu/?qs=3fcd878bdb676906310dbf3a7f6e55fe45882ac5ac08aa70bd20c11f0036a781377f8b086ad6617eb06ce2c30deea2aa6e24b16698fe86a5 "http://click.send.ohsu.edu/?qs=3fcd878bdb676906310dbf3a7f6e55fe45882ac5ac08aa70bd20c11f0036a781377f8b086ad6617eb06ce2c30deea2aa6e24b16698fe86a5")
+
+Questions? Please contact [sphsuccess\@ohsu.edu](mailto:sphsuccess@ohsu.edu "mailto:sphsuccess@ohsu.edu") 
 
 ## Class Exit Tickets
 

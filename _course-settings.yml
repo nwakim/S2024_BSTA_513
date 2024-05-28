@@ -91,27 +91,27 @@ schedule:
         calendar-color2: "#FFFFFF" 
 
       - title: "Lab 1 due"
-        href: labs/Lab_01.qmd
+        href: project/Lab_01_instructions.qmd
         date: 4/18/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF"      
       - title: "Lab 2 due"
-        href: labs/Lab_02.qmd
+        href: project/Lab_02_instructions.qmd
         date: 5/2/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
       - title: "Lab 3 due"
-        href: labs/Lab_03.qmd
+        href: project/Lab_03_instructions.qmd
         date: 5/16/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
       - title: "Lab 4 due"
-        href: labs/Lab_04.qmd
+        href: project/Lab_04_instructions.qmd
         date: 5/30/24
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
       - title: "Final Project Due"
-        href: labs/Project_report_instructions.qmd
+        href: project/Project_report_instructions.qmd
         date: 6/13/24        
         calendar-color: "#34AC8B"
         calendar-color2: "#FFFFFF" 
