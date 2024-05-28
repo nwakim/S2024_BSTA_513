@@ -31,7 +31,7 @@ editor_options:
 ## Resources
 
 | Lesson | Topic              |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|--------------|--------------|:------------:|:--------------:|:------------:|
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
 | 16     | Poisson Regression | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
@@ -59,6 +59,10 @@ editor_options:
         -   **Wednesday, June 5^th^ Noon-2pm**
 
         -   **Student Success Center, 6^th^ floor Vanport**
+
+-   HW 5 posted
+
+-   Project Report instructions finalized!!
 
 -   Review of Quiz 2
 
