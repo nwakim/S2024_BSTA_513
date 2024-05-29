@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #575f66;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #575f66; } /* Normal */
+    code span.al { color: #f51818; background-color: #faefef; font-weight: bold; } /* Alert */
+    code span.an { color: #e6ba7e; } /* Annotation */
+    code span.at { color: #399ee6; } /* Attribute */
+    code span.bn { color: #ff9940; } /* BaseN */
+    code span.bu { color: #4cbf99; } /* BuiltIn */
+    code span.cf { color: #fa8d3e; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4cbf99; } /* Char */
+    code span.cn { color: #a37acc; } /* Constant */
+    code span.co { color: #607880; font-style: italic; } /* Comment */
+    code span.cv { color: #a37acc; } /* CommentVar */
+    code span.do { color: #607880; } /* Documentation */
+    code span.dt { color: #fa8d3e; } /* DataType */
+    code span.dv { color: #ff9940; } /* DecVal */
+    code span.er { color: #f51818; text-decoration: underline; } /* Error */
+    code span.ex { color: #399ee6; font-weight: bold; } /* Extension */
+    code span.fl { color: #ff9940; } /* Float */
+    code span.fu { color: #f2ae49; } /* Function */
+    code span.im { color: #86b300; } /* Import */
+    code span.in { color: #ff9940; } /* Information */
+    code span.kw { color: #fa8d3e; font-weight: bold; } /* Keyword */
+    code span.op { color: #ed9366; } /* Operator */
+    code span.ot { color: #55b4d4; } /* Other */
+    code span.pp { color: #f07171; } /* Preprocessor */
+    code span.re { color: #399ee6; background-color: #ddecf3; } /* RegionMarker */
+    code span.sc { color: #4cbf99; } /* SpecialChar */
+    code span.ss { color: #4cbf99; } /* SpecialString */
+    code span.st { color: #86b300; } /* String */
+    code span.va { color: #55b4d4; } /* Variable */
+    code span.vs { color: #86b300; } /* VerbatimString */
+    code span.wa { color: #f07171; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -340,16 +405,40 @@ Nicky Wakim
 
   <p class="date">2024-05-29</p>
 </section>
-<section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Review Generalized Linear Models and how we can branch to other types of regression.</p></li>
+<li><p>Understand what we can measure with Poisson regression and how to interpret coefficients.</p></li>
+<li><p>Understand how to adjust for different follow-up times among individuals</p></li>
+</ol>
+<div class="cell">
+<style type="text/css">
+.reveal code {
+  max-height: 80% !important;
+}
+</style>
+</div>
+</section>
 
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Review Generalized Linear Models and how we can branch to other types of regression.</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Understand what we can measure with Poisson regression and how to interpret coefficients.</p></li>
+<li><p>Understand how to adjust for different follow-up times among individuals</p></li>
+</ol>
 </section>
 <section id="review-generalized-linear-models-glms" class="slide level2">
 <h2>Review: Generalized Linear Models (GLMs)</h2>
 
 <img data-src="./images/GLM_comp.png" class="r-stretch"></section>
-<section id="glm-random-component" class="slide level2" data-background-image="./images/title_blue.png" data-background-size="2500px 150px" data-background-position="top">
+<section id="glm-random-component" class="slide level2">
 <h2>GLM: Random Component</h2>
 <ul>
 <li>The random component specifies the response variable <span class="math inline">\(Y\)</span> and selects a probability distribution for it</li>
@@ -365,7 +454,7 @@ Nicky Wakim
 </ul></li>
 </ul>
 </section>
-<section id="glm-systematic-component" class="slide level2" data-background-image="./images/title_yell.png" data-background-size="2500px 150px" data-background-position="top">
+<section id="glm-systematic-component" class="slide level2">
 <h2>GLM: Systematic Component</h2>
 <ul>
 <li>The systematic component specifies the explanatory variables, which enter linearly as predictors <span class="math display">\[\beta_0+\beta_1X_1+\ldots+\beta_kX_k\]</span></li>
@@ -384,7 +473,7 @@ Nicky Wakim
 <li>Systematic component is the <strong>same</strong> as what we learned in Linear Models</li>
 </ul>
 </section>
-<section id="glm-link-function" class="slide level2" data-background-image="./images/title_green.png" data-background-size="2500px 150px" data-background-position="top">
+<section id="glm-link-function" class="slide level2">
 <h2>GLM: Link Function</h2>
 <ul>
 <li><p>If <span class="math inline">\(\mu = E(Y)\)</span>, then the link function specifies a function <span class="math inline">\(g(.)\)</span> that relates <span class="math inline">\(\mu\)</span> to the linear predictor as: <span class="math display">\[g\left(\mu\right)=\beta_0+\beta_1X_1+\ldots+\beta_kX_k\]</span></p>
@@ -399,10 +488,28 @@ Nicky Wakim
 <h2>GLM: Link Function</h2>
 
 <img data-src="./images/links.png" class="r-stretch quarto-figure-center"></section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Review Generalized Linear Models and how we can branch to other types of regression.</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Understand what we can measure with Poisson regression and how to interpret coefficients.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Understand how to adjust for different follow-up times among individuals</li>
+</ol>
+</section>
 <section id="poisson-distribution" class="slide level2">
 <h2>Poisson Distribution</h2>
 <ul>
-<li>This distribution is often used to model count data</li>
+<li>This distribution is often used to model <span style="color:#70AD47"><strong>count data</strong></span></li>
 <li>Examples:
 <ul>
 <li>Distribution of number of deaths due to lung cancer</li>
@@ -410,9 +517,37 @@ Nicky Wakim
 <li>Distribution of number of hospitalizations</li>
 </ul></li>
 </ul>
+<p>&nbsp;</p>
+<ul>
+<li>This distribution is often used to model <span style="color:#5B9BD5"><strong>rate data</strong></span></li>
+<li>Examples:
+<ul>
+<li>Distribution of number of deaths due to lung cancer <strong>per year</strong></li>
+<li>Distribution of number of individuals diagnosed with leukemia <strong>over follow-up time</strong></li>
+<li>Distribution of number of hospitalizations <strong>in a day</strong></li>
+</ul></li>
+</ul>
 </section>
-<section id="poisson-distribution-ii" class="slide level2">
-<h2>Poisson Distribution (II)</h2>
+<section id="example-1-horseshoe-crabs-and-satellites" class="slide level2">
+<h2>Example 1: Horseshoe Crabs and Satellites</h2>
+<div class="columns">
+<div class="column">
+<p>Example of <span style="color:#70AD47"><strong>count data</strong></span>:</p>
+<p>Each female horseshoe crab in the study had a male crab attached to her in her nest. The study investigated factors that affect whether the female crab had any other males, called satellites, residing near her. Explanatory variables that are thought to affect this included the female crab’s color, spine condition, and carapace width, and weight. The response outcome for each female crab is the number of satellites. There are 173 females in this study.</p>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(rsq)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">data</span>(hcrabs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column">
+<p><img data-src="./images/horseshoe_crab.jpeg"></p>
+</div>
+</div>
+</section>
+<section id="poisson-distribution-with-a-count" class="slide level2">
+<h2>Poisson Distribution with a count</h2>
+<div class="columns">
+<div class="column">
 <ul>
 <li>The probability function of Poisson distribution: <span class="math display">\[P(Y = y | \mu) = \dfrac{\mu^y e^{-\mu}}{y!}\]</span>
 <ul>
@@ -425,14 +560,38 @@ Nicky Wakim
 <li>Range: <span class="math inline">\([0, \infty)\)</span></li>
 </ul></li>
 </ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hcrabs) <span class="sc">+</span> </span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> num.satellites))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="16_Poisson_regression_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="poisson-distribution-iii" class="slide level2">
-<h2>Poisson Distribution (III)</h2>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
+</section>
+<section id="example-2-lung-cancer-incidence" class="slide level2">
+<h2>Example 2: Lung Cancer Incidence</h2>
+<p>Example of <span style="color:#5B9BD5"><strong>rate data</strong></span>:</p>
+<p>We can look at the lung cancer incident counts (cases) per age group for four Danish cities from 1968 to 1971. Since it’s reasonable to assume that the expected count of lung cancer incidents is proportional to the population size, we would prefer to model the rate of incidents per capita.</p>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(ISwR)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">data</span>(eba1977)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>lc_inc <span class="ot">=</span> eba1977 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">lpop =</span> <span class="fu">log</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="poisson-distribution-with-a-rate" class="slide level2">
+<h2>Poisson Distribution with a rate</h2>
 <ul>
-<li>If we look at the probability of <span class="math inline">\(y\)</span> events <strong>in a time period <span class="math inline">\(t\)</span></strong> for a Poisson random variable, we could write: <span class="math display">\[P(Y = y | \mu) = \dfrac{\mu^y e^{-\mu}}{y!}\]</span>
+<li>If we look at the probability of <span class="math inline">\(y\)</span> events <strong>in a time period <span class="math inline">\(t\)</span></strong> for a Poisson random variable, we could write: <span class="math display">\[P(Y = y | \mu) = \dfrac{\mu^y e^{-\mu}}{y!} = \dfrac{(\lambda t)^y e^{-\lambda t}}{y!}\]</span>
 <ul>
 <li>Where <span class="math inline">\(y\)</span>’s are non-negative integers <span class="math inline">\(y=0, 1, 2,...\)</span></li>
-<li>Where <span class="math inline">\(\mu = \lambda t\)</span>, where <span class="math inline">\(\lambda\)</span> is the expected number of events per unit time</li>
+<li>Where <span class="math inline">\(\mu = \lambda t\)</span>, where <span class="math inline">\(\lambda\)</span> is the expected number of events per unit time (aka <strong>rate</strong>)</li>
 <li>Then <span class="math inline">\(\mu\)</span> is the expected number of events over time <span class="math inline">\(t\)</span></li>
 </ul></li>
 </ul>
@@ -444,57 +603,15 @@ Nicky Wakim
 <ul>
 <li>A rate, the expected number of events in a given population over a given period time</li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>Example: Number of patient arrivals into the Emergency Room per hour</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>The Poisson distribution is the prototype for assigning probabilities of observing any number of events</li>
 </ul>
-</section>
-<section id="poll-everywhere-question-1" class="slide level2">
-<h2>Poll Everywhere Question 1</h2>
-</section>
-<section id="why-person-years-i" class="slide level2">
-<h2>Why Person-Years? (I)</h2>
-<ul>
-<li>In the example of number of patient arrivals, an event does not conclude the study
-<ul>
-<li>If someone arrives within the first minute of the study, then we keep counting</li>
-<li>We may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving</li>
-</ul></li>
-<li>What happens if we want to measure qualities of the individual?
-<ul>
-<li>We can measure a hospitalization rate</li>
-</ul></li>
-</ul>
-</section>
-<section id="why-person-years-ii" class="slide level2">
-<h2>Why Person-Years? (II)</h2>
-<ul>
-<li>If we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1
-<ul>
-<li>Example: Number of individuals diagnosed with leukemia</li>
-<li>This only happens once, so how do we measure the rate here?</li>
-</ul></li>
-<li>Since rate involves the counts and time – we can use the time to diagnosis to estimate the rate
-<ul>
-<li>Often expressed in units such as events per thousand person-years</li>
-</ul></li>
-</ul>
-</section>
-<section id="calculating-person-year" class="slide level2">
-<h2>Calculating Person-Year</h2>
-<ul>
-<li><p>One person-year is a unit of time defined as one person being followed for one year</p></li>
-<li><p>Person-years for a sample of n subjects is calculated as the total years followed for the n subjects, where each subject could have different follow-up time</p></li>
-<li><p>Example: suppose we have 5 subjects, two of the subjects were followed for 2 years, and two of them are followed for 3 years and the fifth subject was followed for 3.8 years</p></li>
-</ul>
-<p><span class="math display">\[\text{person-years} = 2 \text{ people} \cdot 2 \text{ years} +2 \text{ people} \cdot 3 \text{ years}+ 1 \text{ person} \cdot 3.8 \text{ years} = 13.8 \text{ person-years}\]</span></p>
-</section>
-<section id="calculating-rate-ii" class="slide level2">
-<h2>Calculating Rate (II)</h2>
-<ul>
-<li>Suppose that we observe one event during the follow-up period, then</li>
-</ul>
-<p><span class="math display">\[\begin{aligned}
-\text{Rate of event} &amp;= \dfrac{\# events}{\text{person-years}}= \dfrac{1 \text{ event}}{13.8 \text{person-years}} \\ &amp;= 0.072 \text{ events per person−year} \\ &amp;=72 \text{ events per } 1000 \text{ person−years} \end{aligned}\]</span></p>
 </section>
 <section id="review-simple-logistic-regression" class="slide level2">
 <h2>Review: Simple Logistic Regression</h2>
@@ -509,43 +626,1293 @@ Nicky Wakim
 <section id="simple-poisson-regression-model" class="slide level2">
 <h2>Simple Poisson Regression Model</h2>
 <ul>
-<li><p>What do we model in a Poisson regression?</p></li>
-<li><p>Log of conditional mean of Y given x</p>
+<li>What do we model in a Poisson regression?</li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>Let <strong>Y be a Poisson count for a given unit of time</strong>, then <span class="math inline">\(\mu(X) =\lambda(X)\)</span></li>
-<li>In a simple Poisson regression, we have <span class="math display">\[\ln(\mu(X)) = \ln(\lambda(X)) = \beta_0 + \beta_1 X\]</span></li>
+<li>Log of conditional mean of Y given x
+<ul>
+<li>Conditional mean of Y given x is represented as <span class="math inline">\(E(Y \mid X) = \mu(X)\)</span></li>
+<li>Let Y be a Poisson count <strong>for a given unit of time</strong>, then <span class="math inline">\(\mu(X) =\lambda(X)\)</span></li>
+<li>In a simple Poisson regression, we have</li>
 </ul></li>
-<li><p>So this is also called a <strong>log-linear model</strong></p></li>
+</ul>
+<p><span class="math display">\[\ln(\mu(X)) = \ln(\lambda(X)) = \beta_0 + \beta_1 X\]</span></p>
+<p>&nbsp;</p>
+<ul>
+<li>So this is also called a <strong>log-linear model</strong></li>
 </ul>
 </section>
-<section id="parameter-interpretation-i" class="slide level2">
-<h2>Parameter Interpretation (I)</h2>
+<section id="parameter-interpretation-binary-x-12" class="slide level2">
+<h2>Parameter Interpretation: Binary <span class="math inline">\(X\)</span> (1/2)</h2>
 <ul>
 <li><p>In simple Poisson regression: <span class="math display">\[\ln(\mu(X)) = \ln(\lambda(X)) = \beta_0 + \beta_1 X\]</span></p></li>
 <li><p>When <span class="math inline">\(X\)</span> is a binary variable: How do we interpret <span class="math inline">\(\beta_1\)</span>?</p>
 <ul>
-<li>When <span class="math inline">\(X=0\)</span></li>
-<li>When <span class="math inline">\(X=1\)</span></li>
+<li>When <span class="math inline">\(X=0\)</span>: <span class="math display">\[\ln(\mu(X = 0)) = \beta_0 + \beta_1 \cdot 0 = \beta_0\]</span>
+<ul>
+<li><span class="math inline">\(\mu(X = 0) = \exp (\beta_0)\)</span>: the mean count or rate of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X=0\)</span></li>
+</ul></li>
+<li>When <span class="math inline">\(X=1\)</span>: <span class="math display">\[\ln(\mu(X = 1)) = \beta_0 + \beta_1 \cdot 1 = \beta_0 + \beta_1\]</span>
+<ul>
+<li><span class="math inline">\(\mu(X = 1) = \exp (\beta_0 + \beta_1)\)</span>: the mean count or rate of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X=1\)</span></li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
-<section id="parameter-interpretation-ii" class="slide level2">
-<h2>Parameter Interpretation (II)</h2>
+<section id="parameter-interpretation-binary-x-22" class="slide level2">
+<h2>Parameter Interpretation: Binary <span class="math inline">\(X\)</span> (2/2)</h2>
+<ul>
+<li>When <span class="math inline">\(X\)</span> is a binary variable: How do we interpret <span class="math inline">\(\beta_1\)</span>?
+<ul>
+<li><p>By subtraction, we have <span class="math display">\[\beta_1 = \ln(\mu(X = 1)) -  \ln(\mu(X = 0)) = \ln \left( \dfrac{\mu(X = 1)}{\mu(X = 0)} \right)\]</span></p></li>
+<li><p><span class="math inline">\(\beta_1\)</span>: log-count ratio or log-rate ratio</p>
+<ul>
+<li>Since <span class="math inline">\(\mu(X)\)</span> is <span class="math inline">\(\lambda(X)\)</span> is the rate of <span class="math inline">\(Y\)</span></li>
+</ul></li>
+<li><p>So <span class="math inline">\(\exp(\beta_1)\)</span> is the count or rate ratio!</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="parameter-interpretation-continuous-x" class="slide level2">
+<h2>Parameter Interpretation: Continuous <span class="math inline">\(X\)</span></h2>
+<ul>
+<li><p>When <span class="math inline">\(X\)</span> is a continuous variable: How do we interpret <span class="math inline">\(\beta_0\)</span>?</p>
+<ul>
+<li><p><span class="math inline">\(\beta_0\)</span>: log-count or log-rate when <span class="math inline">\(X\)</span> is 0</p></li>
+<li><p>So <span class="math inline">\(\exp(\beta_0)\)</span> is the expected count or rate when <span class="math inline">\(X\)</span> is 0</p></li>
+</ul></li>
+<li><p>When <span class="math inline">\(X\)</span> is a continuous variable: How do we interpret <span class="math inline">\(\beta_1\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\beta_1\)</span>: log-count ratio or log-rate ratio for every 1 unit increase in <span class="math inline">\(X\)</span>
+<ul>
+<li>Since <span class="math inline">\(\mu(X)\)</span> is <span class="math inline">\(\lambda(X)\)</span> is the rate of <span class="math inline">\(Y\)</span></li>
+</ul></li>
+<li>So <span class="math inline">\(\exp(\beta_1)\)</span> is the rate ratio for every 1 unit increase in <span class="math inline">\(X\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="example-1-horseshoe-crabs-and-satellites-1" class="slide level2">
+<h2>Example 1: Horseshoe Crabs and Satellites</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(hcrabs, </span>
+<span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span>width, </span>
+<span id="cb4-3"><a href="#cb4-3"></a>           <span class="at">y=</span>num.satellites)) <span class="sc">+</span> </span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="16_Poisson_regression_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>crab_mod <span class="ot">=</span> <span class="fu">glm</span>(num.satellites <span class="sc">~</span> width, </span>
+<span id="cb5-2"><a href="#cb5-2"></a>                <span class="at">family=</span>poisson, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>                <span class="at">data=</span>hcrabs)</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">tidy</span>(crab_mod, <span class="at">conf.int=</span>T, </span>
+<span id="cb5-5"><a href="#cb5-5"></a>     <span class="at">exponentiate=</span>T) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">35</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">fmt_number</span>(<span class="at">decimals =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="dvbbtiulbp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dvbbtiulbp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dvbbtiulbp thead, #dvbbtiulbp tbody, #dvbbtiulbp tfoot, #dvbbtiulbp tr, #dvbbtiulbp td, #dvbbtiulbp th {
+  border-style: none;
+}
+
+#dvbbtiulbp p {
+  margin: 0;
+  padding: 0;
+}
+
+#dvbbtiulbp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 35px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dvbbtiulbp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dvbbtiulbp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dvbbtiulbp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dvbbtiulbp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dvbbtiulbp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dvbbtiulbp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dvbbtiulbp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dvbbtiulbp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dvbbtiulbp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dvbbtiulbp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dvbbtiulbp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dvbbtiulbp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dvbbtiulbp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dvbbtiulbp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dvbbtiulbp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dvbbtiulbp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dvbbtiulbp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dvbbtiulbp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dvbbtiulbp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dvbbtiulbp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dvbbtiulbp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dvbbtiulbp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dvbbtiulbp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dvbbtiulbp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dvbbtiulbp .gt_left {
+  text-align: left;
+}
+
+#dvbbtiulbp .gt_center {
+  text-align: center;
+}
+
+#dvbbtiulbp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dvbbtiulbp .gt_font_normal {
+  font-weight: normal;
+}
+
+#dvbbtiulbp .gt_font_bold {
+  font-weight: bold;
+}
+
+#dvbbtiulbp .gt_font_italic {
+  font-style: italic;
+}
+
+#dvbbtiulbp .gt_super {
+  font-size: 65%;
+}
+
+#dvbbtiulbp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dvbbtiulbp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dvbbtiulbp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dvbbtiulbp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dvbbtiulbp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dvbbtiulbp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dvbbtiulbp .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="term">term</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="std.error">std.error</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="term" class="gt_row gt_left">(Intercept)</td>
+<td headers="estimate" class="gt_row gt_right">0.04</td>
+<td headers="std.error" class="gt_row gt_right">0.54</td>
+<td headers="statistic" class="gt_row gt_right">−6.09</td>
+<td headers="p.value" class="gt_row gt_right">0.00</td>
+<td headers="conf.low" class="gt_row gt_right">0.01</td>
+<td headers="conf.high" class="gt_row gt_right">0.11</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">width</td>
+<td headers="estimate" class="gt_row gt_right">1.18</td>
+<td headers="std.error" class="gt_row gt_right">0.02</td>
+<td headers="statistic" class="gt_row gt_right">8.22</td>
+<td headers="p.value" class="gt_row gt_right">0.00</td>
+<td headers="conf.low" class="gt_row gt_right">1.13</td>
+<td headers="conf.high" class="gt_row gt_right">1.23</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Interpretation: For every 1-cm increase in carapace width, the expected number of satellites increases by 18% (95% CI: 13%, 23%).</p>
+</section>
+<section id="example-2-lung-cancer-incidence-1" class="slide level2">
+<h2>Example 2: Lung Cancer Incidence</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(lc_inc, <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>cases, </span>
+<span id="cb6-2"><a href="#cb6-2"></a>           <span class="at">color =</span> city)) <span class="sc">+</span> </span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="16_Poisson_regression_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>lc_mod <span class="ot">=</span> <span class="fu">glm</span>(cases <span class="sc">~</span> city <span class="sc">+</span> age, </span>
+<span id="cb7-2"><a href="#cb7-2"></a>            <span class="at">offset=</span>lpop, </span>
+<span id="cb7-3"><a href="#cb7-3"></a>            <span class="at">family=</span>poisson, </span>
+<span id="cb7-4"><a href="#cb7-4"></a>            <span class="at">data=</span>lc_inc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<details>
+<summary>Regression table</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">tidy</span>(lc_mod, <span class="at">conf.int=</span>T, </span>
+<span id="cb8-2"><a href="#cb8-2"></a>     <span class="at">exponentiate=</span>T) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">30</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">fmt_number</span>(<span class="at">decimals =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+
+<div id="dcdztxpzzs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dcdztxpzzs table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dcdztxpzzs thead, #dcdztxpzzs tbody, #dcdztxpzzs tfoot, #dcdztxpzzs tr, #dcdztxpzzs td, #dcdztxpzzs th {
+  border-style: none;
+}
+
+#dcdztxpzzs p {
+  margin: 0;
+  padding: 0;
+}
+
+#dcdztxpzzs .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dcdztxpzzs .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dcdztxpzzs .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dcdztxpzzs .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dcdztxpzzs .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dcdztxpzzs .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dcdztxpzzs .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dcdztxpzzs .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dcdztxpzzs .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dcdztxpzzs .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dcdztxpzzs .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dcdztxpzzs .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dcdztxpzzs .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dcdztxpzzs .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dcdztxpzzs .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dcdztxpzzs .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dcdztxpzzs .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dcdztxpzzs .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dcdztxpzzs .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dcdztxpzzs .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dcdztxpzzs .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dcdztxpzzs .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dcdztxpzzs .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dcdztxpzzs .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dcdztxpzzs .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dcdztxpzzs .gt_left {
+  text-align: left;
+}
+
+#dcdztxpzzs .gt_center {
+  text-align: center;
+}
+
+#dcdztxpzzs .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dcdztxpzzs .gt_font_normal {
+  font-weight: normal;
+}
+
+#dcdztxpzzs .gt_font_bold {
+  font-weight: bold;
+}
+
+#dcdztxpzzs .gt_font_italic {
+  font-style: italic;
+}
+
+#dcdztxpzzs .gt_super {
+  font-size: 65%;
+}
+
+#dcdztxpzzs .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dcdztxpzzs .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dcdztxpzzs .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dcdztxpzzs .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dcdztxpzzs .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dcdztxpzzs .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dcdztxpzzs .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="term">term</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="std.error">std.error</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="term" class="gt_row gt_left">(Intercept)</td>
+<td headers="estimate" class="gt_row gt_right">0.004</td>
+<td headers="std.error" class="gt_row gt_right">0.200</td>
+<td headers="statistic" class="gt_row gt_right">−28.125</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">0.002</td>
+<td headers="conf.high" class="gt_row gt_right">0.005</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cityHorsens</td>
+<td headers="estimate" class="gt_row gt_right">0.719</td>
+<td headers="std.error" class="gt_row gt_right">0.182</td>
+<td headers="statistic" class="gt_row gt_right">−1.818</td>
+<td headers="p.value" class="gt_row gt_right">0.069</td>
+<td headers="conf.low" class="gt_row gt_right">0.503</td>
+<td headers="conf.high" class="gt_row gt_right">1.026</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cityKolding</td>
+<td headers="estimate" class="gt_row gt_right">0.690</td>
+<td headers="std.error" class="gt_row gt_right">0.188</td>
+<td headers="statistic" class="gt_row gt_right">−1.978</td>
+<td headers="p.value" class="gt_row gt_right">0.048</td>
+<td headers="conf.low" class="gt_row gt_right">0.476</td>
+<td headers="conf.high" class="gt_row gt_right">0.995</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">cityVejle</td>
+<td headers="estimate" class="gt_row gt_right">0.762</td>
+<td headers="std.error" class="gt_row gt_right">0.188</td>
+<td headers="statistic" class="gt_row gt_right">−1.450</td>
+<td headers="p.value" class="gt_row gt_right">0.147</td>
+<td headers="conf.low" class="gt_row gt_right">0.525</td>
+<td headers="conf.high" class="gt_row gt_right">1.099</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">age55-59</td>
+<td headers="estimate" class="gt_row gt_right">3.007</td>
+<td headers="std.error" class="gt_row gt_right">0.248</td>
+<td headers="statistic" class="gt_row gt_right">4.434</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">1.843</td>
+<td headers="conf.high" class="gt_row gt_right">4.901</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">age60-64</td>
+<td headers="estimate" class="gt_row gt_right">4.566</td>
+<td headers="std.error" class="gt_row gt_right">0.232</td>
+<td headers="statistic" class="gt_row gt_right">6.556</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">2.907</td>
+<td headers="conf.high" class="gt_row gt_right">7.236</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">age65-69</td>
+<td headers="estimate" class="gt_row gt_right">5.857</td>
+<td headers="std.error" class="gt_row gt_right">0.229</td>
+<td headers="statistic" class="gt_row gt_right">7.704</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">3.748</td>
+<td headers="conf.high" class="gt_row gt_right">9.249</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">age70-74</td>
+<td headers="estimate" class="gt_row gt_right">6.404</td>
+<td headers="std.error" class="gt_row gt_right">0.235</td>
+<td headers="statistic" class="gt_row gt_right">7.891</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">4.043</td>
+<td headers="conf.high" class="gt_row gt_right">10.212</td></tr>
+    <tr><td headers="term" class="gt_row gt_left">age75+</td>
+<td headers="estimate" class="gt_row gt_right">4.136</td>
+<td headers="std.error" class="gt_row gt_right">0.250</td>
+<td headers="statistic" class="gt_row gt_right">5.672</td>
+<td headers="p.value" class="gt_row gt_right">0.000</td>
+<td headers="conf.low" class="gt_row gt_right">2.523</td>
+<td headers="conf.high" class="gt_row gt_right">6.762</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="poll-everywhere-question-3" class="slide level2">
+<h2>Poll Everywhere Question 3</h2>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Review Generalized Linear Models and how we can branch to other types of regression.</p></li>
+<li><p>Understand what we can measure with Poisson regression and how to interpret coefficients.</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Understand how to adjust for different follow-up times among individuals</li>
+</ol>
+</div>
+</section>
+<section id="building-towards-person-years" class="slide level2">
+<h2>Building towards person-years</h2>
+<ul>
+<li>In an example of number of patient arrivals, an event does not conclude the study
+<ul>
+<li>If someone arrives within the first minute of the study, then we keep counting</li>
+<li>We may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>For example, in the lung cancer study, we can only discuss the incidence of cancer at the city-wide level</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>What happens if we want to measure qualities of the individual?
+<ul>
+<li>We can measure a hospitalization rate</li>
+</ul></li>
+</ul>
+</section>
+<section id="why-person-years" class="slide level2">
+<h2>Why Person-Years?</h2>
+<ul>
+<li>If we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1
+<ul>
+<li>Example: Number of individuals diagnosed with leukemia</li>
+<li>This only happens once, so how do we measure the rate here?</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Since rate involves the counts and time – we can use the time to diagnosis to estimate the rate
+<ul>
+<li>Often expressed in units such as events per thousand person-years</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Person-years allow us to follow individuals for different amounts of time</li>
+</ul>
+</section>
+<section id="what-is-a-person-year-and-how-to-calculate" class="slide level2">
+<h2>What is a Person-Year and how to calculate?</h2>
+<ul>
+<li>One person-year is a unit of time defined as one person being followed for one year</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Person-years for a sample of n subjects is calculated as the total years followed for the n subjects, where each subject could have different follow-up time</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Example: suppose we have 5 subjects, two of the subjects were followed for 2 years, and two of them are followed for 3 years and the fifth subject was followed for 3.8 years</li>
+</ul>
+<p><span class="math display">\[\text{person-years} = 2 \text{ people} \cdot 2 \text{ years} +2 \text{ people} \cdot 3 \text{ years}+ 1 \text{ person} \cdot 3.8 \text{ years} = 13.8 \text{ person-years}\]</span></p>
+</section>
+<section id="calculating-rate" class="slide level2">
+<h2>Calculating Rate</h2>
+<ul>
+<li>Suppose that we observe one event during the follow-up period, then</li>
+</ul>
+<p><span class="math display">\[\begin{aligned}
+\text{Rate of event} &amp;= \dfrac{\# events}{\text{person-years}}= \dfrac{1 \text{ event}}{13.8 \text{person-years}} \\ &amp;= 0.072 \text{ events per person−year} \\ &amp;=72 \text{ events per } 1000 \text{ person−years} \end{aligned}\]</span></p>
+<ul>
+<li><p>Now our rate of event is measured per person-year</p>
+<ul>
+<li>Often use 1000 person-years to count the events with whole numbers</li>
+</ul></li>
+</ul>
+</section>
+<section id="including-an-offset-when-we-have-different-follow-up-times" class="slide level2">
+<h2>Including an offset when we have different follow-up times</h2>
+<ul>
+<li><p>What if we have data that each observation has different period of time?</p>
+<ul>
+<li>For example, we look at number of ED visits when subjects are enrolled in Oregon Health Plan, however, each subjects are enrolled in the plan for different length of time…</li>
+<li>How do we incorporate this different length of time?</li>
+</ul></li>
+<li><p>Note we have: <span class="math inline">\(\mu = \lambda t\)</span> and with predictor <span class="math inline">\(X\)</span>, <span class="math inline">\(\mu(X) = \lambda(X) \cdot t(X)\)</span></p>
+<ul>
+<li><span class="math inline">\(t\)</span> is now a function of the individual, represented with <span class="math inline">\(X\)</span></li>
+</ul></li>
+<li><p>Then we construct:</p></li>
+</ul>
+<p><span class="math display">\[\begin{aligned} \ln(\lambda(X)) = &amp; \beta_0 + \beta_1 X \\
+\ln(\lambda(X)) = \ln\left(\dfrac{\mu(X)}{t(X)}\right) = \ln(\mu(X)) - \ln(t(X)) = &amp;\beta_0 + \beta_1 X \\
+\ln(\mu(X)) = &amp; \ln(t(X)) + \beta_0 + \beta_1 X\\ \end{aligned}\]</span></p>
+</section>
+<section id="including-an-offset-when-we-have-different-follow-up-times-1" class="slide level2">
+<h2>Including an offset when we have different follow-up times</h2>
+<ul>
+<li>That is, to incorporate the different lengths in the model,</li>
+</ul>
+<p><span class="math display">\[\ln(\mu(X)) =  \ln(t(X)) + \beta_0 + \beta_1 X\]</span></p>
+<ul>
+<li><p>We have one more term in the model and this term is called <strong>offset</strong>, a known term in the model since <span class="math inline">\(t(X)\)</span> is known for each individual</p></li>
+<li><p><span class="math inline">\(\ln(t(X))\)</span> is called the offset</p></li>
+<li><p>Offsets can also be something like the population size in a city…</p></li>
+</ul>
+</section>
+<section id="example-2-lung-cancer-incidence-2" class="slide level2">
+<h2>Example 2: Lung Cancer Incidence</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>lc_mod <span class="ot">=</span> <span class="fu">glm</span>(cases <span class="sc">~</span> city <span class="sc">+</span> age, <span class="at">offset=</span>lpop, <span class="at">family=</span>poisson, <span class="at">data=</span>lc_inc)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">summary</span>(lc_mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = cases ~ city + age, family = poisson, data = lc_inc, 
+    offset = lpop)
+
+Coefficients:
+            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)  -5.6321     0.2003 -28.125  &lt; 2e-16 ***
+cityHorsens  -0.3301     0.1815  -1.818   0.0690 .  
+cityKolding  -0.3715     0.1878  -1.978   0.0479 *  
+cityVejle    -0.2723     0.1879  -1.450   0.1472    
+age55-59      1.1010     0.2483   4.434 9.23e-06 ***
+age60-64      1.5186     0.2316   6.556 5.53e-11 ***
+age65-69      1.7677     0.2294   7.704 1.31e-14 ***
+age70-74      1.8569     0.2353   7.891 3.00e-15 ***
+age75+        1.4197     0.2503   5.672 1.41e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 129.908  on 23  degrees of freedom
+Residual deviance:  23.447  on 15  degrees of freedom
+AIC: 137.84
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+</div>
 </section>
 <section id="further-reading-tutorials-on-poisson-regression" class="slide level2">
 <h2>Further reading / tutorials on Poisson regression</h2>
-</section>
-<section id="model-construction-include-offset-i" class="slide level2">
-<h2>Model Construction – Include Offset (I)</h2>
-</section>
-<section id="model-construction-include-offset-ii" class="slide level2">
-<h2>Model Construction – Include Offset (II)</h2>
-</section>
-<section id="test-for-significance-in-parameter-i" class="slide level2">
-<h2>Test for Significance in Parameter (I)</h2>
-</section>
-<section id="test-for-significance-in-parameter-ii" class="slide level2">
-<h2>Test for Significance in Parameter (II)</h2>
+<ul>
+<li><p><a href="https://www.dataquest.io/blog/tutorial-poisson-regression-in-r/">Good tutorial in R</a></p></li>
+<li><p>When people are followed for different amounts of time, we should include an offset</p>
+<ul>
+<li>Poisson Regression Modeling Using Rate Data: section from above site that discusses offsets</li>
+</ul></li>
+<li><p>We can use Wald test and LRT in the same way as logistic regression to test our coefficients and variables</p></li>
+</ul>
 
 <div class="footer footer-default">
 <p>Lesson 16: Poisson Regression</p>
@@ -764,6 +2131,44 @@ Nicky Wakim
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

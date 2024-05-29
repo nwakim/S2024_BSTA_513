@@ -1691,7 +1691,7 @@
     "href": "weeks/week_09_sched.html#resources",
     "title": "Week 9",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n16\nPoisson Regression"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n16\nPoisson Regression"
   },
   {
     "objectID": "weeks/week_09_sched.html#on-the-horizon",
@@ -8173,14 +8173,14 @@
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution",
     "title": "Lesson 16: Poisson Regression",
     "section": "Poisson Distribution",
-    "text": "Poisson Distribution\n\nThis distribution is often used to model count data\nExamples:\n\nDistribution of number of deaths due to lung cancer\nDistribution of number of individuals diagnosed with leukemia\nDistribution of number of hospitalizations"
+    "text": "Poisson Distribution\n\nThis distribution is often used to model count data\nExamples:\n\nDistribution of number of deaths due to lung cancer\nDistribution of number of individuals diagnosed with leukemia\nDistribution of number of hospitalizations\n\n\n \n\nThis distribution is often used to model rate data\nExamples:\n\nDistribution of number of deaths due to lung cancer per year\nDistribution of number of individuals diagnosed with leukemia over follow-up time\nDistribution of number of hospitalizations in a day"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-ii",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-ii",
     "title": "Lesson 16: Poisson Regression",
     "section": "Poisson Distribution (II)",
-    "text": "Poisson Distribution (II)\n\nThe probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)"
+    "text": "Poisson Distribution (II)\n\nThe probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)\n\n\n\nggplot(data = hcrabs) + geom_bar(aes(x = num.satellites))"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-iii",
@@ -8243,28 +8243,28 @@
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#simple-poisson-regression-model",
     "title": "Lesson 16: Poisson Regression",
     "section": "Simple Poisson Regression Model",
-    "text": "Simple Poisson Regression Model\n\nWhat do we model in a Poisson regression?\nLog of conditional mean of Y given x\n\nLet Y be a Poisson count for a given unit of time, then \\(\\mu(X) =\\lambda(X)\\)\nIn a simple Poisson regression, we have \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\n\nSo this is also called a log-linear model"
+    "text": "Simple Poisson Regression Model\n\nWhat do we model in a Poisson regression?\n\n \n\nLog of conditional mean of Y given x\n\nConditional mean of Y given x is represented as \\(E(Y \\mid X) = \\mu(X)\\)\nLet Y be a Poisson count for a given unit of time, then \\(\\mu(X) =\\lambda(X)\\)\nIn a simple Poisson regression, we have\n\n\n\\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\n \n\nSo this is also called a log-linear model"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-i",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-i",
     "title": "Lesson 16: Poisson Regression",
     "section": "Parameter Interpretation (I)",
-    "text": "Parameter Interpretation (I)\n\nIn simple Poisson regression: \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nWhen \\(X=0\\)\nWhen \\(X=1\\)"
+    "text": "Parameter Interpretation (I)\n\nIn simple Poisson regression: \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nWhen \\(X=0\\): \\[\\ln(\\mu(X = 0)) = \\beta_0 + \\beta_1 \\cdot 0 = \\beta_0\\]\n\n\\(\\mu(X = 0) = \\exp (\\beta_0)\\): the mean rate of \\(Y\\) when \\(X=0\\)\n\nWhen \\(X=1\\): \\[\\ln(\\mu(X = 1)) = \\beta_0 + \\beta_1 \\cdot 1 = \\beta_0 + \\beta_1\\]\n\n\\(\\mu(X = 1) = \\exp (\\beta_0 + \\beta_1)\\): the mean rate of \\(Y\\) when \\(X=1\\)"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-ii",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-ii",
     "title": "Lesson 16: Poisson Regression",
     "section": "Parameter Interpretation (II)",
-    "text": "Parameter Interpretation (II)"
+    "text": "Parameter Interpretation (II)\n\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nBy subtraction, we have \\[\\beta_1 = \\ln(\\mu(X = 1)) -  \\ln(\\mu(X = 0)) = \\ln \\left( \\dfrac{\\mu(X = 1)}{\\mu(X = 0)} \\right)\\]\n\\(\\beta_1\\): log-rate ratio\n\nSince \\(\\mu(X)\\) is \\(\\lambda(X)\\) is the rate of \\(Y\\)\n\nSo \\(\\exp(\\beta_1)\\) is the rate ratio!"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#further-reading-tutorials-on-poisson-regression",
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#further-reading-tutorials-on-poisson-regression",
     "title": "Lesson 16: Poisson Regression",
     "section": "Further reading / tutorials on Poisson regression",
-    "text": "Further reading / tutorials on Poisson regression"
+    "text": "Further reading / tutorials on Poisson regression\n\nGood tutorial in R\nWhen people are followed for different amounts of time, we should include an offset\n\nPoisson Regression Modeling Using Rate Data: section from above site that discusses offsets\n\nWe can use Wald test and LRT in the same way as logistic regression to test our coefficients and variables\n\n\n\nLesson 16: Poisson Regression"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#model-construction-include-offset-i",
@@ -8299,7 +8299,7 @@
     "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-does-lambda-represent-in-the-poisson-distribution",
     "title": "Lesson 16: Poisson Regression",
     "section": "What does \\(\\lambda\\) represent in the Poisson distribution?",
-    "text": "What does \\(\\lambda\\) represent in the Poisson distribution?\n\nWhat does \\(\\lambda\\) represent?\n\nA rate, the expected number of events in a given population over a given period time\n\nExample: Number of patient arrivals into the Emergency Room per hour\nThe Poisson distribution is the prototype for assigning probabilities of observing any number of events"
+    "text": "What does \\(\\lambda\\) represent in the Poisson distribution?\n\nWhat does \\(\\lambda\\) represent?\n\nA rate, the expected number of events in a given population over a given period time\n\n\n \n\nExample: Number of patient arrivals into the Emergency Room per hour\n\n \n\nThe Poisson distribution is the prototype for assigning probabilities of observing any number of events"
   },
   {
     "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#review-generalized-linear-models-glms",
@@ -8356,5 +8356,187 @@
     "title": "Homework 5",
     "section": "Question 2",
     "text": "Question 2\nThis question is taken from the Hosmer and Lemeshow textbook. The ICU study data set consists of a sample of 200 subjects who were part of a much larger study on survival of patients following admission to an adult intensive care unit (ICU). The dataset should be available within Course Materials. The major goal of this study was to develop a logistic regression model to predict the probability of survival to hospital discharge of these patients. In this question, the primary outcome variable is vital status at hospital discharge, STA. Clinicians associated with the study felt that a key determinant of survival was the patient’s age at admission, AGE. We will be building to a multivariable logistic regression model while adjusting for cancer part of the present problem (CAN), CPR prior to ICU admission (CPR), infection probable at ICU admission (INF), and level of consciousness at ICU admission (LOC).\nWe will use the model from Homework 4 Question 1a for this question: \\[\\text{logit}(\\pi(\\textbf{X}))=\\beta_0 + \\beta_1 \\cdot AGE + \\beta_2 \\cdot CAN + \\beta_3 \\cdot CPR + \\\\ \\beta_4 \\cdot INF\\]\n\nicu = read_csv(here(\"data\", \"icu.csv\"))\nicu1 = icu %&gt;% mutate(STA = as.factor(STA) %&gt;% relevel(ref = \"Lived\"))\nicu2 = icu1 %&gt;% mutate(CAN = as.factor(CAN) %&gt;% relevel(ref = \"No\"), \n                     CPR = as.factor(CPR) %&gt;% relevel(ref = \"No\"), \n                     INF = as.factor(INF) %&gt;% relevel(ref = \"No\"), \n                     LOC = as.factor(LOC) %&gt;% \n                       relevel(ref = \"No Coma or Deep Stupor\"))\n\n\nPart a\nAssess the fit of the above model. You may use Hosmer-Lemeshow test, or Pearson Residual as appropriate. Discuss your choice and interpret.\n\n\nPart b\nAssess the your models ability to discriminate vital status (STA) using AUC.\n\n\nPart c\nLet’s say a colleague found a different preliminary final model than yours. Using the below model that your colleague found, compare your model to theirs using AIC and BIC.\n\ncoll_model = glm(STA ~ SYS + AGE + CPR + INF + AGE*CPR, \n                 data = icu2, family = \"binomial\")\ncoll_model\n\n\nCall:  glm(formula = STA ~ SYS + AGE + CPR + INF + AGE * CPR, family = \"binomial\", \n    data = icu2)\n\nCoefficients:\n(Intercept)          SYS          AGE       CPRYes       INFYes   AGE:CPRYes  \n   -1.47960     -0.01343      0.02340     -3.37369      0.53449      0.08370  \n\nDegrees of Freedom: 199 Total (i.e. Null);  194 Residual\nNull Deviance:      200.2 \nResidual Deviance: 172.5    AIC: 184.5"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#our-example-horseshoe-crabs-and-satellites",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#our-example-horseshoe-crabs-and-satellites",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Our example: Horseshoe Crabs and Satellites",
+    "text": "Our example: Horseshoe Crabs and Satellites\n\n\nEach female horseshoe crab in the study had a male crab attached to her in her nest. The study investigated factors that affect whether the female crab had any other males, called satellites, residing near her. Explanatory variables that are thought to affect this included the female crab’s color, spine condition, and carapace width, and weight. The response outcome for each female crab is the number of satellites. There are 173 females in this study.\n \n\nlibrary(rsq)\ndata(hcrabs)"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-12",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-12",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Poisson Distribution (1/2)",
+    "text": "Poisson Distribution (1/2)\n\n\n\nThe probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)\n\n\n\n\nggplot(data = hcrabs) + \n    geom_bar(aes(x = num.satellites))"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-22",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-22",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Poisson Distribution (2/2)",
+    "text": "Poisson Distribution (2/2)\n\nIf we look at the probability of \\(y\\) events in a time period \\(t\\) for a Poisson random variable, we could write: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!} = \\dfrac{(\\lambda t)^y e^{-\\lambda t}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu = \\lambda t\\), where \\(\\lambda\\) is the expected number of events per unit time (aka rate)\nThen \\(\\mu\\) is the expected number of events over time \\(t\\)"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-binary-x-12",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-binary-x-12",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Parameter Interpretation: Binary \\(X\\) (1/2)",
+    "text": "Parameter Interpretation: Binary \\(X\\) (1/2)\n\nIn simple Poisson regression: \\[\\ln(\\mu(X)) = \\ln(\\lambda(X)) = \\beta_0 + \\beta_1 X\\]\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nWhen \\(X=0\\): \\[\\ln(\\mu(X = 0)) = \\beta_0 + \\beta_1 \\cdot 0 = \\beta_0\\]\n\n\\(\\mu(X = 0) = \\exp (\\beta_0)\\): the mean count or rate of \\(Y\\) when \\(X=0\\)\n\nWhen \\(X=1\\): \\[\\ln(\\mu(X = 1)) = \\beta_0 + \\beta_1 \\cdot 1 = \\beta_0 + \\beta_1\\]\n\n\\(\\mu(X = 1) = \\exp (\\beta_0 + \\beta_1)\\): the mean count or rate of \\(Y\\) when \\(X=1\\)"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-binary-x-22",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-binary-x-22",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Parameter Interpretation: Binary \\(X\\) (2/2)",
+    "text": "Parameter Interpretation: Binary \\(X\\) (2/2)\n\nWhen \\(X\\) is a binary variable: How do we interpret \\(\\beta_1\\)?\n\nBy subtraction, we have \\[\\beta_1 = \\ln(\\mu(X = 1)) -  \\ln(\\mu(X = 0)) = \\ln \\left( \\dfrac{\\mu(X = 1)}{\\mu(X = 0)} \\right)\\]\n\\(\\beta_1\\): log-count ratio or log-rate ratio\n\nSince \\(\\mu(X)\\) is \\(\\lambda(X)\\) is the rate of \\(Y\\)\n\nSo \\(\\exp(\\beta_1)\\) is the count or rate ratio!"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-continuous-x",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#parameter-interpretation-continuous-x",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Parameter Interpretation: Continuous \\(X\\)",
+    "text": "Parameter Interpretation: Continuous \\(X\\)\n\nWhen \\(X\\) is a continuous variable: How do we interpret \\(\\beta_0\\)?\n\n\\(\\beta_0\\): log-count or log-rate when \\(X\\) is 0\nSo \\(\\exp(\\beta_0)\\) is the expected count or rate when \\(X\\) is 0\n\nWhen \\(X\\) is a continuous variable: How do we interpret \\(\\beta_1\\)?\n\n\\(\\beta_1\\): log-count ratio or log-rate ratio for every 1 unit increase in \\(X\\)\n\nSince \\(\\mu(X)\\) is \\(\\lambda(X)\\) is the rate of \\(Y\\)\n\nSo \\(\\exp(\\beta_1)\\) is the rate ratio for every 1 unit increase in \\(X\\)"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-12",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-12",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Why Person-Years? (1/2)",
+    "text": "Why Person-Years? (1/2)\n\nIn the example of number of patient arrivals, an event does not conclude the study\n\nIf someone arrives within the first minute of the study, then we keep counting\nWe may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving\n\nWhat happens if we want to measure qualities of the individual?\n\nWe can measure a hospitalization rate"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-22",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years-22",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Why Person-Years? (2/2)",
+    "text": "Why Person-Years? (2/2)\n\nIf we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1\n\nExample: Number of individuals diagnosed with leukemia\nThis only happens once, so how do we measure the rate here?\n\nSince rate involves the counts and time – we can use the time to diagnosis to estimate the rate\n\nOften expressed in units such as events per thousand person-years\n\nExample: effects of radiation exposure in Chernobyl disaster\n\nIf we measure deaths or cancer incidence due to radiation exposure\nTime plays a factor in measuring these outcomes\nDistance plays a factor in the amount of radiation exposure\n\nWhich can be measured on an individual basis"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poll-everywhere-question-2",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poll-everywhere-question-2",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-1-horseshoe-crabs-and-satellites",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-1-horseshoe-crabs-and-satellites",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Example 1: Horseshoe Crabs and Satellites",
+    "text": "Example 1: Horseshoe Crabs and Satellites\n\n\nExample of count data:\nEach female horseshoe crab in the study had a male crab attached to her in her nest. The study investigated factors that affect whether the female crab had any other males, called satellites, residing near her. Explanatory variables that are thought to affect this included the female crab’s color, spine condition, and carapace width, and weight. The response outcome for each female crab is the number of satellites. There are 173 females in this study.\n \n\nlibrary(rsq)\ndata(hcrabs)"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-1-horseshoe-crabs-and-satellites-1",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-1-horseshoe-crabs-and-satellites-1",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Example 1: Horseshoe Crabs and Satellites",
+    "text": "Example 1: Horseshoe Crabs and Satellites\n\n\n\nggplot(hcrabs, \n       aes(x=width, \n           y=num.satellites)) + \n  geom_point(size = 2)\n\n\n\n\n\n\ncrab_mod = glm(num.satellites ~ width, \n                family=poisson, \n                data=hcrabs)\ntidy(crab_mod, conf.int=T, \n     exponentiate=T) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 35) %&gt;%\n  fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.04\n0.54\n−6.09\n0.00\n0.01\n0.11\n    width\n1.18\n0.02\n8.22\n0.00\n1.13\n1.23\n  \n  \n  \n\n\n\n\n\n\nInterpretation: For every 1-cm increase in carapace width, the expected number of satellites increases by 18% (95% CI: 13%, 23%)."
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#in-summary",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#in-summary",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "In summary…",
+    "text": "In summary…\n\nPoisson regression can be used to model\n\nCount data\nRate data"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-2-lung-cancer-incidence",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-2-lung-cancer-incidence",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Example 2: Lung Cancer Incidence",
+    "text": "Example 2: Lung Cancer Incidence\nExample of rate data:\nWe can look at the lung cancer incident counts (cases) per age group for four Danish cities from 1968 to 1971. Since it’s reasonable to assume that the expected count of lung cancer incidents is proportional to the population size, we would prefer to model the rate of incidents per capita.\n \n\nlibrary(ISwR)\ndata(eba1977)\nlc_inc = eba1977 %&gt;% mutate(lpop = log(pop))"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-with-a-count",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-with-a-count",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Poisson Distribution with a count",
+    "text": "Poisson Distribution with a count\n\n\n\nThe probability function of Poisson distribution: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu\\) is the mean of \\(Y\\), that is \\(E(Y)=\\mu\\)\nAnd also, \\(\\text{var}(Y)=\\mu\\)\n\nFor a Poisson distribution, \\(Y \\sim \\text{Poisson}(\\mu)\\)\n\nRange: \\([0, \\infty)\\)\n\n\n\n\nggplot(data = hcrabs) + \n    geom_bar(aes(x = num.satellites))"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-with-a-rate",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poisson-distribution-with-a-rate",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Poisson Distribution with a rate",
+    "text": "Poisson Distribution with a rate\n\nIf we look at the probability of \\(y\\) events in a time period \\(t\\) for a Poisson random variable, we could write: \\[P(Y = y | \\mu) = \\dfrac{\\mu^y e^{-\\mu}}{y!} = \\dfrac{(\\lambda t)^y e^{-\\lambda t}}{y!}\\]\n\nWhere \\(y\\)’s are non-negative integers \\(y=0, 1, 2,...\\)\nWhere \\(\\mu = \\lambda t\\), where \\(\\lambda\\) is the expected number of events per unit time (aka rate)\nThen \\(\\mu\\) is the expected number of events over time \\(t\\)"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-are-person-years",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-are-person-years",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "What are person-years?",
+    "text": "What are person-years?"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#building-towards-person-years-12",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#building-towards-person-years-12",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Building towards person-years (1/2)",
+    "text": "Building towards person-years (1/2)\n\nIn an example of number of patient arrivals, an event does not conclude the study\n\nIf someone arrives within the first minute of the study, then we keep counting\nWe may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving\n\n\n \n\nFor example, in the lung cancer study, we can only discuss the incidence of cancer at the city-wide level\n\n \n\nWhat happens if we want to measure qualities of the individual?\n\nWe can measure a hospitalization rate"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-is-a-person-year-and-how-to-calculate",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#what-is-a-person-year-and-how-to-calculate",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "What is a Person-Year and how to calculate?",
+    "text": "What is a Person-Year and how to calculate?\n\nOne person-year is a unit of time defined as one person being followed for one year\n\n \n\nPerson-years for a sample of n subjects is calculated as the total years followed for the n subjects, where each subject could have different follow-up time\n\n \n\nExample: suppose we have 5 subjects, two of the subjects were followed for 2 years, and two of them are followed for 3 years and the fifth subject was followed for 3.8 years\n\n\\[\\text{person-years} = 2 \\text{ people} \\cdot 2 \\text{ years} +2 \\text{ people} \\cdot 3 \\text{ years}+ 1 \\text{ person} \\cdot 3.8 \\text{ years} = 13.8 \\text{ person-years}\\]"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#building-towards-person-years",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#building-towards-person-years",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Building towards person-years",
+    "text": "Building towards person-years\n\nIn an example of number of patient arrivals, an event does not conclude the study\n\nIf someone arrives within the first minute of the study, then we keep counting\nWe may be able to study the association of arrivals with qualities of the hospital, but we can’t measure qualities of the individuals arriving\n\n\n \n\nFor example, in the lung cancer study, we can only discuss the incidence of cancer at the city-wide level\n\n \n\nWhat happens if we want to measure qualities of the individual?\n\nWe can measure a hospitalization rate"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#why-person-years",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Why Person-Years?",
+    "text": "Why Person-Years?\n\nIf we are measuring at the individual level and counting something that is “terminal” then our count will always be 0 or 1\n\nExample: Number of individuals diagnosed with leukemia\nThis only happens once, so how do we measure the rate here?\n\n\n \n\nSince rate involves the counts and time – we can use the time to diagnosis to estimate the rate\n\nOften expressed in units such as events per thousand person-years\n\n\n \n\nPerson-years allow us to follow individuals for different amounts of time"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#calculating-rate",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#calculating-rate",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Calculating Rate",
+    "text": "Calculating Rate\n\nSuppose that we observe one event during the follow-up period, then\n\n\\[\\begin{aligned}\n\\text{Rate of event} &= \\dfrac{\\# events}{\\text{person-years}}= \\dfrac{1 \\text{ event}}{13.8 \\text{person-years}} \\\\ &= 0.072 \\text{ events per person−year} \\\\ &=72 \\text{ events per } 1000 \\text{ person−years} \\end{aligned}\\]\n\nNow our rate of event is measured per person-year\n\nOften use 1000 person-years to count the events with whole numbers"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-2-lung-cancer-incidence-1",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-2-lung-cancer-incidence-1",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Example 2: Lung Cancer Incidence",
+    "text": "Example 2: Lung Cancer Incidence\n\n\n\nggplot(lc_inc, aes(x=age, y=cases, \n           color = city)) + \n  geom_point(size = 2)\n\n\n\n\n\n\nlc_mod = glm(cases ~ city + age, \n            offset=lpop, \n            family=poisson, \n            data=lc_inc)\n\n\n\nRegression table\ntidy(lc_mod, conf.int=T, \n     exponentiate=T) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 30) %&gt;%\n  fmt_number(decimals = 3)\n\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n0.004\n0.200\n−28.125\n0.000\n0.002\n0.005\n    cityHorsens\n0.719\n0.182\n−1.818\n0.069\n0.503\n1.026\n    cityKolding\n0.690\n0.188\n−1.978\n0.048\n0.476\n0.995\n    cityVejle\n0.762\n0.188\n−1.450\n0.147\n0.525\n1.099\n    age55-59\n3.007\n0.248\n4.434\n0.000\n1.843\n4.901\n    age60-64\n4.566\n0.232\n6.556\n0.000\n2.907\n7.236\n    age65-69\n5.857\n0.229\n7.704\n0.000\n3.748\n9.249\n    age70-74\n6.404\n0.235\n7.891\n0.000\n4.043\n10.212\n    age75+\n4.136\n0.250\n5.672\n0.000\n2.523\n6.762"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#poll-everywhere-question-3",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#poll-everywhere-question-3",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#including-an-offset-when-we-have-different-follow-up-times",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#including-an-offset-when-we-have-different-follow-up-times",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Including an offset when we have different follow-up times",
+    "text": "Including an offset when we have different follow-up times\n\nWhat if we have data that each observation has different period of time?\n\nFor example, we look at number of ED visits when subjects are enrolled in Oregon Health Plan, however, each subjects are enrolled in the plan for different length of time…\nHow do we incorporate this different length of time?\n\nNote we have: \\(\\mu = \\lambda t\\) and with predictor \\(X\\), \\(\\mu(X) = \\lambda(X) \\cdot t(X)\\)\n\n\\(t\\) is now a function of the individual, represented with \\(X\\)\n\nThen we construct:\n\n\\[\\begin{aligned} \\ln(\\lambda(X)) = & \\beta_0 + \\beta_1 X \\\\\n\\ln(\\lambda(X)) = \\ln\\left(\\dfrac{\\mu(X)}{t(X)}\\right) = \\ln(\\mu(X)) - \\ln(t(X)) = &\\beta_0 + \\beta_1 X \\\\\n\\ln(\\mu(X)) = & \\ln(t(X)) + \\beta_0 + \\beta_1 X\\\\ \\end{aligned}\\]"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#including-an-offset-when-we-have-different-follow-up-times-1",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#including-an-offset-when-we-have-different-follow-up-times-1",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Including an offset when we have different follow-up times",
+    "text": "Including an offset when we have different follow-up times\n\nThat is, to incorporate the different lengths in the model,\n\n\\[\\ln(\\mu(X)) =  \\ln(t(X)) + \\beta_0 + \\beta_1 X\\]\n\nWe have one more term in the model and this term is called offset, a known term in the model since \\(t(X)\\) is known for each individual\n\\(\\ln(t(X))\\) is called the offset\nOffsets can also be something like the population size in a city…"
+  },
+  {
+    "objectID": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-2-lung-cancer-incidence-2",
+    "href": "lectures/16_Poisson_regression/16_Poisson_regression.html#example-2-lung-cancer-incidence-2",
+    "title": "Lesson 16: Poisson Regression",
+    "section": "Example 2: Lung Cancer Incidence",
+    "text": "Example 2: Lung Cancer Incidence\n\nlc_mod = glm(cases ~ city + age, offset=lpop, family=poisson, data=lc_inc)\nsummary(lc_mod)\n\n\nCall:\nglm(formula = cases ~ city + age, family = poisson, data = lc_inc, \n    offset = lpop)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  -5.6321     0.2003 -28.125  &lt; 2e-16 ***\ncityHorsens  -0.3301     0.1815  -1.818   0.0690 .  \ncityKolding  -0.3715     0.1878  -1.978   0.0479 *  \ncityVejle    -0.2723     0.1879  -1.450   0.1472    \nage55-59      1.1010     0.2483   4.434 9.23e-06 ***\nage60-64      1.5186     0.2316   6.556 5.53e-11 ***\nage65-69      1.7677     0.2294   7.704 1.31e-14 ***\nage70-74      1.8569     0.2353   7.891 3.00e-15 ***\nage75+        1.4197     0.2503   5.672 1.41e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 129.908  on 23  degrees of freedom\nResidual deviance:  23.447  on 15  degrees of freedom\nAIC: 137.84\n\nNumber of Fisher Scoring iterations: 5"
   }
 ]
