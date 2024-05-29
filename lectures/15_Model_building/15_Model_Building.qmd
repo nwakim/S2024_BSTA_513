@@ -56,12 +56,6 @@ set.seed(513613)
 
 4. Perform LASSO regression on a dataset using R and the general process for classification methods.
 
-```{css, echo=FALSE}
-.reveal code {
-  max-height: 80% !important;
-}
-```
-
 # Learning Objectives
 
 ::: lob
@@ -719,7 +713,9 @@ vi_data_int$Variable
   - I used ChatGPT to help me because I'm pretty new to `tidymodels`: [let's view what I asked](https://chatgpt.com/c/506e4235-52fc-46b9-a9ad-6edf425818d5)
 
 ```{r}
-interactions = vi_data_int %>% filter(grepl("_x_", Variable))
+interactions = vi_data_int %>% filter(grepl("_x_", Variable)) %>%
+                select(Variable) %>% separate(Variable, "_x_")
+                
 
 interaction_terms = ~ (all_predictors()^2) - #Makes interactions b/w all predictors
                       fracscore:starts_with("premeno") - # Removes this interaction
