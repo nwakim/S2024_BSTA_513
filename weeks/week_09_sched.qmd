@@ -66,9 +66,13 @@ editor_options:
 
 -   Review of Quiz 2
 
+-   Quiz 3 will open on Monday 6/3!!
+
+    -   It will cover Lesson 10-15
+
 ## Class Exit Tickets
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (5/29)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUODY5QVZZQzFFRE5IRFFIMjRLTVpZWVhJWC4u)]{style="color:#f8f5f0;"} Wednesday (5/29)
 
 ## Muddiest Points
 
