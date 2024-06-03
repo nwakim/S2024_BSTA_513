@@ -31,7 +31,7 @@ editor_options:
 ## Resources
 
 | Lesson | Topic              |                                                               Slides                                                               |                                  Annotated Slides                                  |                           Recording                           |
-|---------------|---------------|:-------------:|:-------------:|:-------------:|
+|--------|--------------------|:----------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:-------------------------------------------------------------:|
 | 16     | Poisson Regression | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/16_Poisson_regression/16_Poisson_regression.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
@@ -39,6 +39,8 @@ editor_options:
 ## Announcements
 
 ### Wednesday 5/29
+
+-   
 
 -   Some student events coming up
 

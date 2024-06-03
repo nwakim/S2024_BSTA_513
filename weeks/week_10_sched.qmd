@@ -36,21 +36,40 @@ On Monday, 6/3, we will be in RPV Room A (1217)
 
 ## Resources
 
-| Chapter | Topic |                                Slides                                 |                                  Annotated Slides                                  |                           Recording                           |
-|------------|------------|:-------------:|:-----------------:|:-----------:|
-|         |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 13      |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 14      |       | [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| Lesson | Topic                                   |                                                               Slides                                                               |                                  Annotated Slides                                  |                           Recording                           |
+|---------------|---------------|:-------------:|:-------------:|:-------------:|
+| 16     | Poisson Regression                      | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/16_Poisson_regression/16_Poisson_regression.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 17     | Other types of categorical regressions! |                               [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
 
 ## On the Horizon
 
+-   Quiz 3 open 6/3 at 2pm
+
+    -   Closes on 6/5 at 1pm
+
+-   Lab 4 due yesterday!
+
+-   HW 5 due 6/6 at 11pm
+
+-   Project report due 6/13 at 11pm
+
 ## Announcements
+
+-   In the last stretch of the project
+
+    -   Class time next week dedicated to project report help
+
+    -   I *may* have other time slots for project help next week. I just need to take a serious look at my calendar
+
+        -   I'm attending a virtual stat ed conference, so I just need to balance meetings with conference attendance
+
+-   No office hours this Wednesday 6/5
 
 ## Class Exit Tickets
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Monday (6/3)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUMkFER0lXTDdTUzIxN1A1QkJWUUVDNkRNRC4u)]{style="color:#f8f5f0;"} Monday (6/3)
 
-[{{< iconify healthicons health-worker-form-negative size=30px >}}]{style="color:#f8f5f0;"} Wednesday (6/5)
+[[{{< iconify healthicons health-worker-form-negative size=30px >}}](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURFlUQUhaRURCTEJVVlBKUEc5RDhCN04zQS4u)]{style="color:#f8f5f0;"} Wednesday (6/5)
 
 ## Muddiest Points
 

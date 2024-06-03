@@ -1586,21 +1586,21 @@
     "href": "weeks/week_10_sched.html#resources",
     "title": "Week 10",
     "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\n\n\nChapter\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n\n\n\n\n\n\n\n13\n\n\n\n\n\n\n14"
+    "text": "Resources\n\n\n\nLesson\nTopic\nSlides\nAnnotated Slides\nRecording\n\n\n\n\n16\nPoisson Regression\n\n\n\n\n\n17\nOther types of categorical regressions!"
   },
   {
     "objectID": "weeks/week_10_sched.html#on-the-horizon",
     "href": "weeks/week_10_sched.html#on-the-horizon",
     "title": "Week 10",
     "section": "On the Horizon",
-    "text": "On the Horizon"
+    "text": "On the Horizon\n\nQuiz 3 open 6/3 at 2pm\n\nCloses on 6/5 at 1pm\n\nLab 4 due yesterday!\nHW 5 due 6/6 at 11pm\nProject report due 6/13 at 11pm"
   },
   {
     "objectID": "weeks/week_10_sched.html#announcements",
     "href": "weeks/week_10_sched.html#announcements",
     "title": "Week 10",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nIn the last stretch of the project\n\nClass time next week dedicated to project report help\nI may have other time slots for project help next week. I just need to take a serious look at my calendar\n\nI’m attending a virtual stat ed conference, so I just need to balance meetings with conference attendance\n\n\nNo office hours this Wednesday 6/5"
   },
   {
     "objectID": "weeks/week_10_sched.html#class-exit-tickets",
@@ -7984,7 +7984,7 @@
     "href": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions-2",
     "title": "Lesson 15: Model Building",
     "section": "Step 2: Fit LASSO: Identify interactions",
-    "text": "Step 2: Fit LASSO: Identify interactions\n\nI combed through the column names of the results to find the interactions\n\nI used ChatGPT to help me because I’m pretty new to tidymodels: let’s view what I asked\n\n\n\ninteractions = vi_data_int %&gt;% filter(grepl(\"_x_\", Variable))\n\ninteraction_terms = ~ (all_predictors()^2) - #Makes interactions b/w all predictors\n                      fracscore:starts_with(\"premeno\") - # Removes this interaction\n                      height:starts_with(\"premeno\") - \n                      height:starts_with(\"smoke\") - \n                      height:starts_with(\"momfrac\")"
+    "text": "Step 2: Fit LASSO: Identify interactions\n\nI combed through the column names of the results to find the interactions\n\nI used ChatGPT to help me because I’m pretty new to tidymodels: let’s view what I asked\n\n\n\ninteractions = vi_data_int %&gt;% filter(grepl(\"_x_\", Variable)) %&gt;%\n                select(Variable) %&gt;% separate(Variable, \"_x_\")\n                \n\ninteraction_terms = ~ (all_predictors()^2) - #Makes interactions b/w all predictors\n                      fracscore:starts_with(\"premeno\") - # Removes this interaction\n                      height:starts_with(\"premeno\") - \n                      height:starts_with(\"smoke\") - \n                      height:starts_with(\"momfrac\")"
   },
   {
     "objectID": "lectures/15_Model_building/15_Model_Building.html#step-2-fit-lasso-identify-interactions-1",

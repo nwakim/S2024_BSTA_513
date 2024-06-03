@@ -414,13 +414,6 @@ Nicky Wakim
 <li><p>Understand how penalized regression is a form of model/variable selection.</p></li>
 <li><p>Perform LASSO regression on a dataset using R and the general process for classification methods.</p></li>
 </ol>
-<div class="cell">
-<style type="text/css">
-.reveal code {
-  max-height: 80% !important;
-}
-</style>
-</div>
 </section>
 
 <section>
@@ -1947,7 +1940,7 @@ MSE = \text{bias}\big(\widehat\beta\big)^2 + \text{variance}\big(\widehat\beta\b
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(glow1, <span class="fu">aes</span>(<span class="at">x =</span> fracture)) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="15_Model_Building_files/figure-revealjs/unnamed-chunk-7-1.png" width="288" class="r-stretch"><ul>
+<img data-src="15_Model_Building_files/figure-revealjs/unnamed-chunk-6-1.png" width="288" class="r-stretch"><ul>
 <li><p>Side note: took out <code>bmi</code> and <code>weight</code> bc we have multicollinearity issues</p>
 <ul>
 <li>Combo of I hate these variables and my previous work in the LASSO identified these as not important</li>
@@ -2182,13 +2175,15 @@ $ age_c     &lt;dbl&gt; -13, -10, 3, -8, 17, 0, 6, -5, 1, 17, -11, -6, -10, -12,
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>interactions <span class="ot">=</span> vi_data_int <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">grepl</span>(<span class="st">"_x_"</span>, Variable))</span>
-<span id="cb22-2"><a href="#cb22-2"></a></span>
-<span id="cb22-3"><a href="#cb22-3"></a>interaction_terms <span class="ot">=</span> <span class="er">~</span> (<span class="fu">all_predictors</span>()<span class="sc">^</span><span class="dv">2</span>) <span class="sc">-</span> <span class="co">#Makes interactions b/w all predictors</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a>                      fracscore<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"premeno"</span>) <span class="sc">-</span> <span class="co"># Removes this interaction</span></span>
-<span id="cb22-5"><a href="#cb22-5"></a>                      height<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"premeno"</span>) <span class="sc">-</span> </span>
-<span id="cb22-6"><a href="#cb22-6"></a>                      height<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"smoke"</span>) <span class="sc">-</span> </span>
-<span id="cb22-7"><a href="#cb22-7"></a>                      height<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"momfrac"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>interactions <span class="ot">=</span> vi_data_int <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">grepl</span>(<span class="st">"_x_"</span>, Variable)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>                <span class="fu">select</span>(Variable) <span class="sc">%&gt;%</span> <span class="fu">separate</span>(Variable, <span class="st">"_x_"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3"></a>                </span>
+<span id="cb22-4"><a href="#cb22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5"></a>interaction_terms <span class="ot">=</span> <span class="er">~</span> (<span class="fu">all_predictors</span>()<span class="sc">^</span><span class="dv">2</span>) <span class="sc">-</span> <span class="co">#Makes interactions b/w all predictors</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>                      fracscore<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"premeno"</span>) <span class="sc">-</span> <span class="co"># Removes this interaction</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>                      height<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"premeno"</span>) <span class="sc">-</span> </span>
+<span id="cb22-8"><a href="#cb22-8"></a>                      height<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"smoke"</span>) <span class="sc">-</span> </span>
+<span id="cb22-9"><a href="#cb22-9"></a>                      height<span class="sc">:</span><span class="fu">starts_with</span>(<span class="st">"momfrac"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-2-fit-lasso-create-recipe-and-fit-model-from-lasso" class="slide level2">
@@ -2295,7 +2290,7 @@ $ age_c     &lt;dbl&gt; -13, -10, 3, -8, 17, 0, 6, -5, 1, 17, -11, -6, -10, -12,
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="15_Model_Building_files/figure-revealjs/unnamed-chunk-24-1.png" width="672"></p>
+<p><img data-src="15_Model_Building_files/figure-revealjs/unnamed-chunk-23-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2339,7 +2334,7 @@ $ age_c     &lt;dbl&gt; -13, -10, 3, -8, 17, 0, 6, -5, 1, 17, -11, -6, -10, -12,
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="15_Model_Building_files/figure-revealjs/unnamed-chunk-27-1.png" width="672"></p>
+<p><img data-src="15_Model_Building_files/figure-revealjs/unnamed-chunk-26-1.png" width="672"></p>
 </figure>
 </div>
 </div>
