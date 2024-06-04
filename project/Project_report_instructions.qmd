@@ -24,7 +24,7 @@ execute:
 ## Directions
 
 ::: callout-important
-## Project template
+### Project template
 
 You *may* use [this project template](https://github.com/nwakim/S2024_BSTA_513/blob/main/project/Project_template.qmd) to get started on the report. It is your responsibility to meet the formatting guidelines below!!
 
@@ -90,10 +90,20 @@ Also note that these were converted to PDFs so I could write in feedback. Some o
 
 The above reports have code showing in their `html`. Remember that I am asking you to **hide** all code, warnings, and messages.
 
+### Grading
+
 ::: panel-tabset
 ### Grading
 
 The project report is out of 36 points. Note that the Statistical Methods and Results sections are graded on an 8-point scale, while all other components are graded on a 4-point scale.
+
+::: callout-important
+### Some words on my grading process
+
+In the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions. 
+
+Another word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone's overall course letter grade goes down. If less than ~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone's reports. I will make a class wide grade bump in all reports. 
+:::
 
 ### Rubric
 
@@ -134,6 +144,31 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 
     -   If you would like to use Quarto's citation tool, you can! I actually pair it with Zotero and it works beautifully! (But I would not embark on this if you haven't used Zotero before)
 :::
+
+### Guide on figures
+
+- The only figure that I require in the report is Table 1
+- If you are focusing on prediction (LASSO) than you may not need to present your odds ratios at all. 
+  - I think it will be good to do this since LASSO does allow for interpretations and we framed our project as such
+- If you have a lot of predictors (i.e. you included categorical income or family size), please do not put a giant table of forest plot in the middle of your results
+  - Even if you did not include these variables, you can keep the full table/plot in the appendix
+  - Put this big table or plot in the appendix!
+- When it comes to reporting the odds ratios: you can simply include the estimated odds ratio in text (as an interpretation)
+  - This should ONLY be for your variable of interest!
+  - If your variable has multiple categories, discuss the trend and then report an example interpretation to demonstrate how each category should be interpreted
+    - You may wish to include a table showing all the odds ratios for each group
+
+- Another important table may include model assessment values like AUC if you are comparing models
+  - If you only have one model, you may not need to make a table
+
+ 
+  
+- When deciding to create a table or figure, ask yourself: Does this help the reader understand what I am saying in text? Can it be conveyed just as well with words? 
+  - Things that are conveyed better with tables/figures
+    - Comparisons of the same measurement across different models
+    - Multiple calculated values for the same measurement
+      - Like estimated odds ratios for all variables in a model
+
 
 ## Sections
 
@@ -219,6 +254,7 @@ The project report is out of 36 points. Note that the Statistical Methods and Re
 -   Tables & figures
     -   The following are required tables or figures
         -   Table 1 summarizing participant characteristics both **overall** and **stratified by your primary independent variable**
+    -   Other possible tables or figures
         -   Table or figure with regression results
             -   Can be a forest plot
             -   If you have A LOT of coefficient estimates, the forest plot may not work well!

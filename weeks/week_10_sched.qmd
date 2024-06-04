@@ -55,6 +55,8 @@ On Monday, 6/3, we will be in RPV Room A (1217)
 
 ## Announcements
 
+### Monday 6/3
+
 -   In the last stretch of the project
 
     -   Class time next week dedicated to project report help
@@ -70,6 +72,26 @@ On Monday, 6/3, we will be in RPV Room A (1217)
     -   **Wednesday, June 5^th^ Noon-2pm**
 
     -   **Student Success Center, 6^th^ floor Vanport**
+
+### Wednesday 6/5
+
+-   Last day of lecture!!
+
+-   A word on project grading
+
+    -   In the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.
+
+        Another word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone's overall course letter grade goes down. If less than \~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone's reports. I will make a class wide grade bump in all reports.
+
+-   Project: LASSO
+
+    -   You can take the finalized formula for LASSO and use it in `glm()`
+
+        -   In this case, use the test data to come up with predictive values (like AUC)
+
+        -   You can run it on the full dataset to get the coefficient estimates and other diagnostic information
+
+-   Guide on figures
 
 ## Class Exit Tickets
 

@@ -233,7 +233,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the Horizon</a></li>
-  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a>
+  <ul class="collapse">
+  <li><a href="#monday-63" id="toc-monday-63" class="nav-link" data-scroll-target="#monday-63">Monday 6/3</a></li>
+  <li><a href="#wednesday-65" id="toc-wednesday-65" class="nav-link" data-scroll-target="#wednesday-65">Wednesday 6/5</a></li>
+  </ul></li>
   <li><a href="#class-exit-tickets" id="toc-class-exit-tickets" class="nav-link" data-scroll-target="#class-exit-tickets">Class Exit Tickets</a></li>
   <li><a href="#muddiest-points" id="toc-muddiest-points" class="nav-link" data-scroll-target="#muddiest-points">Muddiest Points</a></li>
   </ul>
@@ -267,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 3, 2024</p>
+      <p class="date-modified">June 4, 2024</p>
     </div>
   </div>
     
@@ -350,6 +354,8 @@ Room Locations for the week
 </section>
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<section id="monday-63" class="level3">
+<h3 class="anchored" data-anchor-id="monday-63">Monday 6/3</h3>
 <ul>
 <li><p>In the last stretch of the project</p>
 <ul>
@@ -366,6 +372,27 @@ Room Locations for the week
 <li><p><strong>Student Success Center, 6<sup>th</sup>&nbsp;floor Vanport</strong></p></li>
 </ul></li>
 </ul>
+</section>
+<section id="wednesday-65" class="level3">
+<h3 class="anchored" data-anchor-id="wednesday-65">Wednesday 6/5</h3>
+<ul>
+<li><p>Last day of lecture!!</p></li>
+<li><p>A word on project grading</p>
+<ul>
+<li><p>In the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.</p>
+<p>Another word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone’s overall course letter grade goes down. If less than ~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone’s reports. I will make a class wide grade bump in all reports.</p></li>
+</ul></li>
+<li><p>Project: LASSO</p>
+<ul>
+<li><p>You can take the finalized formula for LASSO and use it in <code>glm()</code></p>
+<ul>
+<li><p>In this case, use the test data to come up with predictive values (like AUC)</p></li>
+<li><p>You can run it on the full dataset to get the coefficient estimates and other diagnostic information</p></li>
+</ul></li>
+</ul></li>
+<li><p>Guide on figures</p></li>
+</ul>
+</section>
 </section>
 <section id="class-exit-tickets" class="level2">
 <h2 class="anchored" data-anchor-id="class-exit-tickets">Class Exit Tickets</h2>

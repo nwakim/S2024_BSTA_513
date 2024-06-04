@@ -4614,6 +4614,8 @@ vertical-align: -.125em;
   <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">1.1</span> Purpose</a></li>
   <li><a href="#formatting-guide" id="toc-formatting-guide" class="nav-link" data-scroll-target="#formatting-guide"><span class="header-section-number">1.2</span> Formatting guide</a></li>
   <li><a href="#examples-of-reports" id="toc-examples-of-reports" class="nav-link" data-scroll-target="#examples-of-reports"><span class="header-section-number">1.3</span> Examples of reports</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="header-section-number">1.4</span> Grading</a></li>
+  <li><a href="#guide-on-figures" id="toc-guide-on-figures" class="nav-link" data-scroll-target="#guide-on-figures"><span class="header-section-number">1.5</span> Guide on figures</a></li>
   </ul></li>
   <li><a href="#sections" id="toc-sections" class="nav-link" data-scroll-target="#sections"><span class="header-section-number">2</span> Sections</a>
   <ul class="collapse">
@@ -4658,7 +4660,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">May 28, 2024</p>
+      <p class="date-modified">June 4, 2024</p>
     </div>
   </div>
     
@@ -4769,11 +4771,28 @@ The project report is a separate file from the labs
 <li><p><a href="https://ohsuitg-my.sharepoint.com/:b:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/W2024_BSTA_512_612/Student_files/Project_examples/Group_07_Report.pdf?csf=1&amp;web=1&amp;e=uWHgnB">Report 2 with my feedback</a></p></li>
 </ul>
 <p>The above reports have code showing in their <code>html</code>. Remember that I am asking you to <strong>hide</strong> all code, warnings, and messages.</p>
+</section>
+<section id="grading" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="grading"><span class="header-section-number">1.4</span> Grading</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Grading</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Rubric</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">More clarifications</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>The project report is out of 36 points. Note that the Statistical Methods and Results sections are graded on an 8-point scale, while all other components are graded on a 4-point scale.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Some words on my grading process
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.</p>
+<p>Another word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone’s overall course letter grade goes down. If less than ~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone’s reports. I will make a class wide grade bump in all reports.</p>
+</div>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <table class="table">
@@ -4889,6 +4908,47 @@ The project report is a separate file from the labs
 </div>
 </div>
 </div>
+</section>
+<section id="guide-on-figures" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="guide-on-figures"><span class="header-section-number">1.5</span> Guide on figures</h3>
+<ul>
+<li>The only figure that I require in the report is Table 1</li>
+<li>If you are focusing on prediction (LASSO) than you may not need to present your odds ratios at all.
+<ul>
+<li>I think it will be good to do this since LASSO does allow for interpretations and we framed our project as such</li>
+</ul></li>
+<li>If you have a lot of predictors (i.e. you included categorical income or family size), please do not put a giant table of forest plot in the middle of your results
+<ul>
+<li>Even if you did not include these variables, you can keep the full table/plot in the appendix</li>
+<li>Put this big table or plot in the appendix!</li>
+</ul></li>
+<li>When it comes to reporting the odds ratios: you can simply include the estimated odds ratio in text (as an interpretation)
+<ul>
+<li>This should ONLY be for your variable of interest!</li>
+<li>If your variable has multiple categories, discuss the trend and then report an example interpretation to demonstrate how each category should be interpreted
+<ul>
+<li>You may wish to include a table showing all the odds ratios for each group</li>
+</ul></li>
+</ul></li>
+<li>Another important table may include model assessment values like AUC if you are comparing models
+<ul>
+<li>If you only have one model, you may not need to make a table</li>
+</ul></li>
+</ul>
+<p> </p>
+<ul>
+<li>When deciding to create a table or figure, ask yourself: Does this help the reader understand what I am saying in text? Can it be conveyed just as well with words?
+<ul>
+<li>Things that are conveyed better with tables/figures
+<ul>
+<li>Comparisons of the same measurement across different models</li>
+<li>Multiple calculated values for the same measurement
+<ul>
+<li>Like estimated odds ratios for all variables in a model</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="sections" class="level2" data-number="2">
@@ -5034,6 +5094,9 @@ The project report is a separate file from the labs
 <li>The following are required tables or figures
 <ul>
 <li>Table 1 summarizing participant characteristics both <strong>overall</strong> and <strong>stratified by your primary independent variable</strong></li>
+</ul></li>
+<li>Other possible tables or figures
+<ul>
 <li>Table or figure with regression results
 <ul>
 <li>Can be a forest plot</li>

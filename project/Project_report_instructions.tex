@@ -177,12 +177,12 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, interior hidden, sharp corners, enhanced]}{\end{tcolorbox}}\fi
 
 \hypertarget{directions}{%
 \subsection{Directions}\label{directions}}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, bottomrule=.15mm, coltitle=black, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Project template}, opacityback=0, arc=.35mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-important-color-frame, breakable]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, toptitle=1mm, leftrule=.75mm, arc=.35mm, colback=white, opacityback=0, coltitle=black, breakable, colframe=quarto-callout-important-color-frame, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Project template}, colbacktitle=quarto-callout-important-color!10!white, bottomrule=.15mm, opacitybacktitle=0.6, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm]
 
 You \emph{may} use
 \href{https://github.com/nwakim/S2024_BSTA_513/blob/main/project/Project_template.qmd}{this
@@ -312,7 +312,7 @@ and connect the work!!}
   \end{itemize}
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, bottomrule=.15mm, coltitle=black, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{The project report is a separate file from the labs}, opacityback=0, arc=.35mm, colback=white, toprule=.15mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, toptitle=1mm, leftrule=.75mm, arc=.35mm, colback=white, opacityback=0, coltitle=black, breakable, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{The project report is a separate file from the labs}, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, opacitybacktitle=0.6, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm]
 
 You can save tables and figures from labs or separate files, then load
 them in the report
@@ -361,11 +361,38 @@ to be legible in the \texttt{html}.
 The above reports have code showing in their \texttt{html}. Remember
 that I am asking you to \textbf{hide} all code, warnings, and messages.
 
+\hypertarget{grading}{%
+\subsubsection{Grading}\label{grading}}
+
 \subsubsection{Grading}
 
 The project report is out of 36 points. Note that the Statistical
 Methods and Results sections are graded on an 8-point scale, while all
 other components are graded on a 4-point scale.
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, left=2mm, toptitle=1mm, leftrule=.75mm, arc=.35mm, colback=white, opacityback=0, coltitle=black, breakable, colframe=quarto-callout-important-color-frame, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Some words on my grading process}, colbacktitle=quarto-callout-important-color!10!white, bottomrule=.15mm, opacitybacktitle=0.6, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm]
+
+In the final lab, I gave you the option to do LASSO regression and focus
+on prediction. I know this created some confusion since we mostly set up
+the project as a question of association in Lab 1-3. We can still
+interpret the odds ratios from LASSO regression. I will be fairly
+lenient if reports are confused between prediction and association aims.
+I will try to give feedback on it, but I will not penalize any minor
+confusions.
+
+Another word: My process starts harsh. I want to give you as much
+feedback as possible, and this will also reflect in lower assigned
+scores. At this point, I put the report grades into Sakai. I check to
+see if anyone's overall course letter grade goes down. If less than
+\textasciitilde5 course grades go down, then I revisit their project
+reports. If their report fails to demonstrate the most important
+learning objectives from the course, then I will keep the lower grade.
+If they demonstrate an understanding of the most important learning
+objectives, then I will adjust their score to increase their course
+grade. If more than 5 grades go down, then I revisit everyone's reports.
+I will make a class wide grade bump in all reports.
+
+\end{tcolorbox}
 
 \subsubsection{Rubric}
 
@@ -518,8 +545,9 @@ of 4 labs. & Discusses 1 out of 4 labs. & No reflection included \\
     \begin{itemize}
     \tightlist
     \item
-      If you are trying to show a trend of mean IAT vs.~an ordered
-      categorical variable, then the variable is ordered on the x-axis
+      If you are trying to show a trend of proportion of food insecurity
+      vs.~an ordered categorical variable, then the variable is ordered
+      on the x-axis
     \end{itemize}
   \end{itemize}
 \item
@@ -535,6 +563,58 @@ of 4 labs. & Discusses 1 out of 4 labs. & No reflection included \\
     If you would like to use Quarto's citation tool, you can! I actually
     pair it with Zotero and it works beautifully! (But I would not
     embark on this if you haven't used Zotero before)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{guide-on-figures}{%
+\subsubsection{Guide on figures}\label{guide-on-figures}}
+
+\begin{itemize}
+\tightlist
+\item
+  The only figure that I require in the report is Table 1
+\item
+  If you are focusing on prediction (LASSO) than you may not need to
+  present your odds ratios at all.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    I think it will be good to do this since LASSO does allow for
+    interpretations and we framed our project as such
+  \end{itemize}
+\item
+  If you have a lot of predictors (i.e.~you included categorical income
+  or family size), please do not put a giant table of forest plot in the
+  middle of your results
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Even if you did not include these variables, you can keep the full
+    table/plot in the appendix
+  \item
+    Put this big table or plot in the appendix!
+  \end{itemize}
+\item
+  When it comes to reporting the odds ratios: you can simply include the
+  estimated odds ratio in text (as an interpretation)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This should ONLY be for your variable of interest!
+  \item
+    If your variable has multiple categories, discuss the trend and then
+    report an example interpretation to demonstrate how each category
+    should be interpreted
+
+    \begin{itemize}
+    \tightlist
+    \item
+      You may wish to include a table showing all the odds ratios for
+      each group
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 
@@ -612,9 +692,9 @@ of 4 labs. & Discusses 1 out of 4 labs. & No reflection included \\
     \item
       In the methods section, I would NOT say: ``We investigated the
       linearity of each continuous covariate visually. We found that age
-      was not linearly related to IAT scores. Thus, we categorized age
-      into the following groups: \_\_\_, \_\_\_\_, \_\_\_\_, \_\_\_\_,
-      and \_\_\_\_.''
+      was not linearly related to log-odds of food insecurity. Thus, we
+      categorized age into the following groups: \_\_\_, \_\_\_\_,
+      \_\_\_\_, \_\_\_\_, and \_\_\_\_.''
 
       \begin{itemize}
       \tightlist
@@ -866,6 +946,12 @@ of 4 labs. & Discusses 1 out of 4 labs. & No reflection included \\
       Table 1 summarizing participant characteristics both
       \textbf{overall} and \textbf{stratified by your primary
       independent variable}
+    \end{itemize}
+  \item
+    Other possible tables or figures
+
+    \begin{itemize}
+    \tightlist
     \item
       Table or figure with regression results
 
@@ -929,7 +1015,7 @@ of 4 labs. & Discusses 1 out of 4 labs. & No reflection included \\
       What can we do with these results? What impact can it have?
     \end{itemize}
   \item
-    Any overarching trends that are worth noting? {[}@Giebel2024{]}
+    Any overarching trends that are worth noting?
   \end{itemize}
 \item
   Should contain some references
@@ -982,7 +1068,7 @@ of 4 labs. & Discusses 1 out of 4 labs. & No reflection included \\
   You introduction should have references, especially when discussing
   the social science behind the analysis
 \item
-  You must reference the IAT data source!!
+  You must reference the WBNS data source!!
 \end{itemize}
 
 \hypertarget{optional-appendix}{%
