@@ -36,10 +36,10 @@ On Monday, 6/3, we will be in RPV Room A (1217)
 
 ## Resources
 
-| Lesson | Topic                                   |                                                               Slides                                                               |                                  Annotated Slides                                  |                           Recording                           |
+| Lesson | Topic                                   |                                                               Slides                                                               |                                                                   Annotated Slides                                                                    |                                                               Recording                                                                |
 |---------------|---------------|:-------------:|:-------------:|:-------------:|
-| 16     | Poisson Regression                      | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/16_Poisson_regression/16_Poisson_regression.qmd)]{style="color:#f8f5f0;"} | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
-| 17     | Other types of categorical regressions! |                               [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                | [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"} |
+| 16     | Poisson Regression                      | [[{{< iconify ri slideshow-fill size=30px >}}](/lectures/16_Poisson_regression/16_Poisson_regression.qmd)]{style="color:#f8f5f0;"} | [[{{< iconify pepicons-pop pen-circle-filled size=29px >}}](/lectures/16_Poisson_regression/16_Poisson_regression_notes.pdf)]{style="color:#f8f5f0;"} | [[{{< iconify mdi video size=34px >}}](https://echo360.org/media/90d582c9-8cfe-42f8-a2ee-2fe4317323b1/public)]{style="color:#f8f5f0;"} |
+| 17     | Other types of categorical regressions! |                               [{{< iconify ri slideshow-fill size=30px >}}]{style="color:#f8f5f0;"}                                |                                  [{{< iconify pepicons-pop pen-circle-filled size=29px >}}]{style="color:#f8f5f0;"}                                   |                                     [{{< iconify mdi video size=34px >}}]{style="color:#f8f5f0;"}                                      |
 
 ## On the Horizon
 
@@ -77,11 +77,13 @@ On Monday, 6/3, we will be in RPV Room A (1217)
 
 -   Last day of lecture!!
 
--   A word on project grading
+-   [A word on project grading](https://nwakim.github.io/S2024_BSTA_513/project/Project_report_instructions.html#grading)
 
     -   In the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.
 
         Another word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone's overall course letter grade goes down. If less than \~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone's reports. I will make a class wide grade bump in all reports.
+
+    -   The most important learning objectives are: understanding when and what test is appropriate, and interpreting odds ratios (from main effects and interactions)
 
 -   Project: LASSO
 
@@ -91,7 +93,7 @@ On Monday, 6/3, we will be in RPV Room A (1217)
 
         -   You can run it on the full dataset to get the coefficient estimates and other diagnostic information
 
--   Guide on figures
+-   [Guide on figures](https://nwakim.github.io/S2024_BSTA_513/project/Project_report_instructions.html#guide-on-figures)
 
 ## Class Exit Tickets
 
