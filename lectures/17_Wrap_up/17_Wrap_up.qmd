@@ -1,0 +1,114 @@
+---
+title: "Lesson 17: Wrap-up and other regressions"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#C2352F"
+date: "6/5/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: "Lesson 17: Wrap-up and other regressions"
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+editor_options: 
+  chunk_output_type: console
+---
+
+## What have we learned in this class?
+
+## Types of regressions
+
+| Dist'n of Y          | Typical uses                                               | Link name | Link function               | Common name                     |
+|------------|--------------------------|------------|--------------------|------------------|
+| Normal               | Linear-response data                                       | Identity  | $g(\mu)=\mu$                | Linear regression               |
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Logit     | $g(\mu)=\text{logit}(\mu)$  | Logistic regression             |
+| Poisson              | count of occurrences in fixed amount of time/space         | Log       | $g(\mu)=\log(\mu)$          | Poisson regression              |
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Log       | $g(\mu)=\log(\mu)$          | Log-binomial regression         |
+| Multinomial          | outcome of single occurence with K \> 2 options, *nominal* | Logit     | $g(\mu)=\text{logit}(\mu)$  | Multinomial logistic regression |
+| Multinomial          | outcome of single occurence with K \> 2 options, *ordinal* | Logit     | $g(\mu)=\text{logit}(\mu)$  | Ordinal logistic regression     |
+
+## Linear regression
+
+## Linear regression resources
+
+-   512/612 class site!!
+-   [Online textbook by Dr. Nahhas](https://www.bookdown.org/rwnahhas/RMPH/mlr.html)
+
+## Logistic regression
+
+## Logistic regression resources
+
+-   [Online textbook by Dr. Nahhas](https://www.bookdown.org/rwnahhas/RMPH/blr.html)
+
+## Poisson Regression
+
+## Poisson Regression resources
+
+-   <https://online.stat.psu.edu/stat504/lesson/9>
+
+-   <https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html>
+
+-   <https://www.youtube.com/watch?v=QPY4zuxs1W0&ab_channel=StatisticsGuideswithProfPaulChristiansen>
+
+-   <https://rpubs.com/Julian_Sampedro/1047952>
+
+-   <https://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html>
+
+## Log-binomial Regression
+
+## Log-binomial Regression resources
+
+-   [Online textbook by Dr. Nahhas](https://www.bookdown.org/rwnahhas/RMPH/blr-log-binomial.html)
+-   <https://www.jstatsoft.org/article/view/v086i09>
+
+## Multinomial logistic regression
+
+## Multinomial logistic regression resources
+
+-   <https://www.youtube.com/watch?v=kn9hfk-Xxdo&list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&index=12&ab_channel=QuantitativeSocialScienceDataAnalysis>
+
+-   <https://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/>
+
+-   <https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html>
+
+## Ordinal logistic regression
+
+## Ordinal logistic regression resources
+
+-   [Online textbook by Dr. Nahhas](https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html)
+-   <https://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15>
+
+## Even more regressions...
+
+| Dist'n of Y          | Typical uses                                               | Link name             | Link function                | Common name                      |
+|--------------|------------------|--------------|--------------|--------------|
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Probit                | $g(\mu)=\Phi^{-1}(\mu)$      | Probit regression                |
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Complementary log-log | $g(\mu)=\log(-\log(1-\mu))$  | Complementary log-log regression |
+| Multinomial          | outcome of single occurence with K \> 2 options, *nominal* |                       |                              | Multinomial probit regression    |
+| Multinomial          | outcome of single occurence with K \> 2 options, *ordinal* |                       |                              | Ordered probit regression        |
+
+## More regression resources
+
+-   Probit regression
+
+-   [Complementary log-log](https://towardsdatascience.com/a-gentle-introduction-to-complementary-log-log-regression-8ac3c5c1cd83)
+
+-   Multinomial probit
+
+-   Ordered probit
+
+## General resources
+
+-   <https://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E>
+
+-   <https://bookdown.org/sarahwerth2024/CategoricalBook/>
+
+-   <https://www.bookdown.org/rwnahhas/RMPH/>

@@ -77,6 +77,10 @@ On Monday, 6/3, we will be in RPV Room A (1217)
 
 -   Last day of lecture!!
 
+-   The class will end on June 14, 2024. **All coursework is expected to be completed by June 16, 2024 at 11pm.**
+
+    -   I need to have grades in on June 21st. In order to grade fairly and thoroughly, I need the whole week to grade the project report and any late assignments.
+
 -   [A word on project grading](https://nwakim.github.io/S2024_BSTA_513/project/Project_report_instructions.html#grading)
 
     -   In the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.
