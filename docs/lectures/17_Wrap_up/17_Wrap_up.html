@@ -340,18 +340,39 @@ Nicky Wakim
 
   <p class="date">2024-06-05</p>
 </section>
-<section id="what-have-we-learned-in-this-class" class="slide level2">
-<h2>What have we learned in this class?</h2>
+<section id="animals-of-the-day" class="slide level2">
+<h2>Animals of the day</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="./images/prince.jpeg"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="./images/forget.jpeg"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="./images/ernie.jpeg"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="./images/all3.jpeg"></p>
+</div>
+</div>
+</section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<ul>
+<li>Let’s zoom out a little and see what types of regressions we can do</li>
+<li>You should have the main tools to perform these regressions
+<ul>
+<li>Each has some nuances, but I’ll give you sources that help walk you through them</li>
+</ul></li>
+</ul>
 </section>
 <section id="types-of-regressions" class="slide level2">
 <h2>Types of regressions</h2>
 <table>
 <colgroup>
-<col style="width: 13%">
-<col style="width: 29%">
-<col style="width: 13%">
-<col style="width: 22%">
-<col style="width: 20%">
+<col style="width: 19%">
+<col style="width: 23%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -413,13 +434,27 @@ Nicky Wakim
 <div class="columns">
 <div class="column">
 <ul>
-<li>Outcome type:</li>
-<li><h2 id="example-outcomes">Example outcomes:</h2></li>
+<li><span style="color:#70AD47"><strong>Outcome type:</strong></span> continuous</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><span style="color:#5B9BD5"><strong>Example outcomes:</strong></span>
+<ul>
+<li>Height</li>
+<li>IAT score</li>
+<li>Heart rate</li>
+</ul></li>
 </ul>
 </div><div class="column">
 <ul>
-<li>Population model</li>
-<li>Interpretations</li>
+<li><span style="color:#ED7D31"><strong>Population model</strong></span></li>
+</ul>
+<p><span class="math display">\[ E(Y \mid X) = \mu = \beta_0 + \beta_1 X\]</span></p>
+<ul>
+<li><span style="color:#D6295E"><strong>Interpretations</strong></span>
+<ul>
+<li>The change in average <span class="math inline">\(Y\)</span> for every 1 unit increase in <span class="math inline">\(X\)</span></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -436,13 +471,27 @@ Nicky Wakim
 <div class="columns">
 <div class="column">
 <ul>
-<li>Outcome type:</li>
-<li><h2 id="example-outcomes-1">Example outcomes:</h2></li>
+<li><span style="color:#70AD47"><strong>Outcome type:</strong></span> binary, yes or no</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><span style="color:#5B9BD5"><strong>Example outcomes:</strong></span>
+<ul>
+<li>Food insecurity</li>
+<li>Disease diagnosis for patient</li>
+<li>Fracture</li>
+</ul></li>
 </ul>
 </div><div class="column">
 <ul>
-<li>Population model</li>
-<li>Interpretations</li>
+<li><span style="color:#ED7D31"><strong>Population model</strong></span></li>
+</ul>
+<p><span class="math display">\[ \text{logit}(\mu) = \beta_0 + \beta_1 X\]</span></p>
+<ul>
+<li><span style="color:#D6295E"><strong>Interpretations</strong></span>
+<ul>
+<li>The log-odds ratio for every 1 unit increase in <span class="math inline">\(X\)</span></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -458,13 +507,27 @@ Nicky Wakim
 <div class="columns">
 <div class="column">
 <ul>
-<li>Outcome type:</li>
-<li><h2 id="example-outcomes-2">Example outcomes:</h2></li>
+<li><span style="color:#70AD47"><strong>Outcome type:</strong></span> Counts or rates</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><span style="color:#5B9BD5"><strong>Example outcomes:</strong></span>
+<ul>
+<li>Number of children in household</li>
+<li>Number of hospital admissions</li>
+<li>Rate of incidence for COVID in US counties</li>
+</ul></li>
 </ul>
 </div><div class="column">
 <ul>
-<li>Population model</li>
-<li>Interpretations</li>
+<li><span style="color:#ED7D31"><strong>Population model</strong></span></li>
+</ul>
+<p><span class="math display">\[ \log(\mu) = \beta_0 + \beta_1 X\]</span></p>
+<ul>
+<li><span style="color:#D6295E"><strong>Interpretations</strong></span>
+<ul>
+<li>The count (or rate) ratio for every 1 unit increase in <span class="math inline">\(X\)</span></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -472,11 +535,17 @@ Nicky Wakim
 <section id="poisson-regression-resources" class="slide level2">
 <h2>Poisson Regression resources</h2>
 <ul>
-<li><p><a href="https://online.stat.psu.edu/stat504/lesson/9" class="uri">https://online.stat.psu.edu/stat504/lesson/9</a></p></li>
-<li><p><a href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html" class="uri">https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=QPY4zuxs1W0&amp;ab_channel=StatisticsGuideswithProfPaulChristiansen" class="uri">https://www.youtube.com/watch?v=QPY4zuxs1W0&amp;ab_channel=StatisticsGuideswithProfPaulChristiansen</a></p></li>
-<li><p><a href="https://rpubs.com/Julian_Sampedro/1047952" class="uri">https://rpubs.com/Julian_Sampedro/1047952</a></p></li>
-<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html" class="uri">https://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html</a></p></li>
+<li><p><a href="https://online.stat.psu.edu/stat504/lesson/9">PennState 504 website</a></p></li>
+<li><p><a href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html">Online textbook by Dr.&nbsp;Nahhas</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=QPY4zuxs1W0&amp;ab_channel=StatisticsGuideswithProfPaulChristiansen">YouTube video on R tutorial for Poisson Regression</a></p>
+<ul>
+<li>Dr.&nbsp;Fogerty is a professor in Political Science, so just beware they may not have formal statistical training</li>
+</ul></li>
+<li><p><a href="https://rpubs.com/Julian_Sampedro/1047952">Guided R tutorial page on Poisson regression</a></p></li>
+<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html">Online textbook by Dr.&nbsp;Werth</a></p>
+<ul>
+<li>Social scientist, so just beware they may not have formal statistical training</li>
+</ul></li>
 </ul>
 </section>
 <section id="log-binomial-regression" class="slide level2">
@@ -484,13 +553,28 @@ Nicky Wakim
 <div class="columns">
 <div class="column">
 <ul>
-<li>Outcome type:</li>
-<li><h2 id="example-outcomes-3">Example outcomes:</h2></li>
+<li><span style="color:#70AD47"><strong>Outcome type:</strong></span> binary, yes or no</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><span style="color:#5B9BD5"><strong>Example outcomes:</strong></span>
+<ul>
+<li>Food insecurity</li>
+<li>Disease diagnosis for patient</li>
+<li>Fracture</li>
+</ul></li>
 </ul>
 </div><div class="column">
 <ul>
-<li>Population model</li>
-<li>Interpretations</li>
+<li><span style="color:#ED7D31"><strong>Population model</strong></span></li>
+</ul>
+<p><span class="math display">\[ \log(\mu) = \beta_0 + \beta_1 X\]</span></p>
+<ul>
+<li><span style="color:#D6295E"><strong>Interpretations</strong></span>
+<ul>
+<li>We have log of probability on the left</li>
+<li>So exponential of our coefficients will be <strong>risk ratio</strong></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -499,7 +583,7 @@ Nicky Wakim
 <h2>Log-binomial Regression resources</h2>
 <ul>
 <li><a href="https://www.bookdown.org/rwnahhas/RMPH/blr-log-binomial.html">Online textbook by Dr.&nbsp;Nahhas</a></li>
-<li><a href="https://www.jstatsoft.org/article/view/v086i09" class="uri">https://www.jstatsoft.org/article/view/v086i09</a></li>
+<li><a href="https://www.jstatsoft.org/article/view/v086i09">Article on <code>logbin</code> package that is used to fit log-binomial regression</a></li>
 </ul>
 </section>
 <section id="multinomial-logistic-regression" class="slide level2">
@@ -507,13 +591,24 @@ Nicky Wakim
 <div class="columns">
 <div class="column">
 <ul>
-<li>Outcome type:</li>
-<li><h2 id="example-outcomes-4">Example outcomes:</h2></li>
+<li><span style="color:#70AD47"><strong>Outcome type:</strong></span> multi-level categorical, no inherent order</li>
+<li><span style="color:#5B9BD5"><strong>Example outcomes:</strong></span>
+<ul>
+<li>Blood type</li>
+<li>US region (from WBNS)</li>
+<li>Primary site of lung cancer (upper lobe, lower lobe, overlapped, etc.)</li>
+</ul></li>
+<li>We have additional restriction that the multiple group probabilities sum to 1</li>
 </ul>
 </div><div class="column">
 <ul>
-<li>Population model</li>
-<li>Interpretations</li>
+<li><p><span style="color:#ED7D31"><strong>Population models</strong></span><span class="math display">\[ \log \left(\dfrac{\mu_{\text{group } 2}}{\mu_{\text{group } 1}} \right) = \beta_0 + \beta_1 X\]</span> <span class="math display">\[ \log \left(\dfrac{\mu_{\text{group } 3}}{\mu_{\text{group } 1}} \right) = \beta_0 + \beta_1 X\]</span></p></li>
+<li><p><span style="color:#D6295E"><strong>Interpretations</strong></span></p>
+<ul>
+<li>Basically fitting two binary logistic regressions at same time!</li>
+<li>First equation: how a one unit change in <span class="math inline">\(X\)</span> changes the log-odds of going from group 1 to group 2</li>
+<li>Second equation: how a one unit change in <span class="math inline">\(X\)</span> changes the log-odds of going from group 1 to group 3</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -521,9 +616,12 @@ Nicky Wakim
 <section id="multinomial-logistic-regression-resources" class="slide level2">
 <h2>Multinomial logistic regression resources</h2>
 <ul>
-<li><p><a href="https://www.youtube.com/watch?v=kn9hfk-Xxdo&amp;list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&amp;index=12&amp;ab_channel=QuantitativeSocialScienceDataAnalysis" class="uri">https://www.youtube.com/watch?v=kn9hfk-Xxdo&amp;list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&amp;index=12&amp;ab_channel=QuantitativeSocialScienceDataAnalysis</a></p></li>
-<li><p><a href="https://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/" class="uri">https://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/</a></p></li>
-<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html" class="uri">https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=kn9hfk-Xxdo&amp;list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&amp;index=12&amp;ab_channel=QuantitativeSocialScienceDataAnalysis">YouTube video on R tutorial for Poisson Regression</a></p>
+<ul>
+<li>Again, Dr.&nbsp;Fogerty is a professor in Political Science</li>
+</ul></li>
+<li><p><a href="https://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/">R-bloggers post with guided R code</a></p></li>
+<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html">Online textbook by Dr.&nbsp;Werth with data and R script</a></p></li>
 </ul>
 </section>
 <section id="ordinal-logistic-regression" class="slide level2">
@@ -531,13 +629,35 @@ Nicky Wakim
 <div class="columns">
 <div class="column">
 <ul>
-<li>Outcome type:</li>
-<li><h2 id="example-outcomes-5">Example outcomes:</h2></li>
+<li><span style="color:#70AD47"><strong>Outcome type:</strong></span> multi-level categorical, with inherent order</li>
+<li><span style="color:#5B9BD5"><strong>Example outcomes:</strong></span>
+<ul>
+<li>Satisfaction level (likert scale)</li>
+<li>Pain level</li>
+<li>Stages of cancer</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>When these variables are predictors, we are pretty lenient about treating them as continuous
+<ul>
+<li>We must be VERY STRICT when they are outcomes</li>
+<li>They do not meet the assumptions we place on continuous outcomes in linear regression!!</li>
+</ul></li>
+<li>We have additional restriction that the multiple group probabilities sum to 1</li>
 </ul>
 </div><div class="column">
 <ul>
-<li>Population model</li>
-<li>Interpretations</li>
+<li><span style="color:#ED7D31"><strong>Population models</strong></span> , with levels <span class="math inline">\(k = 1, 2, 3, ..., K\)</span></li>
+</ul>
+<p><span class="math display">\[ \log \left(\dfrac{P(Y \leq 1)}{P(Y &gt; 1)} \right) = \beta_0 + \beta_1 X\]</span> <span class="math display">\[ \log \left(\dfrac{P(Y \leq k)}{P(Y &gt; k)} \right) = \beta_0 + \beta_1 X\]</span></p>
+<ul>
+<li><span style="color:#D6295E"><strong>Interpretations</strong></span>
+<ul>
+<li>Basically fitting <span class="math inline">\(K\)</span> binary logistic regressions at same time!</li>
+<li>First equation: how a one unit change in <span class="math inline">\(X\)</span> changes the log-odds of going from group 1 to any other group</li>
+<li>Second equation: how a one unit change in <span class="math inline">\(X\)</span> changes the log-odds of going from group 1 or 2 to group 3 or above</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -546,18 +666,18 @@ Nicky Wakim
 <h2>Ordinal logistic regression resources</h2>
 <ul>
 <li><a href="https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html">Online textbook by Dr.&nbsp;Nahhas</a></li>
-<li><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15" class="uri">https://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15</a></li>
+<li><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15">Online textbook by Dr.&nbsp;Werth with data and R script</a></li>
 </ul>
 </section>
 <section id="even-more-regressions" class="slide level2">
 <h2>Even more regressions…</h2>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 18%">
-<col style="width: 24%">
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -586,15 +706,15 @@ Nicky Wakim
 <tr class="odd">
 <td>Multinomial</td>
 <td>outcome of single occurence with K &gt; 2 options, <em>nominal</em></td>
-<td></td>
-<td></td>
+<td>Probit</td>
+<td><span class="math inline">\(g(\mu)=\Phi^{-1}(\mu)\)</span></td>
 <td>Multinomial probit regression</td>
 </tr>
 <tr class="even">
 <td>Multinomial</td>
 <td>outcome of single occurence with K &gt; 2 options, <em>ordinal</em></td>
-<td></td>
-<td></td>
+<td>Probit</td>
+<td><span class="math inline">\(g(\mu)=\Phi^{-1}(\mu)\)</span></td>
 <td>Ordered probit regression</td>
 </tr>
 </tbody>
@@ -603,18 +723,33 @@ Nicky Wakim
 <section id="more-regression-resources" class="slide level2">
 <h2>More regression resources</h2>
 <ul>
-<li><p>Probit regression</p></li>
+<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/probit-regression-r.html">Probit regression</a></p></li>
 <li><p><a href="https://towardsdatascience.com/a-gentle-introduction-to-complementary-log-log-regression-8ac3c5c1cd83">Complementary log-log</a></p></li>
-<li><p>Multinomial probit</p></li>
-<li><p>Ordered probit</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=MsYYOjX_TWY&amp;ab_channel=QuantitativeSocialScienceDataAnalysis">Multinomial probit</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=kI5PgqzSMzs&amp;ab_channel=QuantitativeSocialScienceDataAnalysis">Ordered probit</a></p></li>
 </ul>
 </section>
 <section id="general-resources" class="slide level2">
 <h2>General resources</h2>
 <ul>
-<li><p><a href="https://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E" class="uri">https://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E</a></p></li>
-<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/" class="uri">https://bookdown.org/sarahwerth2024/CategoricalBook/</a></p></li>
-<li><p><a href="https://www.bookdown.org/rwnahhas/RMPH/" class="uri">https://www.bookdown.org/rwnahhas/RMPH/</a></p></li>
+<li><p><a href="https://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E">Dr.&nbsp;Fogerty’s YouTube series</a></p></li>
+<li><p><a href="https://bookdown.org/sarahwerth2024/CategoricalBook/">Dr.&nbsp;Werth’s Categorical Book</a></p></li>
+<li><p><a href="https://www.bookdown.org/rwnahhas/RMPH/">Dr.&nbsp;Nahhas’ Book</a></p></li>
+<li><p><a href="https://epirhandbook.com/en/index.html">The Epidemiologist R Handbook</a></p>
+<ul>
+<li>Analysis AND R work</li>
+</ul></li>
+</ul>
+</section>
+<section id="moment-of-appreciation-for-your-growth" class="slide level2">
+<h2>Moment of appreciation for your growth</h2>
+<ul>
+<li>Remember when we were learning simple linear regression…</li>
+<li>This was a slide from our second week together:</li>
+</ul>
+
+<img data-src="./images/SLR.png" class="r-stretch quarto-figure-center"><ul>
+<li>Even if you don’t feel like you learned everything, you have learned a lot from the first time you saw the above slide</li>
 </ul>
 
 <div class="footer footer-default">

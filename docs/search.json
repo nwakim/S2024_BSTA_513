@@ -8558,7 +8558,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#linear-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Linear regression",
-    "text": "Linear regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
+    "text": "Linear regression\n\n\n\nOutcome type: continuous\n\n \n\nExample outcomes:\n\nHeight\nIAT score\nHeart rate\n\n\n\n\nPopulation model\n\n\\[ E(Y \\mid X) = \\mu = \\beta_0 + \\beta_1 X\\]\n\nInterpretations\n\nThe change in average \\(Y\\) for every 1 unit increase in \\(X\\)"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#linear-regression-resources",
@@ -8572,7 +8572,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#logistic-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Logistic regression",
-    "text": "Logistic regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
+    "text": "Logistic regression\n\n\n\nOutcome type: binary, yes or no\n\n \n\nExample outcomes:\n\nFood insecurity\nDisease diagnosis for patient\nFracture\n\n\n\n\nPopulation model\n\n\\[ \\text{logit}(\\mu) = \\beta_0 + \\beta_1 X\\]\n\nInterpretations\n\nThe log-odds ratio for every 1 unit increase in \\(X\\)"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#logistic-regression-resources",
@@ -8586,70 +8586,70 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#poisson-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Poisson Regression",
-    "text": "Poisson Regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
+    "text": "Poisson Regression\n\n\n\nOutcome type: Counts or rates\n\n \n\nExample outcomes:\n\nNumber of children in household\nNumber of hospital admissions\nRate of incidence for COVID in US counties\n\n\n\n\nPopulation model\n\n\\[ \\log(\\mu) = \\beta_0 + \\beta_1 X\\]\n\nInterpretations\n\nThe count (or rate) ratio for every 1 unit increase in \\(X\\)"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#poisson-regression-resources",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#poisson-regression-resources",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Poisson Regression resources",
-    "text": "Poisson Regression resources\n\nhttps://online.stat.psu.edu/stat504/lesson/9\nhttps://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html\nhttps://www.youtube.com/watch?v=QPY4zuxs1W0&ab_channel=StatisticsGuideswithProfPaulChristiansen\nhttps://rpubs.com/Julian_Sampedro/1047952\nhttps://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html"
+    "text": "Poisson Regression resources\n\nPennState 504 website\nOnline textbook by Dr. Nahhas\nYouTube video on R tutorial for Poisson Regression\n\nDr. Fogerty is a professor in Political Science, so just beware they may not have formal statistical training\n\nGuided R tutorial page on Poisson regression\nOnline textbook by Dr. Werth\n\nSocial scientist, so just beware they may not have formal statistical training"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#log-binomial-regression",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#log-binomial-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Log-binomial Regression",
-    "text": "Log-binomial Regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
+    "text": "Log-binomial Regression\n\n\n\nOutcome type: binary, yes or no\n\n \n\nExample outcomes:\n\nFood insecurity\nDisease diagnosis for patient\nFracture\n\n\n\n\nPopulation model\n\n\\[ \\log(\\mu) = \\beta_0 + \\beta_1 X\\]\n\nInterpretations\n\nWe have log of probability on the left\nSo exponential of our coefficients will be risk ratio"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#log-binomial-regression-resources",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#log-binomial-regression-resources",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Log-binomial Regression resources",
-    "text": "Log-binomial Regression resources\n\nOnline textbook by Dr. Nahhas\nhttps://www.jstatsoft.org/article/view/v086i09"
+    "text": "Log-binomial Regression resources\n\nOnline textbook by Dr. Nahhas\nArticle on logbin package that is used to fit log-binomial regression"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#multinomial-logistic-regression",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#multinomial-logistic-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Multinomial logistic regression",
-    "text": "Multinomial logistic regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
+    "text": "Multinomial logistic regression\n\n\n\nOutcome type: multi-level categorical, no inherent order\nExample outcomes:\n\nBlood type\nUS region (from WBNS)\nPrimary site of lung cancer (upper lobe, lower lobe, overlapped, etc.)\n\nWe have additional restriction that the multiple group probabilities sum to 1\n\n\n\nPopulation models\\[ \\log \\left(\\dfrac{\\mu_{\\text{group } 2}}{\\mu_{\\text{group } 1}} \\right) = \\beta_0 + \\beta_1 X\\] \\[ \\log \\left(\\dfrac{\\mu_{\\text{group } 3}}{\\mu_{\\text{group } 1}} \\right) = \\beta_0 + \\beta_1 X\\]\nInterpretations\n\nBasically fitting two binary logistic regressions at same time!\nFirst equation: how a one unit change in \\(X\\) changes the log-odds of going from group 1 to group 2\nSecond equation: how a one unit change in \\(X\\) changes the log-odds of going from group 1 to group 3"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#multinomial-logistic-regression-resources",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#multinomial-logistic-regression-resources",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Multinomial logistic regression resources",
-    "text": "Multinomial logistic regression resources\n\nhttps://www.youtube.com/watch?v=kn9hfk-Xxdo&list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&index=12&ab_channel=QuantitativeSocialScienceDataAnalysis\nhttps://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/\nhttps://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html"
+    "text": "Multinomial logistic regression resources\n\nYouTube video on R tutorial for Poisson Regression\n\nAgain, Dr. Fogerty is a professor in Political Science\n\nR-bloggers post with guided R code\nOnline textbook by Dr. Werth with data and R script"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#ordinal-logistic-regression",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#ordinal-logistic-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Ordinal logistic regression",
-    "text": "Ordinal logistic regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
+    "text": "Ordinal logistic regression\n\n\n\nOutcome type: multi-level categorical, with inherent order\nExample outcomes:\n\nSatisfaction level (likert scale)\nPain level\nStages of cancer\n\n\n \n\nWhen these variables are predictors, we are pretty lenient about treating them as continuous\n\nWe must be VERY STRICT when they are outcomes\nThey do not meet the assumptions we place on continuous outcomes in linear regression!!\n\nWe have additional restriction that the multiple group probabilities sum to 1\n\n\n\nPopulation models , with levels \\(k = 1, 2, 3, ..., K\\)\n\n\\[ \\log \\left(\\dfrac{P(Y \\leq 1)}{P(Y &gt; 1)} \\right) = \\beta_0 + \\beta_1 X\\] \\[ \\log \\left(\\dfrac{P(Y \\leq k)}{P(Y &gt; k)} \\right) = \\beta_0 + \\beta_1 X\\]\n\nInterpretations\n\nBasically fitting \\(K\\) binary logistic regressions at same time!\nFirst equation: how a one unit change in \\(X\\) changes the log-odds of going from group 1 to any other group\nSecond equation: how a one unit change in \\(X\\) changes the log-odds of going from group 1 or 2 to group 3 or above"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#ordinal-logistic-regression-resources",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#ordinal-logistic-regression-resources",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Ordinal logistic regression resources",
-    "text": "Ordinal logistic regression resources\n\nOnline textbook by Dr. Nahhas\nhttps://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15"
+    "text": "Ordinal logistic regression resources\n\nOnline textbook by Dr. Nahhas\nOnline textbook by Dr. Werth with data and R script"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#even-more-regressions",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#even-more-regressions",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Even more regressions…",
-    "text": "Even more regressions…\n\n\n\n\n\n\n\n\n\n\nDist’n of Y\nTypical uses\nLink name\nLink function\nCommon name\n\n\n\n\nBernoulli / Binomial\noutcome of single yes/no occurrence\nProbit\n\\(g(\\mu)=\\Phi^{-1}(\\mu)\\)\nProbit regression\n\n\nBernoulli / Binomial\noutcome of single yes/no occurrence\nComplementary log-log\n\\(g(\\mu)=\\log(-\\log(1-\\mu))\\)\nComplementary log-log regression\n\n\nMultinomial\noutcome of single occurence with K &gt; 2 options, nominal\n\n\nMultinomial probit regression\n\n\nMultinomial\noutcome of single occurence with K &gt; 2 options, ordinal\n\n\nOrdered probit regression"
+    "text": "Even more regressions…\n\n\n\n\n\n\n\n\n\n\nDist’n of Y\nTypical uses\nLink name\nLink function\nCommon name\n\n\n\n\nBernoulli / Binomial\noutcome of single yes/no occurrence\nProbit\n\\(g(\\mu)=\\Phi^{-1}(\\mu)\\)\nProbit regression\n\n\nBernoulli / Binomial\noutcome of single yes/no occurrence\nComplementary log-log\n\\(g(\\mu)=\\log(-\\log(1-\\mu))\\)\nComplementary log-log regression\n\n\nMultinomial\noutcome of single occurence with K &gt; 2 options, nominal\nProbit\n\\(g(\\mu)=\\Phi^{-1}(\\mu)\\)\nMultinomial probit regression\n\n\nMultinomial\noutcome of single occurence with K &gt; 2 options, ordinal\nProbit\n\\(g(\\mu)=\\Phi^{-1}(\\mu)\\)\nOrdered probit regression"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#general-resources",
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#general-resources",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "General resources",
-    "text": "General resources\n\nhttps://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E\nhttps://bookdown.org/sarahwerth2024/CategoricalBook/\nhttps://www.bookdown.org/rwnahhas/RMPH/\n\n\n\nLesson 17: Wrap-up and other regressions"
+    "text": "General resources\n\nDr. Fogerty’s YouTube series\nDr. Werth’s Categorical Book\nDr. Nahhas’ Book\nThe Epidemiologist R Handbook\n\nAnalysis AND R work"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#more-regression-resources",
@@ -8657,5 +8657,26 @@
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "More regression resources",
     "text": "More regression resources\n\nProbit regression\nComplementary log-log\nMultinomial probit\nOrdered probit"
+  },
+  {
+    "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#today",
+    "href": "lectures/17_Wrap_up/17_Wrap_up.html#today",
+    "title": "Lesson 17: Wrap-up and other regressions",
+    "section": "Today",
+    "text": "Today\n\nLet’s zoom out a little and see what types of regressions we can do\nYou should have the main tools to perform these regressions\n\nEach has some nuances, but I’ll give you sources that help walk you through them"
+  },
+  {
+    "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#moment-of-appreciation-for-your-growth",
+    "href": "lectures/17_Wrap_up/17_Wrap_up.html#moment-of-appreciation-for-your-growth",
+    "title": "Lesson 17: Wrap-up and other regressions",
+    "section": "Moment of appreciation for your growth",
+    "text": "Moment of appreciation for your growth\n\nRemember when we were learning simple linear regression…\nThis was a slide from our second week together:\n\n\n\nEven if you don’t feel like you learned everything, you have learned a lot from the first time you saw the above slide\n\n\n\nLesson 17: Wrap-up and other regressions"
+  },
+  {
+    "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#animals-of-the-day",
+    "href": "lectures/17_Wrap_up/17_Wrap_up.html#animals-of-the-day",
+    "title": "Lesson 17: Wrap-up and other regressions",
+    "section": "Animals of the day",
+    "text": "Animals of the day"
   }
 ]

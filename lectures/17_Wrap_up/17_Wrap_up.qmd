@@ -22,35 +22,65 @@ editor_options:
   chunk_output_type: console
 ---
 
-## What have we learned in this class?
+## Animals of the day
+
+::: columns
+::: {.column width="25%"}
+![](./images/prince.jpeg)
+:::
+::: {.column width="25%"}
+![](./images/forget.jpeg)
+:::
+
+::: {.column width="25%"}
+![](./images/ernie.jpeg)
+
+:::
+::: {.column width="25%"}
+![](./images/all3.jpeg)
+:::
+:::
+
+## Today
+
+-   Let's zoom out a little and see what types of regressions we can do
+-   You should have the main tools to perform these regressions
+    -   Each has some nuances, but I'll give you sources that help walk you through them
 
 ## Types of regressions
 
-| Dist'n of Y          | Typical uses                                               | Link name | Link function               | Common name                     |
-|------------|--------------------------|------------|--------------------|------------------|
-| Normal               | Linear-response data                                       | Identity  | $g(\mu)=\mu$                | Linear regression               |
-| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Logit     | $g(\mu)=\text{logit}(\mu)$  | Logistic regression             |
-| Poisson              | count of occurrences in fixed amount of time/space         | Log       | $g(\mu)=\log(\mu)$          | Poisson regression              |
-| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Log       | $g(\mu)=\log(\mu)$          | Log-binomial regression         |
-| Multinomial          | outcome of single occurence with K \> 2 options, *nominal* | Logit     | $g(\mu)=\text{logit}(\mu)$  | Multinomial logistic regression |
-| Multinomial          | outcome of single occurence with K \> 2 options, *ordinal* | Logit     | $g(\mu)=\text{logit}(\mu)$  | Ordinal logistic regression     |
+| Dist'n of Y          | Typical uses                                               | Link name | Link function              | Common name                     |
+|--------------|-----------------|--------------|--------------|--------------|
+| Normal               | Linear-response data                                       | Identity  | $g(\mu)=\mu$               | Linear regression               |
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Logit     | $g(\mu)=\text{logit}(\mu)$ | Logistic regression             |
+| Poisson              | count of occurrences in fixed amount of time/space         | Log       | $g(\mu)=\log(\mu)$         | Poisson regression              |
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Log       | $g(\mu)=\log(\mu)$         | Log-binomial regression         |
+| Multinomial          | outcome of single occurence with K \> 2 options, *nominal* | Logit     | $g(\mu)=\text{logit}(\mu)$ | Multinomial logistic regression |
+| Multinomial          | outcome of single occurence with K \> 2 options, *ordinal* | Logit     | $g(\mu)=\text{logit}(\mu)$ | Ordinal logistic regression     |
 
 ## Linear regression
 
 ::: columns
+::: column
+-   [**Outcome type:**]{style="color:#70AD47"} continuous
+
+ 
+
+-   [**Example outcomes:**]{style="color:#5B9BD5"}
+    -   Height
+    -   IAT score
+    -   Heart rate
+:::
 
 ::: column
-- Outcome type: 
-- Example outcomes:
-  - 
-:::
+-   [**Population model**]{style="color:#ED7D31"} 
 
-::: column
-- Population model
-- Interpretations
-:::
-:::
+$$ E(Y \mid X) = \mu = \beta_0 + \beta_1 X$$
 
+-   [**Interpretations**]{style="color:#D6295E"}
+    -   The change in average $Y$ for every 1 unit increase in $X$
+:::
+:::
 
 ## Linear regression resources
 
@@ -60,16 +90,24 @@ editor_options:
 ## Logistic regression
 
 ::: columns
-
 ::: column
-- Outcome type: 
-- Example outcomes:
-  - 
+-   [**Outcome type:**]{style="color:#70AD47"}  binary, yes or no
+
+ 
+
+-   [**Example outcomes:**]{style="color:#5B9BD5"}
+    -   Food insecurity
+    -   Disease diagnosis for patient
+    -   Fracture
 :::
 
 ::: column
-- Population model
-- Interpretations
+-   [**Population model**]{style="color:#ED7D31"} 
+
+$$ \text{logit}(\mu) = \beta_0 + \beta_1 X$$
+
+-   [**Interpretations**]{style="color:#D6295E"}
+    -   The log-odds ratio for every 1 unit increase in $X$
 :::
 :::
 
@@ -80,121 +118,178 @@ editor_options:
 ## Poisson Regression
 
 ::: columns
-
 ::: column
-- Outcome type: 
-- Example outcomes:
-  - 
+-   [**Outcome type:**]{style="color:#70AD47"} Counts or rates
+
+ 
+
+-   [**Example outcomes:**]{style="color:#5B9BD5"}
+    -   Number of children in household
+    -   Number of hospital admissions
+    -   Rate of incidence for COVID in US counties
 :::
 
 ::: column
-- Population model
-- Interpretations
+-   [**Population model**]{style="color:#ED7D31"} 
+
+$$ \log(\mu) = \beta_0 + \beta_1 X$$
+
+-   [**Interpretations**]{style="color:#D6295E"}
+    -   The count (or rate) ratio for every 1 unit increase in $X$
 :::
 :::
 
 ## Poisson Regression resources
 
--   <https://online.stat.psu.edu/stat504/lesson/9>
+-   [PennState 504 website](https://online.stat.psu.edu/stat504/lesson/9)
 
--   <https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html>
+-   [Online textbook by Dr. Nahhas](https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html)
 
--   <https://www.youtube.com/watch?v=QPY4zuxs1W0&ab_channel=StatisticsGuideswithProfPaulChristiansen>
+-   [YouTube video on R tutorial for Poisson Regression](https://www.youtube.com/watch?v=QPY4zuxs1W0&ab_channel=StatisticsGuideswithProfPaulChristiansen)
 
--   <https://rpubs.com/Julian_Sampedro/1047952>
+    -   Dr. Fogerty is a professor in Political Science, so just beware they may not have formal statistical training
 
--   <https://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html>
+-   [Guided R tutorial page on Poisson regression](https://rpubs.com/Julian_Sampedro/1047952)
+
+-   [Online textbook by Dr. Werth](https://bookdown.org/sarahwerth2024/CategoricalBook/count-regression-r.html)
+
+    -   Social scientist, so just beware they may not have formal statistical training
 
 ## Log-binomial Regression
 
 ::: columns
-
 ::: column
-- Outcome type: 
-- Example outcomes:
-  - 
+-   [**Outcome type:**]{style="color:#70AD47"} binary, yes or no
+
+ 
+
+-   [**Example outcomes:**]{style="color:#5B9BD5"}
+    -   Food insecurity
+    -   Disease diagnosis for patient
+    -   Fracture
 :::
 
 ::: column
-- Population model
-- Interpretations
+-   [**Population model**]{style="color:#ED7D31"} 
+
+$$ \log(\mu) = \beta_0 + \beta_1 X$$
+
+-   [**Interpretations**]{style="color:#D6295E"}
+    -   We have log of probability on the left
+    -   So exponential of our coefficients will be **risk ratio**
 :::
 :::
 
 ## Log-binomial Regression resources
 
 -   [Online textbook by Dr. Nahhas](https://www.bookdown.org/rwnahhas/RMPH/blr-log-binomial.html)
--   <https://www.jstatsoft.org/article/view/v086i09>
+-   [Article on `logbin` package that is used to fit log-binomial regression](https://www.jstatsoft.org/article/view/v086i09)
 
 ## Multinomial logistic regression
 
 ::: columns
-
 ::: column
-- Outcome type: 
-- Example outcomes:
-  - 
+-   [**Outcome type:**]{style="color:#70AD47"} multi-level categorical, no inherent order
+-   [**Example outcomes:**]{style="color:#5B9BD5"}
+    -   Blood type
+    -   US region (from WBNS)
+    -   Primary site of lung cancer (upper lobe, lower lobe, overlapped, etc.)
+-   We have additional restriction that the multiple group probabilities sum to 1
 :::
 
 ::: column
-- Population model
-- Interpretations
+-   [**Population models**]{style="color:#ED7D31"}$$ \log \left(\dfrac{\mu_{\text{group } 2}}{\mu_{\text{group } 1}} \right) = \beta_0 + \beta_1 X$$ $$ \log \left(\dfrac{\mu_{\text{group } 3}}{\mu_{\text{group } 1}} \right) = \beta_0 + \beta_1 X$$
+
+-   [**Interpretations**]{style="color:#D6295E"}
+
+    -   Basically fitting two binary logistic regressions at same time!
+    -   First equation: how a one unit change in $X$ changes the log-odds of going from group 1 to group 2
+    -   Second equation: how a one unit change in $X$ changes the log-odds of going from group 1 to group 3
 :::
 :::
 
 ## Multinomial logistic regression resources
 
--   <https://www.youtube.com/watch?v=kn9hfk-Xxdo&list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&index=12&ab_channel=QuantitativeSocialScienceDataAnalysis>
+-   [YouTube video on R tutorial for Poisson Regression](https://www.youtube.com/watch?v=kn9hfk-Xxdo&list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E&index=12&ab_channel=QuantitativeSocialScienceDataAnalysis)
 
--   <https://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/>
+    -   Again, Dr. Fogerty is a professor in Political Science
 
--   <https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html>
+-   [R-bloggers post with guided R code](https://www.r-bloggers.com/2020/05/multinomial-logistic-regression-with-r/)
+
+-   [Online textbook by Dr. Werth with data and R script](https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html)
 
 ## Ordinal logistic regression
 
 ::: columns
-
 ::: column
-- Outcome type: 
-- Example outcomes:
-  - 
-
+-   [**Outcome type:**]{style="color:#70AD47"} multi-level categorical, with inherent order
+-   [**Example outcomes:**]{style="color:#5B9BD5"}
+    -   Satisfaction level (likert scale)
+    -   Pain level
+    -   Stages of cancer
+    
+ 
+    
+-   When these variables are predictors, we are pretty lenient about treating them as continuous
+    -   We must be VERY STRICT when they are outcomes
+    -   They do not meet the assumptions we place on continuous outcomes in linear regression!!
+-   We have additional restriction that the multiple group probabilities sum to 1
 :::
 
 ::: column
-- Population model
-- Interpretations
+-   [**Population models**]{style="color:#ED7D31"} , with levels $k = 1, 2, 3, ..., K$
+
+$$ \log \left(\dfrac{P(Y \leq 1)}{P(Y > 1)} \right) = \beta_0 + \beta_1 X$$ $$ \log \left(\dfrac{P(Y \leq k)}{P(Y > k)} \right) = \beta_0 + \beta_1 X$$
+
+-   [**Interpretations**]{style="color:#D6295E"}
+    -   Basically fitting $K$ binary logistic regressions at same time!
+    -   First equation: how a one unit change in $X$ changes the log-odds of going from group 1 to any other group
+    -   Second equation: how a one unit change in $X$ changes the log-odds of going from group 1 or 2 to group 3 or above
 :::
 :::
 
 ## Ordinal logistic regression resources
 
 -   [Online textbook by Dr. Nahhas](https://www.bookdown.org/rwnahhas/RMPH/blr-ordinal.html)
--   <https://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15>
+-   [Online textbook by Dr. Werth with data and R script](https://bookdown.org/sarahwerth2024/CategoricalBook/ordinal-logistic-regression-r.html#lab-overview-15)
 
 ## Even more regressions...
 
-| Dist'n of Y          | Typical uses                                               | Link name             | Link function                | Common name                      |
-|--------------|------------------|--------------|--------------|--------------|
-| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Probit                | $g(\mu)=\Phi^{-1}(\mu)$      | Probit regression                |
-| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Complementary log-log | $g(\mu)=\log(-\log(1-\mu))$  | Complementary log-log regression |
-| Multinomial          | outcome of single occurence with K \> 2 options, *nominal* |                       |                              | Multinomial probit regression    |
-| Multinomial          | outcome of single occurence with K \> 2 options, *ordinal* |                       |                              | Ordered probit regression        |
+| Dist'n of Y          | Typical uses                                               | Link name             | Link function               | Common name                      |
+|---------------|---------------|---------------|---------------|---------------|
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Probit                | $g(\mu)=\Phi^{-1}(\mu)$     | Probit regression                |
+| Bernoulli / Binomial | outcome of single yes/no occurrence                        | Complementary log-log | $g(\mu)=\log(-\log(1-\mu))$ | Complementary log-log regression |
+| Multinomial          | outcome of single occurence with K \> 2 options, *nominal* | Probit                | $g(\mu)=\Phi^{-1}(\mu)$     | Multinomial probit regression    |
+| Multinomial          | outcome of single occurence with K \> 2 options, *ordinal* | Probit                | $g(\mu)=\Phi^{-1}(\mu)$     | Ordered probit regression        |
 
 ## More regression resources
 
--   Probit regression
+-   [Probit regression](https://bookdown.org/sarahwerth2024/CategoricalBook/probit-regression-r.html)
 
 -   [Complementary log-log](https://towardsdatascience.com/a-gentle-introduction-to-complementary-log-log-regression-8ac3c5c1cd83)
 
--   Multinomial probit
+-   [Multinomial probit](https://www.youtube.com/watch?v=MsYYOjX_TWY&ab_channel=QuantitativeSocialScienceDataAnalysis)
 
--   Ordered probit
+-   [Ordered probit](https://www.youtube.com/watch?v=kI5PgqzSMzs&ab_channel=QuantitativeSocialScienceDataAnalysis)
 
 ## General resources
 
--   <https://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E>
+-   [Dr. Fogerty's YouTube series](https://www.youtube.com/playlist?list=PLyl6DBKlvopBOk_eW1Uin8lsY4ixWxd4E)
 
--   <https://bookdown.org/sarahwerth2024/CategoricalBook/>
+-   [Dr. Werth's Categorical Book](https://bookdown.org/sarahwerth2024/CategoricalBook/)
 
--   <https://www.bookdown.org/rwnahhas/RMPH/>
+-   [Dr. Nahhas' Book](https://www.bookdown.org/rwnahhas/RMPH/)
+
+-   [The Epidemiologist R Handbook](https://epirhandbook.com/en/index.html)
+
+    -   Analysis AND R work
+
+## Moment of appreciation for your growth
+
+-   Remember when we were learning simple linear regression...
+-   This was a slide from our second week together:
+
+![](./images/SLR.png){fig-align="center"}
+
+-   Even if you don't feel like you learned everything, you have learned a lot from the first time you saw the above slide
+
