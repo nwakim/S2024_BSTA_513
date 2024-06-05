@@ -158,14 +158,14 @@
     "href": "homework/HW5.html",
     "title": "Homework 5",
     "section": "",
-    "text": "Important\n\n\n\nThis assignment is NO LONGER under construction !!! (3/1/2024)"
+    "text": "Download the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW5.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 513/613\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW5.html#directions",
     "href": "homework/HW5.html#directions",
     "title": "Homework 5",
-    "section": "Directions",
-    "text": "Directions\n\nDownload the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW5.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 513/613\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
+    "section": "",
+    "text": "Download the .qmd file here.\nYou will need to download the datasets. Use this link to download the homework datasets needed in this assignment. If you do not want to make changes to the paths set in this document, then make sure the files are stored in a folder named “data” that is housed in the same location as this homework .qmd file.\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file\n\nPlease rename you homework as Lastname_Firstinitial_HW5.qmd. This will help organize the homeworks when the TAs grade them.\nPlease also add the following line under subtitle: \"BSTA 513/613\": author: First-name Last-name with your first and last name so it is attached to the viewable document.\n\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the rendered html file. This is the default setting.\nIf you are computing something by hand, you may take a picture of your work and insert the image in this file. You may also use LaTeX to write it inline.\nWrite all answers in complete sentences as if communicating the results to a collaborator. This means including a sentence summarizing results in the context of the research study.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW3.html",
@@ -1600,7 +1600,7 @@
     "href": "weeks/week_10_sched.html#announcements",
     "title": "Week 10",
     "section": "Announcements",
-    "text": "Announcements\n\nMonday 6/3\n\nIn the last stretch of the project\n\nClass time next week dedicated to project report help\nI may have other time slots for project help next week. I just need to take a serious look at my calendar\n\nI’m attending a virtual stat ed conference, so I just need to balance meetings with conference attendance\n\n\nNo office hours this Wednesday 6/5\n#3 “The Last Bounce: Bunnies, Burritos, and DIY Bath Salts”\n\nWednesday, June 5th Noon-2pm\nStudent Success Center, 6th floor Vanport\n\n\n\n\nWednesday 6/5\n\nLast day of lecture!!\nThe class will end on June 14, 2024. All coursework is expected to be completed by June 16, 2024 at 11pm.\n\nI need to have grades in on June 21st. In order to grade fairly and thoroughly, I need the whole week to grade the project report and any late assignments.\n\nA word on project grading\n\nIn the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.\nAnother word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone’s overall course letter grade goes down. If less than ~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone’s reports. I will make a class wide grade bump in all reports.\nThe most important learning objectives are: understanding when and what test is appropriate, and interpreting odds ratios (from main effects and interactions)\n\nProject: LASSO\n\nYou can take the finalized formula for LASSO and use it in glm()\n\nIn this case, use the test data to come up with predictive values (like AUC)\nYou can run it on the full dataset to get the coefficient estimates and other diagnostic information\n\n\nGuide on figures"
+    "text": "Announcements\n\nMonday 6/3\n\nIn the last stretch of the project\n\nClass time next week dedicated to project report help\nI may have other time slots for project help next week. I just need to take a serious look at my calendar\n\nI’m attending a virtual stat ed conference, so I just need to balance meetings with conference attendance\n\n\nNo office hours this Wednesday 6/5\n#3 “The Last Bounce: Bunnies, Burritos, and DIY Bath Salts”\n\nWednesday, June 5th Noon-2pm\nStudent Success Center, 6th floor Vanport\n\n\n\n\nWednesday 6/5\n\nLast day of lecture!!\nQuiz 2: added 3 points to everyone’s grade for that one confusing question (I forget the number, maybe question 6?)\nLab 4\n\nYour starting variables should be the TEN from lab 2, not the 5 from Lab 3\ng-value for Hosmer-Lemeshow test\n\nPlease look at Lesson 12!! There is a note on how to pick the g-value when we have many samples!!\nSome of us are getting NA’s when we put the correct g\n\n\n\nThe class will end on June 14, 2024. All coursework is expected to be completed by June 16, 2024 at 11pm.\n\nI need to have grades in on June 21st. In order to grade fairly and thoroughly, I need the whole week to grade the project report and any late assignments.\n\nA word on project grading\n\nIn the final lab, I gave you the option to do LASSO regression and focus on prediction. I know this created some confusion since we mostly set up the project as a question of association in Lab 1-3. We can still interpret the odds ratios from LASSO regression. I will be fairly lenient if reports are confused between prediction and association aims. I will try to give feedback on it, but I will not penalize any minor confusions.\nAnother word: My process starts harsh. I want to give you as much feedback as possible, and this will also reflect in lower assigned scores. At this point, I put the report grades into Sakai. I check to see if anyone’s overall course letter grade goes down. If less than ~5 course grades go down, then I revisit their project reports. If their report fails to demonstrate the most important learning objectives from the course, then I will keep the lower grade. If they demonstrate an understanding of the most important learning objectives, then I will adjust their score to increase their course grade. If more than 5 grades go down, then I revisit everyone’s reports. I will make a class wide grade bump in all reports.\nThe most important learning objectives are: understanding when and what test is appropriate, and interpreting odds ratios (from main effects and interactions)\n\nProject: LASSO\n\nYou can take the finalized formula for LASSO and use it in glm()\n\nIn this case, use the test data to come up with predictive values (like AUC)\nYou can run it on the full dataset to get the coefficient estimates and other diagnostic information\n\n\nGuide on figures"
   },
   {
     "objectID": "weeks/week_10_sched.html#class-exit-tickets",
@@ -8558,7 +8558,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#linear-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Linear regression",
-    "text": "Linear regression"
+    "text": "Linear regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#linear-regression-resources",
@@ -8572,7 +8572,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#logistic-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Logistic regression",
-    "text": "Logistic regression"
+    "text": "Logistic regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#logistic-regression-resources",
@@ -8586,7 +8586,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#poisson-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Poisson Regression",
-    "text": "Poisson Regression"
+    "text": "Poisson Regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#poisson-regression-resources",
@@ -8600,7 +8600,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#log-binomial-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Log-binomial Regression",
-    "text": "Log-binomial Regression"
+    "text": "Log-binomial Regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#log-binomial-regression-resources",
@@ -8614,7 +8614,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#multinomial-logistic-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Multinomial logistic regression",
-    "text": "Multinomial logistic regression"
+    "text": "Multinomial logistic regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#multinomial-logistic-regression-resources",
@@ -8628,7 +8628,7 @@
     "href": "lectures/17_Wrap_up/17_Wrap_up.html#ordinal-logistic-regression",
     "title": "Lesson 17: Wrap-up and other regressions",
     "section": "Ordinal logistic regression",
-    "text": "Ordinal logistic regression"
+    "text": "Ordinal logistic regression\n\n\n\nOutcome type:\nExample outcomes:\n\n\n\nPopulation model\nInterpretations"
   },
   {
     "objectID": "lectures/17_Wrap_up/17_Wrap_up.html#ordinal-logistic-regression-resources",

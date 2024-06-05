@@ -13,10 +13,6 @@ format:
     embed-resources: true
 ---
 
-::: callout-important
-This assignment is NO LONGER under construction !!! (3/1/2024)
-:::
-
 ```{=html}
 <style>div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}</style>
 ```
