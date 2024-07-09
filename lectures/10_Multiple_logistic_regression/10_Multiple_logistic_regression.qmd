@@ -1013,12 +1013,15 @@ MLR_tidy = MLR_tidy %>%
                             "NH Asian/Pacific Islander" ~ "Non-Hispanic \n Asian/Pacific Islander",
                             "NH Black" ~ "Non-Hispanic Black", 
                                "Age_c" ~ "Age (yrs)"))
+  # %>%
+  #                       fct_relevel("Age (yrs)", "Non-Hispanic \n Asian/Pacific Islander", "Non-Hispanic American \n Indian/Alaskan Native", "Non-Hispanic White", "Hispanic-Latinx", "Non-Hispanic Black"))
 ```
 
 ## How to present odds ratios: Forest Plot
 
 ```{r} 
 #| output: false
+MLR_tidy = MLR_tidy %>% mutate(label = fct_reorder(label, term))
 
 plot_MLR = ggplot(data=MLR_tidy, 
        aes(y=label, x=estimate, xmin=conf.low, xmax=conf.high)) + 
@@ -1039,6 +1042,7 @@ plot_MLR = ggplot(data=MLR_tidy,
         strip.text = element_text(size = 25), 
         strip.placement = "outside", 
         strip.background = element_blank())
+# plot_MLR
 ```
 
 ## How to present odds ratios: Forest Plot
